@@ -2853,24 +2853,24 @@ RESPONSIVE
 <div class="product-gallery">
 <!-- Imagen Principal -->
 <div class="main-image-wrapper">
-<img alt="Laska Mini Set Principal" id="mainImage" src="assets/imagenes/2.webp"/>
+<img alt="Laska Mini Set Principal" id="mainImage" loading="lazy" src="assets/imagenes/2.webp"/>
 </div>
 <!-- Miniaturas (Reordenadas y ajustadas) -->
 <div class="thumbnails-container">
 <div class="thumb active" onclick="changeImage(this, 'assets/imagenes/2.webp')">
-<img alt="Thumb 1" src="assets/imagenes/2.webp"/>
+<img alt="Thumb 1" loading="lazy" src="assets/imagenes/2.webp"/>
 </div>
 <div class="thumb" onclick="changeImage(this, 'assets/imagenes/3.webp')">
-<img alt="Thumb 2" src="assets/imagenes/3.webp"/>
+<img alt="Thumb 2" loading="lazy" src="assets/imagenes/3.webp"/>
 </div>
 <div class="thumb" onclick="changeImage(this, 'assets/imagenes/4.webp')">
-<img alt="Thumb 3" src="assets/imagenes/4.webp"/>
+<img alt="Thumb 3" loading="lazy" src="assets/imagenes/4.webp"/>
 </div>
 <div class="thumb" onclick="changeImage(this, 'assets/imagenes/5.webp')">
-<img alt="Thumb 4" src="assets/imagenes/5.webp"/>
+<img alt="Thumb 4" loading="lazy" src="assets/imagenes/5.webp"/>
 </div>
 <div class="thumb" onclick="changeImage(this, 'assets/imagenes/1.webp')">
-<img alt="Thumb 5" src="assets/imagenes/1.webp"/>
+<img alt="Thumb 5" loading="lazy" src="assets/imagenes/1.webp"/>
 </div>
 </div>
 </div>
@@ -3517,5 +3517,17 @@ document.addEventListener("DOMContentLoaded", () => {
 .footer-bottom p { font-size: var(--size-caption); color: rgba(255, 255, 255, 0.4); margin: 0; }
 </style>
 <script src="js/translations.js"></script>
+<script>
+  // Garantiza que cualquier imagen futura que agregues tenga "Lazy Loading"
+  // protegiendo siempre las imágenes de la portada (.side-image) para que carguen al instante.
+  document.addEventListener("DOMContentLoaded", () => {
+    const images = document.querySelectorAll('img:not(.side-image)');
+    images.forEach(img => {
+      if (!img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy');
+      }
+    });
+  });
+</script>
 </body>
 </html>
