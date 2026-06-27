@@ -655,6 +655,361 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 </script>
+<style>
+/* =============================================
+   SECCIONES COMPARTIDAS — Warm Minimalist
+   ============================================= */
+
+/* Contenedor de sección */
+.section-wrapper {
+  position: relative;
+  padding: 6rem 1.5rem;
+  overflow: hidden;
+}
+
+.section-wrapper .grain-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Fondos alternados */
+.section-wrapper.bg-primary  { background-color: var(--bg-primary); }
+.section-wrapper.bg-secondary { background-color: var(--bg-secondary); }
+
+/* Container interno */
+.section-wrapper > .container {
+  position: relative;
+  z-index: 2;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* ─── Tag / Etiqueta superior ─── */
+.section-tag {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--size-body-small);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--color-accent);
+  margin-bottom: 12px;
+}
+
+/* ─── Título de sección (H2) ─── */
+.section-title {
+  font-family: var(--font-serif);
+  font-size: var(--size-h2);
+  font-weight: var(--weight-regular);
+  line-height: var(--lh-tight);
+  color: var(--color-dark);
+  margin-bottom: 18px;
+}
+
+/* ─── Subtítulo descriptivo ─── */
+.section-subtitle {
+  font-family: var(--font-sans);
+  font-size: var(--size-body-large);
+  font-weight: var(--weight-light);
+  line-height: var(--lh-relaxed);
+  color: var(--color-dark-muted);
+  max-width: 780px;
+  margin-bottom: 2rem;
+}
+
+/* ─── Línea divisoria ─── */
+.section-divider {
+  width: 50px;
+  height: 3px;
+  background: var(--color-primary);
+  border-radius: 3px;
+  margin-bottom: 3rem;
+}
+
+/* =============================================
+   CERTIFICACIONES — Trust Tabs
+   ============================================= */
+
+.trust-category {
+  margin-bottom: 3.5rem;
+}
+
+.trust-category-title {
+  font-family: var(--font-serif);
+  font-size: var(--size-h3);
+  font-weight: var(--weight-regular);
+  color: var(--color-dark);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.trust-icon {
+  width: 50px;
+  height: 44px;
+  display: block;
+  margin: 0 auto 6px;
+  color: var(--color-dark-muted);
+  transition: color 0.4s ease;
+}
+
+.trust-tab-btn:hover .trust-icon,
+.trust-tab-btn.is-active .trust-icon {
+  color: var(--color-primary);
+}
+
+.trust-name {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: var(--weight-semibold);
+  color: var(--color-dark);
+  line-height: 1.3;
+  margin-top: 2px;
+}
+
+.trust-region {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  font-weight: var(--weight-regular);
+  color: var(--color-text-light);
+  margin-top: 2px;
+}
+
+/* Accordion inner panels */
+.trust-tab-content .acc-products-title {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-dark-muted);
+  margin-bottom: 8px;
+}
+
+.acc-product-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: var(--weight-medium);
+  color: var(--color-dark-muted);
+  margin: 0 6px 6px 0;
+}
+
+.acc-product-tag-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  display: inline-block;
+}
+
+.acc-verify-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: var(--weight-semibold);
+  color: var(--color-primary);
+  text-decoration: none;
+  margin-top: 15px;
+  padding: 6px 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.acc-verify-link:hover {
+  color: var(--color-primary-hover);
+  border-bottom-color: var(--color-primary-hover);
+}
+
+/* =============================================
+   CIENCIA — Expert Cards
+   ============================================= */
+
+.experts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.expert-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.4s ease, border-color 0.4s ease, transform 0.4s ease;
+}
+
+.expert-card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-color-hover);
+  transform: translateY(-4px);
+}
+
+.expert-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  overflow: hidden;
+  border: 2px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.expert-name {
+  font-family: var(--font-serif);
+  font-size: var(--size-h4);
+  font-weight: var(--weight-regular);
+  color: var(--color-dark);
+  margin-bottom: 4px;
+}
+
+.expert-title {
+  font-family: var(--font-sans);
+  font-size: var(--size-body-small);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-primary);
+  margin-bottom: 0.8rem;
+}
+
+.expert-desc {
+  font-family: var(--font-sans);
+  font-size: var(--size-body-small);
+  font-weight: var(--weight-light);
+  line-height: var(--lh-normal);
+  color: var(--color-dark-muted);
+  margin-bottom: 1rem;
+}
+
+.expert-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-sans);
+  font-size: var(--size-body-small);
+  font-weight: var(--weight-semibold);
+  color: var(--color-dark);
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 30px;
+  border: 1px solid var(--border-color);
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.expert-link:hover {
+  background: var(--color-dark);
+  color: #fff;
+  border-color: var(--color-dark);
+}
+
+.credentials-badge {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: var(--weight-medium);
+  color: var(--color-text-light);
+  background: var(--bg-accent-light);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 3px 10px;
+  margin-bottom: 0.8rem;
+}
+
+/* ─── Aviso de transparencia E-E-A-T ─── */
+.eeat-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 3rem;
+  padding: 1.2rem 1.5rem;
+  background: var(--bg-accent-light);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  box-shadow: var(--shadow-sm);
+}
+
+.eeat-notice-icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  font-weight: var(--weight-bold);
+}
+
+.eeat-notice-text {
+  font-family: var(--font-sans);
+  font-size: var(--size-caption);
+  font-weight: var(--weight-light);
+  line-height: var(--lh-normal);
+  color: var(--color-dark-muted);
+}
+
+.eeat-notice-text strong {
+  font-weight: var(--weight-semibold);
+  color: var(--color-dark);
+}
+
+.eeat-notice-text code {
+  background: var(--bg-secondary);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+/* =============================================
+   RESPONSIVE — Secciones compartidas
+   ============================================= */
+@media (max-width: 768px) {
+  .section-wrapper {
+    padding: 4rem 1.2rem;
+  }
+  .section-title {
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+  }
+  .section-subtitle {
+    font-size: var(--size-body);
+  }
+  .experts-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .trust-category-title {
+    font-size: var(--size-h4);
+    text-align: center;
+  }
+  .eeat-notice {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+</style>
+
 <section class="section-wrapper bg-primary" id="certificaciones">
 <div class="container">
 <span class="section-tag">Avales &amp; Certificaciones</span>
@@ -951,13 +1306,17 @@ function openTrustTab(btn, targetId) {
     filter: grayscale(0%) opacity(100%); color: var(--color-primary); transform: translateY(-2px);
 }
 .trust-tab-content {
-    background: var(--bg-accent-light); border: 1px solid var(--border-hover);
+    background: var(--bg-accent-light); border: 1px solid var(--border-color);
     border-radius: 14px; padding: 1.5rem 2rem; text-align: left;
     box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.3s ease;
+}
+.trust-tab-content:hover {
+    box-shadow: var(--shadow-md);
 }
 .trust-tab-content .acc-header { display: flex; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-bottom: 15px; }
-.trust-tab-content .acc-seal-name { font-family: Georgia, serif; font-size: 1.1rem; color: var(--color-dark); }
-.trust-tab-content .acc-desc { font-size: 0.9rem; line-height: 1.6; color: var(--color-dark-muted); margin-bottom: 15px; }
+.trust-tab-content .acc-seal-name { font-family: var(--font-serif); font-size: var(--size-body-large); color: var(--color-dark); }
+.trust-tab-content .acc-desc { font-family: var(--font-sans); font-size: var(--size-body-small); line-height: var(--lh-normal); color: var(--color-dark-muted); font-weight: var(--weight-light); margin-bottom: 15px; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
 </style></section>
 <!-- =============================================
@@ -1070,11 +1429,11 @@ function openTrustTab(btn, targetId) {
 .dynamic-panel { position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%) translateY(20px); width: 85%; max-width: 280px; background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.6); border-radius: 12px; box-shadow: var(--shadow-md); padding: 12px; z-index: 10; opacity: 0; pointer-events: none; transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); display: flex; flex-direction: column; align-items: center; text-align: center; }
 .dynamic-panel.active { opacity: 1; transform: translateX(-50%) translateY(0); }
 .solution-panel { justify-content: center; min-height: 80px; }
-.solution-text { font-size: 1.1rem; font-weight: 600; color: var(--color-primary); font-family: Georgia, serif; transition: opacity 0.3s ease; }
+.solution-text { font-size: 1.1rem; font-weight: 600; color: var(--color-primary); font-family: var(--font-serif); transition: opacity 0.3s ease; }
 
 /* Gasto Mensual */
 .receipt-header { font-size: 0.75rem; font-weight: 600; color: var(--color-dark-muted); text-transform: uppercase; margin-bottom: 2px; }
-.receipt-total { font-size: 2.2rem; font-weight: 600; color: #c96868; line-height: 1; margin-bottom: 8px; display: flex; justify-content: center; align-items: flex-start; font-family: Georgia, serif; }
+.receipt-total { font-size: 2.2rem; font-weight: 600; color: #c96868; line-height: 1; margin-bottom: 8px; display: flex; justify-content: center; align-items: flex-start; font-family: var(--font-serif); }
 .receipt-total .currency { font-size: 1rem; margin-top: 5px; margin-right: 2px; color: var(--color-dark); }
 .receipt-items-container { width: 100%; height: 35px; overflow: hidden; position: relative; }
 .receipt-list { display: flex; flex-direction: column; gap: 2px; width: 100%; }
@@ -1106,8 +1465,8 @@ function openTrustTab(btn, targetId) {
 .time-counter-panel { position: absolute; bottom: 15px; left: 15px; background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 12px; padding: 10px 14px; z-index: 10; opacity: 0; pointer-events: none; transition: all 0.5s ease; box-shadow: var(--shadow-lg); display: flex; flex-direction: column; align-items: flex-start; transform: translateY(15px); }
 .card-video.phase-bad .time-counter-panel { opacity: 1; transform: translateY(0); }
 .time-counter-header { font-size: 0.65rem; font-weight: 600; color: #c96868; text-transform: uppercase; margin-bottom: 2px; }
-.time-counter-value { font-size: 1.5rem; font-weight: 600; color: var(--color-dark); font-family: Georgia, serif; line-height: 1; display: flex; align-items: baseline; gap: 3px; font-variant-numeric: tabular-nums; }
-.time-counter-value span { font-size: 0.8rem; color: var(--color-dark-muted); font-family: 'Poppins', sans-serif; font-weight: 500; }
+.time-counter-value { font-size: 1.5rem; font-weight: 600; color: var(--color-dark); font-family: var(--font-serif); line-height: 1; display: flex; align-items: baseline; gap: 3px; font-variant-numeric: tabular-nums; }
+.time-counter-value span { font-size: 0.8rem; color: var(--color-dark-muted); font-family: var(--font-sans); font-weight: 500; }
 .spin-icon { animation: spinSlow 3s linear infinite; }
 
 /* Animaciones */
@@ -2945,6 +3304,13 @@ document.addEventListener("DOMContentLoaded", () => {
     box-shadow: var(--shadow-md);
     aspect-ratio: 9/16;
     background: #000;
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.4s ease, border-color 0.4s ease, transform 0.4s ease;
+}
+.ugc-item:hover {
+    box-shadow: var(--shadow-lg);
+    border-color: var(--border-color-hover);
+    transform: translateY(-4px);
 }
 .ugc-item video {
     width: 100%;
@@ -2962,11 +3328,14 @@ document.addEventListener("DOMContentLoaded", () => {
     left: 15px;
     background: rgba(255,255,255,0.9);
     backdrop-filter: blur(4px);
-    padding: 6px 12px;
+    -webkit-backdrop-filter: blur(4px);
+    padding: 6px 14px;
     border-radius: 30px;
-    font-size: 0.75rem;
-    font-weight: 600;
+    font-family: var(--font-sans);
+    font-size: var(--size-caption);
+    font-weight: var(--weight-semibold);
     color: var(--color-dark);
+    box-shadow: var(--shadow-sm);
 }
 </style>
 
@@ -4055,30 +4424,93 @@ document.addEventListener("DOMContentLoaded", () => {
      SECCIÓN 8: TRANSPARENCIA CORPORATIVA (E-E-A-T)
 ============================================= -->
 <section class="section-wrapper bg-secondary" id="sobre-la-marca">
-    <div class="container" style="max-width:900px; text-align:center;">
+    <div class="grain-overlay"></div>
+    <div class="container" style="text-align:center;">
         <span class="section-tag" style="justify-content:center; display:flex;" data-i18n="about_tag">Transparencia Corporativa</span>
         <h2 class="section-title" data-i18n="about_title">Sobre PepaGold y Greenway Global</h2>
         <p class="section-subtitle" style="margin: 0 auto 3rem auto;" data-i18n="about_desc">
             Nuestra filosofía se basa en el respeto absoluto por el microbioma humano y el ecosistema global. Desarrollamos la tecnología UpPoly para eliminar la dependencia de surfactantes químicos agresivos y plásticos de un solo uso en la industria cosmética.
         </p>
         
-        <div style="display:flex; flex-wrap:wrap; gap:2rem; justify-content:center; text-align:left;">
-            <div style="background:var(--bg-primary); padding:2rem; border-radius:16px; flex:1; min-width:280px; box-shadow:var(--shadow-sm); border:1px solid var(--border-color);">
-                <h4 style="font-family:Georgia,serif; font-size:1.1rem; color:var(--color-dark); margin-bottom:1rem;" data-i18n="about_contact_title">Contacto Directo</h4>
-                <p style="font-size:0.85rem; margin-bottom:0.5rem; color:var(--color-dark-muted);"><strong>Email:</strong> soporte@pepagold.com.ar</p>
-                <p style="font-size:0.85rem; margin-bottom:0.5rem; color:var(--color-dark-muted);"><strong>WhatsApp:</strong> +54 9 11 1234-5678</p>
-                <p style="font-size:0.85rem; color:var(--color-dark-muted);"><strong>Horario:</strong> Lun-Vie 9:00 a 18:00 hrs</p>
+        <div class="about-cards-grid">
+            <div class="about-card">
+                <h4 class="about-card-title" data-i18n="about_contact_title">Contacto Directo</h4>
+                <p class="about-card-text"><strong>Email:</strong> soporte@pepagold.com.ar</p>
+                <p class="about-card-text"><strong>WhatsApp:</strong> +54 9 11 1234-5678</p>
+                <p class="about-card-text"><strong>Horario:</strong> Lun-Vie 9:00 a 18:00 hrs</p>
             </div>
             
-            <div style="background:var(--bg-primary); padding:2rem; border-radius:16px; flex:1; min-width:280px; box-shadow:var(--shadow-sm); border:1px solid var(--border-color);">
-                <h4 style="font-family:Georgia,serif; font-size:1.1rem; color:var(--color-dark); margin-bottom:1rem;" data-i18n="about_address_title">Identidad Corporativa</h4>
-                <p style="font-size:0.85rem; margin-bottom:0.5rem; color:var(--color-dark-muted);"><strong class="notranslate" translate="no">PepaGold</strong> - Representante Autorizado <strong class="notranslate" translate="no">Greenway Global</strong></p>
-                <p style="font-size:0.85rem; margin-bottom:0.5rem; color:var(--color-dark-muted);"><strong>Sede Central:</strong> Av. del Libertador 1000, Buenos Aires, Argentina</p>
-                <p style="font-size:0.85rem; color:var(--color-dark-muted);"><strong>CUIT:</strong> 30-71123456-8</p>
+            <div class="about-card">
+                <h4 class="about-card-title" data-i18n="about_address_title">Identidad Corporativa</h4>
+                <p class="about-card-text"><strong class="notranslate" translate="no">PepaGold</strong> - Representante Autorizado <strong class="notranslate" translate="no">Greenway Global</strong></p>
+                <p class="about-card-text"><strong>Sede Central:</strong> Av. del Libertador 1000, Buenos Aires, Argentina</p>
+                <p class="about-card-text"><strong>CUIT:</strong> 30-71123456-8</p>
             </div>
         </div>
     </div>
 </section>
+
+<style>
+.about-cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  text-align: left;
+}
+
+.about-card {
+  background: var(--bg-primary);
+  padding: 2rem;
+  border-radius: 18px;
+  flex: 1;
+  min-width: 280px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.4s ease, border-color 0.4s ease, transform 0.4s ease;
+}
+
+.about-card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-color-hover);
+  transform: translateY(-3px);
+}
+
+.about-card-title {
+  font-family: var(--font-serif);
+  font-size: var(--size-body-large);
+  font-weight: var(--weight-regular);
+  color: var(--color-dark);
+  margin-bottom: 1rem;
+}
+
+.about-card-text {
+  font-family: var(--font-sans);
+  font-size: var(--size-body-small);
+  font-weight: var(--weight-light);
+  line-height: var(--lh-normal);
+  color: var(--color-dark-muted);
+  margin-bottom: 0.5rem;
+}
+
+.about-card-text:last-child {
+  margin-bottom: 0;
+}
+
+.about-card-text strong {
+  font-weight: var(--weight-semibold);
+  color: var(--color-dark);
+}
+
+@media (max-width: 768px) {
+  .about-cards-grid {
+    flex-direction: column;
+  }
+  .about-card {
+    min-width: auto;
+  }
+}
+</style>
 
 
 <footer class="site-footer">
