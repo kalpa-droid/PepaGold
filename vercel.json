@@ -3,7 +3,7 @@
   "trailingSlash": false,
   "headers": [
     {
-      "source": "/public/imagenes/(.*)",
+      "source": "/assets/imagenes/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
