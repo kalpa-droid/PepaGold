@@ -14,19 +14,48 @@
            1. SISTEMA DE DISEÑO (Warm Minimalist) - PepaGold
            ========================================================= */
         :root {
+            /* Font Families */
+            --font-serif: Georgia, "Times New Roman", serif;
+            --font-sans: 'Poppins', sans-serif;
+
+            /* Font Weights */
+            --weight-light: 300;
+            --weight-regular: 400;
+            --weight-medium: 500;
+            --weight-semibold: 600;
+            --weight-bold: 700;
+
+            /* SISTEMA DE COLOR (Warm Minimalist) */
             --color-primary: #D48C90;
             --color-primary-hover: #C97A7E;
             --color-accent: #E29578;
             --color-dark: #2A2523;
             --color-dark-muted: #5A524E;
             --color-text-light: rgba(42, 37, 35, 0.6);
+
+            /* Fondos (Backgrounds) */
             --bg-primary: #FFFFFF;
             --bg-secondary: #FAF6F5;
             --bg-accent-light: #FDF7F7;
+
+            /* Bordes y Sombras */
             --shadow-sm: 0 4px 12px rgba(42, 37, 35, 0.03);
             --shadow-md: 0 8px 25px rgba(42, 37, 35, 0.05);
             --shadow-lg: 0 15px 40px rgba(212, 140, 144, 0.12);
             --border-color: rgba(212, 140, 144, 0.2);
+            --border-color-hover: rgba(212, 140, 144, 0.4);
+
+            /* Escala Tipográfica Fluida (Responsive) */
+            --size-h1: clamp(2.3rem, 3.8vw, 4rem);
+            --size-h2: clamp(2rem, 3.5vw, 3rem);
+            --size-h3: clamp(1.4rem, 2.2vw, 1.8rem);
+            --size-h4: clamp(1.1rem, 1.8vw, 1.3rem);
+            
+            --size-body-large: 1.1rem;
+            --size-body: 1rem;
+            --size-body-small: 0.9rem;
+            --size-caption: 0.8rem;
+
             --color-loss: #c96868; /* Rojo apagado elegante para denotar gasto */
         }
 
@@ -40,14 +69,14 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: var(--font-sans);
             color: var(--color-dark-muted);
             background-color: var(--bg-primary); /* Fondo Blanco Puro alterno */
             -webkit-font-smoothing: antialiased;
         }
 
         h1, h2, h3, h4 {
-            font-family: Georgia, "Times New Roman", serif;
+            font-family: var(--font-serif);
             color: var(--color-dark);
             font-weight: 400;
         }
@@ -120,12 +149,12 @@
         }
 
         .problem-title {
-            font-size: clamp(2rem, 4vw, 3rem);
+            font-size: var(--size-h2);
             line-height: 1.2;
         }
 
         .problem-description {
-            font-size: 1.05rem;
+            font-size: var(--size-body-large);
             line-height: 1.7;
             font-weight: 300;
         }
@@ -210,7 +239,7 @@
             display: flex;
             align-items: flex-start;
             justify-content: center;
-            font-family: Georgia, serif;
+            font-family: var(--font-serif);
         }
 
         .receipt-total .currency {
@@ -258,7 +287,7 @@
             font-size: 1.3rem;
             font-weight: 600;
             color: var(--color-primary);
-            font-family: Georgia, serif;
+            font-family: var(--font-serif);
             line-height: 1.4;
             transition: opacity 0.3s ease;
         }
