@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PepaGold - Dolor: Rutina Eterna</title>
+    <!-- Importar fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-primary: #D48C90;
+            --color-primary-hover: #C97A7E;
+            --color-accent: #E29578;
+            --color-dark: #2A2523;
+            --color-dark-muted: #5A524E;
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #FAF6F5; /* Fondo secundario para contrastar con el bloque anterior */
+            --shadow-sm: 0 4px 12px rgba(42, 37, 35, 0.03);
+            --shadow-md: 0 8px 25px rgba(42, 37, 35, 0.05);
+            --shadow-lg: 0 15px 40px rgba(212, 140, 144, 0.12);
+            --border-color: rgba(212, 140, 144, 0.2);
+            /* Gradiente oscuro sutil para el efecto de noche */
+            --night-overlay: linear-gradient(180deg, rgba(15, 23, 42, 0.1) 0%, rgba(15, 23, 42, 0.55) 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--color-dark-muted);
+            background-color: var(--bg-secondary);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: Georgia, "Times New Roman", serif;
+            color: var(--color-dark);
+            font-weight: 400;
+        }
+
+        .time-section {
+            position: relative;
+            background-color: var(--bg-secondary);
+            padding: 5rem 1.5rem;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        .grain-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 1100px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                grid-template-columns: 1fr 1fr; /* Layout 50/50 */
+                gap: 5rem;
+            }
+        }
+
+        .text-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .accent-subtitle {
+            color: var(--color-accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .problem-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.2;
+        }
+
+        .problem-description {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto;
+            aspect-ratio: 1 / 1;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+            background-color: var(--bg-primary);
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: filter 0.8s ease; /* Transición suave al blanco y negro */
+        }
+
+        /* Filtro Blanco y Negro para la primera mitad */
+        .video-wrapper.phase-bad video {
+            filter: grayscale(100%) contrast(1.1);
+        }
+
+        /* =========================================================
+           CAPA DE DEGRADADO BLANCO Y NEGRO (Para tapar mitad izq)
+           ========================================================= */
+        .bw-fade-overlay {
+            position: absolute;
+            top: 0; left: 0; 
+            width: 100%; height: 100%;
+            /* Convierte en B/N solo la parte cubierta por esta capa */
+            backdrop-filter: grayscale(100%) blur(1px);
+            -webkit-backdrop-filter: grayscale(100%) blur(1px);
+            /* Degradado transparente: Fuerte a la izq, invisible al centro */
+            mask-image: linear-gradient(to right, black 0%, black 35%, transparent 60%);
+            -webkit-mask-image: linear-gradient(to right, black 0%, black 35%, transparent 60%);
+            /* Un sutil velo claro (off-white) para ayudar a "tapar" sin oscurecer */
+            background: linear-gradient(to right, rgba(250, 246, 245, 0.45) 0%, transparent 55%);
+            z-index: 5;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+
+        /* Esta capa solo aparece cuando el video es "Bueno" (segunda mitad) */
+        .video-wrapper.phase-good .bw-fade-overlay {
+            opacity: 1;
+        }
+
+        /* =========================================================
+           CAPA DE DEGRADADO BLANCO (Para tapar mitad derecha en Fase Mala)
+           ========================================================= */
+        .white-fade-overlay {
+            position: absolute;
+            top: 0; left: 0; 
+            width: 100%; height: 100%;
+            /* Desenfoque sutil para ocultar los detalles de la chica "feliz" */
+            backdrop-filter: blur(2px) brightness(1.2);
+            -webkit-backdrop-filter: blur(2px) brightness(1.2);
+            /* Degradado transparente: Fuerte a la derecha, invisible al centro */
+            mask-image: linear-gradient(to left, black 0%, black 40%, transparent 60%);
+            -webkit-mask-image: linear-gradient(to left, black 0%, black 40%, transparent 60%);
+            /* Velo blanco para "blanquear" el lado derecho */
+            background: linear-gradient(to left, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.3) 45%, transparent 60%);
+            z-index: 5;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+
+        /* Esta capa solo aparece cuando el video es "Malo" (primera mitad) */
+        .video-wrapper.phase-bad .white-fade-overlay {
+            opacity: 1;
+        }
+
+        .time-badge-container {
+            position: absolute;
+            top: 20px;
+            right: 20px; /* Movido a la esquina superior derecha */
+            width: 140px; /* Más ancho para el texto nuevo */
+            height: 36px;
+            perspective: 1000px;
+            -webkit-perspective: 1000px;
+            z-index: 20;
+        }
+
+        .time-badge {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            -webkit-transform-style: preserve-3d;
+            transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Giro con rebote elegante */
+        }
+
+        /* Cuando pasa a la fase buena, gira 180 grados */
+        .video-wrapper.phase-good .time-badge {
+            transform: rotateX(180deg);
+            -webkit-transform: rotateX(180deg);
+        }
+
+        .badge-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .badge-bad {
+            background: rgba(26, 32, 44, 0.85); /* Tema oscuro para el dolor */
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            color: #E2E8F0;
+        }
+
+        .badge-good {
+            background: rgba(255, 255, 255, 0.9); /* Tema claro/Premium para la solución */
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            color: var(--color-accent);
+            transform: rotateX(180deg);
+            -webkit-transform: rotateX(180deg);
+        }
+
+        .time-counter-panel {
+            position: absolute;
+            bottom: 25px;
+            left: 20px; /* Esquina inferior izquierda */
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 16px;
+            padding: 12px 18px;
+            z-index: 10;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.5s ease;
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            transform: translateY(15px);
+        }
+
+        /* El panel solo se ve en la primera mitad del video */
+        .video-wrapper.phase-bad .time-counter-panel {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .time-counter-header {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #c96868; /* Rojo apagado elegante para indicar pérdida */
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2px;
+        }
+
+        .time-counter-value {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--color-dark);
+            font-family: Georgia, serif;
+            line-height: 1;
+            display: flex;
+            align-items: baseline;
+            gap: 4px;
+            font-variant-numeric: tabular-nums; /* Evita que el reloj "salte" visualmente */
+        }
+
+        .time-counter-value span {
+            font-size: 1rem;
+            color: var(--color-dark-muted);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+        }
+
+        /* Icono de reloj de arena animado */
+        .spin-icon {
+            animation: spinSlow 3s linear infinite;
+        }
+        @keyframes spinSlow { 100% { transform: rotate(360deg); } }
+
+    </style>
+</head>
+<body>
+
+    <section class="time-section">
+        <div class="grain-overlay"></div>
+        
+        <div class="container">
+            <!-- Columna de Texto Izquierda -->
+            <div class="text-content">
+                <span class="accent-subtitle">
+                    <svg class="spin-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    Tiempo Perdido
+                </span>
+                <h2 class="problem-title">¿Tu rutina de noche es eterna?</h2>
+                <p class="problem-description">
+                    Toallita, agua micelar, algodón, enjuague, crema… Demasiados pasos que consumen tu tiempo y tu energía cuando lo único que quieres es dormir.
+                </p>
+            </div>
+
+            <!-- Columna de Video Derecha -->
+            <div class="video-col">
+                <div class="video-wrapper phase-bad" id="timeVideoWrapper">
+                    
+                    <!-- Cápsula 3D de Estados -->
+                    <div class="time-badge-container">
+                        <div class="time-badge">
+                            <!-- Cara Frontal (Fase Mala) -->
+                            <div class="badge-face badge-bad">
+                                ⏳ Rutina Diaria
+                            </div>
+                            <!-- Cara Trasera (Fase Buena) -->
+                            <div class="badge-face badge-good">
+                                ✨ Con Care Set
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Video Original -->
+                    <video 
+                        id="routineVideo"
+                        autoplay 
+                        loop 
+                        muted 
+                        playsinline 
+                        src="https://cdn.shopify.com/videos/c/o/v/4b28c266d01340d6a3124f0c93db818a.mp4">
+                    </video>
+
+                    <!-- Capa Transparente que oculta y hace B/N la mitad izquierda -->
+                    <div class="bw-fade-overlay"></div>
+                    
+                    <!-- Capa Blanca que oculta la mitad derecha -->
+                    <div class="white-fade-overlay"></div>
+
+                    <!-- Panel de Contador de Tiempo (Aparece abajo a la izquierda) -->
+                    <div class="time-counter-panel" id="timeCounterPanel">
+                        <div class="time-counter-header">Sin Care Set</div>
+                        <div class="time-counter-value" id="timeValue">
+                            0<span>h</span> 00<span>m</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const video = document.getElementById('routineVideo');
+            const wrapper = document.getElementById('timeVideoWrapper');
+            const timeValue = document.getElementById('timeValue');
+
+            // Escuchar el tiempo del video para accionar los efectos
+            video.addEventListener('timeupdate', () => {
+                // Prevenir errores si el video aún no carga su duración total
+                if (!video.duration) return;
+
+                const t = video.currentTime;
+                const halfTime = video.duration / 2; // Exactamente la mitad del video
+
+                // FASE 1: PRIMERA MITAD (Blanco y Negro / Contador / Rutina Diaria)
+                if (t < halfTime) {
+                    if (!wrapper.classList.contains('phase-bad')) {
+                        wrapper.classList.add('phase-bad');
+                        wrapper.classList.remove('phase-good');
+                    }
+
+                    // Aceleramos dramáticamente las horas
+                    const totalMinutes = Math.floor(t * 220); 
+                    const hours = Math.floor(totalMinutes / 60);
+                    const mins = totalMinutes % 60;
+                    
+                    // Forzar dos dígitos para los minutos (ej: 05, 09)
+                    const formattedMins = mins < 10 ? `0${mins}` : mins;
+
+                    timeValue.innerHTML = `${hours}<span>h</span> ${formattedMins}<span>m</span>`;
+                } 
+                // FASE 2: SEGUNDA MITAD (Color / Gira Etiqueta / Desaparece Contador)
+                else {
+                    if (!wrapper.classList.contains('phase-good')) {
+                        wrapper.classList.remove('phase-bad');
+                        wrapper.classList.add('phase-good');
+                    }
+                }
+            });
+
+            // Auto-play asegurado para políticas de navegadores
+            let playPromise = video.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(error => console.log("Autoplay requiere interacción del usuario."));
+            }
+        });
+    </script>
+</body>
+</html>

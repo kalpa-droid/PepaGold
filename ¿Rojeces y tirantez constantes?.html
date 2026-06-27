@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PepaGold - Antes y Después</title>
+    <!-- Importar fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* =========================================================
+           1. SISTEMA DE DISEÑO (Warm Minimalist) - PepaGold
+           ========================================================= */
+        :root {
+            --color-primary: #D48C90;
+            --color-primary-hover: #C97A7E;
+            --color-accent: #E29578;
+            --color-dark: #2A2523;
+            --color-dark-muted: #5A524E;
+            --color-text-light: rgba(42, 37, 35, 0.6);
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #FAF6F5;
+            --bg-accent-light: #FDF7F7;
+            --shadow-sm: 0 4px 12px rgba(42, 37, 35, 0.03);
+            --shadow-md: 0 8px 25px rgba(42, 37, 35, 0.05);
+            --shadow-lg: 0 15px 40px rgba(212, 140, 144, 0.12);
+            --border-color: rgba(212, 140, 144, 0.2);
+            --color-pain: rgba(226, 84, 84, 0.85); 
+        }
+
+        /* =========================================================
+           2. ESTILOS GLOBALES
+           ========================================================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--color-dark-muted);
+            background-color: var(--bg-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: Georgia, "Times New Roman", serif;
+            color: var(--color-dark);
+            font-weight: 400;
+        }
+
+        /* =========================================================
+           3. SECCIÓN DEL PROBLEMA
+           ========================================================= */
+        .problem-section {
+            position: relative;
+            background-color: var(--bg-secondary);
+            padding: 5rem 1.5rem;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        .grain-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 1100px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                grid-template-columns: 1fr 1fr;
+                gap: 5rem;
+            }
+        }
+
+        .text-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .accent-subtitle {
+            color: var(--color-accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .problem-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.2;
+        }
+
+        .problem-description {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        /* =========================================================
+           4. VIDEO FLIP (3D) Y EFECTO DE DOLOR
+           ========================================================= */
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto;
+            aspect-ratio: 1 / 1;
+            perspective: 1200px; /* Profundidad 3D */
+            -webkit-perspective: 1200px; /* Soporte Safari */
+        }
+
+        /* Contenedor que rota */
+        .flipper {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            -webkit-transform-style: preserve-3d; /* Soporte Safari crucial */
+            transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+        }
+
+        .flipper.is-flipped {
+            transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
+        }
+
+        /* Caras del cubo (Antes y Después) */
+        .video-face {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden; /* Evita parpadeos en iPhone/Safari */
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+            background-color: #f0eaea;
+            transition: box-shadow 0.4s ease, border-color 0.4s ease;
+        }
+
+        .video-face:hover {
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(212, 140, 144, 0.4);
+        }
+
+        /* Cara trasera nace girada */
+        .video-face.back {
+            transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
+        }
+
+        .video-face video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Etiquetas (Badges) */
+        .badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            z-index: 20;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            color: var(--color-dark);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .badge.despues {
+            color: var(--color-primary);
+        }
+
+        /* Punto de irritación - Ajustado al cuadrante inferior derecho */
+        .pain-dot {
+            position: absolute;
+            top: 75%; /* Centro de la mitad inferior */
+            left: 75%; /* Centro de la mitad derecha */
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--color-pain) 0%, rgba(226, 84, 84, 0) 70%);
+            transform: translate(-50%, -50%) scale(0);
+            pointer-events: none;
+            z-index: 10;
+            animation: irritationCycle 5.5s infinite cubic-bezier(0.45, 0, 0.55, 1);
+        }
+
+        @keyframes irritationCycle {
+            0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+            10% { transform: translate(-50%, -50%) scale(1.5); opacity: 0.9; }
+            15% { transform: translate(-50%, -50%) scale(1); opacity: 0.7; }
+            20% { transform: translate(-50%, -50%) scale(2); opacity: 0.95; }
+            25% { transform: translate(-50%, -50%) scale(1.5); opacity: 0.8; }
+            45% { transform: translate(-50%, -50%) scale(2.5); opacity: 0.9; }
+            75% { transform: translate(-50%, -50%) scale(45); opacity: 0.25; }
+            100% { transform: translate(-50%, -50%) scale(50); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="problem-section">
+        <div class="grain-overlay"></div>
+        
+        <div class="container">
+            <!-- Textos -->
+            <div class="text-content">
+                <span class="accent-subtitle">✨ El Problema</span>
+                <h2 class="problem-title">¿Rojeces y tirantez constantes?</h2>
+                <p class="problem-description">
+                    Los químicos agresivos de los desmaquillantes irritan tu barrera cutánea, dejándote la piel seca y sensible.
+                </p>
+            </div>
+
+            <!-- Cubo Giratorio de Videos -->
+            <div class="video-wrapper">
+                <div class="flipper" id="videoFlipper">
+                    
+                    <!-- CARA FRONTAL (Antes) -->
+                    <div class="video-face front">
+                        <div class="badge">Antes</div>
+                        <video 
+                            id="videoAntes"
+                            autoplay 
+                            muted 
+                            playsinline 
+                            src="https://cdn.shopify.com/videos/c/o/v/8673c70393e04ce9b9441e8584963b4d.mp4">
+                        </video>
+                        <!-- Latido de irritación en el cuadrante inferior derecho -->
+                        <div class="pain-dot"></div>
+                    </div>
+
+                    <!-- CARA TRASERA (Después) -->
+                    <div class="video-face back">
+                        <div class="badge despues">Después</div>
+                        <video 
+                            id="videoDespues"
+                            muted 
+                            playsinline 
+                            src="https://cdn.shopify.com/videos/c/o/v/3ae3d0b69ee74c09ad564f1b3b4be59e.mp4">
+                        </video>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const videoAntes = document.getElementById('videoAntes');
+            const videoDespues = document.getElementById('videoDespues');
+            const flipper = document.getElementById('videoFlipper');
+
+            // Asegurar que el video empiece reproducido si los navegadores lo bloquean
+            let playPromise = videoAntes.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    console.log("Autoplay bloqueado temporalmente por el navegador");
+                });
+            }
+
+            // Cuando termina el ANTES -> Gira al DESPUÉS
+            videoAntes.addEventListener('ended', () => {
+                flipper.classList.add('is-flipped');
+                videoDespues.currentTime = 0; 
+                videoDespues.play();
+            });
+
+            // Cuando termina el DESPUÉS -> Gira al ANTES
+            videoDespues.addEventListener('ended', () => {
+                flipper.classList.remove('is-flipped');
+                videoAntes.currentTime = 0;
+                videoAntes.play();
+            });
+        });
+    </script>
+</body>
+</html>

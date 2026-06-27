@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PepaGold - Dolor: Gasto Mensual</title>
+    <!-- Importar fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* =========================================================
+           1. SISTEMA DE DISEÑO (Warm Minimalist) - PepaGold
+           ========================================================= */
+        :root {
+            --color-primary: #D48C90;
+            --color-primary-hover: #C97A7E;
+            --color-accent: #E29578;
+            --color-dark: #2A2523;
+            --color-dark-muted: #5A524E;
+            --color-text-light: rgba(42, 37, 35, 0.6);
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #FAF6F5;
+            --bg-accent-light: #FDF7F7;
+            --shadow-sm: 0 4px 12px rgba(42, 37, 35, 0.03);
+            --shadow-md: 0 8px 25px rgba(42, 37, 35, 0.05);
+            --shadow-lg: 0 15px 40px rgba(212, 140, 144, 0.12);
+            --border-color: rgba(212, 140, 144, 0.2);
+            --color-loss: #c96868; /* Rojo apagado elegante para denotar gasto */
+        }
+
+        /* =========================================================
+           2. ESTILOS GLOBALES
+           ========================================================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--color-dark-muted);
+            background-color: var(--bg-primary); /* Fondo Blanco Puro alterno */
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: Georgia, "Times New Roman", serif;
+            color: var(--color-dark);
+            font-weight: 400;
+        }
+
+        /* =========================================================
+           3. SECCIÓN DE GASTO
+           ========================================================= */
+        .expense-section {
+            position: relative;
+            background-color: var(--bg-primary);
+            padding: 5rem 1.5rem;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Textura de grano premium (Film Grain) */
+        .grain-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 1100px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        /* INVERTIR ORDEN EN ESCRITORIO (Video Izquierda, Texto Derecha) */
+        @media (min-width: 768px) {
+            .container {
+                grid-template-columns: 1fr 1fr;
+                gap: 5rem;
+            }
+            .video-col {
+                order: 1; /* Video a la izquierda */
+            }
+            .text-col {
+                order: 2; /* Texto a la derecha */
+            }
+        }
+
+        /* =========================================================
+           4. CONTENIDO DE TEXTO
+           ========================================================= */
+        .text-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .accent-subtitle {
+            color: var(--color-accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .problem-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.2;
+        }
+
+        .problem-description {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        /* =========================================================
+           5. VIDEO Y EFECTO TICKET INFINITO
+           ========================================================= */
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto;
+            aspect-ratio: 1 / 1;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+            background-color: var(--bg-secondary);
+            transition: box-shadow 0.4s ease, transform 0.4s ease;
+        }
+
+        .video-wrapper:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-5px); /* Leve elevación al pasar el mouse */
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* =========================================================
+           EFECTOS SINCRONIZADOS AL VIDEO (Paneles Dinámicos)
+           ========================================================= */
+        .dynamic-panel {
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%) translateY(20px);
+            width: 85%;
+            max-width: 280px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+            padding: 20px;
+            z-index: 10;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .dynamic-panel.active {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* Panel 1: Contador de Gastos */
+        .receipt-header {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--color-dark-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .receipt-total {
+            font-size: 3.5rem; /* Número GIGANTE */
+            font-weight: 600;
+            color: var(--color-loss);
+            line-height: 1;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            font-family: Georgia, serif;
+        }
+
+        .receipt-total .currency {
+            font-size: 1.5rem;
+            margin-top: 8px;
+            margin-right: 4px;
+            color: var(--color-dark);
+        }
+
+        .receipt-items-container {
+            width: 100%;
+            height: 40px; /* Muestra los últimos 2 productos */
+            overflow: hidden;
+            position: relative;
+        }
+
+        .receipt-list {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            width: 100%;
+        }
+
+        .receipt-item {
+            font-size: 0.85rem;
+            color: var(--color-dark-muted);
+            display: flex;
+            justify-content: space-between;
+            font-weight: 500;
+            animation: popIn 0.3s ease forwards;
+        }
+
+        @keyframes popIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Panel 2: Solución (Agua/Reutilizable) */
+        .solution-panel {
+            justify-content: center;
+            min-height: 120px;
+        }
+
+        .solution-text {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            font-family: Georgia, serif;
+            line-height: 1.4;
+            transition: opacity 0.3s ease;
+        }
+
+    </style>
+</head>
+<body>
+
+    <section class="expense-section">
+        <div class="grain-overlay"></div>
+        
+        <div class="container">
+            
+            <!-- Columna de Video Izquierda -->
+            <div class="video-col">
+                <div class="video-wrapper">
+                    <!-- Video Cuadrado reproduciéndose en bucle -->
+                    <video 
+                        id="mainVideo"
+                        autoplay 
+                        loop 
+                        muted 
+                        playsinline 
+                        src="https://cdn.shopify.com/videos/c/o/v/20bea315b2e245cc897e666f9483dce7.mp4">
+                    </video>
+                    
+                    <!-- Panel 1: Contador de Gastos (0s a 4s / 11s+) -->
+                    <div id="expense-panel" class="dynamic-panel">
+                        <div class="receipt-header">Gastos Mensuales</div>
+                        <div class="receipt-total">
+                            <span class="currency">$</span><span id="total-amount">0</span>
+                        </div>
+                        <div class="receipt-items-container">
+                            <div class="receipt-list" id="receipt-list">
+                                <!-- Se llena automáticamente con JS -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 2: Solución (4s a 11s) -->
+                    <div id="solution-panel" class="dynamic-panel solution-panel">
+                        <div class="solution-text" id="solution-text">
+                            ✨ Solo con Agua
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna de Texto Derecha -->
+            <div class="text-col">
+                <div class="text-content">
+                    <!-- Subtítulo con un pequeño emoji visual discreto -->
+                    <span class="accent-subtitle">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        Gasto Innecesario
+                    </span>
+                    <h2 class="problem-title">¿Cansada de gastar una fortuna?</h2>
+                    <p class="problem-description">
+                        Discos de algodón, toallitas desechables, desmaquillantes líquidos… cada mes sumás gastos que se van a la basura.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SCRIPT DE SINCRONIZACIÓN DE VIDEO -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const video = document.getElementById('mainVideo');
+            const expensePanel = document.getElementById('expense-panel');
+            const solutionPanel = document.getElementById('solution-panel');
+            const totalAmountEl = document.getElementById('total-amount');
+            const receiptListEl = document.getElementById('receipt-list');
+            const solutionTextEl = document.getElementById('solution-text');
+
+            // Lista de productos solicitada
+            const products = [
+                { name: 'Agua micelar', price: 10 },
+                { name: 'Bálsamo limpiador', price: 18 },
+                { name: 'Aceite desmaq.', price: 16 },
+                { name: 'Desmaq. bifásico', price: 11 },
+                { name: 'Leche limpiadora', price: 13 },
+                { name: 'Gel limpiador', price: 13 },
+                { name: 'Toallitas desmaq.', price: 6 },
+                { name: 'Discos algodón', price: 3 },
+                { name: 'Pads reutiliz.', price: 9 },
+                { name: 'Toalla microfibra', price: 7 },
+                { name: 'Esponja Konjac', price: 6 },
+                { name: 'Hisopos algodón', price: 3 }
+            ];
+
+            let lastCount = -1;
+            let lastText = "";
+
+            // Escuchar cada milisegundo de reproducción del video
+            video.addEventListener('timeupdate', () => {
+                const t = video.currentTime;
+
+                // FASE 1: 0 a 4s, o mayor a 11s (Gastos Mensuales)
+                if ((t >= 0 && t < 4) || t >= 11) {
+                    expensePanel.classList.add('active');
+                    solutionPanel.classList.remove('active');
+
+                    // Calculamos el ciclo de tiempo para sincronizar la suma en 4 segundos exactos
+                    const cycleTime = t >= 11 ? t - 11 : t;
+                    const totalProducts = products.length;
+                    
+                    let currentCount = Math.floor((cycleTime / 4) * totalProducts) + 1;
+                    if (currentCount > totalProducts) currentCount = totalProducts;
+
+                    // Solo actualizar la pantalla si entra un producto nuevo
+                    if (currentCount !== lastCount) {
+                        const visibleProducts = products.slice(0, currentCount);
+                        const currentTotal = visibleProducts.reduce((sum, item) => sum + item.price, 0);
+
+                        // 1. Actualizar el Número Gigante
+                        totalAmountEl.innerText = currentTotal;
+
+                        // 2. Mostrar la lista (vemos solo los 2 últimos agregados para mantener elegancia)
+                        receiptListEl.innerHTML = visibleProducts.slice(-2).reverse().map(item =>
+                            `<div class="receipt-item"><span>${item.name}</span> <span>+$${item.price}</span></div>`
+                        ).join('');
+
+                        lastCount = currentCount;
+                    }
+
+                } 
+                // FASE 2: 4s a 11s (Mensajes intercalados)
+                else if (t >= 4 && t < 11) {
+                    expensePanel.classList.remove('active');
+                    solutionPanel.classList.add('active');
+                    lastCount = -1; // Resetear contador para el próximo bucle
+
+                    // Cambiar el texto intercalado cada ~1.75 segundos
+                    const relativeT = t - 4;
+                    const phase = Math.floor(relativeT / 1.75);
+                    const newText = (phase % 2 === 0) ? "✨ Solo con Agua" : "♻️ Reutiliza hasta 2 años";
+                    
+                    if (newText !== lastText) {
+                        // Efecto de desvanecimiento suave al cambiar la frase
+                        solutionTextEl.style.opacity = 0; 
+                        setTimeout(() => {
+                            solutionTextEl.innerText = newText;
+                            solutionTextEl.style.opacity = 1; 
+                        }, 150);
+                        lastText = newText;
+                    }
+                }
+            });
+            
+            // Garantizar que el video corra en móviles
+            let playPromise = video.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    console.log("Autoplay requiere interacción del usuario.");
+                });
+            }
+        });
+    </script>
+</body>
+</html>
