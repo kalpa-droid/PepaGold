@@ -1846,7 +1846,33 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
 
+
+        /* --- EFECTO SECUENCIA ANIMADA --- */
+        .static-marker.highlight-effect {
+            transform: translate(-50%, -50%) scale(1.3);
+            z-index: 20;
+        }
+        #care4 .static-marker.highlight-effect { box-shadow: 0 0 0 8px rgba(212, 140, 144, 0.4), 0 0 20px var(--color-accent-strong); }
+        #care15 .static-marker.highlight-effect { box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.8), 0 0 20px rgba(0,0,0,0.2); transform: translate(-50%, -50%) scale(1.4); }
+        #care6 .static-marker.highlight-effect { box-shadow: 0 0 0 8px rgba(34, 34, 34, 0.3), 0 0 20px var(--color-title); transform: translate(-50%, -50%) scale(1.4); }
+
+        .sci-info-card.highlight-effect {
+            transform: translateX(10px);
+            background: white;
+        }
+        #care4 .sci-info-card.highlight-effect { border-color: var(--color-accent-strong); box-shadow: 0 10px 30px rgba(212, 140, 144, 0.25); }
+        #care15 .sci-info-card.highlight-effect { border-color: var(--color-accent-strong); box-shadow: 0 10px 30px rgba(212, 140, 144, 0.25); }
+        #care6 .sci-info-card.highlight-effect { border-color: var(--color-title); box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+
+        .sci-info-card.highlight-effect .card-num {
+            transform: scale(1.15);
+        }
+        #care4 .sci-info-card.highlight-effect .card-num { box-shadow: 0 0 15px var(--color-accent-strong); }
+        #care15 .sci-info-card.highlight-effect .card-num { box-shadow: 0 0 15px var(--color-accent-strong); }
+        #care6 .sci-info-card.highlight-effect .card-num { box-shadow: 0 0 15px var(--color-title); }
+
         /* --- RESPONSIVO --- */
+
         @media (max-width: 900px) {
             .science-section { padding: 60px 20px 80px; }
             .science-content.active {
