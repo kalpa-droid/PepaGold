@@ -1864,18 +1864,20 @@ SECCIÓN VIDEO SHOWCASE
 .showcase-container {
     position: relative;
     z-index: 3;
-    max-width: 1000px; /* Reducido para que se vea más compacto */
+    max-width: 1000px;
     margin: auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 50px;
+    gap: 40px;
 }
 
 /*=========================
 COLUMNA VIDEO
 =========================*/
 .showcase-video-col {
-    flex: 0 0 320px; /* Tamaño más contenido para ocultar imperfecciones del video */
+    width: 100%;
+    max-width: 600px;
     display: flex;
     justify-content: center;
     position: relative;
@@ -1896,7 +1898,7 @@ COLUMNA VIDEO
     height: 100%;
     object-fit: cover;
     display: block;
-    aspect-ratio: 9 / 16;
+    aspect-ratio: 16 / 9;
 }
 
 /* Sombra interna para disimular la calidad de los bordes del video */
@@ -1911,9 +1913,11 @@ COLUMNA VIDEO
 COLUMNA TEXTO MINIMALISTA
 =========================*/
 .showcase-text-col {
-    flex: 1;
+    width: 100%;
+    max-width: 800px;
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 
 .showcase-text-col h4 {
@@ -1958,6 +1962,7 @@ LISTA DE PRODUCTOS (CORTA)
     padding: 15px 20px;
     border-radius: 12px;
     border: 1px solid var(--border-color);
+    text-align: left;
     transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -2037,9 +2042,8 @@ RESPONSIVE
     }
 
     .showcase-video-col {
-        flex: 0 0 auto;
-        width: 80%;
-        max-width: 300px;
+        width: 100%;
+        max-width: 480px;
     }
 
     .showcase-benefit-item {
@@ -2726,16 +2730,12 @@ document.addEventListener("DOMContentLoaded", () => {
   z-index: 2;
 }
 .benefit-card-v3 {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 50px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-}
-.benefit-card-v3:nth-child(even) {
-  direction: rtl;
-}
-.benefit-card-v3:nth-child(even) > * {
-  direction: ltr;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 .benefit-video-wrapper {
   position: relative;
@@ -2854,8 +2854,7 @@ document.addEventListener("DOMContentLoaded", () => {
 @media (max-width: 900px) {
   .benefits-v3-section { padding: 60px 20px 50px; }
   .benefits-v3-grid { gap: 60px; }
-  .benefit-card-v3 { grid-template-columns: 1fr; gap: 30px; text-align: center; }
-  .benefit-card-v3:nth-child(even) { direction: ltr; }
+  .benefit-card-v3 { text-align: center; gap: 20px; }
   .benefit-text-content { text-align: center; }
   .care-label { justify-content: center; }
   .benefit-video-wrapper { max-width: 480px; }
