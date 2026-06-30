@@ -1776,6 +1776,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="showcase-benefits-list">
 <!-- Producto 1 -->
 <div class="showcase-benefit-item">
+<div class="showcase-item-content">
 <div class="benefit-text">
 <h3 class="notranslate" translate="no"><span class="notranslate" translate="no">CARE 4</span>: Cleanser Sponge (Greenway)</h3>
 <div class="care-details-structure">
@@ -1797,9 +1798,14 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
 </div>
 </div>
+<div class="showcase-item-img">
+  <img src="assets/imagenes/4.webp" alt="CARE 4 Cleanser Sponge" loading="lazy"/>
+</div>
+</div>
 </div>
 <!-- Producto 2 -->
 <div class="showcase-benefit-item">
+<div class="showcase-item-content">
 <div class="benefit-text">
 <h3 class="notranslate" translate="no"><span class="notranslate" translate="no">CARE 15</span>: Manopla-Esponja de Doble Cara (Green Fiber)</h3>
 <div class="care-details-structure">
@@ -1821,9 +1827,14 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
 </div>
 </div>
+<div class="showcase-item-img">
+  <img src="assets/imagenes/3.webp" alt="CARE 15 Green Fiber" loading="lazy"/>
+</div>
+</div>
 </div>
 <!-- Producto 3 -->
 <div class="showcase-benefit-item">
+<div class="showcase-item-content">
 <div class="benefit-text">
 <h3 class="notranslate" translate="no"><span class="notranslate" translate="no">CARE 6</span>: Soft Mitt (Greenway)</h3>
 <div class="care-details-structure">
@@ -1843,6 +1854,10 @@ document.addEventListener("DOMContentLoaded", () => {
       <li>Cuidado óptimo: lavá con jabón ecológico BioTrim y secar al aire.</li>
     </ul>
   </div>
+</div>
+</div>
+<div class="showcase-item-img">
+  <img src="assets/imagenes/2.webp" alt="CARE 6 Soft Mitt" loading="lazy"/>
 </div>
 </div>
 </div>
@@ -1973,6 +1988,31 @@ LISTA DE PRODUCTOS (CORTA)
     transform: translateX(5px);
 }
 
+.showcase-item-content {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    width: 100%;
+}
+.benefit-text {
+    flex: 1;
+}
+.showcase-item-img {
+    flex: 0 0 160px;
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.showcase-item-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    display: block;
+}
+
 .showcase-benefit-item h3 {
     font-family: var(--font-sans);
     font-size: var(--size-body);
@@ -2028,6 +2068,15 @@ LISTA DE PRODUCTOS (CORTA)
     .care-details-structure {
         grid-template-columns: 1fr;
         gap: 1rem;
+    }
+    .showcase-item-content {
+        flex-direction: column-reverse;
+        gap: 20px;
+        align-items: center;
+    }
+    .showcase-item-img {
+        flex: 0 0 auto;
+        width: 130px;
     }
 }
 
@@ -2096,6 +2145,321 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 </script>
+
+<!-- =============================================
+     SECCIÓN 7b: BENEFICIOS A LARGO PLAZO (VIDEOS CARE)
+============================================= -->
+<style>
+/* =============================================
+   BENEFICIOS A LARGO PLAZO — ZIGZAG VIDEO LAYOUT
+============================================= */
+.benefits-v3-section {
+  background: var(--bg-primary);
+  padding: 90px 20px 70px;
+  position: relative;
+  overflow: hidden;
+}
+.benefits-v3-section .grain-overlay-benefits {
+  position: absolute; inset: 0; pointer-events: none;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  z-index: 1;
+}
+.benefits-v3-header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
+}
+.benefits-v3-header h4 {
+  font-family: var(--font-sans);
+  color: var(--color-accent);
+  font-size: 13px;
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+.benefits-v3-header h2 {
+  font-family: var(--font-serif);
+  font-size: var(--size-h2);
+  font-weight: var(--weight-regular);
+  color: var(--color-dark);
+  line-height: var(--lh-tight);
+}
+.benefits-v3-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  position: relative;
+  z-index: 2;
+}
+.benefit-card-v3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.benefit-video-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #000;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  aspect-ratio: 16/9;
+  max-width: 500px;
+  margin: 0 auto;
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+.benefit-video-wrapper:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+}
+.benefit-video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.benefit-text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+.benefit-text-content .care-label {
+  font-family: var(--font-sans);
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.benefit-text-content h3 {
+  font-family: var(--font-serif);
+  font-size: var(--size-h3);
+  font-weight: var(--weight-regular);
+  color: var(--color-dark);
+  line-height: var(--lh-snug);
+  margin: 0;
+}
+.benefit-text-content .benefit-intro {
+  font-family: var(--font-sans);
+  font-size: var(--size-body-small);
+  line-height: var(--lh-normal);
+  color: var(--color-dark-muted);
+  font-weight: var(--weight-light);
+}
+.benefit-science-box {
+  background: var(--bg-secondary);
+  border-radius: 14px;
+  padding: 20px 22px;
+  border: 1px solid var(--border-color);
+}
+.benefit-science-box h4 {
+  font-family: var(--font-sans);
+  font-size: var(--size-body-small);
+  font-weight: var(--weight-semibold);
+  color: var(--color-primary);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.benefit-science-box p {
+  font-family: var(--font-sans);
+  font-size: var(--size-caption);
+  line-height: var(--lh-normal);
+  color: var(--color-dark-muted);
+  font-weight: var(--weight-light);
+  margin: 0;
+}
+.benefit-longterm-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.benefit-longterm-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.benefit-longterm-item .item-icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--bg-accent-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  margin-top: 2px;
+}
+.benefit-longterm-item .item-text {
+  font-family: var(--font-sans);
+  font-size: var(--size-caption);
+  line-height: 1.5;
+  color: var(--color-dark-muted);
+  font-weight: var(--weight-light);
+}
+.benefit-longterm-item .item-text strong {
+  font-weight: var(--weight-semibold);
+  color: var(--color-dark);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .benefits-v3-section { padding: 60px 20px 50px; }
+  .benefits-v3-grid { gap: 60px; }
+  .benefit-card-v3 { text-align: center; gap: 20px; }
+  .benefit-text-content { text-align: center; }
+  .care-label { justify-content: center; }
+  .benefit-video-wrapper { max-width: 480px; }
+}
+</style>
+
+<section class="benefits-v3-section">
+  <div class="grain-overlay-benefits"></div>
+  <div class="benefits-v3-header">
+    <h4 class="notranslate" translate="no">✨ Cuidado Premium</h4>
+    <h2>Beneficios a Largo Plazo</h2>
+  </div>
+
+  <div class="benefits-v3-grid">
+    <!-- CARE 4 -->
+    <div class="benefit-card-v3">
+      <div class="benefit-video-wrapper">
+        <video id="videoCare4" playsinline preload="metadata">
+          <source src="assets/imagenes/CARE 4.mp4" type="video/mp4"/>
+        </video>
+        <div class="video-play-overlay" data-smart-video>
+          <div class="video-play-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--color-dark)"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+        <!-- Mute/Unmute Button -->
+        <button class="video-mute-btn" aria-label="Alternar sonido">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+        </button>
+      </div>
+      <div class="benefit-text-content">
+        <span class="care-label"><span class="notranslate" translate="no">CARE 4</span> · Esponja Desmaquillante</span>
+        <h3>Tu Escudo Protector Anti-Químicos</h3>
+        <p class="benefit-intro">¿Tu piel queda roja, reseca o tirante después de desmaquillarte? El desmaquillado con jabones agresivos y líquidos químicos barre con tus defensas naturales, provocando que tu piel pierda su hidratación y se deshidrate.</p>
+        <div class="benefit-science-box">
+          <h4>🔬 La ciencia detrás de la magia</h4>
+          <p>La esponja CARE 4 usa tecnología de microfibra avanzada (80% poliéster, 20% poliamida). En lugar de químicos, utiliza un efecto de capilaridad: millones de hilos microscópicos que, al contacto con el agua, actúan como pequeñas aspiradoras que atrapan el sebo, la suciedad y el maquillaje. Todo queda encapsulado dentro de la fibra, evitando que tus poros se tapen.</p>
+        </div>
+        <div class="benefit-longterm-list">
+          <div class="benefit-longterm-item">
+            <div class="item-icon">✨</div>
+            <div class="item-text"><strong>Adiós irritación crónica:</strong> Al usar solo esta esponja con agua, evitás la sequedad y tirantez que provocan los desmaquillantes convencionales.</div>
+          </div>
+          <div class="benefit-longterm-item">
+            <div class="item-icon">🛡️</div>
+            <div class="item-text"><strong>Protección del microbioma:</strong> Preservás tu barrera protectora natural, permitiendo que las bacterias buenas de tu rostro se mantengan en equilibrio.</div>
+          </div>
+          <div class="benefit-longterm-item">
+            <div class="item-icon">💎</div>
+            <div class="item-text"><strong>Piel más resistente:</strong> Este método preventivo evita el deterioro progresivo de tu barrera cutánea frente a los químicos.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARE 15 -->
+    <div class="benefit-card-v3">
+      <div class="benefit-video-wrapper">
+        <video id="videoCare15" playsinline preload="metadata">
+          <source src="assets/imagenes/CARE 15.mp4" type="video/mp4"/>
+        </video>
+        <div class="video-play-overlay" data-smart-video>
+          <div class="video-play-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--color-dark)"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+        <!-- Mute/Unmute Button -->
+        <button class="video-mute-btn" aria-label="Alternar sonido">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+        </button>
+      </div>
+      <div class="benefit-text-content">
+        <span class="care-label"><span class="notranslate" translate="no">CARE 15</span> · Guante Doble Cara</span>
+        <h3>Renovación Celular y Efecto "Glow" Constante</h3>
+        <p class="benefit-intro">A veces la piel se ve opaca, sin vida y con impurezas acumuladas. Los ácidos exfoliantes fuertes limpian, pero alteran el pH natural y atacan tus defensas. CARE 15 es tu accesorio "2 en 1" que resuelve esto de forma inteligente, tanto para el rostro como para el cuerpo.</p>
+        <div class="benefit-science-box">
+          <h4>🔬 La ciencia detrás de la magia</h4>
+          <p>Este guante tiene dos texturas. Su cara suave abrillanta y limpia con extrema delicadeza. Su cara texturizada "barre" físicamente las células muertas de la superficie cutánea mediante hidratación, sin necesidad de agentes disolventes o exfoliantes químicos agresivos.</p>
+        </div>
+        <div class="benefit-longterm-list">
+          <div class="benefit-longterm-item">
+            <div class="item-icon">✨</div>
+            <div class="item-text"><strong>Piel siempre luminosa:</strong> El uso regular de su lado exfoliante promueve una renovación celular constante, revelando siempre piel nueva y fresca.</div>
+          </div>
+          <div class="benefit-longterm-item">
+            <div class="item-icon">💆</div>
+            <div class="item-text"><strong>Tonificación continua:</strong> El suave efecto de masaje que proporciona la cara texturizada tonifica perfectamente la piel.</div>
+          </div>
+          <div class="benefit-longterm-item">
+            <div class="item-icon">💎</div>
+            <div class="item-text"><strong>Aspecto saludable duradero:</strong> El micro-masaje constante contribuye a oxigenar la piel, dándole un aspecto fresco y saludable a lo largo de los años.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARE 6 -->
+    <div class="benefit-card-v3">
+      <div class="benefit-video-wrapper">
+        <video id="videoCare6" playsinline preload="metadata">
+          <source src="assets/imagenes/CARE 6.mp4" type="video/mp4"/>
+        </video>
+        <div class="video-play-overlay" data-smart-video>
+          <div class="video-play-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--color-dark)"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+        <!-- Mute/Unmute Button -->
+        <button class="video-mute-btn" aria-label="Alternar sonido">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+        </button>
+      </div>
+      <div class="benefit-text-content">
+        <span class="care-label"><span class="notranslate" translate="no">CARE 6</span> · Manopla Suave</span>
+        <h3>Firmeza y Prevención para Zonas Delicadas</h3>
+        <p class="benefit-intro">El rostro, el cuello y el escote tienen una piel mucho más fina y sensible. Son los primeros en mostrar la pérdida de textura y firmeza. La acumulación diaria de polución, protector solar y sudor requiere una limpieza que no estire ni agreda estas zonas tan frágiles.</p>
+        <div class="benefit-science-box">
+          <h4>🔬 La ciencia detrás de la magia</h4>
+          <p>CARE 6 tiene una textura extremadamente delicada diseñada para una exfoliación preventiva y continua. Su tejido atrapa las impurezas ambientales y los restos de maquillaje respetando la homeostasis inmunológica de tu piel. Al no requerir fricción brusca, protege la estructura natural de tu piel.</p>
+        </div>
+        <div class="benefit-longterm-list">
+          <div class="benefit-longterm-item">
+            <div class="item-icon">✨</div>
+            <div class="item-text"><strong>Mantenimiento de la juventud:</strong> El uso regular de esta manopla ayuda a mantener la elasticidad y la suavidad natural de tu piel.</div>
+          </div>
+          <div class="benefit-longterm-item">
+            <div class="item-icon">🛡️</div>
+            <div class="item-text"><strong>Prevención del envejecimiento prematuro:</strong> Su micro-exfoliación diaria previene la pérdida de firmeza de forma continua y delicada.</div>
+          </div>
+          <div class="benefit-longterm-item">
+            <div class="item-icon">💎</div>
+            <div class="item-text"><strong>Textura uniforme:</strong> Evita la pérdida de textura en las zonas más sensibles, asegurando que tu escote y cuello luzcan tan radiantes como tu rostro.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- =============================================
      SECCIÓN 7a: CIENCIA A NIVEL MICROSCÓPICO
 ============================================= -->
@@ -2614,6 +2978,8 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         })();
     </script>
+
+
 <section class="section-wrapper bg-secondary" id="ciencia">
 <div class="grain-overlay"></div>
 <div class="container">
@@ -2679,319 +3045,6 @@ document.addEventListener("DOMContentLoaded", () => {
             </p>
 </div>
 </div>
-</section>
-<!-- =============================================
-     SECCIÓN 7b: BENEFICIOS A LARGO PLAZO (VIDEOS CARE)
-============================================= -->
-<style>
-/* =============================================
-   BENEFICIOS A LARGO PLAZO — ZIGZAG VIDEO LAYOUT
-============================================= */
-.benefits-v3-section {
-  background: var(--bg-primary);
-  padding: 90px 20px 70px;
-  position: relative;
-  overflow: hidden;
-}
-.benefits-v3-section .grain-overlay-benefits {
-  position: absolute; inset: 0; pointer-events: none;
-  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-  z-index: 1;
-}
-.benefits-v3-header {
-  text-align: center;
-  margin-bottom: 60px;
-  position: relative;
-  z-index: 2;
-}
-.benefits-v3-header h4 {
-  font-family: var(--font-sans);
-  color: var(--color-accent);
-  font-size: 13px;
-  font-weight: var(--weight-semibold);
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  margin-bottom: 10px;
-}
-.benefits-v3-header h2 {
-  font-family: var(--font-serif);
-  font-size: var(--size-h2);
-  font-weight: var(--weight-regular);
-  color: var(--color-dark);
-  line-height: var(--lh-tight);
-}
-.benefits-v3-grid {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-  position: relative;
-  z-index: 2;
-}
-.benefit-card-v3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-.benefit-video-wrapper {
-  position: relative;
-  width: 100%;
-  border-radius: 20px;
-  overflow: hidden;
-  background: #000;
-  border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-md);
-  aspect-ratio: 16/9;
-  max-width: 500px;
-  margin: 0 auto;
-  transition: box-shadow 0.4s ease, transform 0.4s ease;
-}
-.benefit-video-wrapper:hover {
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-5px);
-}
-.benefit-video-wrapper video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.benefit-text-content {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  text-align: left;
-}
-.benefit-text-content .care-label {
-  font-family: var(--font-sans);
-  color: var(--color-accent);
-  font-size: 0.8rem;
-  font-weight: var(--weight-semibold);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.benefit-text-content h3 {
-  font-family: var(--font-serif);
-  font-size: var(--size-h3);
-  font-weight: var(--weight-regular);
-  color: var(--color-dark);
-  line-height: var(--lh-snug);
-  margin: 0;
-}
-.benefit-text-content .benefit-intro {
-  font-family: var(--font-sans);
-  font-size: var(--size-body-small);
-  line-height: var(--lh-normal);
-  color: var(--color-dark-muted);
-  font-weight: var(--weight-light);
-}
-.benefit-science-box {
-  background: var(--bg-secondary);
-  border-radius: 14px;
-  padding: 20px 22px;
-  border: 1px solid var(--border-color);
-}
-.benefit-science-box h4 {
-  font-family: var(--font-sans);
-  font-size: var(--size-body-small);
-  font-weight: var(--weight-semibold);
-  color: var(--color-primary);
-  margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.benefit-science-box p {
-  font-family: var(--font-sans);
-  font-size: var(--size-caption);
-  line-height: var(--lh-normal);
-  color: var(--color-dark-muted);
-  font-weight: var(--weight-light);
-  margin: 0;
-}
-.benefit-longterm-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.benefit-longterm-item {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-}
-.benefit-longterm-item .item-icon {
-  flex-shrink: 0;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: var(--bg-accent-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  margin-top: 2px;
-}
-.benefit-longterm-item .item-text {
-  font-family: var(--font-sans);
-  font-size: var(--size-caption);
-  line-height: 1.5;
-  color: var(--color-dark-muted);
-  font-weight: var(--weight-light);
-}
-.benefit-longterm-item .item-text strong {
-  font-weight: var(--weight-semibold);
-  color: var(--color-dark);
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .benefits-v3-section { padding: 60px 20px 50px; }
-  .benefits-v3-grid { gap: 60px; }
-  .benefit-card-v3 { text-align: center; gap: 20px; }
-  .benefit-text-content { text-align: center; }
-  .care-label { justify-content: center; }
-  .benefit-video-wrapper { max-width: 480px; }
-}
-</style>
-
-<section class="benefits-v3-section">
-  <div class="grain-overlay-benefits"></div>
-  <div class="benefits-v3-header">
-    <h4 class="notranslate" translate="no">✨ Cuidado Premium</h4>
-    <h2>Beneficios a Largo Plazo</h2>
-  </div>
-
-  <div class="benefits-v3-grid">
-    <!-- CARE 4 -->
-    <div class="benefit-card-v3">
-      <div class="benefit-video-wrapper">
-        <video id="videoCare4" playsinline preload="metadata">
-          <source src="assets/imagenes/CARE 4.mp4" type="video/mp4"/>
-        </video>
-        <div class="video-play-overlay" data-smart-video>
-          <div class="video-play-btn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--color-dark)"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-        </div>
-        <!-- Mute/Unmute Button -->
-        <button class="video-mute-btn" aria-label="Alternar sonido">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
-        </button>
-      </div>
-      <div class="benefit-text-content">
-        <span class="care-label"><span class="notranslate" translate="no">CARE 4</span> · Esponja Desmaquillante</span>
-        <h3>Tu Escudo Protector Anti-Químicos</h3>
-        <p class="benefit-intro">¿Tu piel queda roja, reseca o tirante después de desmaquillarte? El desmaquillado con jabones agresivos y líquidos químicos barre con tus defensas naturales, provocando que tu piel pierda su hidratación y se deshidrate.</p>
-        <div class="benefit-science-box">
-          <h4>🔬 La ciencia detrás de la magia</h4>
-          <p>La esponja CARE 4 usa tecnología de microfibra avanzada (80% poliéster, 20% poliamida). En lugar de químicos, utiliza un efecto de capilaridad: millones de hilos microscópicos que, al contacto con el agua, actúan como pequeñas aspiradoras que atrapan el sebo, la suciedad y el maquillaje. Todo queda encapsulado dentro de la fibra, evitando que tus poros se tapen.</p>
-        </div>
-        <div class="benefit-longterm-list">
-          <div class="benefit-longterm-item">
-            <div class="item-icon">✨</div>
-            <div class="item-text"><strong>Adiós irritación crónica:</strong> Al usar solo esta esponja con agua, evitás la sequedad y tirantez que provocan los desmaquillantes convencionales.</div>
-          </div>
-          <div class="benefit-longterm-item">
-            <div class="item-icon">🛡️</div>
-            <div class="item-text"><strong>Protección del microbioma:</strong> Preservás tu barrera protectora natural, permitiendo que las bacterias buenas de tu rostro se mantengan en equilibrio.</div>
-          </div>
-          <div class="benefit-longterm-item">
-            <div class="item-icon">💎</div>
-            <div class="item-text"><strong>Piel más resistente:</strong> Este método preventivo evita el deterioro progresivo de tu barrera cutánea frente a los químicos.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- CARE 15 -->
-    <div class="benefit-card-v3">
-      <div class="benefit-video-wrapper">
-        <video id="videoCare15" playsinline preload="metadata">
-          <source src="assets/imagenes/CARE 15.mp4" type="video/mp4"/>
-        </video>
-        <div class="video-play-overlay" data-smart-video>
-          <div class="video-play-btn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--color-dark)"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-        </div>
-        <!-- Mute/Unmute Button -->
-        <button class="video-mute-btn" aria-label="Alternar sonido">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
-        </button>
-      </div>
-      <div class="benefit-text-content">
-        <span class="care-label"><span class="notranslate" translate="no">CARE 15</span> · Guante Doble Cara</span>
-        <h3>Renovación Celular y Efecto "Glow" Constante</h3>
-        <p class="benefit-intro">A veces la piel se ve opaca, sin vida y con impurezas acumuladas. Los ácidos exfoliantes fuertes limpian, pero alteran el pH natural y atacan tus defensas. CARE 15 es tu accesorio "2 en 1" que resuelve esto de forma inteligente, tanto para el rostro como para el cuerpo.</p>
-        <div class="benefit-science-box">
-          <h4>🔬 La ciencia detrás de la magia</h4>
-          <p>Este guante tiene dos texturas. Su cara suave abrillanta y limpia con extrema delicadeza. Su cara texturizada "barre" físicamente las células muertas de la superficie cutánea mediante hidratación, sin necesidad de agentes disolventes o exfoliantes químicos agresivos.</p>
-        </div>
-        <div class="benefit-longterm-list">
-          <div class="benefit-longterm-item">
-            <div class="item-icon">✨</div>
-            <div class="item-text"><strong>Piel siempre luminosa:</strong> El uso regular de su lado exfoliante promueve una renovación celular constante, revelando siempre piel nueva y fresca.</div>
-          </div>
-          <div class="benefit-longterm-item">
-            <div class="item-icon">💆</div>
-            <div class="item-text"><strong>Tonificación continua:</strong> El suave efecto de masaje que proporciona la cara texturizada tonifica perfectamente la piel.</div>
-          </div>
-          <div class="benefit-longterm-item">
-            <div class="item-icon">💎</div>
-            <div class="item-text"><strong>Aspecto saludable duradero:</strong> El micro-masaje constante contribuye a oxigenar la piel, dándole un aspecto fresco y saludable a lo largo de los años.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- CARE 6 -->
-    <div class="benefit-card-v3">
-      <div class="benefit-video-wrapper">
-        <video id="videoCare6" playsinline preload="metadata">
-          <source src="assets/imagenes/CARE 6.mp4" type="video/mp4"/>
-        </video>
-        <div class="video-play-overlay" data-smart-video>
-          <div class="video-play-btn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--color-dark)"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-        </div>
-        <!-- Mute/Unmute Button -->
-        <button class="video-mute-btn" aria-label="Alternar sonido">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
-        </button>
-      </div>
-      <div class="benefit-text-content">
-        <span class="care-label"><span class="notranslate" translate="no">CARE 6</span> · Manopla Suave</span>
-        <h3>Firmeza y Prevención para Zonas Delicadas</h3>
-        <p class="benefit-intro">El rostro, el cuello y el escote tienen una piel mucho más fina y sensible. Son los primeros en mostrar la pérdida de textura y firmeza. La acumulación diaria de polución, protector solar y sudor requiere una limpieza que no estire ni agreda estas zonas tan frágiles.</p>
-        <div class="benefit-science-box">
-          <h4>🔬 La ciencia detrás de la magia</h4>
-          <p>CARE 6 tiene una textura extremadamente delicada diseñada para una exfoliación preventiva y continua. Su tejido atrapa las impurezas ambientales y los restos de maquillaje respetando la homeostasis inmunológica de tu piel. Al no requerir fricción brusca, protege la estructura natural de tu piel.</p>
-        </div>
-        <div class="benefit-longterm-list">
-          <div class="benefit-longterm-item">
-            <div class="item-icon">✨</div>
-            <div class="item-text"><strong>Mantenimiento de la juventud:</strong> El uso regular de esta manopla ayuda a mantener la elasticidad y la suavidad natural de tu piel.</div>
-          </div>
-          <div class="benefit-longterm-item">
-            <div class="item-icon">🛡️</div>
-            <div class="item-text"><strong>Prevención del envejecimiento prematuro:</strong> Su micro-exfoliación diaria previene la pérdida de firmeza de forma continua y delicada.</div>
-          </div>
-          <div class="benefit-longterm-item">
-            <div class="item-icon">💎</div>
-            <div class="item-text"><strong>Textura uniforme:</strong> Evita la pérdida de textura en las zonas más sensibles, asegurando que tu escote y cuello luzcan tan radiantes como tu rostro.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 <!-- =============================================
      CTA INTERMEDIO (NUEVO)
@@ -4573,32 +4626,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 <!-- Nota E-E-A-T al pie de la página -->
-<div class="eeat-footnote">
-  <p>* <strong>Transparencia E-E-A-T:</strong> Las referencias a investigadores y sus instituciones son informativas y enlazan a sus perfiles públicos y laboratorios verificados. Ningún experto avala comercialmente este producto. Los enlaces usan <code>rel="nofollow noopener"</code> para cumplir con las directrices de Google sobre enlaces de terceros.</p>
-</div>
-<style>
-.eeat-footnote {
-  text-align: center;
-  padding: 25px 20px;
-  background: var(--bg-secondary);
-  border-top: 1px solid var(--border-color);
-}
-.eeat-footnote p {
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  line-height: 1.6;
-  color: var(--color-dark-muted);
-  max-width: 800px;
-  margin: 0 auto;
-}
-.eeat-footnote code {
-  font-size: 0.7rem;
-  background: rgba(212,140,144,0.1);
-  padding: 2px 6px;
-  border-radius: 4px;
-}
-</style>
-
 <footer class="site-footer">
 <div class="footer-container">
     <div class="footer-top-grid" style="display:flex; flex-wrap:wrap; justify-content:space-between; text-align:left; gap:2rem; margin-bottom:40px;">
@@ -4628,6 +4655,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     <div class="footer-bottom">
         <p>© 2025 <span class="notranslate" translate="no"><span class="notranslate" translate="no">Greenway</span> Global</span>. Todos los derechos reservados.</p>
+        <p style="margin-top: 20px; font-size: 0.7rem; color: rgba(255, 255, 255, 0.45); line-height: 1.6; max-width: 800px; margin-left: auto; margin-right: auto; font-family: var(--font-sans); font-weight: 300;">* <strong>Transparencia E-E-A-T:</strong> Las referencias a investigadores y sus instituciones son informativas y enlazan a sus perfiles públicos y laboratorios verificados. Ningún experto avala comercialmente este producto. Los enlaces usan <code>rel="nofollow noopener"</code> para cumplir con las directrices de Google sobre enlaces de terceros.</p>
     </div>
 </div>
 </footer>
