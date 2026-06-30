@@ -1758,6 +1758,10 @@ document.addEventListener("DOMContentLoaded", () => {
     </svg>
   </div>
 </div>
+<!-- Mute/Unmute Button -->
+<button class="video-mute-btn" aria-label="Alternar sonido">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+</button>
 <!-- Un ligero brillo difumina los bordes y hace que un video de menor calidad se vea más integrado -->
 <div class="video-inner-shadow"></div>
 </div>
@@ -2741,8 +2745,8 @@ document.addEventListener("DOMContentLoaded", () => {
   background: #000;
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-md);
-  aspect-ratio: 9/16;
-  max-width: 380px;
+  aspect-ratio: 16/9;
+  max-width: 500px;
   margin: 0 auto;
   transition: box-shadow 0.4s ease, transform 0.4s ease;
 }
@@ -2854,7 +2858,7 @@ document.addEventListener("DOMContentLoaded", () => {
   .benefit-card-v3:nth-child(even) { direction: ltr; }
   .benefit-text-content { text-align: center; }
   .care-label { justify-content: center; }
-  .benefit-video-wrapper { max-width: 320px; }
+  .benefit-video-wrapper { max-width: 480px; }
 }
 </style>
 
@@ -2877,6 +2881,10 @@ document.addEventListener("DOMContentLoaded", () => {
             <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--color-dark)"><path d="M8 5v14l11-7z"/></svg>
           </div>
         </div>
+        <!-- Mute/Unmute Button -->
+        <button class="video-mute-btn" aria-label="Alternar sonido">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+        </button>
       </div>
       <div class="benefit-text-content">
         <span class="care-label"><span class="notranslate" translate="no">CARE 4</span> · Esponja Desmaquillante</span>
@@ -2914,6 +2922,10 @@ document.addEventListener("DOMContentLoaded", () => {
             <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--color-dark)"><path d="M8 5v14l11-7z"/></svg>
           </div>
         </div>
+        <!-- Mute/Unmute Button -->
+        <button class="video-mute-btn" aria-label="Alternar sonido">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+        </button>
       </div>
       <div class="benefit-text-content">
         <span class="care-label"><span class="notranslate" translate="no">CARE 15</span> · Guante Doble Cara</span>
@@ -2951,6 +2963,10 @@ document.addEventListener("DOMContentLoaded", () => {
             <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--color-dark)"><path d="M8 5v14l11-7z"/></svg>
           </div>
         </div>
+        <!-- Mute/Unmute Button -->
+        <button class="video-mute-btn" aria-label="Alternar sonido">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+        </button>
       </div>
       <div class="benefit-text-content">
         <span class="care-label"><span class="notranslate" translate="no">CARE 6</span> · Manopla Suave</span>
@@ -4687,13 +4703,41 @@ document.addEventListener("DOMContentLoaded", () => {
     height: 20px;
   }
 }
+
+.video-mute-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 15;
+  background: rgba(42, 37, 35, 0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+.video-mute-btn:hover {
+  background: rgba(42, 37, 35, 0.85);
+  transform: scale(1.05);
+}
+.video-mute-btn svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
 </style>
 
 <script>
 // =============================================
-// SMART VIDEO SYSTEM
-// Handles: scroll-based autoplay with audio, play/pause toggle, overlay button
-// Only affects videos with [data-smart-video] overlay parent
+// SMART VIDEO SYSTEM (WITH AUDIO AND MUTE/UNMUTE INTERACTION)
 // =============================================
 (function() {
   'use strict';
@@ -4702,28 +4746,47 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!smartOverlays.length) return;
 
   const smartVideos = [];
+  const mutedSVG = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>`;
+  const unmutedSVG = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>`;
 
   smartOverlays.forEach(overlay => {
     const wrapper = overlay.parentElement;
     const video = wrapper.querySelector('video');
+    const muteBtn = wrapper.querySelector('.video-mute-btn');
     if (!video) return;
 
-    // Ensure video starts paused and unmuted
-    video.muted = false;
-    video.volume = 0.7;
+    // Start muted by default to comply with browser autoplay policies
+    video.muted = true;
+    video.volume = 0.8;
 
-    const entry = { video, overlay, wrapper, isUserPaused: false };
+    const entry = { video, overlay, wrapper, muteBtn, isUserPaused: false };
     smartVideos.push(entry);
 
-    // Click overlay to play
+    // Mute/Unmute button click
+    if (muteBtn) {
+      muteBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        video.muted = !video.muted;
+        updateMuteButtonIcon(entry);
+      });
+    }
+
+    // Click overlay to play (and unmute since it's a direct user click)
     overlay.addEventListener('click', (e) => {
       e.stopPropagation();
+      video.muted = false;
+      updateMuteButtonIcon(entry);
       togglePlayPause(entry);
     });
 
-    // Click video to toggle
+    // Click video: if muted, unmute it; otherwise, toggle play/pause
     video.addEventListener('click', () => {
-      togglePlayPause(entry);
+      if (video.muted) {
+        video.muted = false;
+        updateMuteButtonIcon(entry);
+      } else {
+        togglePlayPause(entry);
+      }
     });
 
     // Show overlay when video ends
@@ -4733,6 +4796,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  function updateMuteButtonIcon(entry) {
+    if (entry.muteBtn) {
+      entry.muteBtn.innerHTML = entry.video.muted ? mutedSVG : unmutedSVG;
+    }
+  }
+
   function togglePlayPause(entry) {
     const { video, overlay } = entry;
     if (video.paused) {
@@ -4740,8 +4809,9 @@ document.addEventListener("DOMContentLoaded", () => {
         overlay.classList.add('is-hidden');
         entry.isUserPaused = false;
       }).catch(() => {
-        // Autoplay blocked — try muted
+        // If unmuted autoplay fails, default to muted
         video.muted = true;
+        updateMuteButtonIcon(entry);
         video.play().then(() => {
           overlay.classList.add('is-hidden');
         });
@@ -4763,12 +4833,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const { video, overlay } = smartEntry;
 
       if (ioEntry.isIntersecting && ioEntry.intersectionRatio >= 0.5) {
-        // Video entered viewport — autoplay with audio
         if (video.paused && !smartEntry.isUserPaused) {
+          // Play (starts muted for policy compliance)
           video.play().then(() => {
             overlay.classList.add('is-hidden');
           }).catch(() => {
-            // Browser blocked unmuted autoplay — try muted
             video.muted = true;
             video.play().then(() => {
               overlay.classList.add('is-hidden');
