@@ -310,26 +310,22 @@
 </div>
 <!-- TARJETA CTA -->
 <div class="cta-card">
-  <div class="cta-card-content-wrapper">
-    <div class="cta-card-left">
-      <div class="cta-header">
-        <div class="cta-icon">✨</div>
-        <div class="cta-title"><span class="notranslate" translate="no">Laska Mini Set</span></div>
-      </div>
-      <p class="cta-desc" data-i18n="desc">
-        Tres piezas de microfibra que eliminan el maquillaje, la grasa y la suciedad del día usando solo agua tibia. Reemplazan los discos de algodón, el agua micelar y el desmaquillante. Duran hasta 2 años. Una compra, cero residuos. Piel limpia, suave y radiante por solo <strong>$58.200 ARS</strong>.
-      </p>
+  <div class="cta-card-top">
+    <div class="cta-header">
+      <div class="cta-icon">✨</div>
+      <div class="cta-title"><span class="notranslate" translate="no">Laska Mini Set</span></div>
     </div>
-    <div class="cta-card-right">
-      <div class="cta-actions">
-        <a class="btn" data-i18n="btn" href="https://greenwayglobal.ar/shop/brands/fiber/08093?gw=uZv7Gi0Ep5">
-          COMPRAR AHORA →
-        </a>
-        <div class="rating-block">
-          <div class="stars">★★★★★</div>
-          <div class="score" data-i18n="rating">Primeras compradoras verificadas: 4.9/5</div>
-        </div>
-      </div>
+    <p class="cta-desc" data-i18n="desc">
+      Tres piezas de microfibra que eliminan el maquillaje, la grasa y la suciedad del día usando solo agua tibia. Reemplazan los discos de algodón, el agua micelar y el desmaquillante. Duran hasta 2 años. Una compra, cero residuos. Piel limpia, suave y radiante por solo <strong>$58.200 ARS</strong>.
+    </p>
+  </div>
+  <div class="cta-card-bottom">
+    <a class="btn" data-i18n="btn" href="https://greenwayglobal.ar/shop/brands/fiber/08093?gw=uZv7Gi0Ep5">
+      COMPRAR AHORA →
+    </a>
+    <div class="rating-block">
+      <div class="stars">★★★★★</div>
+      <div class="score" data-i18n="rating">Primeras compradoras verificadas: 4.9/5</div>
     </div>
   </div>
 </div>
@@ -348,7 +344,7 @@
           <div>
             <div class="isp-stars">★★★★★</div>
             <p class="isp-quote">"Me saca hasta el rímel waterproof, juro."</p>
-            <span class="isp-author">Sofía M., 23 · Buenos Aires</span>
+            <span class="isp-author">Sofía M., 23</span>
           </div>
         </div>
       </div>
@@ -359,7 +355,7 @@
           <div>
             <div class="isp-stars">★★★★★</div>
             <p class="isp-quote">"Lo llevo a todos lados, literal."</p>
-            <span class="isp-author">lau.viajera, 27 · Córdoba</span>
+            <span class="isp-author">lau.viajera, 27</span>
           </div>
         </div>
       </div>
@@ -370,7 +366,7 @@
           <div>
             <div class="isp-stars">★★★★★</div>
             <p class="isp-quote">"Me hago spa en la ducha todos los días."</p>
-            <span class="isp-author">ele.skincare, 21 · Rosario</span>
+            <span class="isp-author">ele.skincare, 21</span>
           </div>
         </div>
       </div>
@@ -614,45 +610,70 @@
 /* =======================
    TARJETA TRANSPARENTE
 ======================= */
-.cta-card{
-  position:absolute;
-  left:50%;
-  transform:translateX(-50%);
-  bottom:35px;
-  z-index:5;
-  width:min(92%,560px);
-  background:rgba(20,20,20,.5);
-  backdrop-filter:blur(20px);
-  -webkit-backdrop-filter:blur(20px);
-  border:1px solid rgba(255,255,255,.15);
-  border-radius:24px;
-  padding:32px;
-  color:#fff;
-  box-shadow:0 20px 40px rgba(0,0,0,.25);
+.cta-card {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 35px;
+  z-index: 5;
+  width: min(92%, 560px);
+  background: rgba(20,20,20,.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 24px;
+  padding: 32px;
+  color: #fff;
+  box-shadow: 0 20px 40px rgba(0,0,0,.25);
+  text-align: center;
 }
 
-@media(min-width:901px){
-  .cta-card{
-    width:min(92%,920px);
-    padding:24px 40px;
-    bottom:40px;
+.cta-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.cta-desc {
+  text-align: center !important;
+  line-height: var(--lh-normal);
+  margin-bottom: 24px;
+  color: rgba(255,255,255,0.9);
+}
+
+.cta-card-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.rating-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media(min-width: 901px) {
+  .cta-card {
+    width: min(92%, 840px);
+    padding: 28px 40px;
+    bottom: 40px;
   }
-  .cta-card-content-wrapper{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:40px;
+  .cta-card-bottom {
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
   }
-  .cta-card-left{
-    flex:1;
-    text-align:left;
+  .rating-block {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
   }
-  .cta-desc{
-    text-align:left !important;
-    margin-bottom:0 !important;
-  }
-  .cta-card-right{
-    flex-shrink:0;
+  .score {
+    margin-top: 0 !important;
   }
 }
 
@@ -2142,7 +2163,7 @@ LISTA DE PRODUCTOS (CORTA)
     width: 160px;
     height: 160px;
     aspect-ratio: 1 / 1;
-    object-fit: cover;
+    object-fit: contain; /* Encajar sin recortar */
     border-radius: 12px;
     border: 1px solid var(--border-color);
     box-shadow: var(--shadow-sm);
@@ -3746,8 +3767,8 @@ RESPONSIVE
 <h1 class="product-title" data-i18n="prod_title"><span class="notranslate" translate="no">Laska Mini Set</span> (3 en 1)</h1>
 <!-- Precios -->
 <div class="price-block">
-<span class="price-old">$35.000 ARS</span>
-<span class="price-new">$28.500 ARS</span>
+<span class="price-old">$72.000 ARS</span>
+<span class="price-new">$58.200 ARS</span>
 <span class="badge-sale" data-i18n="oferta">Oferta</span>
 </div>
 <p class="tax-info" data-i18n="tax_info">Impuestos incluidos.</p>

@@ -13,7 +13,7 @@ const informeLandingPage = {
   metadata: {
     producto: "Laska Mini Set",
     marca: "Greenway Global",
-    version: "3.4 (Overhaul de Conversión para Jóvenes Argentinas)",
+    version: "3.5 (Refinaciones Globales y Geolocalización)",
     fechaInforme: "01 de Julio, 2026",
     idiomaPrincipal: "Español (Argentina)"
   },
@@ -183,15 +183,6 @@ const informeLandingPage = {
     },
     {
       orden: 10,
-      seccion: "CTA Intermedio",
-      visual: "Banda con fondo arena, gran botón de compra e información de garantías.",
-      contenido: {
-        botonText: "COMPRAR AHORA →",
-        subtext: "Más de 15.000 argentinas ya lo tienen en su baño. / Envío disponible · Pago seguro · Devolución garantizada"
-      }
-    },
-    {
-      orden: 11,
       seccion: "Timeline 30 Días (NUEVO)",
       visual: "Cronograma interactivo horizontal en PC / vertical en móvil con línea de progreso. Conecta el paso del tiempo con cambios reales en la piel de la usuaria.",
       contenido: {
@@ -205,7 +196,7 @@ const informeLandingPage = {
       }
     },
     {
-      orden: 12,
+      orden: 11,
       seccion: "Lo que dice la ciencia (E-E-A-T)",
       visual: "Grid de 4 tarjetas con especialistas en dermatología y links a laboratorios universitarios.",
       contenido: {
@@ -220,7 +211,7 @@ const informeLandingPage = {
       }
     },
     {
-      orden: 13,
+      orden: 12,
       seccion: "Una decisión que importa (Eco/Valores) (NUEVO)",
       visual: "Grid de dos columnas: izquierda copy ecológico y concientizador del consumo de descartables en Argentina; derecha bloque de certificaciones (OEKO-TEX, Dermatest, PETA, FSC) explicadas en lenguaje simple.",
       contenido: {
@@ -233,7 +224,7 @@ const informeLandingPage = {
       }
     },
     {
-      orden: 14,
+      orden: 13,
       seccion: "Bloque de Compra (Producto + Precio)",
       visual: "Layout de ecommerce premium. Columna izquierda galería de fotos con miniaturas interactivas; columna derecha título, precio ($28.500 ARS), facilidades y acordeones de características.",
       contenido: {
@@ -243,7 +234,7 @@ const informeLandingPage = {
       }
     },
     {
-      orden: 15,
+      orden: 14,
       seccion: "Preguntas Frecuentes (FAQ)",
       visual: "Acordeones desplegables interactivos con preguntas y respuestas optimizadas en voseo argentino.",
       contenido: {
@@ -251,7 +242,7 @@ const informeLandingPage = {
       }
     },
     {
-      orden: 16,
+      orden: 15,
       seccion: "Transparencia Corporativa",
       visual: "Tarjetas con datos fiscales, dirección de sede central, CUIT y contacto de soporte.",
       contenido: {
@@ -259,7 +250,7 @@ const informeLandingPage = {
       }
     },
     {
-      orden: 17,
+      orden: 16,
       seccion: "Footer & Transparencia Legal E-E-A-T",
       visual: "Footer de tres columnas con enlaces de políticas legales, botón de arrepentimiento de Ley Argentina 24.240 y descargo científico final.",
       contenido: {
