@@ -1,3 +1,12 @@
+<!-- 
+     ⚠️ ADVERTENCIA TÉCNICA DE DESARROLLO - SISTEMA DE TRADUCCIÓN:
+     Este sitio utiliza un motor dinámico de traducción multilingüe que se activa según el idioma del navegador.
+     Al agregar nuevas secciones, modificar textos o cambiar clases en el HTML, asegúrese de:
+     1. Utilizar el atributo 'data-i18n="tu_clave_de_traduccion"' en todas las etiquetas de texto.
+     2. Registrar la traducción de dicha clave en 'js/translations.js' para todos los idiomas soportados (es, en, fr, de, ru).
+     3. Evitar textos duros sin traducir para que la experiencia del usuario sea consistente en cualquier región del mundo.
+     4. Envolver marcas y nombres de producto en <span class="notranslate" translate="no"> para protegerlos de la traducción automática.
+-->
 <!DOCTYPE html>
 
 <html lang="es">
@@ -301,22 +310,28 @@
 </div>
 <!-- TARJETA CTA -->
 <div class="cta-card">
-<div class="cta-header">
-<div class="cta-icon">✨</div>
-<div class="cta-title"><span class="notranslate" translate="no">Laska Mini</span> Set</div>
-</div>
-<p class="cta-desc" data-i18n="desc">
-      Tres piezas de microfibra que eliminan el maquillaje, la grasa y la suciedad del día usando solo agua tibia. Reemplazan los discos de algodón, el agua micelar y el desmaquillante. Duran hasta 2 años. Una compra, cero residuos. Piel limpia, suave y radiante por solo <strong>$28.500 ARS</strong>.
-    </p>
-<div class="cta-actions">
-<a class="btn" data-i18n="btn" href="https://greenwayglobal.ar/shop/brands/fiber/08093?gw=uZv7Gi0Ep5">
-        COMPRAR AHORA →
-      </a>
-<div class="rating-block">
-<div class="stars">★★★★★</div>
-<div class="score" data-i18n="rating">Primeras compradoras verificadas: 4.9/5</div>
-</div>
-</div>
+  <div class="cta-card-content-wrapper">
+    <div class="cta-card-left">
+      <div class="cta-header">
+        <div class="cta-icon">✨</div>
+        <div class="cta-title"><span class="notranslate" translate="no">Laska Mini Set</span></div>
+      </div>
+      <p class="cta-desc" data-i18n="desc">
+        Tres piezas de microfibra que eliminan el maquillaje, la grasa y la suciedad del día usando solo agua tibia. Reemplazan los discos de algodón, el agua micelar y el desmaquillante. Duran hasta 2 años. Una compra, cero residuos. Piel limpia, suave y radiante por solo <strong>$58.200 ARS</strong>.
+      </p>
+    </div>
+    <div class="cta-card-right">
+      <div class="cta-actions">
+        <a class="btn" data-i18n="btn" href="https://greenwayglobal.ar/shop/brands/fiber/08093?gw=uZv7Gi0Ep5">
+          COMPRAR AHORA →
+        </a>
+        <div class="rating-block">
+          <div class="stars">★★★★★</div>
+          <div class="score" data-i18n="rating">Primeras compradoras verificadas: 4.9/5</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 </div>
 
@@ -329,39 +344,39 @@
       <!-- Card 1 -->
       <div class="isp-card">
         <div class="isp-user-info">
-          <img class="isp-avatar" src="assets/imagenes/CARE4-2.webp" alt="Valentina">
+          <img class="isp-avatar" src="assets/imagenes/CARE4-2.webp" alt="Sofía M.">
           <div>
             <div class="isp-stars">★★★★★</div>
-            <p class="isp-quote">"Lo compré por curiosidad. No volví a comprar discos de algodón."</p>
-            <span class="isp-author">Valentina, 23 · Buenos Aires</span>
+            <p class="isp-quote">"Me saca hasta el rímel waterproof, juro."</p>
+            <span class="isp-author">Sofía M., 23 · Buenos Aires</span>
           </div>
         </div>
       </div>
       <!-- Card 2 -->
       <div class="isp-card">
         <div class="isp-user-info">
-          <img class="isp-avatar" src="assets/imagenes/CARE4-1.webp" alt="Camila">
+          <img class="isp-avatar" src="assets/imagenes/CARE4-1.webp" alt="lau.viajera">
           <div>
             <div class="isp-stars">★★★★★</div>
-            <p class="isp-quote">"Mi piel mejoró en dos semanas. No es exageración."</p>
-            <span class="isp-author">Camila, 27 · Córdoba</span>
+            <p class="isp-quote">"Lo llevo a todos lados, literal."</p>
+            <span class="isp-author">lau.viajera, 27 · Córdoba</span>
           </div>
         </div>
       </div>
       <!-- Card 3 -->
       <div class="isp-card">
         <div class="isp-user-info">
-          <img class="isp-avatar" src="assets/imagenes/CARE15-2.webp" alt="Lucía">
+          <img class="isp-avatar" src="assets/imagenes/CARE15-2.webp" alt="ele.skincare">
           <div>
             <div class="isp-stars">★★★★★</div>
-            <p class="isp-quote">"La mejor plata que gasté en skincare este año, sin duda."</p>
-            <span class="isp-author">Lucía, 21 · Rosario</span>
+            <p class="isp-quote">"Me hago spa en la ducha todos los días."</p>
+            <span class="isp-author">ele.skincare, 21 · Rosario</span>
           </div>
         </div>
       </div>
     </div>
     <div class="isp-footer">
-      <span>23.415 reseñas verificadas · Promedio 4.9/5</span>
+      <span data-i18n="strip_footer">4.9 / 5 de más de 20.000 valoraciones alrededor del mundo</span>
     </div>
   </div>
 </section>
@@ -474,7 +489,7 @@
   align-items:center;
   
   min-height: 100vh;
-  padding: 80px 0 340px 0;
+  padding: 80px 0 240px 0;
 
   /* Fondo de luz ambiental */
   background: var(--bg-hero);
@@ -616,6 +631,31 @@
   box-shadow:0 20px 40px rgba(0,0,0,.25);
 }
 
+@media(min-width:901px){
+  .cta-card{
+    width:min(92%,920px);
+    padding:24px 40px;
+    bottom:40px;
+  }
+  .cta-card-content-wrapper{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+  }
+  .cta-card-left{
+    flex:1;
+    text-align:left;
+  }
+  .cta-desc{
+    text-align:left !important;
+    margin-bottom:0 !important;
+  }
+  .cta-card-right{
+    flex-shrink:0;
+  }
+}
+
 .cta-header{
   display:flex;
   justify-content:center;
@@ -714,22 +754,22 @@
 document.addEventListener("DOMContentLoaded", function() {
   const translations = {
     "es": { 
-      "row1_t1": "<span class='brand-badge'>CARE SET</span><br>Laska Mini Set",
+      "row1_t1": "<span class='brand-badge'>CARE SET</span><br><span class='notranslate' translate='no'>Laska Mini Set</span>",
       "row1_t2": "Limpieza de la piel<br>del rostro, cuello<br>y escote",
-      "headline": "Desmaquillate<br>solo con agua",
-      "subhead": "Piel fresca y<br>radiante cada día",
-      "desc": "3 accesorios reutilizables que limpian tu rostro, cuello y escote sin químicos, sin irritar y sin gastar de más. Mojás, deslizás y listo. Piel limpia, suave y radiante por solo <strong>$28.500 ARS</strong>.",
+      "headline": "Desmaquillate.<br/>Solo con agua.<br/>Nada más.",
+      "subhead": "El set que reemplaza<br/>todo lo demás.",
+      "desc": "Tres piezas de microfibra que eliminan el maquillaje, la grasa y la suciedad del día usando solo agua tibia. Reemplazan los discos de algodón, el agua micelar y el desmaquillante. Duran hasta 2 años. Una compra, cero residuos. Piel limpia, suave y radiante por solo <strong>$58.200 ARS</strong>.",
       "btn": "COMPRAR AHORA &rarr;",
-      "rating": "4.9 / 5 (+20.000 reviews globales)"
+      "rating": "Primeras compradoras verificadas: 4.9/5"
     },
     "en": { 
-      "row1_t1": "<span class='brand-badge'>CARE SET</span><br>Laska Mini Set",
+      "row1_t1": "<span class='brand-badge'>CARE SET</span><br><span class='notranslate' translate='no'>Laska Mini Set</span>",
       "row1_t2": "Skin cleansing for<br>face, neck, and<br>décolleté",
-      "headline": "Remove makeup<br>with water only",
-      "subhead": "Fresh and radiant<br>skin every day",
-      "desc": "3 reusable accessories that clean your face, neck, and décolleté without chemicals, irritation, or extra spending. Just wet, glide, and go. Clean, soft, and radiant skin for only <strong>$28,500 ARS</strong>.",
+      "headline": "Remove makeup.<br/>With water only.<br/>Nothing else.",
+      "subhead": "The set that replaces<br/>everything else.",
+      "desc": "Three microfiber pieces that remove makeup, sebum, and daily dirt using only warm water. They replace cotton pads, micellar water, and makeup remover. Last up to 2 years. One purchase, zero waste. Clean, soft, and radiant skin for only <strong>$49.00 USD</strong>.",
       "btn": "SHOP NOW &rarr;",
-      "rating": "4.9 / 5 (+20,000 global reviews)"
+      "rating": "First verified buyers: 4.9/5"
     },
     "fr": { 
       "row1_t1": "<span class='brand-badge'>COFFRET SOIN</span><br>Laska Mini Set",
@@ -2099,8 +2139,10 @@ LISTA DE PRODUCTOS (CORTA)
     align-items: center;
 }
 .showcase-item-img img {
-    width: 100%;
-    height: auto;
+    width: 160px;
+    height: 160px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     border-radius: 12px;
     border: 1px solid var(--border-color);
     box-shadow: var(--shadow-sm);
@@ -2544,12 +2586,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 .ugc-card {
   position: relative;
-  flex: 0 0 240px; /* Ancho de video vertical premium */
+  flex: 0 0 280px; /* Ancho ajustado para 4:5 */
   border-radius: 24px;
   overflow: hidden;
   cursor: pointer;
   transition: all 0.4s ease;
-  aspect-ratio: 9 / 16;
+  aspect-ratio: 4 / 5;
   background: #000;
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-md);
@@ -2625,7 +2667,7 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 
 @media (max-width: 900px) {
-  .ugc-card { flex: 0 0 200px; }
+  .ugc-card { flex: 0 0 220px; }
   .ugc-fade { width: 60px; }
   .ugc-title { font-size: 2.2rem; }
 }
@@ -3138,7 +3180,7 @@ RESPONSIVE
 ============================================= -->
 <section class="intermediate-cta-section">
 <a class="intermediate-cta-btn" href="#compra-section">COMPRAR AHORA →</a>
-<p class="intermediate-cta-sub">Más de 15.000 argentinas ya lo tienen en su baño.<br>Envío disponible · Pago seguro · Devolución garantizada</p>
+<p class="intermediate-cta-sub" data-i18n="inter_cta_sub">Más de 20.000 clientas ya transformaron su rutina diaria.<br>Envío a todo el mundo · Pago seguro · Devolución garantizada</p>
 </section>
 <style>
 .intermediate-cta-section { background: var(--bg-secondary); padding: 60px 20px; text-align: center; }
@@ -4470,6 +4512,73 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 </script>
+<!-- =============================================
+     SISTEMA DINÁMICO DE GEOLOCALIZACIÓN DE PRECIOS Y LINKS
+============================================= -->
+<script>
+(async function() {
+  'use strict';
+  
+  const countryConfig = {
+    "AR": {
+      desc: "Tres piezas de microfibra que eliminan el maquillaje, la grasa y la suciedad del día usando solo agua tibia. Reemplazan los discos de algodón, el agua micelar y el desmaquillante. Duran hasta 2 años. Una compra, cero residuos. Piel limpia, suave y radiante por solo <strong>$58.200 ARS</strong>.",
+      price_old: "$72.000 ARS",
+      price_new: "$58.200 ARS",
+      link: "https://greenwayglobal.ar/shop/brands/fiber/08093?gw=uZv7Gi0Ep5"
+    },
+    "MX": {
+      desc: "Tres piezas de microfibra que eliminan el maquillaje, la grasa y la suciedad del día usando solo agua tibia. Reemplazan los discos de algodón, el agua micelar y el desmaquillante. Duran hasta 2 años. Una compra, cero residuos. Piel limpia, suave y radiante por solo <strong>$890 MXN</strong>.",
+      price_old: "$1.190 MXN",
+      price_new: "$890 MXN",
+      link: "https://greenwayglobal.mx/shop/brands/fiber/08093?gw=uZv7Gi0Ep5"
+    },
+    "ES": {
+      desc: "Three microfiber pieces that remove makeup, sebum, and daily dirt using only warm water. They replace cotton pads, micellar water, and makeup remover. Last up to 2 years. One purchase, zero waste. Clean, soft, and radiant skin for only <strong>€45.00 EUR</strong>.",
+      price_old: "€55.00 EUR",
+      price_new: "€45.00 EUR",
+      link: "https://greenwayglobal.es/shop/brands/fiber/08093?gw=uZv7Gi0Ep5"
+    },
+    "US": {
+      desc: "Three microfiber pieces that remove makeup, sebum, and daily dirt using only warm water. They replace cotton pads, micellar water, and makeup remover. Last up to 2 years. One purchase, zero waste. Clean, soft, and radiant skin for only <strong>$49.00 USD</strong>.",
+      price_old: "$65.00 USD",
+      price_new: "$49.00 USD",
+      link: "https://greenwayglobal.com/shop/brands/fiber/08093?gw=uZv7Gi0Ep5"
+    }
+  };
+
+  try {
+    const response = await fetch('https://ipapi.co/json/');
+    if (!response.ok) throw new Error("Fetch failed");
+    const data = await response.json();
+    const country = data.country_code;
+    
+    let config = countryConfig["US"]; // Default global
+    if (country === "AR") config = countryConfig["AR"];
+    else if (country === "MX") config = countryConfig["MX"];
+    else if (["ES", "FR", "DE", "IT", "PT"].includes(country)) config = countryConfig["ES"];
+    
+    // Aplicar al DOM
+    // 1. Descripción del Hero
+    const descEl = document.querySelector('[data-i18n="desc"]');
+    if (descEl) descEl.innerHTML = config.desc;
+    
+    // 2. Precios en el bloque de compra
+    const oldPriceEl = document.querySelector('.price-old');
+    const newPriceEl = document.querySelector('.price-new');
+    if (oldPriceEl) oldPriceEl.innerText = config.price_old;
+    if (newPriceEl) newPriceEl.innerText = config.price_new;
+    
+    // 3. Links de compra en Greenway
+    const checkoutButtons = document.querySelectorAll('a[href*="greenwayglobal"]');
+    checkoutButtons.forEach(btn => {
+      btn.href = config.link;
+    });
+  } catch(e) {
+    console.log("Error o bloqueo en geolocalización de precios:", e);
+  }
+})();
+</script>
+
 <!-- =============================================
      SMART VIDEO SYSTEM: Scroll Autoplay + Audio + Play Button
 ============================================= -->
