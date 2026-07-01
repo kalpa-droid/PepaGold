@@ -163,22 +163,22 @@ const informeLandingPage = {
     },
     {
       orden: 8,
+      seccion: "Prueba Experimental UGC (Contenido de Clientes)",
+      visual: "Carrusel continuo interactivo (marquee infinito) de videos verticales en proporción 9:16 con fades laterales y pausa interactiva.",
+      contenido: {
+        tag: "Así lo usan ellas",
+        tituloH2: "Unboxing & Uso Cotidiano",
+        descripcion: "Sin filtros, sin edición. Así reaccionaron cuando lo probaron por primera vez."
+      }
+    },
+    {
+      orden: 9,
       seccion: "Opiniones de nuestras clientas (Reviews)",
       visual: "Slider infinito de tarjetas animadas de reviews en formato vertical. Al posar el mouse, se despliega el texto de review larga. Micro-CTA al final del bloque con estrellas de calificación.",
       contenido: {
         tituloH2: "Opiniones de nuestras clientas",
         CTA: "COMPRAR AHORA →",
         reviewsGlobales: "4.9 / 5 de más de 20.000 valoraciones alrededor del mundo"
-      }
-    },
-    {
-      orden: 9,
-      seccion: "Prueba Experimental UGC (Contenido de Clientes)",
-      visual: "Sección con videos cortos en proporción 9:16 tipo TikTok de clientas reales usando las fibras.",
-      contenido: {
-        tag: "Así lo usan ellas",
-        tituloH2: "Unboxing & Uso Cotidiano",
-        descripcion: "Sin filtros, sin edición. Así reaccionaron cuando lo probaron por primera vez."
       }
     },
     {
