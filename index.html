@@ -2615,6 +2615,14 @@ document.addEventListener("DOMContentLoaded", () => {
   z-index: 3;
   pointer-events: none;
 }
+.ugc-fade.fade-left {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-secondary) 20%, transparent);
+}
+.ugc-fade.fade-right {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-secondary) 20%, transparent);
+}
 
 @media (max-width: 900px) {
   .ugc-card { flex: 0 0 200px; }
