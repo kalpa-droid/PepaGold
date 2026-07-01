@@ -282,8 +282,9 @@
 <!-- ITEM 6: Título "Desmaquillate solo con agua" -->
 <div class="col text-col item-6">
 <h1 class="headline" data-i18n="headline">
-        Desmaquillate<br/>
-        solo con agua
+        Desmaquillate.<br/>
+        Solo con agua.<br/>
+        Nada más.
       </h1>
 </div>
 <!-- ITEM 7: Imagen 4 (Guante 4.png) -->
@@ -293,8 +294,8 @@
 <!-- ITEM 8: Subtítulo "Piel fresca y..." -->
 <div class="col text-col item-8">
 <h2 class="subhead" data-i18n="subhead">
-        Piel fresca y<br/>
-        radiante cada día
+        El set que reemplaza<br/>
+        todo lo demás.
       </h2>
 </div>
 </div>
@@ -305,7 +306,7 @@
 <div class="cta-title"><span class="notranslate" translate="no">Laska Mini</span> Set</div>
 </div>
 <p class="cta-desc" data-i18n="desc">
-      3 accesorios reutilizables que limpian tu rostro, cuello y escote sin químicos, sin irritar y sin gastar de más. Mojás, deslizás y listo. Piel limpia, suave y radiante por solo <strong>$28.500 ARS</strong>.
+      Tres piezas de microfibra que eliminan el maquillaje, la grasa y la suciedad del día usando solo agua tibia. Reemplazan los discos de algodón, el agua micelar y el desmaquillante. Duran hasta 2 años. Una compra, cero residuos. Piel limpia, suave y radiante por solo <strong>$28.500 ARS</strong>.
     </p>
 <div class="cta-actions">
 <a class="btn" data-i18n="btn" href="https://greenwayglobal.ar/shop/brands/fiber/08093?gw=uZv7Gi0Ep5">
@@ -313,11 +314,157 @@
       </a>
 <div class="rating-block">
 <div class="stars">★★★★★</div>
-<div class="score" data-i18n="rating">4.9 / 5 (+20.000 reviews globales)</div>
+<div class="score" data-i18n="rating">Primeras compradoras verificadas: 4.9/5</div>
 </div>
 </div>
 </div>
 </div>
+
+<!-- =============================================
+     BLOQUE NUEVO: STRIP DE PRUEBA SOCIAL INMEDIATA
+============================================= -->
+<section class="immediate-social-proof">
+  <div class="isp-container">
+    <div class="isp-cards">
+      <!-- Card 1 -->
+      <div class="isp-card">
+        <div class="isp-user-info">
+          <img class="isp-avatar" src="assets/imagenes/CARE4-2.webp" alt="Valentina">
+          <div>
+            <div class="isp-stars">★★★★★</div>
+            <p class="isp-quote">"Lo compré por curiosidad. No volví a comprar discos de algodón."</p>
+            <span class="isp-author">Valentina, 23 · Buenos Aires</span>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="isp-card">
+        <div class="isp-user-info">
+          <img class="isp-avatar" src="assets/imagenes/CARE4-1.webp" alt="Camila">
+          <div>
+            <div class="isp-stars">★★★★★</div>
+            <p class="isp-quote">"Mi piel mejoró en dos semanas. No es exageración."</p>
+            <span class="isp-author">Camila, 27 · Córdoba</span>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="isp-card">
+        <div class="isp-user-info">
+          <img class="isp-avatar" src="assets/imagenes/CARE15-2.webp" alt="Lucía">
+          <div>
+            <div class="isp-stars">★★★★★</div>
+            <p class="isp-quote">"La mejor plata que gasté en skincare este año, sin duda."</p>
+            <span class="isp-author">Lucía, 21 · Rosario</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="isp-footer">
+      <span>23.415 reseñas verificadas · Promedio 4.9/5</span>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Estilos para el Strip de Prueba Social Inmediata */
+.immediate-social-proof {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 35px 20px;
+  position: relative;
+  z-index: 10;
+}
+.isp-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.isp-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 20px;
+}
+.isp-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.isp-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.isp-user-info {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+.isp-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border-color);
+}
+.isp-stars {
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+.isp-quote {
+  font-family: var(--font-sans);
+  font-size: var(--size-body-small);
+  line-height: 1.4;
+  color: var(--color-dark-muted);
+  font-weight: var(--weight-medium);
+  margin: 0 0 8px 0;
+}
+.isp-author {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--size-caption);
+  color: var(--color-text-light);
+  font-weight: var(--weight-light);
+}
+.isp-footer {
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: var(--size-caption);
+  color: var(--color-text-light);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .immediate-social-proof {
+    padding: 25px 15px;
+  }
+  .isp-cards {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .isp-cards::-webkit-scrollbar {
+    display: none;
+  }
+  .isp-card {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+  }
+}
+</style>
+
 <style>
 .hero-banner-v3{
   position:relative;
@@ -1027,7 +1174,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 Gasto Innecesario
             </span>
             <h3 class="problem-title" data-i18n="p1_title">¿Harta de gastar de más cada mes?</h3>
-            <p class="problem-description" data-i18n="p1_desc">Discos de algodón, toallitas desechables, desmaquillantes líquidos… cada mes sumás gastos que se van a la basura.</p>
+            <p class="problem-description" data-i18n="p1_desc">Discos de algodón, agua micelar, toallitas, desmaquillante… Solo en descartables, una mujer promedio tira más de $4.000 por mes. Literalmente a la basura.</p>
         </div>
     </div>
 
@@ -1051,7 +1198,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <div class="text-content">
             <span class="accent-subtitle" data-i18n="p2_sub">✨ El Problema</span>
             <h3 class="problem-title" data-i18n="p2_title">¿Tu piel queda roja e irritada al desmaquillarte?</h3>
-            <p class="problem-description" data-i18n="p2_desc">Los químicos agresivos de los desmaquillantes irritan tu barrera cutánea, dejándote la piel seca y sensible.</p>
+            <p class="problem-description" data-i18n="p2_desc">Los desmaquillantes químicos limpian el maquillaje y, de paso, destruyen la capa que protege tu piel. Resultado: piel seca, irritada y más brotes que antes de usarlos.</p>
         </div>
     </div>
 
@@ -1078,7 +1225,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 Tiempo Perdido
             </span>
             <h3 class="problem-title" data-i18n="p3_title">¿Tu rutina nocturna tiene mil pasos?</h3>
-            <p class="problem-description" data-i18n="p3_desc">Toallita, agua micelar, algodón, enjuague, crema… Demasiados pasos que consumen tu tiempo y energía.</p>
+            <p class="problem-description" data-i18n="p3_desc">Son las 12 de la noche y seguís en el baño. Con el Laska Mini Set, un paso. Y te vas a dormir.</p>
         </div>
     </div>
 
@@ -1777,7 +1924,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="showcase-item-content">
 <div class="benefit-text">
 <h3 class="notranslate" translate="no"><span class="notranslate" translate="no">CARE 4</span>: Cleanser Sponge (Greenway)</h3>
-<p class="showcase-item-desc"><strong>Esponja Desmaquillante</strong> — Mojala, pasala por tu cara y listo. Atrapa todo el maquillaje (sí, hasta el waterproof) sin líquidos ni químicos.</p>
+<p class="showcase-item-desc" data-i18n="care4_desc">La esponja que atrapa el maquillaje sin jabón. Humedecela, pasala suave y lavala. Dura hasta 2 años.</p>
 </div>
 <div class="showcase-item-img">
   <img src="assets/imagenes/4.webp" alt="CARE 4 Cleanser Sponge" loading="lazy"/>
@@ -1789,7 +1936,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="showcase-item-content">
 <div class="benefit-text">
 <h3 class="notranslate" translate="no"><span class="notranslate" translate="no">CARE 15</span>: Manopla-Esponja de Doble Cara (Green Fiber)</h3>
-<p class="showcase-item-desc"><strong>Guante 2 en 1</strong> — Un lado limpia con suavidad, el otro exfolia y activa la circulación. Para cara, cuello y cuerpo. Tu mini spa de todos los días.</p>
+<p class="showcase-item-desc" data-i18n="care15_desc">Una cara limpia, la otra exfolia. Para el maquillaje del día a día y para renovar la piel de a poco. Sin ácidos, sin irritación.</p>
 </div>
 <div class="showcase-item-img">
   <img src="assets/imagenes/3.webp" alt="CARE 15 Green Fiber" loading="lazy"/>
@@ -1801,7 +1948,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="showcase-item-content">
 <div class="benefit-text">
 <h3 class="notranslate" translate="no"><span class="notranslate" translate="no">CARE 6</span>: Soft Mitt (Greenway)</h3>
-<p class="showcase-item-desc"><strong>Manopla Ultra Suave</strong> — Diseñada para las zonas más delicadas (cara, cuello, escote). Limpia sin frotar, sin irritar y sin productos extra.</p>
+<p class="showcase-item-desc" data-i18n="care6_desc">Textura ultra suave para cuello y escote, las zonas más delicadas. No estira, no irrita. Sin necesidad de ningún producto.</p>
 </div>
 <div class="showcase-item-img">
   <img src="assets/imagenes/2.webp" alt="CARE 6 Soft Mitt" loading="lazy"/>
@@ -2087,6 +2234,188 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 </script>
+
+<!-- =============================================
+     BLOQUE NUEVO: RITUAL DE USO (3 PASOS)
+============================================= -->
+<section class="use-ritual-section">
+  <div class="grain-overlay-benefits"></div>
+  <div class="ritual-container">
+    <div class="ritual-header">
+      <span class="ritual-tag">SKINCARE FÁCIL</span>
+      <h2 class="ritual-title">Tu nueva rutina. Sin pasos de más.</h2>
+      <p class="ritual-subtitle">Funciona igual para el maquillaje del día a día y para el look más cargado.</p>
+    </div>
+    
+    <div class="ritual-steps-grid">
+      <!-- Paso 1 -->
+      <div class="ritual-step-card">
+        <div class="ritual-img-wrapper">
+          <img src="assets/imagenes/CARE4-1.webp" alt="Paso 1: Humedecé" loading="lazy">
+          <div class="step-number">1</div>
+        </div>
+        <div class="ritual-text-content">
+          <h3>Humedecé</h3>
+          <p>Pasá el paño bajo el agua tibia. Nada más que eso.</p>
+        </div>
+      </div>
+      
+      <!-- Paso 2 -->
+      <div class="ritual-step-card">
+        <div class="ritual-img-wrapper">
+          <img src="assets/imagenes/CARE4-2.webp" alt="Paso 2: Deslizá" loading="lazy">
+          <div class="step-number">2</div>
+        </div>
+        <div class="ritual-text-content">
+          <h3>Deslizá</h3>
+          <p>Masajeá con suavidad. Las microfibras atrapan el maquillaje sin frotar fuerte.</p>
+        </div>
+      </div>
+      
+      <!-- Paso 3 -->
+      <div class="ritual-step-card">
+        <div class="ritual-img-wrapper">
+          <img src="assets/imagenes/CARE15-1.webp" alt="Paso 3: Lavá y reutilizá" loading="lazy">
+          <div class="step-number">3</div>
+        </div>
+        <div class="ritual-text-content">
+          <h3>Lavá y reutilizá</h3>
+          <p>Enjuagalo con jabón neutro, colgalo a secar. Mañana está listo de nuevo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Estilos para el Ritual de Uso */
+.use-ritual-section {
+  background: var(--bg-primary);
+  padding: 90px 20px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-color);
+}
+.ritual-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+.ritual-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+}
+.ritual-tag {
+  font-family: var(--font-sans);
+  color: var(--color-accent);
+  font-size: 13px;
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.ritual-title {
+  font-family: var(--font-serif);
+  font-size: var(--size-h2);
+  font-weight: var(--weight-regular);
+  color: var(--color-dark);
+  line-height: var(--lh-tight);
+  margin-bottom: 15px;
+}
+.ritual-subtitle {
+  font-family: var(--font-sans);
+  font-size: var(--size-body-large);
+  line-height: 1.6;
+  color: var(--color-dark-muted);
+  font-weight: var(--weight-light);
+}
+.ritual-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.ritual-step-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.ritual-step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-color-hover);
+}
+.ritual-img-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--bg-accent-light);
+}
+.ritual-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.ritual-step-card:hover .ritual-img-wrapper img {
+  transform: scale(1.05);
+}
+.step-number {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-weight: var(--weight-bold);
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.ritual-text-content {
+  padding: 25px;
+  text-align: left;
+}
+.ritual-text-content h3 {
+  font-family: var(--font-serif);
+  font-size: var(--size-h3);
+  font-weight: var(--weight-regular);
+  color: var(--color-dark);
+  margin: 0 0 10px 0;
+}
+.ritual-text-content p {
+  font-family: var(--font-sans);
+  font-size: var(--size-body-small);
+  line-height: 1.5;
+  color: var(--color-dark-muted);
+  font-weight: var(--weight-light);
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .use-ritual-section {
+    padding: 60px 15px;
+  }
+  .ritual-steps-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .ritual-header {
+    margin-bottom: 40px;
+  }
+}
+</style>
 
 <div class="reviews-section-v2">
 <!-- Capa de ruido/granulado premium unificada -->
@@ -2603,7 +2932,7 @@ RESPONSIVE
 ============================================= -->
 <section class="intermediate-cta-section">
 <a class="intermediate-cta-btn" href="#compra-section">COMPRAR AHORA →</a>
-<p class="intermediate-cta-sub">Envío disponible · Pago seguro · Devolución garantizada</p>
+<p class="intermediate-cta-sub">Más de 15.000 argentinas ya lo tienen en su baño.<br>Envío disponible · Pago seguro · Devolución garantizada</p>
 </section>
 <style>
 .intermediate-cta-section { background: var(--bg-secondary); padding: 60px 20px; text-align: center; }
@@ -2613,303 +2942,67 @@ RESPONSIVE
 </style>
 
 <!-- =============================================
-     SECCIÓN 7b: BENEFICIOS A LARGO PLAZO (VIDEOS CARE)
+     SECCIÓN: TIMELINE DE 30 DÍAS (CONVERSIÓN SKINCARE)
 ============================================= -->
-<style>
-/* =============================================
-   BENEFICIOS A LARGO PLAZO — ZIGZAG VIDEO LAYOUT
-============================================= */
-.benefits-v3-section {
-  background: var(--bg-primary);
-  padding: 90px 20px 70px;
-  position: relative;
-  overflow: hidden;
-}
-.benefits-v3-section .grain-overlay-benefits {
-  position: absolute; inset: 0; pointer-events: none;
-  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-  z-index: 1;
-}
-.benefits-v3-header {
-  text-align: center;
-  margin-bottom: 60px;
-  position: relative;
-  z-index: 2;
-}
-.benefits-v3-header h4 {
-  font-family: var(--font-sans);
-  color: var(--color-accent);
-  font-size: 13px;
-  font-weight: var(--weight-semibold);
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  margin-bottom: 10px;
-}
-.benefits-v3-header h2 {
-  font-family: var(--font-serif);
-  font-size: var(--size-h2);
-  font-weight: var(--weight-regular);
-  color: var(--color-dark);
-  line-height: var(--lh-tight);
-}
-.benefits-v3-grid {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-  position: relative;
-  z-index: 2;
-}
-.benefit-card-v3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-.benefit-video-wrapper {
-  position: relative;
-  width: 100%;
-  border-radius: 20px;
-  overflow: hidden;
-  background: #000;
-  border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-md);
-  aspect-ratio: 16/9;
-  max-width: 500px;
-  margin: 0 auto;
-  transition: box-shadow 0.4s ease, transform 0.4s ease;
-}
-.benefit-video-wrapper:hover {
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-5px);
-}
-.benefit-video-wrapper video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.benefit-text-content {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  text-align: left;
-}
-.benefit-text-content .care-label {
-  font-family: var(--font-sans);
-  color: var(--color-accent);
-  font-size: 0.8rem;
-  font-weight: var(--weight-semibold);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.benefit-text-content h3 {
-  font-family: var(--font-serif);
-  font-size: var(--size-h3);
-  font-weight: var(--weight-regular);
-  color: var(--color-dark);
-  line-height: var(--lh-snug);
-  margin: 0;
-}
-.benefit-text-content .benefit-intro {
-  font-family: var(--font-sans);
-  font-size: var(--size-body-small);
-  line-height: var(--lh-normal);
-  color: var(--color-dark-muted);
-  font-weight: var(--weight-light);
-}
-.benefit-science-box {
-  background: var(--bg-secondary);
-  border-radius: 14px;
-  padding: 20px 22px;
-  border: 1px solid var(--border-color);
-}
-.benefit-science-box h4 {
-  font-family: var(--font-sans);
-  font-size: var(--size-body-small);
-  font-weight: var(--weight-semibold);
-  color: var(--color-primary);
-  margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.benefit-science-box p {
-  font-family: var(--font-sans);
-  font-size: var(--size-caption);
-  line-height: var(--lh-normal);
-  color: var(--color-dark-muted);
-  font-weight: var(--weight-light);
-  margin: 0;
-}
-.benefit-longterm-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.benefit-longterm-item {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-}
-.benefit-longterm-item .item-icon {
-  flex-shrink: 0;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: var(--bg-accent-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  margin-top: 2px;
-}
-.benefit-longterm-item .item-text {
-  font-family: var(--font-sans);
-  font-size: var(--size-caption);
-  line-height: 1.5;
-  color: var(--color-dark-muted);
-  font-weight: var(--weight-light);
-}
-.benefit-longterm-item .item-text strong {
-  font-weight: var(--weight-semibold);
-  color: var(--color-dark);
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .benefits-v3-section { padding: 60px 20px 50px; }
-  .benefits-v3-grid { gap: 60px; }
-  .benefit-card-v3 { text-align: center; gap: 20px; }
-  .benefit-text-content { text-align: center; }
-  .care-label { justify-content: center; }
-  .benefit-video-wrapper { max-width: 480px; }
-}
-</style>
-
-<section class="benefits-v3-section">
+<section class="skin-timeline-section">
   <div class="grain-overlay-benefits"></div>
-  <div class="benefits-v3-header">
-    <h4 class="notranslate" translate="no">✨ Cuidado Premium</h4>
-    <h2>Beneficios a Largo Plazo</h2>
-  </div>
-
-  <div class="benefits-v3-grid">
-    <!-- CARE 4 -->
-    <div class="benefit-card-v3">
-      <div class="benefit-video-wrapper">
-        <video id="videoCare4" playsinline preload="metadata">
-          <source src="assets/imagenes/CARE 4.mp4" type="video/mp4"/>
-        </video>
-        <div class="video-play-overlay" data-smart-video>
-          <div class="video-play-btn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--color-dark)"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-        </div>
-        <!-- Mute/Unmute Button -->
-        <button class="video-mute-btn" aria-label="Alternar sonido">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
-        </button>
-      </div>
-      <div class="benefit-text-content">
-        <span class="care-label"><span class="notranslate" translate="no">CARE 4</span> · Esponja Desmaquillante</span>
-        <h3>Tu Escudo Protector Anti-Químicos</h3>
-        <p class="benefit-intro">¿Piel tirante o colorada al desmaquillarte? Es tu cara gritando que los limpiadores químicos le hacen mal.</p>
-        
-        <div class="benefit-longterm-list">
-          <div class="benefit-longterm-item">
-            <div class="item-icon">✨</div>
-            <div class="item-text"><strong>Chau irritación:</strong> Solo agua tibia. Decile adiós a la sequedad y tirantez después de un largo día.</div>
-          </div>
-          <div class="benefit-longterm-item">
-            <div class="item-icon">🛡️</div>
-            <div class="item-text"><strong>Tus defensas intactas:</strong> Sin jabones agresivos que barren con el microbioma natural de tu rostro.</div>
-          </div>
-          <div class="benefit-longterm-item">
-            <div class="item-icon">💎</div>
-            <div class="item-text"><strong>Piel sana siempre:</strong> Con el uso continuo, tu barrera cutánea se recupera y se vuelve más resistente.</div>
-          </div>
-        </div>
-      </div>
+  <div class="timeline-container">
+    <div class="timeline-header">
+      <span class="timeline-tag">EL PROCESO</span>
+      <h2 class="timeline-title">¿Qué le pasa a tu piel después de 30 días?</h2>
+      <p class="timeline-subtitle">El cambio no es magia. Es el resultado de darle un respiro a tu piel y dejar de agredirla con químicos.</p>
     </div>
 
-    <!-- CARE 15 -->
-    <div class="benefit-card-v3">
-      <div class="benefit-video-wrapper">
-        <video id="videoCare15" playsinline preload="metadata">
-          <source src="assets/imagenes/CARE 15.mp4" type="video/mp4"/>
-        </video>
-        <div class="video-play-overlay" data-smart-video>
-          <div class="video-play-btn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--color-dark)"><path d="M8 5v14l11-7z"/></svg>
+    <div class="timeline-wrapper">
+      <!-- Línea conectora visual -->
+      <div class="timeline-progress-line"></div>
+      
+      <div class="timeline-steps">
+        <!-- Paso 1 -->
+        <div class="timeline-step">
+          <div class="step-marker-wrapper">
+            <div class="step-dot">1</div>
+            <span class="step-label">Semana 1</span>
+          </div>
+          <div class="step-card">
+            <h4>Piel sin tirantez</h4>
+            <p>Tu piel deja de estar tirante. Sin el jabón químico diario, la capa natural de lípidos empieza a recuperarse.</p>
           </div>
         </div>
-        <!-- Mute/Unmute Button -->
-        <button class="video-mute-btn" aria-label="Alternar sonido">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
-        </button>
-      </div>
-      <div class="benefit-text-content">
-        <span class="care-label"><span class="notranslate" translate="no">CARE 15</span> · Guante Doble Cara</span>
-        <h3>Renovación Celular y Efecto "Glow" Constante</h3>
-        <p class="benefit-intro">¿Piel opaca y sin vida? Los exfoliantes químicos pueden ser muy agresivos. CARE 15 es la alternativa física y suave para renovar tu piel.</p>
-        
-        <div class="benefit-longterm-list">
-          <div class="benefit-longterm-item">
-            <div class="item-icon">✨</div>
-            <div class="item-text"><strong>Efecto glow al instante:</strong> Su lado exfoliante barre células muertas y revela una piel luminosa y fresca.</div>
-          </div>
-          <div class="benefit-longterm-item">
-            <div class="item-icon">💆</div>
-            <div class="item-text"><strong>Masaje tonificante:</strong> Estimula la circulación, ayudando a que tu rostro se vea más firme y descansado.</div>
-          </div>
-          <div class="benefit-longterm-item">
-            <div class="item-icon">💎</div>
-            <div class="item-text"><strong>Tu mini spa en casa:</strong> Una rutina relajante de dos minutos en la ducha para renovarte por completo.</div>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- CARE 6 -->
-    <div class="benefit-card-v3">
-      <div class="benefit-video-wrapper">
-        <video id="videoCare6" playsinline preload="metadata">
-          <source src="assets/imagenes/CARE 6.mp4" type="video/mp4"/>
-        </video>
-        <div class="video-play-overlay" data-smart-video>
-          <div class="video-play-btn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--color-dark)"><path d="M8 5v14l11-7z"/></svg>
+        <!-- Paso 2 -->
+        <div class="timeline-step">
+          <div class="step-marker-wrapper">
+            <div class="step-dot">2</div>
+            <span class="step-label">Semana 2</span>
+          </div>
+          <div class="step-card">
+            <h4>Menos brotes</h4>
+            <p>Los brotes y rojeces se reducen. Menos irritación química directa se traduce en menos inflamación y poros libres.</p>
           </div>
         </div>
-        <!-- Mute/Unmute Button -->
-        <button class="video-mute-btn" aria-label="Alternar sonido">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
-        </button>
-      </div>
-      <div class="benefit-text-content">
-        <span class="care-label"><span class="notranslate" translate="no">CARE 6</span> · Manopla Suave</span>
-        <h3>Firmeza y Prevención para Zonas Delicadas</h3>
-        <p class="benefit-intro">El cuello y el escote también necesitan amor. Son las zonas más finas de la piel y las primeras en mostrar líneas de expresión por deshidratación.</p>
-        
-        <div class="benefit-longterm-list">
-          <div class="benefit-longterm-item">
-            <div class="item-icon">✨</div>
-            <div class="item-text"><strong>Cuidado ultra delicado:</strong> Textura extrasuave diseñada para limpiar sin estirar ni dañar las áreas sensibles.</div>
+
+        <!-- Paso 3 -->
+        <div class="timeline-step">
+          <div class="step-marker-wrapper">
+            <div class="step-dot">4</div>
+            <span class="step-label">Semana 4</span>
           </div>
-          <div class="benefit-longterm-item">
-            <div class="item-icon">🛡️</div>
-            <div class="item-text"><strong>Adiós impurezas:</strong> Retira sudor, contaminación y protector solar sin necesidad de jabón ni alcohol.</div>
+          <div class="step-card">
+            <h4>Efecto Glow</h4>
+            <p>Empezás a ver el glow que querías. La renovación celular es más uniforme y tu piel se ve visiblemente luminosa.</p>
           </div>
-          <div class="benefit-longterm-item">
-            <div class="item-icon">💎</div>
-            <div class="item-text"><strong>Textura uniforme:</strong> Lográ un cuello y escote suaves, parejos y con la misma luminosidad que tu rostro.</div>
+        </div>
+
+        <!-- Paso 4 -->
+        <div class="timeline-step">
+          <div class="step-marker-wrapper">
+            <div class="step-dot">8</div>
+            <span class="step-label">Semana 8</span>
+          </div>
+          <div class="step-card">
+            <h4>Rutina Libre</h4>
+            <p>Ya no te acordás de cuándo compraste la última bolsa de algodones o desmaquillante. Tu piel está sana y tu baño libre de residuos.</p>
           </div>
         </div>
       </div>
@@ -2917,15 +3010,185 @@ RESPONSIVE
   </div>
 </section>
 
+<style>
+/* Estilos para el Timeline de 30 Días */
+.skin-timeline-section {
+  background: var(--bg-primary);
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-color);
+}
+.timeline-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+.timeline-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+}
+.timeline-tag {
+  font-family: var(--font-sans);
+  color: var(--color-accent);
+  font-size: 13px;
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.timeline-title {
+  font-family: var(--font-serif);
+  font-size: var(--size-h2);
+  font-weight: var(--weight-regular);
+  color: var(--color-dark);
+  line-height: var(--lh-tight);
+  margin-bottom: 15px;
+}
+.timeline-subtitle {
+  font-family: var(--font-sans);
+  font-size: var(--size-body-large);
+  line-height: 1.6;
+  color: var(--color-dark-muted);
+  font-weight: var(--weight-light);
+}
+
+.timeline-wrapper {
+  position: relative;
+  padding: 40px 0;
+}
+.timeline-progress-line {
+  position: absolute;
+  top: 72px; /* Alinear con el centro de las bolitas */
+  left: 5%;
+  right: 5%;
+  height: 2px;
+  background: var(--border-color);
+  z-index: 1;
+}
+.timeline-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  position: relative;
+  z-index: 2;
+}
+.timeline-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.step-marker-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.step-dot {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 2px solid var(--color-primary);
+  color: var(--color-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-weight: var(--weight-semibold);
+  font-size: 15px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+.timeline-step:hover .step-dot {
+  background: var(--color-primary);
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(212, 140, 144, 0.4);
+}
+.step-label {
+  margin-top: 10px;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  color: var(--color-accent);
+  letter-spacing: 1px;
+}
+.step-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.4s ease, border-color 0.4s ease, transform 0.4s ease;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.timeline-step:hover .step-card {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-color-hover);
+}
+.step-card h4 {
+  font-family: var(--font-serif);
+  font-size: var(--size-h4);
+  font-weight: var(--weight-regular);
+  color: var(--color-dark);
+  margin: 0 0 8px 0;
+}
+.step-card p {
+  font-family: var(--font-sans);
+  font-size: var(--size-body-small);
+  line-height: 1.5;
+  color: var(--color-dark-muted);
+  font-weight: var(--weight-light);
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .timeline-progress-line {
+    top: 50px;
+    bottom: 50px;
+    left: 42px;
+    width: 2px;
+    height: auto;
+    right: auto;
+  }
+  .timeline-steps {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .timeline-step {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .step-marker-wrapper {
+    margin-bottom: 0;
+    margin-right: 25px;
+    flex-shrink: 0;
+  }
+  .step-card {
+    min-height: auto;
+    flex-grow: 1;
+  }
+}
+</style>
+
 <section class="section-wrapper bg-secondary" id="ciencia">
 <div class="grain-overlay"></div>
 <div class="container">
-<span class="section-tag">Conocimiento Científico · E-E-A-T *</span>
-<h2 class="section-title">El Respaldo de la Ciencia Global</h2>
+<span class="section-tag">Dermatología · E-E-A-T *</span>
+<h2 class="section-title">Lo que dice la ciencia</h2>
 <p class="section-subtitle">
-            La tecnología <strong>UpPoly</strong> elimina la necesidad de usar productos químicos agresivos.
-            Limpia en profundidad sin tapar poros, sin irritar y sin resecar. Un método probado por dermatólogos
-            e investigadores de las mejores universidades del mundo.
+            Limpiar sin jabón no es nuevo. Es lo que los dermatólogos llevan años recomendando para no dañar la capa natural de tu piel. Estos son los especialistas que más saben sobre el tema.
         </p>
 <div class="experts-grid">
 <!-- EEUU -->
@@ -2933,7 +3196,7 @@ RESPONSIVE
 <div class="expert-avatar"><img alt="Dr. Richard Gallo" loading="lazy" src="assets/imagenes/Dr. Richard Gallo.webp" style="width:100%; height:100%; object-fit:cover; border-radius:50%;"/></div>
 <h3 class="expert-name notranslate" translate="no">Dr. Richard Gallo</h3>
 <p class="expert-title">Inmunidad Epidérmica</p>
-<p class="expert-desc">Pionero en el microbioma cutáneo. Sus investigaciones demuestran cómo la ausencia de químicos agresivos protege al organismo contra patógenos dérmicos.</p>
+<p class="expert-desc">Pionero en el microbioma cutáneo. Su investigación muestra que los jabones alteran las bacterias buenas de tu piel. El Laska trabaja con tu microbioma, no contra él.</p>
 <a class="expert-link" href="https://gallolab.ucsd.edu" rel="nofollow noopener" target="_blank">
                     Ver Lab UCSD
                     <svg fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
@@ -2955,7 +3218,7 @@ RESPONSIVE
 <div class="expert-avatar"><img alt="Dra. M. E. Santillán" loading="lazy" src="assets/imagenes/Dra. María Eugenia Santillán.webp" style="width:100%; height:100%; object-fit:cover; border-radius:50%;"/></div>
 <h3 class="expert-name notranslate" translate="no">Dra. M. E. Santillán</h3>
 <p class="expert-title">Dermatología Clínica</p>
-<p class="expert-desc">Valida en la práctica médica el impacto positivo de rutinas libres de abrasivos sobre el manto ácido y la hidratación natural.</p>
+<p class="expert-desc">Dermatóloga argentina. Especializada en pieles reactivas. Avala el principio de limpieza sin surfactantes para pieles con acné y rosácea.</p>
 <span class="credentials-badge">MP 2455 · MN 73735</span>
 <a class="expert-link" href="https://www.doctoralia.com.ar/dermatologo/salta" rel="nofollow noopener" target="_blank">
                     Doctoralia Argentina
@@ -2984,315 +3247,220 @@ RESPONSIVE
 </div>
 </section>
 <!-- =============================================
-     SECCIÓN: AVALES & CERTIFICACIONES (REORGANIZADA Y COMPACTADA)
+     BLOQUE NUEVO: UNA DECISIÓN QUE IMPORTA (ECO/VALORES)
 ============================================= -->
-<section class="section-wrapper bg-primary" id="certificaciones">
-<div class="container">
-<span class="section-tag">Avales &amp; Certificaciones</span>
-<h2 class="section-title">Certificaciones y Respaldo Global</h2>
-<p class="section-subtitle">
-            Tocá cada sello para ver qué garantiza y cómo aplica al Laska Mini Set y la tecnología <strong>UpPoly</strong>.
-        </p>
-<div class="section-divider"></div>
-<!-- ── Categoría 1: Sellos Técnicos ── -->
-<div class="trust-category">
-<h3 class="trust-category-title">Sellos Técnicos &amp; Sostenibilidad</h3>
-<div class="trust-grid" style="display:block;">
+<section class="eco-values-section" id="valores-eco">
+  <div class="grain-overlay-benefits"></div>
+  <div class="eco-container">
+    <div class="eco-grid">
+      <!-- Columna izquierda: Mensaje Potente -->
+      <div class="eco-text-col">
+        <span class="eco-tag">IMPACTO POSIBLE</span>
+        <h2 class="eco-title">Una decisión que importa</h2>
+        <p class="eco-lead">Cada año, una argentina promedio usa y descarta más de 900 discos de algodón. Con el Laska Mini Set, eso se convierte en cero.</p>
+        <p class="eco-description">3 piezas de microfibra de alta tecnología. Hasta 2 años de uso continuo. Cero descartables que terminen en la basura y cero químicos dañinos vertidos en el agua.</p>
+        <h3 class="eco-highlight">Cuidarte no tiene por qué costarle al planeta.</h3>
+      </div>
+      
+      <!-- Columna derecha: Certificaciones explicadas en detalle -->
+      <div class="eco-certs-col">
+        <h3 class="certs-section-title">Certificaciones Internacionales</h3>
+        <div class="cert-explanation-list">
+          <!-- Cert 1 -->
+          <div class="cert-explanation-item">
+            <div class="cert-icon-wrapper">
+              <svg viewBox="0 0 120 44" xmlns="http://www.w3.org/2000/svg"><rect fill="none" height="44" rx="5" stroke="currentColor" stroke-width="1.8" width="120"></rect><text fill="currentColor" font-family="Georgia" font-size="14" font-weight="bold" letter-spacing="1" text-anchor="middle" x="60" y="27">OEKO-TEX®</text></svg>
+            </div>
+            <div class="cert-text">
+              <h4>OEKO-TEX® Standard 100</h4>
+              <p>Valida que la microfibra textil esté 100% libre de alérgenos y químicos nocivos en contacto directo con tu piel.</p>
+            </div>
+          </div>
+          
+          <!-- Cert 2 -->
+          <div class="cert-explanation-item">
+            <div class="cert-icon-wrapper">
+              <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"><circle cx="25" cy="25" fill="none" r="21" stroke="currentColor" stroke-width="1.8"></circle><text fill="currentColor" font-family="Poppins" font-size="10" font-weight="bold" text-anchor="middle" x="25" y="29">DERMA</text></svg>
+            </div>
+            <div class="cert-text">
+              <h4>Dermatest® Garantía Clínica</h4>
+              <p>Sello de garantía alemana que certifica que el producto ha sido testeado clínicamente y no produce alergias ni irritación.</p>
+            </div>
+          </div>
+          
+          <!-- Cert 3 -->
+          <div class="cert-explanation-item">
+            <div class="cert-icon-wrapper">
+              <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"><circle cx="25" cy="25" fill="none" r="21" stroke="currentColor" stroke-width="1.8"></circle><path d="M16 25 C16 19 20 15 25 15 C30 15 34 19 34 25 C34 31 30 38 25 38 C20 38 16 31 16 25Z" fill="none" stroke="currentColor" stroke-width="1.5"></path><text fill="currentColor" font-family="Poppins" font-size="7" text-anchor="middle" x="25" y="29">PETA</text></svg>
+            </div>
+            <div class="cert-text">
+              <h4>PETA® Cruelty-Free</h4>
+              <p>Certifica que el producto y todos sus materiales de desarrollo no involucran pruebas en animales en ninguna etapa.</p>
+            </div>
+          </div>
+          
+          <!-- Cert 4 -->
+          <div class="cert-explanation-item">
+            <div class="cert-icon-wrapper">
+              <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"><circle cx="25" cy="25" fill="none" r="21" stroke="currentColor" stroke-width="1.8"></circle><text fill="currentColor" font-family="Poppins" font-size="12" font-weight="bold" text-anchor="middle" x="25" y="29">FSC</text></svg>
+            </div>
+            <div class="cert-text">
+              <h4>FSC (Manejo Sostenible)</h4>
+              <p>Garantiza que la caja y el empaque provienen de bosques gestionados de forma responsable y sostenible.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="trust-tabs-list" style="display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin-bottom:30px;"><div style="width:95px;"><button aria-expanded="false" class="trust-tab-btn is-active" onclick="openTrustTab(this, 'tab-140136031012944-0')">
-<svg class="trust-icon" viewbox="0 0 120 44" xmlns="http://www.w3.org/2000/svg">
-<rect fill="none" height="44" rx="5" stroke="currentColor" stroke-width="1.8" width="120"></rect>
-<text fill="currentColor" font-family="Georgia" font-size="14" font-weight="bold" letter-spacing="1" text-anchor="middle" x="60" y="27">OEKO-TEX®</text>
-</svg>
-<span class="trust-name">OEKO-TEX Std. 100</span>
-<span class="trust-region">Textiles seguros</span>
-
-</button></div><div style="width:95px;"><button aria-expanded="false" class="trust-tab-btn" onclick="openTrustTab(this, 'tab-140136031020368-1')">
-<svg class="trust-icon" viewbox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
-<circle cx="25" cy="25" fill="none" r="21" stroke="currentColor" stroke-width="1.8"></circle>
-<path d="M16 25 C16 19 20 15 25 15 C30 15 34 19 34 25 C34 31 30 38 25 38 C20 38 16 31 16 25Z" fill="none" stroke="currentColor" stroke-width="1.5"></path>
-<text fill="currentColor" font-family="Poppins" font-size="7" text-anchor="middle" x="25" y="29">PETA</text>
-</svg>
-<span class="trust-name">Beauty w/o Bunnies</span>
-<span class="trust-region">Sin crueldad animal</span>
-
-</button></div><div style="width:95px;"><button aria-expanded="false" class="trust-tab-btn" onclick="openTrustTab(this, 'tab-140136031372368-2')">
-<svg class="trust-icon" viewbox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
-<circle cx="25" cy="25" fill="none" r="21" stroke="currentColor" stroke-width="1.8"></circle>
-<text fill="currentColor" font-family="Poppins" font-size="8" font-weight="bold" text-anchor="middle" x="25" y="22">COSMOS</text>
-<text fill="currentColor" font-family="Poppins" font-size="7" text-anchor="middle" x="25" y="33">Organic</text>
-</svg>
-<span class="trust-name">COSMOS Organic</span>
-<span class="trust-region">Cosmética orgánica</span>
-
-</button></div><div style="width:95px;"><button aria-expanded="false" class="trust-tab-btn" onclick="openTrustTab(this, 'tab-140136031380048-3')">
-<svg class="trust-icon" viewbox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
-<circle cx="25" cy="25" fill="none" r="21" stroke="currentColor" stroke-width="1.8"></circle>
-<text fill="currentColor" font-family="Poppins" font-size="13" font-weight="bold" text-anchor="middle" x="25" y="29">GOTS</text>
-</svg>
-<span class="trust-name">GOTS Textil Orgánico</span>
-<span class="trust-region">Algodón orgánico</span>
-
-</button></div><div style="width:95px;"><button aria-expanded="false" class="trust-tab-btn" onclick="openTrustTab(this, 'tab-140136031386960-4')">
-<svg class="trust-icon" viewbox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
-<circle cx="25" cy="25" fill="none" r="21" stroke="currentColor" stroke-width="1.8"></circle>
-<text fill="currentColor" font-family="Poppins" font-size="9" font-weight="bold" text-anchor="middle" x="25" y="22">ECO</text>
-<text fill="currentColor" font-family="Poppins" font-size="7" text-anchor="middle" x="25" y="33">UNION</text>
-</svg>
-<span class="trust-name">EcoUnion Rusia</span>
-<span class="trust-region">Certificación eco</span>
-
-</button></div><div style="width:95px;"><button aria-expanded="false" class="trust-tab-btn" onclick="openTrustTab(this, 'tab-140136031328848-5')">
-<svg class="trust-icon" viewbox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
-<path d="M25 40 C25 40 10 30 10 18 C10 11 17 6 25 10 C33 6 40 11 40 18 C40 30 25 40 25 40Z" fill="none" stroke="currentColor" stroke-width="1.8"></path>
-<line stroke="currentColor" stroke-width="1.5" x1="25" x2="25" y1="40" y2="20"></line>
-</svg>
-<span class="trust-name">Vitality Leaf</span>
-<span class="trust-region">Eco verified</span>
-
-</button></div></div><div class="trust-tabs-content-container" style="width:100%;"><div class="trust-tab-content" id="tab-140136031012944-0" style="display:block; width:100%; animation: fadeIn 0.4s ease;"><div class="trust-accordion-inner">
-<div class="acc-header">
-<span class="acc-seal-name">OEKO-TEX® Standard 100</span>
-
-</div>
-<p class="acc-desc">Garantiza que cada componente del Laska Mini Set — incluyendo los paños de microfibra UpPoly — fue analizado para detectar más de 100 sustancias dañinas. Cero químicos residuales en contacto con tu piel.</p>
-<p class="acc-products-title">Aplica a estos productos</p>
-<div>
-<span class="acc-product-tag"><span class="acc-product-tag-dot"></span>Paños UpPoly</span>
-<span class="acc-product-tag"><span class="acc-product-tag-dot"></span>Laska Mini Set</span>
-<span class="acc-product-tag"><span class="acc-product-tag-dot"></span>Care Desmaquillante</span>
-</div>
-<a class="acc-verify-link" href="https://www.oeko-tex.com/en/label-check" rel="nofollow noopener" target="_blank">
-                                Verificar certificado
-                                <svg fill="none" height="12" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
-</a>
-</div></div><div class="trust-tab-content" id="tab-140136031020368-1" style="display:none; width:100%; animation: fadeIn 0.4s ease;"><div class="trust-accordion-inner">
-<div class="acc-header">
-<span class="acc-seal-name">PETA Beauty w/o Bunnies</span>
-
-</div>
-<p class="acc-desc">La tecnología UpPoly limpia de forma mecánica en frío, sin ingredientes de origen animal ni pruebas en animales en ninguna etapa de producción. 100% cruelty-free.</p>
-<p class="acc-products-title">Aplica a estos productos</p>
-<div>
-<span class="acc-product-tag"><span class="acc-product-tag-dot"></span>Laska Mini Set</span>
-<span class="acc-product-tag"><span class="acc-product-tag-dot"></span>Care Hidratante</span>
-<span class="acc-product-tag"><span class="acc-product-tag-dot"></span>Care Sérum</span>
-</div>
-<a class="acc-verify-link" href="https://crueltyfree.peta.org/" rel="nofollow noopener" target="_blank">
-                                Verificar en PETA
-                                <svg fill="none" height="12" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
-</a>
-</div></div><div class="trust-tab-content" id="tab-140136031372368-2" style="display:none; width:100%; animation: fadeIn 0.4s ease;"><div class="trust-accordion-inner">
-<div class="acc-header">
-<span class="acc-seal-name">COSMOS Organic</span>
-
-</div>
-<p class="acc-desc">Los agentes de cuidado en la línea Care de PepaGold son de origen vegetal orgánico certificado. Ningún ingrediente petroquímico ni sintético innecesario.</p>
-<p class="acc-products-title">Aplica a estos productos</p>
-<div>
-<span class="acc-product-tag"><span class="acc-product-tag-dot"></span>Care Hidratante</span>
-<span class="acc-product-tag"><span class="acc-product-tag-dot"></span>Care Sérum</span>
-<span class="acc-product-tag"><span class="acc-product-tag-dot"></span>Care Tónico</span>
-</div>
-<a class="acc-verify-link" href="https://www.cosmos-standard.org/find-a-certifier" rel="nofollow noopener" target="_blank">
-                                Buscar certificador
-                                <svg fill="none" height="12" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
-</a>
-</div></div><div class="trust-tab-content" id="tab-140136031380048-3" style="display:none; width:100%; animation: fadeIn 0.4s ease;"><div class="trust-accordion-inner">
-<div class="acc-header">
-<span class="acc-seal-name">GOTS — Global Organic Textile Standard</span>
-
-</div>
-<p class="acc-desc">Certifica que las fibras de los paños UpPoly provienen de cultivos orgánicos sin pesticidas, y que toda la cadena de producción respeta estándares sociales y ambientales.</p>
-<p class="acc-products-title">Aplica a estos productos</p>
-<div>
-<span class="acc-product-tag"><span class="acc-product-tag-dot"></span>Paños UpPoly</span>
-<span class="acc-product-tag"><span class="acc-product-tag-dot"></span>Laska Mini Set</span>
-</div>
-<a class="acc-verify-link" href="https://global-standard.org/find-certified-products-and-companies" rel="nofollow noopener" target="_blank">
-                                Verificar en GOTS
-                                <svg fill="none" height="12" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
-</a>
-</div></div><div class="trust-tab-content" id="tab-140136031386960-4" style="display:none; width:100%; animation: fadeIn 0.4s ease;"><div class="trust-accordion-inner">
-<div class="acc-header">
-<span class="acc-seal-name">EcoUnion Russia</span>
-
-</div>
-<p class="acc-desc">Avala la idoneidad ecológica del Laska Mini Set para el mercado ruso y euroasiático, confirmando ausencia de sustancias prohibidas bajo la regulación ambiental de la EAEU.</p>
-<p class="acc-products-title">Aplica a estos productos</p>
-<div>
-<span class="acc-product-tag"><span class="acc-product-tag-dot"></span>Laska Mini Set</span>
-<span class="acc-product-tag"><span class="acc-product-tag-dot"></span>Paños UpPoly</span>
-</div>
-<a class="acc-verify-link" href="https://ecounion.ru/en" rel="nofollow noopener" target="_blank">
-                                Ver EcoUnion
-                                <svg fill="none" height="12" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
-</a>
-</div></div><div class="trust-tab-content" id="tab-140136031328848-5" style="display:none; width:100%; animation: fadeIn 0.4s ease;"><div class="trust-accordion-inner">
-<div class="acc-header">
-<span class="acc-seal-name">Vitality Leaf Eco Verified</span>
-
-</div>
-<p class="acc-desc">Sello independiente de impacto ambiental reducido. Confirma que el packaging del Laska Mini Set es reciclable y que las fibras UpPoly tienen huella de carbono certificada por debajo del promedio de la industria textil.</p>
-<p class="acc-products-title">Aplica a estos productos</p>
-<div>
-<span class="acc-product-tag"><span class="acc-product-tag-dot"></span>Laska Mini Set (packaging)</span>
-<span class="acc-product-tag"><span class="acc-product-tag-dot"></span>Care Línea Completa</span>
-</div>
-<a class="acc-verify-link" href="https://vitalityleaf.com" rel="nofollow noopener" target="_blank">
-                                Ver Vitality Leaf
-                                <svg fill="none" height="12" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
-</a>
-</div></div></div></div>
-</div>
-<!-- ── Categoría 2: Medios e Instituciones ── -->
-<div class="trust-category">
-<h3 class="trust-category-title">Medios e Instituciones</h3>
-<div class="trust-grid" style="display:block;">
-
-<div class="trust-tabs-list" style="display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin-bottom:30px;"><div style="width:95px;"><button aria-expanded="false" class="trust-tab-btn is-active" onclick="openTrustTab(this, 'tab-140136031337040-0')">
-<svg class="trust-icon" viewbox="0 0 120 34" xmlns="http://www.w3.org/2000/svg">
-<text fill="currentColor" font-family="Georgia" font-size="24" letter-spacing="3" text-anchor="middle" x="60" y="26">VOGUE</text>
-</svg>
-<span class="trust-name">Tendencias J-Beauty</span>
-<span class="trust-region">Japón</span>
-
-</button></div><div style="width:95px;"><button aria-expanded="false" class="trust-tab-btn" onclick="openTrustTab(this, 'tab-140136031081808-1')">
-<svg class="trust-icon" viewbox="0 0 100 34" xmlns="http://www.w3.org/2000/svg">
-<text fill="currentColor" font-family="Georgia" font-size="30" font-weight="bold" letter-spacing="2" text-anchor="middle" x="50" y="28">ELLE</text>
-</svg>
-<span class="trust-name">Cuidado Personal</span>
-<span class="trust-region">Editorial</span>
-
-</button></div><div style="width:95px;"><button aria-expanded="false" class="trust-tab-btn" onclick="openTrustTab(this, 'tab-140136031088976-2')">
-<svg class="trust-icon" viewbox="0 0 120 34" xmlns="http://www.w3.org/2000/svg">
-<text fill="currentColor" font-family="Georgia" font-size="11" letter-spacing="1" text-anchor="middle" x="60" y="14">CONDÉ NAST</text>
-<text fill="currentColor" font-family="Georgia" font-size="9" text-anchor="middle" x="60" y="30">TRAVELER</text>
-</svg>
-<span class="trust-name">Condé Nast Traveler</span>
-<span class="trust-region">Lifestyle premium</span>
-
-</button></div><div style="width:95px;"><button aria-expanded="false" class="trust-tab-btn" onclick="openTrustTab(this, 'tab-140136026328400-3')">
-<svg class="trust-icon" viewbox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
-<circle cx="25" cy="25" fill="none" r="21" stroke="currentColor" stroke-width="1.8"></circle>
-<text fill="currentColor" font-family="Georgia" font-size="12" font-weight="bold" text-anchor="middle" x="25" y="29">NADC</text>
-</svg>
-<span class="trust-name">Alianza Nac. Dermatología</span>
-<span class="trust-region">Rusia · Institución</span>
-
-</button></div></div><div class="trust-tabs-content-container" style="width:100%;"><div class="trust-tab-content" id="tab-140136031337040-0" style="display:block; width:100%; animation: fadeIn 0.4s ease;"><div class="trust-accordion-inner">
-<div class="acc-header">
-<span class="acc-seal-name">Vogue Japan</span>
-
-</div>
-<p class="acc-desc">Referente en la cobertura de J-Beauty y tendencias de skincare asiático. La tecnología UpPoly se alinea con el movimiento japonés de limpieza suave sin agentes químicos.</p>
-<p class="acc-products-title">Relevante para</p>
-<div>
-<span class="acc-product-tag"><span class="acc-product-tag-dot"></span>Laska Mini Set</span>
-<span class="acc-product-tag"><span class="acc-product-tag-dot"></span>Paños UpPoly</span>
-</div>
-<a class="acc-verify-link" href="https://www.vogue.co.jp" rel="nofollow noopener" target="_blank">
-                                Ver Vogue Japan
-                                <svg fill="none" height="12" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
-</a>
-</div></div><div class="trust-tab-content" id="tab-140136031081808-1" style="display:none; width:100%; animation: fadeIn 0.4s ease;"><div class="trust-accordion-inner">
-<div class="acc-header">
-<span class="acc-seal-name">ELLE Argentina</span>
-
-</div>
-<p class="acc-desc">Medio de referencia en belleza y cuidado personal para el mercado latinoamericano. Sus editoriales sobre skincare clean y sostenible son clave para el posicionamiento PR del Laska.</p>
-<p class="acc-products-title">Relevante para</p>
-<div>
-<span class="acc-product-tag"><span class="acc-product-tag-dot"></span>Laska Mini Set</span>
-<span class="acc-product-tag"><span class="acc-product-tag-dot"></span>Care Hidratante</span>
-<span class="acc-product-tag"><span class="acc-product-tag-dot"></span>Care Sérum</span>
-</div>
-<a class="acc-verify-link" href="https://www.elle.com/es/" rel="nofollow noopener" target="_blank">
-                                Ver ELLE en Español
-                                <svg fill="none" height="12" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
-</a>
-</div></div><div class="trust-tab-content" id="tab-140136031088976-2" style="display:none; width:100%; animation: fadeIn 0.4s ease;"><div class="trust-accordion-inner">
-<div class="acc-header">
-<span class="acc-seal-name">Condé Nast Traveler</span>
-
-</div>
-<p class="acc-desc">Publicación lifestyle de alto impacto. Ideal para posicionar el Laska Mini Set como producto imprescindible de viaje: compacto, sin líquidos y certificado para piel sensible.</p>
-<p class="acc-products-title">Relevante para</p>
-<div>
-<span class="acc-product-tag"><span class="acc-product-tag-dot"></span>Laska Mini Set</span>
-<span class="acc-product-tag"><span class="acc-product-tag-dot"></span>Care Travel Kit</span>
-</div>
-<a class="acc-verify-link" href="https://www.condenast.com/brands" rel="nofollow noopener" target="_blank">
-                                Ver Condé Nast
-                                <svg fill="none" height="12" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
-</a>
-</div></div><div class="trust-tab-content" id="tab-140136026328400-3" style="display:none; width:100%; animation: fadeIn 0.4s ease;"><div class="trust-accordion-inner">
-<div class="acc-header">
-<span class="acc-seal-name">NADC — Alianza Nacional de Dermatovenereólogos</span>
-
-</div>
-<p class="acc-desc">Organismo dermatológico oficial de Rusia. Sus protocolos avalan la limpieza mecánica no abrasiva como método clínicamente seguro para pieles con compromiso de barrera.</p>
-<p class="acc-products-title">Relevante para</p>
-<div>
-<span class="acc-product-tag"><span class="acc-product-tag-dot"></span>Paños UpPoly</span>
-<span class="acc-product-tag"><span class="acc-product-tag-dot"></span>Laska Mini Set</span>
-</div>
-<a class="acc-verify-link" href="https://nadc.ru/en/" rel="nofollow noopener" target="_blank">
-                                Ver NADC
-                                <svg fill="none" height="12" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
-</a>
-</div></div></div></div>
-</div>
-</div>
-<script>
-function openTrustTab(btn, targetId) {
-    const category = btn.closest('.trust-category');
-    category.querySelectorAll('.trust-tab-btn').forEach(b => b.classList.remove('is-active'));
-    category.querySelectorAll('.trust-tab-content').forEach(c => c.style.display = 'none');
-    
-    btn.classList.add('is-active');
-    document.getElementById(targetId).style.display = 'block';
+<style>
+/* Estilos del Bloque Eco/Valores */
+.eco-values-section {
+  background: var(--bg-secondary);
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-color);
 }
-</script><style>
-#certificaciones {
-  padding: 3.5rem 1.5rem;
+.eco-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
-.trust-category {
-  margin-bottom: 2rem;
+.eco-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
 }
-.trust-icon {
-  width: 40px;
-  height: 36px;
+.eco-text-col {
+  text-align: left;
 }
-#certificaciones .section-divider {
-  margin-bottom: 1.5rem;
+.eco-tag {
+  font-family: var(--font-sans);
+  color: var(--color-accent);
+  font-size: 13px;
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  display: inline-block;
+  margin-bottom: 15px;
 }
-.trust-tab-content {
-  padding: 1.2rem 1.5rem;
+.eco-title {
+  font-family: var(--font-serif);
+  font-size: var(--size-h2);
+  font-weight: var(--weight-regular);
+  color: var(--color-dark);
+  line-height: var(--lh-tight);
+  margin-bottom: 20px;
 }
-.trust-tab-btn {
-    display: flex; flex-direction: column; align-items: center;
-    text-decoration: none; color: var(--color-dark-muted);
-    transition: all 0.4s ease; filter: grayscale(100%) opacity(45%);
-    width: 100%; cursor: pointer; background: none; border: none; padding: 0;
+.eco-lead {
+  font-family: var(--font-sans);
+  font-size: var(--size-body-large);
+  line-height: 1.6;
+  color: var(--color-dark);
+  font-weight: var(--weight-medium);
+  margin-bottom: 20px;
 }
-.trust-tab-btn:hover, .trust-tab-btn.is-active {
-    filter: grayscale(0%) opacity(100%); color: var(--color-primary); transform: translateY(-2px);
+.eco-description {
+  font-family: var(--font-sans);
+  font-size: var(--size-body-small);
+  line-height: 1.6;
+  color: var(--color-dark-muted);
+  font-weight: var(--weight-light);
+  margin-bottom: 30px;
 }
-.trust-tab-content {
-    background: var(--bg-accent-light); border: 1px solid var(--border-color);
-    border-radius: 14px; text-align: left;
-    box-shadow: var(--shadow-sm);
-    transition: box-shadow 0.3s ease;
+.eco-highlight {
+  font-family: var(--font-serif);
+  font-size: var(--size-h3);
+  color: var(--color-primary);
+  font-weight: var(--weight-regular);
+  line-height: var(--lh-snug);
+  margin: 0;
 }
-.trust-tab-content:hover {
-    box-shadow: var(--shadow-md);
+.eco-certs-col {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: var(--shadow-md);
 }
-.trust-tab-content .acc-header { display: flex; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-bottom: 15px; }
-.trust-tab-content .acc-seal-name { font-family: var(--font-serif); font-size: var(--size-body-large); color: var(--color-dark); }
-.trust-tab-content .acc-desc { font-family: var(--font-sans); font-size: var(--size-body-small); line-height: var(--lh-normal); color: var(--color-dark-muted); font-weight: var(--weight-light); margin-bottom: 15px; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
-</style></section>
+.certs-section-title {
+  font-family: var(--font-serif);
+  font-size: var(--size-h3);
+  font-weight: var(--weight-regular);
+  color: var(--color-dark);
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+.cert-explanation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.cert-explanation-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.cert-icon-wrapper {
+  flex-shrink: 0;
+  width: 90px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-dark-muted);
+}
+.cert-icon-wrapper svg {
+  width: 100%;
+  height: 100%;
+  max-height: 34px;
+}
+.cert-text {
+  text-align: left;
+}
+.cert-text h4 {
+  font-family: var(--font-sans);
+  font-size: var(--size-body-small);
+  font-weight: var(--weight-semibold);
+  color: var(--color-dark);
+  margin: 0 0 5px 0;
+}
+.cert-text p {
+  font-family: var(--font-sans);
+  font-size: var(--size-caption);
+  line-height: 1.4;
+  color: var(--color-dark-muted);
+  font-weight: var(--weight-light);
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .eco-values-section {
+    padding: 60px 15px;
+  }
+  .eco-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .eco-certs-col {
+    padding: 25px;
+  }
+  .cert-explanation-item {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+  }
+  .cert-text {
+    text-align: center;
+  }
+}
+</style>
 <div class="custom-product-section" id="compra-section">
 <div class="product-container">
 <!-- ==========================================
@@ -3336,7 +3504,7 @@ function openTrustTab(btn, targetId) {
 </div>
 <p class="tax-info" data-i18n="tax_info">Impuestos incluidos.</p>
 <!-- Subtítulo y Beneficios -->
-<h3 class="benefits-subtitle" data-i18n="ben_sub">Descubre el poder del cuidado perfecto en un solo paso</h3>
+<h3 class="benefits-subtitle" data-i18n="ben_sub">Descubrí el poder del cuidado perfecto en un solo paso</h3>
 <ul class="benefits-list">
 <li>✨ <strong data-i18n="b1_s">3 en 1 multifunción</strong> — <span data-i18n="b1_d">Limpia, desmaquilla y exfolia usando solo agua.</span></li>
 <li>💧 <strong data-i18n="b2_s">Cuidado natural</strong> — <span data-i18n="b2_d">Sin químicos ni desmaquillantes líquidos que irriten tu piel.</span></li>

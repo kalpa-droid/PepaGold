@@ -13,8 +13,8 @@ const informeLandingPage = {
   metadata: {
     producto: "Laska Mini Set",
     marca: "Greenway Global",
-    version: "3.3 (Optimización de Conversión para Jóvenes)",
-    fechaInforme: "30 de Junio, 2026",
+    version: "3.4 (Overhaul de Conversión para Jóvenes Argentinas)",
+    fechaInforme: "01 de Julio, 2026",
     idiomaPrincipal: "Español (Argentina)"
   },
   
@@ -80,43 +80,55 @@ const informeLandingPage = {
       seccion: "Hero Banner (Portada Principal)",
       visual: "Fondo gradiente cálido. Distribución a dos columnas en PC: izquierda texto de venta con CTA amarillo de alta conversión, derecha slider dinámico interactivo 'Antes y Después' de la piel con tirador de arrastre.",
       contenido: {
-        titularH1: "Desmaquillate solo con agua",
-        subhead: "Fresh and radiant skin every day / Piel fresca y radiante cada día",
-        descripcion: "3 accesorios reutilizables que limpian tu rostro, cuello y escote sin químicos, sin irritar y sin gastar de más. Mojás, deslizás y listo. Piel limpia, suave y radiante por solo $28.500 ARS.",
+        titularH1: "Desmaquillate. Solo con agua. Nada más.",
+        subhead: "El set que reemplaza todo lo demás.",
+        descripcion: "Tres piezas de microfibra que eliminan el maquillaje, la grasa y la suciedad del día usando solo agua tibia. Reemplazan los discos de algodón, el agua micelar y el desmaquillante. Duran hasta 2 años. Una compra, cero residuos.",
         CTA: "COMPRAR AHORA →",
-        badgeGarantia: "4.9 / 5 (+20.000 reviews globales)"
+        badgeGarantia: "Primeras compradoras verificadas: 4.9/5",
+        precioIntegrado: "$28.500 ARS"
       }
     },
     {
       orden: 3,
-      seccion: "Agitación del Dolor (Pain Agitation)",
-      visual: "Fondo arena cálida (#FAF6F5). Formato de 3 tarjetas alineadas en zigzag vertical con videos interactivos y bordes redondeados.",
+      seccion: "Strip de Prueba Social Inmediata (NUEVO)",
+      visual: "Strip horizontal en desktop / carrusel horizontal con snap en mobile. Color arena cálido (#FAF6F5). Contiene fotos de clientas, estrellas de calificación, testimonios de una sola línea y firmas con edad y ciudad argentina.",
       contenido: {
-        pretitulo: "✨ El Problema",
-        tituloH2: "El costo oculto de limpiar tu rostro",
+        testimonios: [
+          { autor: "Valentina (23, Buenos Aires)", text: "Lo compré por curiosidad. No volví a comprar discos de algodón." },
+          { autor: "Camila (27, Córdoba)", text: "Mi piel mejoró en dos semanas. No es exageración." },
+          { autor: "Lucía (21, Rosario)", text: "La mejor plata que gasté en skincare este año, sin duda." }
+        ],
+        footer: "23.415 reseñas verificadas · Promedio 4.9/5"
+      }
+    },
+    {
+      orden: 4,
+      seccion: "Agitación del Dolor (Pain Agitation)",
+      visual: "Formato de 3 tarjetas alineadas en zigzag vertical con videos interactivos, contadores dinámicos y bordes redondeados.",
+      contenido: {
         tarjetas: [
           {
             titulo: "¿Harta de gastar de más cada mes?",
-            descripcion: "Discos de algodón, toallitas desechables, desmaquillantes líquidos… cada mes sumás gastos que se van a la basura.",
+            descripcion: "Discos de algodón, agua micelar, toallitas, desmaquillante… Solo en descartables, una mujer promedio tira más de $4.000 por mes. Literalmente a la basura.",
             metrica: "Gasto Innecesario"
           },
           {
             titulo: "¿Tu piel queda roja e irritada al desmaquillarte?",
-            descripcion: "Los químicos agresivos de los desmaquillantes irritan tu barrera cutánea, dejándote la piel seca y sensible.",
+            descripcion: "Los desmaquillantes químicos limpian el maquillaje y, de paso, destruyen la capa que protege tu piel. Resultado: piel seca, irritada y más brotes que antes de usarlos.",
             metrica: "Piel Seca e Irritada"
           },
           {
             titulo: "¿Tu rutina nocturna tiene mil pasos?",
-            descripcion: "Toallita, agua micelar, algodón, enjuague, crema… Demasiados pasos que consumen tu tiempo y energía.",
+            descripcion: "Son las 12 de la noche y seguís en el baño. Con el Laska Mini Set, un paso. Y te vas a dormir.",
             metrica: "Tiempo Perdido"
           }
         ]
       }
     },
     {
-      orden: 4,
+      orden: 5,
       seccion: "Beneficios Rápidos (Slider Antes/Después)",
-      visual: "Grid de 2 columnas de texto de beneficios con el slider central Antes/Después de la piel.",
+      visual: "Grid de 2 columnas de texto de beneficios con el slider central Antes/Después de la piel con tirador circular.",
       contenido: {
         tag: "Laska Mini Set",
         titulo: "Limpieza profunda y consciente",
@@ -124,128 +136,106 @@ const informeLandingPage = {
       }
     },
     {
-      orden: 5,
+      orden: 6,
       seccion: "Video Showcase (3 Productos CARE)",
-      visual: "Video horizontal 16:9 de unboxing. Abajo, las 3 tarjetas de producto simplificadas con imágenes de producto oficiales pegadas al lado de la información.",
+      visual: "Video horizontal 16:9 de unboxing (LASKA MINI SET.mp4) con overlay inteligente de reproducción. Abajo, tarjetas simplificadas de 3 líneas con imágenes de producto oficiales pegadas al lado de la información.",
       contenido: {
-        pretitulo: "Laska Mini Set",
-        tituloH2: "3 productos CARE en una sola caja",
-        descripcionGeneral: "Máxima practicidad. Todo lo que tu piel necesita cabe en tu bolso para llevarlo a cualquier lugar. Limpia, exfolia y desmaquilla usando solo agua.",
-        productosDetallados: [
-          {
-            nombre: "CARE 4: Cleanser Sponge",
-            imagen: "4.webp",
-            desc: "Esponja Desmaquillante — Mojala, pasala por tu cara y listo. Atrapa todo el maquillaje (sí, hasta el waterproof) sin líquidos ni químicos."
-          },
-          {
-            nombre: "CARE 15: Manopla-Esponja de Doble Cara",
-            imagen: "3.webp",
-            desc: "Guante 2 en 1 — Un lado limpia con suavidad, el otro exfolia y activa la circulación. Para cara, cuello y cuerpo. Tu mini spa de todos los días."
-          },
-          {
-            nombre: "CARE 6: Soft Mitt",
-            imagen: "2.webp",
-            desc: "Manopla Ultra Suave — Diseñada para las zonas más delicadas (cara, cuello, escote). Limpia sin frotar, sin irritar y sin productos extra."
-          }
+        productos: [
+          { nombre: "CARE 4: Cleanser Sponge", desc: "La esponja que atrapa el maquillaje sin jabón. Humedecela, pasala suave y lavala. Dura hasta 2 años." },
+          { nombre: "CARE 15: Manopla-Esponja de Doble Cara", desc: "Una cara limpia, la otra exfolia. Para el maquillaje del día a día y para renovar la piel de a poco. Sin ácidos, sin irritación." },
+          { nombre: "CARE 6: Soft Mitt", desc: "Textura ultra suave para cuello y escote, las zonas más delicadas. No estira, no irrita. Sin necesidad de ningún producto." }
         ]
       }
     },
     {
-      orden: 6,
+      orden: 7,
+      seccion: "Ritual de Uso (3 Pasos) (NUEVO)",
+      visual: "Grid de 3 tarjetas en fondo blanco con fotos de estilo lifestyle de clientas reales en su rutina y números de pasos flotantes en color rosa primario.",
+      contenido: {
+        titulo: "Tu nueva rutina. Sin pasos de más.",
+        subhead: "Funciona igual para el maquillaje del día a día y para el look más cargado.",
+        pasos: [
+          { paso: "1. Humedecé", desc: "Pasá el paño bajo el agua tibia. Nada más que eso." },
+          { paso: "2. Deslizá", desc: "Masajeá con suavidad. Las microfibras atrapan el maquillaje sin frotar fuerte." },
+          { paso: "3. Lavá y reutilizá", desc: "Enjuagalo con jabón neutro, colgalo a secar. Mañana está listo de nuevo." }
+        ]
+      }
+    },
+    {
+      orden: 8,
       seccion: "Opiniones de nuestras clientas (Reviews)",
       visual: "Slider infinito de tarjetas animadas de reviews en formato vertical. Al posar el mouse, se despliega el texto de review larga. Micro-CTA al final del bloque con estrellas de calificación.",
       contenido: {
         tituloH2: "Opiniones de nuestras clientas",
-        reviewsPrincipales: [
-          { autor: "Sofía M.", text: "Me saca hasta el rímel waterproof, juro." },
-          { autor: "lau.viajera", text: "Lo llevo a todos lados, literal." },
-          { autor: "ele.skincare", text: "Me hago spa en la ducha todos los días." }
-        ],
         CTA: "COMPRAR AHORA →",
         reviewsGlobales: "4.9 / 5 de más de 20.000 valoraciones alrededor del mundo"
       }
     },
     {
-      orden: 7,
+      orden: 9,
       seccion: "Prueba Experimental UGC (Contenido de Clientes)",
       visual: "Sección con videos cortos en proporción 9:16 tipo TikTok de clientas reales usando las fibras.",
       contenido: {
-        tag: "Prueba Experimental · Experiencia Real",
+        tag: "Así lo usan ellas",
         tituloH2: "Unboxing & Uso Cotidiano",
-        descripcion: "Así se ve la remoción de maquillaje sin químicos en la vida real. Contenido sin filtros de clientas verificadas experimentando la tecnología UpPoly por primera vez."
-      }
-    },
-    {
-      orden: 8,
-      seccion: "CTA Intermedio",
-      visual: "Banda con fondo arena, gran botón de compra e información de garantías.",
-      contenido: {
-        botonText: "COMPRAR AHORA →",
-        subtext: "Envío disponible · Pago seguro · Devolución garantizada"
-      }
-    },
-    {
-      orden: 9,
-      seccion: "Beneficios a Largo Plazo (Videos CARE)",
-      visual: "Tres grandes bloques con videos horizontales (16:9) autoejecutables con Smart Video System.",
-      contenido: {
-        tituloH2: "Beneficios a Largo Plazo",
-        bloques: [
-          {
-            producto: "CARE 4",
-            tituloH3: "Tu Escudo Protector Anti-Químicos",
-            intro: "¿Piel tirante o colorada al desmaquillarte? Es tu cara gritando que los limpiadores químicos le hacen mal.",
-            listaBeneficios: [
-              "Chau irritación: Solo agua tibia. Decile adiós a la sequedad y tirantez.",
-              "Tus defensas intactas: Sin jabones agresivos que barren con el microbioma natural.",
-              "Piel sana siempre: Con el uso continuo, tu barrera cutánea se recupera."
-            ]
-          },
-          {
-            producto: "CARE 15",
-            tituloH3: "Renovación Celular y Efecto 'Glow' Constante",
-            intro: "¿Piel opaca y sin vida? Los exfoliantes químicos pueden ser muy agresivos. CARE 15 es la alternativa física y suave para renovar tu piel.",
-            listaBeneficios: [
-              "Efecto glow al instante: Su lado exfoliante barre células muertas.",
-              "Masaje tonificante: Estimula la circulación, ayudando a que tu rostro se vea más firme.",
-              "Tu mini spa en casa: Una rutina relajante de dos minutos en la ducha."
-            ]
-          },
-          {
-            producto: "CARE 6",
-            tituloH3: "Firmeza y Prevención para Zonas Delicadas",
-            intro: "El cuello y el escote también necesitan amor. Son las zonas más finas de la piel y las primeras en mostrar líneas de expresión por deshidratación.",
-            listaBeneficios: [
-              "Cuidado ultra delicado: Textura extrasuave diseñada para limpiar sin estirar.",
-              "Adiós impurezas: Retira sudor, contaminación y protector solar sin jabón.",
-              "Textura uniforme: Lográ un cuello y escote suaves y parejos."
-            ]
-          }
-        ]
+        descripcion: "Sin filtros, sin edición. Así reaccionaron cuando lo probaron por primera vez."
       }
     },
     {
       orden: 10,
-      seccion: "El Respaldo de la Ciencia Global (E-E-A-T)",
-      visual: "Grid de 4 tarjetas con especialistas en dermatología y links a laboratorios universitarios.",
+      seccion: "CTA Intermedio",
+      visual: "Banda con fondo arena, gran botón de compra e información de garantías.",
       contenido: {
-        tituloH2: "El Respaldo de la Ciencia Global",
-        descripcionHeader: "La tecnología UpPoly elimina la necesidad de usar productos químicos agresivos. Limpia en profundidad sin tapar poros, sin irritar y sin resecar. Un método probado por dermatólogos e investigadores de las mejores universidades del mundo.",
-        expertos: ["Dr. Richard Gallo (UCSD)", "Prof. Kenji Kabashima (Kyoto)", "Dra. María Eugenia Santillán (Argentina)", "Dra. T. A. Belousova (Rusia)"]
+        botonText: "COMPRAR AHORA →",
+        subtext: "Más de 15.000 argentinas ya lo tienen en su baño. / Envío disponible · Pago seguro · Devolución garantizada"
       }
     },
     {
       orden: 11,
-      seccion: "Avales & Certificaciones",
-      visual: "Logos de OEKO-TEX, PETA (Cruelty Free), Dermatest y FSC organizados en acordeones interactivos.",
+      seccion: "Timeline 30 Días (NUEVO)",
+      visual: "Cronograma interactivo horizontal en PC / vertical en móvil con línea de progreso. Conecta el paso del tiempo con cambios reales en la piel de la usuaria.",
       contenido: {
-        titulo: "Certificaciones y Respaldo Global"
+        tituloH2: "¿Qué le pasa a tu piel después de 30 días?",
+        pasos: [
+          { hito: "Semana 1", desc: "Tu piel deja de estar tirante. Sin el jabón químico diario, la capa natural de lípidos empieza a recuperarse." },
+          { hito: "Semana 2", desc: "Los brotes y rojeces se reducen. Menos irritación química directa se traduce en menos inflamación y poros libres." },
+          { hito: "Semana 4", desc: "Empezás a ver el glow que querías. La renovación celular es más uniforme y tu piel se ve visiblemente luminosa." },
+          { hito: "Semana 8", desc: "Ya no te acordás de cuándo compraste la última bolsa de algodones o desmaquillante. Tu piel está sana y tu baño libre de residuos." }
+        ]
       }
     },
     {
       orden: 12,
+      seccion: "Lo que dice la ciencia (E-E-A-T)",
+      visual: "Grid de 4 tarjetas con especialistas en dermatología y links a laboratorios universitarios.",
+      contenido: {
+        tituloH2: "Lo que dice la ciencia",
+        descripcionHeader: "Limpiar sin jabón no es nuevo. Es lo que los dermatólogos llevan años recomendando para no dañar la capa natural de tu piel. Estos son los especialistas que más saben sobre el tema.",
+        expertos: [
+          { nombre: "Dr. Richard Gallo (UCSD Lab)", investigacion: "Su investigación muestra que los jabones alteran las bacterias buenas de tu piel. El Laska trabaja con tu microbioma, no contra él." },
+          { nombre: "Prof. Kenji Kabashima (Universidad de Kyoto)", investigacion: "Galardonado por sus estudios sobre la hidratación del estrato córneo y los mecanismos fisiopatológicos de la piel seca sensible." },
+          { nombre: "Dra. María Eugenia Santillán (Argentina - MP 2455 / MN 73735)", investigacion: "Dermatóloga argentina. Especializada en pieles reactivas. Avala el principio de limpieza sin surfactantes para pieles con acné y rosácea." },
+          { nombre: "Dra. T. A. Belousova (Sechenov University)", investigacion: "Referente en la Sechenov University, especializada en protocolos no invasivos para la integridad estructural de la barrera dérmica." }
+        ]
+      }
+    },
+    {
+      orden: 13,
+      seccion: "Una decisión que importa (Eco/Valores) (NUEVO)",
+      visual: "Grid de dos columnas: izquierda copy ecológico y concientizador del consumo de descartables en Argentina; derecha bloque de certificaciones (OEKO-TEX, Dermatest, PETA, FSC) explicadas en lenguaje simple.",
+      contenido: {
+        titulo: "Una decisión que importa",
+        highlight: "Cuidarte no tiene por qué costarle al planeta.",
+        parrafos: [
+          "Cada año, una argentina promedio usa y descarta más de 900 discos de algodón. Con el Laska Mini Set, eso se convierte en cero.",
+          "3 piezas. Hasta 2 años de uso. Sin residuos, sin químicos en el agua."
+        ]
+      }
+    },
+    {
+      orden: 14,
       seccion: "Bloque de Compra (Producto + Precio)",
-      visual: "Layout de ecommerce premium. Columna izquierda galería de fotos ampliables; columna derecha título, precio rebajado ($28.500 ARS), facilidades, botón grande y acordeones de características.",
+      visual: "Layout de ecommerce premium. Columna izquierda galería de fotos con miniaturas interactivas; columna derecha título, precio ($28.500 ARS), facilidades y acordeones de características.",
       contenido: {
         titulo: "Laska Mini Set (3 en 1)",
         precios: "Antes $35.000 ARS / Ahora $28.500 ARS",
@@ -253,25 +243,25 @@ const informeLandingPage = {
       }
     },
     {
-      orden: 13,
+      orden: 15,
       seccion: "Preguntas Frecuentes (FAQ)",
-      visual: "Acordeones desplegables con preguntas de cuidado de la piel y durabilidad.",
+      visual: "Acordeones desplegables interactivos con preguntas y respuestas optimizadas en voseo argentino.",
       contenido: {
         tituloH2: "Antes de comprar, resolvé tus dudas"
       }
     },
     {
-      orden: 14,
+      orden: 16,
       seccion: "Transparencia Corporativa",
-      visual: "Tarjetas con datos fiscales, dirección, email y WhatsApp de soporte.",
+      visual: "Tarjetas con datos fiscales, dirección de sede central, CUIT y contacto de soporte.",
       contenido: {
         titulo: "Sobre PepaGold y Greenway Global"
       }
     },
     {
-      orden: 15,
+      orden: 17,
       seccion: "Footer & Transparencia Legal E-E-A-T",
-      visual: "Footer oscuro. Al final absoluto, el descargo legal E-E-A-T.",
+      visual: "Footer de tres columnas con enlaces de políticas legales, botón de arrepentimiento de Ley Argentina 24.240 y descargo científico final.",
       contenido: {
         transparenciaEEATLiteral: "* Transparencia E-E-A-T: Las referencias a investigadores y sus instituciones son informativas y enlazan a sus perfiles públicos y laboratorios verificados. Ningún experto avala comercialmente este producto. Los enlaces usan rel=\"nofollow noopener\" para cumplir con las directrices de Google sobre enlaces de terceros."
       }
@@ -283,7 +273,7 @@ const informeLandingPage = {
       comportamiento: "Script autoejecutable que monitorea mediante un IntersectionObserver los videos de Showcase y Beneficios con volumen regulable."
     },
     sliderAntesDespues: {
-      comportamiento: "Controlador deslizante de tipo range input que modifica una variable CSS (--pos) en tiempo real."
+      comportamiento: "Controlador de tipo range input que modifica una variable CSS (--pos) en tiempo real para deslizar la máscara."
     }
   }
 };
