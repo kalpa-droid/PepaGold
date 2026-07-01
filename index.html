@@ -332,6 +332,7 @@
 </div>
 
 <!-- =============================================
+<!-- =============================================
      BLOQUE NUEVO: STRIP DE PRUEBA SOCIAL INMEDIATA (CARRUSEL DINÁMICO)
 ============================================= -->
 <section class="immediate-social-proof">
@@ -373,7 +374,7 @@
       <!-- Card 4 -->
       <div class="isp-card">
         <div class="isp-user-info">
-          <img class="isp-avatar" src="assets/imagenes/2.webp" alt="Mari T.">
+          <img class="isp-avatar" src="assets/imagenes/CARE15-1.webp" alt="Mari T.">
           <div>
             <div class="isp-stars">★★★★★</div>
             <p class="isp-quote">"No puedo creer que solo use agua."</p>
@@ -384,7 +385,7 @@
       <!-- Card 5 -->
       <div class="isp-card">
         <div class="isp-user-info">
-          <img class="isp-avatar" src="assets/imagenes/3.webp" alt="caro.glow">
+          <img class="isp-avatar" src="assets/imagenes/CARE6-21.webp" alt="caro.glow">
           <div>
             <div class="isp-stars">★★★★★</div>
             <p class="isp-quote">"Mi piel cambió y no exagero."</p>
@@ -395,7 +396,7 @@
       <!-- Card 6 -->
       <div class="isp-card">
         <div class="isp-user-info">
-          <img class="isp-avatar" src="assets/imagenes/4.webp" alt="Pau Gómez">
+          <img class="isp-avatar" src="assets/imagenes/CARE6-1.webp" alt="Pau Gómez">
           <div>
             <div class="isp-stars">★★★★★</div>
             <p class="isp-quote">"Llego muerta y en 2 min estoy lista."</p>
@@ -404,7 +405,7 @@
         </div>
       </div>
     </div>
-    <!-- Degradados Fades laterales -->
+    <!-- Fades laterales -->
     <div class="isp-fade fade-left"></div>
     <div class="isp-fade fade-right"></div>
   </div>
@@ -414,41 +415,45 @@
 </section>
 
 <style>
-/* Estilos para el Strip de Prueba Social Inmediata */
+/* Estilos para el Strip de Prueba Social Inmediata (Carrusel) */
 .immediate-social-proof {
   background: var(--bg-secondary);
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
-  padding: 35px 20px;
+  padding: 35px 20px 25px;
   position: relative;
   z-index: 10;
+  overflow: hidden;
 }
-.isp-container {
-  max-width: 1100px;
-  margin: 0 auto;
+.isp-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 0;
 }
-.isp-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-bottom: 20px;
+.isp-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
 }
 .isp-card {
+  flex: 0 0 310px;
   background: var(--bg-primary);
   border: 1px solid var(--border-color);
   border-radius: 16px;
-  padding: 20px;
+  padding: 18px 20px;
   box-shadow: var(--shadow-sm);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: opacity 0.4s ease, filter 0.4s ease;
 }
-.isp-card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+.isp-track:hover .isp-card:not(:hover) {
+  opacity: 0.6;
+  filter: blur(2px);
 }
 .isp-user-info {
   display: flex;
   gap: 15px;
   align-items: flex-start;
+  text-align: left;
 }
 .isp-avatar {
   width: 48px;
@@ -478,6 +483,22 @@
   color: var(--color-text-light);
   font-weight: var(--weight-light);
 }
+.isp-fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 3;
+  pointer-events: none;
+}
+.isp-fade.fade-left {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-secondary) 20%, transparent);
+}
+.isp-fade.fade-right {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-secondary) 20%, transparent);
+}
 .isp-footer {
   text-align: center;
   font-family: var(--font-sans);
@@ -490,26 +511,17 @@
 
 @media (max-width: 900px) {
   .immediate-social-proof {
-    padding: 25px 15px;
-  }
-  .isp-cards {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 15px;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-  .isp-cards::-webkit-scrollbar {
-    display: none;
+    padding: 25px 10px 15px;
   }
   .isp-card {
-    flex: 0 0 85%;
-    scroll-snap-align: center;
+    flex: 0 0 250px;
+    padding: 14px 16px;
+  }
+  .isp-fade {
+    width: 40px;
   }
 }
+
 </style>
 
 <style>
@@ -2729,6 +2741,59 @@ document.addEventListener("DOMContentLoaded", () => {
   .ugc-title { font-size: 2.2rem; }
 }
 </style>
+
+<!-- =============================================
+     JS: ANIMACIÓN DEL STRIP DE PRUEBA SOCIAL INMEDIATA
+============================================= -->
+<script>
+(function() {
+  'use strict';
+  const slider = document.getElementById('ispSlider');
+  const track = document.getElementById('ispTrack');
+  if (!slider || !track) return;
+
+  if (!track.dataset.duped) {
+    track.innerHTML += track.innerHTML;
+    track.dataset.duped = '1';
+  }
+
+  let speed = 40; // px/segundo
+  let pos = 0;
+  let last = performance.now();
+  let paused = false;
+  let halfWidth = 0;
+
+  function measure() {
+    halfWidth = track.scrollWidth / 2;
+  }
+  
+  measure();
+  setTimeout(measure, 150);
+
+  window.addEventListener('resize', measure);
+
+  slider.addEventListener('mouseenter', () => paused = true);
+  slider.addEventListener('mouseleave', () => paused = false);
+  slider.addEventListener('touchstart', () => paused = true, { passive: true });
+  slider.addEventListener('touchend', () => paused = false);
+
+  function loop(now) {
+    const dt = (now - last) / 1000;
+    last = now;
+
+    if (!paused && halfWidth > 0) {
+      pos -= speed * dt;
+      if (-pos >= halfWidth) {
+        pos += halfWidth;
+      }
+      track.style.transform = `translateX(${pos}px)`;
+    }
+    requestAnimationFrame(loop);
+  }
+
+  requestAnimationFrame(loop);
+})();
+</script>
 
 <script>
 /**
