@@ -332,11 +332,11 @@
 </div>
 
 <!-- =============================================
-     BLOQUE NUEVO: STRIP DE PRUEBA SOCIAL INMEDIATA
+     BLOQUE NUEVO: STRIP DE PRUEBA SOCIAL INMEDIATA (CARRUSEL DINÁMICO)
 ============================================= -->
 <section class="immediate-social-proof">
-  <div class="isp-container">
-    <div class="isp-cards">
+  <div class="isp-slider" id="ispSlider">
+    <div class="isp-track" id="ispTrack">
       <!-- Card 1 -->
       <div class="isp-card">
         <div class="isp-user-info">
@@ -370,10 +370,46 @@
           </div>
         </div>
       </div>
+      <!-- Card 4 -->
+      <div class="isp-card">
+        <div class="isp-user-info">
+          <img class="isp-avatar" src="assets/imagenes/2.webp" alt="Mari T.">
+          <div>
+            <div class="isp-stars">★★★★★</div>
+            <p class="isp-quote">"No puedo creer que solo use agua."</p>
+            <span class="isp-author">Mari T., 25</span>
+          </div>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="isp-card">
+        <div class="isp-user-info">
+          <img class="isp-avatar" src="assets/imagenes/3.webp" alt="caro.glow">
+          <div>
+            <div class="isp-stars">★★★★★</div>
+            <p class="isp-quote">"Mi piel cambió y no exagero."</p>
+            <span class="isp-author">caro.glow, 22</span>
+          </div>
+        </div>
+      </div>
+      <!-- Card 6 -->
+      <div class="isp-card">
+        <div class="isp-user-info">
+          <img class="isp-avatar" src="assets/imagenes/4.webp" alt="Pau Gómez">
+          <div>
+            <div class="isp-stars">★★★★★</div>
+            <p class="isp-quote">"Llego muerta y en 2 min estoy lista."</p>
+            <span class="isp-author">Pau Gómez, 24</span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="isp-footer">
-      <span data-i18n="strip_footer">4.9 / 5 de más de 20.000 valoraciones alrededor del mundo</span>
-    </div>
+    <!-- Degradados Fades laterales -->
+    <div class="isp-fade fade-left"></div>
+    <div class="isp-fade fade-right"></div>
+  </div>
+  <div class="isp-footer" style="margin-top: 25px;">
+    <span data-i18n="strip_footer">4.9 / 5 de más de 20.000 valoraciones alrededor del mundo</span>
   </div>
 </section>
 
@@ -2703,22 +2739,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const track  = document.getElementById('ugcTrack');
   if (!slider || !track) return;
 
+  // Duplicamos el track para marquesina infinita
   if (!track.dataset.duped) {
     track.innerHTML += track.innerHTML;
     track.dataset.duped = '1';
   }
 
   let pos = 0;                  
-  let speed = 35; // Un poco más lento para poder ver los videos
+  let speed = 50; // Velocidad de la marquesina
   let last = performance.now();
-  let paused = false;
+  
+  let paused = false;          // Pausa general del loop (por hover o foco central)
+  let manualPaused = false;    // Pausa manual forzada (Hold to Play)
   let halfWidth = 0;
-
-  const setPaused = (v) => { paused = v; };
-  slider.addEventListener('mouseenter', () => setPaused(true));
-  slider.addEventListener('mouseleave', () => setPaused(false));
-  slider.addEventListener('touchstart', () => setPaused(true), { passive: true });
-  slider.addEventListener('touchend',   () => setPaused(false));
+  
+  let focusedCard = null;      // Tarjeta de video que está enfocada actualmente en el centro
+  let focusTimeout = null;     // Timeout de reproducción de 2 segundos
+  let cooldown = false;        // Cooldown para no disparar el foco repetidamente en el mismo video
 
   document.addEventListener('visibilitychange', () => { last = performance.now(); });
 
@@ -2728,6 +2765,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const videos = track.querySelectorAll('video');
   let pending = videos.length;
+  
+  // Garantizar volumen del 0.7 para cuando se toquen
+  videos.forEach(vid => {
+    vid.muted = true; // Por defecto corre silencioso
+    vid.playsInline = true;
+  });
+
   if (pending === 0) {
     measure();
   } else {
@@ -2743,11 +2787,67 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener('resize', measure);
 
+  // INTERACCIÓN MANUAL: Hold to Play (Tocar y mantener presionado)
+  const cards = track.querySelectorAll('.ugc-card');
+  cards.forEach(card => {
+    const video = card.querySelector('video');
+    if (!video) return;
+
+    // Al presionar/tocar (manual)
+    const startManualPlay = (e) => {
+      e.stopPropagation();
+      if (focusTimeout) {
+        clearTimeout(focusTimeout);
+        focusTimeout = null;
+      }
+      manualPaused = true;
+      paused = true;
+      
+      // Apaga todos los otros videos antes de prender este
+      videos.forEach(v => {
+        if (v !== video) {
+          v.pause();
+        }
+      });
+
+      video.muted = false; // Se escucha el audio en hold manual
+      video.play().catch(err => {
+        video.muted = true; // Si bloquea, try muted
+        video.play();
+      });
+    };
+
+    // Al soltar/dejar de tocar (manual)
+    const stopManualPlay = () => {
+      if (manualPaused) {
+        video.pause();
+        video.muted = true;
+        manualPaused = false;
+        paused = false;
+        cooldown = true;
+        setTimeout(() => { cooldown = false; }, 1500); // 1.5s de cooldown al soltar
+      }
+    };
+
+    card.addEventListener('mousedown', startManualPlay);
+    card.addEventListener('mouseup', stopManualPlay);
+    card.addEventListener('mouseleave', stopManualPlay);
+    
+    card.addEventListener('touchstart', startManualPlay, { passive: false });
+    card.addEventListener('touchend', stopManualPlay);
+    card.addEventListener('touchcancel', stopManualPlay);
+  });
+
+  // Pausa por hover clásico
+  slider.addEventListener('mouseenter', () => { if (!manualPaused) paused = true; });
+  slider.addEventListener('mouseleave', () => { if (!manualPaused) paused = false; });
+
+  // FUNCIÓN PRINCIPAL DE LA MARQUESINA (LOOP DE ANIMACIÓN)
   function loop(now) {
     const dt = (now - last) / 1000;
     last = now;
 
-    if (!paused && halfWidth > 0) {
+    if (!paused && !manualPaused && halfWidth > 0) {
       pos -= speed * dt;
 
       if (-pos >= halfWidth) {
@@ -2755,6 +2855,56 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       track.style.transform = `translateX(${pos}px)`;
+
+      // DETECTOR DE FOCO EN EL CENTRO
+      const sliderRect = slider.getBoundingClientRect();
+      const sliderCenterX = sliderRect.left + sliderRect.width / 2;
+
+      let closestCard = null;
+      let minDistance = Infinity;
+
+      // Medimos distancias para encontrar el video del centro
+      cards.forEach(card => {
+        const cardRect = card.getBoundingClientRect();
+        const cardCenterX = cardRect.left + cardRect.width / 2;
+        const dist = Math.abs(sliderCenterX - cardCenterX);
+        if (dist < minDistance) {
+          minDistance = dist;
+          closestCard = card;
+        }
+      });
+
+      // Si el video más cercano está exactamente en el centro (margen de 20px)
+      if (minDistance < 20 && closestCard !== focusedCard && !cooldown) {
+        focusedCard = closestCard;
+        const activeVideo = closestCard.querySelector('video');
+        
+        if (activeVideo) {
+          paused = true; // Detenemos la marquesina
+          
+          // Silenciamos los demás videos y pausamos
+          videos.forEach(v => {
+            if (v !== activeVideo) {
+              v.pause();
+            }
+          });
+
+          // Reproduce el video silenciado durante 2 segundos
+          activeVideo.muted = true;
+          activeVideo.play().then(() => {
+            focusTimeout = setTimeout(() => {
+              activeVideo.pause();
+              paused = false; // Reanudar marquesina
+              cooldown = true;
+              // Esperar a que se aleje del centro antes de poder enfocar otro
+              setTimeout(() => { cooldown = false; }, 1800);
+            }, 2000);
+          }).catch(() => {
+            // Si bloquea autoplay
+            paused = false;
+          });
+        }
+      }
     }
 
     requestAnimationFrame(loop);
@@ -3196,19 +3346,7 @@ RESPONSIVE
 
 
 
-<!-- =============================================
-     CTA INTERMEDIO (NUEVO)
-============================================= -->
-<section class="intermediate-cta-section">
-<a class="intermediate-cta-btn" href="#compra-section">COMPRAR AHORA →</a>
-<p class="intermediate-cta-sub" data-i18n="inter_cta_sub">Más de 20.000 clientas ya transformaron su rutina diaria.<br>Envío a todo el mundo · Pago seguro · Devolución garantizada</p>
-</section>
-<style>
-.intermediate-cta-section { background: var(--bg-secondary); padding: 60px 20px; text-align: center; }
-.intermediate-cta-btn { display: inline-block; background: var(--color-dark); color: #fff; font-family: var(--font-sans); font-weight: var(--weight-semibold); text-decoration: none; padding: 1.3rem 3.5rem; border-radius: 60px; font-size: var(--size-body-large); letter-spacing: 1px; transition: all 0.4s ease; box-shadow: var(--shadow-md); }
-.intermediate-cta-btn:hover { background: var(--color-primary); transform: translateY(-4px); box-shadow: 0 15px 35px rgba(212, 140, 144, 0.25); }
-.intermediate-cta-sub { font-family: var(--font-sans); font-size: var(--size-body-small); color: var(--color-text-light); margin-top: 15px; font-weight: var(--weight-regular); }
-</style>
+
 
 <!-- =============================================
      SECCIÓN: TIMELINE DE 30 DÍAS (CONVERSIÓN SKINCARE)
