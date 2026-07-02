@@ -3007,7 +3007,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
           });
 
-          // Reproduce el video silenciado durante 2 segundos
+          // Reproduce el video silenciado durante 5 segundos
           activeVideo.muted = true;
           activeVideo.play().then(() => {
             focusTimeout = setTimeout(() => {
@@ -3016,7 +3016,7 @@ document.addEventListener("DOMContentLoaded", () => {
               cooldown = true;
               // Esperar a que se aleje del centro antes de poder enfocar otro
               setTimeout(() => { cooldown = false; }, 1800);
-            }, 3500);
+            }, 5000);
           }).catch(() => {
             // Si bloquea autoplay
             paused = false;
