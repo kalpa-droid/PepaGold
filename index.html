@@ -2347,7 +2347,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 <!-- =============================================
-     BLOQUE NUEVO: RITUAL DE USO (3 PASOS)
+     BLOQUE NUEVO: RITUAL DE USO (SLIDESHOW INTERACTIVO CON SONIDO)
 ============================================= -->
 <section class="use-ritual-section">
   <div class="grain-overlay-benefits"></div>
@@ -2358,40 +2358,37 @@ document.addEventListener("DOMContentLoaded", () => {
       <p class="ritual-subtitle">Funciona igual para el maquillaje del día a día y para el look más cargado.</p>
     </div>
     
-    <div class="ritual-steps-grid">
-      <!-- Paso 1 -->
-      <div class="ritual-step-card">
-        <div class="ritual-img-wrapper">
-          <img src="assets/imagenes/CARE4-1.webp" alt="Paso 1: Humedecé" loading="lazy">
-          <div class="step-number">1</div>
-        </div>
-        <div class="ritual-text-content">
-          <h3>Humedecé</h3>
-          <p>Pasá el paño bajo el agua tibia. Nada más que eso.</p>
-        </div>
+    <!-- Barra de navegación del Ritual -->
+    <div class="ritual-nav">
+      <div class="ritual-nav-item active" data-step="0">
+        <div class="nav-num">1</div>
+        <span>Humedecé</span>
       </div>
-      
-      <!-- Paso 2 -->
-      <div class="ritual-step-card">
-        <div class="ritual-img-wrapper">
-          <img src="assets/imagenes/CARE4-2.webp" alt="Paso 2: Deslizá" loading="lazy">
-          <div class="step-number">2</div>
-        </div>
-        <div class="ritual-text-content">
-          <h3>Deslizá</h3>
-          <p>Masajeá con suavidad. Las microfibras atrapan el maquillaje sin frotar fuerte.</p>
-        </div>
+      <div class="ritual-nav-item" data-step="1">
+        <div class="nav-num">2</div>
+        <span>Deslizá</span>
       </div>
-      
-      <!-- Paso 3 -->
-      <div class="ritual-step-card">
-        <div class="ritual-img-wrapper">
-          <img src="assets/imagenes/CARE15-1.webp" alt="Paso 3: Lavá y reutilizá" loading="lazy">
-          <div class="step-number">3</div>
+      <div class="ritual-nav-item" data-step="2">
+        <div class="nav-num">3</div>
+        <span>Lavá y reutilizá</span>
+      </div>
+    </div>
+    
+    <!-- Tarjeta Única del Slideshow -->
+    <div class="ritual-slideshow-wrapper">
+      <div class="ritual-slide-card active" id="ritualSlide">
+        <div class="ritual-slide-image-col">
+          <img id="ritualImg" src="assets/imagenes/p1.webp" alt="Paso 1: Humedecé">
         </div>
-        <div class="ritual-text-content">
-          <h3>Lavá y reutilizá</h3>
-          <p>Enjuagalo con jabón neutro, colgalo a secar. Mañana está listo de nuevo.</p>
+        <div class="ritual-slide-text-col">
+          <div class="step-badge">PASO <span id="ritualStepNum">1</span></div>
+          <h3 id="ritualTitle">Humedecé</h3>
+          <p id="ritualDesc">Pasá el paño bajo el agua tibia. Nada más que eso.</p>
+          
+          <!-- Indicador visual de tiempo -->
+          <div class="ritual-timer-bar">
+            <div class="ritual-timer-progress" id="timerProgress"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -2399,7 +2396,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </section>
 
 <style>
-/* Estilos para el Ritual de Uso */
+/* Estilos para el Ritual de Uso (Slideshow Interactivo) */
 .use-ritual-section {
   background: var(--bg-primary);
   padding: 90px 20px;
@@ -2408,7 +2405,7 @@ document.addEventListener("DOMContentLoaded", () => {
   border-bottom: 1px solid var(--border-color);
 }
 .ritual-container {
-  max-width: 1100px;
+  max-width: 900px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
@@ -2416,7 +2413,7 @@ document.addEventListener("DOMContentLoaded", () => {
 .ritual-header {
   text-align: center;
   max-width: 700px;
-  margin: 0 auto 60px auto;
+  margin: 0 auto 40px auto;
 }
 .ritual-tag {
   font-family: var(--font-sans);
@@ -2443,90 +2440,146 @@ document.addEventListener("DOMContentLoaded", () => {
   color: var(--color-dark-muted);
   font-weight: var(--weight-light);
 }
-.ritual-steps-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+
+/* Navegación por pasos */
+.ritual-nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
 }
-.ritual-step-card {
+.ritual-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 0.4s ease;
+  padding: 8px 16px;
+  border-radius: 30px;
+  border: 1px solid transparent;
+}
+.ritual-nav-item.active {
+  opacity: 1;
   background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-color: var(--border-color);
 }
-.ritual-step-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--border-color-hover);
-}
-.ritual-img-wrapper {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  background: var(--bg-accent-light);
-}
-.ritual-img-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-}
-.ritual-step-card:hover .ritual-img-wrapper img {
-  transform: scale(1.05);
-}
-.step-number {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  width: 32px;
-  height: 32px;
+.nav-num {
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  background: var(--color-primary);
+  background: var(--color-dark);
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-sans);
-  font-weight: var(--weight-bold);
-  font-size: 14px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  font-weight: var(--weight-semibold);
+  font-size: 12px;
+  transition: background-color 0.4s ease;
 }
-.ritual-text-content {
-  padding: 25px;
+.ritual-nav-item.active .nav-num {
+  background: var(--color-primary);
+}
+.ritual-nav-item span {
+  font-family: var(--font-sans);
+  font-size: var(--size-body-small);
+  font-weight: var(--weight-medium);
+  color: var(--color-dark);
+}
+
+/* Tarjeta de Slideshow */
+.ritual-slideshow-wrapper {
+  position: relative;
+  width: 100%;
+}
+.ritual-slide-card {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.ritual-slide-image-col {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #eaeaea;
+}
+.ritual-slide-image-col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease, transform 0.6s ease;
+}
+.ritual-slide-text-col {
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: left;
+  position: relative;
 }
-.ritual-text-content h3 {
+.step-badge {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: var(--weight-semibold);
+  color: var(--color-accent);
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+.ritual-slide-text-col h3 {
   font-family: var(--font-serif);
   font-size: var(--size-h3);
   font-weight: var(--weight-regular);
   color: var(--color-dark);
-  margin: 0 0 10px 0;
+  margin: 0 0 15px 0;
+  line-height: var(--lh-snug);
 }
-.ritual-text-content p {
+.ritual-slide-text-col p {
   font-family: var(--font-sans);
   font-size: var(--size-body-small);
-  line-height: 1.5;
+  line-height: 1.6;
   color: var(--color-dark-muted);
   font-weight: var(--weight-light);
-  margin: 0;
+  margin: 0 0 30px 0;
+}
+
+/* Barra de progreso de tiempo */
+.ritual-timer-bar {
+  width: 100%;
+  height: 3px;
+  background: rgba(0,0,0,0.06);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.ritual-timer-progress {
+  width: 0%;
+  height: 100%;
+  background: var(--color-primary);
+  transition: width 3s linear;
 }
 
 @media (max-width: 900px) {
-  .use-ritual-section {
-    padding: 60px 15px;
+  .ritual-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
   }
-  .ritual-steps-grid {
+  .ritual-slide-card {
     grid-template-columns: 1fr;
-    gap: 30px;
   }
-  .ritual-header {
-    margin-bottom: 40px;
+  .ritual-slide-image-col {
+    aspect-ratio: 4 / 3;
   }
-}
-</style>
+  .ritual-slide-text-col {
+    padding: 30px 24px;
+  }
+}</style>
 
 <!-- =============================================
      SECCIÓN 6: PRUEBA EXPERIMENTAL UGC (E-E-A-T) - CARRUSEL INFINITO
@@ -2963,7 +3016,7 @@ document.addEventListener("DOMContentLoaded", () => {
               cooldown = true;
               // Esperar a que se aleje del centro antes de poder enfocar otro
               setTimeout(() => { cooldown = false; }, 1800);
-            }, 2000);
+            }, 3500);
           }).catch(() => {
             // Si bloquea autoplay
             paused = false;
@@ -3414,7 +3467,7 @@ RESPONSIVE
 
 
 <!-- =============================================
-     SECCIÓN: TIMELINE DE 30 DÍAS (CONVERSIÓN SKINCARE)
+     SECCIÓN: TIMELINE DE 30 DÍAS (CONVERSIÓN SKINCARE - CARRUSEL INTERACTIVO)
 ============================================= -->
 <section class="skin-timeline-section">
   <div class="grain-overlay-benefits"></div>
@@ -3425,65 +3478,85 @@ RESPONSIVE
       <p class="timeline-subtitle">El cambio no es magia. Es el resultado de darle un respiro a tu piel y dejar de agredirla con químicos.</p>
     </div>
 
-    <div class="timeline-wrapper">
-      <!-- Línea conectora visual -->
-      <div class="timeline-progress-line"></div>
-      
-      <div class="timeline-steps">
-        <!-- Paso 1 -->
-        <div class="timeline-step">
-          <div class="step-marker-wrapper">
-            <div class="step-dot">1</div>
-            <span class="step-label">Semana 1</span>
+    <!-- Indicador de Progreso del Timeline (Sincronizado) -->
+    <div class="timeline-nav-wrapper">
+      <div class="timeline-nav-line">
+        <div class="timeline-nav-progress" id="timelineProgress"></div>
+      </div>
+      <div class="timeline-nav-dots">
+        <div class="timeline-nav-dot active" data-slide="0">
+          <div class="dot-num">1</div>
+          <span class="dot-lbl">Semana 1</span>
+        </div>
+        <div class="timeline-nav-dot" data-slide="1">
+          <div class="dot-num">2</div>
+          <span class="dot-lbl">Semana 2</span>
+        </div>
+        <div class="timeline-nav-dot" data-slide="2">
+          <div class="dot-num">4</div>
+          <span class="dot-lbl">Semana 4</span>
+        </div>
+        <div class="timeline-nav-dot" data-slide="3">
+          <div class="dot-num">8</div>
+          <span class="dot-lbl">Semana 8</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contenedor del Slider del Timeline -->
+    <div class="timeline-slider-wrapper">
+      <div class="timeline-slider" id="timelineSlider">
+        <!-- Slide 1 -->
+        <div class="timeline-slide active">
+          <div class="timeline-slide-img">
+            <img src="assets/imagenes/s1.webp" alt="Semana 1">
           </div>
-          <div class="step-card">
-            <h4>Piel sin tirantez</h4>
+          <div class="timeline-slide-info">
+            <h3>Piel sin tirantez</h3>
             <p>Tu piel deja de estar tirante. Sin el jabón químico diario, la capa natural de lípidos empieza a recuperarse.</p>
           </div>
         </div>
-
-        <!-- Paso 2 -->
-        <div class="timeline-step">
-          <div class="step-marker-wrapper">
-            <div class="step-dot">2</div>
-            <span class="step-label">Semana 2</span>
+        <!-- Slide 2 -->
+        <div class="timeline-slide">
+          <div class="timeline-slide-img">
+            <img src="assets/imagenes/s2.webp" alt="Semana 2">
           </div>
-          <div class="step-card">
-            <h4>Menos brotes</h4>
+          <div class="timeline-slide-info">
+            <h3>Menos brotes</h3>
             <p>Los brotes y rojeces se reducen. Menos irritación química directa se traduce en menos inflamación y poros libres.</p>
           </div>
         </div>
-
-        <!-- Paso 3 -->
-        <div class="timeline-step">
-          <div class="step-marker-wrapper">
-            <div class="step-dot">4</div>
-            <span class="step-label">Semana 4</span>
+        <!-- Slide 3 -->
+        <div class="timeline-slide">
+          <div class="timeline-slide-img">
+            <img src="assets/imagenes/s3.webp" alt="Semana 4">
           </div>
-          <div class="step-card">
-            <h4>Efecto Glow</h4>
+          <div class="timeline-slide-info">
+            <h3>Efecto Glow</h3>
             <p>Empezás a ver el glow que querías. La renovación celular es más uniforme y tu piel se ve visiblemente luminosa.</p>
           </div>
         </div>
-
-        <!-- Paso 4 -->
-        <div class="timeline-step">
-          <div class="step-marker-wrapper">
-            <div class="step-dot">8</div>
-            <span class="step-label">Semana 8</span>
+        <!-- Slide 4 -->
+        <div class="timeline-slide">
+          <div class="timeline-slide-img">
+            <img src="assets/imagenes/s4.webp" alt="Semana 8">
           </div>
-          <div class="step-card">
-            <h4>Rutina Libre</h4>
+          <div class="timeline-slide-info">
+            <h3>Libertad absoluta</h3>
             <p>Ya no te acordás de cuándo compraste la última bolsa de algodones o desmaquillante. Tu piel está sana y tu baño libre de residuos.</p>
           </div>
         </div>
       </div>
+      
+      <!-- Flechas del Slider -->
+      <button class="timeline-arrow prev" id="timelinePrev">&larr;</button>
+      <button class="timeline-arrow next" id="timelineNext">&rarr;</button>
     </div>
   </div>
 </section>
 
 <style>
-/* Estilos para el Timeline de 30 Días */
+/* Estilos para el Timeline de 30 Días (Carrusel Sincronizado) */
 .skin-timeline-section {
   background: var(--bg-primary);
   padding: 100px 20px;
@@ -3492,7 +3565,7 @@ RESPONSIVE
   border-bottom: 1px solid var(--border-color);
 }
 .timeline-container {
-  max-width: 1100px;
+  max-width: 900px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
@@ -3500,7 +3573,7 @@ RESPONSIVE
 .timeline-header {
   text-align: center;
   max-width: 700px;
-  margin: 0 auto 60px auto;
+  margin: 0 auto 50px auto;
 }
 .timeline-tag {
   font-family: var(--font-sans);
@@ -3528,45 +3601,50 @@ RESPONSIVE
   font-weight: var(--weight-light);
 }
 
-.timeline-wrapper {
+/* Indicador de Progreso del Timeline (Barra superior) */
+.timeline-nav-wrapper {
   position: relative;
-  padding: 40px 0;
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+  padding: 0 40px;
 }
-.timeline-progress-line {
+.timeline-nav-line {
   position: absolute;
-  top: 72px; /* Alinear con el centro de las bolitas */
-  left: 5%;
-  right: 5%;
+  top: 22px;
+  left: 40px;
+  right: 40px;
   height: 2px;
   background: var(--border-color);
   z-index: 1;
 }
-.timeline-steps {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+.timeline-nav-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: var(--color-primary);
+  transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.timeline-nav-dots {
+  display: flex;
+  justify-content: space-between;
   position: relative;
   z-index: 2;
 }
-.timeline-step {
+.timeline-nav-dot {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  cursor: pointer;
 }
-.step-marker-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 25px;
-}
-.step-dot {
+.timeline-nav-dot .dot-num {
   width: 44px;
   height: 44px;
   border-radius: 50%;
   background: var(--bg-primary);
-  border: 2px solid var(--color-primary);
-  color: var(--color-dark);
+  border: 2px solid var(--border-color);
+  color: var(--color-dark-muted);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3574,85 +3652,136 @@ RESPONSIVE
   font-weight: var(--weight-semibold);
   font-size: 15px;
   box-shadow: var(--shadow-sm);
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
-.timeline-step:hover .step-dot {
+.timeline-nav-dot.active .dot-num {
   background: var(--color-primary);
+  border-color: var(--color-primary);
   color: #fff;
   transform: scale(1.1);
   box-shadow: 0 0 15px rgba(212, 140, 144, 0.4);
 }
-.step-label {
+.timeline-nav-dot .dot-lbl {
   margin-top: 10px;
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 11px;
   font-weight: var(--weight-semibold);
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: var(--color-text-light);
   letter-spacing: 1px;
+  transition: color 0.4s ease;
 }
-.step-card {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
-  padding: 22px;
-  box-shadow: var(--shadow-sm);
-  transition: box-shadow 0.4s ease, border-color 0.4s ease, transform 0.4s ease;
-  min-height: 160px;
+.timeline-nav-dot.active .dot-lbl {
+  color: var(--color-accent);
+}
+
+/* Slider de Slides 4:5 */
+.timeline-slider-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.timeline-slider {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  width: 400%; /* 4 slides */
 }
-.timeline-step:hover .step-card {
-  transform: translateY(-5px);
+.timeline-slide {
+  width: 25%;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 50px;
+  align-items: center;
+  padding: 10px 40px;
+  box-sizing: border-box;
+}
+.timeline-slide-img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
   box-shadow: var(--shadow-md);
-  border-color: var(--border-color-hover);
+  background: #eaeaea;
 }
-.step-card h4 {
+.timeline-slide-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.timeline-slide-info {
+  text-align: left;
+}
+.timeline-slide-info h3 {
   font-family: var(--font-serif);
-  font-size: var(--size-h4);
+  font-size: var(--size-h3);
   font-weight: var(--weight-regular);
   color: var(--color-dark);
-  margin: 0 0 8px 0;
+  margin-bottom: 15px;
 }
-.step-card p {
+.timeline-slide-info p {
   font-family: var(--font-sans);
   font-size: var(--size-body-small);
-  line-height: 1.5;
+  line-height: 1.6;
   color: var(--color-dark-muted);
   font-weight: var(--weight-light);
   margin: 0;
 }
 
-@media (max-width: 900px) {
-  .timeline-progress-line {
-    top: 50px;
-    bottom: 50px;
-    left: 42px;
-    width: 2px;
-    height: auto;
-    right: auto;
-  }
-  .timeline-steps {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  .timeline-step {
-    flex-direction: row;
-    align-items: flex-start;
-    text-align: left;
-  }
-  .step-marker-wrapper {
-    margin-bottom: 0;
-    margin-right: 25px;
-    flex-shrink: 0;
-  }
-  .step-card {
-    min-height: auto;
-    flex-grow: 1;
-  }
+/* Flechas de Navegación */
+.timeline-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--border-color);
+  color: var(--color-dark);
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  z-index: 10;
 }
-</style>
+.timeline-arrow:hover {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+.timeline-arrow.prev {
+  left: 10px;
+}
+.timeline-arrow.next {
+  right: 10px;
+}
+
+@media (max-width: 900px) {
+  .timeline-nav-wrapper {
+    padding: 0 10px;
+  }
+  .timeline-nav-line {
+    left: 20px;
+    right: 20px;
+  }
+  .timeline-nav-dot .dot-num {
+    width: 36px;
+    height: 36px;
+    font-size: 13px;
+  }
+  .timeline-slide {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 10px 15px;
+  }
+  .timeline-arrow {
+    display: none;
+  }
+}</style>
 
 <section class="section-wrapper bg-secondary" id="ciencia">
 <div class="grain-overlay"></div>
@@ -5009,6 +5138,180 @@ document.addEventListener("DOMContentLoaded", () => {
   smartVideos.forEach(entry => {
     playObserver.observe(entry.wrapper);
   });
+})();
+</script>
+
+<!-- =============================================
+     JS: RITUAL DE USO ROTATIVO INTERACTIVO Y TIMELINE 30 DÍAS
+============================================= -->
+<script>
+// RITUAL DE USO
+(function() {
+  'use strict';
+  const navItems = document.querySelectorAll('.ritual-nav-item');
+  const imgEl = document.getElementById('ritualImg');
+  const stepNumEl = document.getElementById('ritualStepNum');
+  const titleEl = document.getElementById('ritualTitle');
+  const descEl = document.getElementById('ritualDesc');
+  const progressEl = document.getElementById('timerProgress');
+  
+  if (!navItems.length || !imgEl) return;
+
+  const stepData = [
+    {
+      num: "1",
+      title: "Humedecé",
+      desc: "Pasá el paño bajo el agua tibia. Nada más que eso.",
+      img: "assets/imagenes/p1.webp"
+    },
+    {
+      num: "2",
+      title: "Deslizá",
+      desc: "Masajeá con suavidad. Las microfibras atrapan el maquillaje sin frotar fuerte.",
+      img: "assets/imagenes/p2.webp"
+    },
+    {
+      num: "3",
+      title: "Lavá y reutilizá",
+      desc: "Enjuagalo con jabón neutro, colgalo a secar. Mañana está listo de nuevo.",
+      img: "assets/imagenes/p3.webp"
+    }
+  ];
+
+  let currentIndex = 0;
+  let timer = null;
+  let audioCtx = null;
+
+  function playElegantTick() {
+    try {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(950, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(500, audioCtx.currentTime + 0.12);
+      
+      gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.12);
+      
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.12);
+    } catch(e) {
+      console.log("AudioContext unsupported or blocked:", e);
+    }
+  }
+
+  function showStep(index) {
+    if (index === currentIndex) return;
+    
+    playElegantTick();
+
+    const card = document.getElementById('ritualSlide');
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(8px)';
+
+    setTimeout(() => {
+      currentIndex = index;
+      const data = stepData[index];
+      
+      imgEl.src = data.img;
+      stepNumEl.innerText = data.num;
+      titleEl.innerText = data.title;
+      descEl.innerText = data.desc;
+
+      navItems.forEach((item, idx) => {
+        item.classList.toggle('active', idx === index);
+      });
+
+      card.style.opacity = '1';
+      card.style.transform = 'translateY(0)';
+      
+      resetProgress();
+    }, 350);
+  }
+
+  function resetProgress() {
+    progressEl.style.transition = 'none';
+    progressEl.style.width = '0%';
+    void progressEl.offsetWidth;
+    progressEl.style.transition = 'width 3s linear';
+    progressEl.style.width = '100%';
+  }
+
+  function nextStep() {
+    let nextIdx = (currentIndex + 1) % stepData.length;
+    showStep(nextIdx);
+  }
+
+  function startAutoCycle() {
+    if (timer) clearInterval(timer);
+    resetProgress();
+    timer = setInterval(nextStep, 3000);
+  }
+
+  navItems.forEach((item, idx) => {
+    item.addEventListener('click', () => {
+      showStep(idx);
+      startAutoCycle();
+    });
+  });
+
+  startAutoCycle();
+})();
+
+// TIMELINE 30 DÍAS INTERACTIVO
+(function() {
+  'use strict';
+  const slider = document.getElementById('timelineSlider');
+  const navDots = document.querySelectorAll('.timeline-nav-dot');
+  const progressBar = document.getElementById('timelineProgress');
+  const prevBtn = document.getElementById('timelinePrev');
+  const nextBtn = document.getElementById('timelineNext');
+  
+  if (!slider || !navDots.length || !progressBar) return;
+
+  let currentIndex = 0;
+  const totalSlides = navDots.length;
+
+  function updateTimeline(index) {
+    currentIndex = index;
+    slider.style.transform = `translateX(-${index * 25}%)`;
+
+    navDots.forEach((dot, idx) => {
+      dot.classList.toggle('active', idx === index);
+    });
+
+    const progressPercent = (index / (totalSlides - 1)) * 100;
+    progressBar.style.width = `${progressPercent}%`;
+  }
+
+  navDots.forEach((dot, idx) => {
+    dot.addEventListener('click', () => {
+      updateTimeline(idx);
+    });
+  });
+
+  if (prevBtn && nextBtn) {
+    prevBtn.addEventListener('click', () => {
+      let prevIdx = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateTimeline(prevIdx);
+    });
+    nextBtn.addEventListener('click', () => {
+      let nextIdx = (currentIndex + 1) % totalSlides;
+      updateTimeline(nextIdx);
+    });
+  }
+
+  updateTimeline(0);
 })();
 </script>
 
