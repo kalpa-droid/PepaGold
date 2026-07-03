@@ -2759,6 +2759,9 @@ RESPONSIVE
         <div class="ugc-overlay">
           <span class="ugc-label">Abriendo el set</span>
         </div>
+        <button class="ugc-fullscreen-btn" title="Pantalla completa">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+        </button>
       </div>
       <!-- Video 2 -->
       <div class="ugc-card">
@@ -2766,6 +2769,9 @@ RESPONSIVE
         <div class="ugc-overlay">
           <span class="ugc-label">Textura UpPoly</span>
         </div>
+        <button class="ugc-fullscreen-btn" title="Pantalla completa">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+        </button>
       </div>
       <!-- Video 3 -->
       <div class="ugc-card">
@@ -2773,6 +2779,9 @@ RESPONSIVE
         <div class="ugc-overlay">
           <span class="ugc-label">Desmaquillado rápido</span>
         </div>
+        <button class="ugc-fullscreen-btn" title="Pantalla completa">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+        </button>
       </div>
       <!-- Video 4 -->
       <div class="ugc-card">
@@ -2780,6 +2789,9 @@ RESPONSIVE
         <div class="ugc-overlay">
           <span class="ugc-label">Limpieza profunda</span>
         </div>
+        <button class="ugc-fullscreen-btn" title="Pantalla completa">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+        </button>
       </div>
       <!-- Video 5 -->
       <div class="ugc-card">
@@ -2787,6 +2799,9 @@ RESPONSIVE
         <div class="ugc-overlay">
           <span class="ugc-label">Primeras impresiones</span>
         </div>
+        <button class="ugc-fullscreen-btn" title="Pantalla completa">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+        </button>
       </div>
       <!-- Video 6 -->
       <div class="ugc-card">
@@ -2794,6 +2809,9 @@ RESPONSIVE
         <div class="ugc-overlay">
           <span class="ugc-label">Mi rutina nocturna</span>
         </div>
+        <button class="ugc-fullscreen-btn" title="Pantalla completa">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+        </button>
       </div>
     </div>
   </div>
@@ -2882,6 +2900,38 @@ RESPONSIVE
   border-radius: 24px;
   opacity: 0.95;
   transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+.ugc-fullscreen-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 15;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.ugc-card:hover .ugc-fullscreen-btn,
+.ugc-card.is-focused .ugc-fullscreen-btn {
+  opacity: 1;
+  transform: scale(1);
+}
+.ugc-fullscreen-btn:hover {
+  background: rgba(255, 255, 255, 0.45);
+  color: var(--color-primary);
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
 .ugc-card:hover {
@@ -3013,23 +3063,24 @@ RESPONSIVE
   const track  = document.getElementById('ugcTrack');
   if (!slider || !track) return;
 
-  // Duplicamos el track para marquesina infinita
+  // Duplicamos el track para marquesina infinita si no está duplicado
   if (!track.dataset.duped) {
     track.innerHTML += track.innerHTML;
     track.dataset.duped = '1';
   }
 
   let pos = 0;                  
-  let speed = 50; // Velocidad de la marquesina
+  const speed = 50; // Velocidad de la marquesina
   let last = performance.now();
   
-  let paused = false;          // Pausa general del loop (por hover o foco central)
-  let manualPaused = false;    // Pausa manual forzada (Hold to Play)
+  let paused = false;          // Pausa del movimiento automático
+  let manualPaused = false;    // Pausa por hover o touch
   let halfWidth = 0;
   
-  let focusedCard = null;      // Tarjeta de video que está enfocada actualmente en el centro
-  let focusTimeout = null;     // Timeout de reproducción de 2 segundos
-  let cooldown = false;        // Cooldown para no disparar el foco repetidamente en el mismo video
+  let focusedCard = null;      // Tarjeta actualmente enfocada en el centro
+  let focusTimeout = null;     // Timeout de los 10 segundos
+  let transitionTimeout = null;// Timeout para la transición de desplazamiento
+  let cooldown = false;        // Cooldown para evitar re-focos rápidos
 
   document.addEventListener('visibilitychange', () => { last = performance.now(); });
 
@@ -3040,9 +3091,8 @@ RESPONSIVE
   const videos = track.querySelectorAll('video');
   let pending = videos.length;
   
-  // Garantizar volumen del 0.7 para cuando se toquen
   videos.forEach(vid => {
-    vid.muted = true; // Por defecto corre silencioso
+    vid.muted = true;
     vid.playsInline = true;
   });
 
@@ -3061,62 +3111,165 @@ RESPONSIVE
 
   window.addEventListener('resize', measure);
 
-  // INTERACCIÓN MANUAL: Hold to Play (Tocar y mantener presionado)
-  const cards = track.querySelectorAll('.ugc-card');
+  const cards = Array.from(track.querySelectorAll('.ugc-card'));
+
+  // Transición suave al siguiente video
+  function scrollToNextCard() {
+    if (manualPaused) return; // No auto-scroll si el usuario tiene el cursor encima
+    
+    let currentIndex = cards.indexOf(focusedCard);
+    let nextIndex = currentIndex + 1;
+
+    // Si llegamos al final del carrusel duplicado, saltamos instantáneamente a la primera mitad para mantener el ciclo infinito
+    if (nextIndex >= cards.length) {
+      currentIndex = 5;
+      nextIndex = 6;
+      pos += halfWidth;
+      track.style.transition = 'none';
+      track.style.transform = `translateX(${pos}px)`;
+      // Forzar reflow para que el salto instantáneo se registre antes de la animación
+      track.offsetHeight; 
+    }
+
+    const nextCard = cards[nextIndex];
+    const targetPos = (slider.offsetWidth / 2) - (nextCard.offsetLeft + nextCard.offsetWidth / 2);
+
+    // Animamos suavemente hasta centrar el siguiente video
+    track.style.transition = 'transform 1.0s cubic-bezier(0.25, 1, 0.5, 1)';
+    track.style.transform = `translateX(${targetPos}px)`;
+    pos = targetPos;
+
+    transitionTimeout = setTimeout(() => {
+      track.style.transition = 'none';
+      focusedCard = nextCard;
+      
+      // Añadimos clase visual de foco
+      cards.forEach(c => c.classList.remove('is-focused'));
+      focusedCard.classList.add('is-focused');
+
+      const activeVideo = focusedCard.querySelector('video');
+      if (activeVideo && !manualPaused) {
+        videos.forEach(v => {
+          if (v !== activeVideo) v.pause();
+        });
+        activeVideo.muted = true;
+        activeVideo.play().then(() => {
+          focusTimeout = setTimeout(() => {
+            if (!manualPaused) {
+              activeVideo.pause();
+              scrollToNextCard();
+            }
+          }, 10000);
+        }).catch(() => {
+          scrollToNextCard();
+        });
+      } else {
+        scrollToNextCard();
+      }
+    }, 1000);
+  }
+
+  // Interacciones por Hover/Touch en cada tarjeta individual
   cards.forEach(card => {
     const video = card.querySelector('video');
     if (!video) return;
 
-    // Al presionar/tocar (manual)
-    const startManualPlay = (e) => {
+    const startManualFocus = (e) => {
+      // Evitamos propagación para clics y toques
       e.stopPropagation();
+
+      // Cancelamos timeouts automáticos activos
       if (focusTimeout) {
         clearTimeout(focusTimeout);
         focusTimeout = null;
       }
+      if (transitionTimeout) {
+        clearTimeout(transitionTimeout);
+        transitionTimeout = null;
+      }
+
       manualPaused = true;
       paused = true;
-      
-      // Apaga todos los otros videos antes de prender este
-      videos.forEach(v => {
-        if (v !== video) {
-          v.pause();
-        }
-      });
+      track.style.transition = 'none';
 
-      video.muted = false; // Se escucha el audio en hold manual
-      video.play().catch(err => {
-        video.muted = true; // Si bloquea, try muted
+      // Añadimos clase visual de foco a esta tarjeta y limpiamos las demás
+      cards.forEach(c => c.classList.remove('is-focused'));
+      card.classList.add('is-focused');
+
+      // Reproducir video actual con sonido y en bucle continuo (loop)
+      videos.forEach(v => {
+        if (v !== video) v.pause();
+      });
+      video.loop = true;
+      video.muted = false; // Permitimos audio en reproducción manual
+      video.play().catch(() => {
+        video.muted = true; // Fallback silencioso si el navegador bloquea
         video.play();
       });
     };
 
-    // Al soltar/dejar de tocar (manual)
-    const stopManualPlay = () => {
+    const stopManualFocus = () => {
       if (manualPaused) {
-        video.pause();
+        video.loop = true; // Por defecto los videos son loop en HTML
         video.muted = true;
         manualPaused = false;
         paused = false;
-        cooldown = true;
-        setTimeout(() => { cooldown = false; }, 1500); // 1.5s de cooldown al soltar
+
+        // Centramos la tarjeta sobre la que dejamos de hacer hover/touch y reanudamos el ciclo de 10s
+        focusedCard = card;
+        const targetPos = (slider.offsetWidth / 2) - (card.offsetLeft + card.offsetWidth / 2);
+        track.style.transition = 'transform 0.5s ease-out';
+        track.style.transform = `translateX(${targetPos}px)`;
+        pos = targetPos;
+
+        setTimeout(() => {
+          track.style.transition = 'none';
+          if (!manualPaused) {
+            video.play().then(() => {
+              focusTimeout = setTimeout(() => {
+                if (!manualPaused) {
+                  video.pause();
+                  scrollToNextCard();
+                }
+              }, 10000);
+            });
+          }
+        }, 500);
       }
     };
 
-    card.addEventListener('mousedown', startManualPlay);
-    card.addEventListener('mouseup', stopManualPlay);
-    card.addEventListener('mouseleave', stopManualPlay);
-    
-    card.addEventListener('touchstart', startManualPlay, { passive: false });
-    card.addEventListener('touchend', stopManualPlay);
-    card.addEventListener('touchcancel', stopManualPlay);
+    // Eventos de Mouse
+    card.addEventListener('mouseenter', startManualFocus);
+    card.addEventListener('mouseleave', stopManualFocus);
+
+    // Eventos de Toque (para móviles y tabletas)
+    card.addEventListener('touchstart', startManualFocus, { passive: true });
+    card.addEventListener('touchend', stopManualFocus);
+    card.addEventListener('touchcancel', stopManualFocus);
   });
 
-  // Pausa por hover clásico
-  slider.addEventListener('mouseenter', () => { if (!manualPaused) paused = true; });
-  slider.addEventListener('mouseleave', () => { if (!manualPaused) paused = false; });
+  // Delegación de clic para el botón de pantalla completa (Fullscreen)
+  track.addEventListener('click', (e) => {
+    const btn = e.target.closest('.ugc-fullscreen-btn');
+    if (btn) {
+      e.stopPropagation();
+      const card = btn.closest('.ugc-card');
+      const video = card.querySelector('video');
+      if (video) {
+        if (video.requestFullscreen) {
+          video.requestFullscreen();
+        } else if (video.webkitRequestFullscreen) {
+          video.webkitRequestFullscreen();
+        } else if (video.mozRequestFullScreen) {
+          video.mozRequestFullScreen();
+        } else if (video.msRequestFullscreen) {
+          video.msRequestFullscreen();
+        }
+      }
+    }
+  });
 
-  // FUNCIÓN PRINCIPAL DE LA MARQUESINA (LOOP DE ANIMACIÓN)
+  // Loop principal de animación (solo corre cuando no está en pausa y no hay hover)
   function loop(now) {
     const dt = (now - last) / 1000;
     last = now;
@@ -3130,14 +3283,13 @@ RESPONSIVE
 
       track.style.transform = `translateX(${pos}px)`;
 
-      // DETECTOR DE FOCO EN EL CENTRO
+      // Detectamos si el video que se aproxima al centro de la pantalla debe tomar el foco
       const sliderRect = slider.getBoundingClientRect();
       const sliderCenterX = sliderRect.left + sliderRect.width / 2;
 
       let closestCard = null;
       let minDistance = Infinity;
 
-      // Medimos distancias para encontrar el video del centro
       cards.forEach(card => {
         const cardRect = card.getBoundingClientRect();
         const cardCenterX = cardRect.left + cardRect.width / 2;
@@ -3148,33 +3300,36 @@ RESPONSIVE
         }
       });
 
-      // Si el video más cercano está exactamente en el centro (margen de 20px)
+      // Si la tarjeta está a menos de 20px del centro, detenemos la marquesina y jugamos los 10 segundos
       if (minDistance < 20 && closestCard !== focusedCard && !cooldown) {
         focusedCard = closestCard;
         const activeVideo = closestCard.querySelector('video');
         
         if (activeVideo) {
-          paused = true; // Detenemos la marquesina
+          paused = true;
           
-          // Silenciamos los demás videos y pausamos
+          // Alinear exactamente al centro
+          const targetPos = (slider.offsetWidth / 2) - (focusedCard.offsetLeft + focusedCard.offsetWidth / 2);
+          track.style.transform = `translateX(${targetPos}px)`;
+          pos = targetPos;
+
+          // Añadimos clase visual de foco
+          cards.forEach(c => c.classList.remove('is-focused'));
+          focusedCard.classList.add('is-focused');
+
           videos.forEach(v => {
-            if (v !== activeVideo) {
-              v.pause();
-            }
+            if (v !== activeVideo) v.pause();
           });
 
-          // Reproduce el video silenciado durante 10 segundos
           activeVideo.muted = true;
           activeVideo.play().then(() => {
             focusTimeout = setTimeout(() => {
-              activeVideo.pause();
-              paused = false; // Reanudar marquesina
-              cooldown = true;
-              // Esperar a que se aleje del centro antes de poder enfocar otro
-              setTimeout(() => { cooldown = false; }, 1800);
+              if (!manualPaused) {
+                activeVideo.pause();
+                scrollToNextCard();
+              }
             }, 10000);
           }).catch(() => {
-            // Si bloquea autoplay
             paused = false;
           });
         }
