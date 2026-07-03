@@ -16,6 +16,7 @@
 <title>Laska Mini Set | Limpieza facial sin químicos — Greenway</title>
 <meta content="Set reutilizable de microfibra UpPoly para limpiar rostro, cuello y escote solo con agua. Sin químicos. Dura hasta 2 años." name="description"/>
 <link rel="canonical" href="https://pepagold.com.ar/" />
+<link rel="icon" type="image/svg+xml" href="assets/imagenes/icono.svg" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
 
 <!-- Open Graph / Facebook -->
@@ -48,6 +49,162 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <style>
+/* Estilos del Logo Flotante y Selector de Idiomas */
+.floating-droplet {
+  position: fixed;
+  top: 65px;
+  left: 20px;
+  width: 56px;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 140, 144, 0.3);
+  border-radius: 0 50% 50% 50%;
+  transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(42, 37, 35, 0.08);
+  z-index: 1000;
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.floating-droplet:hover {
+  transform: rotate(45deg) scale(1.08);
+  box-shadow: 0 12px 30px rgba(212, 140, 144, 0.25);
+  border-color: var(--color-primary);
+}
+.floating-droplet img {
+  width: 28px;
+  height: 28px;
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease;
+}
+
+/* Selector de idiomas flotante (al principio de la página, absoluto) */
+.lang-selector-container {
+  position: absolute;
+  top: 55px;
+  right: 20px;
+  z-index: 1000;
+  font-family: var(--font-sans);
+}
+.lang-selector-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 140, 144, 0.25);
+  color: var(--color-text-dark);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: var(--weight-medium);
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(42, 37, 35, 0.04);
+  transition: all 0.3s ease;
+}
+.lang-selector-btn:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 6px 16px rgba(212, 140, 144, 0.15);
+  transform: translateY(-1px);
+}
+.lang-selector-btn .arrow-icon {
+  font-size: 9px;
+  color: var(--color-primary);
+  transition: transform 0.3s ease;
+}
+.lang-selector-container.is-active .lang-selector-btn .arrow-icon {
+  transform: rotate(180deg);
+}
+.lang-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 170px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 140, 144, 0.2);
+  border-radius: 12px;
+  padding: 8px 0;
+  margin: 0;
+  list-style: none;
+  box-shadow: 0 10px 30px rgba(42, 37, 35, 0.08);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  max-height: 320px;
+  overflow-y: auto;
+}
+.lang-selector-container.is-active .lang-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.lang-option {
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: var(--weight-light);
+  color: var(--color-text-dark);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.lang-option:hover {
+  background: rgba(212, 140, 144, 0.08);
+  color: var(--color-primary-hover);
+  font-weight: var(--weight-medium);
+}
+.lang-option.is-selected {
+  background: rgba(212, 140, 144, 0.12);
+  color: var(--color-primary);
+  font-weight: var(--weight-semibold);
+}
+
+/* Scrollbar personalizado para el menú de idiomas */
+.lang-dropdown-menu::-webkit-scrollbar {
+  width: 4px;
+}
+.lang-dropdown-menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+.lang-dropdown-menu::-webkit-scrollbar-thumb {
+  background: rgba(212, 140, 144, 0.3);
+  border-radius: 10px;
+}
+.lang-dropdown-menu::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+@media (max-width: 600px) {
+  .floating-droplet {
+    top: 65px;
+    left: 12px;
+    width: 46px;
+    height: 46px;
+  }
+  .floating-droplet img {
+    width: 22px;
+    height: 22px;
+  }
+  .lang-selector-container {
+    top: 65px;
+    right: 12px;
+  }
+  .lang-selector-btn {
+    padding: 5px 11px;
+    font-size: 12px;
+  }
+}
+
       :root {
         /* Font Families */
         --font-serif: Georgia, "Times New Roman", serif;
@@ -250,6 +407,32 @@
 </script>
 </head>
 <body>
+
+<!-- Gota de agua del logo flotante -->
+<div class="floating-droplet" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="PepaGold">
+  <img src="assets/imagenes/icono.svg" alt="PepaGold Icon" />
+</div>
+
+<!-- Selector de idiomas flotante (estilo cápsula, al principio de la página) -->
+<div class="lang-selector-container">
+  <button class="lang-selector-btn" id="langSelectorBtn" aria-expanded="false" aria-haspopup="listbox">
+    <span class="active-flag">🌐</span>
+    <span class="active-lang-code">ES</span>
+    <span class="arrow-icon">▼</span>
+  </button>
+  <ul class="lang-dropdown-menu" id="langDropdownMenu" role="listbox">
+    <li class="lang-option" data-lang="es-ar" role="option">🇦🇷 Español (AR)</li>
+    <li class="lang-option" data-lang="es-mx" role="option">🇲🇽 Español (MX)</li>
+    <li class="lang-option" data-lang="es-es" role="option">🇪🇸 Español (ES)</li>
+    <li class="lang-option" data-lang="en" role="option">🇺🇸 English</li>
+    <li class="lang-option" data-lang="fr" role="option">🇫🇷 Français</li>
+    <li class="lang-option" data-lang="de" role="option">🇩🇪 Deutsch</li>
+    <li class="lang-option" data-lang="it" role="option">🇮🇹 Italiano</li>
+    <li class="lang-option" data-lang="pt-br" role="option">🇧🇷 Português</li>
+    <li class="lang-option" data-lang="ru" role="option">🇷🇺 Русский</li>
+  </ul>
+</div>
+
 <div class="top-banner-marquee">
 <div class="marquee-track">
 <div class="marquee-content">
@@ -409,7 +592,7 @@
       <div class="cta-icon">✨</div>
       <div class="cta-title"><span class="notranslate" translate="no">Laska Mini Set</span></div>
     </div>
-    <p class="cta-desc" data-i18n="desc">
+    <p class="cta-desc" data-i18n="desc_tpl">
       Tres piezas de microfibra que eliminan el maquillaje, la grasa y la suciedad del día usando solo agua tibia. Reemplazan los discos de algodón, el agua micelar y el desmaquillante. Duran hasta 2 años. Una compra, cero residuos. Piel limpia, suave y radiante por solo <strong>$58.200 ARS</strong>.
     </p>
   </div>
@@ -913,84 +1096,7 @@
   }
 }
 </style>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const translations = {
-    "es": { 
-      "row1_t1": "<span class='brand-badge'>CARE SET</span><br><span class='notranslate' translate='no'>Laska Mini Set</span>",
-      "row1_t2": "Limpieza de la piel<br>del rostro, cuello<br>y escote",
-      "headline": "Desmaquillate.<br/>Solo con agua.<br/>Nada más.",
-      "subhead": "El set que reemplaza<br/>todo lo demás.",
-      "desc": "Tres piezas de microfibra que eliminan el maquillaje, la grasa y la suciedad del día usando solo agua tibia. Reemplazan los discos de algodón, el agua micelar y el desmaquillante. Duran hasta 2 años. Una compra, cero residuos. Piel limpia, suave y radiante por solo <strong>$58.200 ARS</strong>.",
-      "btn": "COMPRAR AHORA &rarr;",
-      "rating": "Primeras compradoras verificadas: 4.9/5"
-    },
-    "en": { 
-      "row1_t1": "<span class='brand-badge'>CARE SET</span><br><span class='notranslate' translate='no'>Laska Mini Set</span>",
-      "row1_t2": "Skin cleansing for<br>face, neck, and<br>décolleté",
-      "headline": "Remove makeup.<br/>With water only.<br/>Nothing else.",
-      "subhead": "The set that replaces<br/>everything else.",
-      "desc": "Three microfiber pieces that remove makeup, sebum, and daily dirt using only warm water. They replace cotton pads, micellar water, and makeup remover. Last up to 2 years. One purchase, zero waste. Clean, soft, and radiant skin for only <strong>$49.00 USD</strong>.",
-      "btn": "SHOP NOW &rarr;",
-      "rating": "First verified buyers: 4.9/5"
-    },
-    "fr": { 
-      "row1_t1": "<span class='brand-badge'>COFFRET SOIN</span><br>Laska Mini Set",
-      "row1_t2": "Nettoyage de la peau<br>du visage, du cou<br>et du décolleté",
-      "headline": "Démaquillez-vous<br>uniquement à l'eau",
-      "subhead": "Une peau fraîche et<br>éclatante chaque jour",
-      "desc": "3 accessoires réutilisables qui nettoient votre visage, cou et décolleté sans produits chimiques, sans irritation ni dépenses inutiles. Humidifiez, glissez et le tour est joué. Une peau propre, douce et éclatante pour seulement <strong>$28.500 ARS</strong>.",
-      "btn": "ACHETER MAINTENANT &rarr;",
-      "rating": "4.9 / 5 (+20.000 avis globaux)"
-    },
-    "de": { 
-      "row1_t1": "<span class='brand-badge'>PFLEGESET</span><br>Laska Mini Set",
-      "row1_t2": "Hautreinigung für<br>Gesicht, Hals<br>und Dekolleté",
-      "headline": "Abschminken<br>nur mit Wasser",
-      "subhead": "Jeden Tag frische<br>und strahlende Haut",
-      "desc": "3 wiederverwendbare Accessoires, die Ihr Gesicht, Ihren Hals und Ihr Dekolleté ohne Chemie, Reizungen oder zusätzliche Ausgaben reinigen. Einfach anfeuchten, sanft gleiten lassen und fertig. Saubere, weiche und strahlende Haut für nur <strong>$28.500 ARS</strong>.",
-      "btn": "JETZT KAUFEN &rarr;",
-      "rating": "4.9 / 5 (+20.000 globale Bewertungen)"
-    },
-    "it": { 
-      "row1_t1": "<span class='brand-badge'>SET CURA</span><br>Laska Mini Set",
-      "row1_t2": "Detersione della pelle<br>del viso, collo<br>e décolleté",
-      "headline": "Stuccati<br>solo con acqua",
-      "subhead": "Pelle fresca e<br>luminosa ogni giorno",
-      "desc": "3 accessori riutilizzabili che detergono il viso, il collo e il décolleté senza sostanze chimiche, irritazioni o spese inutili. Bagna, scorri e via. Pelle pulita, morbida e radiosa a soli <strong>$28.500 ARS</strong>.",
-      "btn": "ACQUISTA ORA &rarr;",
-      "rating": "4.9 / 5 (+20.000 recensioni globali)"
-    },
-    "pt": { 
-      "row1_t1": "<span class='brand-badge'>KIT DE CUIDADO</span><br>Laska Mini Set",
-      "row1_t2": "Limpeza da pele<br>do rosto, pescoço<br>e decote",
-      "headline": "Desmaquilhe-se<br>apenas com água",
-      "subhead": "Pele fresca e<br>radiante todos os dias",
-      "desc": "3 acessórios reutilizáveis que limpam o seu rosto, pescoço e decote sem produtos químicos, irritações ou gastos desnecessários. Molhe, deslize e pronto. Pele limpa, macia e radiante por apenas <strong>$28.500 ARS</strong>.",
-      "btn": "COMPRAR AGORA &rarr;",
-      "rating": "4.9 / 5 (+20.000 avaliações globais)"
-    }
-  };
 
-  const userLangFull = navigator.language || navigator.userLanguage;
-  let langCode = userLangFull.toLowerCase().substring(0, 2);
-
-  if (!translations[langCode]) {
-    langCode = "en"; 
-  }
-
-  if (langCode !== "es") {
-    const textsToTranslate = document.querySelectorAll("[data-i18n]");
-    
-    textsToTranslate.forEach(element => {
-      const key = element.getAttribute("data-i18n");
-      if (translations[langCode][key]) {
-        element.innerHTML = translations[langCode][key];
-      }
-    });
-  }
-});
-</script>
 <style>
 /* =============================================
    SECCIONES COMPARTIDAS — Warm Minimalist
@@ -2161,6 +2267,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 </div>
 </div>
+</div>
 <style>
 /*=========================
 SECCIÓN VIDEO SHOWCASE
@@ -3056,7 +3163,7 @@ RESPONSIVE
             }
           });
 
-          // Reproduce el video silenciado durante 5 segundos
+          // Reproduce el video silenciado durante 10 segundos
           activeVideo.muted = true;
           activeVideo.play().then(() => {
             focusTimeout = setTimeout(() => {
@@ -3065,7 +3172,7 @@ RESPONSIVE
               cooldown = true;
               // Esperar a que se aleje del centro antes de poder enfocar otro
               setTimeout(() => { cooldown = false; }, 1800);
-            }, 5000);
+            }, 10000);
           }).catch(() => {
             // Si bloquea autoplay
             paused = false;
@@ -4649,14 +4756,14 @@ document.addEventListener('DOMContentLoaded', () => {
         
         <div class="about-cards-grid">
             <div class="about-card">
-                <h4 class="about-card-title" data-i18n="about_contact_title">Contacto Directo</h4>
+                <h4 class="about-card-title" data-i18n="about_c1">Contacto Directo</h4>
                 <p class="about-card-text"><strong>Email:</strong> soporte@pepagold.com.ar</p>
                 <p class="about-card-text"><strong>WhatsApp:</strong> +54 9 11 1234-5678</p>
                 <p class="about-card-text"><strong>Horario:</strong> Lun-Vie 9:00 a 18:00 hrs</p>
             </div>
             
             <div class="about-card">
-                <h4 class="about-card-title" data-i18n="about_address_title">Identidad Corporativa</h4>
+                <h4 class="about-card-title" data-i18n="about_c2">Identidad Corporativa</h4>
                 <p class="about-card-text"><strong class="notranslate" translate="no">PepaGold</strong> - Representante Autorizado <strong class="notranslate" translate="no">Greenway Global</strong></p>
                 <p class="about-card-text"><strong>Sede Central:</strong> Av. del Libertador 1000, Buenos Aires, Argentina</p>
                 <p class="about-card-text"><strong>CUIT:</strong> 30-71123456-8</p>
@@ -4740,7 +4847,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="footer-container">
     <div class="footer-top-grid" style="display:flex; flex-wrap:wrap; justify-content:space-between; text-align:left; gap:2rem; margin-bottom:40px;">
         <div class="footer-brand" style="flex:1; min-width:250px;">
-            <span class="footer-logo notranslate" translate="no" style="text-align:left;">GREENWAY GLOBAL</span>
+            <img src="assets/imagenes/logo.svg" alt="PepaGold Logo" class="footer-logo-img" style="height: 38px; display: block; margin-bottom: 15px;" />
             <p class="footer-tagline" style="text-align:left; max-width:300px;">Tecnología en microfibra para el cuidado de tu piel. Transición ecológica para un consumo consciente.</p>
         </div>
         
@@ -4811,8 +4918,22 @@ document.addEventListener('DOMContentLoaded', () => {
     "MX": { price: "890", priceOld: "1.190", symbol: "$", currency: "MXN", domain: "greenwayglobal.mx" }
   };
 
+  const countryCurrencyMap = {
+    "AR": { currency: "ARS", symbol: "$" },
+    "US": { currency: "USD", symbol: "$" },
+    "MX": { currency: "MXN", symbol: "$" },
+    "ES": { currency: "EUR", symbol: "€" },
+    "FR": { currency: "EUR", symbol: "€" },
+    "DE": { currency: "EUR", symbol: "€" },
+    "IT": { currency: "EUR", symbol: "€" },
+    "PT": { currency: "EUR", symbol: "€" },
+    "RU": { currency: "RUB", symbol: "₽" }
+  };
+
   const defaultGeo = { country: "US", currency: "USD", currencySymbol: "$" };
   let detectedGeo = { ...defaultGeo };
+  let exchangeRates = null;
+  let currentPriceStr = "";
 
   // 1. Detectar País y Moneda vía IP
   try {
@@ -4829,80 +4950,231 @@ document.addEventListener('DOMContentLoaded', () => {
     console.warn("Geolocalización bloqueada o fallida, usando fallback: US.", e);
   }
 
-  // 2. Determinar precio y tasa de cambio
-  let priceStr = "";
-  let priceOldStr = "";
-  let domainToUse = "greenwayglobal.com";
-  let targetCurrency = detectedGeo.currency;
-  let targetSymbol = detectedGeo.currencySymbol;
-
-  const euroCountries = ["AT", "BE", "CY", "EE", "FI", "FR", "DE", "GR", "IE", "IT", "LV", "LT", "LU", "MT", "NL", "PT", "SK", "SI", "ES"];
-
-  // Revisar si tenemos precio oficial fijo
-  let geoKey = detectedGeo.country;
-  if (euroCountries.includes(detectedGeo.country)) {
-    geoKey = "ES"; // Mapear a euros/mygreenway.eu
+  // Cargar tasas de cambio una sola vez al inicio para optimizar cambios de idioma futuros
+  try {
+    const ratesResponse = await fetch('https://open.er-api.com/v6/latest/USD');
+    if (ratesResponse.ok) {
+      const ratesData = await ratesResponse.json();
+      if (ratesData.rates) {
+        exchangeRates = ratesData.rates;
+      }
+    }
+  } catch (e) {
+    console.warn("No se pudieron cargar las tasas de cambio de divisas.", e);
   }
 
-  if (officialPrices[geoKey]) {
-    const config = officialPrices[geoKey];
-    priceStr = `${config.symbol}${config.price} ${config.currency}`;
-    priceOldStr = `${config.symbol}${config.priceOld} ${config.currency}`;
-    domainToUse = config.domain;
-  } else {
-    // Si no es un país con precio oficial, hacemos conversión dinámica desde 49 USD
-    let rate = 1;
+  // 2. Función global para actualizar precios, links de compra y geobadge
+  window.updatePagePrices = async function(countryCode) {
+    const code = countryCode.toUpperCase();
+    let priceStr = "";
+    let priceOldStr = "";
+    let domainToUse = "greenwayglobal.com";
+    let targetCurrency = detectedGeo.currency || "USD";
+    let targetSymbol = detectedGeo.currencySymbol || "$";
+
+    if (countryCurrencyMap[code]) {
+      targetCurrency = countryCurrencyMap[code].currency;
+      targetSymbol = countryCurrencyMap[code].symbol;
+    }
+
+    const euroCountries = ["AT", "BE", "CY", "EE", "FI", "FR", "DE", "GR", "IE", "IT", "LV", "LT", "LU", "MT", "NL", "PT", "SK", "SI", "ES"];
+    let geoKey = code;
+    if (euroCountries.includes(code)) {
+      geoKey = "ES";
+    }
+
+    if (officialPrices[geoKey]) {
+      const config = officialPrices[geoKey];
+      priceStr = `${config.symbol}${config.price} ${config.currency}`;
+      priceOldStr = `${config.symbol}${config.priceOld} ${config.currency}`;
+      domainToUse = config.domain;
+      targetCurrency = config.currency;
+      targetSymbol = config.symbol;
+    } else {
+      let rate = 1;
+      if (exchangeRates && exchangeRates[targetCurrency]) {
+        rate = exchangeRates[targetCurrency];
+      }
+      
+      const calculatedPrice = 49 * rate;
+      const calculatedPriceOld = 65 * rate;
+
+      let roundedPrice = Math.round(calculatedPrice);
+      let roundedPriceOld = Math.round(calculatedPriceOld);
+
+      if (calculatedPrice > 5000) {
+        roundedPrice = Math.round(calculatedPrice / 1000) * 1000;
+        roundedPriceOld = Math.round(calculatedPriceOld / 1000) * 1000;
+        priceStr = `~ ${targetSymbol}${roundedPrice.toLocaleString()} ${targetCurrency}`;
+        priceOldStr = `~ ${targetSymbol}${roundedPriceOld.toLocaleString()} ${targetCurrency}`;
+      } else if (calculatedPrice > 100) {
+        roundedPrice = Math.round(calculatedPrice / 10) * 10;
+        roundedPriceOld = Math.round(calculatedPriceOld / 10) * 10;
+        priceStr = `~ ${targetSymbol}${roundedPrice.toLocaleString()} ${targetCurrency}`;
+        priceOldStr = `~ ${targetSymbol}${roundedPriceOld.toLocaleString()} ${targetCurrency}`;
+      } else {
+        priceStr = `~ ${targetSymbol}${calculatedPrice.toFixed(2)} ${targetCurrency}`;
+        priceOldStr = `~ ${targetSymbol}${calculatedPriceOld.toFixed(2)} ${targetCurrency}`;
+      }
+    }
+
+    currentPriceStr = priceStr;
+
+    // Actualizar precios en el DOM
+    const oldPriceEl = document.querySelector('.price-old');
+    const newPriceEl = document.querySelector('.price-new');
+    if (oldPriceEl) oldPriceEl.innerText = priceOldStr;
+    if (newPriceEl) newPriceEl.innerText = priceStr;
+
+    // Actualizar todos los enlaces de compra de Greenway Global
+    const buyLinks = document.querySelectorAll('a[href*="greenway"]');
+    buyLinks.forEach(link => {
+      try {
+        const url = new URL(link.href);
+        url.hostname = domainToUse;
+        link.href = url.toString();
+      } catch (e) {
+        link.href = `https://${domainToUse}/shop/brands/fiber/08093?gw=uZv7Gi0Ep5`;
+      }
+    });
+
+    // Actualizar Badge de Moneda
+    const priceBlock = document.querySelector('.price-block');
+    if (priceBlock) {
+      let geoBadge = priceBlock.querySelector('.geo-badge');
+      if (!geoBadge) {
+        geoBadge = document.createElement('div');
+        geoBadge.className = 'geo-badge';
+        geoBadge.style.fontSize = '12px';
+        geoBadge.style.color = 'var(--color-primary)';
+        geoBadge.style.marginTop = '4px';
+        geoBadge.style.fontStyle = 'italic';
+        priceBlock.appendChild(geoBadge);
+      }
+      const countryNames = {
+        "AR": "Argentina", "MX": "México", "CO": "Colombia", "CL": "Chile",
+        "PE": "Perú", "US": "Estados Unidos", "ES": "España", "FR": "Francia",
+        "DE": "Alemania", "IT": "Italia", "PT": "Portugal", "BR": "Brasil", "RU": "Rusia"
+      };
+      const cName = countryNames[code] || code;
+      geoBadge.innerHTML = `🌍 Moneda detectada para ${cName}: <strong>${targetCurrency}</strong>`;
+    }
+
+    // Actualizar Schema JSON-LD
     try {
-      const ratesResponse = await fetch('https://open.er-api.com/v6/latest/USD');
-      if (ratesResponse.ok) {
-        const ratesData = await ratesResponse.json();
-        if (ratesData.rates && ratesData.rates[detectedGeo.currency]) {
-          rate = ratesData.rates[detectedGeo.currency];
+      const jsonLdScript = document.querySelector('script[type="application/ld+json"]');
+      if (jsonLdScript) {
+        const schemas = JSON.parse(jsonLdScript.innerHTML);
+        const productSchema = Array.isArray(schemas) ? schemas[0] : schemas;
+        if (productSchema && productSchema.offers) {
+          const numericPrice = parseFloat(priceStr.replace(/[^0-9.]/g, '').replace('.', ''));
+          productSchema.offers.price = numericPrice ? numericPrice.toString() : "58200";
+          productSchema.offers.priceCurrency = targetCurrency;
+          productSchema.offers.url = window.location.href;
+          jsonLdScript.innerHTML = JSON.stringify(schemas, null, 2);
         }
       }
     } catch (e) {
-      console.warn("Fallo al obtener tipos de cambio, usando USD base.", e);
-      targetCurrency = "USD";
-      targetSymbol = "$";
+      console.error("Error al actualizar Schema JSON-LD dinámicamente:", e);
     }
+  };
 
-    const calculatedPrice = 49 * rate;
-    const calculatedPriceOld = 65 * rate;
+  // 3. Función global para actualizar idioma
+  window.updatePageLanguage = function(langCode) {
+    const dict = (window.siteTranslations && window.siteTranslations[langCode]) 
+                  ? window.siteTranslations[langCode] 
+                  : (window.siteTranslations ? window.siteTranslations["en"] : null);
 
-    // Redondeo inteligente según el tamaño de la moneda
-    let roundedPrice = Math.round(calculatedPrice);
-    let roundedPriceOld = Math.round(calculatedPriceOld);
+    if (dict) {
+      document.documentElement.lang = langCode.split("-")[0];
 
-    if (calculatedPrice > 1000) {
-      // Redondear a los 1000 más cercanos (ej: COP, CLP)
-      roundedPrice = Math.round(calculatedPrice / 1000) * 1000;
-      roundedPriceOld = Math.round(calculatedPriceOld / 1000) * 1000;
-      priceStr = `~ ${targetSymbol}${roundedPrice.toLocaleString()} ${targetCurrency}`;
-      priceOldStr = `~ ${targetSymbol}${roundedPriceOld.toLocaleString()} ${targetCurrency}`;
-    } else if (calculatedPrice > 100) {
-      // Redondear a los 10 más cercanos (ej: MXN)
-      roundedPrice = Math.round(calculatedPrice / 10) * 10;
-      roundedPriceOld = Math.round(calculatedPriceOld / 10) * 10;
-      priceStr = `~ ${targetSymbol}${roundedPrice} ${targetCurrency}`;
-      priceOldStr = `~ ${targetSymbol}${roundedPriceOld} ${targetCurrency}`;
-    } else {
-      priceStr = `~ ${targetSymbol}${calculatedPrice.toFixed(2)} ${targetCurrency}`;
-      priceOldStr = `~ ${targetSymbol}${calculatedPriceOld.toFixed(2)} ${targetCurrency}`;
+      // Traducir todos los elementos con [data-i18n]
+      const elements = document.querySelectorAll("[data-i18n]");
+      elements.forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (dict[key]) {
+          let text = dict[key];
+          if (text.includes("{price}")) {
+            text = text.replace("{price}", currentPriceStr);
+          }
+          el.innerHTML = text;
+        }
+      });
+
+      // Actualizar Título y Meta Description
+      const titlePatterns = {
+        "es": "Laska Mini Set | Limpieza facial sin químicos — Greenway",
+        "en": "Laska Mini Set | Chemical-free facial cleansing — Greenway",
+        "fr": "Laska Mini Set | Nettoyage du visage sans produits chimiques — Greenway",
+        "de": "Laska Mini Set | Chemiefreie Gesichtsreinigung — Greenway",
+        "it": "Laska Mini Set | Pulizia del viso senza sostanze chimiche — Greenway",
+        "pt": "Laska Mini Set | Limpeza facial sem químicos — Greenway",
+        "ru": "Laska Mini Set | Очищение лица без химии — Greenway"
+      };
+      const descPatterns = {
+        "es": "Set reutilizable de microfibra UpPoly para limpiar rostro, cuello y escote solo con agua. Sin químicos. Dura hasta 2 años.",
+        "en": "Reusable UpPoly microfiber set to cleanse face, neck, and décolleté with water only. Chemical-free. Lasts up to 2 years.",
+        "fr": "Coffret réutilisable en microfibres UpPoly pour nettoyer visage, cou et décolleté avec de l'eau seulement. Sans chimie.",
+        "de": "Wiederverwendbares UpPoly-Mikrofaserset zur Reinigung von Gesicht, Hals und Dekolleté nur mit Wasser. Ohne Chemie.",
+        "it": "Set riutilizzabile in microfibra UpPoly per la pulizia di viso, collo e décolleté solo con acqua. Senza sostanze chimiche.",
+        "pt": "Kit reutilizável de microfibra UpPoly para limpar rosto, pescoço e colo apenas com água. Sem químicos.",
+        "ru": "Многоразовый набор из микроволокна UpPoly для очищения лица, шеи и декольте только водой. Без химии."
+      };
+
+      const mainLang = langCode.split("-")[0];
+      document.title = titlePatterns[mainLang] || titlePatterns["en"];
+      
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) {
+        metaDesc.setAttribute("content", descPatterns[mainLang] || descPatterns["en"]);
+      }
+
+      // Actualizar la cápsula visual del botón selector
+      const flagMap = {
+        "es-ar": "🇦🇷 AR",
+        "es-mx": "🇲🇽 MX",
+        "es-es": "🇪🇸 ES",
+        "en": "🇺🇸 US",
+        "fr": "🇫🇷 FR",
+        "de": "🇩🇪 DE",
+        "it": "🇮🇹 IT",
+        "pt-br": "🇧🇷 BR",
+        "ru": "🇷🇺 RU"
+      };
+      const labelText = flagMap[langCode] || "🌐 " + langCode.toUpperCase();
+      const parts = labelText.split(" ");
+      const flagEl = document.querySelector('.active-flag');
+      const codeEl = document.querySelector('.active-lang-code');
+      if (flagEl && codeEl) {
+        flagEl.innerText = parts[0];
+        codeEl.innerText = parts[1] || "";
+      }
+
+      // Marcar seleccionado en el menú desplegable
+      const options = document.querySelectorAll('.lang-option');
+      options.forEach(opt => {
+        if (opt.getAttribute('data-lang') === langCode) {
+          opt.classList.add('is-selected');
+        } else {
+          opt.classList.remove('is-selected');
+        }
+      });
     }
-  }
+  };
 
-  // 3. Determinar idioma y traducción
-  const userLangFull = navigator.language || navigator.userLanguage || "es";
+  // 4. Inicializar carga por defecto
+  const urlParams = new URLSearchParams(window.location.search);
+  const urlLang = urlParams.get('lang');
+  const userLangFull = urlLang || navigator.language || navigator.userLanguage || "es";
   let langCode = userLangFull.toLowerCase();
 
-  // Mapeo de variantes de Español
-  let selectedLang = "en"; // Fallback global
+  let selectedLang = "en";
   if (langCode.startsWith("es-ar")) {
     selectedLang = "es-ar";
   } else if (langCode.startsWith("es-mx") || langCode.startsWith("es-cl") || langCode.startsWith("es-co") || langCode.startsWith("es-pe") || langCode.startsWith("es-uy")) {
     selectedLang = "es-mx";
   } else if (langCode.startsWith("es")) {
-    selectedLang = "es-es"; // España y otros
+    selectedLang = "es-es";
   } else if (langCode.startsWith("fr")) {
     selectedLang = "fr";
   } else if (langCode.startsWith("de")) {
@@ -4915,106 +5187,50 @@ document.addEventListener('DOMContentLoaded', () => {
     selectedLang = "ru";
   }
 
-  // Cargar diccionario de translations.js
-  const dict = (window.siteTranslations && window.siteTranslations[selectedLang]) 
-                ? window.siteTranslations[selectedLang] 
-                : (window.siteTranslations ? window.siteTranslations["en"] : null);
+  // Ejecutar carga inicial geolocalizada
+  await window.updatePagePrices(detectedGeo.country);
+  window.updatePageLanguage(selectedLang);
 
-  if (dict) {
-    document.documentElement.lang = selectedLang.split("-")[0];
+  // 5. Vincular eventos de la interfaz del selector de idiomas
+  const container = document.querySelector('.lang-selector-container');
+  const btn = document.getElementById('langSelectorBtn');
+  const menu = document.getElementById('langDropdownMenu');
 
-    // Traducir todos los elementos con [data-i18n]
-    const elements = document.querySelectorAll("[data-i18n]");
-    elements.forEach(el => {
-      const key = el.getAttribute("data-i18n");
-      if (dict[key]) {
-        let text = dict[key];
-        // Inyectar precio si tiene el placeholder {price}
-        if (text.includes("{price}")) {
-          text = text.replace("{price}", priceStr);
-        }
-        el.innerHTML = text;
-      }
+  if (btn && menu) {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      container.classList.toggle('is-active');
+      const expanded = container.classList.contains('is-active');
+      btn.setAttribute('aria-expanded', expanded);
     });
 
-    // Actualizar Título y Meta Description de la pestaña
-    const titlePatterns = {
-      "es": "Laska Mini Set | Limpieza facial sin químicos — Greenway",
-      "en": "Laska Mini Set | Chemical-free facial cleansing — Greenway",
-      "fr": "Laska Mini Set | Nettoyage du visage sans produits chimiques — Greenway",
-      "de": "Laska Mini Set | Chemiefreie Gesichtsreinigung — Greenway"
-    };
-    const descPatterns = {
-      "es": "Set reutilizable de microfibra UpPoly para limpiar rostro, cuello y escote solo con agua. Sin químicos. Dura hasta 2 años.",
-      "en": "Reusable UpPoly microfiber set to cleanse face, neck, and décolleté with water only. Chemical-free. Lasts up to 2 years.",
-      "fr": "Coffret réutilisable en microfibres UpPoly pour nettoyer visage, cou et décolleté avec de l'eau seulement. Sans chimie.",
-      "de": "Wiederverwendbares UpPoly-Mikrofaserset zur Reinigung von Gesicht, Hals und Dekolleté nur mit Wasser. Ohne Chemie."
-    };
+    document.addEventListener('click', () => {
+      container.classList.remove('is-active');
+      btn.setAttribute('aria-expanded', 'false');
+    });
 
-    const mainLang = selectedLang.split("-")[0];
-    document.title = titlePatterns[mainLang] || titlePatterns["en"];
-    
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute("content", descPatterns[mainLang] || descPatterns["en"]);
-    }
-  }
+    const options = menu.querySelectorAll('.lang-option');
+    options.forEach(opt => {
+      opt.addEventListener('click', async (e) => {
+        e.stopPropagation();
+        const lang = opt.getAttribute('data-lang');
+        container.classList.remove('is-active');
+        btn.setAttribute('aria-expanded', 'false');
 
-  // 4. Actualizar Precios y Links en el DOM
-  const oldPriceEl = document.querySelector('.price-old');
-  const newPriceEl = document.querySelector('.price-new');
-  if (oldPriceEl) oldPriceEl.innerText = priceOldStr;
-  if (newPriceEl) newPriceEl.innerText = priceStr;
+        let country = "US";
+        if (lang === "es-ar") country = "AR";
+        else if (lang === "es-mx") country = "MX";
+        else if (lang === "es-es") country = "ES";
+        else if (lang === "fr") country = "FR";
+        else if (lang === "de") country = "DE";
+        else if (lang === "it") country = "IT";
+        else if (lang === "pt-br") country = "PT";
+        else if (lang === "ru") country = "RU";
 
-  // Actualizar todos los enlaces de compra de Greenway dinámicamente
-  const buyLinks = document.querySelectorAll('a[href*="greenway"]');
-  buyLinks.forEach(link => {
-    try {
-      const url = new URL(link.href);
-      url.hostname = domainToUse;
-      link.href = url.toString();
-    } catch (e) {
-      // Si falla por ser ruta relativa, forzar dominio absoluto
-      link.href = `https://${domainToUse}/shop/brands/fiber/08093?gw=uZv7Gi0Ep5`;
-    }
-  });
-
-  // 5. Inyectar Badge de Geodetección de Moneda
-  const priceBlock = document.querySelector('.price-block');
-  if (priceBlock) {
-    const geoBadge = document.createElement('div');
-    geoBadge.className = 'geo-badge';
-    geoBadge.style.fontSize = '12px';
-    geoBadge.style.color = 'var(--color-primary)';
-    geoBadge.style.marginTop = '4px';
-    geoBadge.style.fontStyle = 'italic';
-    
-    const countryNames = {
-      "AR": "Argentina", "MX": "México", "CO": "Colombia", "CL": "Chile",
-      "PE": "Perú", "US": "Estados Unidos", "ES": "España", "FR": "Francia",
-      "DE": "Alemania", "IT": "Italia", "PT": "Portugal", "BR": "Brasil"
-    };
-    const cName = countryNames[detectedGeo.country] || detectedGeo.country;
-    geoBadge.innerHTML = `🌍 Moneda detectada para ${cName}: <strong>${targetCurrency}</strong>`;
-    priceBlock.appendChild(geoBadge);
-  }
-
-  // 6. Actualizar Schema JSON-LD de forma dinámica
-  try {
-    const jsonLdScript = document.querySelector('script[type="application/ld+json"]');
-    if (jsonLdScript) {
-      const schemas = JSON.parse(jsonLdScript.innerHTML);
-      const productSchema = Array.isArray(schemas) ? schemas[0] : schemas;
-      if (productSchema && productSchema.offers) {
-        const numericPrice = parseFloat(priceStr.replace(/[^0-9.]/g, '').replace('.', ''));
-        productSchema.offers.price = numericPrice ? numericPrice.toString() : "58200";
-        productSchema.offers.priceCurrency = targetCurrency;
-        productSchema.offers.url = window.location.href;
-        jsonLdScript.innerHTML = JSON.stringify(schemas, null, 2);
-      }
-    }
-  } catch (e) {
-    console.error("Error al actualizar Schema JSON-LD dinámicamente:", e);
+        await window.updatePagePrices(country);
+        window.updatePageLanguage(lang);
+      });
+    });
   }
 
   // 7. Año actual dinámico en el footer
@@ -5277,31 +5493,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let audioCtx = null;
 
   function playElegantTick() {
-    try {
-      if (!audioCtx) {
-        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-      }
-      if (audioCtx.state === 'suspended') {
-        audioCtx.resume();
-      }
-      const osc = audioCtx.createOscillator();
-      const gain = audioCtx.createGain();
-      
-      osc.connect(gain);
-      gain.connect(audioCtx.destination);
-      
-      osc.type = 'sine';
-      osc.frequency.setValueAtTime(950, audioCtx.currentTime);
-      osc.frequency.exponentialRampToValueAtTime(500, audioCtx.currentTime + 0.12);
-      
-      gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.12);
-      
-      osc.start();
-      osc.stop(audioCtx.currentTime + 0.12);
-    } catch(e) {
-      console.log("AudioContext unsupported or blocked:", e);
-    }
+    // Silenciado completamente
   }
 
   function showStep(index) {
