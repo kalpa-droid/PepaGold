@@ -265,16 +265,7 @@ def main():
                     classes.remove("is-selected")
                     opt["class"] = classes
 
-        # Remove Argentinian-specific legal elements for other countries
-        if config["country_code"] != "AR":
-            compliance_el = soup.find(class_="footer-compliance")
-            if compliance_el:
-                compliance_el.decompose()
-            
-            # Hide the data fiscal link/logo container completely
-            afip_links = soup.find_all("a", href=lambda href: href and "afip.gob.ar" in href)
-            for l in afip_links:
-                l.decompose()
+
 
         # Prepend ../ to relative assets paths if we are inside a subdirectory
         if config["folder"]:
@@ -287,7 +278,10 @@ def main():
         keys_to_replace = [
             "p1_sol", "p1_sol_reus", 
             "prod_micellar", "prod_balm", "prod_oil", "prod_biphasic", 
-            "prod_milk", "prod_gel", "prod_wipes", "prod_pads", "prod_reusable"
+            "prod_milk", "prod_gel", "prod_wipes", "prod_pads", "prod_reusable",
+            "rit_step1_title", "rit_step1_desc",
+            "rit_step2_title", "rit_step2_desc",
+            "rit_step3_title", "rit_step3_desc"
         ]
         for key in keys_to_replace:
             if key in dict_trans:
