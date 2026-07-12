@@ -46,6 +46,7 @@
 <link rel="preload" href="assets/imagenes/1.webp" as="image" />
 <link rel="preload" href="assets/imagenes/2.webp" as="image" />
 <link rel="preconnect" href="https://ipapi.co" />
+<link rel="preconnect" href="https://open.er-api.com" />
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <style>
@@ -82,10 +83,10 @@
   transition: transform 0.3s ease;
 }
 
-/* Selector de idiomas flotante (al principio de la página, absoluto) */
+/* Selector de idiomas flotante (al principio de la página, fijo) */
 .lang-selector-container {
-  position: absolute;
-  top: 55px;
+  position: fixed;
+  top: 65px;
   right: 20px;
   z-index: 1000;
   font-family: var(--font-sans);
@@ -196,6 +197,7 @@
     height: 22px;
   }
   .lang-selector-container {
+    position: fixed;
     top: 65px;
     right: 12px;
   }
@@ -297,7 +299,7 @@
       "@type": "Offer",
       "url": "https://pepagold.com.ar/",
       "priceCurrency": "ARS",
-      "price": "58200",
+      "price": "64000",
       "priceValidUntil": "2026-12-31",
       "availability": "https://schema.org/InStock",
       "seller": {
@@ -440,7 +442,7 @@
   <span data-i18n="marquee_promo">🔥 Oferta por Tiempo Limitado — </span>
   <a class="inline-link" href="https://greenwayglobal.ar/shop/brands/fiber/08093?gw=uZv7Gi0Ep5" data-i18n="marquee_buy">Comprar ahora</a>
   <span style="margin: 0 15px; opacity: 0.5;">|</span>
-  <span>💸 Ahorrá +$15.000 al año en desmaquillantes</span>
+  <span data-i18n="marquee_save">💸 Ahorrá +$15.000 al año en desmaquillantes</span>
   <span style="margin: 0 15px; opacity: 0.5;">|</span>
   <span data-i18n="marquee_eco">🌱 Ecológico · Dura hasta 2 años · Sin químicos</span>
   <span style="margin: 0 15px; opacity: 0.5;">|</span>
@@ -453,7 +455,7 @@
   <span data-i18n="marquee_promo">🔥 Oferta por Tiempo Limitado — </span>
   <a class="inline-link" href="https://greenwayglobal.ar/shop/brands/fiber/08093?gw=uZv7Gi0Ep5" data-i18n="marquee_buy">Comprar ahora</a>
   <span style="margin: 0 15px; opacity: 0.5;">|</span>
-  <span>💸 Ahorrá +$15.000 al año en desmaquillantes</span>
+  <span data-i18n="marquee_save">💸 Ahorrá +$15.000 al año en desmaquillantes</span>
   <span style="margin: 0 15px; opacity: 0.5;">|</span>
   <span data-i18n="marquee_eco">🌱 Ecológico · Dura hasta 2 años · Sin químicos</span>
   <span style="margin: 0 15px; opacity: 0.5;">|</span>
@@ -593,7 +595,7 @@
       <div class="cta-title"><span class="notranslate" translate="no">Laska Mini Set</span></div>
     </div>
     <p class="cta-desc" data-i18n="desc_tpl">
-      Tres piezas de microfibra que eliminan el maquillaje, la grasa y la suciedad del día usando solo agua tibia. Reemplazan los discos de algodón, el agua micelar y el desmaquillante. Duran hasta 2 años. Una compra, cero residuos. Piel limpia, suave y radiante por solo <strong>$58.200 ARS</strong>.
+      Tres piezas de microfibra que eliminan el maquillaje, la grasa y la suciedad del día usando solo agua tibia. Reemplazan los discos de algodón, el agua micelar y el desmaquillante. Duran hasta 2 años. Una compra, cero residuos. Piel limpia, suave y radiante por solo <strong>$64.000 ARS</strong>.
     </p>
   </div>
   <div class="cta-card-bottom">
@@ -1649,26 +1651,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const totAmt = document.getElementById('total-amount');
     const recList = document.getElementById('receipt-list');
     const solText = document.getElementById('solution-text');
+    function getTranslation(key, defaultText) {
+        const currentLang = document.documentElement.lang || 'es';
+        let dictKey = currentLang;
+        if (currentLang === 'es') {
+            const selectedOpt = document.querySelector('.lang-option.is-selected');
+            dictKey = selectedOpt ? selectedOpt.getAttribute('data-lang') : 'es-es';
+        } else if (currentLang === 'pt') {
+            dictKey = 'pt-br';
+        }
+        const dict = (window.siteTranslations && window.siteTranslations[dictKey]) ? window.siteTranslations[dictKey] : null;
+        return (dict && dict[key]) ? dict[key] : defaultText;
+    }
+
     const prods = [
-        { name: 'Agua micelar', price: 10 }, { name: 'Bálsamo limpiador', price: 18 }, { name: 'Aceite desmaq.', price: 16 },
-        { name: 'Desmaq. bifásico', price: 11 }, { name: 'Leche limpiadora', price: 13 }, { name: 'Gel limpiador', price: 13 },
-        { name: 'Toallitas desmaq.', price: 6 }, { name: 'Discos algodón', price: 3 }, { name: 'Pads reutiliz.', price: 9 }
+        { key: 'prod_micellar', defaultName: 'Agua micelar', price: 10 }, 
+        { key: 'prod_balm', defaultName: 'Bálsamo limpiador', price: 18 }, 
+        { key: 'prod_oil', defaultName: 'Aceite desmaq.', price: 16 },
+        { key: 'prod_biphasic', defaultName: 'Desmaq. bifásico', price: 11 }, 
+        { key: 'prod_milk', defaultName: 'Leche limpiadora', price: 13 }, 
+        { key: 'prod_gel', defaultName: 'Gel limpiador', price: 13 },
+        { key: 'prod_wipes', defaultName: 'Toallitas desmaq.', price: 6 }, 
+        { key: 'prod_pads', defaultName: 'Discos algodón', price: 3 }, 
+        { key: 'prod_reusable', defaultName: 'Pads reutiliz.', price: 9 }
     ];
     let lCount = -1; let lText = "";
-    
-    // Obtener idioma para el Marquee/Texto
-    const userLang = navigator.language || navigator.userLanguage;
-    let locLang = userLang.split('-')[0].toLowerCase();
-    const transSol = {
-        "es": ["✨ Solo con Agua", "♻️ Reutiliza hasta 2 años"],
-        "en": ["✨ Only with Water", "♻️ Reuse up to 2 years"],
-        "fr": ["✨ Seulement avec de l'eau", "♻️ Réutilisable jusqu'à 2 ans"],
-        "de": ["✨ Nur mit Wasser", "♻️ Bis zu 2 Jahre wiederverwendbar"],
-        "ru": ["✨ Только с водой", "♻️ До 2 лет использования"],
-        "pt": ["✨ Apenas com Água", "♻️ Reutilize até 2 anos"],
-        "it": ["✨ Solo con Acqua", "♻️ Riutilizza fino a 2 anni"]
-    };
-    const tSol = transSol[locLang] || transSol["en"];
 
     if (vGasto) {
         vGasto.addEventListener('timeupdate', () => {
@@ -1681,16 +1688,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (cCount !== lCount) {
                     const visProds = prods.slice(0, cCount);
                     totAmt.innerText = visProds.reduce((sum, item) => sum + item.price, 0);
-                    recList.innerHTML = visProds.slice(-2).reverse().map(item =>
-                        `<div class="receipt-item"><span>${item.name}</span> <span>+$${item.price}</span></div>`
-                    ).join('');
+                    recList.innerHTML = visProds.slice(-2).reverse().map(item => {
+                        const translatedName = getTranslation(item.key, item.defaultName);
+                        return `<div class="receipt-item"><span>${translatedName}</span> <span>+$${item.price}</span></div>`;
+                    }).join('');
                     lCount = cCount;
                 }
             } else if (t >= 4 && t < 11) {
                 expPanel.classList.remove('active'); solPanel.classList.add('active');
                 lCount = -1;
                 const ph = Math.floor((t - 4) / 1.75);
-                const nText = (ph % 2 === 0) ? tSol[0] : tSol[1];
+                const nText = (ph % 2 === 0) 
+                    ? getTranslation("p1_sol", "✨ Solo con Agua") 
+                    : getTranslation("p1_sol_reus", "♻️ Reutiliza hasta 2 años");
                 if (nText !== lText) {
                     solText.style.opacity = 0; 
                     setTimeout(() => { solText.innerText = nText; solText.style.opacity = 1; }, 150);
@@ -4410,8 +4420,8 @@ RESPONSIVE
 <h1 class="product-title" data-i18n="prod_title"><span class="notranslate" translate="no">Laska Mini Set</span> (3 en 1)</h1>
 <!-- Precios -->
 <div class="price-block">
-<span class="price-old">$72.000 ARS</span>
-<span class="price-new">$58.200 ARS</span>
+<span class="price-old">$80.000 ARS</span>
+<span class="price-new">$64.000 ARS</span>
 <span class="badge-sale" data-i18n="oferta">Oferta</span>
 </div>
 <p class="tax-info" data-i18n="tax_info">Impuestos incluidos.</p>
@@ -5063,14 +5073,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Configuración de Precios Oficiales (Fijos)
   const officialPrices = {
-    "AR": { price: "58.200", priceOld: "72.000", symbol: "$", currency: "ARS", domain: "greenwayglobal.ar" },
-    "US": { price: "49", priceOld: "65", symbol: "$", currency: "USD", domain: "greenwayglobal.com" },
+    "AR": { price: "64.000", priceOld: "80.000", symbol: "$", currency: "ARS", domain: "greenwayglobal.ar" },
+    "US": { price: "33.20", priceOld: "40.00", symbol: "$", currency: "USD", domain: "greenwayglobal.com" },
     "ES": { price: "44", priceOld: "55", symbol: "€", currency: "EUR", domain: "new.mygreenway.eu" },
     "FR": { price: "44", priceOld: "55", symbol: "€", currency: "EUR", domain: "new.mygreenway.eu" },
     "DE": { price: "44", priceOld: "55", symbol: "€", currency: "EUR", domain: "new.mygreenway.eu" },
     "IT": { price: "44", priceOld: "55", symbol: "€", currency: "EUR", domain: "new.mygreenway.eu" },
     "PT": { price: "44", priceOld: "55", symbol: "€", currency: "EUR", domain: "new.mygreenway.eu" },
-    "MX": { price: "890", priceOld: "1.190", symbol: "$", currency: "MXN", domain: "greenwayglobal.mx" }
+    "MX": { price: "890", priceOld: "1.190", symbol: "$", currency: "MXN", domain: "greenwayglobal.mx" },
+    "RU": { price: "2.860", priceOld: "3.500", symbol: "₽", currency: "RUB", domain: "greenwayglobal.com" }
   };
 
   const countryCurrencyMap = {
@@ -5090,6 +5101,29 @@ document.addEventListener('DOMContentLoaded', () => {
   let exchangeRates = null;
   let currentPriceStr = "";
 
+  // Helper function to format currency using Intl.NumberFormat to respect locales
+  function formatCurrency(amount, currency, symbol) {
+    try {
+      const localeMap = {
+        "ARS": "es-AR",
+        "MXN": "es-MX",
+        "USD": "en-US",
+        "EUR": "fr-FR",
+        "RUB": "ru-RU"
+      };
+      const locale = localeMap[currency] || "en-US";
+      const formatter = new Intl.NumberFormat(locale, {
+        style: 'currency',
+        currency: currency,
+        minimumFractionDigits: amount % 1 === 0 ? 0 : 2,
+        maximumFractionDigits: 2
+      });
+      return formatter.format(amount);
+    } catch (e) {
+      return `${symbol}${amount.toLocaleString()} ${currency}`;
+    }
+  }
+
   // 1. Detectar País y Moneda vía IP
   try {
     const geoResponse = await fetch('https://ipapi.co/json/');
@@ -5105,9 +5139,9 @@ document.addEventListener('DOMContentLoaded', () => {
     console.warn("Geolocalización bloqueada o fallida, usando fallback: US.", e);
   }
 
-  // Cargar tasas de cambio una sola vez al inicio para optimizar cambios de idioma futuros
+  // Cargar tasas de cambio relativas a EUR una sola vez
   try {
-    const ratesResponse = await fetch('https://open.er-api.com/v6/latest/USD');
+    const ratesResponse = await fetch('https://open.er-api.com/v6/latest/EUR');
     if (ratesResponse.ok) {
       const ratesData = await ratesResponse.json();
       if (ratesData.rates) {
@@ -5140,19 +5174,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (officialPrices[geoKey]) {
       const config = officialPrices[geoKey];
-      priceStr = `${config.symbol}${config.price} ${config.currency}`;
-      priceOldStr = `${config.symbol}${config.priceOld} ${config.currency}`;
+      // Format official prices nicely
+      const numericPrice = parseFloat(config.price.replace('.', ''));
+      const numericPriceOld = parseFloat(config.priceOld.replace('.', ''));
+      priceStr = formatCurrency(numericPrice, config.currency, config.symbol);
+      priceOldStr = formatCurrency(numericPriceOld, config.currency, config.symbol);
       domainToUse = config.domain;
       targetCurrency = config.currency;
       targetSymbol = config.symbol;
     } else {
       let rate = 1;
+      // Convert from EUR 44 base price
       if (exchangeRates && exchangeRates[targetCurrency]) {
         rate = exchangeRates[targetCurrency];
+      } else {
+        // Fallback using USD rate to intermediate if EUR rates failed but detected currency matches standard
+        // (Just fallback to default USD price)
+        targetCurrency = "USD";
+        targetSymbol = "$";
       }
-      
-      const calculatedPrice = 49 * rate;
-      const calculatedPriceOld = 65 * rate;
+
+      // Convert from EUR base (44 EUR) with a 15% regional margin
+      const baseEurPrice = 44;
+      const baseEurPriceOld = 55;
+      const calculatedPrice = baseEurPrice * rate * 1.15;
+      const calculatedPriceOld = baseEurPriceOld * rate * 1.15;
 
       let roundedPrice = Math.round(calculatedPrice);
       let roundedPriceOld = Math.round(calculatedPriceOld);
@@ -5160,17 +5206,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (calculatedPrice > 5000) {
         roundedPrice = Math.round(calculatedPrice / 1000) * 1000;
         roundedPriceOld = Math.round(calculatedPriceOld / 1000) * 1000;
-        priceStr = `~ ${targetSymbol}${roundedPrice.toLocaleString()} ${targetCurrency}`;
-        priceOldStr = `~ ${targetSymbol}${roundedPriceOld.toLocaleString()} ${targetCurrency}`;
       } else if (calculatedPrice > 100) {
         roundedPrice = Math.round(calculatedPrice / 10) * 10;
         roundedPriceOld = Math.round(calculatedPriceOld / 10) * 10;
-        priceStr = `~ ${targetSymbol}${roundedPrice.toLocaleString()} ${targetCurrency}`;
-        priceOldStr = `~ ${targetSymbol}${roundedPriceOld.toLocaleString()} ${targetCurrency}`;
-      } else {
-        priceStr = `~ ${targetSymbol}${calculatedPrice.toFixed(2)} ${targetCurrency}`;
-        priceOldStr = `~ ${targetSymbol}${calculatedPriceOld.toFixed(2)} ${targetCurrency}`;
       }
+
+      priceStr = "~ " + formatCurrency(roundedPrice, targetCurrency, targetSymbol);
+      priceOldStr = "~ " + formatCurrency(roundedPriceOld, targetCurrency, targetSymbol);
     }
 
     currentPriceStr = priceStr;
@@ -5200,19 +5242,17 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!geoBadge) {
         geoBadge = document.createElement('div');
         geoBadge.className = 'geo-badge';
+        geoBadge.setAttribute('data-i18n', 'geo_badge');
         geoBadge.style.fontSize = '12px';
         geoBadge.style.color = 'var(--color-primary)';
         geoBadge.style.marginTop = '4px';
         geoBadge.style.fontStyle = 'italic';
         priceBlock.appendChild(geoBadge);
       }
-      const countryNames = {
-        "AR": "Argentina", "MX": "México", "CO": "Colombia", "CL": "Chile",
-        "PE": "Perú", "US": "Estados Unidos", "ES": "España", "FR": "Francia",
-        "DE": "Alemania", "IT": "Italia", "PT": "Portugal", "BR": "Brasil", "RU": "Rusia"
-      };
-      const cName = countryNames[code] || code;
-      geoBadge.innerHTML = `🌍 Moneda detectada para ${cName}: <strong>${targetCurrency}</strong>`;
+      
+      // Save currency and country codes globally for translations
+      window.detectedCountryCode = code;
+      window.detectedCurrencyCode = targetCurrency;
     }
 
     // Actualizar Schema JSON-LD
@@ -5223,7 +5263,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const productSchema = Array.isArray(schemas) ? schemas[0] : schemas;
         if (productSchema && productSchema.offers) {
           const numericPrice = parseFloat(priceStr.replace(/[^0-9.]/g, '').replace('.', ''));
-          productSchema.offers.price = numericPrice ? numericPrice.toString() : "58200";
+          productSchema.offers.price = numericPrice ? numericPrice.toString() : "64000";
           productSchema.offers.priceCurrency = targetCurrency;
           productSchema.offers.url = window.location.href;
           jsonLdScript.innerHTML = JSON.stringify(schemas, null, 2);
@@ -5251,6 +5291,15 @@ document.addEventListener('DOMContentLoaded', () => {
           let text = dict[key];
           if (text.includes("{price}")) {
             text = text.replace("{price}", currentPriceStr);
+          }
+          if (text.includes("{country}")) {
+            const cCode = window.detectedCountryCode || 'US';
+            const countryKey = `country_${cCode}`;
+            const cName = dict[countryKey] || cCode;
+            text = text.replace("{country}", cName);
+          }
+          if (text.includes("{currency}")) {
+            text = text.replace("{currency}", window.detectedCurrencyCode || 'USD');
           }
           el.innerHTML = text;
         }
@@ -5320,7 +5369,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // 4. Inicializar carga por defecto
   const urlParams = new URLSearchParams(window.location.search);
   const urlLang = urlParams.get('lang');
-  const userLangFull = urlLang || navigator.language || navigator.userLanguage || "es";
+  
+  // Use localStorage -> browser language -> fallback
+  const savedLang = localStorage.getItem('preferred-lang');
+  const userLangFull = urlLang || savedLang || navigator.language || navigator.userLanguage || "es";
   let langCode = userLangFull.toLowerCase();
 
   let selectedLang = "en";
@@ -5342,8 +5394,10 @@ document.addEventListener('DOMContentLoaded', () => {
     selectedLang = "ru";
   }
 
-  // Ejecutar carga inicial geolocalizada
+  // Ejecutar carga inicial geolocalizada de precios
   await window.updatePagePrices(detectedGeo.country);
+  
+  // Cargar idioma (esto actualizará el geobadge con el idioma cargado)
   window.updatePageLanguage(selectedLang);
 
   // 5. Vincular eventos de la interfaz del selector de idiomas
@@ -5366,29 +5420,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const options = menu.querySelectorAll('.lang-option');
     options.forEach(opt => {
-      opt.addEventListener('click', async (e) => {
+      opt.addEventListener('click', (e) => {
         e.stopPropagation();
         const lang = opt.getAttribute('data-lang');
         container.classList.remove('is-active');
         btn.setAttribute('aria-expanded', 'false');
 
-        let country = "US";
-        if (lang === "es-ar") country = "AR";
-        else if (lang === "es-mx") country = "MX";
-        else if (lang === "es-es") country = "ES";
-        else if (lang === "fr") country = "FR";
-        else if (lang === "de") country = "DE";
-        else if (lang === "it") country = "IT";
-        else if (lang === "pt-br") country = "PT";
-        else if (lang === "ru") country = "RU";
-
-        await window.updatePagePrices(country);
+        // Decoupled: changing language ONLY updates language and saves preference
+        localStorage.setItem('preferred-lang', lang);
         window.updatePageLanguage(lang);
       });
     });
   }
-
-  // 7. Año actual dinámico en el footer
+// 7. Año actual dinámico en el footer
   const yearEl = document.getElementById("current-year");
   if (yearEl) {
     yearEl.innerText = new Date().getFullYear();
