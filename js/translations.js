@@ -234,7 +234,13 @@ const translations = {
     "sci_exp4_desc": "Referente en la Sechenov University, especializada en protocolos no invasivos para la integridad estructural de la barrera dérmica.",
     "sci_exp4_link": "Sechenov University",
     "about_indep_desc": "PepaGold es un distribuidor independiente autorizado de Greenway Global.",
-    "about_info_note": "Esta página tiene carácter puramente informativo. Las transacciones, envíos y devoluciones se procesan en la tienda oficial de Greenway Global."
+    "about_info_note": "Esta página tiene carácter puramente informativo. Las transacciones, envíos y devoluciones se procesan en la tienda oficial de Greenway Global.",
+    "lbl_before": "ANTES",
+    "lbl_after": "DESPUÉS",
+    "care4_title": "Esponja Limpiadora",
+    "care15_title": "Manopla-Esponja de Doble Cara",
+    "care6_title": "Manopla Suave",
+    "ritual_step_label": "PASO"
   },
   "es-mx": {
     "marquee_promo": "🔥 Oferta por Tiempo Limitado — ",
@@ -465,7 +471,13 @@ const translations = {
     "sci_exp4_desc": "Referente en la Sechenov University, especializada en protocolos no invasivos para la integridad estructural de la barrera dérmica.",
     "sci_exp4_link": "Sechenov University",
     "about_indep_desc": "PepaGold es un distribuidor independiente autorizado de Greenway Global.",
-    "about_info_note": "Esta página tiene carácter puramente informativo. Las transacciones, envíos y devoluciones se procesan en la tienda oficial de Greenway Global."
+    "about_info_note": "Esta página tiene carácter puramente informativo. Las transacciones, envíos y devoluciones se procesan en la tienda oficial de Greenway Global.",
+    "lbl_before": "ANTES",
+    "lbl_after": "DESPUÉS",
+    "care4_title": "Esponja Limpiadora",
+    "care15_title": "Manopla-Esponja de Doble Cara",
+    "care6_title": "Manopla Suave",
+    "ritual_step_label": "PASO"
   },
   "es-es": {
     "marquee_promo": "🔥 Oferta por Tiempo Limitado — ",
@@ -696,7 +708,13 @@ const translations = {
     "sci_exp4_desc": "Referente en la Sechenov University, especializada en protocolos no invasivos para la integridad estructural de la barrera dérmica.",
     "sci_exp4_link": "Sechenov University",
     "about_indep_desc": "PepaGold es un distribuidor independiente autorizado de Greenway Global.",
-    "about_info_note": "Esta página tiene carácter puramente informativo. Las transacciones, envíos y devoluciones se procesan en la tienda oficial de Greenway Global."
+    "about_info_note": "Esta página tiene carácter puramente informativo. Las transacciones, envíos y devoluciones se procesan en la tienda oficial de Greenway Global.",
+    "lbl_before": "ANTES",
+    "lbl_after": "DESPUÉS",
+    "care4_title": "Esponja Limpiadora",
+    "care15_title": "Manopla-Esponja de Doble Cara",
+    "care6_title": "Manopla Suave",
+    "ritual_step_label": "PASO"
   },
   "en": {
     "marquee_promo": "🔥 Limited Time Offer — ",
@@ -927,7 +945,13 @@ const translations = {
     "sci_exp4_desc": "Key expert at Sechenov University, specialized in non-invasive protocols for the structural integrity of the dermal barrier.",
     "sci_exp4_link": "Sechenov University",
     "about_indep_desc": "PepaGold is an authorized independent distributor of Greenway Global.",
-    "about_info_note": "This page is purely for informational purposes. Transactions, shipping, and returns are processed on the official Greenway Global store."
+    "about_info_note": "This page is purely for informational purposes. Transactions, shipping, and returns are processed on the official Greenway Global store.",
+    "lbl_before": "BEFORE",
+    "lbl_after": "AFTER",
+    "care4_title": "Cleansing Sponge",
+    "care15_title": "Double-Sided Mitt Sponge",
+    "care6_title": "Soft Mitt",
+    "ritual_step_label": "STEP"
   },
   "fr": {
     "marquee_promo": "🔥 Offre Limitée — ",
@@ -1158,7 +1182,13 @@ const translations = {
     "sci_exp4_desc": "Référence à l'Université Sechenov, spécialisée dans les protocoles non invasifs pour l'intégrité structurelle de la barrière dermique.",
     "sci_exp4_link": "Université Sechenov",
     "about_indep_desc": "PepaGold est un partenaire indépendant agréé de Greenway Global.",
-    "about_info_note": "Cette page est purement informative. Les transactions, expéditions et retours sont traités sur la boutique officielle de Greenway Global."
+    "about_info_note": "Cette page est purement informative. Les transactions, expéditions et retours sont traités sur la boutique officielle de Greenway Global.",
+    "lbl_before": "AVANT",
+    "lbl_after": "APRÈS",
+    "care4_title": "Éponge Démaquillante",
+    "care15_title": "Gant-Éponge Double Face",
+    "care6_title": "Gant Doux",
+    "ritual_step_label": "ÉTAPE"
   },
   "de": {
     "marquee_promo": "🔥 Limitiertes Angebot — ",
@@ -1389,7 +1419,13 @@ const translations = {
     "sci_exp4_desc": "Referenz an der Setschenow-Universität, spezialisiert auf nicht-invasive Protokolle für die strukturelle Integrität der Hautbarriere.",
     "sci_exp4_link": "Setschenow-Universität",
     "about_indep_desc": "PepaGold ist ein autorisierter selbstständiger Vertriebspartner von Greenway Global.",
-    "about_info_note": "Diese Seite dient rein zu Informationszwecken. Transaktionen, Versand und Rückgaben werden im offiziellen Greenway Global Store abgewickelt."
+    "about_info_note": "Diese Seite dient rein zu Informationszwecken. Transaktionen, Versand und Rückgaben werden im offiziellen Greenway Global Store abgewickelt.",
+    "lbl_before": "VORHER",
+    "lbl_after": "NACHHER",
+    "care4_title": "Reinigungsschwamm",
+    "care15_title": "Doppelseitiger Handschuhschwamm",
+    "care6_title": "Weicher Handschuh",
+    "ritual_step_label": "SCHRITT"
   },
   "it": {
     "marquee_promo": "🔥 Offerta a Tempo Limitato — ",
@@ -1620,7 +1656,13 @@ const translations = {
     "sci_exp4_desc": "Referente presso la Sechenov University, specializzata in protocolli non invasivi per l'integrità strutturale della barriera dermica.",
     "sci_exp4_link": "Sechenov University",
     "about_indep_desc": "PepaGold è un distributore indipendente autorizzato di Greenway Global.",
-    "about_info_note": "Questa pagina ha scopo puramente informativo. Le transazioni, le spedizioni e i resi sono elaborati sul negozio ufficiale di Greenway Global."
+    "about_info_note": "Questa pagina ha scopo puramente informativo. Le transazioni, le spedizioni e i resi sono elaborati sul negozio ufficiale di Greenway Global.",
+    "lbl_before": "PRIMA",
+    "lbl_after": "DOPO",
+    "care4_title": "Spugna Detergente",
+    "care15_title": "Guanto-Spugna a Doppia Faccia",
+    "care6_title": "Guanto Morbido",
+    "ritual_step_label": "PASSO"
   },
   "pt-br": {
     "marquee_promo": "🔥 Oferta por Tempo Limitado — ",
@@ -1851,7 +1893,13 @@ const translations = {
     "sci_exp4_desc": "Referência na Sechenov University, especializada em protocolos não invasivos para a integridade estrutural da barreira dérmica.",
     "sci_exp4_link": "Sechenov University",
     "about_indep_desc": "PepaGold é um distribuidor independente autorizado da Greenway Global.",
-    "about_info_note": "Esta página é meramente informativa. As transações, envios e devoluções são processados na loja oficial da Greenway Global."
+    "about_info_note": "Esta página é meramente informativa. As transações, envios e devoluções são processados na loja oficial da Greenway Global.",
+    "lbl_before": "ANTES",
+    "lbl_after": "DEPOIS",
+    "care4_title": "Esponja de Limpeza",
+    "care15_title": "Manopla-Esponja de Dupla Face",
+    "care6_title": "Manopla Suave",
+    "ritual_step_label": "PASSO"
   },
   "ru": {
     "marquee_promo": "🔥 Лимитированное предложение — ",
@@ -2082,7 +2130,13 @@ const translations = {
     "sci_exp4_desc": "Ведущий специалист Сеченовского университета, эксперт по неинвазивным протоколам структурной целостности кожного барьера.",
     "sci_exp4_link": "Сеченовский университет",
     "about_indep_desc": "PepaGold является авторизованным независимым дистрибьютором Greenway Global.",
-    "about_info_note": "Этот сайт носит исключительно информационный характер. Все транзакции, доставка и возврат осуществляются через официальный магазин Greenway Global."
+    "about_info_note": "Этот сайт носит исключительно информационный характер. Все транзакции, доставка и возврат осуществляются через официальный магазин Greenway Global.",
+    "lbl_before": "ДО",
+    "lbl_after": "ПОСЛЕ",
+    "care4_title": "Очищающий спонж",
+    "care15_title": "Двусторонняя варежка-спонж",
+    "care6_title": "Мягкая варежка",
+    "ritual_step_label": "ШАГ"
   },
   "zh": {
     "marquee_promo": "🔥 限时特惠 — ",
@@ -2313,7 +2367,13 @@ const translations = {
     "sci_exp4_desc": "俄罗斯谢切诺夫国立第一医科大学学术带头人，专注于保护皮肤表皮屏障结构完整性的非侵入性技术协议。",
     "sci_exp4_link": "谢切诺夫第一医科大学",
     "about_indep_desc": "PepaGold 是 Greenway Global 授权的独立经销商。",
-    "about_info_note": "本页面仅供参考。所有的交易、物流发货及售后退换均在 Greenway Global 官方商城进行。"
+    "about_info_note": "本页面仅供参考。所有的交易、物流发货及售后退换均在 Greenway Global 官方商城进行。",
+    "lbl_before": "使用前",
+    "lbl_after": "使用后",
+    "care4_title": "洁面卸妆海绵",
+    "care15_title": "双面洁面卸妆手套",
+    "care6_title": "柔肤洁面手套",
+    "ritual_step_label": "步骤"
   }
 };
 
