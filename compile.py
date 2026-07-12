@@ -99,76 +99,67 @@ REGIONS = {
 }
 
 
+
 COMPLIANCE_DATA = {
     "es-ar": {
         "title": "Defensa del Consumidor",
         "link_text": "Ventanilla Federal de Defensa del Consumidor",
         "link_url": "https://www.argentina.gob.ar/produccion/defensadelconsumidor",
-        "img_src": "https://www.afip.gob.ar/images/f960/DATAWEB.jpg",
-        "img_alt": "Data Fiscal AFIP"
+        "badge_html": '<img src="https://www.afip.gob.ar/images/f960/DATAWEB.jpg" alt="Data Fiscal" id="complianceImg" style="max-height:60px; opacity:0.9;">'
     },
     "es-mx": {
         "title": "Defensa del Consumidor",
         "link_text": "Procuraduría Federal del Consumidor (PROFECO)",
         "link_url": "https://www.gob.mx/profeco",
-        "img_src": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Logo_de_la_PROFECO.svg",
-        "img_alt": "PROFECO México"
+        "badge_html": '<div class="compliance-badge-trust" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); margin-top: 10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 11l2 2 4-4"></path></svg><span style="font-family:var(--font-sans); font-size:0.75rem; font-weight:var(--weight-semibold); color:rgba(255,255,255,0.85); letter-spacing:0.5px; text-transform:uppercase;">CONFIANZA VERIFICADA</span></div>'
     },
     "es-es": {
         "title": "Defensa del Consumidor",
         "link_text": "Resolución de litigios en línea (Unión Europea)",
         "link_url": "https://ec.europa.eu/consumers/odr/",
-        "img_src": "https://upload.wikimedia.org/wikipedia/commons/8/84/European_Commission_logo.svg",
-        "img_alt": "Comisión Europea"
+        "badge_html": '<div class="compliance-badge-trust" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); margin-top: 10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 11l2 2 4-4"></path></svg><span style="font-family:var(--font-sans); font-size:0.75rem; font-weight:var(--weight-semibold); color:rgba(255,255,255,0.85); letter-spacing:0.5px; text-transform:uppercase;">CUMPLIMIENTO UE</span></div>'
     },
     "en": {
         "title": "Consumer Protection",
         "link_text": "FTC Consumer Protection Guidelines",
         "link_url": "https://www.ftc.gov/consumer-protection",
-        "img_src": "https://upload.wikimedia.org/wikipedia/commons/d/df/Seal_of_the_United_States_Federal_Trade_Commission.svg",
-        "img_alt": "FTC United States"
+        "badge_html": '<div class="compliance-badge-trust" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); margin-top: 10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 11l2 2 4-4"></path></svg><span style="font-family:var(--font-sans); font-size:0.75rem; font-weight:var(--weight-semibold); color:rgba(255,255,255,0.85); letter-spacing:0.5px; text-transform:uppercase;">VERIFIED SECURE</span></div>'
     },
     "fr": {
         "title": "Protection du Consommateur",
         "link_text": "Règlement en ligne des litiges de l'UE (RLL)",
         "link_url": "https://ec.europa.eu/consumers/odr/",
-        "img_src": "https://upload.wikimedia.org/wikipedia/commons/8/84/European_Commission_logo.svg",
-        "img_alt": "Commission Européenne"
+        "badge_html": '<div class="compliance-badge-trust" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); margin-top: 10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 11l2 2 4-4"></path></svg><span style="font-family:var(--font-sans); font-size:0.75rem; font-weight:var(--weight-semibold); color:rgba(255,255,255,0.85); letter-spacing:0.5px; text-transform:uppercase;">SÉCURITÉ VÉRIFIÉE</span></div>'
     },
     "de": {
         "title": "Verbraucherschutz",
         "link_text": "Online-Streitbeilegung-Plattform der EU (OS)",
         "link_url": "https://ec.europa.eu/consumers/odr/",
-        "img_src": "https://upload.wikimedia.org/wikipedia/commons/8/84/European_Commission_logo.svg",
-        "img_alt": "Europäische Kommission"
+        "badge_html": '<div class="compliance-badge-trust" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); margin-top: 10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 11l2 2 4-4"></path></svg><span style="font-family:var(--font-sans); font-size:0.75rem; font-weight:var(--weight-semibold); color:rgba(255,255,255,0.85); letter-spacing:0.5px; text-transform:uppercase;">SICHERHEIT GEPRÜFT</span></div>'
     },
     "it": {
         "title": "Tutela dei Consumatori",
         "link_text": "Risoluzione delle controversie online dell'UE",
         "link_url": "https://ec.europa.eu/consumers/odr/",
-        "img_src": "https://upload.wikimedia.org/wikipedia/commons/8/84/European_Commission_logo.svg",
-        "img_alt": "Commissione Europea"
+        "badge_html": '<div class="compliance-badge-trust" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); margin-top: 10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 11l2 2 4-4"></path></svg><span style="font-family:var(--font-sans); font-size:0.75rem; font-weight:var(--weight-semibold); color:rgba(255,255,255,0.85); letter-spacing:0.5px; text-transform:uppercase;">SICUREZZA VERIFICATA</span></div>'
     },
     "pt-br": {
         "title": "Defesa do Consumidor",
         "link_text": "Resolução de Litígios em Linha (União Europeia)",
         "link_url": "https://ec.europa.eu/consumers/odr/",
-        "img_src": "https://upload.wikimedia.org/wikipedia/commons/8/84/European_Commission_logo.svg",
-        "img_alt": "Comissão Europeia"
+        "badge_html": '<div class="compliance-badge-trust" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); margin-top: 10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 11l2 2 4-4"></path></svg><span style="font-family:var(--font-sans); font-size:0.75rem; font-weight:var(--weight-semibold); color:rgba(255,255,255,0.85); letter-spacing:0.5px; text-transform:uppercase;">CONFIANÇA VERIFICADA</span></div>'
     },
     "ru": {
         "title": "Права потребителей",
         "link_text": "Роспотребнадзор — защита прав потребителей",
         "link_url": "https://www.rospotrebnadzor.ru",
-        "img_src": "https://upload.wikimedia.org/wikipedia/commons/4/45/Emblem_of_Rospotrebnadzor.svg",
-        "img_alt": "Роспотребнадзор РФ"
+        "badge_html": '<div class="compliance-badge-trust" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); margin-top: 10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 11l2 2 4-4"></path></svg><span style="font-family:var(--font-sans); font-size:0.75rem; font-weight:var(--weight-semibold); color:rgba(255,255,255,0.85); letter-spacing:0.5px; text-transform:uppercase;">ПРОВЕРЕНО И БЕЗОПАСНО</span></div>'
     },
     "zh": {
         "title": "消费者权益保护",
         "link_text": "中华人民共和国工业和信息化部 (MIIT)",
         "link_url": "https://beian.miit.gov.cn",
-        "img_src": "https://upload.wikimedia.org/wikipedia/commons/5/52/Emblem_of_the_People%27s_Republic_of_China_%282%29.svg",
-        "img_alt": "工业和信息化部"
+        "badge_html": '<div class="compliance-badge-trust" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); margin-top: 10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 11l2 2 4-4"></path></svg><span style="font-family:var(--font-sans); font-size:0.75rem; font-weight:var(--weight-semibold); color:rgba(255,255,255,0.85); letter-spacing:0.5px; text-transform:uppercase;">官方合规认证</span></div>'
     }
 }
 
@@ -323,16 +314,18 @@ def main():
         comp_data = COMPLIANCE_DATA.get(lang, COMPLIANCE_DATA["en"])
         title_el = soup.find(id="complianceTitle")
         link_el = soup.find(id="complianceLink")
-        img_el = soup.find(id="complianceImg")
         img_link_el = soup.find(id="complianceImgLink")
         
-        if title_el and link_el and img_el and img_link_el:
+        if title_el and link_el and img_link_el:
             title_el.string = comp_data["title"]
             link_el.string = comp_data["link_text"]
             link_el["href"] = comp_data["link_url"]
-            img_el["src"] = comp_data["img_src"]
-            img_el["alt"] = comp_data["img_alt"]
             img_link_el["href"] = comp_data["link_url"]
+            
+            # Clear current badge content and append the custom HTML/SVG badge
+            img_link_el.clear()
+            parsed_badge = BeautifulSoup(comp_data["badge_html"], 'html.parser')
+            img_link_el.append(parsed_badge)
 
         # Update visual active flag and code in switcher
         flag_el = soup.find(class_="active-flag")
