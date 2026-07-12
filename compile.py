@@ -98,6 +98,80 @@ REGIONS = {
     }
 }
 
+
+COMPLIANCE_DATA = {
+    "es-ar": {
+        "title": "Defensa del Consumidor",
+        "link_text": "Ventanilla Federal de Defensa del Consumidor",
+        "link_url": "https://www.argentina.gob.ar/produccion/defensadelconsumidor",
+        "img_src": "https://www.afip.gob.ar/images/f960/DATAWEB.jpg",
+        "img_alt": "Data Fiscal AFIP"
+    },
+    "es-mx": {
+        "title": "Defensa del Consumidor",
+        "link_text": "Procuraduría Federal del Consumidor (PROFECO)",
+        "link_url": "https://www.gob.mx/profeco",
+        "img_src": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Logo_de_la_PROFECO.svg",
+        "img_alt": "PROFECO México"
+    },
+    "es-es": {
+        "title": "Defensa del Consumidor",
+        "link_text": "Resolución de litigios en línea (Unión Europea)",
+        "link_url": "https://ec.europa.eu/consumers/odr/",
+        "img_src": "https://upload.wikimedia.org/wikipedia/commons/8/84/European_Commission_logo.svg",
+        "img_alt": "Comisión Europea"
+    },
+    "en": {
+        "title": "Consumer Protection",
+        "link_text": "FTC Consumer Protection Guidelines",
+        "link_url": "https://www.ftc.gov/consumer-protection",
+        "img_src": "https://upload.wikimedia.org/wikipedia/commons/d/df/Seal_of_the_United_States_Federal_Trade_Commission.svg",
+        "img_alt": "FTC United States"
+    },
+    "fr": {
+        "title": "Protection du Consommateur",
+        "link_text": "Règlement en ligne des litiges de l'UE (RLL)",
+        "link_url": "https://ec.europa.eu/consumers/odr/",
+        "img_src": "https://upload.wikimedia.org/wikipedia/commons/8/84/European_Commission_logo.svg",
+        "img_alt": "Commission Européenne"
+    },
+    "de": {
+        "title": "Verbraucherschutz",
+        "link_text": "Online-Streitbeilegung-Plattform der EU (OS)",
+        "link_url": "https://ec.europa.eu/consumers/odr/",
+        "img_src": "https://upload.wikimedia.org/wikipedia/commons/8/84/European_Commission_logo.svg",
+        "img_alt": "Europäische Kommission"
+    },
+    "it": {
+        "title": "Tutela dei Consumatori",
+        "link_text": "Risoluzione delle controversie online dell'UE",
+        "link_url": "https://ec.europa.eu/consumers/odr/",
+        "img_src": "https://upload.wikimedia.org/wikipedia/commons/8/84/European_Commission_logo.svg",
+        "img_alt": "Commissione Europea"
+    },
+    "pt-br": {
+        "title": "Defesa do Consumidor",
+        "link_text": "Resolução de Litígios em Linha (União Europeia)",
+        "link_url": "https://ec.europa.eu/consumers/odr/",
+        "img_src": "https://upload.wikimedia.org/wikipedia/commons/8/84/European_Commission_logo.svg",
+        "img_alt": "Comissão Europeia"
+    },
+    "ru": {
+        "title": "Права потребителей",
+        "link_text": "Роспотребнадзор — защита прав потребителей",
+        "link_url": "https://www.rospotrebnadzor.ru",
+        "img_src": "https://upload.wikimedia.org/wikipedia/commons/4/45/Emblem_of_Rospotrebnadzor.svg",
+        "img_alt": "Роспотребнадзор РФ"
+    },
+    "zh": {
+        "title": "消费者权益保护",
+        "link_text": "中华人民共和国工业和信息化部 (MIIT)",
+        "link_url": "https://beian.miit.gov.cn",
+        "img_src": "https://upload.wikimedia.org/wikipedia/commons/5/52/Emblem_of_the_People%27s_Republic_of_China_%282%29.svg",
+        "img_alt": "工业和信息化部"
+    }
+}
+
 HOSTNAMES = {
     "AR": "greenwayglobal.ar",
     "MX": "greenwayglobal.mx",
@@ -244,6 +318,21 @@ def main():
                     link["href"] = urlunparse(u)
                 except Exception:
                     pass
+
+        # Update local compliance block dynamically
+        comp_data = COMPLIANCE_DATA.get(lang, COMPLIANCE_DATA["en"])
+        title_el = soup.find(id="complianceTitle")
+        link_el = soup.find(id="complianceLink")
+        img_el = soup.find(id="complianceImg")
+        img_link_el = soup.find(id="complianceImgLink")
+        
+        if title_el and link_el and img_el and img_link_el:
+            title_el.string = comp_data["title"]
+            link_el.string = comp_data["link_text"]
+            link_el["href"] = comp_data["link_url"]
+            img_el["src"] = comp_data["img_src"]
+            img_el["alt"] = comp_data["img_alt"]
+            img_link_el["href"] = comp_data["link_url"]
 
         # Update visual active flag and code in switcher
         flag_el = soup.find(class_="active-flag")
