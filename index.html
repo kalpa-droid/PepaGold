@@ -4827,10 +4827,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
-.accordion-btn .icon {
-  font-size: 1.5rem;
-
-
 <!-- =============================================
      SECCIÓN 10: PREGUNTAS FRECUENTES (NUEVO)
 ============================================= -->
@@ -5101,6 +5097,15 @@ document.addEventListener('DOMContentLoaded', () => {
   let exchangeRates = null;
   let currentPriceStr = "";
 
+  // Parsear precios locales: distingue separador de miles (.) vs decimal (.)
+  // "64.000" → 64000 (miles), "33.20" → 33.20 (decimal), "2.860" → 2860 (miles)
+  function parseLocalPrice(priceStr) {
+    if (/\.\d{3}$/.test(priceStr)) {
+      return parseFloat(priceStr.replace(/\./g, ''));
+    }
+    return parseFloat(priceStr);
+  }
+
   // Helper function to format currency using Intl.NumberFormat to respect locales
   function formatCurrency(amount, currency, symbol) {
     try {
@@ -5175,8 +5180,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (officialPrices[geoKey]) {
       const config = officialPrices[geoKey];
       // Format official prices nicely
-      const numericPrice = parseFloat(config.price.replace('.', ''));
-      const numericPriceOld = parseFloat(config.priceOld.replace('.', ''));
+      const numericPrice = parseLocalPrice(config.price);
+      const numericPriceOld = parseLocalPrice(config.priceOld);
       priceStr = formatCurrency(numericPrice, config.currency, config.symbol);
       priceOldStr = formatCurrency(numericPriceOld, config.currency, config.symbol);
       domainToUse = config.domain;
