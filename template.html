@@ -411,6 +411,9 @@
 <script>
   (function() {
     try {
+      // Skip auto-redirect when testing local file:/// protocol
+      if (window.location.protocol === 'file:') return;
+
       const savedLang = localStorage.getItem('preferred-lang');
       const path = window.location.pathname;
       
@@ -434,15 +437,18 @@
         "zh": "/zh/"
       };
 
-      // Only redirect if at the root "/" or "/index.html"
-      const rootPath = prefix + "/";
-      const rootIndex = prefix + "/index.html";
-      
-      if (path === rootPath || path === rootIndex || path === "/" || path === "/index.html") {
+      const normalize = function(p) {
+        return p.replace(/\/+$/, "").replace(/\/index\.html$/, "");
+      };
+
+      const normPath = normalize(path);
+      const normRoot = normalize(prefix + "/");
+
+      if (normPath === normRoot) {
         if (savedLang && paths[savedLang]) {
-          const target = prefix + paths[savedLang] + "index.html";
-          if (path !== target) {
-            window.location.href = target;
+          const targetPath = prefix + paths[savedLang];
+          if (normalize(path) !== normalize(targetPath)) {
+            window.location.href = targetPath;
             return;
           }
         } else {
@@ -461,7 +467,7 @@
           else if (browserLang.startsWith("es-es")) targetLang = "es-es";
           
           if (targetLang && paths[targetLang] && paths[targetLang] !== "/") {
-            window.location.href = prefix + paths[targetLang] + "index.html";
+            window.location.href = prefix + paths[targetLang];
           }
         }
       }
@@ -5131,18 +5137,33 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       localStorage.setItem('preferred-lang', langCode);
     } catch (e) {}
+
+    const isLocal = window.location.protocol === 'file:';
     
-    const path = window.location.pathname;
-    let prefix = "";
-    const baseMatch = path.match(/^(\/.*\/PepaGold)\//) || path.match(/^(\/.*\/PepaGold)$/);
-    if (baseMatch) {
-      prefix = baseMatch[1];
-    }
-    
-    if (targetUrl === '/') {
-      window.location.href = prefix + "/index.html";
+    if (isLocal) {
+      const pathParts = window.location.pathname.split('/');
+      const parentFolder = pathParts[pathParts.length - 2];
+      const isRoot = parentFolder === 'PepaGold';
+      
+      let base = isRoot ? './' : '../';
+      if (targetUrl === '/') {
+        window.location.href = base + 'index.html';
+      } else {
+        window.location.href = base + targetUrl.replace(/^\//, '') + 'index.html';
+      }
     } else {
-      window.location.href = prefix + targetUrl + "index.html";
+      const path = window.location.pathname;
+      let prefix = "";
+      const baseMatch = path.match(/^(\/.*\/PepaGold)\//) || path.match(/^(\/.*\/PepaGold)$/);
+      if (baseMatch) {
+        prefix = baseMatch[1];
+      }
+      
+      if (targetUrl === '/') {
+        window.location.href = prefix + "/";
+      } else {
+        window.location.href = prefix + targetUrl;
+      }
     }
   };
 
