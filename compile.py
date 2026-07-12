@@ -265,6 +265,17 @@ def main():
                     classes.remove("is-selected")
                     opt["class"] = classes
 
+        # Remove Argentinian-specific legal elements for other countries
+        if config["country_code"] != "AR":
+            compliance_el = soup.find(class_="footer-compliance")
+            if compliance_el:
+                compliance_el.decompose()
+            
+            # Hide the data fiscal link/logo container completely
+            afip_links = soup.find_all("a", href=lambda href: href and "afip.gob.ar" in href)
+            for l in afip_links:
+                l.decompose()
+
         # Prepend ../ to relative assets paths if we are inside a subdirectory
         if config["folder"]:
             adjust_paths(soup)
