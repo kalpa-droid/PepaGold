@@ -240,7 +240,8 @@ const translations = {
     "care4_title": "Esponja Limpiadora",
     "care15_title": "Manopla-Esponja de Doble Cara",
     "care6_title": "Manopla Suave",
-    "ritual_step_label": "PASO"
+    "ritual_step_label": "PASO",
+    "about_rep_auth": "Representante Autorizado"
   },
   "es-mx": {
     "marquee_promo": "🔥 Oferta por Tiempo Limitado — ",
@@ -477,7 +478,8 @@ const translations = {
     "care4_title": "Esponja Limpiadora",
     "care15_title": "Manopla-Esponja de Doble Cara",
     "care6_title": "Manopla Suave",
-    "ritual_step_label": "PASO"
+    "ritual_step_label": "PASO",
+    "about_rep_auth": "Representante Autorizado"
   },
   "es-es": {
     "marquee_promo": "🔥 Oferta por Tiempo Limitado — ",
@@ -567,7 +569,7 @@ const translations = {
     "rev5_short": "“Mi piel cambió y no exagero.”",
     "rev5_full": "La uso todos los días en la cara y cuello y noto muchísimo la diferencia. Me quita toda la suciedad del día y el maquillaje, pero lo hace tan suave que ni siquiera siento que me está limpiando profundo (y lo hace). Después de un mes usándola noto la piel más firme y con más vida. Mi novio me dijo \"qué te hiciste que te ves súper bien\" JAJA. Compren.",
     "rev5_author": "— caro.glow",
-    "rev6_short": "“Lego cansadísima y en 2 min estoy lista.”",
+    "rev6_short": "“Llego cansadísima y en 2 min estoy lista.”",
     "rev6_full": "Esas noches que llegas cansadísima y lo último que quieres es pararte 15 minutos a desmaquillarte con algodón y agua micelar... bueno, con esto te echas agua, te pasas la manopla y en dos minutos ya estás limpia para dormir. Se ajusta súper bien a la mano para que no se te escape. Y nada de rojeces al día siguiente. Súper recomendado.",
     "rev6_author": "— Paula Gómez",
     "time_tag": "EL PROCESO",
@@ -671,7 +673,7 @@ const translations = {
     "isp_a4": "María T., 25",
     "isp_q5": "“Mi piel cambió y no exagero.”",
     "isp_a5": "caro.glow, 22",
-    "isp_q6": "“Lego cansadísima y en 2 min estoy lista.”",
+    "isp_q6": "“Llego cansadísima y en 2 min estoy lista.”",
     "isp_a6": "Paula Gómez, 24",
     "prod_micellar": "Agua micelar",
     "prod_balm": "Bálsamo limpiador",
@@ -714,7 +716,8 @@ const translations = {
     "care4_title": "Esponja Limpiadora",
     "care15_title": "Manopla-Esponja de Doble Cara",
     "care6_title": "Manopla Suave",
-    "ritual_step_label": "PASO"
+    "ritual_step_label": "PASO",
+    "about_rep_auth": "Representante Autorizado"
   },
   "en": {
     "marquee_promo": "🔥 Limited Time Offer — ",
@@ -951,7 +954,8 @@ const translations = {
     "care4_title": "Cleansing Sponge",
     "care15_title": "Double-Sided Mitt Sponge",
     "care6_title": "Soft Mitt",
-    "ritual_step_label": "STEP"
+    "ritual_step_label": "STEP",
+    "about_rep_auth": "Authorized Representative"
   },
   "fr": {
     "marquee_promo": "🔥 Offre Limitée — ",
@@ -1188,7 +1192,8 @@ const translations = {
     "care4_title": "Éponge Démaquillante",
     "care15_title": "Gant-Éponge Double Face",
     "care6_title": "Gant Doux",
-    "ritual_step_label": "ÉTAPE"
+    "ritual_step_label": "ÉTAPE",
+    "about_rep_auth": "Représentant Autorisé"
   },
   "de": {
     "marquee_promo": "🔥 Limitiertes Angebot — ",
@@ -1425,7 +1430,8 @@ const translations = {
     "care4_title": "Reinigungsschwamm",
     "care15_title": "Doppelseitiger Handschuhschwamm",
     "care6_title": "Weicher Handschuh",
-    "ritual_step_label": "SCHRITT"
+    "ritual_step_label": "SCHRITT",
+    "about_rep_auth": "Autorisierter Vertreter"
   },
   "it": {
     "marquee_promo": "🔥 Offerta a Tempo Limitato — ",
@@ -1662,7 +1668,8 @@ const translations = {
     "care4_title": "Spugna Detergente",
     "care15_title": "Guanto-Spugna a Doppia Faccia",
     "care6_title": "Guanto Morbido",
-    "ritual_step_label": "PASSO"
+    "ritual_step_label": "PASSO",
+    "about_rep_auth": "Rappresentante Autorizzato"
   },
   "pt-br": {
     "marquee_promo": "🔥 Oferta por Tempo Limitado — ",
@@ -1899,7 +1906,8 @@ const translations = {
     "care4_title": "Esponja de Limpeza",
     "care15_title": "Manopla-Esponja de Dupla Face",
     "care6_title": "Manopla Suave",
-    "ritual_step_label": "PASSO"
+    "ritual_step_label": "PASSO",
+    "about_rep_auth": "Representante Autorizado"
   },
   "ru": {
     "marquee_promo": "🔥 Лимитированное предложение — ",
@@ -2136,7 +2144,8 @@ const translations = {
     "care4_title": "Очищающий спонж",
     "care15_title": "Двусторонняя варежка-спонж",
     "care6_title": "Мягкая варежка",
-    "ritual_step_label": "ШАГ"
+    "ritual_step_label": "ШАГ",
+    "about_rep_auth": "Авторизованный представитель"
   },
   "zh": {
     "marquee_promo": "🔥 限时特惠 — ",
@@ -2373,7 +2382,8 @@ const translations = {
     "care4_title": "洁面卸妆海绵",
     "care15_title": "双面洁面卸妆手套",
     "care6_title": "柔肤洁面手套",
-    "ritual_step_label": "步骤"
+    "ritual_step_label": "步骤",
+    "about_rep_auth": "官方授权代表"
   }
 };
 
