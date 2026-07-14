@@ -241,7 +241,15 @@ const translations = {
     "care15_title": "Manopla-Esponja de Doble Cara",
     "care6_title": "Manopla Suave",
     "ritual_step_label": "PASO",
-    "about_rep_auth": "Representante Autorizado"
+    "about_rep_auth": "Representante Autorizado",
+    "cookie_greeting_morning": "¡Buen día! ☀️",
+    "cookie_greeting_afternoon": "¡Buenas tardes! 🌤️",
+    "cookie_greeting_evening": "¡Buenas noches! 🌙",
+    "cookie_thanks": "Te agradecemos por visitar PepaGold.",
+    "cookie_text": "Para darte la mejor experiencia y saber de dónde nos visitas, usamos cookies analíticas.",
+    "cookie_accept": "¡Vamos! ✨",
+    "cookie_decline": "Solo necesarias",
+    "cookie_wish": "¡Gracias! Que todos tus sueños se cumplan. ✨"
   },
   "es-mx": {
     "marquee_promo": "🔥 Oferta por Tiempo Limitado — ",
@@ -479,7 +487,15 @@ const translations = {
     "care15_title": "Manopla-Esponja de Doble Cara",
     "care6_title": "Manopla Suave",
     "ritual_step_label": "PASO",
-    "about_rep_auth": "Representante Autorizado"
+    "about_rep_auth": "Representante Autorizado",
+    "cookie_greeting_morning": "¡Buen día! ☀️",
+    "cookie_greeting_afternoon": "¡Buenas tardes! 🌤️",
+    "cookie_greeting_evening": "¡Buenas noches! 🌙",
+    "cookie_thanks": "Te agradecemos por visitar PepaGold.",
+    "cookie_text": "Para darte la mejor experiencia y saber de dónde nos visitas, usamos cookies analíticas.",
+    "cookie_accept": "¡Vamos! ✨",
+    "cookie_decline": "Solo necesarias",
+    "cookie_wish": "¡Gracias! Que todos tus sueños se cumplan. ✨"
   },
   "es-es": {
     "marquee_promo": "🔥 Oferta por Tiempo Limitado — ",
@@ -717,7 +733,15 @@ const translations = {
     "care15_title": "Manopla-Esponja de Doble Cara",
     "care6_title": "Manopla Suave",
     "ritual_step_label": "PASO",
-    "about_rep_auth": "Representante Autorizado"
+    "about_rep_auth": "Representante Autorizado",
+    "cookie_greeting_morning": "¡Buen día! ☀️",
+    "cookie_greeting_afternoon": "¡Buenas tardes! 🌤️",
+    "cookie_greeting_evening": "¡Buenas noches! 🌙",
+    "cookie_thanks": "Te agradecemos por visitar PepaGold.",
+    "cookie_text": "Para darte la mejor experiencia y saber de dónde nos visitas, usamos cookies analíticas.",
+    "cookie_accept": "¡Vamos! ✨",
+    "cookie_decline": "Solo necesarias",
+    "cookie_wish": "¡Gracias! Que todos tus sueños se cumplan. ✨"
   },
   "en": {
     "marquee_promo": "🔥 Limited Time Offer — ",
@@ -955,7 +979,15 @@ const translations = {
     "care15_title": "Double-Sided Mitt Sponge",
     "care6_title": "Soft Mitt",
     "ritual_step_label": "STEP",
-    "about_rep_auth": "Authorized Representative"
+    "about_rep_auth": "Authorized Representative",
+    "cookie_greeting_morning": "Good morning! ☀️",
+    "cookie_greeting_afternoon": "Good afternoon! 🌤️",
+    "cookie_greeting_evening": "Good evening! 🌙",
+    "cookie_thanks": "Thank you for visiting PepaGold.",
+    "cookie_text": "To give you the best experience and know where you visit us from, we use analytical cookies.",
+    "cookie_accept": "Let's go! ✨",
+    "cookie_decline": "Necessary only",
+    "cookie_wish": "Thank you! May all your dreams come true. ✨"
   },
   "fr": {
     "marquee_promo": "🔥 Offre Limitée — ",
@@ -1193,7 +1225,15 @@ const translations = {
     "care15_title": "Gant-Éponge Double Face",
     "care6_title": "Gant Doux",
     "ritual_step_label": "ÉTAPE",
-    "about_rep_auth": "Représentant Autorisé"
+    "about_rep_auth": "Représentant Autorisé",
+    "cookie_greeting_morning": "Bon matin ! ☀️",
+    "cookie_greeting_afternoon": "Bon après-midi ! 🌤️",
+    "cookie_greeting_evening": "Bonsoir ! 🌙",
+    "cookie_thanks": "Merci de visiter PepaGold.",
+    "cookie_text": "Pour vous offrir la meilleure expérience et savoir d'où vous nous visitez, nous utilisons des cookies analytiques.",
+    "cookie_accept": "Allons-y ! ✨",
+    "cookie_decline": "Nécessaires seulement",
+    "cookie_wish": "Merci ! Que tous vos rêves se réalisent. ✨"
   },
   "de": {
     "marquee_promo": "🔥 Limitiertes Angebot — ",
@@ -1431,7 +1471,15 @@ const translations = {
     "care15_title": "Doppelseitiger Handschuhschwamm",
     "care6_title": "Weicher Handschuh",
     "ritual_step_label": "SCHRITT",
-    "about_rep_auth": "Autorisierter Vertreter"
+    "about_rep_auth": "Autorisierter Vertreter",
+    "cookie_greeting_morning": "Guten Morgen! ☀️",
+    "cookie_greeting_afternoon": "Guten Tag! 🌤️",
+    "cookie_greeting_evening": "Guten Abend! 🌙",
+    "cookie_thanks": "Vielen Dank für Ihren Besuch bei PepaGold.",
+    "cookie_text": "Um Ihnen die beste Erfahrung zu bieten und zu wissen, von wo aus Sie uns besuchen, verwenden wir analytische Cookies.",
+    "cookie_accept": "Los geht's! ✨",
+    "cookie_decline": "Nur notwendige",
+    "cookie_wish": "Danke! Mögen all Ihre Träume in Erfüllung gehen. ✨"
   },
   "it": {
     "marquee_promo": "🔥 Offerta a Tempo Limitato — ",
@@ -1669,7 +1717,15 @@ const translations = {
     "care15_title": "Guanto-Spugna a Doppia Faccia",
     "care6_title": "Guanto Morbido",
     "ritual_step_label": "PASSO",
-    "about_rep_auth": "Rappresentante Autorizzato"
+    "about_rep_auth": "Rappresentante Autorizzato",
+    "cookie_greeting_morning": "Buon giorno! ☀️",
+    "cookie_greeting_afternoon": "Buon pomeriggio! 🌤️",
+    "cookie_greeting_evening": "Buona sera! 🌙",
+    "cookie_thanks": "Grazie per aver visitato PepaGold.",
+    "cookie_text": "Per offrirti la migliore esperienza e sapere da dove ci visiti, utilizziamo cookie analitici.",
+    "cookie_accept": "Andiamo! ✨",
+    "cookie_decline": "Solo necessarie",
+    "cookie_wish": "Grazie! Che tutti i tuoi sogni si avverino. ✨"
   },
   "pt-br": {
     "marquee_promo": "🔥 Oferta por Tempo Limitado — ",
@@ -1907,7 +1963,15 @@ const translations = {
     "care15_title": "Manopla-Esponja de Dupla Face",
     "care6_title": "Manopla Suave",
     "ritual_step_label": "PASSO",
-    "about_rep_auth": "Representante Autorizado"
+    "about_rep_auth": "Representante Autorizado",
+    "cookie_greeting_morning": "Bom dia! ☀️",
+    "cookie_greeting_afternoon": "Boa tarde! 🌤️",
+    "cookie_greeting_evening": "Boa noite! 🌙",
+    "cookie_thanks": "Agradecemos por visitar a PepaGold.",
+    "cookie_text": "Para lhe dar a melhor experiência e saber de onde nos visita, usamos cookies analíticos.",
+    "cookie_accept": "Vamos lá! ✨",
+    "cookie_decline": "Apenas necessárias",
+    "cookie_wish": "Obrigado! Que todos os seus sonhos se realizem. ✨"
   },
   "ru": {
     "marquee_promo": "🔥 Лимитированное предложение — ",
@@ -2145,7 +2209,15 @@ const translations = {
     "care15_title": "Двусторонняя варежка-спонж",
     "care6_title": "Мягкая варежка",
     "ritual_step_label": "ШАГ",
-    "about_rep_auth": "Авторизованный представитель"
+    "about_rep_auth": "Авторизованный представитель",
+    "cookie_greeting_morning": "Доброе утро! ☀️",
+    "cookie_greeting_afternoon": "Добрый день! 🌤️",
+    "cookie_greeting_evening": "Добрый вечер! 🌙",
+    "cookie_thanks": "Спасибо, что посетили PepaGold.",
+    "cookie_text": "Чтобы сделать сайт еще лучше и знать, откуда вы нас посещаете, мы используем аналитические файлы cookie.",
+    "cookie_accept": "Поехали! ✨",
+    "cookie_decline": "Только обязательные",
+    "cookie_wish": "Спасибо! Пусть все твои мечты сбудутся. ✨"
   },
   "zh": {
     "marquee_promo": "🔥 限时特惠 — ",
@@ -2383,7 +2455,15 @@ const translations = {
     "care15_title": "双面洁面卸妆手套",
     "care6_title": "柔肤洁面手套",
     "ritual_step_label": "步骤",
-    "about_rep_auth": "官方授权代表"
+    "about_rep_auth": "官方授权代表",
+    "cookie_greeting_morning": "早上好！☀️",
+    "cookie_greeting_afternoon": "下午好！🌤️",
+    "cookie_greeting_evening": "晚上好！🌙",
+    "cookie_thanks": "感谢您访问 PepaGold。",
+    "cookie_text": "为了给您提供最佳体验并了解您的访问来源，我们使用分析型 Cookie。",
+    "cookie_accept": "出发！✨",
+    "cookie_decline": "仅必要",
+    "cookie_wish": "谢谢！愿你所有的梦想都成真。✨"
   }
 };
 

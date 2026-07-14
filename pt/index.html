@@ -34,11 +34,33 @@
 <link href="https://pepagold.blog/ru/" hreflang="ru-RU" rel="alternate"/>
 <link href="https://pepagold.blog/zh/" hreflang="zh-Hans" rel="alternate"/>
 <link href="https://pepagold.blog/" hreflang="x-default" rel="alternate"/>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XYZNW84LHP"></script>
+<!-- Google Consent Mode v2 Default State -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  
+  // Check if consent was already given in previous session
+  var savedConsent = localStorage.getItem('pepagold-cookie-consent');
+  if (savedConsent === 'granted') {
+    gtag('consent', 'default', {
+      'ad_storage': 'granted',
+      'ad_user_data': 'granted',
+      'ad_personalization': 'granted',
+      'analytics_storage': 'granted'
+    });
+  } else {
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'wait_for_update': 500
+    });
+  }
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XYZNW84LHP"></script>
+<script>
   gtag('js', new Date());
   gtag('config', 'G-XYZNW84LHP');
 </script>
@@ -228,10 +250,188 @@
   }
 }
 
+      /* Contenedor del Banner de Cookies con perspectiva 3D */
+      .cookie-banner-container {
+        position: fixed;
+        bottom: 25px;
+        left: 25px;
+        width: 380px;
+        height: 220px;
+        z-index: 99999;
+        perspective: 1000px;
+        transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.5s ease;
+      }
+
+      /* La tarjeta que rota */
+      .cookie-card {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 0 15px 35px rgba(42, 37, 35, 0.15);
+        border-radius: 20px;
+      }
+
+      /* Estado girado (Back) */
+      .cookie-card.is-flipped {
+        transform: rotateY(180deg);
+      }
+
+      /* Las caras del banner */
+      .cookie-face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 20px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(212, 140, 144, 0.3);
+      }
+
+      /* Cara Frontal */
+      .cookie-front {
+        justify-content: space-between;
+        z-index: 2;
+        transform: rotateY(0deg);
+      }
+
+      /* Cara Trasera */
+      .cookie-back {
+        justify-content: center;
+        align-items: center;
+        transform: rotateY(180deg);
+        background: rgba(255, 255, 255, 0.98);
+        text-align: center;
+      }
+
+      /* Elementos del frente */
+      .cookie-greeting {
+        font-family: var(--font-serif);
+        font-size: var(--size-body-large);
+        color: var(--color-dark);
+        font-weight: var(--weight-medium);
+        margin-bottom: 2px;
+      }
+
+      .cookie-thanks {
+        font-family: var(--font-sans);
+        font-size: 0.8rem;
+        font-weight: var(--weight-semibold);
+        color: var(--color-primary);
+        margin-bottom: 4px;
+      }
+
+      .cookie-desc {
+        font-family: var(--font-sans);
+        font-size: var(--size-caption);
+        line-height: 1.4;
+        color: var(--color-dark-muted);
+        font-weight: var(--weight-light);
+        margin-bottom: 12px;
+      }
+
+      .cookie-buttons {
+        display: flex;
+        gap: 12px;
+        justify-content: flex-end;
+      }
+
+      /* Botones del banner */
+      .cookie-btn-decline {
+        padding: 8px 16px;
+        border-radius: 30px;
+        border: 1px solid rgba(212, 140, 144, 0.4);
+        background: transparent;
+        color: var(--color-dark-muted);
+        font-family: var(--font-sans);
+        font-size: 12px;
+        font-weight: var(--weight-medium);
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .cookie-btn-decline:hover {
+        background: rgba(212, 140, 144, 0.08);
+        color: var(--color-dark);
+        border-color: var(--color-primary);
+      }
+
+      .cookie-btn-accept {
+        padding: 8px 20px;
+        border-radius: 30px;
+        border: none;
+        background: var(--color-primary);
+        color: #fff;
+        font-family: var(--font-sans);
+        font-size: 12px;
+        font-weight: var(--weight-semibold);
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(212, 140, 144, 0.25);
+        transition: all 0.3s ease;
+      }
+
+      .cookie-btn-accept:hover {
+        background: var(--color-primary-hover);
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(212, 140, 144, 0.35);
+      }
+
+      /* Elementos del dorso (Deseo) */
+      .cookie-wish-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .cookie-wish-icon {
+        font-size: 2rem;
+        animation: floatIcon 2s ease-in-out infinite;
+      }
+
+      .cookie-wish-text {
+        font-family: var(--font-serif);
+        font-size: var(--size-body-large);
+        color: var(--color-dark);
+        line-height: 1.4;
+        margin: 0;
+        padding: 0 10px;
+      }
+
+      @keyframes floatIcon {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-6px); }
+      }
+
+      /* Ocultar el contenedor con fade out */
+      .cookie-banner-container.is-hidden {
+        transform: translateY(30px);
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      /* Responsividad */
+      @media (max-width: 600px) {
+        .cookie-banner-container {
+          left: 15px;
+          right: 15px;
+          bottom: 15px;
+          width: auto;
+          height: 230px;
+        }
+      }
+
       :root {
         /* Font Families */
         --font-serif: Georgia, "Times New Roman", serif;
         --font-sans: 'Poppins', sans-serif;
+
 
         /* Font Weights */
         --weight-light: 300;
@@ -5498,6 +5698,102 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+</script>
+<!-- =============================================
+     BANNER DE COOKIES INTERACTIVO 3D (saludo dinámico y buenos deseos)
+     ============================================= -->
+<div class="cookie-banner-container" id="cookieBannerContainer" style="display: none;">
+<div class="cookie-card" id="cookieCard">
+<!-- Cara Frontal (Consentimiento y Saludo Horario) -->
+<div class="cookie-face cookie-front">
+<h4 class="cookie-greeting">
+<span data-i18n="cookie_greeting_morning" id="cookieMorning" style="display: none;">Bom dia! ☀️</span>
+<span data-i18n="cookie_greeting_afternoon" id="cookieAfternoon" style="display: none;">Boa tarde! 🌤️</span>
+<span data-i18n="cookie_greeting_evening" id="cookieEvening" style="display: none;">Boa noite! 🌙</span>
+</h4>
+<p class="cookie-thanks" data-i18n="cookie_thanks">Agradecemos por visitar a PepaGold.</p>
+<p class="cookie-desc" data-i18n="cookie_text">Para lhe dar a melhor experiência e saber de onde nos visita, usamos cookies analíticos.</p>
+<div class="cookie-buttons">
+<button class="cookie-btn-decline" data-i18n="cookie_decline" id="cookieDeclineBtn">Apenas necessárias</button>
+<button class="cookie-btn-accept" data-i18n="cookie_accept" id="cookieAcceptBtn">Vamos lá! ✨</button>
+</div>
+</div>
+<!-- Cara Trasera (Mensaje de Buenos Deseos) -->
+<div class="cookie-face cookie-back">
+<div class="cookie-wish-content">
+<span class="cookie-wish-icon">🌸</span>
+<p class="cookie-wish-text" data-i18n="cookie_wish">Obrigado! Que todos os seus sonhos se realizem. ✨</p>
+</div>
+</div>
+</div>
+</div>
+<script>
+(function() {
+  'use strict';
+
+  const container = document.getElementById('cookieBannerContainer');
+  const card = document.getElementById('cookieCard');
+  const acceptBtn = document.getElementById('cookieAcceptBtn');
+  const declineBtn = document.getElementById('cookieDeclineBtn');
+
+  if (!container || !card) return;
+
+  // 1. Comprobar si ya existe consentimiento guardado
+  const savedConsent = localStorage.getItem('pepagold-cookie-consent');
+  if (savedConsent) {
+    return;
+  }
+
+  // 2. Mostrar banner si no hay consentimiento
+  container.style.display = 'block';
+
+  // 3. Activar el saludo horario correspondiente de forma local
+  const hour = new Date().getHours();
+  if (hour >= 5 && hour < 12) {
+    document.getElementById('cookieMorning').style.display = 'inline';
+  } else if (hour >= 12 && hour < 20) {
+    document.getElementById('cookieAfternoon').style.display = 'inline';
+  } else {
+    document.getElementById('cookieEvening').style.display = 'inline';
+  }
+
+  // 4. Lógica de Aceptar (¡Vamos! ✨)
+  acceptBtn.addEventListener('click', function() {
+    // Activar animación 3D Flip
+    card.classList.add('is-flipped');
+
+    // Registrar consentimiento en localStorage
+    localStorage.setItem('pepagold-cookie-consent', 'granted');
+
+    // Actualizar Google Consent Mode v2
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted',
+        'analytics_storage': 'granted'
+      });
+    }
+
+    // Esperar 2.5 segundos con el mensaje de deseos y luego desvanecer hacia abajo
+    setTimeout(function() {
+      container.classList.add('is-hidden');
+      setTimeout(function() {
+        container.style.display = 'none';
+      }, 500);
+    }, 2500);
+  });
+
+  // 5. Lógica de Rechazar (Solo necesarias)
+  declineBtn.addEventListener('click', function() {
+    localStorage.setItem('pepagold-cookie-consent', 'denied');
+    
+    container.classList.add('is-hidden');
+    setTimeout(function() {
+      container.style.display = 'none';
+    }, 500);
+  });
+})();
 </script>
 </body>
 </html>
