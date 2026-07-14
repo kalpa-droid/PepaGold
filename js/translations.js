@@ -245,11 +245,11 @@ const translations = {
     "cookie_greeting_morning": "¡Buen día! ☀️",
     "cookie_greeting_afternoon": "¡Buenas tardes! 🌤️",
     "cookie_greeting_evening": "¡Buenas noches! 🌙",
-    "cookie_thanks": "Te agradecemos por visitar PepaGold.",
-    "cookie_text": "Para darte la mejor experiencia y saber de dónde nos visitas, usamos cookies analíticas.",
-    "cookie_accept": "¡Vamos! ✨",
+    "cookie_thanks": "Estás invitada/o a descubrir PepaGold. ✨",
+    "cookie_text": "Te invitamos a explorar una rutina de cuidado facial consciente y libre de químicos. Para acompañarte mejor en tu recorrido y conocer desde dónde nos visitas, ¿nos permites utilizar cookies analíticas?",
+    "cookie_accept": "¡Acepto la invitación! ✨",
     "cookie_decline": "Solo necesarias",
-    "cookie_wish": "¡Gracias! Que todos tus sueños se cumplan. ✨"
+    "cookie_wish": "¡Muchas gracias! Que todos tus sueños se cumplan en este día. ✨"
   },
   "es-mx": {
     "marquee_promo": "🔥 Oferta por Tiempo Limitado — ",
@@ -491,11 +491,11 @@ const translations = {
     "cookie_greeting_morning": "¡Buen día! ☀️",
     "cookie_greeting_afternoon": "¡Buenas tardes! 🌤️",
     "cookie_greeting_evening": "¡Buenas noches! 🌙",
-    "cookie_thanks": "Te agradecemos por visitar PepaGold.",
-    "cookie_text": "Para darte la mejor experiencia y saber de dónde nos visitas, usamos cookies analíticas.",
-    "cookie_accept": "¡Vamos! ✨",
+    "cookie_thanks": "Estás invitada/o a descubrir PepaGold. ✨",
+    "cookie_text": "Te invitamos a explorar una rutina de cuidado facial consciente y libre de químicos. Para acompañarte mejor en tu recorrido y conocer desde dónde nos visitas, ¿nos permites utilizar cookies analíticas?",
+    "cookie_accept": "¡Acepto la invitación! ✨",
     "cookie_decline": "Solo necesarias",
-    "cookie_wish": "¡Gracias! Que todos tus sueños se cumplan. ✨"
+    "cookie_wish": "¡Muchas gracias! Que todos tus sueños se cumplan en este día. ✨"
   },
   "es-es": {
     "marquee_promo": "🔥 Oferta por Tiempo Limitado — ",
@@ -737,11 +737,11 @@ const translations = {
     "cookie_greeting_morning": "¡Buen día! ☀️",
     "cookie_greeting_afternoon": "¡Buenas tardes! 🌤️",
     "cookie_greeting_evening": "¡Buenas noches! 🌙",
-    "cookie_thanks": "Te agradecemos por visitar PepaGold.",
-    "cookie_text": "Para darte la mejor experiencia y saber de dónde nos visitas, usamos cookies analíticas.",
-    "cookie_accept": "¡Vamos! ✨",
+    "cookie_thanks": "Estás invitada/o a descubrir PepaGold. ✨",
+    "cookie_text": "Te invitamos a explorar una rutina de cuidado facial consciente y libre de químicos. Para acompañarte mejor en tu recorrido y conocer desde dónde nos visitas, ¿nos permites utilizar cookies analíticas?",
+    "cookie_accept": "¡Acepto la invitación! ✨",
     "cookie_decline": "Solo necesarias",
-    "cookie_wish": "¡Gracias! Que todos tus sueños se cumplan. ✨"
+    "cookie_wish": "¡Muchas gracias! Que todos tus sueños se cumplan en este día. ✨"
   },
   "en": {
     "marquee_promo": "🔥 Limited Time Offer — ",
@@ -983,11 +983,11 @@ const translations = {
     "cookie_greeting_morning": "Good morning! ☀️",
     "cookie_greeting_afternoon": "Good afternoon! 🌤️",
     "cookie_greeting_evening": "Good evening! 🌙",
-    "cookie_thanks": "Thank you for visiting PepaGold.",
-    "cookie_text": "To give you the best experience and know where you visit us from, we use analytical cookies.",
-    "cookie_accept": "Let's go! ✨",
+    "cookie_thanks": "You are invited to discover PepaGold. ✨",
+    "cookie_text": "We invite you to explore a conscious, chemical-free facial care routine. To better accompany you and know where you visit us from, may we use analytical cookies?",
+    "cookie_accept": "Accept invitation! ✨",
     "cookie_decline": "Necessary only",
-    "cookie_wish": "Thank you! May all your dreams come true. ✨"
+    "cookie_wish": "Thank you very much! May all your dreams come true today. ✨"
   },
   "fr": {
     "marquee_promo": "🔥 Offre Limitée — ",
@@ -1229,11 +1229,11 @@ const translations = {
     "cookie_greeting_morning": "Bon matin ! ☀️",
     "cookie_greeting_afternoon": "Bon après-midi ! 🌤️",
     "cookie_greeting_evening": "Bonsoir ! 🌙",
-    "cookie_thanks": "Merci de visiter PepaGold.",
-    "cookie_text": "Pour vous offrir la meilleure expérience et savoir d'où vous nous visitez, nous utilisons des cookies analytiques.",
-    "cookie_accept": "Allons-y ! ✨",
+    "cookie_thanks": "Vous êtes invité(e) à découvrir PepaGold. ✨",
+    "cookie_text": "Nous vous invitons à explorer une routine de soin du visage consciente et sans produits chimiques. Pour mieux vous accompagner et savoir d'où vous nous visitez, nous autorisez-vous à utiliser des cookies analytiques ?",
+    "cookie_accept": "J'accepte l'invitation ! ✨",
     "cookie_decline": "Nécessaires seulement",
-    "cookie_wish": "Merci ! Que tous vos rêves se réalisent. ✨"
+    "cookie_wish": "Merci beaucoup ! Que tous vos rêves se réalisent aujourd'hui. ✨"
   },
   "de": {
     "marquee_promo": "🔥 Limitiertes Angebot — ",
@@ -1475,11 +1475,11 @@ const translations = {
     "cookie_greeting_morning": "Guten Morgen! ☀️",
     "cookie_greeting_afternoon": "Guten Tag! 🌤️",
     "cookie_greeting_evening": "Guten Abend! 🌙",
-    "cookie_thanks": "Vielen Dank für Ihren Besuch bei PepaGold.",
-    "cookie_text": "Um Ihnen die beste Erfahrung zu bieten und zu wissen, von wo aus Sie uns besuchen, verwenden wir analytische Cookies.",
-    "cookie_accept": "Los geht's! ✨",
+    "cookie_thanks": "Sie sind herzlich eingeladen, PepaGold zu entdecken. ✨",
+    "cookie_text": "Wir laden Sie ein, eine bewusste, chemiefreie Gesichtspflegeroutine zu entdecken. Um Sie besser begleiten zu können und zu wissen, von wo aus Sie uns besuchen, erlauben Sie uns die Verwendung von Analyse-Cookies?",
+    "cookie_accept": "Einladung annehmen! ✨",
     "cookie_decline": "Nur notwendige",
-    "cookie_wish": "Danke! Mögen all Ihre Träume in Erfüllung gehen. ✨"
+    "cookie_wish": "Vielen Dank! Mögen all Ihre Träume heute in Erfüllung gehen. ✨"
   },
   "it": {
     "marquee_promo": "🔥 Offerta a Tempo Limitato — ",
@@ -1721,11 +1721,11 @@ const translations = {
     "cookie_greeting_morning": "Buon giorno! ☀️",
     "cookie_greeting_afternoon": "Buon pomeriggio! 🌤️",
     "cookie_greeting_evening": "Buona sera! 🌙",
-    "cookie_thanks": "Grazie per aver visitato PepaGold.",
-    "cookie_text": "Per offrirti la migliore esperienza e sapere da dove ci visiti, utilizziamo cookie analitici.",
-    "cookie_accept": "Andiamo! ✨",
+    "cookie_thanks": "Sei invitato/a a scoprire PepaGold. ✨",
+    "cookie_text": "Ti invitiamo a esplorare una routine di cura del viso consapevole e senza sostanze chimiche. Per accompagnarti meglio nel tuo viaggio e sapere da dove ci visiti, ci consenti di utilizzare i cookie analitici?",
+    "cookie_accept": "Accetto l'invito! ✨",
     "cookie_decline": "Solo necessarie",
-    "cookie_wish": "Grazie! Che tutti i tuoi sogni si avverino. ✨"
+    "cookie_wish": "Grazie mille! Che tutti i tuoi sogni si avverino oggi. ✨"
   },
   "pt-br": {
     "marquee_promo": "🔥 Oferta por Tempo Limitado — ",
@@ -1967,11 +1967,11 @@ const translations = {
     "cookie_greeting_morning": "Bom dia! ☀️",
     "cookie_greeting_afternoon": "Boa tarde! 🌤️",
     "cookie_greeting_evening": "Boa noite! 🌙",
-    "cookie_thanks": "Agradecemos por visitar a PepaGold.",
-    "cookie_text": "Para lhe dar a melhor experiência e saber de onde nos visita, usamos cookies analíticos.",
-    "cookie_accept": "Vamos lá! ✨",
+    "cookie_thanks": "Você está convidado(a) a descobrir a PepaGold. ✨",
+    "cookie_text": "Convidamos você a explorar uma rotina de cuidados faciais consciente e livre de químicos. Para melhor acompanhar você em sua jornada e saber de onde nos visita, nos permite usar cookies analíticos?",
+    "cookie_accept": "Aceito o convite! ✨",
     "cookie_decline": "Apenas necessárias",
-    "cookie_wish": "Obrigado! Que todos os seus sonhos se realizem. ✨"
+    "cookie_wish": "Muito obrigado! Que todos os seus sonhos se realizem hoje. ✨"
   },
   "ru": {
     "marquee_promo": "🔥 Лимитированное предложение — ",
@@ -2213,11 +2213,11 @@ const translations = {
     "cookie_greeting_morning": "Доброе утро! ☀️",
     "cookie_greeting_afternoon": "Добрый день! 🌤️",
     "cookie_greeting_evening": "Добрый вечер! 🌙",
-    "cookie_thanks": "Спасибо, что посетили PepaGold.",
-    "cookie_text": "Чтобы сделать сайт еще лучше и знать, откуда вы нас посещаете, мы используем аналитические файлы cookie.",
-    "cookie_accept": "Поехали! ✨",
+    "cookie_thanks": "Добро пожаловать в мир PepaGold. ✨",
+    "cookie_text": "Мы приглашаем вас открыть для себя осознанный уход за лицом без химии. Чтобы сделать ваше путешествие комфортнее и знать, откуда вы, разрешите нам использовать аналитические файлы cookie?",
+    "cookie_accept": "Принять приглашение! ✨",
     "cookie_decline": "Только обязательные",
-    "cookie_wish": "Спасибо! Пусть все твои мечты сбудутся. ✨"
+    "cookie_wish": "Большое спасибо! Пусть все твои мечты сбудутся в этот день. ✨"
   },
   "zh": {
     "marquee_promo": "🔥 限时特惠 — ",
@@ -2459,11 +2459,11 @@ const translations = {
     "cookie_greeting_morning": "早上好！☀️",
     "cookie_greeting_afternoon": "下午好！🌤️",
     "cookie_greeting_evening": "晚上好！🌙",
-    "cookie_thanks": "感谢您访问 PepaGold。",
-    "cookie_text": "为了给您提供最佳体验并了解您的访问来源，我们使用分析型 Cookie。",
-    "cookie_accept": "出发！✨",
+    "cookie_thanks": "诚邀您探索 PepaGold 的纯物理护肤世界。✨",
+    "cookie_text": "为您开启物理极简洁面之旅。为了更好地与您相伴并了解您的访问来源，您是否同意我们使用分析型 Cookie？",
+    "cookie_accept": "接受邀请！✨",
     "cookie_decline": "仅必要",
-    "cookie_wish": "谢谢！愿你所有的梦想都成真。✨"
+    "cookie_wish": "非常感谢！愿你所有的梦想在今天都成真。✨"
   }
 };
 
