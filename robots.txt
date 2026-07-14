@@ -1,0 +1,8 @@
+# www.robotstxt.org/
+# For pepagold.blog
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://pepagold.blog/sitemap.xml

@@ -273,6 +273,18 @@ def main():
         if meta_desc:
             meta_desc["content"] = DESC_PATTERNS.get(lang, DESC_PATTERNS["en"])
         
+        # Set canonical URL
+        canonical_tag = soup.find("link", rel="canonical")
+        if canonical_tag:
+            folder_path = config["folder"] + "/" if config["folder"] else ""
+            canonical_tag["href"] = f"https://pepagold.blog/{folder_path}"
+
+        # Set og:url
+        og_url_tag = soup.find("meta", property="og:url")
+        if og_url_tag:
+            folder_path = config["folder"] + "/" if config["folder"] else ""
+            og_url_tag["content"] = f"https://pepagold.blog/{folder_path}"
+
         # Update html lang attribute
         soup.html["lang"] = lang.split("-")[0]
         
@@ -375,6 +387,54 @@ def main():
         # Update JSON-LD schema price
         html_out = html_out.replace('"price": "64000"', f'"price": "{int(config["price"])}"')
         html_out = html_out.replace('"priceCurrency": "ARS"', f'"priceCurrency": "{config["currency"]}"')
+        
+        # Update JSON-LD Offers URL
+        folder_path = config["folder"] + "/" if config["folder"] else ""
+        html_out = html_out.replace('"url": "https://pepagold.blog/"', f'"url": "https://pepagold.blog/{folder_path}"')
+
+        # Translate JSON-LD content dynamically
+        desc_producto = DESC_PATTERNS.get(lang, DESC_PATTERNS["en"]).replace('"', '\\"')
+        html_out = html_out.replace('"description": "Set reutilizable para limpiar rostro, cuello y escote solo con agua. Tecnología de microfibra UpPoly que elimina maquillaje e impurezas con suavidad."', f'"description": "{desc_producto}"')
+        html_out = html_out.replace('"description": "Set reutilizable de microfibra UpPoly para limpiar rostro, cuello y escote solo con agua. Sin químicos. Dura hasta 2 años."', f'"description": "{desc_producto}"')
+        
+        # Translate reviews in JSON-LD
+        rev1_body = dict_trans.get("rev1_short", "").strip('“"”').replace('"', '\\"')
+        html_out = html_out.replace('"reviewBody": "¡Me cambió la vida! Ya no gasto en discos de algodón ni desmaquillantes."', f'"reviewBody": "{rev1_body}"')
+        
+        rev2_body = dict_trans.get("rev2_short", "").strip('“"”').replace('"', '\\"')
+        html_out = html_out.replace('"reviewBody": "Súper suave, ideal para mi piel sensible."', f'"reviewBody": "{rev2_body}"')
+        
+        # Translate FAQPage in JSON-LD
+        for i in range(1, 6):
+            q_key = f"faq_q{i}"
+            a_key = f"faq_a{i}"
+            if q_key in dict_trans and a_key in dict_trans:
+                q_text_orig = ""
+                a_text_orig = ""
+                if i == 1:
+                    q_text_orig = "¿Cómo se lava la fibra después de usarla?"
+                    a_text_orig = "Después de cada uso, lavá tu producto CARE con jabón neutro (blanco) y agua tibia. Frotá suavemente con las manos, enjuagá bien y dejá secar al aire libre. No uses suavizante ni blanqueador, ya que pueden dañar las microfibras."
+                elif i == 2:
+                    q_text_orig = "¿Sirve para pieles con acné o rosácea?"
+                    a_text_orig = "¡Sí! Es justamente ideal para pieles sensibles, con acné o rosácea. Al limpiar solo con agua y sin necesidad de químicos, no irritás ni alterás tu barrera cutánea. La microfibra UpPoly trabaja de forma mecánica ultra-suave."
+                elif i == 3:
+                    q_text_orig = "¿Realmente dura 2 años?"
+                    a_text_orig = "Sí. Con el cuidado adecuado (lavado con jabón neutro y secado al aire), las fibras UpPoly mantienen sus propiedades de limpieza durante más de 500 lavados, lo que equivale a aproximadamente 2 años de uso diario."
+                elif i == 4:
+                    q_text_orig = "¿Puedo usarlo con maquillaje waterproof?"
+                    a_text_orig = "Sí. La tecnología de microfibra UpPoly captura eficazmente incluso el maquillaje de larga duración y waterproof, como máscaras de pestañas resistentes al agua. Solo necesitás humedecer la fibra con agua tibia."
+                elif i == 5:
+                    q_text_orig = "¿Es apto para todo tipo de piel?"
+                    a_text_orig = "Absolutamente. El set Laska Mini es apto para pieles secas, grasas, mixtas, sensibles y maduras. Al no utilizar químicos, se adapta a cualquier tipo de piel sin causar reacciones adversas."
+                
+                q_trans = dict_trans[q_key].replace('"', '\\"')
+                a_trans = dict_trans[a_key].replace('"', '\\"')
+                html_out = html_out.replace(f'"name": "{q_text_orig}"', f'"name": "{q_trans}"')
+                html_out = html_out.replace(f'"text": "{a_text_orig}"', f'"text": "{a_trans}"')
+                
+        # Translate Organization in JSON-LD
+        org_desc = dict_trans.get("about_indep_desc", "PepaGold is an authorized independent distributor of Greenway Global.").replace('"', '\\"')
+        html_out = html_out.replace('"description": "Plataforma informativa independiente sobre los productos eco-friendly de cuidado facial de Greenway Global."', f'"description": "{org_desc}"')
 
         # Clean static values in HTML card prices if any
         # (Template defaults to ARS price classes)
