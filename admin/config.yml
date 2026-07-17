@@ -34,5 +34,11 @@ collections:
           - "💬 Testimonios y Estilo de Vida"
           - "📈 Tendencias Globales"
       - {label: "Descripción Breve", name: "description", widget: "text", i18n: true, hint: "Aparecerá en el índice y metadatos SEO"}
-      - {label: "Imagen de Portada", name: "image", widget: "image", required: false, i18n: true}
+      - label: "Archivos Multimedia (Portada y ZigZag)"
+        name: "media"
+        widget: "list"
+        i18n: true
+        required: false
+        hint: "Puedes subir 1 o más fotos y videos (.mp4). Se organizarán automáticamente."
+        field: {label: "Archivo", name: "file", widget: "file"}
       - {label: "Cuerpo del Artículo", name: "body", widget: "markdown", i18n: true}
