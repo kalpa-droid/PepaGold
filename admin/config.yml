@@ -6,6 +6,11 @@ backend:
 
 locale: "es"
 
+i18n:
+  structure: multiple_folders
+  locales: [es-ar, es-mx, es-es, en-us, fr-fr, de-de, it-it, pt-br, ru-ru, zh-hans]
+  default_locale: es-ar
+
 media_folder: "assets/imagenes/blog"
 public_folder: "/assets/imagenes/blog"
 
@@ -18,7 +23,8 @@ collections:
     label: "Artículos del blog"
     label_singular: "Artículo"
     folder: "blog/posts"
-    media_folder: "/assets/imagenes/blog/{{slug}}"
+    i18n: true
+    media_folder: "{{slug}}"
     public_folder: "/assets/imagenes/blog/{{slug}}"
     create: true
     slug: "{{slug}}"
@@ -27,18 +33,20 @@ collections:
     summary: "{{title}} — {{locale}}"
     sortable_fields: ["date", "title", "category"]
     fields:
-      - { label: "Título", name: "title", widget: "string", hint: "El H1 del artículo, con la keyword principal" }
-      - { label: "Descripción (meta description)", name: "description", widget: "text", hint: "155 caracteres aprox, para Google y redes" }
-      - { label: "Slug (URL)", name: "slug", widget: "string", hint: "Solo minúsculas y guiones, ej: viento-zonda-cuidado-piel" }
+      - { label: "Título", name: "title", widget: "string", i18n: true, hint: "El H1 del artículo, con la keyword principal" }
+      - { label: "Descripción (meta description)", name: "description", widget: "text", i18n: true, hint: "155 caracteres aprox, para Google y redes" }
+      - { label: "Slug (URL)", name: "slug", widget: "string", i18n: true, hint: "Solo minúsculas y guiones, ej: viento-zonda-cuidado-piel" }
       - label: "Fecha"
         name: "date"
         widget: "datetime"
         format: "YYYY-MM-DD"
         date_format: "YYYY-MM-DD"
         time_format: false
+        i18n: duplicate
       - label: "Idioma / región"
         name: "locale"
         widget: "select"
+        i18n: duplicate
         hint: "Define en qué carpeta de idioma se publica"
         options:
           - { label: "🇦🇷 Español (Argentina)", value: "es-ar" }
@@ -54,6 +62,7 @@ collections:
       - label: "Categoría"
         name: "category"
         widget: "select"
+        i18n: duplicate
         options:
           - { label: "🔬 Ciencia de la Piel", value: "barrera-cutanea" }
           - { label: "🌱 Sostenibilidad y Ecología", value: "sostenibilidad" }
@@ -63,18 +72,20 @@ collections:
           - { label: "🧼 Uso y Cuidado del Producto", value: "cuidado-producto" }
           - { label: "💬 Testimonios y Estilo de Vida", value: "testimonios-estilo-vida" }
           - { label: "📈 Tendencias Globales", value: "tendencias-skincare" }
-      - { label: "Etiqueta de categoría (texto visible)", name: "category_label", widget: "string", required: false, hint: "Ej: 'Guías regionales' — se muestra arriba del título" }
+      - { label: "Etiqueta de categoría (texto visible)", name: "category_label", widget: "string", required: false, i18n: true, hint: "Ej: 'Guías regionales' — se muestra arriba del título" }
       - label: "Concepto (agrupa las versiones en otros idiomas)"
         name: "concept"
         widget: "string"
         required: false
+        i18n: duplicate
         hint: "Mismo valor en las traducciones de un mismo artículo. Sirve para enlazar hreflang entre idiomas."
-      - { label: "Fenómeno/referencia local (opcional)", name: "local_phenomenon", widget: "string", required: false, hint: "Ej: Föhn, Santa Ana winds, Viento Zonda" }
-      - { label: "Etiqueta de región (opcional, se muestra como badge)", name: "region_label", widget: "string", required: false, hint: "Ej: Salta y Cuyo, Argentina" }
+      - { label: "Fenómeno/referencia local (opcional)", name: "local_phenomenon", widget: "string", required: false, i18n: true, hint: "Ej: Föhn, Santa Ana winds, Viento Zonda" }
+      - { label: "Etiqueta de región (opcional, se muestra como badge)", name: "region_label", widget: "string", required: false, i18n: true, hint: "Ej: Salta y Cuyo, Argentina" }
       - label: "Archivos Multimedia (Galería)"
         name: "media"
         widget: "list"
         required: false
+        i18n: duplicate
         hint: "Sube fotos o videos (.mp4). Usa la descripción para indicarle a la IA de qué trata o dónde ubicarla."
         fields:
           - {label: "Archivo", name: "file", widget: "file"}
@@ -83,10 +94,12 @@ collections:
         name: "author"
         widget: "string"
         default: "PepaGold"
+        i18n: duplicate
       - label: "Epígrafe (opcional)"
         name: "epigraph"
         widget: "object"
         required: false
+        i18n: true
         fields:
           - { label: "Texto", name: "text", widget: "text" }
           - { label: "Autor (opcional)", name: "author", widget: "string", required: false }
@@ -94,27 +107,32 @@ collections:
         name: "summary"
         widget: "list"
         required: false
+        i18n: true
         hint: "Puntos clave del artículo"
         field: { label: "Punto", name: "punto", widget: "string" }
       - label: "Mostrar Enlace a la Ciencia"
         name: "show_science_link"
         widget: "boolean"
         default: true
+        i18n: duplicate
         hint: "Muestra el bloque 'Lo que dice la ciencia' al final."
       - label: "Artículos Relacionados (opcional)"
         name: "related"
         widget: "list"
         required: false
+        i18n: duplicate
         hint: "Agrega los Slugs exactos de otros artículos"
         field: { label: "Slug", name: "slug", widget: "string" }
       - label: "Preguntas frecuentes (opcional, genera schema FAQ)"
         name: "faq"
         widget: "list"
         required: false
+        i18n: true
         fields:
           - { label: "Pregunta", name: "q", widget: "string" }
           - { label: "Respuesta", name: "a", widget: "text" }
       - label: "Contenido del artículo"
         name: "body"
         widget: "markdown"
+        i18n: true
         hint: "Pegá o escribí el artículo acá. Se convierte solo en HTML al publicar."
