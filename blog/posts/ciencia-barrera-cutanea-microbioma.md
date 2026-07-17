@@ -1,22 +1,18 @@
 ---
-title: "La Ciencia de la Barrera Cutánea: Qué es, Cómo se Daña y Cómo Repararla"
-description: "Descubre qué es exactamente la barrera cutánea y el microbioma de la piel. Aprende a identificar los síntomas de daño y los mejores métodos científicos para restaurarla."
+title: 'La Ciencia de la Barrera Cutánea: Qué es, Cómo se Daña y Cómo Repararla'
+description: Descubre qué es exactamente la barrera cutánea y el microbioma de la piel. Aprende a identificar los síntomas de daño y los mejores métodos científicos para restaurarla.
 slug: ciencia-barrera-cutanea-microbioma
 date: 2026-07-17
 locale: es-ar
 category: barrera-cutanea
-category_label: 'Ciencia & Piel'
-concept: 'barrera-cutanea-y-microbioma'
-local_phenomenon: 'Viento Zonda'
-region_label: 'Salta, Argentina'
+category_label: Ciencia & Piel
+concept: barrera-cutanea-y-microbioma
+local_phenomenon: Viento Zonda
+region_label: Salta, Argentina
 media: []
 author: PepaGold
 epigraph: null
-summary:
-  - punto: "El estrato córneo es una barrera viva y dinámica, no solo células muertas."
-  - punto: "Funciona como un muro de 'ladrillos' (corneocitos) y 'cemento' (ceramidas y lípidos)."
-  - punto: "El microbioma es la cuarta dimensión protectora de la piel."
-  - punto: "El viento seco (como el Zonda) y los jabones agresivos destruyen esta barrera."
+summary: []
 show_science_link: true
 ---
 
@@ -67,6 +63,7 @@ Tu piel puede soportar mucho, pero tiene un límite. Conoce a sus peores enemigo
 
 :::checklist
 **Señales de Alarma: ¿Tu barrera está rota?**
+
 - [ ] Tu piel se ve opaca y sin luz natural.
 - [ ] Sientes tirantez inmediata al salir de la ducha.
 - [ ] Cualquier crema que te pones te arde o pica.
@@ -85,4 +82,4 @@ La regla de oro para reparar la piel no es ponerle más cosas, sino **dejar de a
 :::quiz
 **Mito o Verdad: "Si tengo piel grasa y acné, debo lavarme más seguido para secar los granos"**
 **Respuesta:** ¡Mito! El acné es a menudo un síntoma de una barrera destruida. Al lavarte en exceso, eliminas las ceramidas y las bacterias buenas. Tu piel entra en pánico y produce el DOBLE de sebo para intentar defenderse, empeorando el acné.
-:::
+:::![](/assets/imagenes/blog/anatomia_img_1.png)
