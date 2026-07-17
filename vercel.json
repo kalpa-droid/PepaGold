@@ -1,5 +1,5 @@
 {
-  "buildCommand": "pip install -r requirements.txt && python3 build_blog.py",
+  "buildCommand": "python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt && python3 build_blog.py",
   "outputDirectory": ".",
   "cleanUrls": true,
   "trailingSlash": false,
