@@ -1,4 +1,6 @@
 {
+  "buildCommand": "bash build.sh && pip install -r requirements.txt && python3 build_blog.py",
+  "outputDirectory": ".",
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
