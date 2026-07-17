@@ -1,13 +1,7 @@
 import os
 
-# Definir la estructura del blog
+# Definir la estructura de los artículos del blog (quitamos el index porque lo haremos a mano con ZigZag)
 blog_structure = [
-    {
-        "url": "blog/index.html",
-        "title": "Blog Oficial PepaGold",
-        "h1": "Cuidado de la Piel y Sostenibilidad",
-        "description": "Artículos sobre barrera cutánea, rutinas minimalistas y ecología."
-    },
     {
         "url": "blog/barrera-cutanea/que-es-la-barrera-cutanea.html",
         "title": "Qué es la Barrera Cutánea | PepaGold",
@@ -52,7 +46,7 @@ blog_structure = [
     }
 ]
 
-# Plantilla HTML base (Warm Minimalist)
+# Plantilla HTML base (Warm Minimalist) - SIN BARRA SUPERIOR
 html_template = """<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -77,12 +71,9 @@ html_template = """<!DOCTYPE html>
     --shadow-md: 0 8px 25px rgba(42, 37, 35, 0.05);
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: var(--font-sans); color: var(--color-dark-muted); background: var(--bg-primary); line-height: 1.8; padding-top: 100px; }
+body { font-family: var(--font-sans); color: var(--color-dark-muted); background: var(--bg-primary); line-height: 1.8; padding-top: 50px; }
 h1, h2, h3 { font-family: var(--font-serif); color: var(--color-dark); line-height: 1.3; margin-bottom: 20px; }
 p { margin-bottom: 20px; }
-.blog-nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: var(--bg-secondary); border-bottom: 1px solid var(--border-color); position: fixed; top: 0; left: 0; width: 100%; z-index: 900; }
-.blog-nav a { text-decoration: none; color: var(--color-dark); font-weight: 500; font-size: 1.1rem; }
-.blog-nav a:hover { color: var(--color-primary); }
 .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
 .hero-image-placeholder { width: 100%; height: 400px; background: var(--bg-secondary); border-radius: 18px; margin-bottom: 40px; display: flex; align-items: center; justify-content: center; color: var(--color-primary); font-weight: 600; border: 1px dashed var(--color-primary); }
 .product-box { background: var(--bg-secondary); padding: 30px; border-radius: 18px; border: 1px solid var(--border-color); margin: 40px 0; text-align: center; box-shadow: var(--shadow-md); }
@@ -98,7 +89,7 @@ p { margin-bottom: 20px; }
 /* Estilos de botones flotantes idénticos a la landing page */
 .floating-droplet {
   position: fixed;
-  top: 85px;
+  top: 65px;
   left: 20px;
   width: 56px;
   height: 56px;
@@ -128,7 +119,7 @@ p { margin-bottom: 20px; }
 }
 .lang-selector-container {
   position: fixed;
-  top: 85px;
+  top: 65px;
   right: 20px;
   z-index: 1000;
   font-family: var(--font-sans);
@@ -194,22 +185,24 @@ p { margin-bottom: 20px; }
   color: var(--color-primary-hover);
 }
 @media (max-width: 600px) {
-  .floating-droplet { top: 85px; left: 12px; width: 46px; height: 46px; }
+  .floating-droplet { top: 65px; left: 12px; width: 46px; height: 46px; }
   .floating-droplet img { width: 22px; height: 22px; }
-  .lang-selector-container { top: 85px; right: 12px; }
+  .lang-selector-container { top: 65px; right: 12px; }
   .lang-selector-btn { padding: 5px 11px; font-size: 12px; }
+  .blog-nav-btn-floating { right: 110px !important; }
 }
 </style>
 </head>
 <body>
 
-<nav class="blog-nav">
-    <a href="/">← Volver a la Tienda</a>
-    <a href="/blog/index.html">PepaGold Blog</a>
-</nav>
+<!-- Botón al Blog flotante (Siempre visible y funcional) -->
+<a href="/blog/" class="lang-selector-btn blog-nav-btn-floating" style="position: fixed; top: 65px; right: 130px; z-index: 1000; text-decoration: none;" title="PepaGold Blog">
+  <span class="active-flag">📖</span>
+  <span class="blog-btn-text" style="font-weight: 500;">Blog</span>
+</a>
 
-<!-- Gota de agua del logo flotante (Lleva a la página principal) -->
-<a href="/" class="floating-droplet" title="PepaGold">
+<!-- Gota de agua del logo flotante (Lleva a la página principal de la tienda) -->
+<a href="/" class="floating-droplet" title="Volver a la Tienda PepaGold">
   <img src="/assets/imagenes/icono.svg" alt="PepaGold Icon" />
 </a>
 
@@ -302,7 +295,7 @@ def main():
         # Create directories if they don't exist
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
         
-        # Format the template with specific data
+        # Insert variables manually to avoid curly brace format issues
         content = html_template.replace("{title}", page["title"]).replace("{description}", page["description"]).replace("{h1}", page["h1"])
         
         # Write the file

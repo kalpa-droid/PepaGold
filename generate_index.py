@@ -1,4 +1,51 @@
-<!DOCTYPE html>
+import os
+
+blog_structure = [
+    {
+        "url": "/blog/barrera-cutanea/que-es-la-barrera-cutanea.html",
+        "category": "✨ Ciencia & Piel",
+        "title": "¿Qué es la barrera cutánea?",
+        "description": "Aprende qué es el manto ácido y cómo protegerlo para evitar irritaciones. El primer paso para una piel sana y resistente."
+    },
+    {
+        "url": "/blog/barrera-cutanea/por-que-arde-la-piel-al-desmaquillarte.html",
+        "category": "⚠️ Problemas Comunes",
+        "title": "¿Por qué me arde la piel al desmaquillarme?",
+        "description": "Descubre las razones científicas del ardor facial. Los desmaquillantes químicos limpian el maquillaje y destruyen tu piel."
+    },
+    {
+        "url": "/blog/sostenibilidad/toallitas-biodegradables-la-verdad.html",
+        "category": "🌍 Sostenibilidad",
+        "title": "La verdad sobre las toallitas biodegradables",
+        "description": "Analizamos el impacto real de las toallitas desmaquillantes en el medio ambiente. Spoiler: no son tan verdes como dicen."
+    },
+    {
+        "url": "/blog/sostenibilidad/impacto-ambiental-discos-de-algodon.html",
+        "category": "🌍 Sostenibilidad",
+        "title": "Impacto ambiental del algodón",
+        "description": "Cuánta agua se necesita para cultivar los discos de algodón que usas a diario y tiras a la basura en 3 segundos."
+    },
+    {
+        "url": "/blog/rutina-minimalista/skinimalismo-que-es.html",
+        "category": "🧴 Rutina",
+        "title": "Skinimalismo: Qué es",
+        "description": "La tendencia de simplificar tu rutina de belleza para maximizar resultados y dejar de asfixiar tu piel."
+    },
+    {
+        "url": "/blog/rutina-minimalista/laska-vs-agua-micelar-vs-algodon.html",
+        "category": "⚖️ Comparativas",
+        "title": "Laska vs. Agua Micelar",
+        "description": "Análisis de costos, beneficios y eficacia del Laska Mini Set contra los métodos tradicionales de limpieza."
+    },
+    {
+        "url": "/blog/guias-regionales/viento-zonda-protege-tu-piel.html",
+        "category": "🏜️ Guías Regionales",
+        "title": "Viento Zonda y tu Piel",
+        "description": "Guía definitiva para evitar la deshidratación severa en climas andinos. Cómo protegerte del Zonda en Salta y Jujuy."
+    }
+]
+
+html_template = """<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="utf-8"/>
@@ -114,91 +161,9 @@ a { text-decoration: none; }
 
 <section class="pain-agitation-section">
   <div class="interactive-pain">
+"""
 
-    <div class="pain-card-v2">
-        <div class="card-video">
-            <span>[Imagen ¿Qué es la barrera cutánea?]</span>
-        </div>
-        <div class="text-content">
-            <span class="accent-subtitle">✨ Ciencia & Piel</span>
-            <h3 class="problem-title">¿Qué es la barrera cutánea?</h3>
-            <p class="problem-description">Aprende qué es el manto ácido y cómo protegerlo para evitar irritaciones. El primer paso para una piel sana y resistente.</p>
-            <a href="/blog/barrera-cutanea/que-es-la-barrera-cutanea.html" class="read-btn">Leer Artículo</a>
-        </div>
-    </div>
-
-    <div class="pain-card-v2">
-        <div class="card-video">
-            <span>[Imagen ¿Por qué me arde la piel al desmaquillarme?]</span>
-        </div>
-        <div class="text-content">
-            <span class="accent-subtitle">⚠️ Problemas Comunes</span>
-            <h3 class="problem-title">¿Por qué me arde la piel al desmaquillarme?</h3>
-            <p class="problem-description">Descubre las razones científicas del ardor facial. Los desmaquillantes químicos limpian el maquillaje y destruyen tu piel.</p>
-            <a href="/blog/barrera-cutanea/por-que-arde-la-piel-al-desmaquillarte.html" class="read-btn">Leer Artículo</a>
-        </div>
-    </div>
-
-    <div class="pain-card-v2">
-        <div class="card-video">
-            <span>[Imagen La verdad sobre las toallitas biodegradables]</span>
-        </div>
-        <div class="text-content">
-            <span class="accent-subtitle">🌍 Sostenibilidad</span>
-            <h3 class="problem-title">La verdad sobre las toallitas biodegradables</h3>
-            <p class="problem-description">Analizamos el impacto real de las toallitas desmaquillantes en el medio ambiente. Spoiler: no son tan verdes como dicen.</p>
-            <a href="/blog/sostenibilidad/toallitas-biodegradables-la-verdad.html" class="read-btn">Leer Artículo</a>
-        </div>
-    </div>
-
-    <div class="pain-card-v2">
-        <div class="card-video">
-            <span>[Imagen Impacto ambiental del algodón]</span>
-        </div>
-        <div class="text-content">
-            <span class="accent-subtitle">🌍 Sostenibilidad</span>
-            <h3 class="problem-title">Impacto ambiental del algodón</h3>
-            <p class="problem-description">Cuánta agua se necesita para cultivar los discos de algodón que usas a diario y tiras a la basura en 3 segundos.</p>
-            <a href="/blog/sostenibilidad/impacto-ambiental-discos-de-algodon.html" class="read-btn">Leer Artículo</a>
-        </div>
-    </div>
-
-    <div class="pain-card-v2">
-        <div class="card-video">
-            <span>[Imagen Skinimalismo: Qué es]</span>
-        </div>
-        <div class="text-content">
-            <span class="accent-subtitle">🧴 Rutina</span>
-            <h3 class="problem-title">Skinimalismo: Qué es</h3>
-            <p class="problem-description">La tendencia de simplificar tu rutina de belleza para maximizar resultados y dejar de asfixiar tu piel.</p>
-            <a href="/blog/rutina-minimalista/skinimalismo-que-es.html" class="read-btn">Leer Artículo</a>
-        </div>
-    </div>
-
-    <div class="pain-card-v2">
-        <div class="card-video">
-            <span>[Imagen Laska vs. Agua Micelar]</span>
-        </div>
-        <div class="text-content">
-            <span class="accent-subtitle">⚖️ Comparativas</span>
-            <h3 class="problem-title">Laska vs. Agua Micelar</h3>
-            <p class="problem-description">Análisis de costos, beneficios y eficacia del Laska Mini Set contra los métodos tradicionales de limpieza.</p>
-            <a href="/blog/rutina-minimalista/laska-vs-agua-micelar-vs-algodon.html" class="read-btn">Leer Artículo</a>
-        </div>
-    </div>
-
-    <div class="pain-card-v2">
-        <div class="card-video">
-            <span>[Imagen Viento Zonda y tu Piel]</span>
-        </div>
-        <div class="text-content">
-            <span class="accent-subtitle">🏜️ Guías Regionales</span>
-            <h3 class="problem-title">Viento Zonda y tu Piel</h3>
-            <p class="problem-description">Guía definitiva para evitar la deshidratación severa en climas andinos. Cómo protegerte del Zonda en Salta y Jujuy.</p>
-            <a href="/blog/guias-regionales/viento-zonda-protege-tu-piel.html" class="read-btn">Leer Artículo</a>
-        </div>
-    </div>
-
+footer = """
   </div>
 </section>
 
@@ -221,3 +186,32 @@ a { text-decoration: none; }
 </script>
 </body>
 </html>
+"""
+
+def main():
+    out = html_template
+    for article in blog_structure:
+        card = f"""
+    <div class="pain-card-v2">
+        <div class="card-video">
+            <span>[Imagen {article['title']}]</span>
+        </div>
+        <div class="text-content">
+            <span class="accent-subtitle">{article['category']}</span>
+            <h3 class="problem-title">{article['title']}</h3>
+            <p class="problem-description">{article['description']}</p>
+            <a href="{article['url']}" class="read-btn">Leer Artículo</a>
+        </div>
+    </div>
+"""
+        out += card
+    out += footer
+    
+    os.makedirs("/home/mappo/Kalpagrafica/PepaGold/blog", exist_ok=True)
+    with open("/home/mappo/Kalpagrafica/PepaGold/blog/index.html", "w", encoding="utf-8") as f:
+        f.write(out)
+        
+    print("ZigZag index generated at blog/index.html")
+
+if __name__ == "__main__":
+    main()
