@@ -36,7 +36,7 @@ CATEGORY_LABELS_DEFAULT = {
 # BLOQUES INTERACTIVOS (Tip, Stat, Checklist, Quiz)
 # =========================================================================
 
-BLOCK_RE = re.compile(r"^:::(tip|info|stat|checklist|quiz)(?:[ \t]+(.*))?\n(.*?)\n:::[ \t]*$", re.M | re.S)
+BLOCK_RE = re.compile(r"^:::(tip|info|stat|checklist|quiz)(?:[ \t]+([^\n]*))?\n(.*?)\n:::[ \t]*$", re.M | re.S)
 _inline_md = markdown.Markdown(extensions=["extra"])
 
 def _inline(text):
