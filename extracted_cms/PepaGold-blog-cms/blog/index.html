@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | PepaGold</title>
+<meta name="description" content="Artículos sobre cuidado de la piel sin químicos, sostenibilidad y skincare consciente.">
+<link rel="canonical" href="https://pepagold.blog/blog/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --color-primary:#D48C90; --color-primary-hover:#C97A7E; --color-accent:#E29578; --color-dark:#2A2523; --color-dark-muted:#5A524E; --border-color:rgba(212,140,144,0.2); --bg-secondary:#FAF6F5; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:'Poppins', sans-serif; color:var(--color-dark); background:#fff; }
+  .site-header { padding: 20px 24px; border-bottom: 1px solid var(--border-color); display:flex; align-items:center; justify-content:space-between; }
+  .site-header a.logo { font-family: Georgia, serif; font-size:1.3rem; color:var(--color-dark); text-decoration:none; font-weight:600; }
+  .site-header nav a { margin-left:20px; font-size:0.9rem; text-decoration:none; color:var(--color-dark-muted); }
+  .wrap { max-width: 1080px; margin:0 auto; padding: 50px 24px 90px; }
+  h1 { font-family: Georgia, serif; font-weight:400; font-size: clamp(2rem,4vw,2.8rem); margin-bottom: 10px; }
+  .subtitle { color: var(--color-dark-muted); margin-bottom: 34px; max-width: 560px; }
+  .chips { display:flex; gap:10px; flex-wrap:wrap; margin-bottom: 36px; }
+  .chips a { font-size:0.82rem; padding:7px 16px; border-radius:999px; border:1px solid var(--border-color); color:var(--color-dark-muted); text-decoration:none; }
+  .chips a.active { background: var(--color-primary); color:#fff; border-color: var(--color-primary); }
+  .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 28px; }
+  .card { border:1px solid var(--border-color); border-radius:16px; overflow:hidden; text-decoration:none; color:inherit; box-shadow: 0 4px 12px rgba(42,37,35,0.03); transition: box-shadow .2s; }
+  .card:hover { box-shadow: 0 15px 40px rgba(212,140,144,0.15); }
+  .card img { width:100%; aspect-ratio: 16/10; object-fit:cover; }
+  .card .card-body { padding: 18px; }
+  .card .cat { font-size:0.72rem; text-transform:uppercase; letter-spacing:.05em; color:var(--color-accent); font-weight:600; }
+  .card h3 { font-family: Georgia, serif; font-weight:400; font-size:1.15rem; margin:8px 0; color:var(--color-dark); }
+  .card p { font-size:0.88rem; color:var(--color-dark-muted); }
+  footer.site-footer { background: var(--color-dark); color: rgba(255,255,255,0.7); text-align:center; padding: 40px 24px; font-size:0.85rem; }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="/">PepaGold</a>
+  <nav><a href="/">Producto</a></nav>
+</header>
+<div class="wrap">
+  <h1>Blog PepaGold</h1>
+  <p class="subtitle">Ciencia de la piel, sostenibilidad y rutinas conscientes. Sin químicos, sin residuos.</p>
+  <div class="chips"><a href="#" class="active">Todos</a><a href="#guias-regionales">Guías regionales</a></div>
+  <div class="grid"><a class="card" href="/blog/viento-zonda-cuidado-piel/" data-cat="guias-regionales"><img src="/assets/imagenes/1.webp" alt="Viento Zonda: cómo protege tu piel del clima seco de Salta y Cuyo"><div class="card-body"><p class="cat">Guías regionales</p><h3>Viento Zonda: cómo protege tu piel del clima seco de Salta y Cuyo</h3><p>El Zonda reseca tu piel en minutos. Te explicamos por qué pasa y cómo cuidar tu barrera cutánea sin sumar químicos a la irritación.</p></div></a></div>
+</div>
+<footer class="site-footer">
+  <p>&copy; 2025&ndash;2026 PepaGold &middot; Distribuidor independiente autorizado de Greenway Global</p>
+</footer>
+</body>
+</html>

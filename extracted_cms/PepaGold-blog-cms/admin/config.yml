@@ -1,0 +1,93 @@
+backend:
+  name: github
+  repo: kalpa-droid/PepaGold      # usuario/repositorio en GitHub
+  branch: main
+  # Sveltia usa autenticación PKCE directa con GitHub: no necesita un
+  # servidor proxy intermedio. Solo hay que crear una GitHub OAuth App
+  # (ver README-BLOG-SETUP.md) y pegar el Client ID acá abajo.
+  app_id: "PEGAR_AQUI_EL_CLIENT_ID_DE_LA_OAUTH_APP"
+
+# Dónde se suben las imágenes que se insertan desde el editor
+media_folder: "assets/imagenes/blog"
+public_folder: "/assets/imagenes/blog"
+
+# El link "Ver sitio" del panel apunta al blog en español (default)
+site_url: https://pepagold.blog
+display_url: https://pepagold.blog/blog/
+logo_url: /assets/imagenes/icono.svg
+
+collections:
+  - name: "posts"
+    label: "Artículos del blog"
+    label_singular: "Artículo"
+    folder: "blog/posts"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "yaml-frontmatter"
+    summary: "{{title}} — {{locale}}"
+    sortable_fields: ["date", "title", "category"]
+    fields:
+      - { label: "Título", name: "title", widget: "string", hint: "El H1 del artículo, con la keyword principal" }
+      - { label: "Descripción (meta description)", name: "description", widget: "text", hint: "155 caracteres aprox, para Google y redes" }
+      - { label: "Slug (URL)", name: "slug", widget: "string", hint: "Solo minúsculas y guiones, ej: viento-zonda-cuidado-piel" }
+      - label: "Fecha"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+      - label: "Idioma / región"
+        name: "locale"
+        widget: "select"
+        hint: "Define en qué carpeta de idioma se publica"
+        options:
+          - { label: "🇦🇷 Español (Argentina)", value: "es-ar" }
+          - { label: "🇲🇽 Español (México)", value: "es-mx" }
+          - { label: "🇪🇸 Español (España)", value: "es-es" }
+          - { label: "🇺🇸 English (US)", value: "en-us" }
+          - { label: "🇫🇷 Français", value: "fr-fr" }
+          - { label: "🇩🇪 Deutsch", value: "de-de" }
+          - { label: "🇮🇹 Italiano", value: "it-it" }
+          - { label: "🇧🇷 Português (Brasil)", value: "pt-br" }
+          - { label: "🇷🇺 Русский", value: "ru-ru" }
+          - { label: "🇨🇳 简体中文", value: "zh-hans" }
+      - label: "Categoría"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Barrera cutánea (ciencia)", value: "barrera-cutanea" }
+          - { label: "Sostenibilidad", value: "sostenibilidad" }
+          - { label: "Rutinas y minimalismo", value: "rutinas-minimalismo" }
+          - { label: "Comparativas y economía", value: "comparativas-economia" }
+          - { label: "Guías regionales / clima", value: "guias-regionales" }
+          - { label: "Cuidado del producto", value: "cuidado-producto" }
+          - { label: "Testimonios y estilo de vida", value: "testimonios-estilo-vida" }
+          - { label: "Tendencias skincare", value: "tendencias-skincare" }
+      - { label: "Etiqueta de categoría (texto visible)", name: "category_label", widget: "string", required: false, hint: "Ej: 'Guías regionales' — se muestra arriba del título" }
+      - label: "Concepto (agrupa las versiones en otros idiomas)"
+        name: "concept"
+        widget: "string"
+        required: false
+        hint: "Mismo valor en las 9 traducciones de un mismo artículo, ej: viento-seco-barrera-cutanea. Sirve para enlazar hreflang entre idiomas."
+      - { label: "Fenómeno/referencia local (opcional)", name: "local_phenomenon", widget: "string", required: false, hint: "Ej: Föhn, Santa Ana winds, Viento Zonda — el equivalente cultural de esta región" }
+      - { label: "Etiqueta de región (opcional, se muestra como badge)", name: "region_label", widget: "string", required: false, hint: "Ej: Salta y Cuyo, Argentina" }
+      - label: "Imagen de portada"
+        name: "cover_image"
+        widget: "image"
+        required: false
+      - label: "Autor"
+        name: "author"
+        widget: "string"
+        default: "PepaGold"
+      - label: "Preguntas frecuentes (opcional, genera schema FAQ)"
+        name: "faq"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Pregunta", name: "q", widget: "string" }
+          - { label: "Respuesta", name: "a", widget: "text" }
+      - label: "Contenido del artículo"
+        name: "body"
+        widget: "markdown"
+        hint: "Pegá o escribí el artículo acá. Se convierte solo en HTML al publicar."
