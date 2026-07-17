@@ -1,0 +1,26 @@
+backend:
+  name: github
+  repo: kalpa-droid/PepaGold
+  branch: main
+
+media_folder: "assets/imagenes/blog"
+public_folder: "/assets/imagenes/blog"
+
+i18n:
+  structure: multiple_folders
+  locales: [es, mx, us, fr, de, it, pt, ru, zh]
+  default_locale: es
+
+collections:
+  - name: "blog"
+    label: "Artículos del Blog"
+    folder: "blog/posts"
+    create: true
+    slug: "{{slug}}"
+    i18n: true
+    fields:
+      - {label: "Título (H1)", name: "title", widget: "string", i18n: true}
+      - {label: "Categoría", name: "category", widget: "string", i18n: true, hint: "Ej: ✨ Ciencia & Piel"}
+      - {label: "Descripción Breve", name: "description", widget: "text", i18n: true, hint: "Aparecerá en el índice y metadatos SEO"}
+      - {label: "Imagen de Portada", name: "image", widget: "image", required: false, i18n: true}
+      - {label: "Cuerpo del Artículo", name: "body", widget: "markdown", i18n: true}
