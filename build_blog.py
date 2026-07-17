@@ -170,39 +170,42 @@ BRAND_HEAD = """<!DOCTYPE html>
   img {{ max-width:100%; height:auto; display:block; }}
   a {{ color:var(--color-primary-hover); text-decoration: none; }}
   
-  .site-header {{ padding:20px 24px; border-bottom:1px solid var(--border-color); display:flex; align-items:center; justify-content:space-between; }}
-  .site-header a.logo {{ font-family:Georgia,'Times New Roman',serif; font-size:1.3rem; color:var(--color-dark); text-decoration:none; font-weight:600; }}
-  .site-header nav a {{ margin-left:20px; font-size:0.9rem; text-decoration:none; color:var(--color-dark-muted); }}
+  /* Lang selector and Floating Buttons */
+  .floating-droplet { position: fixed; top: 65px; left: 20px; width: 56px; height: 56px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border: 1px solid rgba(212, 140, 144, 0.3); border-radius: 0 50% 50% 50%; transform: rotate(45deg); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(42, 37, 35, 0.08); z-index: 1000; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; text-decoration: none; }
+  .floating-droplet:hover { transform: rotate(45deg) scale(1.08); box-shadow: 0 12px 30px rgba(212, 140, 144, 0.25); border-color: var(--color-primary); }
+  .floating-droplet img { width: 28px; height: 28px; transform: rotate(-45deg); transition: transform 0.3s ease; }
+  .lang-selector-container { position: fixed; top: 65px; right: 20px; z-index: 1000; font-family: 'Poppins', sans-serif; }
+  .lang-selector-btn { display: flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 30px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border: 1px solid rgba(212, 140, 144, 0.25); color: var(--color-dark); font-size: 14px; font-weight: 500; cursor: pointer; box-shadow: 0 4px 12px rgba(42, 37, 35, 0.04); transition: all 0.3s ease; text-decoration: none; }
+  .lang-selector-btn:hover { border-color: var(--color-primary); box-shadow: 0 6px 16px rgba(212, 140, 144, 0.15); transform: translateY(-1px); }
+  .lang-dropdown-menu { position: absolute; top: calc(100% + 8px); right: 0; min-width: 170px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border: 1px solid rgba(212, 140, 144, 0.2); border-radius: 12px; padding: 8px 0; margin: 0; list-style: none; box-shadow: 0 10px 30px rgba(42, 37, 35, 0.08); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all 0.3s ease; }
+  .lang-selector-container.is-active .lang-dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+  .lang-option { padding: 10px 18px; font-size: 14px; color: var(--color-dark); cursor: pointer; display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .blog-nav-btn-floating { right: 130px; }
   
-  .wrap {{ max-width:800px; margin:0 auto; padding:40px 24px 80px; }}
-  .eyebrow {{ font-size:0.8rem; letter-spacing:.06em; text-transform:uppercase; color:var(--color-accent); font-weight:600; }}
-  h1.article-title {{ font-family:Georgia,'Times New Roman',serif; font-weight:400; font-size:clamp(2rem,4vw,2.8rem); line-height:1.2; margin:10px 0 16px; color:var(--color-dark); }}
-  .meta-row {{ display:flex; gap:14px; flex-wrap:wrap; color:rgba(42,37,35,0.6); font-size:0.85rem; margin-bottom:20px; }}
-  .region-tag {{ display:inline-block; font-size:0.78rem; background:rgba(226,149,120,0.15); color:var(--color-accent); padding:4px 12px; border-radius:999px; margin-bottom:12px; font-weight:600; }}
-  
-  /* Lang selector */
-  .lang-selector-container {{ position: fixed; top: 65px; right: 20px; z-index: 1000; font-family: 'Poppins', sans-serif; }}
-  .lang-selector-btn {{ display: flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 30px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border: 1px solid rgba(212, 140, 144, 0.25); color: var(--color-dark); font-size: 14px; font-weight: 500; cursor: pointer; box-shadow: 0 4px 12px rgba(42, 37, 35, 0.04); transition: all 0.3s ease; }}
-  .lang-dropdown-menu {{ position: absolute; top: calc(100% + 8px); right: 0; min-width: 170px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border: 1px solid rgba(212, 140, 144, 0.2); border-radius: 12px; padding: 8px 0; margin: 0; list-style: none; box-shadow: 0 10px 30px rgba(42, 37, 35, 0.08); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all 0.3s ease; }}
-  .lang-selector-container.is-active .lang-dropdown-menu {{ opacity: 1; visibility: visible; transform: translateY(0); }}
-  .lang-option {{ padding: 10px 18px; font-size: 14px; color: var(--color-dark); cursor: pointer; display: flex; align-items: center; gap: 10px; text-decoration: none; }}
+  @media (max-width: 600px) {
+    .floating-droplet { top: 65px; left: 12px; width: 46px; height: 46px; }
+    .floating-droplet img { width: 22px; height: 22px; }
+    .lang-selector-container { top: 65px; right: 12px; }
+    .lang-selector-btn { padding: 5px 11px; font-size: 12px; }
+    .blog-nav-btn-floating { right: 110px !important; }
+  }
   
   /* Bloques Interactivos y Secciones */
-  .epigraph {{ font-family:Georgia,serif; font-style:italic; font-size:1.15rem; color:var(--color-dark-muted); border-left:3px solid var(--color-primary); padding:6px 20px; margin:24px 0; }}
-  .epigraph cite {{ display:block; font-style:normal; font-size:0.85rem; margin-top:8px; color:var(--color-accent); }}
-  .summary-box {{ background:var(--bg-secondary); border:1px solid var(--border-color); border-radius:14px; padding:22px 24px; margin:24px 0 32px; }}
-  .summary-box p.callout-title {{ margin-bottom:10px; font-weight:600; color:var(--color-dark); }}
-  .summary-box ul {{ margin-left:20px; color:var(--color-dark-muted); }}
-  .summary-box li {{ margin-bottom:6px; }}
+  .epigraph { font-family:Georgia,serif; font-style:italic; font-size:1.15rem; color:var(--color-dark-muted); border-left:3px solid var(--color-primary); padding:6px 20px; margin:24px 0; }
+  .epigraph cite { display:block; font-style:normal; font-size:0.85rem; margin-top:8px; color:var(--color-accent); }
+  .summary-box { background:var(--bg-secondary); border:1px solid var(--border-color); border-radius:14px; padding:22px 24px; margin:24px 0 32px; }
+  .summary-box p.callout-title { margin-bottom:10px; font-weight:600; color:var(--color-dark); }
+  .summary-box ul { margin-left:20px; color:var(--color-dark-muted); }
+  .summary-box li { margin-bottom:6px; }
   
-  .hero-image-placeholder {{ width: 100%; min-height: 400px; background: var(--bg-secondary); border-radius: 18px; margin-bottom: 40px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 10px; box-shadow: var(--shadow-md); }}
+  .hero-image-placeholder { width: 100%; min-height: 400px; background: var(--bg-secondary); border-radius: 18px; margin-bottom: 40px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 10px; box-shadow: var(--shadow-md); }
   
-  .toc {{ background:var(--bg-accent-light); border:1px solid var(--border-color); border-radius:14px; padding:18px 22px; margin:0 0 32px; font-size:0.92rem; }}
-  .toc::before {{ content:"En este artículo"; display:block; font-weight:600; margin-bottom:8px; color:var(--color-dark); }}
-  .toc ul {{ list-style:none; }}
-  .toc a {{ text-decoration:none; color:var(--color-dark-muted); }}
-  .toc a:hover {{ color:var(--color-primary-hover); }}
-  .toc li {{ margin-bottom:6px; }}
+  .toc { background:var(--bg-accent-light); border:1px solid var(--border-color); border-radius:14px; padding:18px 22px; margin:0 0 32px; font-size:0.92rem; }
+  .toc::before { content:"En este artículo"; display:block; font-weight:600; margin-bottom:8px; color:var(--color-dark); }
+  .toc ul { list-style:none; }
+  .toc a { text-decoration:none; color:var(--color-dark-muted); }
+  .toc a:hover { color:var(--color-primary-hover); }
+  .toc li { margin-bottom:6px; }
   
   .article-body h2 {{ font-family:Georgia,serif; font-weight:400; font-size:1.8rem; margin:40px 0 14px; color:var(--color-dark); scroll-margin-top:20px; }}
   .article-body h3 {{ font-family:Georgia,serif; font-size:1.3rem; margin:28px 0 10px; color:var(--color-dark); scroll-margin-top:20px; }}
@@ -261,7 +264,6 @@ BRAND_HEAD = """<!DOCTYPE html>
   .faq-item summary {{ cursor:pointer; font-weight:600; color:var(--color-dark); }}
   .faq-item p {{ margin-top:10px; color:var(--color-dark-muted); }}
   
-  .back-link {{ display:inline-block; margin-bottom:24px; font-size:0.9rem; color:var(--color-dark-muted); text-decoration:none; }}
   footer.site-footer {{ background:var(--color-dark); color:rgba(255,255,255,0.7); text-align:center; padding:40px 24px; font-size:0.85rem; margin-top:60px; }}
   footer.site-footer a {{ color:#fff; }}
 </style>
@@ -270,11 +272,13 @@ BRAND_HEAD = """<!DOCTYPE html>
 """
 
 ARTICLE_TEMPLATE = BRAND_HEAD + """<body>
-<header class="site-header">
-  <a class="logo" href="{home_url}">PepaGold</a>
-  <nav><a href="{blog_index_url}">Blog</a><a href="{home_url}">Producto</a></nav>
-</header>
-
+<a class="floating-droplet" href="{home_url}" title="PepaGold - Volver al inicio">
+  <img alt="PepaGold Icon" src="/assets/imagenes/icono.svg"/>
+</a>
+<a class="lang-selector-btn blog-nav-btn-floating" href="{blog_index_url}" style="position: fixed; z-index: 1000;" title="PepaGold Blog">
+  <span class="active-flag">📖</span>
+  <span class="blog-btn-text" style="font-weight: 500;">Blog</span>
+</a>
 <div class="lang-selector-container">
   <div class="lang-selector-btn" id="langSelectorBtn">
     <span class="active-flag">🌐</span>
@@ -289,9 +293,7 @@ ARTICLE_TEMPLATE = BRAND_HEAD + """<body>
   </ul>
 </div>
 
-<div class="wrap">
-  <a class="back-link" href="{blog_index_url}">&larr; Volver al blog</a>
-  <br>
+<div class="wrap" style="padding-top: 130px;">
   {region_tag_html}
   <p class="eyebrow">{category_label}</p>
   <h1 class="article-title">{title}</h1>
@@ -423,11 +425,13 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
 </style>
 </head>
 <body>
-<header class="site-header">
-  <a class="logo" href="{home_url}">PepaGold</a>
-  <nav><a href="{home_url}">Producto</a></nav>
-</header>
-
+<a class="floating-droplet" href="{home_url}" title="PepaGold - Volver al inicio">
+  <img alt="PepaGold Icon" src="/assets/imagenes/icono.svg"/>
+</a>
+<a class="lang-selector-btn blog-nav-btn-floating" href="{canonical}" style="position: fixed; z-index: 1000;" title="PepaGold Blog">
+  <span class="active-flag">📖</span>
+  <span class="blog-btn-text" style="font-weight: 500;">Blog</span>
+</a>
 <div class="lang-selector-container">
   <div class="lang-selector-btn" id="langSelectorBtn">
     <span class="active-flag">🌐</span>
@@ -442,10 +446,8 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
   </ul>
 </div>
 
-<header class="blog-header">
-    <h1>Blog PepaGold</h1>
-    <p>Ciencia de la piel, sostenibilidad y rutinas conscientes. Sin químicos, sin residuos.</p>
-</header>
+<div style="padding-top: 130px; margin-bottom: 20px;"></div>
+
 <div class="chips">{chips_html}</div>
 <section class="pain-agitation-section">
   <div class="interactive-pain">
