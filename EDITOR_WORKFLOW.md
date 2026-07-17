@@ -13,8 +13,12 @@ Cuando el usuario pegue un texto crudo:
    - Extrae datos duros y conviértelos en `:::stat`
    - Agrega consejos prácticos usando `:::tip` o `:::info`
    - Si aplica, crea un cuestionario educativo usando `:::quiz` o una lista interactiva con `:::checklist`.
-4. **Metadatos Ocultos:** Llena los campos `epigraph` (cita inspiradora), `summary` (resumen en 30 segundos) y `related` (slugs de otros artículos que tengan sentido).
-5. Guarda el artículo base (generalmente en `es-ar`) en el repositorio.
+4. **Gestión Inteligente de Multimedia:** 
+   - Revisa el bloque `media` en el frontmatter. El usuario puede haber subido varias fotos/videos con una `description` (ej. "Poner esta foto junto al checklist").
+   - Toma el `file` de esas imágenes e inyéctalas directamente en el Markdown del `body` en el lugar adecuado, usando la sintaxis `![tu alt text descriptivo para SEO](url-del-archivo)`.
+   - **Crucial:** Una vez inyectadas en el cuerpo, **elimínalas del array `media`** en el frontmatter, dejando únicamente la foto o video principal que funcionará como Portada (Hero image). Así evitas que la galería superior muestre imágenes duplicadas.
+5. **Metadatos Ocultos:** Llena los campos `epigraph` (cita inspiradora), `summary` (resumen en 30 segundos) y `related` (slugs de otros artículos que tengan sentido).
+6. Guarda el artículo base (generalmente en `es-ar`) en el repositorio.
 
 ## Paso 2: El Rigor de la Traducción Cultural
 Cuando el usuario pida generar los demás idiomas (las traducciones):
