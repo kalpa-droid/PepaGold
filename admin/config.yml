@@ -20,7 +20,7 @@ logo_url: /assets/imagenes/icono.svg
 
 collections:
   - name: "posts"
-    label: "Artículos del blog"
+    label: "📝 Todos los Artículos"
     label_singular: "Artículo"
     folder: "blog/posts"
     i18n: true
@@ -32,16 +32,7 @@ collections:
     format: "yaml-frontmatter"
     summary: "{{title}} — {{locale}}"
     sortable_fields: ["date", "title", "category"]
-    view_filters:
-      - { label: "🔬 Ciencia de la Piel", field: "category", pattern: "barrera-cutanea" }
-      - { label: "🌱 Sostenibilidad y Ecología", field: "category", pattern: "sostenibilidad" }
-      - { label: "🧘‍♀️ Rutinas y Skinimalismo", field: "category", pattern: "rutinas-minimalismo" }
-      - { label: "⚖️ Comparativas y Economía", field: "category", pattern: "comparativas-economia" }
-      - { label: "🏜️ Guías Regionales y Clima", field: "category", pattern: "guias-regionales" }
-      - { label: "🧼 Uso y Cuidado del Producto", field: "category", pattern: "cuidado-producto" }
-      - { label: "💬 Testimonios y Estilo de Vida", field: "category", pattern: "testimonios-estilo-vida" }
-      - { label: "📈 Tendencias Globales", field: "category", pattern: "tendencias-skincare" }
-    fields:
+    fields: &post_fields
       - { label: "Título", name: "title", widget: "string", i18n: true, hint: "El H1 del artículo" }
       - label: "Categoría"
         name: "category"
@@ -146,3 +137,131 @@ collections:
         widget: "boolean"
         default: true
         i18n: duplicate
+
+  - name: "posts_barrera"
+    label: "🔬 Ciencia de la Piel"
+    label_singular: "Artículo"
+    folder: "blog/posts"
+    i18n: true
+    media_folder: "{{slug}}"
+    public_folder: "/assets/imagenes/blog/{{slug}}"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "yaml-frontmatter"
+    summary: "{{title}} — {{locale}}"
+    sortable_fields: ["date", "title"]
+    filter: { field: "category", value: "barrera-cutanea" }
+    fields: *post_fields
+
+  - name: "posts_sostenibilidad"
+    label: "🌱 Sostenibilidad"
+    label_singular: "Artículo"
+    folder: "blog/posts"
+    i18n: true
+    media_folder: "{{slug}}"
+    public_folder: "/assets/imagenes/blog/{{slug}}"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "yaml-frontmatter"
+    summary: "{{title}} — {{locale}}"
+    sortable_fields: ["date", "title"]
+    filter: { field: "category", value: "sostenibilidad" }
+    fields: *post_fields
+
+  - name: "posts_rutinas"
+    label: "🧘‍♀️ Rutinas y Skinimalismo"
+    label_singular: "Artículo"
+    folder: "blog/posts"
+    i18n: true
+    media_folder: "{{slug}}"
+    public_folder: "/assets/imagenes/blog/{{slug}}"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "yaml-frontmatter"
+    summary: "{{title}} — {{locale}}"
+    sortable_fields: ["date", "title"]
+    filter: { field: "category", value: "rutinas-minimalismo" }
+    fields: *post_fields
+
+  - name: "posts_economia"
+    label: "⚖️ Comparativas y Economía"
+    label_singular: "Artículo"
+    folder: "blog/posts"
+    i18n: true
+    media_folder: "{{slug}}"
+    public_folder: "/assets/imagenes/blog/{{slug}}"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "yaml-frontmatter"
+    summary: "{{title}} — {{locale}}"
+    sortable_fields: ["date", "title"]
+    filter: { field: "category", value: "comparativas-economia" }
+    fields: *post_fields
+
+  - name: "posts_regionales"
+    label: "🏜️ Guías Regionales y Clima"
+    label_singular: "Artículo"
+    folder: "blog/posts"
+    i18n: true
+    media_folder: "{{slug}}"
+    public_folder: "/assets/imagenes/blog/{{slug}}"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "yaml-frontmatter"
+    summary: "{{title}} — {{locale}}"
+    sortable_fields: ["date", "title"]
+    filter: { field: "category", value: "guias-regionales" }
+    fields: *post_fields
+
+  - name: "posts_producto"
+    label: "🧼 Uso y Cuidado de Producto"
+    label_singular: "Artículo"
+    folder: "blog/posts"
+    i18n: true
+    media_folder: "{{slug}}"
+    public_folder: "/assets/imagenes/blog/{{slug}}"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "yaml-frontmatter"
+    summary: "{{title}} — {{locale}}"
+    sortable_fields: ["date", "title"]
+    filter: { field: "category", value: "cuidado-producto" }
+    fields: *post_fields
+
+  - name: "posts_testimonios"
+    label: "💬 Testimonios y Estilo"
+    label_singular: "Artículo"
+    folder: "blog/posts"
+    i18n: true
+    media_folder: "{{slug}}"
+    public_folder: "/assets/imagenes/blog/{{slug}}"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "yaml-frontmatter"
+    summary: "{{title}} — {{locale}}"
+    sortable_fields: ["date", "title"]
+    filter: { field: "category", value: "testimonios-estilo-vida" }
+    fields: *post_fields
+
+  - name: "posts_tendencias"
+    label: "📈 Tendencias Globales"
+    label_singular: "Artículo"
+    folder: "blog/posts"
+    i18n: true
+    media_folder: "{{slug}}"
+    public_folder: "/assets/imagenes/blog/{{slug}}"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "yaml-frontmatter"
+    summary: "{{title}} — {{locale}}"
+    sortable_fields: ["date", "title"]
+    filter: { field: "category", value: "tendencias-skincare" }
+    fields: *post_fields
