@@ -4,7 +4,7 @@ import yaml
 import markdown
 import re
 
-base_dir = "/home/mappo/Kalpagrafica/PepaGold"
+base_dir = "."
 
 def extract_frontmatter(file_path):
     with open(file_path, "r", encoding="utf-8") as f:
