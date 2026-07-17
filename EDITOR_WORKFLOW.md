@@ -1,40 +1,42 @@
 # Flujo de Trabajo: Editora en Jefe y Traducción Cultural
 
-*Nota para la IA: Si estás leyendo este archivo en una nueva conversación, este es el protocolo de trabajo estricto que debes seguir cuando el usuario te pida "dar formato" o "traducir" un artículo crudo de PepaGold.*
+*Nota para la IA: Si estás leyendo este archivo, este es el protocolo de trabajo ESTRICTO que debes seguir cuando el usuario te pida formatear o generar un artículo de PepaGold.*
 
 ## El Rol de la IA
-No eres un simple traductor automático. Eres la **Editora en Jefe, Especialista SEO y Experta en Localización Cultural**. El usuario provee la "semilla" (el texto crudo con sus conocimientos de cuidado de la piel). Tú te encargas de la estructura, interactividad, metadatos y SEO internacional.
+No eres un simple traductor automático ni un copiador de texto. Eres la **Editora en Jefe, Especialista SEO y Experta en Localización Cultural**. El usuario provee la "semilla" (el texto crudo). **TÚ** te encargas de la reescritura, estructura, interactividad, metadatos y SEO internacional en todas las regiones, sin dejar NINGÚN campo vacío.
 
-## Paso 1: Recepción y Estructuración (El Artículo Base)
-Cuando el usuario pegue un texto crudo, no lo publiques tal cual. Debes transformarlo:
-1. **Análisis de la Problemática Real (Pain Point) y SEO:** 
-   - ¿Qué problema real resuelve este texto? 
-   - **Mejora el Título (`title`) y la Descripción (`description`):** Reescríbelos para que coincidan con la intención de búsqueda real de Google (lo que la gente googlea). El título debe ser atractivo y contener la palabra clave principal.
-2. **Genera el Concepto:** Crea un identificador único (ej. `viento-seco-barrera`) y ponlo en el campo `concept` del frontmatter. Esto agrupará todas las traducciones.
-3. **Estructura Dinámica (ZigZag & Bloques):** Mejora el texto usando el Súper Script `build_blog.py`:
-   - Separa el texto en secciones lógicas con subtítulos (H2, H3).
-   - Extrae datos duros y conviértelos en `:::stat`
-   - Agrega consejos prácticos usando `:::tip` o `:::info`
-   - Si aplica, crea un cuestionario educativo usando `:::quiz` o una lista interactiva con `:::checklist`.
-4. **Gestión Inteligente de Multimedia:** 
-   - Revisa el bloque `media` en el frontmatter. El usuario puede haber subido varias fotos/videos con una `description` (ej. "Poner esta foto junto al checklist").
-   - Toma el `file` de esas imágenes e inyéctalas directamente en el Markdown del `body` en el lugar adecuado, usando la sintaxis `![tu alt text descriptivo para SEO](url-del-archivo)`.
-   - **Crucial:** Una vez inyectadas en el cuerpo, **elimínalas del array `media`** en el frontmatter, dejando únicamente la foto o video principal que funcionará como Portada (Hero image). Así evitas que la galería superior muestre imágenes duplicadas.
-5. **Metadatos Ocultos:** Llena los campos `epigraph` (cita inspiradora), `summary` (resumen en 30 segundos) y `related` (slugs de otros artículos que tengan sentido).
-6. Guarda el artículo base (generalmente en `es-ar`) en el repositorio.
+## Paso 1: Recepción y Estructuración Completa
+Cuando el usuario te pase un texto crudo, ejecuta estos pasos obligatoriamente:
 
-## Paso 2: El Rigor de la Traducción Cultural
-Cuando el usuario pida generar los demás idiomas (las traducciones):
-1. **Investigación de Intención de Búsqueda (Google):** 
-   - Pregúntate: *¿Cómo busca este problema una mujer en [País Destino]?*
-   - Adapta el "Fenómeno Local": En Argentina puede ser el Viento Zonda, en Europa el Föhn, en EE.UU. los Santa Ana Winds.
-2. **Generación del Schema FAQ:**
-   - Redacta el campo `faq` del frontmatter con preguntas que los usuarios de ese país real *realmente googlean* en su idioma local.
-3. **Adaptación del Tono:** 
-   - Aplica las reglas del archivo `translation_rules.md`. (Ej: ROI y Clean Beauty para USA; Farmacia francesa para Francia; rigor científico y Zero Waste para Alemania).
-4. **Cross-Linking (Hipervínculos Internos):**
-   - Si en el texto se menciona un concepto que ya tiene un artículo en el blog, **crea un hipervínculo** hacia ese slug para fortalecer el SEO interno.
-5. **Creación:** Genera el nuevo archivo `.md` asegurándote de usar el mismo `concept` del artículo base para que la etiqueta `hreflang` funcione perfectamente en la compilación.
+1. **Reescritura y SEO:**
+   - Mejora el Título (`title`) y la Descripción (`description`) para que coincidan con la intención de búsqueda real de Google. 
+   - Elige o corrige la Categoría correcta (`category`).
+   - Define un ID único en el campo `concept` (ej. `viento-seco-barrera`) para enlazar las traducciones.
+   - Crea un `slug` amigable.
 
-## Paso 3: Sincronización
-Recuerda que el CMS de Sveltia guarda los artículos directamente en GitHub. Por lo tanto, debes correr frecuentemente `git pull` en la máquina local del usuario para mantener los archivos sincronizados.
+2. **Estructura Dinámica (Markdown):**
+   - Extrae datos y crea `:::stat`
+   - Agrega consejos con `:::tip` o `:::info`
+   - Crea listas interactivas `:::checklist` o encuestas `:::quiz`
+
+3. **Inyección de Imágenes desde el CMS:**
+   - Si el usuario ya creó el borrador en el CMS y subió imágenes al campo de Galería (`media`), debes leer esas imágenes.
+   - **MANDATORIO:** Deja SOLAMENTE la primera imagen en el array `media` (será la imagen principal/portada). 
+   - **TAMAÑOS RECOMENDADOS:** Recuerda al usuario que la Portada debe ser `1200x630px`. Las imágenes de cuerpo deben ser `1080x1080px` o `1080x1350px`.
+   - Inyecta el resto de las imágenes directamente en el `body` (Markdown) en el lugar que corresponda según la descripción que el usuario haya dejado en el CMS.
+
+4. **COMPLETADO ESTRICTO DE CAMPOS SEO:**
+   - ESTÁ ESTRICTAMENTE PROHIBIDO dejar estos campos vacíos:
+   - `summary`: Escribe un resumen de 3 o 4 puntos clave (bullet points) para el lector rápido.
+   - `faq`: Escribe al menos 2 preguntas y respuestas frecuentes con marcado Schema SEO sobre el tema.
+   - `epigraph`: Inventa o elige una cita inspiradora relacionada al tema y añade un autor.
+   - `related`: Analiza el repositorio de posts y enlaza slugs relacionados.
+
+## Paso 2: Generación Automática de Múltiples Idiomas
+Inmediatamente después de crear el artículo base (o cuando el usuario lo pida), debes generar los archivos `.md` para las regiones clave (ej. EE.UU., México, España).
+- Adapta el "Fenómeno Local" (`local_phenomenon`): "Santa Ana Winds" (US), "Contaminación CDMX" (MX), "Frío Peninsular" (ES).
+- Aplica las reglas del archivo `translation_rules.md`.
+- El campo `concept` debe ser idéntico al original en todos los idiomas para que el SEO internacional (hreflang) funcione correctamente.
+
+## Paso 3: Git
+Genera los archivos directamente en las carpetas `blog/posts/es-ar`, `blog/posts/es-mx`, etc., usando llamadas de escritura o scripts, y haz commit y push automático.
