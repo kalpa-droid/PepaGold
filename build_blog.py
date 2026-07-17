@@ -180,7 +180,7 @@ BRAND_HEAD = """<!DOCTYPE html>
   .lang-dropdown-menu {{ position: absolute; top: calc(100% + 8px); right: 0; min-width: 170px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border: 1px solid rgba(212, 140, 144, 0.2); border-radius: 12px; padding: 8px 0; margin: 0; list-style: none; box-shadow: 0 10px 30px rgba(42, 37, 35, 0.08); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all 0.3s ease; }}
   .lang-selector-container.is-active .lang-dropdown-menu {{ opacity: 1; visibility: visible; transform: translateY(0); }}
   .lang-option {{ padding: 10px 18px; font-size: 14px; color: var(--color-dark); cursor: pointer; display: flex; align-items: center; gap: 10px; text-decoration: none; }}
-  .blog-nav-btn-floating {{ right: 130px; }}
+  .blog-nav-btn-floating {{ right: 130px; top: 65px; }}
   
   @media (max-width: 600px) {{
     .floating-droplet {{ top: 65px; left: 12px; width: 46px; height: 46px; }}
@@ -425,24 +425,27 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
 </style>
 </head>
 <body>
-<a class="floating-droplet" href="{home_url}" title="PepaGold - Volver al inicio">
+<!-- Gota de agua del logo flotante -->
+<div class="floating-droplet" onclick="window.location.href='{home_url}'" title="PepaGold - Volver al inicio">
   <img alt="PepaGold Icon" src="/assets/imagenes/icono.svg"/>
-</a>
-<a class="lang-selector-btn blog-nav-btn-floating" href="{canonical}" style="position: fixed; z-index: 1000; text-decoration: none;" title="PepaGold Blog">
-  <span class="active-flag">🇦🇷</span>
+</div>
+<!-- Botón al Blog flotante -->
+<a class="lang-selector-btn blog-nav-btn-floating" href="{canonical}" style="position: fixed; top: 65px; z-index: 1000; text-decoration: none;" title="PepaGold Blog">
+  <span class="active-flag">📖</span>
   <span class="blog-btn-text" style="font-weight: 500;">Blog</span>
 </a>
+<!-- Selector de idiomas flotante -->
 <div class="lang-selector-container">
-  <div class="lang-selector-btn" id="langSelectorBtn">
+  <button aria-expanded="false" aria-haspopup="listbox" class="lang-selector-btn" id="langSelectorBtn">
     <span class="active-flag">🌐</span>
     <span class="active-lang-code">{lang_upper}</span>
-    <span style="font-size: 9px; color: var(--color-primary);">▼</span>
-  </div>
-  <ul class="lang-dropdown-menu" id="langDropdownMenu">
-    <li><a href="/blog/" class="lang-option">🇦🇷 Español (AR)</a></li>
-    <li><a href="/mx/blog/" class="lang-option">🇲🇽 Español (MX)</a></li>
-    <li><a href="/es/blog/" class="lang-option">🇪🇸 Español (ES)</a></li>
-    <li><a href="/us/blog/" class="lang-option">🇺🇸 English</a></li>
+    <span class="arrow-icon" style="font-size: 9px; color: var(--color-primary);">▼</span>
+  </button>
+  <ul class="lang-dropdown-menu" id="langDropdownMenu" role="listbox">
+    <li class="lang-option" onclick="window.location.href='/blog/'" role="option">🇦🇷 Español (AR)</li>
+    <li class="lang-option" onclick="window.location.href='/mx/blog/'" role="option">🇲🇽 Español (MX)</li>
+    <li class="lang-option" onclick="window.location.href='/es/blog/'" role="option">🇪🇸 Español (ES)</li>
+    <li class="lang-option" onclick="window.location.href='/us/blog/'" role="option">🇺🇸 English</li>
   </ul>
 </div>
 
