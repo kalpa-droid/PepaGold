@@ -275,15 +275,15 @@ ARTICLE_TEMPLATE = BRAND_HEAD + """<body>
 <a class="floating-droplet" href="{home_url}" title="PepaGold - Volver al inicio">
   <img alt="PepaGold Icon" src="/assets/imagenes/icono.svg"/>
 </a>
-<a class="lang-selector-btn blog-nav-btn-floating" href="{blog_index_url}" style="{{position: fixed; z-index: 1000;}}" title="PepaGold Blog">
-  <span class="active-flag">📖</span>
-  <span class="blog-btn-text" style="{{font-weight: 500;}}">Blog</span>
+<a class="lang-selector-btn blog-nav-btn-floating" href="{blog_index_url}" style="position: fixed; z-index: 1000; text-decoration: none;" title="PepaGold Blog">
+  <span class="active-flag">🇦🇷</span>
+  <span class="blog-btn-text" style="font-weight: 500;">Blog</span>
 </a>
 <div class="lang-selector-container">
   <div class="lang-selector-btn" id="langSelectorBtn">
     <span class="active-flag">🌐</span>
     <span class="active-lang-code">{lang_upper}</span>
-    <span style="{{font-size: 9px; color: var(--color-primary);}}">▼</span>
+    <span style="font-size: 9px; color: var(--color-primary);">▼</span>
   </div>
   <ul class="lang-dropdown-menu" id="langDropdownMenu">
     <li><a href="/blog/" class="lang-option">🇦🇷 Español (AR)</a></li>
@@ -428,15 +428,15 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
 <a class="floating-droplet" href="{home_url}" title="PepaGold - Volver al inicio">
   <img alt="PepaGold Icon" src="/assets/imagenes/icono.svg"/>
 </a>
-<a class="lang-selector-btn blog-nav-btn-floating" href="{canonical}" style="{{position: fixed; z-index: 1000;}}" title="PepaGold Blog">
-  <span class="active-flag">📖</span>
-  <span class="blog-btn-text" style="{{font-weight: 500;}}">Blog</span>
+<a class="lang-selector-btn blog-nav-btn-floating" href="{canonical}" style="position: fixed; z-index: 1000; text-decoration: none;" title="PepaGold Blog">
+  <span class="active-flag">🇦🇷</span>
+  <span class="blog-btn-text" style="font-weight: 500;">Blog</span>
 </a>
 <div class="lang-selector-container">
   <div class="lang-selector-btn" id="langSelectorBtn">
     <span class="active-flag">🌐</span>
     <span class="active-lang-code">{lang_upper}</span>
-    <span style="{{font-size: 9px; color: var(--color-primary);}}">▼</span>
+    <span style="font-size: 9px; color: var(--color-primary);">▼</span>
   </div>
   <ul class="lang-dropdown-menu" id="langDropdownMenu">
     <li><a href="/blog/" class="lang-option">🇦🇷 Español (AR)</a></li>
