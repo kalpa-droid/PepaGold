@@ -79,7 +79,8 @@ La regla de oro para reparar la piel no es ponerle más cosas, sino **dejar de a
 2. **Reposición Lipídica:** Usa cremas densas con ceramidas, ácido hialurónico (para recuperar agua) y escualano.
 3. **Probióticos Tópicos:** Busca cosméticos con prebióticos (inulina) para alimentar a tus bacterias buenas y recuperar la flora cutánea.
 
-:::quiz
-**Mito o Verdad: "Si tengo piel grasa y acné, debo lavarme más a menudo para secar los granos"**
+:::info ¿Mito o Verdad?
+**"Si tengo piel grasa y acné, debo lavarme más a menudo para secar los granos"**
+
 **Respuesta:** ¡Mito! El acné es a menudo un síntoma de una barrera destruida. Al lavarte en exceso, eliminas las ceramidas y las bacterias buenas. Tu piel entra en pánico y produce el DOBLE de sebo para intentar defenderse, empeorando el acné.
 :::

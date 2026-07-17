@@ -79,7 +79,8 @@ The golden rule for repairing the skin is not to put more things on it, but **to
 2. **Lipid Replenishment:** Use rich creams with ceramides, hyaluronic acid (to recover water), and squalane.
 3. **Topical Probiotics:** Look for cosmetics with prebiotics (inulin) to feed your good bacteria and recover the skin flora.
 
-:::quiz
-**Myth or Truth: "If I have oily skin and acne, I should wash more often to dry out the pimples"**
+:::info Myth or Truth?
+**"If I have oily skin and acne, I should wash more often to dry out the pimples"**
+
 **Answer:** Myth! Acne is often a symptom of a destroyed barrier. By over-washing, you eliminate ceramides and good bacteria. Your skin panics and produces DOUBLE the sebum to try to defend itself, worsening the acne.
 :::
