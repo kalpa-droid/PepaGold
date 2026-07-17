@@ -4,6 +4,8 @@ backend:
   branch: main
   app_id: "Ov23ctY1xR7QYk1CeP3F"
 
+locale: "es"
+
 media_folder: "assets/imagenes/blog"
 public_folder: "/assets/imagenes/blog"
 
