@@ -254,6 +254,9 @@
     padding: 5px 11px;
     font-size: 12px;
   }
+  .blog-nav-btn-floating {
+    right: 110px !important;
+  }
 }
 
       /* Contenedor del Overlay Oscuro y Difuminado */
@@ -723,6 +726,12 @@
 <div class="floating-droplet" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="PepaGold">
   <img src="assets/imagenes/icono.svg" alt="PepaGold Icon" />
 </div>
+
+<!-- Botón al Blog flotante -->
+<a href="blog/index.html" class="lang-selector-btn blog-nav-btn-floating" style="position: fixed; top: 65px; right: 130px; z-index: 1000; text-decoration: none;" title="PepaGold Blog">
+  <span class="active-flag">📖</span>
+  <span class="active-lang-code" data-i18n="nav_blog">Blog</span>
+</a>
 
 <!-- Selector de idiomas flotante (estilo cápsula, al principio de la página) -->
 <div class="lang-selector-container">
