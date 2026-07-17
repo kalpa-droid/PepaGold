@@ -67,24 +67,27 @@
 </style>
 </head>
 <body>
-<a class="floating-droplet" href="/" title="PepaGold - Volver al inicio">
+<!-- Gota de agua del logo flotante -->
+<div class="floating-droplet" onclick="window.location.href='/'" title="PepaGold - Volver al inicio">
   <img alt="PepaGold Icon" src="/assets/imagenes/icono.svg"/>
-</a>
-<a class="lang-selector-btn blog-nav-btn-floating" href="https://pepagold.blog/blog/" style="{position: fixed; z-index: 1000;}" title="PepaGold Blog">
+</div>
+<!-- Botón al Blog flotante -->
+<a class="lang-selector-btn blog-nav-btn-floating" href="https://pepagold.blog/blog/" style="position: fixed; top: 65px; z-index: 1000; text-decoration: none;" title="PepaGold Blog">
   <span class="active-flag">📖</span>
-  <span class="blog-btn-text" style="{font-weight: 500;}">Blog</span>
+  <span class="blog-btn-text" style="font-weight: 500;">Blog</span>
 </a>
+<!-- Selector de idiomas flotante -->
 <div class="lang-selector-container">
-  <div class="lang-selector-btn" id="langSelectorBtn">
+  <button aria-expanded="false" aria-haspopup="listbox" class="lang-selector-btn" id="langSelectorBtn">
     <span class="active-flag">🌐</span>
     <span class="active-lang-code">ES</span>
-    <span style="{font-size: 9px; color: var(--color-primary);}">▼</span>
-  </div>
-  <ul class="lang-dropdown-menu" id="langDropdownMenu">
-    <li><a href="/blog/" class="lang-option">🇦🇷 Español (AR)</a></li>
-    <li><a href="/mx/blog/" class="lang-option">🇲🇽 Español (MX)</a></li>
-    <li><a href="/es/blog/" class="lang-option">🇪🇸 Español (ES)</a></li>
-    <li><a href="/us/blog/" class="lang-option">🇺🇸 English</a></li>
+    <span class="arrow-icon" style="font-size: 9px; color: var(--color-primary);">▼</span>
+  </button>
+  <ul class="lang-dropdown-menu" id="langDropdownMenu" role="listbox">
+    <li class="lang-option" onclick="window.location.href='/blog/'" role="option">🇦🇷 Español (AR)</li>
+    <li class="lang-option" onclick="window.location.href='/mx/blog/'" role="option">🇲🇽 Español (MX)</li>
+    <li class="lang-option" onclick="window.location.href='/es/blog/'" role="option">🇪🇸 Español (ES)</li>
+    <li class="lang-option" onclick="window.location.href='/us/blog/'" role="option">🇺🇸 English</li>
   </ul>
 </div>
 
