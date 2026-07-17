@@ -609,7 +609,7 @@
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
-      "reviewCount": "20000"
+      "reviewCount": "6"
     },
     "review": [
       {
@@ -706,75 +706,8 @@
   }
 ]
 </script>
-<!-- Automatic Language/Region Routing Script -->
-<script>
-  (function() {
-    try {
-      // Skip auto-redirect when testing local file:/// protocol
-      if (window.location.protocol === 'file:') return;
-
-      const savedLang = localStorage.getItem('preferred-lang');
-      const path = window.location.pathname;
-      
-      // Determine prefix in case of subfolder local testing
-      let prefix = "";
-      const baseMatch = path.match(/^(\/.*\/PepaGold)\//) || path.match(/^(\/.*\/PepaGold)$/);
-      if (baseMatch) {
-        prefix = baseMatch[1];
-      }
-
-      const paths = {
-        "es-ar": "/",
-        "es-mx": "/mx/",
-        "es-es": "/es/",
-        "en": "/us/",
-        "fr": "/fr/",
-        "de": "/de/",
-        "it": "/it/",
-        "pt-br": "/pt/",
-        "ru": "/ru/",
-        "zh": "/zh/"
-      };
-
-      const normalize = function(p) {
-        return p.replace(/\/+$/, "").replace(/\/index\.html$/, "");
-      };
-
-      const normPath = normalize(path);
-      const normRoot = normalize(prefix + "/");
-
-      if (normPath === normRoot) {
-        if (savedLang && paths[savedLang]) {
-          const targetPath = prefix + paths[savedLang];
-          if (normalize(path) !== normalize(targetPath)) {
-            window.location.href = targetPath;
-            return;
-          }
-        } else {
-          // Auto-detect browser language
-          const browserLang = (navigator.language || navigator.userLanguage || "es").toLowerCase();
-          let targetLang = null;
-          
-          if (browserLang.startsWith("ru")) targetLang = "ru";
-          else if (browserLang.startsWith("fr")) targetLang = "fr";
-          else if (browserLang.startsWith("de")) targetLang = "de";
-          else if (browserLang.startsWith("it")) targetLang = "it";
-          else if (browserLang.startsWith("pt")) targetLang = "pt-br";
-          else if (browserLang.startsWith("zh")) targetLang = "zh";
-          else if (browserLang.startsWith("en")) targetLang = "en";
-          else if (browserLang.startsWith("es-mx") || browserLang.startsWith("es-cl") || browserLang.startsWith("es-co") || browserLang.startsWith("es-pe") || browserLang.startsWith("es-ve")) targetLang = "es-mx";
-          else if (browserLang.startsWith("es-es")) targetLang = "es-es";
-          
-          if (targetLang && paths[targetLang] && paths[targetLang] !== "/") {
-            window.location.href = prefix + paths[targetLang];
-          }
-        }
-      }
-    } catch (e) {
-      console.warn("Routing error:", e);
-    }
-  })();
-</script>
+<!-- SEO Recommendation: Automatic Language/Region Routing Script Removed -->
+<!-- Googlebot indexation issue and bad UX. Relying on hreflang and manual selector. -->
 </head>
 <body>
 <!-- Gota de agua del logo flotante -->
@@ -4694,7 +4627,7 @@ RESPONSIVE
     =========================================== -->
 <div class="product-info">
 <span class="vendor-name notranslate" translate="no">GREENWAY GLOBAL</span>
-<h1 class="product-title" data-i18n="prod_title"><span class="notranslate" translate="no">Laska Mini Set</span> (3 en 1)</h1>
+<h2 class="product-title" data-i18n="prod_title"><span class="notranslate" translate="no">Laska Mini Set</span> (3 en 1)</h2>
 <!-- Precios -->
 <div class="price-block">
 <span class="price-old">55 €</span>
