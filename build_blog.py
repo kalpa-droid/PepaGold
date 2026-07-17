@@ -671,12 +671,16 @@ def update_sitemap(new_urls):
     print(f"sitemap.xml actualizado: {added} URL(s) nueva(s).")
 
 def main():
-    md_files = sorted(glob.glob(os.path.join(POSTS_DIR, "*.md")))
+    md_files = []
+    for root, _, files in os.walk(POSTS_DIR):
+        for file in files:
+            if file.endswith(".md"):
+                md_files.append(os.path.join(root, file))
+    md_files = sorted(md_files)
+    
     if not md_files:
-        md_files = sorted(glob.glob(os.path.join(POSTS_DIR, "*/*.md")))
-        if not md_files:
-            print("No hay posts en blog/posts/. Nada que generar.")
-            return
+        print("No hay posts en blog/posts/. Nada que generar.")
+        return
 
     all_meta = []
     for path in md_files:
