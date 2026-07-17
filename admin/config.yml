@@ -18,6 +18,8 @@ collections:
     label: "Artículos del blog"
     label_singular: "Artículo"
     folder: "blog/posts"
+    media_folder: "/assets/imagenes/blog/{{slug}}"
+    public_folder: "/assets/imagenes/blog/{{slug}}"
     create: true
     slug: "{{slug}}"
     extension: "md"
