@@ -5209,7 +5209,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="grain-overlay"></div>
     <div class="container" style="text-align:center;">
         <span class="section-tag" style="justify-content:center; display:flex;" data-i18n="about_tag">Transparencia Corporativa</span>
-        <h2 class="section-title" data-i18n="about_title">Sobre PepaGold y Greenway Global</h2>
+        <h2 class="section-title" data-i18n="about_title">Sobre PepaGold</h2>
         <p class="section-subtitle" style="margin: 0 auto 3rem auto;" data-i18n="about_desc">
             Nuestra filosofía se basa en el respeto absoluto por el microbioma humano y el ecosistema global. Desarrollamos la tecnología UpPoly para eliminar la dependencia de surfactantes químicos agresivos y plásticos de un solo uso en la industria cosmética.
         </p>
@@ -5224,15 +5224,12 @@ document.addEventListener('DOMContentLoaded', () => {
             
             <div class="about-card">
                 <h4 class="about-card-title" data-i18n="about_c2">Identidad Corporativa</h4>
-                <p class="about-card-text"><strong class="notranslate" translate="no">PepaGold</strong> - <span data-i18n="about_rep_auth">Representante Autorizado</span> <strong class="notranslate" translate="no">Greenway Global</strong></p>
+                <p class="about-card-text"><strong class="notranslate" translate="no">PepaGold</strong></p>
                 <p class="about-card-text"><strong>Sede Central:</strong> Av. del Libertador 1000, Buenos Aires, Argentina</p>
                 <p class="about-card-text"><strong>CUIT:</strong> 20-30419957-2</p>
             </div>
 
-            <div class="about-card">
-                <h4 class="about-card-title" data-i18n="about_indep">Distribuidor Independiente Autorizado</h4>
-                <p class="about-card-text" data-i18n="about_info_note">Esta página tiene carácter puramente informativo. Las transacciones, envíos y devoluciones se procesan en la tienda oficial de Greenway Global.</p>
-            </div>
+
 
         </div>
     </div>
@@ -5331,7 +5328,7 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
     
     <div class="footer-bottom">
-        <p>© 2025–<span id="current-year">2026</span> <span class="notranslate" translate="no">PepaGold</span> <span data-i18n="footer_rights">Todos los derechos reservados. PepaGold es un distribuidor independiente autorizado de Greenway Global.</span></p>
+        <p>© 2025–<span id="current-year">2026</span> <span class="notranslate" translate="no">PepaGold</span> <span data-i18n="footer_rights">Todos los derechos reservados.</span></p>
         <p style="margin-top: 20px; font-size: 0.7rem; color: rgba(255, 255, 255, 0.45); line-height: 1.6; max-width: 800px; margin-left: auto; margin-right: auto; font-family: var(--font-sans); font-weight: 300;">* <strong>Transparencia E-E-A-T:</strong> Las referencias a investigadores y sus instituciones son informativas y enlazan a sus perfiles públicos y laboratorios verificados. Ningún experto avala comercialmente este producto. Los enlaces usan <code>rel="nofollow noopener"</code> para cumplir con las directrices de Google sobre enlaces de terceros.</p>
     </div>
 </div>
@@ -5927,5 +5924,30 @@ document.addEventListener("DOMContentLoaded", () => {
 })();
 </script>
 
+<script>
+// Play solo el video que está en el centro del carrusel UGC
+document.addEventListener("DOMContentLoaded", function() {
+    const ugcVideos = document.querySelectorAll('#ugcTrack video');
+    if (!ugcVideos.length) return;
+
+    const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.play().catch(e => console.log('Autoplay prevented:', e));
+            } else {
+                entry.target.pause();
+            }
+        });
+    }, {
+        root: document.querySelector('#ugcSlider'),
+        rootMargin: '0px',
+        threshold: 0.6
+    });
+
+    ugcVideos.forEach(video => {
+        videoObserver.observe(video);
+    });
+});
+</script>
 </body>
 </html>

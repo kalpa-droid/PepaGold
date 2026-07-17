@@ -5127,13 +5127,9 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 <div class="about-card">
 <h4 class="about-card-title" data-i18n="about_c2">公司资质信息</h4>
-<p class="about-card-text"><strong class="notranslate" translate="no">PepaGold</strong> - <span data-i18n="about_rep_auth">官方授权代表</span> <strong class="notranslate" translate="no">Greenway Global</strong></p>
+<p class="about-card-text"><strong class="notranslate" translate="no">PepaGold</strong></p>
 <p class="about-card-text"><strong>Sede Central:</strong> Av. del Libertador 1000, Buenos Aires, Argentina</p>
 <p class="about-card-text"><strong>CUIT:</strong> 20-30419957-2</p>
-</div>
-<div class="about-card">
-<h4 class="about-card-title" data-i18n="about_indep">官方授权独立分销商</h4>
-<p class="about-card-text" data-i18n="about_info_note">本页面仅供参考。所有的交易、物流发货及售后退换均在 Greenway Global 官方商城进行。</p>
 </div>
 </div>
 </div>
@@ -5810,6 +5806,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 500);
   });
 })();
+</script>
+<script>
+// Play solo el video que está en el centro del carrusel UGC
+document.addEventListener("DOMContentLoaded", function() {
+    const ugcVideos = document.querySelectorAll('#ugcTrack video');
+    if (!ugcVideos.length) return;
+
+    const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.play().catch(e => console.log('Autoplay prevented:', e));
+            } else {
+                entry.target.pause();
+            }
+        });
+    }, {
+        root: document.querySelector('#ugcSlider'),
+        rootMargin: '0px',
+        threshold: 0.6
+    });
+
+    ugcVideos.forEach(video => {
+        videoObserver.observe(video);
+    });
+});
 </script>
 </body>
 </html>
