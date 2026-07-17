@@ -3,6 +3,7 @@ import os
 import re
 import sys
 import glob
+import json
 import yaml
 import markdown
 import datetime
@@ -12,18 +13,13 @@ SITE_URL = "https://pepagold.blog"
 POSTS_DIR = "blog/posts"
 SITEMAP_PATH = "sitemap.xml"
 
-# Mismo mapeo de carpetas por idioma
 LOCALE_FOLDERS = {
     "es-ar": "", "es-mx": "mx", "es-es": "es", "en-us": "us",
     "fr-fr": "fr", "de-de": "de", "it-it": "it", "pt-br": "pt",
     "ru-ru": "ru", "zh-hans": "zh",
 }
 
-HREFLANG_MAP = {
-    "es-ar": "es-ar", "es-mx": "es-mx", "es-es": "es-es", "en-us": "en-us",
-    "fr-fr": "fr-fr", "de-de": "de-de", "it-it": "it-it", "pt-br": "pt-br",
-    "ru-ru": "ru-ru", "zh-hans": "zh-hans",
-}
+HREFLANG_MAP = {k: k for k in LOCALE_FOLDERS}
 
 CATEGORY_LABELS_DEFAULT = {
     "barrera-cutanea": "🔬 Ciencia de la Piel",
@@ -36,23 +32,113 @@ CATEGORY_LABELS_DEFAULT = {
     "tendencias-skincare": "📈 Tendencias Globales",
 }
 
+# =========================================================================
+# BLOQUES INTERACTIVOS (Tip, Stat, Checklist, Quiz)
+# =========================================================================
+
+BLOCK_RE = re.compile(r"^:::(tip|info|stat|checklist|quiz)(?:[ \t]+(.*))?\n(.*?)\n:::[ \t]*$", re.M | re.S)
+_inline_md = markdown.Markdown(extensions=["extra"])
+
+def _inline(text):
+    _inline_md.reset()
+    html = _inline_md.convert(text.strip())
+    if html.startswith("<p>") and html.endswith("</p>") and html.count("<p>") == 1:
+        html = html[3:-4]
+    return html
+
+def render_tip_or_info(kind, title, content):
+    icon = "💡" if kind == "tip" else "ℹ️"
+    label = title or ("Tip" if kind == "tip" else "Para tener en cuenta")
+    body = markdown.markdown(content.strip(), extensions=["extra", "sane_lists"])
+    return (
+        f'<div class="callout callout-{kind}">'
+        f'<p class="callout-title">{icon} {label}</p>'
+        f'<div class="callout-body">{body}</div></div>'
+    )
+
+def render_stat(content):
+    lines = [l for l in content.strip().split("\n") if l.strip()]
+    number = lines[0] if lines else ""
+    caption = " ".join(lines[1:]) if len(lines) > 1 else ""
+    return (
+        f'<div class="callout stat-box"><p class="stat-number">{_inline(number)}</p>'
+        f'<p class="stat-caption">{_inline(caption)}</p></div>'
+    )
+
+def render_checklist(title, content, block_id):
+    items = [l[2:].strip() for l in content.strip().split("\n") if l.strip().startswith("- ")]
+    lis = "".join(
+        f'<li><label><input type="checkbox" class="cl-item" data-key="{block_id}-{i}"> '
+        f'<span>{_inline(item)}</span></label></li>'
+        for i, item in enumerate(items)
+    )
+    label = title or "Probalo en casa"
+    return (
+        f'<div class="callout checklist-box">'
+        f'<p class="callout-title">✅ {label}</p>'
+        f'<ul class="checklist">{lis}</ul>'
+        f'<p class="checklist-hint">Se guarda solo en este navegador — marcá a tu ritmo.</p>'
+        f'</div>'
+    )
+
+def render_quiz(title, content, block_id):
+    questions = [q for q in re.split(r"\n\s*\n", content.strip()) if q.strip()]
+    out = [f'<div class="callout quiz-box"><p class="callout-title">🧠 {title or "Ponete a prueba"}</p>']
+    for qi, block in enumerate(questions):
+        lines = [l.strip() for l in block.strip().split("\n") if l.strip()]
+        if not lines or not lines[0].startswith("Q:"):
+            continue
+        question_text = lines[0][2:].strip()
+        options = []
+        for opt_line in lines[1:]:
+            if not opt_line.startswith("- "):
+                continue
+            correct = "*correct*" in opt_line
+            text = opt_line[2:].replace("*correct*", "").strip()
+            options.append((text, correct))
+        out.append(f'<div class="quiz-question"><p class="quiz-q">{_inline(question_text)}</p><div class="quiz-options">')
+        for oi, (text, correct) in enumerate(options):
+            out.append(
+                f'<button type="button" class="quiz-option" data-correct="{1 if correct else 0}" '
+                f'onclick="pgQuiz(this,{1 if correct else 0})">{_inline(text)}</button>'
+            )
+        out.append('</div></div>')
+    out.append('</div>')
+    return "".join(out)
+
+def preprocess_custom_blocks(md_text, slug):
+    counter = {"n": 0}
+    def repl(m):
+        kind, title, content = m.group(1), (m.group(2) or "").strip(), m.group(3)
+        counter["n"] += 1
+        bid = f"{slug}-{counter['n']}"
+        if kind in ("tip", "info"): return render_tip_or_info(kind, title, content)
+        if kind == "stat": return render_stat(content)
+        if kind == "checklist": return render_checklist(title, content, bid)
+        if kind == "quiz": return render_quiz(title, content, bid)
+        return ""
+    return BLOCK_RE.sub(repl, md_text)
+
+# =========================================================================
+# FUNCIONES MULTIMEDIA (Fase 2)
+# =========================================================================
+
 def render_media(media_list):
     if not media_list:
         return '<span>[No Media]</span>'
-        
     html = '<div class="media-gallery" style="display: flex; gap: 10px; width: 100%; height: 100%;">'
     for item in media_list:
-        if isinstance(item, str):
-            src = item
-        else:
-            src = item.get('file', '')
-            
+        src = item if isinstance(item, str) else item.get('file', '')
         if src.lower().endswith(('.mp4', '.webm')):
             html += f'<video src="{src}" autoplay muted loop playsinline style="flex: 1; width: 100%; object-fit: cover; border-radius: 8px;"></video>'
         else:
             html += f'<img src="{src}" style="flex: 1; width: 100%; object-fit: cover; border-radius: 8px;" alt="Blog Media">'
     html += '</div>'
     return html
+
+# =========================================================================
+# PLANTILLAS HTML
+# =========================================================================
 
 BRAND_HEAD = """<!DOCTYPE html>
 <html lang="{lang_attr}">
@@ -73,62 +159,111 @@ BRAND_HEAD = """<!DOCTYPE html>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {{
-    --color-primary: #D48C90;
-    --color-primary-hover: #C97A7E;
-    --color-accent: #E29578;
-    --color-dark: #2A2523;
-    --color-dark-muted: #5A524E;
-    --border-color: rgba(212,140,144,0.2);
-    --bg-primary: #FFFFFF;
-    --bg-secondary: #FAF6F5;
+    --color-primary: #D48C90; --color-primary-hover: #C97A7E; --color-accent: #E29578;
+    --color-dark: #2A2523; --color-dark-muted: #5A524E; --border-color: rgba(212,140,144,0.2);
+    --bg-primary: #FFFFFF; --bg-secondary: #FAF6F5; --bg-accent-light:#FDF7F7;
     --shadow-md: 0 8px 25px rgba(42, 37, 35, 0.05);
   }}
   * {{ box-sizing: border-box; margin: 0; padding: 0; }}
   html {{ scroll-behavior: smooth; }}
-  body {{
-    font-family: 'Poppins', sans-serif;
-    color: var(--color-dark);
-    background: var(--bg-primary);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }}
-  img {{ max-width: 100%; height: auto; display:block; }}
-  a {{ color: var(--color-primary-hover); text-decoration: none; }}
+  body {{ font-family:'Poppins',sans-serif; color:var(--color-dark); background:var(--bg-primary); line-height:1.6; -webkit-font-smoothing:antialiased; }}
+  img {{ max-width:100%; height:auto; display:block; }}
+  a {{ color:var(--color-primary-hover); text-decoration: none; }}
   
-  .site-header {{ padding: 20px 24px; border-bottom: 1px solid var(--border-color); display:flex; align-items:center; justify-content:space-between; }}
-  .site-header a.logo {{ font-family: Georgia, 'Times New Roman', serif; font-size:1.3rem; color:var(--color-dark); text-decoration:none; font-weight:600; }}
-  .site-header nav a {{ margin-left:20px; font-size:0.9rem; color:var(--color-dark-muted); }}
+  .site-header {{ padding:20px 24px; border-bottom:1px solid var(--border-color); display:flex; align-items:center; justify-content:space-between; }}
+  .site-header a.logo {{ font-family:Georgia,'Times New Roman',serif; font-size:1.3rem; color:var(--color-dark); text-decoration:none; font-weight:600; }}
+  .site-header nav a {{ margin-left:20px; font-size:0.9rem; text-decoration:none; color:var(--color-dark-muted); }}
   
-  .wrap {{ max-width: 800px; margin: 0 auto; padding: 40px 24px 80px; }}
-  .eyebrow {{ font-size:0.85rem; letter-spacing:.06em; text-transform:uppercase; color:var(--color-accent); font-weight:600; }}
-  h1.article-title {{ font-family: Georgia, 'Times New Roman', serif; font-weight:400; font-size: clamp(2rem, 4vw, 2.8rem); line-height:1.2; margin: 10px 0 16px; color: var(--color-dark); }}
-  .meta-row {{ display:flex; gap:14px; flex-wrap:wrap; color: rgba(42,37,35,0.6); font-size:0.85rem; margin-bottom: 28px; }}
+  .wrap {{ max-width:800px; margin:0 auto; padding:40px 24px 80px; }}
+  .eyebrow {{ font-size:0.8rem; letter-spacing:.06em; text-transform:uppercase; color:var(--color-accent); font-weight:600; }}
+  h1.article-title {{ font-family:Georgia,'Times New Roman',serif; font-weight:400; font-size:clamp(2rem,4vw,2.8rem); line-height:1.2; margin:10px 0 16px; color:var(--color-dark); }}
+  .meta-row {{ display:flex; gap:14px; flex-wrap:wrap; color:rgba(42,37,35,0.6); font-size:0.85rem; margin-bottom:20px; }}
+  .region-tag {{ display:inline-block; font-size:0.78rem; background:rgba(226,149,120,0.15); color:var(--color-accent); padding:4px 12px; border-radius:999px; margin-bottom:12px; font-weight:600; }}
+  
+  /* Lang selector */
+  .lang-selector-container {{ position: fixed; top: 65px; right: 20px; z-index: 1000; font-family: 'Poppins', sans-serif; }}
+  .lang-selector-btn {{ display: flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 30px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border: 1px solid rgba(212, 140, 144, 0.25); color: var(--color-dark); font-size: 14px; font-weight: 500; cursor: pointer; box-shadow: 0 4px 12px rgba(42, 37, 35, 0.04); transition: all 0.3s ease; }}
+  .lang-dropdown-menu {{ position: absolute; top: calc(100% + 8px); right: 0; min-width: 170px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border: 1px solid rgba(212, 140, 144, 0.2); border-radius: 12px; padding: 8px 0; margin: 0; list-style: none; box-shadow: 0 10px 30px rgba(42, 37, 35, 0.08); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all 0.3s ease; }}
+  .lang-selector-container.is-active .lang-dropdown-menu {{ opacity: 1; visibility: visible; transform: translateY(0); }}
+  .lang-option {{ padding: 10px 18px; font-size: 14px; color: var(--color-dark); cursor: pointer; display: flex; align-items: center; gap: 10px; text-decoration: none; }}
+  
+  /* Bloques Interactivos y Secciones */
+  .epigraph {{ font-family:Georgia,serif; font-style:italic; font-size:1.15rem; color:var(--color-dark-muted); border-left:3px solid var(--color-primary); padding:6px 20px; margin:24px 0; }}
+  .epigraph cite {{ display:block; font-style:normal; font-size:0.85rem; margin-top:8px; color:var(--color-accent); }}
+  .summary-box {{ background:var(--bg-secondary); border:1px solid var(--border-color); border-radius:14px; padding:22px 24px; margin:24px 0 32px; }}
+  .summary-box p.callout-title {{ margin-bottom:10px; font-weight:600; color:var(--color-dark); }}
+  .summary-box ul {{ margin-left:20px; color:var(--color-dark-muted); }}
+  .summary-box li {{ margin-bottom:6px; }}
   
   .hero-image-placeholder {{ width: 100%; min-height: 400px; background: var(--bg-secondary); border-radius: 18px; margin-bottom: 40px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 10px; box-shadow: var(--shadow-md); }}
   
-  .article-body h2 {{ font-family: Georgia, 'Times New Roman', serif; font-weight:400; font-size:1.8rem; margin: 40px 0 14px; color: var(--color-dark); }}
-  .article-body h3 {{ font-family: Georgia, serif; font-size:1.3rem; margin: 28px 0 10px; color: var(--color-dark); }}
-  .article-body p {{ margin-bottom: 18px; color: var(--color-dark-muted); font-size:1.05rem; }}
-  .article-body ul, .article-body ol {{ margin: 0 0 18px 22px; color: var(--color-dark-muted); }}
-  .article-body li {{ margin-bottom: 8px; }}
-  .article-body blockquote {{ border-left: 3px solid var(--color-primary); padding: 4px 20px; margin: 24px 0; background: var(--bg-secondary); border-radius: 0 10px 10px 0; color: var(--color-dark-muted); font-style:italic; }}
+  .toc {{ background:var(--bg-accent-light); border:1px solid var(--border-color); border-radius:14px; padding:18px 22px; margin:0 0 32px; font-size:0.92rem; }}
+  .toc::before {{ content:"En este artículo"; display:block; font-weight:600; margin-bottom:8px; color:var(--color-dark); }}
+  .toc ul {{ list-style:none; }}
+  .toc a {{ text-decoration:none; color:var(--color-dark-muted); }}
+  .toc a:hover {{ color:var(--color-primary-hover); }}
+  .toc li {{ margin-bottom:6px; }}
   
-  .product-cta {{ margin: 40px 0; padding: 28px; border-radius: 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); text-align:center; }}
-  .product-cta p {{ margin-bottom: 16px; color: var(--color-dark); }}
-  .product-cta a.btn {{ display:inline-block; background: var(--color-primary); color:#fff; text-decoration:none; padding: 14px 30px; border-radius: 999px; font-weight:600; font-size:0.95rem; }}
-  .product-cta a.btn:hover {{ background: var(--color-primary-hover); }}
+  .article-body h2 {{ font-family:Georgia,serif; font-weight:400; font-size:1.8rem; margin:40px 0 14px; color:var(--color-dark); scroll-margin-top:20px; }}
+  .article-body h3 {{ font-family:Georgia,serif; font-size:1.3rem; margin:28px 0 10px; color:var(--color-dark); scroll-margin-top:20px; }}
+  .article-body p {{ margin-bottom:18px; color:var(--color-dark-muted); font-size:1.05rem; }}
+  .article-body ul, .article-body ol {{ margin:0 0 18px 22px; color:var(--color-dark-muted); }}
+  .article-body li {{ margin-bottom:8px; }}
   
-  .region-tag {{ display:inline-block; font-size:0.78rem; background: rgba(226,149,120,0.15); color: var(--color-accent); padding: 4px 12px; border-radius: 999px; margin-bottom: 12px; font-weight:600; }}
-  footer.site-footer {{ background: var(--color-dark); color: rgba(255,255,255,0.7); text-align:center; padding: 40px 24px; font-size:0.85rem; margin-top:60px; }}
+  .callout {{ border-radius:14px; padding:20px 22px; margin:28px 0; }}
+  .callout-title {{ font-weight:600; margin-bottom:8px; color:var(--color-dark); }}
+  .callout-body p {{ margin-bottom:8px; color:var(--color-dark-muted); }}
+  .callout-tip {{ background:var(--bg-accent-light); border:1px solid var(--border-color); }}
+  .callout-info {{ background:var(--bg-secondary); border-left:4px solid var(--color-accent); }}
   
-  /* Botones flotantes (Language Selector) */
-  .lang-selector-container {{ position: fixed; top: 65px; right: 20px; z-index: 1000; font-family: var(--font-sans); }}
-  .lang-selector-btn {{ display: flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 30px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(212, 140, 144, 0.25); color: var(--color-dark); font-size: 14px; font-weight: 500; cursor: pointer; box-shadow: 0 4px 12px rgba(42, 37, 35, 0.04); transition: all 0.3s ease; text-decoration: none; }}
-  .lang-selector-btn:hover {{ border-color: var(--color-primary); box-shadow: 0 6px 16px rgba(212, 140, 144, 0.15); transform: translateY(-1px); }}
-  .lang-dropdown-menu {{ position: absolute; top: calc(100% + 8px); right: 0; min-width: 170px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border: 1px solid rgba(212, 140, 144, 0.2); border-radius: 12px; padding: 8px 0; margin: 0; list-style: none; box-shadow: 0 10px 30px rgba(42, 37, 35, 0.08); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); }}
-  .lang-selector-container.is-active .lang-dropdown-menu {{ opacity: 1; visibility: visible; transform: translateY(0); }}
-  .lang-option {{ padding: 10px 18px; font-size: 14px; color: var(--color-dark); cursor: pointer; display: flex; align-items: center; gap: 10px; text-decoration: none; }}
-  .lang-option:hover {{ background: rgba(212, 140, 144, 0.08); color: var(--color-primary-hover); }}
+  .stat-box {{ text-align:center; background:var(--color-dark); color:#fff; padding:34px 20px; }}
+  .stat-number {{ font-family:Georgia,serif; font-size:2.4rem; margin-bottom:6px; }}
+  .stat-caption {{ font-size:0.95rem; color:rgba(255,255,255,0.75); }}
+  
+  .checklist-box {{ background:var(--bg-secondary); border:1px solid var(--border-color); }}
+  .checklist {{ list-style:none; margin-top:10px; }}
+  .checklist li {{ margin-bottom:10px; }}
+  .checklist label {{ display:flex; gap:10px; align-items:flex-start; cursor:pointer; color:var(--color-dark-muted); }}
+  .checklist input[type=checkbox] {{ margin-top:4px; accent-color:var(--color-primary); width:18px; height:18px; flex-shrink:0; }}
+  .checklist-hint {{ font-size:0.78rem; color:rgba(42,37,35,0.5); margin-top:6px; }}
+  
+  .quiz-box {{ background:var(--bg-accent-light); border:1px solid var(--border-color); }}
+  .quiz-question {{ margin-top:16px; }}
+  .quiz-q {{ font-weight:600; margin-bottom:10px; color:var(--color-dark); }}
+  .quiz-options {{ display:flex; flex-direction:column; gap:8px; }}
+  .quiz-option {{ text-align:left; padding:10px 14px; border-radius:10px; border:1px solid var(--border-color); background:#fff; cursor:pointer; font-family:'Poppins',sans-serif; font-size:0.95rem; color:var(--color-dark); }}
+  .quiz-option:hover:not(:disabled) {{ border-color:var(--color-primary); }}
+  .quiz-option.correct {{ background:#E7F5EA; border-color:#4CAF50; }}
+  .quiz-option.incorrect {{ background:#FBEAEA; border-color:#E57373; }}
+  .quiz-option:disabled {{ cursor:default; }}
+  
+  .science-link {{ display:flex; gap:16px; align-items:center; background:var(--bg-secondary); border-radius:14px; padding:20px 22px; margin:32px 0; text-decoration:none; }}
+  .science-link .sci-icon {{ font-size:1.6rem; }}
+  .science-link .sci-text p:first-child {{ font-weight:600; color:var(--color-dark); margin-bottom:2px; }}
+  .science-link .sci-text p:last-child {{ font-size:0.88rem; color:var(--color-dark-muted); }}
+  
+  .product-cta {{ margin:40px 0; padding:28px; border-radius:16px; background:var(--bg-secondary); border:1px solid var(--border-color); text-align:center; }}
+  .product-cta p {{ margin-bottom:16px; color:var(--color-dark); }}
+  .product-cta a.btn {{ display:inline-block; background:var(--color-primary); color:#fff; text-decoration:none; padding:14px 30px; border-radius:999px; font-weight:600; font-size:0.95rem; }}
+  .product-cta a.btn:hover {{ background:var(--color-primary-hover); }}
+  
+  .related-section {{ margin-top:50px; }}
+  .related-section h2 {{ font-family:Georgia,serif; font-weight:400; font-size:1.5rem; margin-bottom:16px; }}
+  .related-grid {{ display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:18px; }}
+  .related-card {{ border:1px solid var(--border-color); border-radius:14px; overflow:hidden; text-decoration:none; color:inherit; }}
+  .related-card .card-video {{ aspect-ratio:16/10; object-fit:cover; display:flex; }}
+  .related-card .rc-body {{ padding:14px; }}
+  .related-card h3 {{ font-family:Georgia,serif; font-weight:400; font-size:1rem; color:var(--color-dark); }}
+  
+  .faq-section {{ margin-top:50px; }}
+  .faq-section h2 {{ font-family:Georgia,serif; font-weight:400; font-size:1.5rem; margin-bottom:16px; }}
+  .faq-item {{ border-bottom:1px solid var(--border-color); padding:16px 0; }}
+  .faq-item summary {{ cursor:pointer; font-weight:600; color:var(--color-dark); }}
+  .faq-item p {{ margin-top:10px; color:var(--color-dark-muted); }}
+  
+  .back-link {{ display:inline-block; margin-bottom:24px; font-size:0.9rem; color:var(--color-dark-muted); text-decoration:none; }}
+  footer.site-footer {{ background:var(--color-dark); color:rgba(255,255,255,0.7); text-align:center; padding:40px 24px; font-size:0.85rem; margin-top:60px; }}
+  footer.site-footer a {{ color:#fff; }}
 </style>
 {article_schema}
 </head>
@@ -155,39 +290,64 @@ ARTICLE_TEMPLATE = BRAND_HEAD + """<body>
 </div>
 
 <div class="wrap">
-  <a class="back-link" href="{blog_index_url}" style="display:inline-block; margin-bottom:24px; color:var(--color-dark-muted);">&larr; Volver al blog</a><br>
+  <a class="back-link" href="{blog_index_url}">&larr; Volver al blog</a>
+  <br>
   {region_tag_html}
   <p class="eyebrow">{category_label}</p>
   <h1 class="article-title">{title}</h1>
-  <div class="meta-row"><span>{date_display}</span><span>&middot;</span><span>{author}</span></div>
+  <div class="meta-row"><span>{date_display}</span><span>&middot;</span><span>{reading_time} min de lectura</span><span>&middot;</span><span>{author}</span></div>
+  
+  {epigraph_html}
+  {summary_html}
   
   <div class="hero-image-placeholder">
     {media_html}
   </div>
   
+  {toc_html}
+  
   <div class="article-body">
     {body_html}
   </div>
+  
+  {science_link_html}
   
   <div class="product-cta">
     <p><strong>Laska Mini Set</strong> — el set de microfibra que reemplaza discos de algodón, agua micelar y desmaquillante. Solo con agua.</p>
     <a class="btn" href="{home_url}">Conocer el producto &rarr;</a>
   </div>
+  
+  {faq_html}
+  {related_html}
 </div>
 <footer class="site-footer">
   <p>&copy; 2025&ndash;2026 PepaGold &middot; Distribuidor independiente autorizado de Greenway Global</p>
 </footer>
 <script>
+  // Menu desplegable
   const container = document.querySelector('.lang-selector-container');
   const btn = document.getElementById('langSelectorBtn');
   if (btn) {{
-    btn.addEventListener('click', (e) => {{
-      e.stopPropagation();
-      container.classList.toggle('is-active');
-    }});
-    document.addEventListener('click', () => {{
-      container.classList.remove('is-active');
-    }});
+    btn.addEventListener('click', (e) => {{ e.stopPropagation(); container.classList.toggle('is-active'); }});
+    document.addEventListener('click', () => {{ container.classList.remove('is-active'); }});
+  }}
+  
+  // Checklist localstorage
+  document.querySelectorAll('.cl-item').forEach(function(cb){{
+    var k = 'pepagold_check_' + cb.dataset.key;
+    cb.checked = localStorage.getItem(k) === '1';
+    cb.addEventListener('change', function(){{ localStorage.setItem(k, cb.checked ? '1' : '0'); }});
+  }});
+  
+  // Quiz
+  function pgQuiz(btn, correct) {{
+    var box = btn.closest('.quiz-question');
+    box.querySelectorAll('.quiz-option').forEach(function(b){{ b.disabled = true; }});
+    if (correct) {{ btn.classList.add('correct'); }}
+    else {{
+      btn.classList.add('incorrect');
+      box.querySelectorAll('.quiz-option[data-correct="1"]').forEach(function(b){{ b.classList.add('correct'); }});
+    }}
   }}
 </script>
 </body>
@@ -209,17 +369,10 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
   :root {{
     --font-serif: Georgia, "Times New Roman", serif;
     --font-sans: 'Poppins', sans-serif;
-    --color-primary: #D48C90;
-    --color-primary-hover: #C97A7E;
-    --color-accent: #E29578;
-    --color-dark: #2A2523;
-    --color-dark-muted: #5A524E;
-    --border-color: rgba(212, 140, 144, 0.2);
-    --bg-primary: #FFFFFF;
-    --bg-secondary: #FAF6F5;
-    --shadow-sm: 0 4px 15px rgba(42, 37, 35, 0.05);
-    --shadow-md: 0 8px 25px rgba(42, 37, 35, 0.08);
-    --shadow-lg: 0 15px 35px rgba(212, 140, 144, 0.15);
+    --color-primary: #D48C90; --color-primary-hover: #C97A7E; --color-accent: #E29578;
+    --color-dark: #2A2523; --color-dark-muted: #5A524E; --border-color: rgba(212, 140, 144, 0.2);
+    --bg-primary: #FFFFFF; --bg-secondary: #FAF6F5;
+    --shadow-sm: 0 4px 15px rgba(42, 37, 35, 0.05); --shadow-lg: 0 15px 35px rgba(212, 140, 144, 0.15);
   }}
   * {{ box-sizing: border-box; margin: 0; padding: 0; }}
   body {{ font-family: var(--font-sans); color: var(--color-dark-muted); background: var(--bg-primary); line-height: 1.8; }}
@@ -228,49 +381,44 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
 
   .site-header {{ padding: 20px 24px; border-bottom: 1px solid var(--border-color); display:flex; align-items:center; justify-content:space-between; }}
   .site-header a.logo {{ font-family: Georgia, serif; font-size:1.3rem; color:var(--color-dark); text-decoration:none; font-weight:600; }}
-  .site-header nav a {{ margin-left:20px; font-size:0.9rem; text-decoration:none; color:var(--color-dark-muted); }}
+  .site-header nav a {{ margin-left:20px; font-size:0.9rem; color:var(--color-dark-muted); }}
 
   .blog-header {{ text-align: center; padding: 80px 20px 40px; background: var(--bg-secondary); }}
   .blog-header h1 {{ font-size: 2.8rem; margin-bottom: 10px; }}
   .blog-header p {{ font-size: 1.1rem; max-width: 600px; margin: 0 auto; color: var(--color-dark-muted); }}
 
   .chips {{ display:flex; gap:10px; flex-wrap:wrap; justify-content: center; margin: -20px auto 40px; max-width: 1000px; padding: 0 20px; }}
-  .chips a {{ font-size:0.82rem; padding:7px 16px; border-radius:999px; border:1px solid var(--border-color); color:var(--color-dark-muted); background: var(--bg-primary); text-decoration:none; transition: all 0.2s; }}
+  .chips a {{ font-size:0.82rem; padding:7px 16px; border-radius:999px; border:1px solid var(--border-color); color:var(--color-dark-muted); background: var(--bg-primary); transition: all 0.2s; }}
   .chips a.active {{ background: var(--color-primary); color:#fff; border-color: var(--color-primary); }}
-  .chips a:hover:not(.active) {{ border-color: var(--color-primary); }}
 
-  .pain-agitation-section {{ background: var(--bg-primary); padding: 40px 20px 70px; text-align: center; position: relative; overflow: hidden; }}
-  .interactive-pain {{ max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 80px; position: relative; z-index: 2; }}
+  .pain-agitation-section {{ background: var(--bg-primary); padding: 40px 20px 70px; text-align: center; overflow: hidden; }}
+  .interactive-pain {{ max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 80px; }}
   .pain-card-v2 {{ display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 50px; align-items: center; text-align: left; }}
   .pain-card-v2:nth-child(even) {{ direction: rtl; }}
   .pain-card-v2:nth-child(even) > * {{ direction: ltr; }}
 
-  .card-video {{ width: 100%; max-width: 400px; margin: 0 auto; aspect-ratio: 1 / 1; border-radius: 16px; border: 1px dashed var(--color-primary); box-shadow: var(--shadow-sm); overflow: hidden; position: relative; background-color: var(--bg-secondary); transition: box-shadow 0.4s ease, transform 0.4s ease; display: flex; align-items: center; justify-content: center; padding: 10px; }}
+  .card-video {{ width: 100%; max-width: 400px; margin: 0 auto; aspect-ratio: 1 / 1; border-radius: 16px; border: 1px dashed var(--color-primary); box-shadow: var(--shadow-sm); overflow: hidden; display: flex; align-items: center; justify-content: center; padding: 10px; transition: transform 0.4s ease; }}
   .card-video:hover {{ box-shadow: var(--shadow-lg); transform: translateY(-5px); }}
 
   .text-content {{ display: flex; flex-direction: column; gap: 12px; }}
-  .accent-subtitle {{ color: var(--color-accent); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; display: flex; align-items: center; gap: 8px; }}
-  .problem-title {{ font-family: var(--font-serif); font-size: 2.2rem; line-height: 1.2; color: var(--color-dark); margin: 0; }}
-  .problem-description {{ font-family: var(--font-sans); font-size: 1.1rem; line-height: 1.7; color: var(--color-dark-muted); font-weight: 300; margin: 0; }}
+  .accent-subtitle {{ color: var(--color-accent); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; }}
+  .problem-title {{ font-family: var(--font-serif); font-size: 2.2rem; margin: 0; }}
+  .problem-description {{ font-size: 1.1rem; color: var(--color-dark-muted); margin: 0; }}
 
-  .read-btn {{ display: inline-flex; align-items: center; gap: 8px; margin-top: 15px; font-weight: 600; color: var(--color-primary); font-size: 1.05rem; transition: all 0.3s ease; align-self: flex-start; }}
-  .read-btn::after {{ content: '→'; transition: transform 0.3s ease; }}
-  .read-btn:hover {{ color: var(--color-primary-hover); }}
-  .read-btn:hover::after {{ transform: translateX(5px); }}
+  .read-btn {{ display: inline-flex; align-items: center; gap: 8px; margin-top: 15px; font-weight: 600; color: var(--color-primary); transition: all 0.3s ease; align-self: flex-start; }}
+  .read-btn::after {{ content: '→'; }}
+  
+  .lang-selector-container {{ position: fixed; top: 65px; right: 20px; z-index: 1000; font-family: 'Poppins', sans-serif; }}
+  .lang-selector-btn {{ display: flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 30px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border: 1px solid rgba(212, 140, 144, 0.25); color: var(--color-dark); font-size: 14px; cursor: pointer; }}
+  .lang-dropdown-menu {{ position: absolute; top: calc(100% + 8px); right: 0; min-width: 170px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border: 1px solid rgba(212, 140, 144, 0.2); border-radius: 12px; padding: 8px 0; margin: 0; list-style: none; opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all 0.3s ease; }}
+  .lang-selector-container.is-active .lang-dropdown-menu {{ opacity: 1; visibility: visible; transform: translateY(0); }}
+  .lang-option {{ padding: 10px 18px; font-size: 14px; color: var(--color-dark); display: flex; align-items: center; gap: 10px; }}
   
   footer.site-footer {{ background: var(--color-dark); color: rgba(255,255,255,0.7); text-align:center; padding: 40px 24px; font-size:0.85rem; }}
-  
-  /* Lang selector */
-  .lang-selector-container {{ position: fixed; top: 65px; right: 20px; z-index: 1000; font-family: var(--font-sans); }}
-  .lang-selector-btn {{ display: flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 30px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border: 1px solid rgba(212, 140, 144, 0.25); color: var(--color-dark); font-size: 14px; font-weight: 500; cursor: pointer; box-shadow: 0 4px 12px rgba(42, 37, 35, 0.04); transition: all 0.3s ease; text-decoration: none; }}
-  .lang-dropdown-menu {{ position: absolute; top: calc(100% + 8px); right: 0; min-width: 170px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border: 1px solid rgba(212, 140, 144, 0.2); border-radius: 12px; padding: 8px 0; margin: 0; list-style: none; box-shadow: 0 10px 30px rgba(42, 37, 35, 0.08); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all 0.3s ease; }}
-  .lang-selector-container.is-active .lang-dropdown-menu {{ opacity: 1; visibility: visible; transform: translateY(0); }}
-  .lang-option {{ padding: 10px 18px; font-size: 14px; color: var(--color-dark); cursor: pointer; display: flex; align-items: center; gap: 10px; text-decoration: none; }}
   
   @media (max-width: 768px) {{
     .pain-card-v2 {{ grid-template-columns: 1fr; gap: 30px; }}
     .pain-card-v2:nth-child(even) {{ direction: ltr; }}
-    .problem-title {{ font-size: 1.8rem; }}
   }}
 </style>
 </head>
@@ -311,25 +459,23 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
   const container = document.querySelector('.lang-selector-container');
   const btn = document.getElementById('langSelectorBtn');
   if (btn) {{
-    btn.addEventListener('click', (e) => {{
-      e.stopPropagation();
-      container.classList.toggle('is-active');
-    }});
-    document.addEventListener('click', () => {{
-      container.classList.remove('is-active');
-    }});
+    btn.addEventListener('click', (e) => {{ e.stopPropagation(); container.classList.toggle('is-active'); }});
+    document.addEventListener('click', () => {{ container.classList.remove('is-active'); }});
   }}
 </script>
 </body>
 </html>
 """
 
+# =========================================================================
+# FUNCIONES DE RENDERIZADO
+# =========================================================================
+
 def parse_post(path):
     with open(path, encoding="utf-8") as f:
         raw = f.read()
     m = re.match(r"^---\s*\n(.*?)\n---\s*\n(.*)$", raw, re.S)
-    if not m:
-        raise ValueError(f"{path}: falta el bloque frontmatter '---'")
+    if not m: raise ValueError(f"{path}: falta el bloque frontmatter '---'")
     meta = yaml.safe_load(m.group(1)) or {}
     body_md = m.group(2)
     meta["_source"] = path
@@ -337,37 +483,77 @@ def parse_post(path):
 
 def build_article_schema(meta, canonical, cover_abs):
     faq = meta.get("faq") or []
-    blocks = []
-    blocks.append({
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": meta.get("title", ""),
-        "description": meta.get("description", ""),
-        "image": [cover_abs] if cover_abs else [],
-        "datePublished": str(meta.get("date", "")),
+    blocks = [{
+        "@context": "https://schema.org", "@type": "Article",
+        "headline": meta.get("title", ""), "description": meta.get("description", ""),
+        "image": [cover_abs] if cover_abs else [], "datePublished": str(meta.get("date", "")),
         "author": {"@type": "Organization", "name": meta.get("author", "PepaGold")},
         "publisher": {"@type": "Organization", "name": "PepaGold"},
         "mainEntityOfPage": canonical,
-    })
+    }]
     if faq:
         blocks.append({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
+            "@context": "https://schema.org", "@type": "FAQPage",
             "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": item["q"],
-                    "acceptedAnswer": {"@type": "Answer", "text": item["a"]},
-                } for item in faq
+                {"@type": "Question", "name": item["q"],
+                 "acceptedAnswer": {"@type": "Answer", "text": item["a"]}}
+                for item in faq
             ],
         })
-    import json
-    return "\n".join(
-        f'<script type="application/ld+json">{json.dumps(b, ensure_ascii=False)}</script>'
-        for b in blocks
+    return "\n".join(f'<script type="application/ld+json">{json.dumps(b, ensure_ascii=False)}</script>' for b in blocks)
+
+def render_epigraph(meta):
+    ep = meta.get("epigraph")
+    if not ep: return ""
+    text = ep.get("text", "") if isinstance(ep, dict) else str(ep)
+    author = ep.get("author", "") if isinstance(ep, dict) else ""
+    cite = f"<cite>— {author}</cite>" if author else ""
+    return f'<blockquote class="epigraph">“{text}”{cite}</blockquote>'
+
+def render_summary(meta):
+    items = meta.get("summary")
+    if not items: return ""
+    lis = "".join(f"<li>{_inline(i.get('punto', str(i)) if isinstance(i, dict) else str(i))}</li>" for i in items)
+    return f'<div class="summary-box"><p class="callout-title">⏱️ En 30 segundos</p><ul>{lis}</ul></div>'
+
+def render_faq(meta):
+    faq = meta.get("faq") or []
+    if not faq: return ""
+    items = "".join(f'<details class="faq-item"><summary>{item["q"]}</summary><p>{item["a"]}</p></details>' for item in faq)
+    return f'<div class="faq-section"><h2>Preguntas frecuentes</h2>{items}</div>'
+
+def render_science_link(meta, home_url):
+    if meta.get("show_science_link") is False: return ""
+    return (
+        f'<a class="science-link" href="{home_url}#ciencia">'
+        '<span class="sci-icon">🔬</span>'
+        '<span class="sci-text"><p>Lo que dice la ciencia</p>'
+        '<p>Dermatólogos y estudios sobre barrera cutánea y microbioma que respaldan esta nota →</p>'
+        '</span></a>'
     )
 
-def render_article(meta, body_md, hreflang_tags):
+def render_related(meta, lookup):
+    slugs = meta.get("related") or []
+    if not slugs: return ""
+    cards = []
+    for s_item in slugs:
+        s = s_item.get('slug', s_item) if isinstance(s_item, dict) else s_item
+        key = (meta["locale"], s)
+        other = lookup.get(key)
+        if not other: continue
+        folder = LOCALE_FOLDERS[meta["locale"]]
+        base = f"{folder}/" if folder else ""
+        url = f"/{base}blog/{s}/"
+        other_media = other.get("media", [])
+        if not other_media and other.get("cover_image"):
+            other_media = [other.get("cover_image")]
+        media_html = render_media(other_media)
+        cards.append(f'<a class="related-card" href="{url}"><div class="card-video">{media_html}</div><div class="rc-body"><h3>{other.get("title", "")}</h3></div></a>')
+    
+    if not cards: return ""
+    return f'<div class="related-section"><h2>Seguí leyendo</h2><div class="related-grid">{"".join(cards)}</div></div>'
+
+def render_article(meta, body_md, hreflang_tags, lookup):
     locale = meta["locale"]
     folder = LOCALE_FOLDERS[locale]
     slug = meta["slug"]
@@ -379,33 +565,32 @@ def render_article(meta, body_md, hreflang_tags):
     media = meta.get("media", [])
     if not media and meta.get("cover_image"):
         media = [meta.get("cover_image")]
-        
     cover_abs = f"{SITE_URL}{media[0]}" if media and isinstance(media[0], str) else ""
     media_html = render_media(media)
     
     region_tag_html = f'<span class="region-tag">{meta["region_label"]}</span><br>' if meta.get("region_label") else ""
-    body_html = markdown.markdown(body_md, extensions=["extra", "sane_lists"])
+
+    processed_md = preprocess_custom_blocks(body_md, slug)
+    md_engine = markdown.Markdown(extensions=["extra", "sane_lists", "toc"])
+    body_html = md_engine.convert(processed_md)
+    toc_raw = md_engine.toc
+    toc_html = toc_raw if toc_raw.count("<li>") >= 2 else ""
+
+    word_count = len(re.sub(r"<[^>]+>", " ", body_html).split())
+    reading_time = max(1, round(word_count / 200))
+
     category_label = meta.get("category_label") or CATEGORY_LABELS_DEFAULT.get(meta.get("category"), "")
-    date_display = str(meta.get("date", ""))
     schema = build_article_schema(meta, canonical, cover_abs)
 
     html = ARTICLE_TEMPLATE.format(
-        lang_attr=locale.split("-")[0],
-        lang_upper=locale.split("-")[0].upper(),
-        title=meta.get("title", ""),
-        description=meta.get("description", ""),
-        canonical=canonical,
-        cover_image_abs=cover_abs,
-        hreflang_tags=hreflang_tags,
-        article_schema=schema,
-        home_url=home_url,
-        blog_index_url=blog_index_url,
-        region_tag_html=region_tag_html,
-        category_label=category_label,
-        date_display=date_display,
-        author=meta.get("author", "PepaGold"),
-        media_html=media_html,
-        body_html=body_html,
+        lang_attr=locale.split("-")[0], lang_upper=locale.split("-")[0].upper(),
+        title=meta.get("title", ""), description=meta.get("description", ""),
+        canonical=canonical, cover_image_abs=cover_abs, hreflang_tags=hreflang_tags, article_schema=schema,
+        home_url=home_url, blog_index_url=blog_index_url, region_tag_html=region_tag_html,
+        category_label=category_label, date_display=str(meta.get("date", "")), reading_time=reading_time,
+        author=meta.get("author", "PepaGold"), epigraph_html=render_epigraph(meta), summary_html=render_summary(meta),
+        media_html=media_html, toc_html=toc_html, body_html=body_html, science_link_html=render_science_link(meta, home_url),
+        faq_html=render_faq(meta), related_html=render_related(meta, lookup),
     )
     out_dir = os.path.join(folder, "blog", slug) if folder else os.path.join("blog", slug)
     os.makedirs(out_dir, exist_ok=True)
@@ -414,8 +599,7 @@ def render_article(meta, body_md, hreflang_tags):
     return canonical
 
 def build_hreflang_tags(concept, posts_by_concept):
-    if not concept or concept not in posts_by_concept:
-        return ""
+    if not concept or concept not in posts_by_concept: return ""
     tags = []
     for p in posts_by_concept[concept]:
         loc = p["locale"]
@@ -443,15 +627,12 @@ def render_index(locale, posts):
         media = p.get("media", [])
         if not media and p.get("cover_image"):
             media = [p.get("cover_image")]
-            
         media_html = render_media(media)
         cat_label = CATEGORY_LABELS_DEFAULT.get(p.get("category"), "")
         
         card = f"""
     <div class="pain-card-v2" data-cat="{p.get("category","")}">
-        <div class="card-video">
-            {media_html}
-        </div>
+        <div class="card-video">{media_html}</div>
         <div class="text-content">
             <span class="accent-subtitle">{cat_label}</span>
             <h3 class="problem-title">{p.get('title', 'Sin Título')}</h3>
@@ -463,12 +644,8 @@ def render_index(locale, posts):
         cards.append(card)
         
     html = INDEX_TEMPLATE.format(
-        lang_attr=locale.split("-")[0],
-        lang_upper=locale.split("-")[0].upper(),
-        canonical=canonical,
-        home_url=home_url,
-        chips_html="".join(chips),
-        cards_html="".join(cards),
+        lang_attr=locale.split("-")[0], lang_upper=locale.split("-")[0].upper(),
+        canonical=canonical, home_url=home_url, chips_html="".join(chips), cards_html="".join(cards),
     )
     out_dir = os.path.join(folder, "blog") if folder else "blog"
     os.makedirs(out_dir, exist_ok=True)
@@ -477,22 +654,14 @@ def render_index(locale, posts):
     return canonical
 
 def update_sitemap(new_urls):
-    if not os.path.exists(SITEMAP_PATH):
-        print("sitemap.xml no encontrado, se omite.")
-        return
+    if not os.path.exists(SITEMAP_PATH): return
     with open(SITEMAP_PATH, encoding="utf-8") as f:
         content = f.read()
     today = datetime.date.today().isoformat()
     added = 0
     for url in new_urls:
-        if f"<loc>{xml_escape(url)}</loc>" in content:
-            continue
-        block = (
-            f'\n  <url>\n    <loc>{xml_escape(url)}</loc>\n'
-            f'    <lastmod>{today}</lastmod>\n'
-            f'    <changefreq>monthly</changefreq>\n'
-            f'    <priority>0.6</priority>\n  </url>\n'
-        )
+        if f"<loc>{xml_escape(url)}</loc>" in content: continue
+        block = f'\n  <url>\n    <loc>{xml_escape(url)}</loc>\n    <lastmod>{today}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>\n'
         content = content.replace("</urlset>", block + "</urlset>")
         added += 1
     with open(SITEMAP_PATH, "w", encoding="utf-8") as f:
@@ -502,7 +671,7 @@ def update_sitemap(new_urls):
 def main():
     md_files = sorted(glob.glob(os.path.join(POSTS_DIR, "*.md")))
     if not md_files:
-        md_files = sorted(glob.glob(os.path.join(POSTS_DIR, "*/*.md"))) # fallback in case they are nested
+        md_files = sorted(glob.glob(os.path.join(POSTS_DIR, "*/*.md")))
         if not md_files:
             print("No hay posts en blog/posts/. Nada que generar.")
             return
@@ -510,31 +679,23 @@ def main():
     all_meta = []
     for path in md_files:
         meta, body_md = parse_post(path)
-        # For simplicity, don't strictly crash if missing non-critical fields, use safe gets
-        if "locale" not in meta:
-            print(f"ERROR: {path} no tiene el campo obligatorio 'locale'. Asumiendo es-ar.", file=sys.stderr)
-            meta["locale"] = "es-ar"
-            
-        if meta["locale"] not in LOCALE_FOLDERS:
-            print(f"ERROR: {path} tiene locale desconocido '{meta['locale']}'. Asumiendo es-ar.", file=sys.stderr)
-            meta["locale"] = "es-ar"
-            
-        if "slug" not in meta:
-            meta["slug"] = os.path.basename(path).replace(".md", "")
-            
+        if "locale" not in meta: meta["locale"] = "es-ar"
+        if meta["locale"] not in LOCALE_FOLDERS: meta["locale"] = "es-ar"
+        if "slug" not in meta: meta["slug"] = os.path.basename(path).replace(".md", "")
         all_meta.append((meta, body_md))
 
     posts_by_concept = {}
+    lookup = {}
     for meta, _ in all_meta:
         c = meta.get("concept")
-        if c:
-            posts_by_concept.setdefault(c, []).append(meta)
+        if c: posts_by_concept.setdefault(c, []).append(meta)
+        lookup[(meta["locale"], meta["slug"])] = meta
 
     new_urls = []
     posts_by_locale = {}
     for meta, body_md in all_meta:
         hreflang_tags = build_hreflang_tags(meta.get("concept"), posts_by_concept)
-        canonical = render_article(meta, body_md, hreflang_tags)
+        canonical = render_article(meta, body_md, hreflang_tags, lookup)
         new_urls.append(canonical)
         posts_by_locale.setdefault(meta["locale"], []).append(meta)
 

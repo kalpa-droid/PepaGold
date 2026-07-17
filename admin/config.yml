@@ -79,6 +79,30 @@ collections:
         name: "author"
         widget: "string"
         default: "PepaGold"
+      - label: "Epígrafe (opcional)"
+        name: "epigraph"
+        widget: "object"
+        required: false
+        fields:
+          - { label: "Texto", name: "text", widget: "text" }
+          - { label: "Autor (opcional)", name: "author", widget: "string", required: false }
+      - label: "Resumen: En 30 Segundos (opcional)"
+        name: "summary"
+        widget: "list"
+        required: false
+        hint: "Puntos clave del artículo"
+        field: { label: "Punto", name: "punto", widget: "string" }
+      - label: "Mostrar Enlace a la Ciencia"
+        name: "show_science_link"
+        widget: "boolean"
+        default: true
+        hint: "Muestra el bloque 'Lo que dice la ciencia' al final."
+      - label: "Artículos Relacionados (opcional)"
+        name: "related"
+        widget: "list"
+        required: false
+        hint: "Agrega los Slugs exactos de otros artículos"
+        field: { label: "Slug", name: "slug", widget: "string" }
       - label: "Preguntas frecuentes (opcional, genera schema FAQ)"
         name: "faq"
         widget: "list"
