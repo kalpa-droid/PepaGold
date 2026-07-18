@@ -21,6 +21,19 @@ LOCALE_FOLDERS = {
 
 HREFLANG_MAP = {k: k for k in LOCALE_FOLDERS}
 
+LOCALE_INFO = {
+    "es-ar": {"flag": "🇦🇷", "name": "Español (AR)", "code": "AR"},
+    "es-mx": {"flag": "🇲🇽", "name": "Español (MX)", "code": "MX"},
+    "es-es": {"flag": "🇪🇸", "name": "Español (ES)", "code": "ES"},
+    "en-us": {"flag": "🇺🇸", "name": "English", "code": "US"},
+    "fr-fr": {"flag": "🇫🇷", "name": "Français", "code": "FR"},
+    "de-de": {"flag": "🇩🇪", "name": "Deutsch", "code": "DE"},
+    "it-it": {"flag": "🇮🇹", "name": "Italiano", "code": "IT"},
+    "pt-br": {"flag": "🇧🇷", "name": "Português", "code": "PT"},
+    "ru-ru": {"flag": "🇷🇺", "name": "Русский", "code": "RU"},
+    "zh-hans": {"flag": "🇨🇳", "name": "简体中文", "code": "ZH"},
+}
+
 CATEGORY_LABELS_DEFAULT = {
     "barrera-cutanea": "🔬 Ciencia de la Piel",
     "sostenibilidad": "🌱 Sostenibilidad y Ecología",
@@ -125,7 +138,11 @@ def preprocess_custom_blocks(md_text, slug):
 
 def render_media(media_list):
     if not media_list:
-        return '<span>[No Media]</span>'
+        return (
+            '<div class="media-placeholder-fallback" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #FAF6F5, #FDF7F7); min-height: 250px; border-radius: 8px;">'
+            '<img src="/assets/imagenes/icono.svg" style="width: 56px; height: 56px; opacity: 0.65; transform: none;" alt="PepaGold Logo">'
+            '</div>'
+        )
     html = '<div class="media-gallery" style="display: flex; gap: 10px; width: 100%; height: 100%;">'
     for item in media_list:
         src = item if isinstance(item, str) else item.get('file', '')
@@ -156,6 +173,7 @@ BRAND_HEAD = """<!DOCTYPE html>
 <meta property="og:url" content="{canonical}">
 {hreflang_tags}
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {{
@@ -171,16 +189,26 @@ BRAND_HEAD = """<!DOCTYPE html>
   a {{ color:var(--color-primary-hover); text-decoration: none; }}
   
   /* Lang selector and Floating Buttons */
-  .floating-droplet {{ position: fixed; top: 65px; left: 20px; width: 56px; height: 56px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border: 1px solid rgba(212, 140, 144, 0.3); border-radius: 0 50% 50% 50%; transform: rotate(45deg); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(42, 37, 35, 0.08); z-index: 1000; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; text-decoration: none; }}
+  .floating-droplet {{ position: fixed; top: 65px; left: 20px; width: 56px; height: 56px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(212, 140, 144, 0.3); border-radius: 0 50% 50% 50%; transform: rotate(45deg); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(42, 37, 35, 0.08); z-index: 1000; transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s ease; cursor: pointer; text-decoration: none; }}
   .floating-droplet:hover {{ transform: rotate(45deg) scale(1.08); box-shadow: 0 12px 30px rgba(212, 140, 144, 0.25); border-color: var(--color-primary); }}
   .floating-droplet img {{ width: 28px; height: 28px; transform: rotate(-45deg); transition: transform 0.3s ease; }}
   .lang-selector-container {{ position: fixed; top: 65px; right: 20px; z-index: 1000; font-family: 'Poppins', sans-serif; }}
-  .lang-selector-btn {{ display: flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 30px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border: 1px solid rgba(212, 140, 144, 0.25); color: var(--color-dark); font-size: 14px; font-weight: 500; cursor: pointer; box-shadow: 0 4px 12px rgba(42, 37, 35, 0.04); transition: all 0.3s ease; text-decoration: none; }}
+  .lang-selector-btn {{ display: flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 30px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(212, 140, 144, 0.25); color: var(--color-dark); font-size: 14px; font-weight: 500; cursor: pointer; box-shadow: 0 4px 12px rgba(42, 37, 35, 0.04); transition: all 0.3s ease; text-decoration: none; }}
   .lang-selector-btn:hover {{ border-color: var(--color-primary); box-shadow: 0 6px 16px rgba(212, 140, 144, 0.15); transform: translateY(-1px); }}
-  .lang-dropdown-menu {{ position: absolute; top: calc(100% + 8px); right: 0; min-width: 170px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border: 1px solid rgba(212, 140, 144, 0.2); border-radius: 12px; padding: 8px 0; margin: 0; list-style: none; box-shadow: 0 10px 30px rgba(42, 37, 35, 0.08); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all 0.3s ease; }}
+  .lang-selector-btn .arrow-icon {{ font-size: 9px; color: var(--color-primary); transition: transform 0.3s ease; }}
+  .lang-selector-container.is-active .lang-selector-btn .arrow-icon {{ transform: rotate(180deg); }}
+  .lang-dropdown-menu {{ position: absolute; top: calc(100% + 8px); right: 0; min-width: 170px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(212, 140, 144, 0.2); border-radius: 12px; padding: 8px 0; margin: 0; list-style: none; box-shadow: 0 10px 30px rgba(42, 37, 35, 0.08); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); max-height: 320px; overflow-y: auto; }}
   .lang-selector-container.is-active .lang-dropdown-menu {{ opacity: 1; visibility: visible; transform: translateY(0); }}
-  .lang-option {{ padding: 10px 18px; font-size: 14px; color: var(--color-dark); cursor: pointer; display: flex; align-items: center; gap: 10px; text-decoration: none; }}
+  .lang-option {{ padding: 10px 18px; font-size: 14px; color: var(--color-dark); cursor: pointer; display: flex; align-items: center; gap: 10px; text-decoration: none; transition: all 0.2s ease; }}
+  .lang-option:hover {{ background: rgba(212, 140, 144, 0.08); color: var(--color-primary-hover); }}
+  .lang-option.is-selected {{ background: rgba(212, 140, 144, 0.12); color: var(--color-primary); font-weight: 600; }}
   .blog-nav-btn-floating {{ right: 130px; top: 65px; }}
+
+  /* Scrollbar personalizado para el menú de idiomas */
+  .lang-dropdown-menu::-webkit-scrollbar {{ width: 4px; }}
+  .lang-dropdown-menu::-webkit-scrollbar-track {{ background: transparent; }}
+  .lang-dropdown-menu::-webkit-scrollbar-thumb {{ background: rgba(212, 140, 144, 0.3); border-radius: 10px; }}
+  .lang-dropdown-menu::-webkit-scrollbar-thumb:hover {{ background: var(--color-primary); }}
   
   @media (max-width: 600px) {{
     .floating-droplet {{ top: 65px; left: 12px; width: 46px; height: 46px; }}
@@ -189,6 +217,13 @@ BRAND_HEAD = """<!DOCTYPE html>
     .lang-selector-btn {{ padding: 5px 11px; font-size: 12px; }}
     .blog-nav-btn-floating {{ right: 110px !important; }}
   }}
+
+  /* Maquetación del artículo */
+  .wrap {{ max-width: 800px; margin: 0 auto; padding: 40px 24px; box-sizing: border-box; }}
+  .eyebrow {{ font-size: 0.85rem; font-weight: 600; color: var(--color-accent); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px; }}
+  .article-title {{ font-family: Georgia, serif; font-size: clamp(2rem, 4vw, 2.8rem); color: var(--color-dark); margin-bottom: 12px; font-weight: 400; line-height: 1.2; }}
+  .meta-row {{ display: flex; gap: 10px; font-size: 0.88rem; color: var(--color-dark-muted); margin-bottom: 30px; flex-wrap: wrap; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; }}
+  .region-tag {{ display: inline-block; font-size: 0.75rem; font-weight: 600; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 999px; padding: 3px 12px; color: var(--color-primary-hover); margin-bottom: 12px; }}
   
   /* Bloques Interactivos y Secciones */
   .epigraph {{ font-family:Georgia,serif; font-style:italic; font-size:1.15rem; color:var(--color-dark-muted); border-left:3px solid var(--color-primary); padding:6px 20px; margin:24px 0; }}
@@ -278,7 +313,7 @@ ARTICLE_TEMPLATE = BRAND_HEAD + """<body>
 </div>
 <!-- Botón al Blog flotante -->
 <a class="lang-selector-btn blog-nav-btn-floating" href="{blog_index_url}" style="position: fixed; top: 65px; z-index: 1000; text-decoration: none;" title="PepaGold Blog">
-  <span class="active-flag">📖</span>
+  <span class="active-flag">{active_flag}</span>
   <span class="blog-btn-text" style="font-weight: 500;">Blog</span>
 </a>
 <!-- Selector de idiomas flotante -->
@@ -289,14 +324,11 @@ ARTICLE_TEMPLATE = BRAND_HEAD + """<body>
     <span class="arrow-icon" style="font-size: 9px; color: var(--color-primary);">▼</span>
   </button>
   <ul class="lang-dropdown-menu" id="langDropdownMenu" role="listbox">
-    <li class="lang-option" onclick="window.location.href='/blog/'" role="option">🇦🇷 Español (AR)</li>
-    <li class="lang-option" onclick="window.location.href='/mx/blog/'" role="option">🇲🇽 Español (MX)</li>
-    <li class="lang-option" onclick="window.location.href='/es/blog/'" role="option">🇪🇸 Español (ES)</li>
-    <li class="lang-option" onclick="window.location.href='/us/blog/'" role="option">🇺🇸 English</li>
+    {lang_dropdown_html}
   </ul>
 </div>
 
-<div class="wrap" style="{{padding-top: 130px;}}">
+<div class="wrap" style="padding-top: 130px;">
   {region_tag_html}
   <p class="eyebrow">{category_label}</p>
   <h1 class="article-title">{title}</h1>
@@ -326,7 +358,7 @@ ARTICLE_TEMPLATE = BRAND_HEAD + """<body>
   {related_html}
 </div>
 <footer class="site-footer">
-  <p>&copy; 2025&ndash;2026 PepaGold &middot; Distribuidor independiente autorizado de Greenway Global</p>
+  <p>&copy; 2025&ndash;2026 PepaGold &middot; Todos los derechos reservados.</p>
 </footer>
 <script>
   // Menu desplegable
@@ -369,6 +401,7 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
 <link rel="canonical" href="{canonical}">
 <link rel="icon" type="image/svg+xml" href="/assets/imagenes/icono.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {{
@@ -414,16 +447,26 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
   .read-btn::after {{ content: '→'; }}
   
   /* Lang selector and Floating Buttons */
-  .floating-droplet {{ position: fixed; top: 65px; left: 20px; width: 56px; height: 56px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border: 1px solid rgba(212, 140, 144, 0.3); border-radius: 0 50% 50% 50%; transform: rotate(45deg); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(42, 37, 35, 0.08); z-index: 1000; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; text-decoration: none; }}
+  .floating-droplet {{ position: fixed; top: 65px; left: 20px; width: 56px; height: 56px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(212, 140, 144, 0.3); border-radius: 0 50% 50% 50%; transform: rotate(45deg); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(42, 37, 35, 0.08); z-index: 1000; transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s ease; cursor: pointer; text-decoration: none; }}
   .floating-droplet:hover {{ transform: rotate(45deg) scale(1.08); box-shadow: 0 12px 30px rgba(212, 140, 144, 0.25); border-color: var(--color-primary); }}
   .floating-droplet img {{ width: 28px; height: 28px; transform: rotate(-45deg); transition: transform 0.3s ease; }}
   .lang-selector-container {{ position: fixed; top: 65px; right: 20px; z-index: 1000; font-family: 'Poppins', sans-serif; }}
-  .lang-selector-btn {{ display: flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 30px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border: 1px solid rgba(212, 140, 144, 0.25); color: var(--color-dark); font-size: 14px; font-weight: 500; cursor: pointer; box-shadow: 0 4px 12px rgba(42, 37, 35, 0.04); transition: all 0.3s ease; text-decoration: none; }}
+  .lang-selector-btn {{ display: flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 30px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(212, 140, 144, 0.25); color: var(--color-dark); font-size: 14px; font-weight: 500; cursor: pointer; box-shadow: 0 4px 12px rgba(42, 37, 35, 0.04); transition: all 0.3s ease; text-decoration: none; }}
   .lang-selector-btn:hover {{ border-color: var(--color-primary); box-shadow: 0 6px 16px rgba(212, 140, 144, 0.15); transform: translateY(-1px); }}
-  .lang-dropdown-menu {{ position: absolute; top: calc(100% + 8px); right: 0; min-width: 170px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border: 1px solid rgba(212, 140, 144, 0.2); border-radius: 12px; padding: 8px 0; margin: 0; list-style: none; box-shadow: 0 10px 30px rgba(42, 37, 35, 0.08); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all 0.3s ease; }}
+  .lang-selector-btn .arrow-icon {{ font-size: 9px; color: var(--color-primary); transition: transform 0.3s ease; }}
+  .lang-selector-container.is-active .lang-selector-btn .arrow-icon {{ transform: rotate(180deg); }}
+  .lang-dropdown-menu {{ position: absolute; top: calc(100% + 8px); right: 0; min-width: 170px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(212, 140, 144, 0.2); border-radius: 12px; padding: 8px 0; margin: 0; list-style: none; box-shadow: 0 10px 30px rgba(42, 37, 35, 0.08); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); max-height: 320px; overflow-y: auto; }}
   .lang-selector-container.is-active .lang-dropdown-menu {{ opacity: 1; visibility: visible; transform: translateY(0); }}
-  .lang-option {{ padding: 10px 18px; font-size: 14px; color: var(--color-dark); cursor: pointer; display: flex; align-items: center; gap: 10px; text-decoration: none; }}
+  .lang-option {{ padding: 10px 18px; font-size: 14px; color: var(--color-dark); cursor: pointer; display: flex; align-items: center; gap: 10px; text-decoration: none; transition: all 0.2s ease; }}
+  .lang-option:hover {{ background: rgba(212, 140, 144, 0.08); color: var(--color-primary-hover); }}
+  .lang-option.is-selected {{ background: rgba(212, 140, 144, 0.12); color: var(--color-primary); font-weight: 600; }}
   .blog-nav-btn-floating {{ right: 130px; top: 65px; }}
+
+  /* Scrollbar personalizado para el menú de idiomas */
+  .lang-dropdown-menu::-webkit-scrollbar {{ width: 4px; }}
+  .lang-dropdown-menu::-webkit-scrollbar-track {{ background: transparent; }}
+  .lang-dropdown-menu::-webkit-scrollbar-thumb {{ background: rgba(212, 140, 144, 0.3); border-radius: 10px; }}
+  .lang-dropdown-menu::-webkit-scrollbar-thumb:hover {{ background: var(--color-primary); }}
 
   @media (max-width: 600px) {{
     .floating-droplet {{ top: 65px; left: 12px; width: 46px; height: 46px; }}
@@ -447,8 +490,8 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
   <img alt="PepaGold Icon" src="/assets/imagenes/icono.svg"/>
 </div>
 <!-- Botón al Blog flotante -->
-<a class="lang-selector-btn blog-nav-btn-floating" href="{canonical}" style="position: fixed; top: 65px; z-index: 1000; text-decoration: none;" title="PepaGold Blog">
-  <span class="active-flag">📖</span>
+<a class="lang-selector-btn blog-nav-btn-floating" href="{blog_index_url}" style="position: fixed; top: 65px; z-index: 1000; text-decoration: none;" title="PepaGold Blog">
+  <span class="active-flag">{active_flag}</span>
   <span class="blog-btn-text" style="font-weight: 500;">Blog</span>
 </a>
 <!-- Selector de idiomas flotante -->
@@ -459,14 +502,11 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
     <span class="arrow-icon" style="font-size: 9px; color: var(--color-primary);">▼</span>
   </button>
   <ul class="lang-dropdown-menu" id="langDropdownMenu" role="listbox">
-    <li class="lang-option" onclick="window.location.href='/blog/'" role="option">🇦🇷 Español (AR)</li>
-    <li class="lang-option" onclick="window.location.href='/mx/blog/'" role="option">🇲🇽 Español (MX)</li>
-    <li class="lang-option" onclick="window.location.href='/es/blog/'" role="option">🇪🇸 Español (ES)</li>
-    <li class="lang-option" onclick="window.location.href='/us/blog/'" role="option">🇺🇸 English</li>
+    {lang_dropdown_html}
   </ul>
 </div>
 
-<div style="{{padding-top: 130px; margin-bottom: 20px;}}"></div>
+<div style="padding-top: 130px; margin-bottom: 20px;"></div>
 
 <div class="chips">{chips_html}</div>
 <section class="pain-agitation-section">
@@ -475,7 +515,7 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
   </div>
 </section>
 <footer class="site-footer">
-  <p>&copy; 2025&ndash;2026 PepaGold &middot; Distribuidor independiente autorizado de Greenway Global</p>
+  <p>&copy; 2025&ndash;2026 PepaGold &middot; Todos los derechos reservados.</p>
 </footer>
 <script>
   const container = document.querySelector('.lang-selector-container');
@@ -587,7 +627,7 @@ def render_article(meta, body_md, hreflang_tags, lookup):
     media = meta.get("media", [])
     if not media and meta.get("cover_image"):
         media = [meta.get("cover_image")]
-    cover_abs = f"{SITE_URL}{media[0]}" if media and isinstance(media[0], str) else ""
+    cover_abs = f"{SITE_URL}{media[0]}" if media and isinstance(media[0], str) else f"{SITE_URL}/assets/imagenes/icono.svg"
     media_html = render_media(media)
     
     region_tag_html = f'<span class="region-tag">{meta["region_label"]}</span><br>' if meta.get("region_label") else ""
@@ -604,6 +644,29 @@ def render_article(meta, body_md, hreflang_tags, lookup):
     category_label = meta.get("category_label") or CATEGORY_LABELS_DEFAULT.get(meta.get("category"), "")
     schema = build_article_schema(meta, canonical, cover_abs)
 
+    active_flag = LOCALE_INFO[locale]["flag"]
+    dropdown_lis = []
+    concept = meta.get("concept")
+    for loc, info in LOCALE_INFO.items():
+        fld = LOCALE_FOLDERS[loc]
+        bs = f"{fld}/" if fld else ""
+        is_sel = " is-selected" if loc == locale else ""
+        
+        translated_post = None
+        if concept and concept in lookup:
+            for p in lookup[concept]:
+                if p["locale"] == loc:
+                    translated_post = p
+                    break
+        
+        if translated_post:
+            url = f"/{bs}blog/{translated_post['slug']}/"
+        else:
+            url = f"/{bs}blog/"
+        
+        dropdown_lis.append(f'<li class="lang-option{is_sel}" onclick="window.location.href=\'{url}\'" role="option">{info["flag"]} {info["name"]}</li>')
+    lang_dropdown_html = "\n".join(dropdown_lis)
+
     html = ARTICLE_TEMPLATE.format(
         lang_attr=locale.split("-")[0], lang_upper=locale.split("-")[0].upper(),
         title=meta.get("title", ""), description=meta.get("description", ""),
@@ -613,6 +676,7 @@ def render_article(meta, body_md, hreflang_tags, lookup):
         author=meta.get("author", "PepaGold"), epigraph_html=render_epigraph(meta), summary_html=render_summary(meta),
         media_html=media_html, toc_html=toc_html, body_html=body_html, science_link_html=render_science_link(meta, home_url),
         faq_html=render_faq(meta), related_html=render_related(meta, lookup),
+        active_flag=active_flag, lang_dropdown_html=lang_dropdown_html,
     )
     out_dir = os.path.join(folder, "blog", slug) if folder else os.path.join("blog", slug)
     os.makedirs(out_dir, exist_ok=True)
@@ -635,6 +699,7 @@ def render_index(locale, posts):
     folder = LOCALE_FOLDERS[locale]
     base = f"{folder}/" if folder else ""
     home_url = f"/{base}" if folder else "/"
+    blog_index_url = f"/{base}blog/"
     canonical = f"{SITE_URL}/{base}blog/"
     posts_sorted = sorted(posts, key=lambda p: str(p.get("date", "")), reverse=True)
     
@@ -665,9 +730,20 @@ def render_index(locale, posts):
 """
         cards.append(card)
         
+    active_flag = LOCALE_INFO[locale]["flag"]
+    dropdown_lis = []
+    for loc, info in LOCALE_INFO.items():
+        fld = LOCALE_FOLDERS[loc]
+        bs = f"{fld}/" if fld else ""
+        url = f"/{bs}blog/"
+        is_sel = " is-selected" if loc == locale else ""
+        dropdown_lis.append(f'<li class="lang-option{is_sel}" onclick="window.location.href=\'{url}\'" role="option">{info["flag"]} {info["name"]}</li>')
+    lang_dropdown_html = "\n".join(dropdown_lis)
+
     html = INDEX_TEMPLATE.format(
         lang_attr=locale.split("-")[0], lang_upper=locale.split("-")[0].upper(),
         canonical=canonical, home_url=home_url, chips_html="".join(chips), cards_html="".join(cards),
+        active_flag=active_flag, lang_dropdown_html=lang_dropdown_html, blog_index_url=blog_index_url,
     )
     out_dir = os.path.join(folder, "blog") if folder else "blog"
     os.makedirs(out_dir, exist_ok=True)

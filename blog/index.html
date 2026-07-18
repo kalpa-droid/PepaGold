@@ -8,6 +8,7 @@
 <link rel="canonical" href="https://pepagold.blog/blog/">
 <link rel="icon" type="image/svg+xml" href="/assets/imagenes/icono.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -53,16 +54,26 @@
   .read-btn::after { content: '→'; }
   
   /* Lang selector and Floating Buttons */
-  .floating-droplet { position: fixed; top: 65px; left: 20px; width: 56px; height: 56px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border: 1px solid rgba(212, 140, 144, 0.3); border-radius: 0 50% 50% 50%; transform: rotate(45deg); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(42, 37, 35, 0.08); z-index: 1000; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; text-decoration: none; }
+  .floating-droplet { position: fixed; top: 65px; left: 20px; width: 56px; height: 56px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(212, 140, 144, 0.3); border-radius: 0 50% 50% 50%; transform: rotate(45deg); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(42, 37, 35, 0.08); z-index: 1000; transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s ease; cursor: pointer; text-decoration: none; }
   .floating-droplet:hover { transform: rotate(45deg) scale(1.08); box-shadow: 0 12px 30px rgba(212, 140, 144, 0.25); border-color: var(--color-primary); }
   .floating-droplet img { width: 28px; height: 28px; transform: rotate(-45deg); transition: transform 0.3s ease; }
   .lang-selector-container { position: fixed; top: 65px; right: 20px; z-index: 1000; font-family: 'Poppins', sans-serif; }
-  .lang-selector-btn { display: flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 30px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border: 1px solid rgba(212, 140, 144, 0.25); color: var(--color-dark); font-size: 14px; font-weight: 500; cursor: pointer; box-shadow: 0 4px 12px rgba(42, 37, 35, 0.04); transition: all 0.3s ease; text-decoration: none; }
+  .lang-selector-btn { display: flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 30px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(212, 140, 144, 0.25); color: var(--color-dark); font-size: 14px; font-weight: 500; cursor: pointer; box-shadow: 0 4px 12px rgba(42, 37, 35, 0.04); transition: all 0.3s ease; text-decoration: none; }
   .lang-selector-btn:hover { border-color: var(--color-primary); box-shadow: 0 6px 16px rgba(212, 140, 144, 0.15); transform: translateY(-1px); }
-  .lang-dropdown-menu { position: absolute; top: calc(100% + 8px); right: 0; min-width: 170px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border: 1px solid rgba(212, 140, 144, 0.2); border-radius: 12px; padding: 8px 0; margin: 0; list-style: none; box-shadow: 0 10px 30px rgba(42, 37, 35, 0.08); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all 0.3s ease; }
+  .lang-selector-btn .arrow-icon { font-size: 9px; color: var(--color-primary); transition: transform 0.3s ease; }
+  .lang-selector-container.is-active .lang-selector-btn .arrow-icon { transform: rotate(180deg); }
+  .lang-dropdown-menu { position: absolute; top: calc(100% + 8px); right: 0; min-width: 170px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(212, 140, 144, 0.2); border-radius: 12px; padding: 8px 0; margin: 0; list-style: none; box-shadow: 0 10px 30px rgba(42, 37, 35, 0.08); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); max-height: 320px; overflow-y: auto; }
   .lang-selector-container.is-active .lang-dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
-  .lang-option { padding: 10px 18px; font-size: 14px; color: var(--color-dark); cursor: pointer; display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .lang-option { padding: 10px 18px; font-size: 14px; color: var(--color-dark); cursor: pointer; display: flex; align-items: center; gap: 10px; text-decoration: none; transition: all 0.2s ease; }
+  .lang-option:hover { background: rgba(212, 140, 144, 0.08); color: var(--color-primary-hover); }
+  .lang-option.is-selected { background: rgba(212, 140, 144, 0.12); color: var(--color-primary); font-weight: 600; }
   .blog-nav-btn-floating { right: 130px; top: 65px; }
+
+  /* Scrollbar personalizado para el menú de idiomas */
+  .lang-dropdown-menu::-webkit-scrollbar { width: 4px; }
+  .lang-dropdown-menu::-webkit-scrollbar-track { background: transparent; }
+  .lang-dropdown-menu::-webkit-scrollbar-thumb { background: rgba(212, 140, 144, 0.3); border-radius: 10px; }
+  .lang-dropdown-menu::-webkit-scrollbar-thumb:hover { background: var(--color-primary); }
 
   @media (max-width: 600px) {
     .floating-droplet { top: 65px; left: 12px; width: 46px; height: 46px; }
@@ -86,8 +97,8 @@
   <img alt="PepaGold Icon" src="/assets/imagenes/icono.svg"/>
 </div>
 <!-- Botón al Blog flotante -->
-<a class="lang-selector-btn blog-nav-btn-floating" href="https://pepagold.blog/blog/" style="position: fixed; top: 65px; z-index: 1000; text-decoration: none;" title="PepaGold Blog">
-  <span class="active-flag">📖</span>
+<a class="lang-selector-btn blog-nav-btn-floating" href="/blog/" style="position: fixed; top: 65px; z-index: 1000; text-decoration: none;" title="PepaGold Blog">
+  <span class="active-flag">🇦🇷</span>
   <span class="blog-btn-text" style="font-weight: 500;">Blog</span>
 </a>
 <!-- Selector de idiomas flotante -->
@@ -98,21 +109,27 @@
     <span class="arrow-icon" style="font-size: 9px; color: var(--color-primary);">▼</span>
   </button>
   <ul class="lang-dropdown-menu" id="langDropdownMenu" role="listbox">
-    <li class="lang-option" onclick="window.location.href='/blog/'" role="option">🇦🇷 Español (AR)</li>
-    <li class="lang-option" onclick="window.location.href='/mx/blog/'" role="option">🇲🇽 Español (MX)</li>
-    <li class="lang-option" onclick="window.location.href='/es/blog/'" role="option">🇪🇸 Español (ES)</li>
-    <li class="lang-option" onclick="window.location.href='/us/blog/'" role="option">🇺🇸 English</li>
+    <li class="lang-option is-selected" onclick="window.location.href='/blog/'" role="option">🇦🇷 Español (AR)</li>
+<li class="lang-option" onclick="window.location.href='/mx/blog/'" role="option">🇲🇽 Español (MX)</li>
+<li class="lang-option" onclick="window.location.href='/es/blog/'" role="option">🇪🇸 Español (ES)</li>
+<li class="lang-option" onclick="window.location.href='/us/blog/'" role="option">🇺🇸 English</li>
+<li class="lang-option" onclick="window.location.href='/fr/blog/'" role="option">🇫🇷 Français</li>
+<li class="lang-option" onclick="window.location.href='/de/blog/'" role="option">🇩🇪 Deutsch</li>
+<li class="lang-option" onclick="window.location.href='/it/blog/'" role="option">🇮🇹 Italiano</li>
+<li class="lang-option" onclick="window.location.href='/pt/blog/'" role="option">🇧🇷 Português</li>
+<li class="lang-option" onclick="window.location.href='/ru/blog/'" role="option">🇷🇺 Русский</li>
+<li class="lang-option" onclick="window.location.href='/zh/blog/'" role="option">🇨🇳 简体中文</li>
   </ul>
 </div>
 
-<div style="{padding-top: 130px; margin-bottom: 20px;}"></div>
+<div style="padding-top: 130px; margin-bottom: 20px;"></div>
 
 <div class="chips"><a href="#" class="active">Todos</a><a href="#barrera-cutanea">🔬 Ciencia de la Piel</a></div>
 <section class="pain-agitation-section">
   <div class="interactive-pain">
     
     <div class="pain-card-v2" data-cat="barrera-cutanea">
-        <div class="card-video"><span>[No Media]</span></div>
+        <div class="card-video"><div class="media-placeholder-fallback" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #FAF6F5, #FDF7F7); min-height: 250px; border-radius: 8px;"><img src="/assets/imagenes/icono.svg" style="width: 56px; height: 56px; opacity: 0.65; transform: none;" alt="PepaGold Logo"></div></div>
         <div class="text-content">
             <span class="accent-subtitle">🔬 Ciencia de la Piel</span>
             <h3 class="problem-title">La Ciencia de la Barrera Cutánea: Qué es, Cómo se Daña y Cómo Repararla</h3>
@@ -124,7 +141,7 @@
   </div>
 </section>
 <footer class="site-footer">
-  <p>&copy; 2025&ndash;2026 PepaGold &middot; Distribuidor independiente autorizado de Greenway Global</p>
+  <p>&copy; 2025&ndash;2026 PepaGold &middot; Todos los derechos reservados.</p>
 </footer>
 <script>
   const container = document.querySelector('.lang-selector-container');
