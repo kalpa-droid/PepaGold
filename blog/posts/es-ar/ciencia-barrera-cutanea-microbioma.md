@@ -1,8 +1,11 @@
 ---
+article_id: PG-001
 title: 'La Ciencia de la Barrera Cutánea: Qué es, Cómo se Daña y Cómo Repararla'
 description: Descubre qué es exactamente la barrera cutánea y el microbioma de la piel. Aprende a identificar los síntomas de daño y los mejores métodos científicos para restaurarla.
 slug: ciencia-barrera-cutanea-microbioma
 date: 2026-07-17
+date_created: 2026-07-17
+date_ai_processed: null
 locale: es-ar
 category: barrera-cutanea
 category_label: Ciencia & Piel

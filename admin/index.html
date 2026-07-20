@@ -907,10 +907,10 @@
         return;
       }
 
-      grid.innerHTML = filtered.map(a => {
+      grid.innerHTML = filtered.map((a, idx) => {
         const meta = a.meta;
         const catLabel = CATEGORIES[meta.category] || meta.category || 'Sin categoría';
-        const artId = meta.article_id || 'PG-000';
+        const artId = meta.article_id || `PG-${String(idx + 1).padStart(3, '0')}`;
         const dateCreated = meta.date_created || meta.date || 'Sin fecha';
         const aiStatus = meta.date_ai_processed 
           ? `<span style="color: #2E7D32; font-weight: 600;">🤖 IA: ${meta.date_ai_processed} ✅</span>`
