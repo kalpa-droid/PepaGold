@@ -3,6 +3,8 @@ import os
 import sys
 import argparse
 import shutil
+import zipfile
+import tempfile
 from PIL import Image
 
 DEFAULT_SERVER = "http://localhost:7860/"
@@ -58,7 +60,24 @@ def generate_image_paper_banana(prompt, output_path, server_url=DEFAULT_SERVER):
         elif isinstance(res, str) and os.path.exists(res):
             gen_path = res
 
-        if gen_path:
+        if gen_path and gen_path.endswith(".zip") and os.path.exists(gen_path):
+            print(f"📦 Extrayendo imágenes del archivo ZIP candidato: {gen_path}")
+            extract_dir = tempfile.mkdtemp()
+            with zipfile.ZipFile(gen_path, 'r') as zip_ref:
+                zip_ref.extractall(extract_dir)
+            
+            image_files = []
+            for root, _, files in os.walk(extract_dir):
+                for f in files:
+                    if f.lower().endswith(('.png', '.jpg', '.jpeg', '.webp')):
+                        image_files.append(os.path.join(root, f))
+            
+            if image_files:
+                gen_path = image_files[0]
+            else:
+                raise ValueError(f"No se encontraron archivos de imagen dentro del ZIP: {gen_path}")
+
+        if gen_path and os.path.exists(gen_path):
             shutil.copy(gen_path, temp_png)
         else:
             raise ValueError(f"No se pudo extraer la ruta de la imagen en la respuesta: {res}")
