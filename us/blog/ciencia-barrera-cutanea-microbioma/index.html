@@ -87,7 +87,7 @@
   .hero-image-placeholder { width: 100%; min-height: 400px; background: var(--bg-secondary); border-radius: 18px; margin-bottom: 40px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 10px; box-shadow: var(--shadow-md); }
   
   .toc { background:var(--bg-accent-light); border:1px solid var(--border-color); border-radius:14px; padding:18px 22px; margin:0 0 32px; font-size:0.92rem; }
-  .toc::before { content:"En este artículo"; display:block; font-weight:600; margin-bottom:8px; color:var(--color-dark); }
+  .toc::before { content: attr(data-title); display:block; font-weight:600; margin-bottom:8px; color:var(--color-dark); }
   .toc ul { list-style:none; }
   .toc a { text-decoration:none; color:var(--color-dark-muted); }
   .toc a:hover { color:var(--color-primary-hover); }
@@ -192,16 +192,16 @@
   <span class="region-tag">California, USA</span><br>
   <p class="eyebrow">Skin Science</p>
   <h1 class="article-title">The Science of the Skin Barrier: What It Is, How It Gets Damaged, and How to Repair It</h1>
-  <div class="meta-row"><span>2026-07-17</span><span>&middot;</span><span>4 min de lectura</span><span>&middot;</span><span>PepaGold</span></div>
+  <div class="meta-row"><span>July 17, 2026</span><span>&middot;</span><span>4 min read</span><span>&middot;</span><span>PepaGold</span></div>
   
   <blockquote class="epigraph">“Your skin doesn't need more products; it needs you to let it defend itself.”<cite>— Dr. PepaGold</cite></blockquote>
-  <div class="summary-box"><p class="callout-title">⏱️ En 30 segundos</p><ul><li>The skin barrier is a lipid matrix (ceramides, cholesterol, and fatty acids) that seals moisture in and keeps bacteria out.</li><li>The acid mantle (pH 4.5-5.5) and microbiome are your first line of immunological defense against pathogens.</li><li>Harsh weather (Santa Ana winds, winter heating), sulfates, and over-exfoliation break down lipids and cause TEWL.</li><li>Repair requires atraumatic friction-free cleansing, biomimetic ceramidas (3:1:1 ratio), and topical prebiotics.</li></ul></div>
+  <div class="summary-box"><p class="callout-title">⏱️ In 30 seconds</p><ul><li>The skin barrier is a lipid matrix (ceramides, cholesterol, and fatty acids) that seals moisture in and keeps bacteria out.</li><li>The acid mantle (pH 4.5-5.5) and microbiome are your first line of immunological defense against pathogens.</li><li>Harsh weather (Santa Ana winds, winter heating), sulfates, and over-exfoliation break down lipids and cause TEWL.</li><li>Repair requires atraumatic friction-free cleansing, biomimetic ceramidas (3:1:1 ratio), and topical prebiotics.</li></ul></div>
   
   <div class="hero-image-placeholder">
     <div class="media-gallery" style="display: flex; gap: 10px; width: 100%; height: 100%;"><img src="/assets/imagenes/blog/anatomia_img_1.png" style="flex: 1; width: 100%; object-fit: cover; border-radius: 8px;" alt="Blog Media"></div>
   </div>
   
-  <div class="toc">
+  <div class="toc" data-title="In this article">
 <ul>
 <li><a href="#the-science-of-the-skin-barrier-what-it-is-and-how-it-works">The Science of the Skin Barrier: What It Is and How It Works</a></li>
 <li><a href="#skin-architecture-bricks-and-mortar">Skin Architecture: Bricks and Mortar</a><ul>
@@ -263,14 +263,14 @@ Your skin naturally loses up to half a liter of water per day through impercepti
 <p><img alt="" src="/assets/imagenes/blog/anatomia_img_1.png" /></p>
   </div>
   
-  <a class="science-link" href="/us/#ciencia"><span class="sci-icon">🔬</span><span class="sci-text"><p>Lo que dice la ciencia</p><p>Dermatólogos y estudios sobre barrera cutánea y microbioma que respaldan esta nota →</p></span></a>
+  <a class="science-link" href="/us/#ciencia"><span class="sci-icon">🔬</span><span class="sci-text"><p>What science says</p><p>Dermatologists and clinical studies on the skin barrier and microbiome supporting this guide &rarr;</p></span></a>
   
   <div class="product-cta">
     <p><strong>Laska Mini Set</strong> — el set de microfibra que reemplaza discos de algodón, agua micelar y desmaquillante. Solo con agua.</p>
     <a class="btn" href="/us/">Conocer el producto &rarr;</a>
   </div>
   
-  <div class="faq-section"><h2>Preguntas frecuentes</h2><details class="faq-item"><summary>How long does it take to repair a damaged skin barrier?</summary><p>The cell renewal cycle takes 14 to 28 days. By eliminating harsh cleansers and using biomimetic ceramides, you will experience relief in 3 to 5 days and full barrier recovery in 4 weeks.</p></details><details class="faq-item"><summary>Why does my face sting when I apply moisturizer?</summary><p>Stinging is the #1 symptom of micro-fissures in the stratum corneum. Without lipid cement or an intact acid mantle, ingredients reach raw, exposed nerve endings.</p></details></div>
+  <div class="faq-section"><h2>Frequently Asked Questions</h2><details class="faq-item"><summary>How long does it take to repair a damaged skin barrier?</summary><p>The cell renewal cycle takes 14 to 28 days. By eliminating harsh cleansers and using biomimetic ceramides, you will experience relief in 3 to 5 days and full barrier recovery in 4 weeks.</p></details><details class="faq-item"><summary>Why does my face sting when I apply moisturizer?</summary><p>Stinging is the #1 symptom of micro-fissures in the stratum corneum. Without lipid cement or an intact acid mantle, ingredients reach raw, exposed nerve endings.</p></details></div>
   
 </div>
 <footer class="site-footer">

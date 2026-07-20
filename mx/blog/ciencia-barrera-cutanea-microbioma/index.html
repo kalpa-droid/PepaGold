@@ -87,7 +87,7 @@
   .hero-image-placeholder { width: 100%; min-height: 400px; background: var(--bg-secondary); border-radius: 18px; margin-bottom: 40px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 10px; box-shadow: var(--shadow-md); }
   
   .toc { background:var(--bg-accent-light); border:1px solid var(--border-color); border-radius:14px; padding:18px 22px; margin:0 0 32px; font-size:0.92rem; }
-  .toc::before { content:"En este artículo"; display:block; font-weight:600; margin-bottom:8px; color:var(--color-dark); }
+  .toc::before { content: attr(data-title); display:block; font-weight:600; margin-bottom:8px; color:var(--color-dark); }
   .toc ul { list-style:none; }
   .toc a { text-decoration:none; color:var(--color-dark-muted); }
   .toc a:hover { color:var(--color-primary-hover); }
@@ -192,7 +192,7 @@
   <span class="region-tag">CDMX, México</span><br>
   <p class="eyebrow">Ciencia & Piel</p>
   <h1 class="article-title">La Ciencia de la Barrera Cutánea: Qué es, Cómo se Daña y Cómo Repararla</h1>
-  <div class="meta-row"><span>2026-07-17</span><span>&middot;</span><span>4 min de lectura</span><span>&middot;</span><span>PepaGold</span></div>
+  <div class="meta-row"><span>17 de julio de 2026</span><span>&middot;</span><span>4 min de lectura</span><span>&middot;</span><span>PepaGold</span></div>
   
   <blockquote class="epigraph">“La piel no necesita más productos; necesita que la dejes defenderse.”<cite>— Dra. PepaGold</cite></blockquote>
   <div class="summary-box"><p class="callout-title">⏱️ En 30 segundos</p><ul><li>La barrera cutánea es una matriz de ceramidas, colesterol y ácidos grasos que retiene agua y bloquea bacterias.</li><li>El manto ácido (pH 4.5-5.5) y el microbioma son tu primera línea de defensa inmunológica contra patógenos.</li><li>El sol intenso, la contaminación urbana de la CDMX y la exfoliación excesiva generan microfisuras y deshidratación.</li><li>La reparación requiere higiene atraumática sin fricción, ceramidas biomiméticas (ratio 3:1:1) y prebióticos.</li></ul></div>
@@ -201,7 +201,7 @@
     <div class="media-gallery" style="display: flex; gap: 10px; width: 100%; height: 100%;"><img src="/assets/imagenes/blog/anatomia_img_1.png" style="flex: 1; width: 100%; object-fit: cover; border-radius: 8px;" alt="Blog Media"></div>
   </div>
   
-  <div class="toc">
+  <div class="toc" data-title="En este artículo">
 <ul>
 <li><a href="#la-ciencia-de-la-barrera-cutanea-que-es-y-como-funciona">La Ciencia de la Barrera Cutánea: Qué es y Cómo Funciona</a></li>
 <li><a href="#arquitectura-de-la-piel-ladrillos-y-cemento">Arquitectura de la Piel: Ladrillos y Cemento</a><ul>

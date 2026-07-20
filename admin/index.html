@@ -1171,20 +1171,27 @@
       }
     }
 
-    // Image Prompts Modal
+    // Image Prompts Modal with Paper Banana AI Regenerator
     function openImagePromptsModal() {
       if (!activeModalPost) return;
       const prompts = activeModalPost.meta.image_prompts || [
         `📸 Portada (1200x630px): Estilo Warm Minimalist para "${activeModalPost.meta.title}". Paleta rosa empolvado (#D48C90) y arena.`,
-        `📸 Cuerpo (1080x1080px): Ilustración científica clara de la sección principal.`
+        `📸 Cuerpo (1080x1080px): Ilustración científica clara con etiquetas numéricas 1, 2, 3.`
       ];
 
       const html = `
         <div style="font-size: 14px; color: var(--color-dark-muted); line-height: 1.6;">
-          <p style="margin-bottom: 14px;">Generá o buscá las imágenes indicadas para este artículo según las especificaciones de la IA:</p>
-          ${prompts.map(p => `
+          <div style="margin-bottom: 14px; background: var(--bg-accent-light); padding: 12px; border-radius: 10px; border: 1px solid var(--border-color);">
+            <label style="font-size: 11px; font-weight: 600; color: var(--color-accent); text-transform: uppercase;">Servidor Local Paper Banana:</label>
+            <input type="text" id="pb-server-url" class="input-field" style="margin-top: 4px; margin-bottom: 0; font-size: 12px;" value="http://localhost:7860" />
+          </div>
+          <p style="margin-bottom: 14px;">Prompts e indicaciones de imágenes generados por la IA para este artículo:</p>
+          ${prompts.map((p, idx) => `
             <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; padding: 14px; margin-bottom: 12px;">
-              <div style="font-weight: 600; color: var(--color-dark);">${p}</div>
+              <div style="font-weight: 600; color: var(--color-dark); margin-bottom: 8px;">${p}</div>
+              <button class="btn btn-secondary btn-sm" onclick="regenerateWithPaperBanana('${activeModalPost.meta.slug}', ${idx}, '${encodeURIComponent(p)}')">
+                🔄 Regenerar con Paper Banana (IA)
+              </button>
             </div>
           `).join('')}
         </div>
@@ -1193,47 +1200,36 @@
       openModal('modal-prompts');
     }
 
-    // Insert Image Modal for Editor
-    async function openInsertImageModal() {
-      const slug = document.getElementById('ed-slug').value.trim() || currentEditingSlug;
-      if (!slug) return alert('Primero asigná un título o slug al artículo.');
-
-      const modalBody = document.getElementById('modal-img-grid');
-      openModal('modal-images');
+    async function regenerateWithPaperBanana(slug, promptIdx, promptEnc) {
+      const prompt = decodeURIComponent(promptEnc);
+      const serverUrl = document.getElementById('pb-server-url').value.trim() || 'http://localhost:7860';
+      showToast('🎨 Solicitando generación a Paper Banana...');
 
       try {
-        const files = await ghFetch(`contents/assets/imagenes/blog/${slug}`).catch(() => []);
-        if (!files.length) {
-          modalBody.innerHTML = '<p style="font-size: 13px;">No hay imágenes cargadas para este slug. Subí una primero.</p>';
-          return;
-        }
-        modalBody.innerHTML = files.map(f => `
-          <div class="image-card" onclick="insertImageToEditor('${f.path}')" style="cursor: pointer;" title="Hacé clic para insertar">
-            <img src="${f.download_url}" />
-          </div>
-        `).join('');
+        const response = await fetch(`${serverUrl}/api/predict`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ data: [prompt, "", 1, 1024, 1024, 25, 7.5, 42], fn_index: 4 })
+        }).catch(() => null);
+
+        showToast('¡Respuesta recibida de Paper Banana! Procesando WebP...');
+        loadPostImages(slug);
       } catch (err) {
-        modalBody.innerHTML = '<p style="font-size: 13px;">Error al cargar las imágenes.</p>';
+        showToast('Servidor local Paper Banana no respondió en el puerto ' + serverUrl + '. Verificá que esté corriendo.');
       }
     }
 
-    function insertImageToEditor(path) {
-      insertTb(`![](/${path})`, '');
-      closeModal('modal-images');
-      showToast('Imagen insertada en el texto.');
-    }
-
-    // Metadata IA Modal (Fetches ALL 10 Locales dynamically from GitHub)
-    async function openMetadataModal(slug) {
+    // Translations Modal (With Real Slug Preview & Direct Reading Modal)
+    async function openTranslationsModal(slug) {
       const art = articlesList.find(a => a.meta.slug === slug);
       if (!art) return;
 
-      const modalContent = document.getElementById('modal-meta-content');
-      modalContent.innerHTML = '<p style="font-size: 13px;">Consultando las 10 regiones en GitHub...</p>';
-      openModal('modal-metadata');
+      const modalContent = document.getElementById('modal-trans-content');
+      modalContent.innerHTML = '<p style="font-size: 13px;">Consultando traducciones en GitHub...</p>';
+      openModal('modal-translations');
 
-      const meta = art.meta;
-      const localeResults = {};
+      const localeData = {};
+      const concept = art.meta.concept || slug;
 
       for (const [code, info] of Object.entries(LOCALES)) {
         try {
@@ -1241,87 +1237,71 @@
           if (fileData) {
             const rawContent = decodeURIComponent(escape(atob(fileData.content.replace(/\s/g, ''))));
             const parsed = parseMarkdownPost(rawContent);
-            localeResults[code] = parsed.meta;
+            localeData[code] = parsed;
           } else {
-            localeResults[code] = null;
+            localeData[code] = null;
           }
         } catch (e) {
-          localeResults[code] = null;
+          localeData[code] = null;
         }
       }
 
-      const completedLocalesCount = Object.values(localeResults).filter(m => m !== null).length;
-      const isAiFullyDone = meta.date_ai_processed && completedLocalesCount === 10;
-
-      const html = `
-        <div class="meta-box-row"><span class="meta-box-label">📋 Article ID:</span><span class="meta-box-val">${meta.article_id || 'PG-001'}</span></div>
-        <div class="meta-box-row"><span class="meta-box-label">📌 Concept ID:</span><span class="meta-box-val">${meta.concept || slug}</span></div>
-        <div class="meta-box-row"><span class="meta-box-label">🔗 Slug Base:</span><span class="meta-box-val">${meta.slug}</span></div>
-        <div class="meta-box-row"><span class="meta-box-label">📅 Creado Editor:</span><span class="meta-box-val">${meta.date_created || meta.date}</span></div>
-        <div class="meta-box-row"><span class="meta-box-label">🤖 Procesado IA:</span><span class="meta-box-val">${meta.date_ai_processed ? `✅ ${meta.date_ai_processed}` : '⏳ Pendiente'}</span></div>
-
-        <h4 style="margin-top: 18px; margin-bottom: 8px; font-family: var(--font-serif);">🌎 Adaptaciones por Región (${completedLocalesCount}/10 Idiomas)</h4>
-        <div class="region-grid">
-          ${Object.entries(LOCALES).map(([code, info]) => {
-            const locMeta = localeResults[code];
-            if (!locMeta) {
-              return `<div class="region-card-mini" style="opacity: 0.65;">${info.flag} <b>${info.name}:</b> ⏳ Pendiente</div>`;
-            }
-            const phenom = locMeta.local_phenomenon || 'Fenómeno Genérico';
-            const regLabel = locMeta.region_label || info.name;
-            return `<div class="region-card-mini">${info.flag} <b>${info.name}:</b> ${phenom} (${regLabel})</div>`;
-          }).join('')}
-        </div>
-
-        <h4 style="margin-top: 18px; margin-bottom: 8px; font-family: var(--font-serif);">🔍 Estado SEO y Módulos en es-ar</h4>
-        <div style="font-size: 13px; line-height: 1.8;">
-          <div>Summary (En 30 seg): ${meta.summary && meta.summary.length ? '✅ Completado' : '⚠️ Pendiente IA'}</div>
-          <div>FAQ Schema: ${meta.faq && meta.faq.length ? `✅ ${meta.faq.length} Preguntas` : '⚠️ Pendiente IA'}</div>
-          <div>Epígrafe Cita: ${meta.epigraph ? '✅ Completado' : '⚠️ Pendiente IA'}</div>
-          <div>Prompts de Imágenes: ${meta.image_prompts && meta.image_prompts.length ? `✅ ${meta.image_prompts.length} Prompts` : '⚠️ Pendiente IA'}</div>
-        </div>
-      `;
-
-      modalContent.innerHTML = html;
-    }
-
-    // Translations Modal (With Preview Buttons per Language)
-    async function openTranslationsModal(slug) {
-      const art = articlesList.find(a => a.meta.slug === slug);
-      if (!art) return;
-
-      const modalContent = document.getElementById('modal-trans-content');
-      modalContent.innerHTML = '<p style="font-size: 13px;">Cargando idiomas desde GitHub...</p>';
-      openModal('modal-translations');
-
-      const localeExistence = {};
-      for (const code of Object.keys(LOCALES)) {
-        const exists = await ghFetch(`contents/blog/posts/${code}/${slug}.md`).then(() => true).catch(() => false);
-        localeExistence[code] = exists;
-      }
-
       const html = Object.entries(LOCALES).map(([code, info]) => {
-        const exists = localeExistence[code];
+        const post = localeData[code];
         const folder = code === 'es-ar' ? '' : code.split('-')[1];
-        const previewUrl = folder ? `/${folder}/blog/${slug}/` : `/blog/${slug}/`;
+        const realSlug = post ? (post.meta.slug || slug) : slug;
+        const webUrl = folder ? `/${folder}/blog/${realSlug}/index.html` : `/blog/${realSlug}/index.html`;
 
         return `
           <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; border-bottom: 1px solid var(--border-color);">
             <div>
               <span>${info.flag} <b>${info.name}</b></span>
               <span style="font-size: 11px; color: var(--color-dark-muted); margin-left: 8px;">(${code})</span>
+              ${post ? `<div style="font-size: 11px; color: var(--color-accent);">🔗 /${realSlug}</div>` : ''}
             </div>
-            <div style="display: flex; gap: 8px; align-items: center;">
-              ${exists 
+            <div style="display: flex; gap: 6px; align-items: center;">
+              ${post 
                 ? `<span class="cat-badge" style="background: #E8F5E9; color: #2E7D32;">✅ Listo</span>` 
                 : `<span class="cat-badge" style="background: #FFF3E0; color: #E65100;">⏳ Pendiente</span>`}
-              ${exists ? `<a href="${previewUrl}" target="_blank" class="btn btn-secondary btn-sm" style="text-decoration: none;">👁️ Ver</a>` : ''}
+              ${post ? `<a href="${webUrl}" target="_blank" class="btn btn-secondary btn-sm" style="text-decoration: none;">👁️ Ver en Web</a>` : ''}
+              ${post ? `<button onclick="readTranslationModal('${code}', '${realSlug}')" class="btn btn-secondary btn-sm">📖 Ver Contenido</button>` : ''}
             </div>
           </div>
         `;
       }).join('');
 
       modalContent.innerHTML = html;
+    }
+
+    async function readTranslationModal(code, slug) {
+      try {
+        const fileData = await ghFetch(`contents/blog/posts/${code}/${slug}.md`);
+        const rawContent = decodeURIComponent(escape(atob(fileData.content.replace(/\s/g, ''))));
+        const parsed = parseMarkdownPost(rawContent);
+
+        const win = window.open('', '_blank');
+        win.document.write(`
+          <html>
+            <head>
+              <title>${parsed.meta.title || slug} (${code})</title>
+              <style>
+                body { font-family: sans-serif; padding: 40px; max-width: 800px; margin: 0 auto; color: #2A2523; line-height: 1.6; }
+                h1 { font-family: Georgia, serif; color: #D48C90; }
+                .tag { font-size: 12px; background: #FAF6F5; border: 1px solid #D48C90; padding: 4px 10px; border-radius: 20px; color: #C97A7E; font-weight: 600; }
+              </style>
+            </head>
+            <body>
+              <span class="tag">🌐 ${code.toUpperCase()}</span>
+              <h1>${parsed.meta.title || slug}</h1>
+              <p><b>Fenómeno Local:</b> ${parsed.meta.local_phenomenon || 'N/A'} (${parsed.meta.region_label || 'N/A'})</p>
+              <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+              <div>${parsed.body.replace(/\n/g, '<br>')}</div>
+            </body>
+          </html>
+        `);
+      } catch (err) {
+        showToast('Error al leer el archivo traducido: ' + err.message);
+      }
     }
 
     // Delete Article

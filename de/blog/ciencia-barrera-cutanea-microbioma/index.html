@@ -87,7 +87,7 @@
   .hero-image-placeholder { width: 100%; min-height: 400px; background: var(--bg-secondary); border-radius: 18px; margin-bottom: 40px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 10px; box-shadow: var(--shadow-md); }
   
   .toc { background:var(--bg-accent-light); border:1px solid var(--border-color); border-radius:14px; padding:18px 22px; margin:0 0 32px; font-size:0.92rem; }
-  .toc::before { content:"En este artículo"; display:block; font-weight:600; margin-bottom:8px; color:var(--color-dark); }
+  .toc::before { content: attr(data-title); display:block; font-weight:600; margin-bottom:8px; color:var(--color-dark); }
   .toc ul { list-style:none; }
   .toc a { text-decoration:none; color:var(--color-dark-muted); }
   .toc a:hover { color:var(--color-primary-hover); }
@@ -192,16 +192,16 @@
   <span class="region-tag">Berlin, Deutschland</span><br>
   <p class="eyebrow">Hautwissenschaft</p>
   <h1 class="article-title">Die Wissenschaft der Hautbarriere: Was sie ist, wie sie geschädigt wird und wie man sie repariert</h1>
-  <div class="meta-row"><span>2026-07-17</span><span>&middot;</span><span>3 min de lectura</span><span>&middot;</span><span>PepaGold</span></div>
+  <div class="meta-row"><span>17. Juli 2026</span><span>&middot;</span><span>3 Min. Lesezeit</span><span>&middot;</span><span>PepaGold</span></div>
   
   <blockquote class="epigraph">“Ihre Haut braucht nicht mehr Produkte; sie braucht die Möglichkeit, sich selbst zu verteidigen.”<cite>— Dr. PepaGold</cite></blockquote>
-  <div class="summary-box"><p class="callout-title">⏱️ En 30 segundos</p><ul><li>Die Hautbarriere ist eine Lipidmatrix aus Ceramiden, Cholesterin und Fettsäuren, die Feuchtigkeit bindet und Bakterien abwehrt.</li><li>Der Säureschutzmantel (pH 4,5-5,5) und das Mikrobiom bilden Ihre erste immunologische Verteidigungslinie.</li><li>Extremes Wetter (kalter Trockenwind, Heizungsluft), Tenside und Über-Exfoliation zerstören die Lipidmatrix.</li><li>Die Reparatur erfordert atraumatische, reibungsfreie Reinigung, biomimetische Ceramide (Verhältnis 3:1:1) und Präbiotika.</li></ul></div>
+  <div class="summary-box"><p class="callout-title">⏱️ In 30 Sekunden</p><ul><li>Die Hautbarriere ist eine Lipidmatrix aus Ceramiden, Cholesterin und Fettsäuren, die Feuchtigkeit bindet und Bakterien abwehrt.</li><li>Der Säureschutzmantel (pH 4,5-5,5) und das Mikrobiom bilden Ihre erste immunologische Verteidigungslinie.</li><li>Extremes Wetter (kalter Trockenwind, Heizungsluft), Tenside und Über-Exfoliation zerstören die Lipidmatrix.</li><li>Die Reparatur erfordert atraumatische, reibungsfreie Reinigung, biomimetische Ceramide (Verhältnis 3:1:1) und Präbiotika.</li></ul></div>
   
   <div class="hero-image-placeholder">
     <div class="media-gallery" style="display: flex; gap: 10px; width: 100%; height: 100%;"><img src="/assets/imagenes/blog/anatomia_img_1.png" style="flex: 1; width: 100%; object-fit: cover; border-radius: 8px;" alt="Blog Media"></div>
   </div>
   
-  <div class="toc">
+  <div class="toc" data-title="In diesem Artikel">
 <ul>
 <li><a href="#die-wissenschaft-der-hautbarriere-funktion-und-aufbau">Die Wissenschaft der Hautbarriere: Funktion und Aufbau</a></li>
 <li><a href="#architektur-der-haut-bausteine-und-zement">Architektur der Haut: Bausteine und Zement</a><ul>
@@ -263,14 +263,14 @@ Ihre Haut verliert täglich ganz natürlich bis zu einem halben Liter Wasser dur
 <p><img alt="" src="/assets/imagenes/blog/anatomia_img_1.png" /></p>
   </div>
   
-  <a class="science-link" href="/de/#ciencia"><span class="sci-icon">🔬</span><span class="sci-text"><p>Lo que dice la ciencia</p><p>Dermatólogos y estudios sobre barrera cutánea y microbioma que respaldan esta nota →</p></span></a>
+  <a class="science-link" href="/de/#ciencia"><span class="sci-icon">🔬</span><span class="sci-text"><p>Was die Wissenschaft sagt</p><p>Dermatologen und Studien zur Hautbarriere und zum Mikrobiom, die diesen Artikel stützen &rarr;</p></span></a>
   
   <div class="product-cta">
     <p><strong>Laska Mini Set</strong> — el set de microfibra que reemplaza discos de algodón, agua micelar y desmaquillante. Solo con agua.</p>
     <a class="btn" href="/de/">Conocer el producto &rarr;</a>
   </div>
   
-  <div class="faq-section"><h2>Preguntas frecuentes</h2><details class="faq-item"><summary>Wie lange dauert es, eine geschädigte Hautbarriere zu reparieren?</summary><p>Der Erneuerungszyklus der Hautzellen dauert 14 bis 28 Tage. Bei Verzicht auf aggressive Reiniger und Nutzung biomimetischer Ceramide spüren Sie Linderung in 3 bis 5 Tagen und vollständige Wiederherstellung in 4 Wochen.</p></details><details class="faq-item"><summary>Warum brennt mein Gesicht beim Auftragen von Feuchtigkeitscreme?</summary><p>Brennen ist das Symptom Nr. 1 für Mikrorisse in der Hornschicht. Ohne intakten Lipidkitt und Säureschutzmantel gelangen Inhaltsstoffe direkt an freiliegende Nervenenden.</p></details></div>
+  <div class="faq-section"><h2>Häufig gestellte Fragen</h2><details class="faq-item"><summary>Wie lange dauert es, eine geschädigte Hautbarriere zu reparieren?</summary><p>Der Erneuerungszyklus der Hautzellen dauert 14 bis 28 Tage. Bei Verzicht auf aggressive Reiniger und Nutzung biomimetischer Ceramide spüren Sie Linderung in 3 bis 5 Tagen und vollständige Wiederherstellung in 4 Wochen.</p></details><details class="faq-item"><summary>Warum brennt mein Gesicht beim Auftragen von Feuchtigkeitscreme?</summary><p>Brennen ist das Symptom Nr. 1 für Mikrorisse in der Hornschicht. Ohne intakten Lipidkitt und Säureschutzmantel gelangen Inhaltsstoffe direkt an freiliegende Nervenenden.</p></details></div>
   
 </div>
 <footer class="site-footer">

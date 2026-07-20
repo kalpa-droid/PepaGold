@@ -45,6 +45,115 @@ CATEGORY_LABELS_DEFAULT = {
     "tendencias-skincare": "📈 Tendencias Globales",
 }
 
+I18N_STRINGS = {
+    "es-ar": {
+        "summary_title": "⏱️ En 30 segundos", "toc_title": "En este artículo", "reading_time": "min de lectura",
+        "science_title": "Lo que dice la ciencia", "science_desc": "Dermatólogos y estudios sobre barrera cutánea y microbioma que respaldan esta nota →",
+        "cta_desc": "<strong>Laska Mini Set</strong> — el set de microfibra que reemplaza discos de algodón, agua micelar y desmaquillante. Solo con agua.",
+        "cta_btn": "Conocer el producto &rarr;", "faq_title": "Preguntas frecuentes", "related_title": "Seguí leyendo",
+        "footer_copy": "&copy; 2025&ndash;2026 PepaGold &middot; Todos los derechos reservados.", "read_btn": "Leer Artículo",
+        "index_desc": "Artículos sobre cuidado de la piel sin químicos, sostenibilidad y skincare consciente."
+    },
+    "es-mx": {
+        "summary_title": "⏱️ En 30 segundos", "toc_title": "En este artículo", "reading_time": "min de lectura",
+        "science_title": "Lo que dice la ciencia", "science_desc": "Dermatólogos y estudios sobre barrera cutánea y microbioma que respaldan esta nota →",
+        "cta_desc": "<strong>Laska Mini Set</strong> — el set de microfibra que reemplaza pads de algodón, agua micelar y desmaquillantes. Solo con agua.",
+        "cta_btn": "Conocer el producto &rarr;", "faq_title": "Preguntas frecuentes", "related_title": "Sigue leyendo",
+        "footer_copy": "&copy; 2025&ndash;2026 PepaGold &middot; Todos los derechos reservados.", "read_btn": "Leer Artículo",
+        "index_desc": "Artículos sobre cuidado de la piel sin químicos, sostenibilidad y skincare consciente."
+    },
+    "es-es": {
+        "summary_title": "⏱️ En 30 segundos", "toc_title": "En este artículo", "reading_time": "min de lectura",
+        "science_title": "Lo que dice la ciencia", "science_desc": "Dermatólogos y estudios sobre barrera cutánea y microbioma que respaldan esta nota →",
+        "cta_desc": "<strong>Laska Mini Set</strong> — el set de microfibra que reemplaza algodones, agua micelar y desmaquillante. Solo con agua.",
+        "cta_btn": "Descubrir producto &rarr;", "faq_title": "Preguntas frecuentes", "related_title": "Sigue leyendo",
+        "footer_copy": "&copy; 2025&ndash;2026 PepaGold &middot; Todos los derechos reservados.", "read_btn": "Leer Artículo",
+        "index_desc": "Artículos sobre cuidado de la piel sin químicos, sostenibilidad y skincare consciente."
+    },
+    "en-us": {
+        "summary_title": "⏱️ In 30 seconds", "toc_title": "In this article", "reading_time": "min read",
+        "science_title": "What science says", "science_desc": "Dermatologists and clinical studies on the skin barrier and microbiome supporting this guide &rarr;",
+        "cta_desc": "<strong>Laska Mini Set</strong> — the reusable UpPoly microfiber set replacing cotton pads, micellar water, and cleansers. Water only.",
+        "cta_btn": "Explore Product &rarr;", "faq_title": "Frequently Asked Questions", "related_title": "Keep reading",
+        "footer_copy": "&copy; 2025&ndash;2026 PepaGold &middot; All rights reserved.", "read_btn": "Read Article",
+        "index_desc": "Articles on chemical-free skincare, sustainability, and skinimalism."
+    },
+    "fr-fr": {
+        "summary_title": "⏱️ En 30 secondes", "toc_title": "Dans cet article", "reading_time": "min de lecture",
+        "science_title": "Ce que dit la science", "science_desc": "Dermatologues et études cliniques sur la barrière cutanée et le microbiome soutiennent ce guide &rarr;",
+        "cta_desc": "<strong>Laska Mini Set</strong> — le coffret en microfibre réutilisable qui remplace le coton, l'eau micellaire et le démaquillant. Rien qu'avec de l'eau.",
+        "cta_btn": "Découvrir le produit &rarr;", "faq_title": "Foire aux questions", "related_title": "Poursuivez votre lecture",
+        "footer_copy": "&copy; 2025&ndash;2026 PepaGold &middot; Tous droits réservés.", "read_btn": "Lire l'article",
+        "index_desc": "Articles sur les soins de la peau sans produits chimiques et la beauté durable."
+    },
+    "de-de": {
+        "summary_title": "⏱️ In 30 Sekunden", "toc_title": "In diesem Artikel", "reading_time": "Min. Lesezeit",
+        "science_title": "Was die Wissenschaft sagt", "science_desc": "Dermatologen und Studien zur Hautbarriere und zum Mikrobiom, die diesen Artikel stützen &rarr;",
+        "cta_desc": "<strong>Laska Mini Set</strong> — das wiederverwendbare Mikrofaser-Set, das Wattepads, Mizellenwasser und Abschminkmittel ersetzt. Nur mit Wasser.",
+        "cta_btn": "Produkt entdecken &rarr;", "faq_title": "Häufig gestellte Fragen", "related_title": "Weiterlesen",
+        "footer_copy": "&copy; 2025&ndash;2026 PepaGold &middot; Alle Rechte vorbehalten.", "read_btn": "Artikel lesen",
+        "index_desc": "Artikel über chemiefreie Hautpflege, Nachhaltigkeit und Skinimalismus."
+    },
+    "it-it": {
+        "summary_title": "⏱️ In 30 secondi", "toc_title": "In questo articolo", "reading_time": "min di lettura",
+        "science_title": "Cosa dice la scienza", "science_desc": "Dermatologi e studi sulla barriera cutanea e sul microbioma che supportano questa guida &rarr;",
+        "cta_desc": "<strong>Laska Mini Set</strong> — il set di microfibra riutilizzabile che sostituisce dischetti di cotone, acqua micellare e struccanti. Solo con acqua.",
+        "cta_btn": "Scopri il prodotto &rarr;", "faq_title": "Domande frequenti", "related_title": "Continua a leggere",
+        "footer_copy": "&copy; 2025&ndash;2026 PepaGold &middot; Tutti i diritti riservati.", "read_btn": "Leggi l'articolo",
+        "index_desc": "Articoli sulla cura della pelle senza sostanze chimiche e sostenibilità."
+    },
+    "pt-br": {
+        "summary_title": "⏱️ Em 30 segundos", "toc_title": "Neste artigo", "reading_time": "min de leitura",
+        "science_title": "O que a ciência diz", "science_desc": "Dermatologistas e estudos sobre a barreira cutânea e o microbioma que apoiam este artigo &rarr;",
+        "cta_desc": "<strong>Laska Mini Set</strong> — o conjunto de microfibra reutilizável que substitui algodão, água micelar e demaquilante. Apenas com água.",
+        "cta_btn": "Conheça o produto &rarr;", "faq_title": "Perguntas frequentes", "related_title": "Continue lendo",
+        "footer_copy": "&copy; 2025&ndash;2026 PepaGold &middot; Todos os direitos reservados.", "read_btn": "Ler Artigo",
+        "index_desc": "Artigos sobre cuidados com a pele sem químicos e sustentabilidade."
+    },
+    "ru-ru": {
+        "summary_title": "⏱️ За 30 секунд", "toc_title": "В этой статье", "reading_time": "мин чтение",
+        "science_title": "Что говорит наука", "science_desc": "Дерматологи и клинические исследования кожного барьера и микробиома &rarr;",
+        "cta_desc": "<strong>Laska Mini Set</strong> — набор из микроволокна UpPoly, заменяющий ватные диски и мицеллярную воду. Только вода.",
+        "cta_btn": "Узнать больше о продукте &rarr;", "faq_title": "Часто задаваемые вопросы", "related_title": "Читайте также",
+        "footer_copy": "&copy; 2025&ndash;2026 PepaGold &middot; Все права защищены.", "read_btn": "Читать статью",
+        "index_desc": "Статьи об уходе за кожей без химии, экологии и осознанном уходе."
+    },
+    "zh-hans": {
+        "summary_title": "⏱️ 30秒速览", "toc_title": "本文目录", "reading_time": "分钟阅读",
+        "science_title": "科学依据", "science_desc": "皮肤学专家与临床研究关于皮肤屏障与微生态的背书 &rarr;",
+        "cta_desc": "<strong>Laska Mini Set</strong> — 替代卸妆棉、卸妆水和清洁乳的可重复使用超细纤维套装。只需清水。",
+        "cta_btn": "了解产品详情 &rarr;", "faq_title": "常见问题解答", "related_title": "推荐阅读",
+        "footer_copy": "&copy; 2025&ndash;2026 PepaGold &middot; 保留所有权利。", "read_btn": "阅读文章",
+        "index_desc": "关于无化学护肤、环保与极简护肤的文章。"
+    }
+}
+
+MONTHS_I18N = {
+    "es": ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
+    "en": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+    "fr": ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"],
+    "de": ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],
+    "it": ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembri", "dicembre"],
+    "pt": ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"],
+    "ru": ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"],
+    "zh": ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
+}
+
+def format_localized_date(date_str, locale):
+    if not date_str: return ""
+    try:
+        dt = datetime.datetime.strptime(str(date_str).split()[0], "%Y-%m-%d")
+        lang = locale.split("-")[0]
+        months = MONTHS_I18N.get(lang, MONTHS_I18N["es"])
+        month_name = months[dt.month - 1]
+        if lang == "en": return f"{month_name} {dt.day}, {dt.year}"
+        elif lang == "zh": return f"{dt.year}年{dt.month}月{dt.day}日"
+        elif lang == "de": return f"{dt.day}. {month_name} {dt.year}"
+        elif lang == "ru": return f"{dt.day} {month_name} {dt.year} г."
+        else: return f"{dt.day} de {month_name} de {dt.year}"
+    except Exception:
+        return str(date_str)
+
 # =========================================================================
 # BLOQUES INTERACTIVOS (Tip, Stat, Checklist, Quiz)
 # =========================================================================
@@ -247,7 +356,7 @@ BRAND_HEAD = """<!DOCTYPE html>
   .hero-image-placeholder {{ width: 100%; min-height: 400px; background: var(--bg-secondary); border-radius: 18px; margin-bottom: 40px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 10px; box-shadow: var(--shadow-md); }}
   
   .toc {{ background:var(--bg-accent-light); border:1px solid var(--border-color); border-radius:14px; padding:18px 22px; margin:0 0 32px; font-size:0.92rem; }}
-  .toc::before {{ content:"En este artículo"; display:block; font-weight:600; margin-bottom:8px; color:var(--color-dark); }}
+  .toc::before {{ content: attr(data-title); display:block; font-weight:600; margin-bottom:8px; color:var(--color-dark); }}
   .toc ul {{ list-style:none; }}
   .toc a {{ text-decoration:none; color:var(--color-dark-muted); }}
   .toc a:hover {{ color:var(--color-primary-hover); }}
@@ -344,7 +453,7 @@ ARTICLE_TEMPLATE = BRAND_HEAD + """<body>
   {region_tag_html}
   <p class="eyebrow">{category_label}</p>
   <h1 class="article-title">{title}</h1>
-  <div class="meta-row"><span>{date_display}</span><span>&middot;</span><span>{reading_time} min de lectura</span><span>&middot;</span><span>{author}</span></div>
+  <div class="meta-row"><span>{date_display}</span><span>&middot;</span><span>{reading_time}</span><span>&middot;</span><span>{author}</span></div>
   
   {epigraph_html}
   {summary_html}
@@ -594,35 +703,43 @@ def render_epigraph(meta):
 def render_summary(meta):
     items = meta.get("summary")
     if not items: return ""
+    locale = meta.get("locale", "es-ar")
+    i18n = I18N_STRINGS.get(locale, I18N_STRINGS["es-ar"])
     lis = "".join(f"<li>{_inline(i.get('punto', str(i)) if isinstance(i, dict) else str(i))}</li>" for i in items)
-    return f'<div class="summary-box"><p class="callout-title">⏱️ En 30 segundos</p><ul>{lis}</ul></div>'
+    return f'<div class="summary-box"><p class="callout-title">{i18n["summary_title"]}</p><ul>{lis}</ul></div>'
 
 def render_faq(meta):
     faq = meta.get("faq") or []
     if not faq: return ""
+    locale = meta.get("locale", "es-ar")
+    i18n = I18N_STRINGS.get(locale, I18N_STRINGS["es-ar"])
     items = "".join(f'<details class="faq-item"><summary>{item["q"]}</summary><p>{item["a"]}</p></details>' for item in faq)
-    return f'<div class="faq-section"><h2>Preguntas frecuentes</h2>{items}</div>'
+    return f'<div class="faq-section"><h2>{i18n["faq_title"]}</h2>{items}</div>'
 
 def render_science_link(meta, home_url):
     if meta.get("show_science_link") is False: return ""
+    locale = meta.get("locale", "es-ar")
+    i18n = I18N_STRINGS.get(locale, I18N_STRINGS["es-ar"])
     return (
         f'<a class="science-link" href="{home_url}#ciencia">'
         '<span class="sci-icon">🔬</span>'
-        '<span class="sci-text"><p>Lo que dice la ciencia</p>'
-        '<p>Dermatólogos y estudios sobre barrera cutánea y microbioma que respaldan esta nota →</p>'
+        f'<span class="sci-text"><p>{i18n["science_title"]}</p>'
+        f'<p>{i18n["science_desc"]}</p>'
         '</span></a>'
     )
 
 def render_related(meta, lookup):
     slugs = meta.get("related") or []
     if not slugs: return ""
+    locale = meta.get("locale", "es-ar")
+    i18n = I18N_STRINGS.get(locale, I18N_STRINGS["es-ar"])
     cards = []
     for s_item in slugs:
         s = s_item.get('slug', s_item) if isinstance(s_item, dict) else s_item
-        key = (meta["locale"], s)
+        key = (locale, s)
         other = lookup.get(key)
         if not other: continue
-        folder = LOCALE_FOLDERS[meta["locale"]]
+        folder = LOCALE_FOLDERS[locale]
         base = f"{folder}/" if folder else ""
         url = f"/{base}blog/{s}/"
         other_media = other.get("media", [])
@@ -632,10 +749,11 @@ def render_related(meta, lookup):
         cards.append(f'<a class="related-card" href="{url}"><div class="card-video">{media_html}</div><div class="rc-body"><h3>{other.get("title", "")}</h3></div></a>')
     
     if not cards: return ""
-    return f'<div class="related-section"><h2>Seguí leyendo</h2><div class="related-grid">{"".join(cards)}</div></div>'
+    return f'<div class="related-section"><h2>{i18n["related_title"]}</h2><div class="related-grid">{"".join(cards)}</div></div>'
 
 def render_article(meta, body_md, hreflang_tags, lookup):
     locale = meta["locale"]
+    i18n = I18N_STRINGS.get(locale, I18N_STRINGS["es-ar"])
     folder = LOCALE_FOLDERS[locale]
     slug = meta["slug"]
     base = f"{folder}/" if folder else ""
@@ -655,10 +773,15 @@ def render_article(meta, body_md, hreflang_tags, lookup):
     md_engine = markdown.Markdown(extensions=["extra", "sane_lists", "toc"])
     body_html = md_engine.convert(processed_md)
     toc_raw = md_engine.toc
-    toc_html = toc_raw if toc_raw.count("<li>") >= 2 else ""
+    
+    # Inject localized TOC header
+    toc_raw_localized = re.sub(r'class="toc"', f'class="toc" data-title="{i18n["toc_title"]}"', toc_raw)
+    toc_html = toc_raw_localized if toc_raw.count("<li>") >= 2 else ""
 
     word_count = len(re.sub(r"<[^>]+>", " ", body_html).split())
-    reading_time = max(1, round(word_count / 200))
+    reading_time_num = max(1, round(word_count / 200))
+    reading_time_str = f"{reading_time_num} {i18n['reading_time']}"
+    date_display = format_localized_date(meta.get("date", ""), locale)
 
     category_label = meta.get("category_label") or CATEGORY_LABELS_DEFAULT.get(meta.get("category"), "")
     schema = build_article_schema(meta, canonical, cover_abs)
@@ -686,14 +809,23 @@ def render_article(meta, body_md, hreflang_tags, lookup):
         dropdown_lis.append(f'<li class="lang-option{is_sel}" onclick="window.location.href=\'{url}\'" role="option">{info["flag"]} {info["name"]}</li>')
     lang_dropdown_html = "\n".join(dropdown_lis)
 
+    # Inject CTA I18N
+    product_cta_html = f'''
+  <div class="product-cta">
+    <p>{i18n["cta_desc"]}</p>
+    <a class="btn" href="{home_url}">{i18n["cta_btn"]}</a>
+  </div>
+    '''
+
     html = ARTICLE_TEMPLATE.format(
         lang_attr=locale.split("-")[0], lang_upper=locale.split("-")[0].upper(),
         title=meta.get("title", ""), description=meta.get("description", ""),
         canonical=canonical, cover_image_abs=cover_abs, hreflang_tags=hreflang_tags, article_schema=schema,
         home_url=home_url, blog_index_url=blog_index_url, region_tag_html=region_tag_html,
-        category_label=category_label, date_display=str(meta.get("date", "")), reading_time=reading_time,
+        category_label=category_label, date_display=date_display, reading_time=reading_time_str,
         author=meta.get("author", "PepaGold"), epigraph_html=render_epigraph(meta), summary_html=render_summary(meta),
         media_html=media_html, toc_html=toc_html, body_html=body_html, science_link_html=render_science_link(meta, home_url),
+        product_cta_html=product_cta_html, footer_copy=i18n["footer_copy"],
         faq_html=render_faq(meta), related_html=render_related(meta, lookup),
         active_flag=active_flag, lang_dropdown_html=lang_dropdown_html,
     )
@@ -720,6 +852,7 @@ def render_index(locale, posts):
     home_url = f"/{base}" if folder else "/"
     blog_index_url = f"/{base}blog/"
     canonical = f"{SITE_URL}/{base}blog/"
+    i18n = I18N_STRINGS.get(locale, I18N_STRINGS["es-ar"])
     posts_sorted = sorted(posts, key=lambda p: str(p.get("date", "")), reverse=True)
     
     cats_present = sorted({p.get("category") for p in posts_sorted if p.get("category")})
@@ -743,7 +876,7 @@ def render_index(locale, posts):
             <span class="accent-subtitle">{cat_label}</span>
             <h3 class="problem-title">{p.get('title', 'Sin Título')}</h3>
             <p class="problem-description">{p.get('description', '')}</p>
-            <a href="{url}" class="read-btn">Leer Artículo</a>
+            <a href="{url}" class="read-btn">{i18n["read_btn"]}</a>
         </div>
     </div>
 """
@@ -763,6 +896,7 @@ def render_index(locale, posts):
         lang_attr=locale.split("-")[0], lang_upper=locale.split("-")[0].upper(),
         canonical=canonical, home_url=home_url, chips_html="".join(chips), cards_html="".join(cards),
         active_flag=active_flag, lang_dropdown_html=lang_dropdown_html, blog_index_url=blog_index_url,
+        index_desc=i18n["index_desc"], footer_copy=i18n["footer_copy"]
     )
     out_dir = os.path.join(folder, "blog") if folder else "blog"
     os.makedirs(out_dir, exist_ok=True)

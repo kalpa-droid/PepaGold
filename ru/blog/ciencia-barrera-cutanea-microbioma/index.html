@@ -87,7 +87,7 @@
   .hero-image-placeholder { width: 100%; min-height: 400px; background: var(--bg-secondary); border-radius: 18px; margin-bottom: 40px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 10px; box-shadow: var(--shadow-md); }
   
   .toc { background:var(--bg-accent-light); border:1px solid var(--border-color); border-radius:14px; padding:18px 22px; margin:0 0 32px; font-size:0.92rem; }
-  .toc::before { content:"En este artículo"; display:block; font-weight:600; margin-bottom:8px; color:var(--color-dark); }
+  .toc::before { content: attr(data-title); display:block; font-weight:600; margin-bottom:8px; color:var(--color-dark); }
   .toc ul { list-style:none; }
   .toc a { text-decoration:none; color:var(--color-dark-muted); }
   .toc a:hover { color:var(--color-primary-hover); }
@@ -192,16 +192,16 @@
   <span class="region-tag">Москва, Россия</span><br>
   <p class="eyebrow">Наука о коже</p>
   <h1 class="article-title">Наука о кожном барьере: что это такое, как он повреждается и как его восстановить</h1>
-  <div class="meta-row"><span>2026-07-17</span><span>&middot;</span><span>3 min de lectura</span><span>&middot;</span><span>PepaGold</span></div>
+  <div class="meta-row"><span>17 июля 2026 г.</span><span>&middot;</span><span>3 мин чтение</span><span>&middot;</span><span>PepaGold</span></div>
   
   <blockquote class="epigraph">“Коже не нужно больше косметики — ей нужно дать возможность защищаться самостоятельно.”<cite>— Д-р PepaGold</cite></blockquote>
-  <div class="summary-box"><p class="callout-title">⏱️ En 30 segundos</p><ul><li>Кожный барьер — это липидная матрица из церамидов, холестерина и жирных кислот, удерживающая воду и защищающая от бактерий.</li><li>Кислотная мантия (pH 4.5-5.5) и микробиом — ваша первая линия иммунной защиты.</li><li>Ледяной морозный ветер, сухость от батарей отопления, сульфаты и переэксфолиация разрушают липиды.</li><li>Восстановление требует атравматичного очищения без трения, биомиметических церамидов (соотношение 3:1:1) и пребиотиков.</li></ul></div>
+  <div class="summary-box"><p class="callout-title">⏱️ За 30 секунд</p><ul><li>Кожный барьер — это липидная матрица из церамидов, холестерина и жирных кислот, удерживающая воду и защищающая от бактерий.</li><li>Кислотная мантия (pH 4.5-5.5) и микробиом — ваша первая линия иммунной защиты.</li><li>Ледяной морозный ветер, сухость от батарей отопления, сульфаты и переэксфолиация разрушают липиды.</li><li>Восстановление требует атравматичного очищения без трения, биомиметических церамидов (соотношение 3:1:1) и пребиотиков.</li></ul></div>
   
   <div class="hero-image-placeholder">
     <div class="media-gallery" style="display: flex; gap: 10px; width: 100%; height: 100%;"><img src="/assets/imagenes/blog/anatomia_img_1.png" style="flex: 1; width: 100%; object-fit: cover; border-radius: 8px;" alt="Blog Media"></div>
   </div>
   
-  <div class="toc">
+  <div class="toc" data-title="В этой статье">
 <ul>
 <li><a href="#_1">Наука о кожном барьере: структура и функционирование</a></li>
 <li><a href="#_2">Архитектура кожи: Кирпичи и Цемент</a><ul>
@@ -263,14 +263,14 @@
 <p><img alt="" src="/assets/imagenes/blog/anatomia_img_1.png" /></p>
   </div>
   
-  <a class="science-link" href="/ru/#ciencia"><span class="sci-icon">🔬</span><span class="sci-text"><p>Lo que dice la ciencia</p><p>Dermatólogos y estudios sobre barrera cutánea y microbioma que respaldan esta nota →</p></span></a>
+  <a class="science-link" href="/ru/#ciencia"><span class="sci-icon">🔬</span><span class="sci-text"><p>Что говорит наука</p><p>Дерматологи и клинические исследования кожного барьера и микробиома &rarr;</p></span></a>
   
   <div class="product-cta">
     <p><strong>Laska Mini Set</strong> — el set de microfibra que reemplaza discos de algodón, agua micelar y desmaquillante. Solo con agua.</p>
     <a class="btn" href="/ru/">Conocer el producto &rarr;</a>
   </div>
   
-  <div class="faq-section"><h2>Preguntas frecuentes</h2><details class="faq-item"><summary>Сколько времени требуется для восстановления поврежденного кожного барьера?</summary><p>Цикл обновления клеток занимает от 14 до 28 дней. При отказе от агрессивных умывалок и использовании церамидов вы почувствуете облегчение через 3–5 дней, а полное восстановление наступит через 4 недели.</p></details><details class="faq-item"><summary>Почему щиплет лицо при нанесении увлажняющего крема?</summary><p>Жжение — симптомом №1 микротрещин в роговом слое. Без липидного цемента и кислотной мантии компоненты крема попадают прямо на обнаженные нервные окончания.</p></details></div>
+  <div class="faq-section"><h2>Часто задаваемые вопросы</h2><details class="faq-item"><summary>Сколько времени требуется для восстановления поврежденного кожного барьера?</summary><p>Цикл обновления клеток занимает от 14 до 28 дней. При отказе от агрессивных умывалок и использовании церамидов вы почувствуете облегчение через 3–5 дней, а полное восстановление наступит через 4 недели.</p></details><details class="faq-item"><summary>Почему щиплет лицо при нанесении увлажняющего крема?</summary><p>Жжение — симптомом №1 микротрещин в роговом слое. Без липидного цемента и кислотной мантии компоненты крема попадают прямо на обнаженные нервные окончания.</p></details></div>
   
 </div>
 <footer class="site-footer">
