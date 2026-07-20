@@ -1,4 +1,4 @@
-const CACHE_NAME = 'pepagold-v1';
+const CACHE_NAME = 'pepagold-v2';
 const ASSETS_TO_CACHE = [
   '/',
   '/manifest.json',
