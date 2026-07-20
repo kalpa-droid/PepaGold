@@ -553,7 +553,7 @@
       <input type="text" id="gh-token-input" class="input-field" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" onkeydown="if(event.key==='Enter') loginWithToken()" />
       <div id="auth-error-msg" style="display: none; color: #D32F2F; background: #FFEBEE; padding: 10px; border-radius: 8px; font-size: 13px; margin-bottom: 12px;"></div>
       <button class="btn btn-primary" style="width: 100%; margin-bottom: 10px;" onclick="loginWithToken()">Conectar con GitHub</button>
-      <button class="btn btn-secondary" style="width: 100%; font-size: 12px;" onclick="initAuth()">Ingresar al CMS sin Token (Solo Lectura)</button>
+      <button class="btn btn-secondary" style="width: 100%; font-size: 12px;" onclick="loginAsGuest()">Ingresar al CMS sin Token (Solo Lectura)</button>
     </div>
 
     <!-- Dashboard Screen -->
@@ -783,14 +783,23 @@
       return response.json();
     }
 
-    // Auth Initialization
-    function initAuth() {
+    // Auth & Navigation Engine
+    function enterDashboard() {
       document.getElementById('auth-screen').style.display = 'none';
       document.getElementById('nav-tabs').style.display = 'flex';
       document.getElementById('btn-new-article').style.display = 'inline-flex';
       document.getElementById('btn-logout').style.display = 'inline-flex';
       document.getElementById('dashboard-view').style.display = 'flex';
       loadArticles();
+    }
+
+    function initAuth() {
+      if (ghToken) {
+        enterDashboard();
+      } else {
+        document.getElementById('auth-screen').style.display = 'block';
+        document.getElementById('dashboard-view').style.display = 'none';
+      }
     }
 
     async function loginWithToken() {
@@ -801,14 +810,19 @@
       if (errEl) errEl.style.display = 'none';
 
       if (!val) {
-        if (errEl) { errEl.innerText = 'Por favor ingresá un token de GitHub válido.'; errEl.style.display = 'block'; }
+        if (errEl) { errEl.innerText = 'Por favor ingresá un token de GitHub válido (o tocá "Ingresar sin Token").'; errEl.style.display = 'block'; }
         return alert('Por favor ingresá un token de GitHub válido.');
       }
       
       showToast('🔑 Conectando con GitHub...');
       ghToken = val;
       localStorage.setItem('pepagold_gh_token', val);
-      initAuth();
+      enterDashboard();
+    }
+
+    function loginAsGuest() {
+      showToast('👀 Ingresando al CMS...');
+      enterDashboard();
     }
 
     function logout() {
