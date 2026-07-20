@@ -468,10 +468,10 @@ ARTICLE_TEMPLATE = BRAND_HEAD + """<body>
   <h1 class="article-title">{title}</h1>
   <div class="meta-row"><span>{date_display}</span><span>&middot;</span><span>{reading_time}</span><span>&middot;</span><span>{author}</span></div>
   
+  {media_html}
+  
   {epigraph_html}
   {summary_html}
-  
-  {media_html}
   
   {toc_html}
   
