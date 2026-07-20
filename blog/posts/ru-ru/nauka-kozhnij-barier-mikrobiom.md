@@ -1,41 +1,39 @@
 ---
 article_id: PG-001
-title: 'La Ciencia de la Barrera Cutánea: Qué es, Cómo se Daña y Cómo Repararla'
-description: Descubrí qué es exactamente la barrera cutánea y el microbioma de la
-  piel. Aprendé a identificar los síntomas de daño y los mejores métodos para restaurarla.
-slug: ciencia-barrera-cutanea-microbioma
+title: 'Наука о Кожном Барьере: Что Это Такое и Как Его Восстановить'
+description: Узнайте, что такое кожный барьер и микробиом. Научитесь распознавать
+  симптомы повреждений и восстанавливать кожу научно доказанными методами.
+slug: nauka-kozhnij-barier-mikrobiom
 date: '2026-07-17'
 date_created: '2026-07-17'
 date_ai_processed: '2026-07-20'
-locale: es-ar
+locale: ru-ru
 category: barrera-cutanea
-category_label: Ciencia & Piel
+category_label: Наука о Коже
 concept: barrera-cutanea-y-microbioma
-local_phenomenon: Viento Zonda
-region_label: Salta, Argentina
+local_phenomenon: Ледяной Ветер и Мороз
+region_label: Россия
 media:
 - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/barrera_cutanea_1.webp
 author: PepaGold
 epigraph:
-  text: La piel no necesita más productos; necesita que la dejes defenderse.
-  author: Dra. PepaGold
+  text: Коже не нужно больше продуктов; ей нужно дать возможность защищаться самой.
+  author: Др. ПепаГолд
 summary:
-- La barrera cutánea es una matriz de ceramidas, colesterol y ácidos grasos que retiene
-  agua y bloquea bacterias.
-- El manto ácido (pH 4.5-5.5) y el microbioma son tu primera línea de defensa inmunológica
-  contra patógenos.
-- El clima seco (como el Viento Zonda), sulfatos y exfoliación excesiva evaporan el
-  agua y generan microfisuras.
-- La reparación requiere higiene atraumática sin fricción, ceramidas biomiméticas
-  (ratio 3:1:1) y prebióticos.
+- Кожный барьер — это матрица из церамидов, холестерина и жирных кислот, удерживающая
+  воду и блокирующая бактерии.
+- Кислотная мантия (pH 4.5-5.5) и микробиом — первая линия иммунной защиты.
+- Сильный мороз, сухой ветер от отопления и агрессивные павы испаряют влагу и вызывают
+  микротрещины.
+- Восстановление требует бережного очищения без трения, биомиметических церамидов
+  и пребиотиков.
 faq:
-- q: ¿Cuánto tarda en repararse una barrera cutánea dañada?
-  a: El ciclo de renovación celular dura entre 14 y 28 días. Con higiene atraumática
-    y ceramidas biomiméticas sentirás alivio en 3 a 5 días y recuperación total en
-    4 semanas.
-- q: ¿Por qué me arde la cara cuando me pongo crema hidratante?
-  a: 'El ardor es el síntoma #1 de microfisuras en el estrato córneo. Sin cemento
-    lipídico ni manto ácido, la crema toma contacto directo con nervios expuestos.'
+- q: Сколько времени нужно на восстановление кожного барьера?
+  a: Цикл обновления клеток длится от 14 до 28 дней. Облегчение наступит через 3-5
+    дней, полное восстановление — за 4 недели.
+- q: Почему крем щиплет лицо при нанесении?
+  a: Щипание — признак микротрещин в роговом слое. Без липидного цемента крем сразу
+    контактирует с нервными окончаниями.
 related: []
 image_prompts:
 - 'Cover: Ultra-realistic 4K macro photography of healthy human skin texture with
@@ -89,7 +87,7 @@ La disbiosis ocurre cuando alterás tu microbioma por lavado excesivo o químico
 
 Tu piel soporta agresiones diarias, pero tiene un límite:
 
-1. **El Clima Extremo (Viento Zonda):** El aire seco y cálido extrae agua de tus células. El fenómeno de Viento Zonda en Salta, Argentina desploma la humedad ambiental, acelerando la evaporación transcutánea (TEWL) y creando microfisuras.
+1. **El Clima Extremo (Ледяной Ветер и Мороз):** El aire seco y cálido extrae agua de tus células. El fenómeno de Ледяной Ветер и Мороз en Россия desploma la humedad ambiental, acelerando la evaporación transcutánea (TEWL) y creando microfisuras.
 2. **Limpiadores Agresivos (Sulfatos):** Tensoactivos pesados como SLS o SLES disuelven la matriz lipídica como si fuera grasa en un sartén.
 3. **Exfoliación Excesiva:** Usar ácidos o cepillos físicos con demasiada frecuencia retira capas protectoras antes de su regeneración.
 

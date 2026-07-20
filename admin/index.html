@@ -1250,7 +1250,7 @@
         const post = localeData[code];
         const folder = code === 'es-ar' ? '' : code.split('-')[1];
         const realSlug = post ? (post.meta.slug || slug) : slug;
-        const webUrl = folder ? `/${folder}/blog/${realSlug}/index.html` : `/blog/${realSlug}/index.html`;
+        const webUrl = folder ? `/${folder}/blog/${realSlug}/` : `/blog/${realSlug}/`;
 
         return `
           <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; border-bottom: 1px solid var(--border-color);">

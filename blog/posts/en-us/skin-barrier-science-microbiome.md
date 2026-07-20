@@ -1,41 +1,40 @@
 ---
 article_id: PG-001
-title: 'La Ciencia de la Barrera Cutánea: Qué es, Cómo se Daña y Cómo Repararla'
-description: Descubrí qué es exactamente la barrera cutánea y el microbioma de la
-  piel. Aprendé a identificar los síntomas de daño y los mejores métodos para restaurarla.
-slug: ciencia-barrera-cutanea-microbioma
+title: 'Skin Barrier Science: What It Is, How It Breaks, and How to Repair It'
+description: Discover what the skin barrier and microbiome really are. Learn to identify
+  damage symptoms and scientific methods to restore your skin.
+slug: skin-barrier-science-microbiome
 date: '2026-07-17'
 date_created: '2026-07-17'
 date_ai_processed: '2026-07-20'
-locale: es-ar
+locale: en-us
 category: barrera-cutanea
-category_label: Ciencia & Piel
+category_label: Skin Science
 concept: barrera-cutanea-y-microbioma
-local_phenomenon: Viento Zonda
-region_label: Salta, Argentina
+local_phenomenon: Santa Ana Winds
+region_label: United States
 media:
 - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/barrera_cutanea_1.webp
 author: PepaGold
 epigraph:
-  text: La piel no necesita más productos; necesita que la dejes defenderse.
-  author: Dra. PepaGold
+  text: Your skin doesn't need more products; it needs you to let it defend itself.
+  author: Dr. PepaGold
 summary:
-- La barrera cutánea es una matriz de ceramidas, colesterol y ácidos grasos que retiene
-  agua y bloquea bacterias.
-- El manto ácido (pH 4.5-5.5) y el microbioma son tu primera línea de defensa inmunológica
-  contra patógenos.
-- El clima seco (como el Viento Zonda), sulfatos y exfoliación excesiva evaporan el
-  agua y generan microfisuras.
-- La reparación requiere higiene atraumática sin fricción, ceramidas biomiméticas
-  (ratio 3:1:1) y prebióticos.
+- The skin barrier is a matrix of ceramides, cholesterol, and fatty acids that locks
+  in water and blocks pathogens.
+- The acid mantle (pH 4.5-5.5) and microbiome serve as your first line of immunological
+  defense.
+- Dry winds (like Santa Ana winds), harsh sulfates, and over-exfoliation strip lipids
+  and cause micro-cracks.
+- Repair requires gentle non-friction cleansing, biomimetic 3:1:1 lipid replacement,
+  and prebiotics.
 faq:
-- q: ¿Cuánto tarda en repararse una barrera cutánea dañada?
-  a: El ciclo de renovación celular dura entre 14 y 28 días. Con higiene atraumática
-    y ceramidas biomiméticas sentirás alivio en 3 a 5 días y recuperación total en
-    4 semanas.
-- q: ¿Por qué me arde la cara cuando me pongo crema hidratante?
-  a: 'El ardor es el síntoma #1 de microfisuras en el estrato córneo. Sin cemento
-    lipídico ni manto ácido, la crema toma contacto directo con nervios expuestos.'
+- q: How long does it take to repair a damaged skin barrier?
+  a: The cellular turnover cycle takes 14 to 28 days. With friction-free cleansing
+    and ceramides, relief begins in 3 to 5 days, full recovery in 4 weeks.
+- q: Why does moisturizer sting my face?
+  a: 'Stinging is the #1 sign of micro-tears in the stratum corneum. Without lipid
+    cement or acid mantle, cream makes direct contact with exposed nerve endings.'
 related: []
 image_prompts:
 - 'Cover: Ultra-realistic 4K macro photography of healthy human skin texture with
@@ -89,7 +88,7 @@ La disbiosis ocurre cuando alterás tu microbioma por lavado excesivo o químico
 
 Tu piel soporta agresiones diarias, pero tiene un límite:
 
-1. **El Clima Extremo (Viento Zonda):** El aire seco y cálido extrae agua de tus células. El fenómeno de Viento Zonda en Salta, Argentina desploma la humedad ambiental, acelerando la evaporación transcutánea (TEWL) y creando microfisuras.
+1. **El Clima Extremo (Santa Ana Winds):** El aire seco y cálido extrae agua de tus células. El fenómeno de Santa Ana Winds en United States desploma la humedad ambiental, acelerando la evaporación transcutánea (TEWL) y creando microfisuras.
 2. **Limpiadores Agresivos (Sulfatos):** Tensoactivos pesados como SLS o SLES disuelven la matriz lipídica como si fuera grasa en un sartén.
 3. **Exfoliación Excesiva:** Usar ácidos o cepillos físicos con demasiada frecuencia retira capas protectoras antes de su regeneración.
 
