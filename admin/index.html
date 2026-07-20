@@ -1136,6 +1136,8 @@
       loadPostImages(slug);
     }
 
+    let imageTagsState = {};
+
     async function loadPostImages(slug) {
       const grid = document.getElementById('modal-img-grid');
       grid.innerHTML = '<p style="font-size: 13px; color: var(--color-dark-muted);">Cargando imágenes...</p>';
@@ -1152,13 +1154,32 @@
         return;
       }
 
-      grid.innerHTML = files.map(f => `
-        <div class="image-card">
-          <img src="${f.download_url}" alt="${f.name}" />
-          <div style="position: absolute; bottom: 0; inset-x: 0; background: rgba(0,0,0,0.7); color: #fff; font-size: 10px; padding: 4px; text-align: center; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">${f.name}</div>
-          ${f.sha ? `<button class="image-card-del" onclick="deletePostImage('${slug}', '${f.name}', '${f.sha}')">✕</button>` : ''}
-        </div>
-      `).join('');
+      grid.innerHTML = files.map((f, idx) => {
+        const assignedTag = imageTagsState[f.name] || (idx === 0 ? 'portada' : `cuerpo-${idx}`);
+        imageTagsState[f.name] = assignedTag;
+
+        return `
+          <div class="image-card" style="height: auto; padding-bottom: 8px;">
+            <img src="${f.download_url}" alt="${f.name}" style="height: 140px; object-fit: cover;" />
+            <div style="padding: 6px;">
+              <div style="font-size: 10px; font-weight: 600; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; margin-bottom: 4px;">${f.name}</div>
+              <label style="font-size: 10px; font-weight: 600; color: var(--color-accent);">🏷️ Asignar Posición:</label>
+              <select class="input-field" style="font-size: 11px; padding: 4px; margin-top: 2px; margin-bottom: 0;" onchange="assignTagToImage('${f.name}', this.value)">
+                <option value="portada" ${assignedTag === 'portada' ? 'selected' : ''}>🖼️ Portada Principal (16:9)</option>
+                <option value="cuerpo-1" ${assignedTag === 'cuerpo-1' ? 'selected' : ''}>📷 Cuerpo #1 (Sección 1)</option>
+                <option value="cuerpo-2" ${assignedTag === 'cuerpo-2' ? 'selected' : ''}>📷 Cuerpo #2 (Sección 2)</option>
+                <option value="cuerpo-3" ${assignedTag === 'cuerpo-3' ? 'selected' : ''}>📷 Cuerpo #3 (Sección 3)</option>
+              </select>
+            </div>
+            ${f.sha ? `<button class="image-card-del" onclick="deletePostImage('${slug}', '${f.name}', '${f.sha}')">✕</button>` : ''}
+          </div>
+        `;
+      }).join('');
+    }
+
+    function assignTagToImage(fileName, tagValue) {
+      imageTagsState[fileName] = tagValue;
+      showToast(`Posición de ${fileName} actualizada a: ${tagValue}`);
     }
 
     async function uploadImageToPost(input) {
@@ -1187,14 +1208,21 @@
       const path = `assets/imagenes/blog/${activeModalPost.meta.slug}/${cleanName}`;
 
       try {
+        const existingFile = await ghFetch(`contents/${path}`).catch(() => null);
+        const bodyPayload = {
+          message: `Upload ${cleanName} to ${activeModalPost.meta.slug}`,
+          content: webpBase64,
+          branch: BRANCH
+        };
+        if (existingFile && existingFile.sha) {
+          bodyPayload.sha = existingFile.sha;
+        }
+
         await ghFetch(`contents/${path}`, {
           method: 'PUT',
-          body: JSON.stringify({
-            message: `Upload ${cleanName} to ${activeModalPost.meta.slug}`,
-            content: webpBase64,
-            branch: BRANCH
-          })
+          body: JSON.stringify(bodyPayload)
         });
+
         showToast('¡Imagen subida y convertida a .webp automáticamente con éxito!');
         loadPostImages(activeModalPost.meta.slug);
       } catch (err) {
@@ -1226,7 +1254,7 @@
       if (!ghToken) return alert('🔑 Para guardar y publicar cambios necesitás ingresar con tu Personal Access Token.');
 
       const slug = activeModalPost.meta.slug;
-      showToast('✨ Asignando imágenes subidas a los espacios del artículo...');
+      showToast('✨ Asignando imágenes a la portada y al texto del artículo...');
 
       try {
         const files = await ghFetch(`contents/assets/imagenes/blog/${slug}`).catch(() => []);
@@ -1236,23 +1264,34 @@
           return alert('No hay imágenes subidas todavía en esta carpeta. Subí al menos una imagen primero.');
         }
 
-        const sortedPaths = webpFiles.map(f => `/${f.path}`);
-        const meta = { ...activeModalPost.meta, media: sortedPaths };
+        let portadaFile = webpFiles.find(f => imageTagsState[f.name] === 'portada') || webpFiles[0];
+        let bodyFiles = webpFiles.filter(f => f.name !== portadaFile.name);
 
-        const fullMarkdown = dumpMarkdownPost(meta, activeModalPost.body);
+        const mediaPaths = [`/${portadaFile.path}`, ...bodyFiles.map(f => `/${f.path}`)];
+        const meta = { ...activeModalPost.meta, media: mediaPaths };
+
+        let updatedBody = activeModalPost.body;
+        bodyFiles.forEach((bFile, idx) => {
+          const imgMarkdown = `\n\n![Ilustración científica / Figura #${idx + 1}](/${bFile.path})\n\n`;
+          if (!updatedBody.includes(bFile.path)) {
+            updatedBody += imgMarkdown;
+          }
+        });
+
+        const fullMarkdown = dumpMarkdownPost(meta, updatedBody);
         const encodedContent = btoa(unescape(encodeURIComponent(fullMarkdown)));
 
         await ghFetch(`contents/blog/posts/es-ar/${slug}.md`, {
           method: 'PUT',
           body: JSON.stringify({
-            message: `Assign uploaded images to post ${slug}`,
+            message: `Apply tagged images to post ${slug}`,
             content: encodedContent,
             sha: activeModalPost.sha,
             branch: BRANCH
           })
         });
 
-        showToast('🎉 ¡Imágenes aplicadas con éxito al artículo!');
+        showToast('🎉 ¡Imágenes aplicadas con éxito a la portada y al artículo!');
         await loadArticles();
         closeModal('modal-images');
       } catch (err) {
