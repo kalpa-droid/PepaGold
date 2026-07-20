@@ -1,7 +1,8 @@
 ---
 article_id: PG-001
 title: 'A Ciência da Barreira Cutânea: O Que É, Como Se Danifica e Como Reparar'
-description: Descubra exatamente o que é a barreira cutânea e o microbioma da pele. Aprenda a identificar os sintomas de danos e os métodos científicos para restaurá-la.
+description: Descubra exatamente o que é a barreira cutânea e o microbioma da pele.
+  Aprenda a identificar os sintomas de danos e os métodos científicos para restaurá-la.
 slug: ciencia-barrera-cutanea-microbioma
 date: 2026-07-17
 date_created: 2026-07-17
@@ -12,26 +13,50 @@ category_label: Ciência & Pele
 concept: barrera-cutanea-y-microbioma
 local_phenomenon: Calor Úmido e Sol Intenso
 region_label: São Paulo, Brasil
-media:
-  - /assets/imagenes/blog/anatomia_img_1.png
+media: []
 author: PepaGold
 epigraph:
-  text: "A pele não precisa de mais produtos; precisa que você a deixe se defender."
-  author: "Dra. PepaGold"
+  text: A pele não precisa de mais produtos; precisa que você a deixe se defender.
+  author: Dra. PepaGold
 summary:
-  - "A barreira cutânea é uma matriz lipídica de ceramidas, colesterol e ácidos graxos que retém água e bloqueia bactérias."
-  - "O manto ácido (pH 4.5-5.5) e o microbioma são sua primeira linha de defesa imunológica contra patógenos."
-  - "O calor úmido, ar-condicionado constante, sulfatos e esfoliação excessiva aceleram a perda de água e geram microfissuras."
-  - "A reparação exige higienização atraumática sem fricção, ceramidas biomiméticas (proporção 3:1:1) e prebióticos."
+- A barreira cutânea é uma matriz lipídica de ceramidas, colesterol e ácidos graxos
+  que retém água e bloqueia bactérias.
+- O manto ácido (pH 4.5-5.5) e o microbioma são sua primeira linha de defesa imunológica
+  contra patógenos.
+- O calor úmido, ar-condicionado constante, sulfatos e esfoliação excessiva aceleram
+  a perda de água e geram microfissuras.
+- A reparação exige higienização atraumática sem fricção, ceramidas biomiméticas (proporção
+  3:1:1) e prebióticos.
 faq:
-  - q: "Quanto tempo leva para reparar uma barreira cutânea danificada?"
-    a: "O ciclo de renovação celular dura entre 14 e 28 dias. Ao suspender higienizadores agressivos e usar ceramidas biomiméticas, você sentirá alívio em 3 a 5 dias e recuperação completa em 4 semanas."
-  - q: "Por que meu rosto arde ao aplicar creme hidratante?"
-    a: "O ardor é o sintoma #1 de microfissuras no estrato córneo. Sem o cimento lipídico e o manto ácido, o creme entra em contato direto com terminações nervosas expostas."
+- q: Quanto tempo leva para reparar uma barreira cutânea danificada?
+  a: O ciclo de renovação celular dura entre 14 e 28 dias. Ao suspender higienizadores
+    agressivos e usar ceramidas biomiméticas, você sentirá alívio em 3 a 5 dias e
+    recuperação completa em 4 semanas.
+- q: Por que meu rosto arde ao aplicar creme hidratante?
+  a: 'O ardor é o sintoma #1 de microfissuras no estrato córneo. Sem o cimento lipídico
+    e o manto ácido, o creme entra em contato direto com terminações nervosas expostas.'
 related: []
 image_prompts:
-  - cover: "Warm Minimalist aesthetic illustration of a microscopic skin barrier, showing corneocytes as soft-toned bricks and lipid matrix in dusty rose (#D48C90) and sand (#FAF6F5) colors, 1200x630px."
-  - body: "Detailed scientific diagram of skin microbiome showing beneficial bacteria protecting the acid mantle, clean minimalist aesthetic, 1080x1080px."
+- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+
+  Ultra-high resolution 8K commercial skincare studio photograph. Extreme macro close-up
+  of healthy, hydrated human skin texture showing radiant natural dewiness, microscopic
+  lipid glow, and fine refined pores. Aesthetic palette dominated by warm dusty rose
+  (#D48C90), soft nude beige, and neutral ivory clay. Soft diffused studio lighting
+  with a subtle backlight creating a silky glow. Professional editorial beauty photography
+  shot on Hasselblad 100MP with 120mm macro lens, shallow depth of field (f/2.8).
+  Completely clean composition. NO text, NO numbers, NO watermarks, NO brand logos,
+  NO graphic overlays.'
+- '📸 PROMPT #2 - DIAGRAMA CIENTÍFICO CUERPO (1080x1080px - Aspect Ratio 1:1):
+
+  Clean isometric 3D medical graphic illustration depicting the stratum corneum skin
+  barrier architecture ("brick-and-mortar" model). Corneocyte keratin bricks neatly
+  stacked with a translucent lipid matrix (ceramides, cholesterol, free fatty acids)
+  acting as glowing golden mortar between them. Soft warm minimalist visual style
+  using a color palette of muted dusty rose (#D48C90), cream, and nude. Soft ambient
+  occlusion shadows, ultra-sharp edge definition, studio product visualization lighting.
+  Pure scientific graphic design, completely clean aesthetic. NO embedded text labels,
+  NO numbers, NO arrows, NO watermarks.'
 show_science_link: true
 ---
 
@@ -111,5 +136,3 @@ Q: Qual é o sintoma mais claro de que sua barreira cutânea perdeu seu cimento 
 
 **Resposta:** É um mito! A acne é frequentemente sintoma de uma barreira danificada. Ao lavar em excesso, você elimina ceramidas e a flora protetora. A pele reage produzindo o DOBRO de sebo para se defender.
 :::
-
-![](/assets/imagenes/blog/anatomia_img_1.png)

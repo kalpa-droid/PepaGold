@@ -1147,10 +1147,8 @@
       }
 
       if (!files || !files.length) {
-        files = [
-          { name: 'barrera_cutanea_1.webp', download_url: `/assets/imagenes/blog/${slug}/barrera_cutanea_1.webp`, path: `assets/imagenes/blog/${slug}/barrera_cutanea_1.webp` },
-          { name: 'barrera_cutanea_2.webp', download_url: `/assets/imagenes/blog/${slug}/barrera_cutanea_2.webp`, path: `assets/imagenes/blog/${slug}/barrera_cutanea_2.webp` }
-        ];
+        grid.innerHTML = '<p style="font-size: 13px; color: var(--color-dark-muted); grid-column: 1/-1; text-align: center; padding: 30px;">📷 No hay imágenes cargadas todavía.<br><span style="font-size: 12px; opacity: 0.8;">Copiá el prompt desde <b>📋 Prompts e Indicaciones</b>, generá la foto y subila con <b>➕ Subir Imagen (Auto WebP)</b>.</span></p>';
+        return;
       }
 
       grid.innerHTML = files.map(f => `
@@ -1222,26 +1220,31 @@
       }
     }
 
-    // Image Prompts Modal with Paper Banana AI Regenerator
+    // Image Prompts Modal (Ultra-Detailed Prompts for External AI Generators)
     function openImagePromptsModal() {
       if (!activeModalPost) return;
+      const title = activeModalPost.meta.title || 'Artículo PepaGold';
+      const category = activeModalPost.meta.category_label || 'Skincare';
+
       const prompts = activeModalPost.meta.image_prompts || [
-        `📸 Portada (1200x630px): Estilo Warm Minimalist para "${activeModalPost.meta.title}". Paleta rosa empolvado (#D48C90) y arena.`,
-        `📸 Cuerpo (1080x1080px): Ilustración científica clara con etiquetas numéricas 1, 2, 3.`
+        `📸 PORTADA (1200x630px - 16:9):\nHigh-end editorial studio photograph for luxury skincare blog article titled "${title}". Warm minimalist aesthetic with dusty rose (#D48C90) and soft ivory clay tones. Clean macro lighting, soft depth of field, photorealistic 8K resolution, elegant organic texture. No text, no logos, no watermarks.`,
+        `📸 CUERPO (1080x1080px - 1:1):\nClean 3D scientific dermatological diagram illustrating stratum corneum brick-and-mortar skin barrier structure. Warm aesthetic, soft dusty rose (#D48C90) and nude lipid matrix layer, isometric view, crystal clear medical illustration style. Ultra sharp details, studio lighting. No embedded text labels.`
       ];
 
       const html = `
         <div style="font-size: 14px; color: var(--color-dark-muted); line-height: 1.6;">
-          <div style="margin-bottom: 14px; background: var(--bg-accent-light); padding: 12px; border-radius: 10px; border: 1px solid var(--border-color);">
-            <label style="font-size: 11px; font-weight: 600; color: var(--color-accent); text-transform: uppercase;">Servidor Local Paper Banana:</label>
-            <input type="text" id="pb-server-url" class="input-field" style="margin-top: 4px; margin-bottom: 0; font-size: 12px;" value="http://localhost:7860" />
+          <div style="margin-bottom: 16px; background: var(--bg-accent-light); padding: 14px; border-radius: 12px; border: 1px solid var(--border-color);">
+            <div style="font-weight: 600; color: var(--color-dark); margin-bottom: 4px;">🎨 Prompts Ultra-Detallados para Generadores de IA</div>
+            <div style="font-size: 12px;">Copiá cualquiera de estos prompts y pegalo en tu generador de imágenes preferido (Midjourney, DALL-E 3, Imagen 3, ChatGPT). Luego subí la imagen con el botón <b>➕ Subir Imagen (Auto WebP)</b>.</div>
           </div>
-          <p style="margin-bottom: 14px;">Prompts e indicaciones de imágenes generados por la IA para este artículo:</p>
           ${prompts.map((p, idx) => `
-            <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; padding: 14px; margin-bottom: 12px;">
-              <div style="font-weight: 600; color: var(--color-dark); margin-bottom: 8px;">${p}</div>
-              <button class="btn btn-secondary btn-sm" onclick="regenerateWithPaperBanana('${activeModalPost.meta.slug}', ${idx}, '${encodeURIComponent(p)}')">
-                🔄 Regenerar con Paper Banana (IA)
+            <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; padding: 16px; margin-bottom: 14px;">
+              <div style="font-size: 11px; font-weight: 700; color: var(--color-accent); text-transform: uppercase; margin-bottom: 6px;">
+                ${idx === 0 ? '🖼️ Prompt #1: Imagen de Portada (1200x630)' : `📷 Prompt #${idx + 1}: Imagen de Cuerpo (${idx + 1})`}
+              </div>
+              <textarea id="prompt-text-${idx}" readonly class="input-field" style="font-size: 12px; font-family: monospace; line-height: 1.5; height: 110px; background: var(--bg-primary); margin-bottom: 10px; cursor: text;">${p}</textarea>
+              <button class="btn btn-primary btn-sm" onclick="copyPromptToClipboard(${idx})">
+                📋 Copiar Prompt #${idx + 1}
               </button>
             </div>
           `).join('')}
@@ -1251,23 +1254,12 @@
       openModal('modal-prompts');
     }
 
-    async function regenerateWithPaperBanana(slug, promptIdx, promptEnc) {
-      const prompt = decodeURIComponent(promptEnc);
-      const serverUrl = document.getElementById('pb-server-url').value.trim() || 'http://localhost:7860';
-      showToast('🎨 Solicitando generación a Paper Banana...');
-
-      try {
-        const response = await fetch(`${serverUrl}/api/predict`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ data: [prompt, "", 1, 1024, 1024, 25, 7.5, 42], fn_index: 4 })
-        }).catch(() => null);
-
-        showToast('¡Respuesta recibida de Paper Banana! Procesando WebP...');
-        loadPostImages(slug);
-      } catch (err) {
-        showToast('Servidor local Paper Banana no respondió en ' + serverUrl);
-      }
+    function copyPromptToClipboard(idx) {
+      const el = document.getElementById(`prompt-text-${idx}`);
+      if (!el) return;
+      el.select();
+      navigator.clipboard.writeText(el.value);
+      showToast(`¡Prompt #${idx + 1} copiado al portapapeles!`);
     }
 
     // Insert Image Modal for Editor

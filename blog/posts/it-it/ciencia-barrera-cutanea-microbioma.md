@@ -1,7 +1,8 @@
 ---
 article_id: PG-001
 title: 'La Scienza della Barriera Cutanea: Cos’è, Come si Danneggia e Come Ripararla'
-description: Scopri esattamente cos’è la barriera cutanea e il microbioma della pelle. Impara a identificare i sintomi di danno e i metodi scientifici per ripristinarla.
+description: Scopri esattamente cos’è la barriera cutanea e il microbioma della pelle.
+  Impara a identificare i sintomi di danno e i metodi scientifici per ripristinarla.
 slug: ciencia-barrera-cutanea-microbioma
 date: 2026-07-17
 date_created: 2026-07-17
@@ -12,26 +13,50 @@ category_label: Scienza della Pelle
 concept: barrera-cutanea-y-microbioma
 local_phenomenon: Sole Mediterraneo e Vento Secco
 region_label: Roma, Italia
-media:
-  - /assets/imagenes/blog/anatomia_img_1.png
+media: []
 author: PepaGold
 epigraph:
-  text: "La pelle non ha bisogno di più prodotti; ha bisogno che la lasci difendersi."
-  author: "Dra. PepaGold"
+  text: La pelle non ha bisogno di più prodotti; ha bisogno che la lasci difendersi.
+  author: Dra. PepaGold
 summary:
-  - "La barriera cutanea è una matrice di ceramidi, colesterolo e acidi grassi che trattiene l'acqua e blocca i batteri."
-  - "Il mantello acido (pH 4.5-5.5) e il microbioma sono la tua prima linea di difesa immunologica."
-  - "Il sole mediterraneo, il vento secco e l'esfoliazione eccessiva evaporano l'idratazione e creano microfessure."
-  - "La riparazione richiede un'igiene atraumatica senza attrito, ceramidi biomimetiche (rapporto 3:1:1) e prebiotici."
+- La barriera cutanea è una matrice di ceramidi, colesterolo e acidi grassi che trattiene
+  l'acqua e blocca i batteri.
+- Il mantello acido (pH 4.5-5.5) e il microbioma sono la tua prima linea di difesa
+  immunologica.
+- Il sole mediterraneo, il vento secco e l'esfoliazione eccessiva evaporano l'idratazione
+  e creano microfessure.
+- La riparazione richiede un'igiene atraumatica senza attrito, ceramidi biomimetiche
+  (rapporto 3:1:1) e prebiotici.
 faq:
-  - q: "Quanto tempo ci vuole per riparare una barriera cutanea danneggiata?"
-    a: "Il ciclo di rinnovamento cellulare dura da 14 a 28 giorni. Eliminando i detergenti aggressivi e usando ceramidi biomimetiche noterai sollievo in 3-5 giorni e riparazione completa in 4 settimane."
-  - q: "Perché il viso brucia quando applico la crema idratante?"
-    a: "Il bruciore è il sintomo n. 1 di microfessure nello strato corneo. Senza cemento lipidico né mantello acido, la crema entra in contatto diretto con i nervi esposti."
+- q: Quanto tempo ci vuole per riparare una barriera cutanea danneggiata?
+  a: Il ciclo di rinnovamento cellulare dura da 14 a 28 giorni. Eliminando i detergenti
+    aggressivi e usando ceramidi biomimetiche noterai sollievo in 3-5 giorni e riparazione
+    completa in 4 settimane.
+- q: Perché il viso brucia quando applico la crema idratante?
+  a: Il bruciore è il sintomo n. 1 di microfessure nello strato corneo. Senza cemento
+    lipidico né mantello acido, la crema entra in contatto diretto con i nervi esposti.
 related: []
 image_prompts:
-  - cover: "Warm Minimalist aesthetic illustration of a microscopic skin barrier, showing corneocytes as soft-toned bricks and lipid matrix in dusty rose (#D48C90) and sand (#FAF6F5) colors, 1200x630px."
-  - body: "Detailed scientific diagram of skin microbiome showing beneficial bacteria protecting the acid mantle, clean minimalist aesthetic, 1080x1080px."
+- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+
+  Ultra-high resolution 8K commercial skincare studio photograph. Extreme macro close-up
+  of healthy, hydrated human skin texture showing radiant natural dewiness, microscopic
+  lipid glow, and fine refined pores. Aesthetic palette dominated by warm dusty rose
+  (#D48C90), soft nude beige, and neutral ivory clay. Soft diffused studio lighting
+  with a subtle backlight creating a silky glow. Professional editorial beauty photography
+  shot on Hasselblad 100MP with 120mm macro lens, shallow depth of field (f/2.8).
+  Completely clean composition. NO text, NO numbers, NO watermarks, NO brand logos,
+  NO graphic overlays.'
+- '📸 PROMPT #2 - DIAGRAMA CIENTÍFICO CUERPO (1080x1080px - Aspect Ratio 1:1):
+
+  Clean isometric 3D medical graphic illustration depicting the stratum corneum skin
+  barrier architecture ("brick-and-mortar" model). Corneocyte keratin bricks neatly
+  stacked with a translucent lipid matrix (ceramides, cholesterol, free fatty acids)
+  acting as glowing golden mortar between them. Soft warm minimalist visual style
+  using a color palette of muted dusty rose (#D48C90), cream, and nude. Soft ambient
+  occlusion shadows, ultra-sharp edge definition, studio product visualization lighting.
+  Pure scientific graphic design, completely clean aesthetic. NO embedded text labels,
+  NO numbers, NO arrows, NO watermarks.'
 show_science_link: true
 ---
 
@@ -111,5 +136,3 @@ Q: Qual è il sintomo più evidente che la tua barriera cutanea ha perso il suo 
 
 **Risposta:** È un mito! L'acne è spesso sintomo di una barriera danneggiata. Lavandoti in eccesso elimini le ceramidi e i batteri protettivi. La pelle reagisce producendo il DOPPIO del sebo per difendersi.
 :::
-
-![](/assets/imagenes/blog/anatomia_img_1.png)

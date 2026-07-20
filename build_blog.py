@@ -458,9 +458,7 @@ ARTICLE_TEMPLATE = BRAND_HEAD + """<body>
   {epigraph_html}
   {summary_html}
   
-  <div class="hero-image-placeholder">
-    {media_html}
-  </div>
+  {media_html}
   
   {toc_html}
   
@@ -761,11 +759,23 @@ def render_article(meta, body_md, hreflang_tags, lookup):
     home_url = f"/{base}" if folder else "/"
     blog_index_url = f"/{base}blog/"
     
-    media = meta.get("media", [])
-    if not media and meta.get("cover_image"):
-        media = [meta.get("cover_image")]
-    cover_abs = f"{SITE_URL}{media[0]}" if media and isinstance(media[0], str) else f"{SITE_URL}/assets/imagenes/icono.svg"
-    media_html = render_media(media)
+    raw_media = meta.get("media", [])
+    if not raw_media and meta.get("cover_image"):
+        raw_media = [meta.get("cover_image")]
+
+    valid_media = []
+    for m in raw_media:
+        if isinstance(m, str):
+            clean_p = m.lstrip("/")
+            if os.path.exists(clean_p):
+                valid_media.append(m)
+
+    cover_abs = f"{SITE_URL}{valid_media[0]}" if valid_media else f"{SITE_URL}/assets/imagenes/icono.svg"
+    if valid_media:
+        media_gallery = render_media(valid_media)
+        media_html = f'<div class="hero-image-placeholder">{media_gallery}</div>'
+    else:
+        media_html = ""
     
     region_tag_html = f'<span class="region-tag">{meta["region_label"]}</span><br>' if meta.get("region_label") else ""
 
