@@ -32,6 +32,12 @@ Cuando el usuario te pase un texto crudo, ejecuta estos pasos obligatoriamente:
    - `epigraph`: Inventa o elige una cita inspiradora relacionada al tema y añade un autor.
    - `related`: Analiza el repositorio de posts y enlaza slugs relacionados.
 
+5. **GENERACIÓN DE PROMPTS DE IMÁGENES DETALLADOS (`image_prompts`):**
+   - Agrega en el frontmatter del artículo una lista en `image_prompts` describiendo minuciosamente cada imagen necesaria:
+     - **Portada (1200x630px):** Concepto visual, composición, estilo Warm Minimalist (rosa empolvado, arena, neutros), iluminación y foco.
+     - **Imágenes de Cuerpo (1080x1080px o 1080x1350px):** Descripción del elemento a graficar (ej. corte microscópico de piel, microbioma, rutina de uso) y la sección exacta donde debe ir.
+   - Estos prompts son visualizados por el usuario en el botón `📋 Prompt de Imágenes` del Panel de Administración.
+
 ## Paso 2: Generación Automática de Múltiples Idiomas
 Inmediatamente después de crear el artículo base (o cuando el usuario lo pida), debes generar los archivos `.md` para las regiones clave (ej. EE.UU., México, España).
 - Adapta el "Fenómeno Local" (`local_phenomenon`): "Santa Ana Winds" (US), "Contaminación CDMX" (MX), "Frío Peninsular" (ES).
