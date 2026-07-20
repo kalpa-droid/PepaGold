@@ -49,7 +49,7 @@ CATEGORY_LABELS_DEFAULT = {
 # BLOQUES INTERACTIVOS (Tip, Stat, Checklist, Quiz)
 # =========================================================================
 
-BLOCK_RE = re.compile(r"^:::(tip|info|stat|checklist|quiz)(?:[ \t]+([^\n]*))?\n(.*?)\n:::[ \t]*$", re.M | re.S)
+BLOCK_RE = re.compile(r"^:::(tip|info|stat|checklist|quiz|funfact)(?:[ \t]+([^\n]*))?\n(.*?)\n:::[ \t]*$", re.M | re.S)
 _inline_md = markdown.Markdown(extensions=["extra"])
 
 def _inline(text):
@@ -66,6 +66,15 @@ def render_tip_or_info(kind, title, content):
     return (
         f'<div class="callout callout-{kind}">'
         f'<p class="callout-title">{icon} {label}</p>'
+        f'<div class="callout-body">{body}</div></div>'
+    )
+
+def render_funfact(title, content):
+    label = title or "Dato Curioso"
+    body = markdown.markdown(content.strip(), extensions=["extra", "sane_lists"])
+    return (
+        f'<div class="callout callout-funfact">'
+        f'<p class="callout-title">🤯 {label}</p>'
         f'<div class="callout-body">{body}</div></div>'
     )
 
@@ -126,6 +135,7 @@ def preprocess_custom_blocks(md_text, slug):
         counter["n"] += 1
         bid = f"{slug}-{counter['n']}"
         if kind in ("tip", "info"): return render_tip_or_info(kind, title, content)
+        if kind == "funfact": return render_funfact(title, content)
         if kind == "stat": return render_stat(content)
         if kind == "checklist": return render_checklist(title, content, bid)
         if kind == "quiz": return render_quiz(title, content, bid)
@@ -166,6 +176,7 @@ BRAND_HEAD = """<!DOCTYPE html>
 <meta name="description" content="{description}">
 <link rel="canonical" href="{canonical}">
 <link rel="icon" type="image/svg+xml" href="/assets/imagenes/icono.svg" />
+<link rel="manifest" href="/manifest.json" />
 <meta property="og:type" content="article">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{description}">
@@ -253,6 +264,7 @@ BRAND_HEAD = """<!DOCTYPE html>
   .callout-body p {{ margin-bottom:8px; color:var(--color-dark-muted); }}
   .callout-tip {{ background:var(--bg-accent-light); border:1px solid var(--border-color); }}
   .callout-info {{ background:var(--bg-secondary); border-left:4px solid var(--color-accent); }}
+  .callout-funfact {{ background:#FFF9E6; border:1px solid #FFE082; border-left:4px solid #FFB300; }}
   
   .stat-box {{ text-align:center; background:var(--color-dark); color:#fff; padding:34px 20px; }}
   .stat-number {{ font-family:Georgia,serif; font-size:2.4rem; margin-bottom:6px; }}
@@ -385,6 +397,13 @@ ARTICLE_TEMPLATE = BRAND_HEAD + """<body>
       btn.classList.add('incorrect');
       box.querySelectorAll('.quiz-option[data-correct="1"]').forEach(function(b){{ b.classList.add('correct'); }});
     }}
+  }}
+
+  // Service Worker PWA
+  if ('serviceWorker' in navigator) {{
+    window.addEventListener('load', function() {{
+      navigator.serviceWorker.register('/sw.js').catch(function(){{}});
+    }});
   }}
 </script>
 </body>

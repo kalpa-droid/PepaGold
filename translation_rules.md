@@ -7,7 +7,20 @@ Este archivo dicta cómo la IA debe adaptar los artículos del blog a diferentes
 - **Voz de la Marca:** Profesional pero cercana, científica pero fácil de entender, empática.
 - **Conceptos Clave:** Siempre enfatiza que cuidar la barrera cutánea ahorra dinero y protege el medio ambiente a largo plazo.
 
-## Reglas por Región (Idiomas)
+## 🌍 Regla de Equivalencia y Fallback Genérico Universal (OBLIGATORIO)
+
+Al adaptar un concepto o fenómeno local a otra región (ej. de Argentina a China, Alemania o EE.UU.):
+1. **Buscar Equivalente Directo:** Intenta usar un fenómeno conocido de esa cultura/región (ej: Viento Zonda -> Santa Ana Winds en US).
+2. **Fallback Genérico Universal:** Si en la región de destino **NO existe** un fenómeno o concepto equivalente (ej. si en China no hay un fenómeno equivalente al Viento Zonda), **NUNCA** dejes el término original descontextualizado. En su lugar, reemplázalo por el **término genérico universal** que aplique a cualquier parte del mundo.
+
+### Ejemplos de Adaptación vs Fallback Genérico:
+| Concepto Base (AR) | Con Equivalente (US) | Sin Equivalente → Genérico Universal (ZH / DE) |
+|---|---|---|
+| Viento Zonda (clima seco/cálido) | Santa Ana Winds | 干燥强风 / Viento seco y fuerte |
+| Frío de la Cordillera | Northeast Blizzard | Invierno frío y seco / 寒冷气候 |
+| Mate (hábito cotidiano) | Coffee break | Bebida cotidiana / 日常饮品 |
+
+---
 
 ### 🇪🇸 España (es)
 - **Tono:** Cercano, uso de "vosotros" o "tú" (preferiblemente "tú" para mantenerlo personal pero profesional).

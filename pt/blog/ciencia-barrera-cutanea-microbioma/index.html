@@ -7,6 +7,7 @@
 <meta name="description" content="Descubra o que é exatamente a barreira cutânea e o microbioma da pele. Aprenda a identificar os sintomas de dano e os melhores métodos científicos para restaurá-la.">
 <link rel="canonical" href="https://pepagold.blog/pt/blog/ciencia-barrera-cutanea-microbioma/">
 <link rel="icon" type="image/svg+xml" href="/assets/imagenes/icono.svg" />
+<link rel="manifest" href="/manifest.json" />
 <meta property="og:type" content="article">
 <meta property="og:title" content="A Ciência da Barreira Cutânea: O Que É, Como É Danificada e Como Reparar">
 <meta property="og:description" content="Descubra o que é exatamente a barreira cutânea e o microbioma da pele. Aprenda a identificar os sintomas de dano e os melhores métodos científicos para restaurá-la.">
@@ -103,6 +104,7 @@
   .callout-body p { margin-bottom:8px; color:var(--color-dark-muted); }
   .callout-tip { background:var(--bg-accent-light); border:1px solid var(--border-color); }
   .callout-info { background:var(--bg-secondary); border-left:4px solid var(--color-accent); }
+  .callout-funfact { background:#FFF9E6; border:1px solid #FFE082; border-left:4px solid #FFB300; }
   
   .stat-box { text-align:center; background:var(--color-dark); color:#fff; padding:34px 20px; }
   .stat-number { font-family:Georgia,serif; font-size:2.4rem; margin-bottom:6px; }
@@ -298,6 +300,13 @@ A disbiose ocorre quando você destrói seu microbioma (ex: lavando-se em excess
       btn.classList.add('incorrect');
       box.querySelectorAll('.quiz-option[data-correct="1"]').forEach(function(b){ b.classList.add('correct'); });
     }
+  }
+
+  // Service Worker PWA
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js').catch(function(){});
+    });
   }
 </script>
 </body>

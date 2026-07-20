@@ -7,6 +7,7 @@
 <meta name="description" content="Discover exactly what the skin barrier and skin microbiome are. Learn to identify the symptoms of damage and the best scientific methods to restore it.">
 <link rel="canonical" href="https://pepagold.blog/us/blog/ciencia-barrera-cutanea-microbioma/">
 <link rel="icon" type="image/svg+xml" href="/assets/imagenes/icono.svg" />
+<link rel="manifest" href="/manifest.json" />
 <meta property="og:type" content="article">
 <meta property="og:title" content="The Science of the Skin Barrier: What It Is, How It Gets Damaged, and How to Repair It">
 <meta property="og:description" content="Discover exactly what the skin barrier and skin microbiome are. Learn to identify the symptoms of damage and the best scientific methods to restore it.">
@@ -103,6 +104,7 @@
   .callout-body p { margin-bottom:8px; color:var(--color-dark-muted); }
   .callout-tip { background:var(--bg-accent-light); border:1px solid var(--border-color); }
   .callout-info { background:var(--bg-secondary); border-left:4px solid var(--color-accent); }
+  .callout-funfact { background:#FFF9E6; border:1px solid #FFE082; border-left:4px solid #FFB300; }
   
   .stat-box { text-align:center; background:var(--color-dark); color:#fff; padding:34px 20px; }
   .stat-number { font-family:Georgia,serif; font-size:2.4rem; margin-bottom:6px; }
@@ -295,6 +297,13 @@ Dysbiosis occurs when you destroy your microbiome (e.g., by over-washing or usin
       btn.classList.add('incorrect');
       box.querySelectorAll('.quiz-option[data-correct="1"]').forEach(function(b){ b.classList.add('correct'); });
     }
+  }
+
+  // Service Worker PWA
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js').catch(function(){});
+    });
   }
 </script>
 </body>

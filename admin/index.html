@@ -898,7 +898,7 @@
 
       const filtered = articlesList.filter(a => {
         const matchCat = activeCategory === 'all' || a.meta.category === activeCategory;
-        const matchSearch = !searchVal || (a.meta.title && a.meta.title.toLowerCase().includes(searchVal)) || (a.meta.slug && a.meta.slug.toLowerCase().includes(searchVal));
+        const matchSearch = !searchVal || (a.meta.title && a.meta.title.toLowerCase().includes(searchVal)) || (a.meta.slug && a.meta.slug.toLowerCase().includes(searchVal)) || (a.meta.article_id && a.meta.article_id.toLowerCase().includes(searchVal));
         return matchCat && matchSearch;
       });
 
@@ -910,14 +910,23 @@
       grid.innerHTML = filtered.map(a => {
         const meta = a.meta;
         const catLabel = CATEGORIES[meta.category] || meta.category || 'Sin categoría';
+        const artId = meta.article_id || 'PG-000';
+        const dateCreated = meta.date_created || meta.date || 'Sin fecha';
+        const aiStatus = meta.date_ai_processed 
+          ? `<span style="color: #2E7D32; font-weight: 600;">🤖 IA: ${meta.date_ai_processed} ✅</span>`
+          : `<span style="color: #D84315; font-weight: 600;">🤖 IA: ⏳ Pendiente</span>`;
+
         return `
           <div class="post-card">
             <div>
-              <div class="post-card-tag">${catLabel}</div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="post-card-tag">${catLabel}</span>
+                <span style="font-family: monospace; font-size: 11px; background: var(--bg-secondary); padding: 2px 8px; border-radius: 6px; font-weight: 600;">${artId}</span>
+              </div>
               <h3 class="post-card-title">${meta.title || 'Sin Título'}</h3>
-              <div class="post-card-meta">
-                <span>📅 ${meta.date || 'Sin fecha'}</span>
-                <span>🔗 ${meta.slug}</span>
+              <div class="post-card-meta" style="flex-direction: column; align-items: flex-start; gap: 4px; margin-top: 8px;">
+                <span>📅 Creado: ${dateCreated}</span>
+                <span>${aiStatus}</span>
               </div>
             </div>
             <div class="post-card-actions">
@@ -977,11 +986,18 @@
       if (!slug) slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
       const existing = articlesList.find(a => a.meta.slug === currentEditingSlug);
+      const nextIdNum = articlesList.length + 1;
+      const autoArticleId = `PG-${String(nextIdNum).padStart(3, '0')}`;
+      const todayStr = new Date().toISOString().split('T')[0];
+
       const meta = existing ? { ...existing.meta } : {
+        article_id: autoArticleId,
         title,
         description: '',
         slug,
-        date: new Date().toISOString().split('T')[0],
+        date: todayStr,
+        date_created: todayStr,
+        date_ai_processed: null,
         locale: 'es-ar',
         category,
         category_label: CATEGORIES[category],
@@ -1019,7 +1035,7 @@
           body: JSON.stringify(bodyPayload)
         });
 
-        showToast('¡Artículo guardado exitosamente!');
+        showToast('¡Artículo borrador guardado exitosamente!');
         await loadArticles();
         switchView('dashboard');
       } catch (err) {
@@ -1207,58 +1223,105 @@
       showToast('Imagen insertada en el texto.');
     }
 
-    // Metadata IA Modal
-    function openMetadataModal(slug) {
+    // Metadata IA Modal (Fetches ALL 10 Locales dynamically from GitHub)
+    async function openMetadataModal(slug) {
       const art = articlesList.find(a => a.meta.slug === slug);
       if (!art) return;
 
-      const meta = art.meta;
-      const html = `
-        <div class="meta-box-row"><span class="meta-box-label">📌 Concept ID:</span><span class="meta-box-val">${meta.concept || slug}</span></div>
-        <div class="meta-box-row"><span class="meta-box-label">🔗 Slug:</span><span class="meta-box-val">${meta.slug}</span></div>
-        <div class="meta-box-row"><span class="meta-box-label">📝 Descripción:</span><span class="meta-box-val">${meta.description || 'Pendiente IA'}</span></div>
-        <div class="meta-box-row"><span class="meta-box-label">🏷️ Categoría:</span><span class="meta-box-val">${CATEGORIES[meta.category] || meta.category}</span></div>
-        <div class="meta-box-row"><span class="meta-box-label">📅 Fecha:</span><span class="meta-box-val">${meta.date}</span></div>
+      const modalContent = document.getElementById('modal-meta-content');
+      modalContent.innerHTML = '<p style="font-size: 13px;">Consultando las 10 regiones en GitHub...</p>';
+      openModal('modal-metadata');
 
-        <h4 style="margin-top: 18px; margin-bottom: 8px; font-family: var(--font-serif);">🌎 Adaptaciones por Región / Cultura</h4>
+      const meta = art.meta;
+      const localeResults = {};
+
+      for (const [code, info] of Object.entries(LOCALES)) {
+        try {
+          const fileData = await ghFetch(`contents/blog/posts/${code}/${slug}.md`).catch(() => null);
+          if (fileData) {
+            const rawContent = decodeURIComponent(escape(atob(fileData.content.replace(/\s/g, ''))));
+            const parsed = parseMarkdownPost(rawContent);
+            localeResults[code] = parsed.meta;
+          } else {
+            localeResults[code] = null;
+          }
+        } catch (e) {
+          localeResults[code] = null;
+        }
+      }
+
+      const completedLocalesCount = Object.values(localeResults).filter(m => m !== null).length;
+      const isAiFullyDone = meta.date_ai_processed && completedLocalesCount === 10;
+
+      const html = `
+        <div class="meta-box-row"><span class="meta-box-label">📋 Article ID:</span><span class="meta-box-val">${meta.article_id || 'PG-001'}</span></div>
+        <div class="meta-box-row"><span class="meta-box-label">📌 Concept ID:</span><span class="meta-box-val">${meta.concept || slug}</span></div>
+        <div class="meta-box-row"><span class="meta-box-label">🔗 Slug Base:</span><span class="meta-box-val">${meta.slug}</span></div>
+        <div class="meta-box-row"><span class="meta-box-label">📅 Creado Editor:</span><span class="meta-box-val">${meta.date_created || meta.date}</span></div>
+        <div class="meta-box-row"><span class="meta-box-label">🤖 Procesado IA:</span><span class="meta-box-val">${meta.date_ai_processed ? `✅ ${meta.date_ai_processed}` : '⏳ Pendiente'}</span></div>
+
+        <h4 style="margin-top: 18px; margin-bottom: 8px; font-family: var(--font-serif);">🌎 Adaptaciones por Región (${completedLocalesCount}/10 Idiomas)</h4>
         <div class="region-grid">
-          <div class="region-card-mini">🇦🇷 <b>AR:</b> ${meta.local_phenomenon || 'Viento Zonda'} (${meta.region_label || 'Salta'})</div>
-          <div class="region-card-mini">🇺🇸 <b>US:</b> Santa Ana Winds (United States)</div>
-          <div class="region-card-mini">🇲🇽 <b>MX:</b> Contaminación CDMX (México)</div>
-          <div class="region-card-mini">🇪🇸 <b>ES:</b> Calima y Frío Húmedo (España)</div>
+          ${Object.entries(LOCALES).map(([code, info]) => {
+            const locMeta = localeResults[code];
+            if (!locMeta) {
+              return `<div class="region-card-mini" style="opacity: 0.65;">${info.flag} <b>${info.name}:</b> ⏳ Pendiente</div>`;
+            }
+            const phenom = locMeta.local_phenomenon || 'Fenómeno Genérico';
+            const regLabel = locMeta.region_label || info.name;
+            return `<div class="region-card-mini">${info.flag} <b>${info.name}:</b> ${phenom} (${regLabel})</div>`;
+          }).join('')}
         </div>
 
-        <h4 style="margin-top: 18px; margin-bottom: 8px; font-family: var(--font-serif);">🔍 Estado SEO y Módulos</h4>
+        <h4 style="margin-top: 18px; margin-bottom: 8px; font-family: var(--font-serif);">🔍 Estado SEO y Módulos en es-ar</h4>
         <div style="font-size: 13px; line-height: 1.8;">
           <div>Summary (En 30 seg): ${meta.summary && meta.summary.length ? '✅ Completado' : '⚠️ Pendiente IA'}</div>
           <div>FAQ Schema: ${meta.faq && meta.faq.length ? `✅ ${meta.faq.length} Preguntas` : '⚠️ Pendiente IA'}</div>
           <div>Epígrafe Cita: ${meta.epigraph ? '✅ Completado' : '⚠️ Pendiente IA'}</div>
+          <div>Prompts de Imágenes: ${meta.image_prompts && meta.image_prompts.length ? `✅ ${meta.image_prompts.length} Prompts` : '⚠️ Pendiente IA'}</div>
         </div>
       `;
 
-      document.getElementById('modal-meta-content').innerHTML = html;
-      openModal('modal-metadata');
+      modalContent.innerHTML = html;
     }
 
-    // Translations Modal
-    function openTranslationsModal(slug) {
+    // Translations Modal (With Preview Buttons per Language)
+    async function openTranslationsModal(slug) {
       const art = articlesList.find(a => a.meta.slug === slug);
       if (!art) return;
 
-      const html = Object.entries(LOCALES).map(([code, info]) => `
-        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; border-bottom: 1px solid var(--border-color);">
-          <div>
-            <span>${info.flag} <b>${info.name}</b></span>
-            <span style="font-size: 11px; color: var(--color-dark-muted); margin-left: 8px;">(${code})</span>
-          </div>
-          <div>
-            ${code === 'es-ar' ? '<span class="cat-badge" style="background: var(--bg-accent-light); color: var(--color-primary);">ORIGINAL</span>' : '<span class="cat-badge">Traducido IA</span>'}
-          </div>
-        </div>
-      `).join('');
-
-      document.getElementById('modal-trans-content').innerHTML = html;
+      const modalContent = document.getElementById('modal-trans-content');
+      modalContent.innerHTML = '<p style="font-size: 13px;">Cargando idiomas desde GitHub...</p>';
       openModal('modal-translations');
+
+      const localeExistence = {};
+      for (const code of Object.keys(LOCALES)) {
+        const exists = await ghFetch(`contents/blog/posts/${code}/${slug}.md`).then(() => true).catch(() => false);
+        localeExistence[code] = exists;
+      }
+
+      const html = Object.entries(LOCALES).map(([code, info]) => {
+        const exists = localeExistence[code];
+        const folder = code === 'es-ar' ? '' : code.split('-')[1];
+        const previewUrl = folder ? `/${folder}/blog/${slug}/` : `/blog/${slug}/`;
+
+        return `
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; border-bottom: 1px solid var(--border-color);">
+            <div>
+              <span>${info.flag} <b>${info.name}</b></span>
+              <span style="font-size: 11px; color: var(--color-dark-muted); margin-left: 8px;">(${code})</span>
+            </div>
+            <div style="display: flex; gap: 8px; align-items: center;">
+              ${exists 
+                ? `<span class="cat-badge" style="background: #E8F5E9; color: #2E7D32;">✅ Listo</span>` 
+                : `<span class="cat-badge" style="background: #FFF3E0; color: #E65100;">⏳ Pendiente</span>`}
+              ${exists ? `<a href="${previewUrl}" target="_blank" class="btn btn-secondary btn-sm" style="text-decoration: none;">👁️ Ver</a>` : ''}
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      modalContent.innerHTML = html;
     }
 
     // Delete Article

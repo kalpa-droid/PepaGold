@@ -7,6 +7,7 @@
 <meta name="description" content="Découvrez ce qu''est exactement la barrière cutanée et le microbiome de la peau. Apprenez à identifier les symptômes de dommages et les meilleures méthodes scientifiques pour la restaurer.">
 <link rel="canonical" href="https://pepagold.blog/fr/blog/ciencia-barrera-cutanea-microbioma/">
 <link rel="icon" type="image/svg+xml" href="/assets/imagenes/icono.svg" />
+<link rel="manifest" href="/manifest.json" />
 <meta property="og:type" content="article">
 <meta property="og:title" content="La Science de la Barrière Cutanée : Qu'est-ce que c'est, Comment elle s'abîme et Comment la Réparer">
 <meta property="og:description" content="Découvrez ce qu''est exactement la barrière cutanée et le microbiome de la peau. Apprenez à identifier les symptômes de dommages et les meilleures méthodes scientifiques pour la restaurer.">
@@ -103,6 +104,7 @@
   .callout-body p { margin-bottom:8px; color:var(--color-dark-muted); }
   .callout-tip { background:var(--bg-accent-light); border:1px solid var(--border-color); }
   .callout-info { background:var(--bg-secondary); border-left:4px solid var(--color-accent); }
+  .callout-funfact { background:#FFF9E6; border:1px solid #FFE082; border-left:4px solid #FFB300; }
   
   .stat-box { text-align:center; background:var(--color-dark); color:#fff; padding:34px 20px; }
   .stat-number { font-family:Georgia,serif; font-size:2.4rem; margin-bottom:6px; }
@@ -297,6 +299,13 @@ La dysbiose se produit lorsque vous détruisez votre microbiome (par exemple, en
       btn.classList.add('incorrect');
       box.querySelectorAll('.quiz-option[data-correct="1"]').forEach(function(b){ b.classList.add('correct'); });
     }
+  }
+
+  // Service Worker PWA
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js').catch(function(){});
+    });
   }
 </script>
 </body>

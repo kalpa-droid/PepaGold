@@ -1,0 +1,23 @@
+{
+  "name": "PepaGold — Limpieza Facial sin Químicos",
+  "short_name": "PepaGold",
+  "description": "Set de microfibra UpPoly reutilizable para limpiar tu rostro solo con agua. Sin químicos. Dura hasta 2 años.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF6F5",
+  "theme_color": "#D48C90",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/imagenes/icono.svg",
+      "sizes": "48x48 72x72 96x96 128x128 256x256 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/imagenes/1.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    }
+  ]
+}
