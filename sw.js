@@ -1,4 +1,4 @@
-const CACHE_NAME = 'pepagold-v3';
+const CACHE_NAME = 'pepagold-v4';
 const ASSETS_TO_CACHE = [
   '/',
   '/manifest.json',
@@ -31,9 +31,14 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Fetch Event (Network-first with cache fallback)
+// Fetch Event (Network-first, bypass cache entirely for /admin)
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
+
+  if (event.request.url.includes('/admin')) {
+    event.respondWith(fetch(event.request));
+    return;
+  }
   
   event.respondWith(
     fetch(event.request)

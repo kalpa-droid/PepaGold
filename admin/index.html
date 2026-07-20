@@ -785,11 +785,22 @@
 
     // Auth & Navigation Engine
     function enterDashboard() {
-      document.getElementById('auth-screen').style.display = 'none';
-      document.getElementById('nav-tabs').style.display = 'flex';
-      document.getElementById('btn-new-article').style.display = 'inline-flex';
-      document.getElementById('btn-logout').style.display = 'inline-flex';
-      document.getElementById('dashboard-view').style.display = 'flex';
+      console.log('🚀 enterDashboard ejecutado');
+      const authScreen = document.getElementById('auth-screen');
+      const navTabs = document.getElementById('nav-tabs');
+      const btnNew = document.getElementById('btn-new-article');
+      const btnLogout = document.getElementById('btn-logout');
+      const dashView = document.getElementById('dashboard-view');
+
+      if (authScreen) authScreen.style.setProperty('display', 'none', 'important');
+      if (navTabs) navTabs.style.display = 'flex';
+      if (btnNew) btnNew.style.display = 'inline-flex';
+      if (btnLogout) btnLogout.style.display = 'inline-flex';
+      if (dashView) dashView.style.display = 'flex';
+
+      const grid = document.getElementById('articles-grid');
+      if (grid) grid.innerHTML = '<p style="color: var(--color-dark-muted); grid-column: 1/-1; text-align: center; padding: 40px;">⏳ Cargando artículos de PepaGold...</p>';
+
       loadArticles();
     }
 
@@ -797,8 +808,10 @@
       if (ghToken) {
         enterDashboard();
       } else {
-        document.getElementById('auth-screen').style.display = 'block';
-        document.getElementById('dashboard-view').style.display = 'none';
+        const authScreen = document.getElementById('auth-screen');
+        const dashView = document.getElementById('dashboard-view');
+        if (authScreen) authScreen.style.display = 'block';
+        if (dashView) dashView.style.display = 'none';
       }
     }
 
