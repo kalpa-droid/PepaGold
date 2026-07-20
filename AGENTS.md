@@ -9,7 +9,18 @@
 - **Repositorio GitHub:** `git@github.com:kalpa-droid/PepaGold.git` (Rama `main`)
 - **Dominio web:** `https://pepagold.blog`
 - **Admin CMS:** `https://pepagold.blog/admin/`
-- **Servidor Local Paper Banana (IA imágenes):** `http://localhost:7860/`
+
+---
+
+## 🎯 Reglas de Redacción Fija (Público 18-28 años)
+
+Al redactar o procesar cualquier artículo en PepaGold:
+1. **Apertura-Gancho (Primeras 2-3 líneas):** Prohibido arrancar con definiciones técnicas, cifras o frases históricas (*"La ciencia ha experimentado..."*). Arrancar SIEMPRE con un síntoma directo (*"¿Te ardió la cara la última vez que..."*), una escena reconocible (*"Salís de la ducha y la piel te tira..."*) o un mito roto.
+2. **Ritmo Ágil:** Máximo 20 palabras por oración. Párrafos de máximo 3 líneas en pantalla de celular (40-50 palabras).
+3. **Distribución de Imágenes por Sección H2:**
+   - **Portada (Prompt #1 - 16:9 Widescreen):** Para la cabecera y tarjeta del índice.
+   - **Cuerpo (Prompts #2 a #5 - 1:1 o 4:3):** 1 imagen por cada sección H2, intercalada **dentro del texto Markdown** de esa sección.
+4. **Preservación del Sistema de Conceptos:** Conservar `concept`, `article_id`, `local_phenomenon`, `region_label` y la Regla de Fallback Genérico Universal en las 10 regiones.
 
 ---
 
@@ -23,26 +34,18 @@ Debes ejecutar **automáticamente y en un solo paso de 0 a 100%** lo siguiente:
 1. **Buscar el Borrador:**
    - Busca en `blog/posts/es-ar/` el archivo `.md` con `article_id: PG-XXX`.
 
-2. **Reescritura y SEO:**
-   - Optimiza título y descripción para búsquedas reales en Google.
-   - Aplica jerarquía semántica estricta (1x `<h1>`, `<h2>` para secciones, `<h3>` para subsecciones).
+2. **Reescritura y SEO (Guía 18-28 Años):**
+   - Redacta con apertura por síntoma y párrafos ultracortos.
+   - Organiza en 3 a 5 secciones H2, insertando **1 imagen por sección H2**.
    - Inyecta bloques interactivos (`:::tip`, `:::info`, `:::stat`, `:::checklist`, `:::quiz`, `:::funfact`).
-   - Llena `summary`, `faq`, `epigraph` y `related`.
 
-3. **Generar e Inyectar Imágenes con Paper Banana (Script Helper):**
-   - Redacta prompts para **Tipo A (Científicas con etiquetas numéricas 1, 2, 3)** y **Tipo B (Fotografía 4K realista sin textura plástica)**.
-   - Ejecuta para cada imagen:
-     ```bash
-     python3 scripts/generate_paper_banana.py --prompt "<PROMPT>" --output "assets/imagenes/blog/{slug}/{nombre}.webp"
-     ```
-   - El script genera la imagen vía Paper Banana (`http://localhost:7860/`), la convierte a `.webp` y elimina el `.png` pesado.
+3. **Generar Prompts e Indicaciones:**
+   - Redacta 5 prompts ultra-detallados en `meta.image_prompts` (1 Portada 16:9 + 4 Secciones H2).
 
 4. **Traducciones Multilingües (10 Regiones):**
-   - Genera y guarda los 10 archivos `.md` (`es-ar`, `es-mx`, `es-es`, `en-us`, `fr-fr`, `de-de`, `it-it`, `pt-br`, `ru-ru`, `zh-hans`).
-   - Aplica la **Regla de Fallback Genérico Universal** (*"Viento seco y fuerte"* si no hay equivalente local en China/Alemania).
-   - Traduce las referencias numéricas de las imágenes Tipo A en cada idioma.
+   - Genera los 10 archivos `.md` (`es-ar`, `es-mx`, `es-es`, `en-us`, `fr-fr`, `de-de`, `it-it`, `pt-br`, `ru-ru`, `zh-hans`) manteniendo `concept` e hiper-localización.
 
-5. **Sello de Completitud y Deploy:**
-   - **Solo al completar el 100% de las 10 regiones e imágenes**, setea `date_ai_processed: "YYYY-MM-DD"`.
+5. **Deploy:**
+   - Setea `date_ai_processed: "YYYY-MM-DD"`.
    - Ejecuta `./venv/bin/python build_blog.py`.
-   - Ejecuta `git add . && git commit -m "feat(blog): procesar artículo PG-XXX con imágenes WebP y 10 idiomas" && git push origin main`.
+   - Ejecuta `git add . && git commit -m "feat(blog): procesar artículo PG-XXX con guía 18-28 años en 10 idiomas" && git push origin main`.

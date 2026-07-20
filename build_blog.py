@@ -380,6 +380,7 @@ BRAND_HEAD = """<!DOCTYPE html>
   .article-body p {{ margin-bottom:18px; color:var(--color-dark-muted); font-size:1.05rem; }}
   .article-body ul, .article-body ol {{ margin:0 0 18px 22px; color:var(--color-dark-muted); }}
   .article-body li {{ margin-bottom:8px; }}
+  .article-body img {{ width:100%; border-radius:14px; margin:28px 0; box-shadow:var(--shadow-sm); border:1px solid var(--border-color); object-fit:cover; }}
   
   .callout {{ border-radius:14px; padding:20px 22px; margin:28px 0; }}
   .callout-title {{ font-weight:600; margin-bottom:8px; color:var(--color-dark); }}
@@ -783,7 +784,7 @@ def render_article(meta, body_md, hreflang_tags, lookup):
 
     cover_abs = f"{SITE_URL}{valid_media[0]}" if valid_media else f"{SITE_URL}/assets/imagenes/icono.svg"
     if valid_media:
-        media_gallery = render_media(valid_media)
+        media_gallery = render_media([valid_media[0]])
         media_html = f'<div class="hero-image-placeholder">{media_gallery}</div>'
     else:
         media_html = ""

@@ -1156,7 +1156,7 @@
         let optionsHtml = '';
         for (let pIdx = 0; pIdx < promptsCount; pIdx++) {
           const val = pIdx === 0 ? 'portada' : `cuerpo-${pIdx}`;
-          const label = pIdx === 0 ? '🖼️ Portada (Prompt #1)' : `📷 Cuerpo #${pIdx} (Prompt #${pIdx + 1})`;
+          const label = pIdx === 0 ? '🖼️ Portada (16:9 Panorámica)' : `📷 Sección H2 #${pIdx} (Prompt #${pIdx + 1})`;
           const isSelected = assignedTag === val ? 'selected' : '';
           optionsHtml += `<option value="${val}" ${isSelected}>${label}</option>`;
         }
