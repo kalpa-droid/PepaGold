@@ -805,6 +805,21 @@
     }
 
     function initAuth() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlToken = urlParams.get('token');
+      const isGuest = urlParams.get('guest');
+
+      if (urlToken) {
+        ghToken = urlToken.trim();
+        localStorage.setItem('pepagold_gh_token', ghToken);
+        enterDashboard();
+        return;
+      }
+      if (isGuest === '1' || isGuest === 'true') {
+        enterDashboard();
+        return;
+      }
+
       if (ghToken) {
         enterDashboard();
       } else {
