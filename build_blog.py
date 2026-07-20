@@ -481,16 +481,13 @@ ARTICLE_TEMPLATE = BRAND_HEAD + """<body>
   
   {science_link_html}
   
-  <div class="product-cta">
-    <p><strong>Laska Mini Set</strong> — el set de microfibra que reemplaza discos de algodón, agua micelar y desmaquillante. Solo con agua.</p>
-    <a class="btn" href="{home_url}">Conocer el producto &rarr;</a>
-  </div>
+  {product_cta_html}
   
   {faq_html}
   {related_html}
 </div>
 <footer class="site-footer">
-  <p>&copy; 2025&ndash;2026 PepaGold &middot; Todos los derechos reservados.</p>
+  <p>{footer_copy}</p>
 </footer>
 <script>
   // Menu desplegable
