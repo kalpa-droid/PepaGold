@@ -547,7 +547,7 @@
     <div id="auth-screen">
       <h2>PepaGold CMS Admin</h2>
       <p>Ingresá tu Personal Access Token de GitHub para administrar los artículos e imágenes del repositorio <code>kalpa-droid/PepaGold</code>.</p>
-      <input type="password" id="gh-token-input" class="input-field" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" />
+      <input type="password" id="gh-token-input" class="input-field" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" onkeydown="if(event.key==='Enter') loginWithToken()" />
       <button class="btn btn-primary" style="width: 100%;" onclick="loginWithToken()">Conectar con GitHub</button>
     </div>
 
@@ -791,12 +791,21 @@
       }
     }
 
-    function loginWithToken() {
+    async function loginWithToken() {
       const val = document.getElementById('gh-token-input').value.trim();
       if (!val) return alert('Por favor ingresá un token de GitHub válido.');
+      
+      showToast('🔑 Validando conexión con GitHub...');
       ghToken = val;
       localStorage.setItem('pepagold_gh_token', val);
-      initAuth();
+      
+      try {
+        await ghFetch('contents/blog/posts/es-ar');
+        showToast('¡Conexión exitosa a GitHub!');
+        initAuth();
+      } catch (err) {
+        showToast('Error de autenticación con GitHub: ' + err.message);
+      }
     }
 
     function logout() {
