@@ -15,14 +15,16 @@ Este documento establece la normativa estricta para la edición, optimización S
    - **Paso 2 (Generación Usuario):** El usuario copia el prompt con el botón **`📋 Copiar Prompt`**, genera o busca su foto y la sube en el CMS con **`➕ Subir Imagen (Auto WebP)`**.
    - **Paso 3 (Publicación en 1 Clic):** Al tocar **`✨ Aplicar Imágenes al Artículo y Publicar`**, el CMS asigna automáticamente las imágenes `.webp` subidas a la portada y a los espacios del texto, publica en GitHub y distribuye los cambios a los **10 idiomas del blog**.
 
-3. **Imágenes Visualmente Limpias (Sin Textos Incrustados):**
-   - Las imágenes generadas se mantienen **sin textos incrustados dentro del gráfico**.
-   - Toda leyenda o explicación se redacta en el cuerpo Markdown para garantizar que se traduzca nativamente a los 10 idiomas.
+3. **Relación de Aspecto de Imágenes (16:9 Panorámica de Portada vs 1:1 Cuadrada del Cuerpo):**
+   - **Imagen de Portada (Prompt #1 - 16:9 Widescreen 1200x630px):** Es la imagen panorámica horizontal principal. Se comparte automáticamente tanto en la **Tarjeta del Índice del Blog** como en la **Cabecera Principal del Artículo**. Ambos contenedores renderizan en formato panorámico `16:9` sin recortar a cuadrado.
+   - **Imágenes del Cuerpo (Prompt #2, #3 - 1:1 1080x1080px):** Se mantienen en formato cuadrado o diagramático para ilustrar el texto Markdown.
 
-4. **Regla Estricta de 1 Archivo por Artículo en Cada Idioma (Cero Duplicados):**
+4. **Regla de Fallback Genérico Universal para Adaptación Regional:**
+   - Si un país objetivo no posee un fenómeno climático o cultural equivalente directo (ej. Viento Zonda), la IA Editora utilizará una **traducción o fenómeno genérico universal** (ej. *"vientos secos y cálidos"*, *"dry winds"*, *"干燥风"*).
+
+5. **Regla Estricta de 1 Archivo por Artículo en Cada Idioma (Cero Duplicados):**
    - En cada directorio regional (`blog/posts/{locale}/`), debe existir **únicamente 1 archivo `.md` por cada `article_id`** (ej. `skin-barrier-science-microbiome.md`).
    - Queda estrictamente prohibido dejar copias del archivo con nombre en español en directorios de otros idiomas.
-   - Todo el contenido (encabezados, frontmatter, epígrafe, resúmenes, cuerpo, llamados interactivos) debe estar **100% traducido al idioma nativo de la región**.
 
 ---
 
@@ -33,7 +35,7 @@ Este documento establece la normativa estricta para la edición, optimización S
    - Incluye bloques de alto contraste (`:::tip`, `:::info`, `:::stat`, `:::checklist`, `:::quiz`, `:::funfact`).
 
 2. **Prompts e Inyección:**
-   - Escribe los prompts 8K en `meta.image_prompts`.
+   - Escribe los prompts 8K en `meta.image_prompts` (Prompt #1: Portada 16:9, Prompt #2: Cuerpo 1:1).
    - Deja listos los espacios de imágenes en el texto Markdown.
 
 3. **Traducción y Adaptación Multilingüe (10 Idiomas):**

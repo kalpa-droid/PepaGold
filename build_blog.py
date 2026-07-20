@@ -365,7 +365,8 @@ BRAND_HEAD = """<!DOCTYPE html>
   .summary-box ul {{ margin-left:20px; color:var(--color-dark-muted); }}
   .summary-box li {{ margin-bottom:6px; }}
   
-  .hero-image-placeholder {{ width: 100%; min-height: 400px; background: var(--bg-secondary); border-radius: 18px; margin-bottom: 40px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 10px; box-shadow: var(--shadow-md); }}
+  .hero-image-placeholder {{ width: 100%; aspect-ratio: 16 / 9; max-height: 440px; background: var(--bg-secondary); border-radius: 18px; margin-bottom: 32px; display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); }}
+  .hero-image-placeholder img {{ width: 100%; height: 100%; object-fit: cover; }}
   
   .toc {{ background:var(--bg-accent-light); border:1px solid var(--border-color); border-radius:14px; padding:18px 22px; margin:0 0 32px; font-size:0.92rem; }}
   .toc::before {{ content: attr(data-title); display:block; font-weight:600; margin-bottom:8px; color:var(--color-dark); }}
@@ -573,7 +574,8 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
   .pain-card-v2:nth-child(even) {{ direction: rtl; }}
   .pain-card-v2:nth-child(even) > * {{ direction: ltr; }}
 
-  .card-video {{ width: 100%; max-width: 400px; margin: 0 auto; aspect-ratio: 1 / 1; border-radius: 16px; border: 1px dashed var(--color-primary); box-shadow: var(--shadow-sm); overflow: hidden; display: flex; align-items: center; justify-content: center; padding: 10px; transition: transform 0.4s ease; }}
+  .card-video {{ width: 100%; max-width: 440px; margin: 0 auto; aspect-ratio: 16 / 9; border-radius: 16px; box-shadow: var(--shadow-sm); overflow: hidden; display: flex; align-items: center; justify-content: center; transition: transform 0.4s ease; border: 1px solid var(--border-color); }}
+  .card-video img {{ width: 100%; height: 100%; object-fit: cover; }}
   .card-video:hover {{ box-shadow: var(--shadow-lg); transform: translateY(-5px); }}
 
   .text-content {{ display: flex; flex-direction: column; gap: 12px; }}
