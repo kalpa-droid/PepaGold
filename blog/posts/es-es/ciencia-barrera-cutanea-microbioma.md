@@ -11,7 +11,7 @@ locale: es-es
 category: barrera-cutanea
 category_label: Ciencia & Piel
 concept: barrera-cutanea-y-microbioma
-local_phenomenon: Calima y Frío Peninsular
+local_phenomenon: Clima Mediterráneo & Calima
 region_label: España
 media: []
 author: PepaGold
@@ -23,16 +23,17 @@ summary:
   agua y bloquea bacterias.
 - El manto ácido (pH 4.5-5.5) y el microbioma son tu primera línea de defensa inmunológica
   contra patógenos.
-- La calima seca, el viento y exfoliación excesiva evaporan el agua y generan microfisuras.
+- El clima seco, la calima y la exfoliación excesiva evaporan el agua y generan microfisuras.
 - La reparación requiere higiene atraumática sin fricción, ceramidas biomiméticas
-  y cuidar el bolsillo a largo plazo.
+  (ratio 3:1:1) y prebióticos.
 faq:
 - q: ¿Cuánto tarda en repararse una barrera cutánea dañada?
-  a: El ciclo de renovación celular dura entre 14 y 28 días. Sentirás alivio en 3
-    a 5 días con higiene suave y recuperación total en 4 semanas.
-- q: ¿Por qué me pica el rostro al usar hidratante?
-  a: La picazón es síntoma de microfisuras en el estrato córneo. Sin cemento lipídico,
-    el producto toca los nervios expuestos.
+  a: El ciclo de renovación celular dura entre 14 y 28 días. Con higiene atraumática
+    y ceramidas biomiméticas sentirás alivio en 3 a 5 días y recuperación total en
+    4 semanas.
+- q: ¿Por qué me arde la cara cuando me pongo crema hidratante?
+  a: 'El ardor es el síntoma #1 de microfisuras en el estrato córneo. Sin cemento
+    lipídico ni manto ácido, la crema toma contacto directo con nervios expuestos.'
 related: []
 image_prompts:
 - '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
@@ -75,41 +76,41 @@ Tu piel pierde de forma natural hasta medio litro de agua al día a través de l
 
 ## **Arquitectura de la Piel: Ladrillos y Cemento**
 
-Imaginá tu piel como una pared de ladrillos:
+Imagina tu piel como una pared de ladrillos:
 
 - **Los Ladrillos (Corneocitos):** Células ultra resistentes empaquetadas con queratina que te protegen de rasguños y fricción.
 - **El Cemento (Matriz Lipídica):** El pegamento biológico que mantiene unidos los ladrillos. Compuesto por **Ceramidas (50%)**, Colesterol (25%) y Ácidos Grasos Libres (15%).
 
 :::tip El Secreto del Ratio 3:1:1
-Para que el "cemento" de tu piel sea impenetrable, las ceramidas, el colesterol y los ácidos grasos deben estar en una proporción exacta de 3:1:1. Cuando busques cremas reparadoras, elegí formulaciones biomiméticas que respeten esta proporción.
+Para que el "cemento" de tu piel sea impenetrable, las ceramidas, el colesterol y los ácidos grasos deben estar en una proporción exacta de 3:1:1. Cuando busques cremas reparadoras, elige formulaciones biomiméticas que respeten esta proporción.
 :::
 
 ### El Manto Ácido: El Guardián Invisible
 
 Por encima de esta pared de ladrillos, tu piel tiene una película de agua y sebo llamada **manto ácido**, con un pH óptimo entre 4.5 y 5.5. Este ambiente ácido desactiva bacterias dañinas y crea el hábitat ideal para el **microbioma cutáneo** (las bacterias buenas).
 
-Si usás jabones en barra tradicionales (que son alcalinos), destruís el manto ácido. Esto detiene la producción natural de ceramidas y acelera la irritación y la descamación.
+Si usas jabones en barra tradicionales (que son alcalinos), destruyes el manto ácido. Esto detiene la producción natural de ceramidas y acelera la irritación y la descamación.
 
 ## **El Microbioma: Tu Cuarta Dimensión Protectora**
 
-Ya no podemos pensar en la piel solo como tejido: es un ecosistema completo. Bacterias benéficas como el _Staphylococcus epidermidis_ habitan la superficie y se alimentan de lípidos naturales. A cambio, sintetizan sus propios péptidos antimicrobianos para combatir patógenos como el _Staphylococcus aureus_ (responsables de los brotes de dermatitis).
+Ya no podemos pensar en la piel solo como tejido: es un ecosistema completo. Bacterias benéficas como el _Staphylococcus epidermidis_ habitan la superficie y se alimentan de lípidos naturales. A cambio, sintetizan sus propios péptidos antimicrobianos para combatir patógenos como el _Staphylococcus aureus_ (responsables de brotes de dermatitis).
 
 :::info Disbiosis: Cuando las bacterias buenas mueren
-La disbiosis ocurre cuando alterás tu microbioma por lavado excesivo o químicos agresivos. Sin bacterias benéficas que te protejan, los patógenos proliferan, el sistema inmune reacciona y la piel se inflama, enrojece o llena de brotes.
+La disbiosis ocurre cuando alteras tu microbioma por lavado excesivo o químicos agresivos. Sin bacterias benéficas que te protejan, los patógenos proliferan, el sistema inmune reacciona y la piel se inflama o llena de brotes.
 :::
 
 ## **Factores que Destruyen tu Barrera Cutánea**
 
 Tu piel soporta agresiones diarias, pero tiene un límite:
 
-1. **El Clima Extremo (Calima y Frío Peninsular):** El aire seco y cálido extrae agua de tus células. El fenómeno de Calima y Frío Peninsular en España desploma la humedad ambiental, acelerando la evaporación transcutánea (TEWL) y creando microfisuras.
-2. **Limpiadores Agresivos (Sulfatos):** Tensoactivos pesados como SLS o SLES disuelven la matriz lipídica como si fuera grasa en un sartén.
+1. **La Calima & Aire Seco:** Las partículas en suspensión y el aire seco del verano evaporan el agua de tus células, acelerando la pérdida transepidérmica (TEWL) y creando microfisuras.
+2. **Limpiadores Agresivos (Sulfatos):** Tensoactivos pesados como SLS o SLES disuelven la matriz lipídica como si fuera grasa en una sartén.
 3. **Exfoliación Excesiva:** Usar ácidos o cepillos físicos con demasiada frecuencia retira capas protectoras antes de su regeneración.
 
 :::checklist Señales de Alarma: ¿Tu barrera está rota?
 - [ ] Tu piel se ve opaca y sin luz natural.
 - [ ] Sientes tirantez inmediata al salir de la ducha.
-- [ ] Cualquier crema que te ponés te arde o pica.
+- [ ] Cualquier crema que te pones te arde o pica.
 - [ ] Notas descamación y textura áspera constante.
 :::
 
@@ -117,9 +118,9 @@ Tu piel soporta agresiones diarias, pero tiene un límite:
 
 La regla de oro para reparar la piel es **dejar de agredirla**:
 
-1. **Higiene Atraumática:** Evitá el agua muy caliente y los jabones espumosos. Optá por limpiadores Syndet o tecnologías de microfibra física (como Laska Mini) que limpian poros por succión capilar sin remover lípidos esenciales.
-2. **Reposición Lipídica:** Utilizá cremas enriquecidas con ceramidas, ácido hialurónico y escualano.
-3. **Prebióticos Tópicos:** Preferí cosméticos con inulina para nutrir las bacterias benéficas y reequilibrar la flora cutánea.
+1. **Higiene Atraumática:** Evita el agua muy caliente y los jabones espumosos. Opta por limpiadores Syndet o tecnologías de microfibra física (como Laska Mini) que limpian poros por succión capilar sin remover lípidos esenciales.
+2. **Reposición Lipídica:** Utiliza cremas enriquecidas con ceramidas, ácido hialurónico y escualano.
+3. **Prebióticos Tópicos:** Prefiere cosméticos con inulina para nutrir las bacterias benéficas y reequilibrar la flora cutánea.
 
 :::quiz Test de Diagnóstico Cutáneo
 Q: ¿Cuál es el síntoma más claro de que tu barrera cutánea perdió su cemento lipídico?

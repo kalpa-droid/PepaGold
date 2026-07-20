@@ -19,6 +19,11 @@ Este documento establece la normativa estricta para la edición, optimización S
    - Las imágenes generadas se mantienen **sin textos incrustados dentro del gráfico**.
    - Toda leyenda o explicación se redacta en el cuerpo Markdown para garantizar que se traduzca nativamente a los 10 idiomas.
 
+4. **Regla Estricta de 1 Archivo por Artículo en Cada Idioma (Cero Duplicados):**
+   - En cada directorio regional (`blog/posts/{locale}/`), debe existir **únicamente 1 archivo `.md` por cada `article_id`** (ej. `skin-barrier-science-microbiome.md`).
+   - Queda estrictamente prohibido dejar copias del archivo con nombre en español en directorios de otros idiomas.
+   - Todo el contenido (encabezados, frontmatter, epígrafe, resúmenes, cuerpo, llamados interactivos) debe estar **100% traducido al idioma nativo de la región**.
+
 ---
 
 ## 🚀 Pasos de Ejecución Autónoma

@@ -53,16 +53,16 @@
     "barrera-cutanea-y-microbioma": {
       "de-de": {
         "slug": "wissenschaft-hautbarriere-mikrobiom",
-        "title": "Die Wissenschaft der Hautbarriere: Funktion, Schäden und Reparatur",
+        "title": "Die Wissenschaft der Hautbarriere: Was sie ist, wie sie geschädigt wird und wie man sie repariert",
         "web_url": "/de/blog/wissenschaft-hautbarriere-mikrobiom",
-        "phenomenon": "Trockene Heizungsluft",
+        "phenomenon": "Trockene Heizungsluft & Winterkälte",
         "region_label": "Deutschland"
       },
       "en-us": {
         "slug": "skin-barrier-science-microbiome",
-        "title": "Skin Barrier Science: What It Is, How It Breaks, and How to Repair It",
+        "title": "The Science of the Skin Barrier: What It Is, How It Gets Damaged, and How to Repair It",
         "web_url": "/us/blog/skin-barrier-science-microbiome",
-        "phenomenon": "Santa Ana Winds",
+        "phenomenon": "Dry HVAC Indoor Air & Pollution",
         "region_label": "United States"
       },
       "es-ar": {
@@ -76,49 +76,49 @@
         "slug": "ciencia-barrera-cutanea-microbioma",
         "title": "La Ciencia de la Barrera Cutánea: Qué es, Cómo se Daña y Cómo Repararla",
         "web_url": "/es/blog/ciencia-barrera-cutanea-microbioma",
-        "phenomenon": "Calima y Frío Peninsular",
+        "phenomenon": "Clima Mediterráneo & Calima",
         "region_label": "España"
       },
       "es-mx": {
         "slug": "ciencia-barrera-cutanea-microbioma",
         "title": "La Ciencia de la Barrera Cutánea: Qué es, Cómo se Daña y Cómo Repararla",
         "web_url": "/mx/blog/ciencia-barrera-cutanea-microbioma",
-        "phenomenon": "Contaminación CDMX",
-        "region_label": "Ciudad de México"
+        "phenomenon": "Contaminación por PM2.5 & Clima Cálido",
+        "region_label": "México"
       },
       "fr-fr": {
         "slug": "science-barriere-cutanee-microbiome",
-        "title": "La Science de la Barrière Cutanée: Qu'est-ce que C'est et Comment la Réparer",
+        "title": "La Science de la Barrière Cutanée : Qu'est-ce que c'est, comment elle s'endommage et comment la réparer",
         "web_url": "/fr/blog/science-barriere-cutanee-microbiome",
-        "phenomenon": "Eau Dure Calcaire",
+        "phenomenon": "Air sec du chauffage & Pollution",
         "region_label": "France"
       },
       "it-it": {
         "slug": "scienza-barriera-cutanea-microbioma",
-        "title": "La Scienza della Barriera Cutanea: Cos'è e Come Ripararla",
+        "title": "La Scienza della Barriera Cutanea: Cos'è, come si danneggia e come ripararla",
         "web_url": "/it/blog/scienza-barriera-cutanea-microbioma",
-        "phenomenon": "Sole e Caldo Mediterraneo",
+        "phenomenon": "Aria secca dei riscaldamenti & Smog",
         "region_label": "Italia"
       },
       "pt-br": {
-        "slug": "ciencia-barrera-cutanea-microbioma",
-        "title": "A Ciência da Barreira Cutânea: O Que É, Como Se Danifica e Como Reparar",
-        "web_url": "/pt/blog/ciencia-barrera-cutanea-microbioma",
-        "phenomenon": "Calor Úmido e Sol Intenso",
-        "region_label": "São Paulo, Brasil"
+        "slug": "ciencia-barreira-cutanea-microbioma",
+        "title": "A Ciência da Barreira Cutânea: O que é, Como se Danifica e Como Reparar",
+        "web_url": "/pt/blog/ciencia-barreira-cutanea-microbioma",
+        "phenomenon": "Clima Tropical Seco & Poluição",
+        "region_label": "Brasil"
       },
       "ru-ru": {
         "slug": "nauka-kozhnij-barier-mikrobiom",
-        "title": "Наука о Кожном Барьере: Что Это Такое и Как Его Восстановить",
+        "title": "Наука о кожном барьере: что это, как повреждается и как его восстановить",
         "web_url": "/ru/blog/nauka-kozhnij-barier-mikrobiom",
-        "phenomenon": "Ледяной Ветер и Мороз",
+        "phenomenon": "Сухой воздух отопления и морозы",
         "region_label": "Россия"
       },
       "zh-hans": {
         "slug": "skin-barrier-science-microbiome",
         "title": "皮肤屏障的科学：构成、受损机制与修复指南",
         "web_url": "/zh/blog/skin-barrier-science-microbiome",
-        "phenomenon": "城市空气污染 PM2.5",
+        "phenomenon": "城市空气污染与PM2.5",
         "region_label": "中国"
       }
     }
