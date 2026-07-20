@@ -1217,6 +1217,95 @@
       } catch (err) {
         showToast('Servidor local Paper Banana no respondió en el puerto ' + serverUrl + '. Verificá que esté corriendo.');
       }
+    // Insert Image Modal for Editor
+    async function openInsertImageModal() {
+      const slug = document.getElementById('ed-slug').value.trim() || currentEditingSlug;
+      if (!slug) return alert('Primero asigná un título o slug al artículo.');
+
+      const modalBody = document.getElementById('modal-img-grid');
+      openModal('modal-images');
+
+      try {
+        const files = await ghFetch(`contents/assets/imagenes/blog/${slug}`).catch(() => []);
+        if (!files.length) {
+          modalBody.innerHTML = '<p style="font-size: 13px;">No hay imágenes cargadas para este slug. Subí una primero.</p>';
+          return;
+        }
+        modalBody.innerHTML = files.map(f => `
+          <div class="image-card" onclick="insertImageToEditor('${f.path}')" style="cursor: pointer;" title="Hacé clic para insertar">
+            <img src="${f.download_url}" />
+          </div>
+        `).join('');
+      } catch (err) {
+        modalBody.innerHTML = '<p style="font-size: 13px;">Error al cargar las imágenes.</p>';
+      }
+    }
+
+    function insertImageToEditor(path) {
+      insertTb(`![](/${path})`, '');
+      closeModal('modal-images');
+      showToast('Imagen insertada en el texto.');
+    }
+
+    // Metadata IA Modal (Fetches ALL 10 Locales dynamically from GitHub)
+    async function openMetadataModal(slug) {
+      const art = articlesList.find(a => a.meta.slug === slug);
+      if (!art) return;
+
+      const modalContent = document.getElementById('modal-meta-content');
+      modalContent.innerHTML = '<p style="font-size: 13px;">Consultando las 10 regiones en GitHub...</p>';
+      openModal('modal-metadata');
+
+      const meta = art.meta;
+      const localeResults = {};
+
+      for (const [code, info] of Object.entries(LOCALES)) {
+        try {
+          const fileData = await ghFetch(`contents/blog/posts/${code}/${slug}.md`).catch(() => null);
+          if (fileData) {
+            const rawContent = decodeURIComponent(escape(atob(fileData.content.replace(/\s/g, ''))));
+            const parsed = parseMarkdownPost(rawContent);
+            localeResults[code] = parsed.meta;
+          } else {
+            localeResults[code] = null;
+          }
+        } catch (e) {
+          localeResults[code] = null;
+        }
+      }
+
+      const completedLocalesCount = Object.values(localeResults).filter(m => m !== null).length;
+
+      const html = `
+        <div class="meta-box-row"><span class="meta-box-label">📋 Article ID:</span><span class="meta-box-val">${meta.article_id || 'PG-001'}</span></div>
+        <div class="meta-box-row"><span class="meta-box-label">📌 Concept ID:</span><span class="meta-box-val">${meta.concept || slug}</span></div>
+        <div class="meta-box-row"><span class="meta-box-label">🔗 Slug Base:</span><span class="meta-box-val">${meta.slug}</span></div>
+        <div class="meta-box-row"><span class="meta-box-label">📅 Creado Editor:</span><span class="meta-box-val">${meta.date_created || meta.date}</span></div>
+        <div class="meta-box-row"><span class="meta-box-label">🤖 Procesado IA:</span><span class="meta-box-val">${meta.date_ai_processed ? `✅ ${meta.date_ai_processed}` : '⏳ Pendiente'}</span></div>
+
+        <h4 style="margin-top: 18px; margin-bottom: 8px; font-family: var(--font-serif);">🌎 Adaptaciones por Región (${completedLocalesCount}/10 Idiomas)</h4>
+        <div class="region-grid">
+          ${Object.entries(LOCALES).map(([code, info]) => {
+            const locMeta = localeResults[code];
+            if (!locMeta) {
+              return `<div class="region-card-mini" style="opacity: 0.65;">${info.flag} <b>${info.name}:</b> ⏳ Pendiente</div>`;
+            }
+            const phenom = locMeta.local_phenomenon || 'Fenómeno Genérico';
+            const regLabel = locMeta.region_label || info.name;
+            return `<div class="region-card-mini">${info.flag} <b>${info.name}:</b> ${phenom} (${regLabel})</div>`;
+          }).join('')}
+        </div>
+
+        <h4 style="margin-top: 18px; margin-bottom: 8px; font-family: var(--font-serif);">🔍 Estado SEO y Módulos en es-ar</h4>
+        <div style="font-size: 13px; line-height: 1.8;">
+          <div>Summary (En 30 seg): ${meta.summary && meta.summary.length ? '✅ Completado' : '⚠️ Pendiente IA'}</div>
+          <div>FAQ Schema: ${meta.faq && meta.faq.length ? `✅ ${meta.faq.length} Preguntas` : '⚠️ Pendiente IA'}</div>
+          <div>Epígrafe Cita: ${meta.epigraph ? '✅ Completado' : '⚠️ Pendiente IA'}</div>
+          <div>Prompts de Imágenes: ${meta.image_prompts && meta.image_prompts.length ? `✅ ${meta.image_prompts.length} Prompts` : '⚠️ Pendiente IA'}</div>
+        </div>
+      `;
+
+      modalContent.innerHTML = html;
     }
 
     // Translations Modal (With Real Slug Preview & Direct Reading Modal)
