@@ -13,7 +13,9 @@ category_label: Наука о коже
 concept: barrera-cutanea-y-microbioma
 local_phenomenon: Сухой воздух отопления и морозы
 region_label: Россия
-media: []
+media:
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_hkzv0lhkzv0lhkzv.webp
 author: PepaGold
 epigraph:
   text: Коже не нужно больше косметики; ей нужно не мешать защищаться.
@@ -134,3 +136,6 @@ Q: Какой признак наиболeе точно указывает на 
 
 **Ответ:** Миф! Акне — часто признак нарушенного барьера. Чрезмерное мытье смывает церамиды; кожа отвечает выработкой двойной порции себума для защиты, что ухудшает акне.
 :::
+
+![Ilustración / Figura #1](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_hkzv0lhkzv0lhkzv.webp)
+

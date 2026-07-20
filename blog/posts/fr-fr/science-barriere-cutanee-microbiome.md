@@ -14,7 +14,9 @@ category_label: Science & Peau
 concept: barrera-cutanea-y-microbioma
 local_phenomenon: Air sec du chauffage & Pollution
 region_label: France
-media: []
+media:
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_hkzv0lhkzv0lhkzv.webp
 author: PepaGold
 epigraph:
   text: La peau n'a pas besoin de plus de produits ; elle a besoin qu'on la laisse
@@ -138,3 +140,6 @@ Q: Quel est le symptôme le plus évident de la perte du ciment lipidique de vot
 
 **Réponse :** Faux ! L'acné est souvent le signe d'une barrière altérée. Un nettoyage excessif élimine les céramides protectrices ; la peau réagit en produisant deux fois plus de sébum pour se défendre, ce qui aggrave l'acné.
 :::
+
+![Ilustración / Figura #1](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_hkzv0lhkzv0lhkzv.webp)
+

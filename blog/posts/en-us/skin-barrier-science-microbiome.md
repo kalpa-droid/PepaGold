@@ -14,7 +14,9 @@ category_label: Skin Science
 concept: barrera-cutanea-y-microbioma
 local_phenomenon: Dry HVAC Indoor Air & Pollution
 region_label: United States
-media: []
+media:
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_hkzv0lhkzv0lhkzv.webp
 author: PepaGold
 epigraph:
   text: Your skin doesn't need more products; it needs you to let it defend itself.
@@ -136,3 +138,6 @@ Q: What is the clearest symptom that your skin barrier has lost its lipid mortar
 
 **Truth:** Myth! Acne is often a symptom of an impaired barrier. Over-washing strips protective ceramides, forcing your skin to produce double the oil to defend itself, worsening breakouts.
 :::
+
+![Ilustración / Figura #1](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_hkzv0lhkzv0lhkzv.webp)
+

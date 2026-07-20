@@ -1,10 +1,8 @@
 ---
 article_id: PG-001
 title: 'La Ciencia de la Barrera Cutánea: Qué es, Cómo se Daña y Cómo Repararla'
-description: >-
-  Descubrí qué es exactamente la barrera cutánea y el microbioma de la piel.
-  Aprendé a identificar los síntomas de daño y los mejores métodos para
-  restaurarla.
+description: Descubrí qué es exactamente la barrera cutánea y el microbioma de la
+  piel. Aprendé a identificar los síntomas de daño y los mejores métodos para restaurarla.
 slug: ciencia-barrera-cutanea-microbioma
 date: '2026-07-17'
 date_created: '2026-07-17'
@@ -16,66 +14,54 @@ concept: barrera-cutanea-y-microbioma
 local_phenomenon: Viento Zonda
 region_label: Salta, Argentina
 media:
-  - >-
-    /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
-  - >-
-    /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_hkzv0lhkzv0lhkzv.webp
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_hkzv0lhkzv0lhkzv.webp
 author: PepaGold
 epigraph:
   text: La piel no necesita más productos; necesita que la dejes defenderse.
   author: Dra. PepaGold
 summary:
-  - >-
-    La barrera cutánea es una matriz de ceramidas, colesterol y ácidos grasos
-    que retiene agua y bloquea bacterias.
-  - >-
-    El manto ácido (pH 4.5-5.5) y el microbioma son tu primera línea de defensa
-    inmunológica contra patógenos.
-  - >-
-    El clima seco (como el Viento Zonda), sulfatos y exfoliación excesiva
-    evaporan el agua y generan microfisuras.
-  - >-
-    La reparación requiere higiene atraumática sin fricción, ceramidas
-    biomiméticas (ratio 3:1:1) y prebióticos.
+- La barrera cutánea es una matriz de ceramidas, colesterol y ácidos grasos que retiene
+  agua y bloquea bacterias.
+- El manto ácido (pH 4.5-5.5) y el microbioma son tu primera línea de defensa inmunológica
+  contra patógenos.
+- El clima seco (como el Viento Zonda), sulfatos y exfoliación excesiva evaporan el
+  agua y generan microfisuras.
+- La reparación requiere higiene atraumática sin fricción, ceramidas biomiméticas
+  (ratio 3:1:1) y prebióticos.
 faq:
-  - q: ¿Cuánto tarda en repararse una barrera cutánea dañada?
-    a: >-
-      El ciclo de renovación celular dura entre 14 y 28 días. Con higiene
-      atraumática y ceramidas biomiméticas sentirás alivio en 3 a 5 días y
-      recuperación total en 4 semanas.
-  - q: ¿Por qué me arde la cara cuando me pongo crema hidratante?
-    a: >-
-      El ardor es el síntoma #1 de microfisuras en el estrato córneo. Sin
-      cemento lipídico ni manto ácido, la crema toma contacto directo con
-      nervios expuestos.
+- q: ¿Cuánto tarda en repararse una barrera cutánea dañada?
+  a: El ciclo de renovación celular dura entre 14 y 28 días. Con higiene atraumática
+    y ceramidas biomiméticas sentirás alivio en 3 a 5 días y recuperación total en
+    4 semanas.
+- q: ¿Por qué me arde la cara cuando me pongo crema hidratante?
+  a: 'El ardor es el síntoma #1 de microfisuras en el estrato córneo. Sin cemento
+    lipídico ni manto ácido, la crema toma contacto directo con nervios expuestos.'
 related: []
 image_prompts:
-  - >-
-    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
 
-    Ultra-high resolution 8K commercial skincare studio photograph. Extreme
-    macro close-up of healthy, hydrated human skin texture showing radiant
-    natural dewiness, microscopic lipid glow, and fine refined pores. Aesthetic
-    palette dominated by warm dusty rose (#D48C90), soft nude beige, and neutral
-    ivory clay. Soft diffused studio lighting with a subtle backlight creating a
-    silky glow. Professional editorial beauty photography shot on Hasselblad
-    100MP with 120mm macro lens, shallow depth of field (f/2.8). Completely
-    clean composition. NO text, NO numbers, NO watermarks, NO brand logos, NO
-    graphic overlays.
-  - >-
-    📸 PROMPT #2 - DIAGRAMA CIENTÍFICO CUERPO (1080x1080px - Aspect Ratio 1:1):
+  Ultra-high resolution 8K commercial skincare studio photograph. Extreme macro close-up
+  of healthy, hydrated human skin texture showing radiant natural dewiness, microscopic
+  lipid glow, and fine refined pores. Aesthetic palette dominated by warm dusty rose
+  (#D48C90), soft nude beige, and neutral ivory clay. Soft diffused studio lighting
+  with a subtle backlight creating a silky glow. Professional editorial beauty photography
+  shot on Hasselblad 100MP with 120mm macro lens, shallow depth of field (f/2.8).
+  Completely clean composition. NO text, NO numbers, NO watermarks, NO brand logos,
+  NO graphic overlays.'
+- '📸 PROMPT #2 - DIAGRAMA CIENTÍFICO CUERPO (1080x1080px - Aspect Ratio 1:1):
 
-    Clean isometric 3D medical graphic illustration depicting the stratum
-    corneum skin barrier architecture ("brick-and-mortar" model). Corneocyte
-    keratin bricks neatly stacked with a translucent lipid matrix (ceramides,
-    cholesterol, free fatty acids) acting as glowing golden mortar between them.
-    Soft warm minimalist visual style using a color palette of muted dusty rose
-    (#D48C90), cream, and nude. Soft ambient occlusion shadows, ultra-sharp edge
-    definition, studio product visualization lighting. Pure scientific graphic
-    design, completely clean aesthetic. NO embedded text labels, NO numbers, NO
-    arrows, NO watermarks.
+  Clean isometric 3D medical graphic illustration depicting the stratum corneum skin
+  barrier architecture ("brick-and-mortar" model). Corneocyte keratin bricks neatly
+  stacked with a translucent lipid matrix (ceramides, cholesterol, free fatty acids)
+  acting as glowing golden mortar between them. Soft warm minimalist visual style
+  using a color palette of muted dusty rose (#D48C90), cream, and nude. Soft ambient
+  occlusion shadows, ultra-sharp edge definition, studio product visualization lighting.
+  Pure scientific graphic design, completely clean aesthetic. NO embedded text labels,
+  NO numbers, NO arrows, NO watermarks.'
 show_science_link: true
 ---
+
 ## **La Ciencia de la Barrera Cutánea: Qué es y Cómo Funciona**
 
 La ciencia de la piel ha experimentado un cambio de paradigma radical. Históricamente, se creía que la capa más externa de la piel (el estrato córneo) era solo un depósito de células muertas. Hoy sabemos que es una **interfaz biológica dinámicamente activa**, un biosensor complejo y tu principal línea de defensa inmunológica e hidratante.
@@ -154,4 +140,3 @@ Q: ¿Cuál es el síntoma más claro de que tu barrera cutánea perdió su cemen
 
 
 ![Ilustración científica / Figura #1](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_hkzv0lhkzv0lhkzv.webp)
-

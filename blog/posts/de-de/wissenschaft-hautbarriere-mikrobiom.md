@@ -14,7 +14,9 @@ category_label: Hautwissenschaft
 concept: barrera-cutanea-y-microbioma
 local_phenomenon: Trockene Heizungsluft & Winterkälte
 region_label: Deutschland
-media: []
+media:
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_hkzv0lhkzv0lhkzv.webp
 author: PepaGold
 epigraph:
   text: Die Haut braucht nicht mehr Produkte; sie braucht die Freiheit, sich selbst
@@ -137,3 +139,6 @@ Q: Was ist das deutlichste Symptom für den Verlust des Lipidmörtels Ihrer Haut
 
 **Antwort:** Mythos! Akne ist oft ein Symptom einer geschädigten Barriere. Exzessives Waschen entzieht Ceramide; die Haut reagiert mit doppelter Talgproduktion zur Abwehr, was Akne verschlimmert.
 :::
+
+![Ilustración / Figura #1](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_hkzv0lhkzv0lhkzv.webp)
+

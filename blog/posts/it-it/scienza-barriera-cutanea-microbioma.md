@@ -13,7 +13,9 @@ category_label: Scienza della Pelle
 concept: barrera-cutanea-y-microbioma
 local_phenomenon: Aria secca dei riscaldamenti & Smog
 region_label: Italia
-media: []
+media:
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_hkzv0lhkzv0lhkzv.webp
 author: PepaGold
 epigraph:
   text: La pelle non ha bisogno di più prodotti; ha bisogno che la si lasci difendersi.
@@ -135,3 +137,6 @@ Q: Qual è il sintomo più chiaro della perdita del cemento lipidico della barri
 
 **Risposta:** Falso! L'acne è spesso sintomo di una barriera alterata. Lavarsi in eccesso rimuove le ceramidi; la pelle reagisce producendo il doppio del sebo per difendersi, peggiorando l'acne.
 :::
+
+![Ilustración / Figura #1](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_hkzv0lhkzv0lhkzv.webp)
+

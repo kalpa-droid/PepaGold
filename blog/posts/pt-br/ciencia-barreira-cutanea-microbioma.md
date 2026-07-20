@@ -13,7 +13,9 @@ category_label: Ciência da Pele
 concept: barrera-cutanea-y-microbioma
 local_phenomenon: Clima Tropical Seco & Poluição
 region_label: Brasil
-media: []
+media:
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_hkzv0lhkzv0lhkzv.webp
 author: PepaGold
 epigraph:
   text: A pele não precisa de mais produtos; precisa que você a deixe se defender.
@@ -134,3 +136,6 @@ Q: Qual é o sintoma mais claro de que sua barreira cutânea perdeu a argamassa 
 
 **Resposta:** Mito! A acne costuma ser sintoma de uma barreira danificada. Ao lavar em excesso, você remove as ceramidas; a pele reage produzindo o dobro de óleo para se defender, piorando a acne.
 :::
+
+![Ilustración / Figura #1](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_hkzv0lhkzv0lhkzv.webp)
+

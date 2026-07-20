@@ -13,7 +13,9 @@ category_label: Ciencia & Piel
 concept: barrera-cutanea-y-microbioma
 local_phenomenon: Contaminación por PM2.5 & Clima Cálido
 region_label: México
-media: []
+media:
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_hkzv0lhkzv0lhkzv.webp
 author: PepaGold
 epigraph:
   text: La piel no necesita más productos; necesita que la dejes defenderse.
@@ -134,3 +136,6 @@ Q: ¿Cuál es el síntoma más claro de que tu barrera cutánea perdió su cemen
 
 **Respuesta:** ¡Mito! El acné suele ser síntoma de una barrera alterada. Al lavarte en exceso, eliminas las ceramidas y la flora protectora. Tu piel reacciona produciendo el doble de sebo para defenderse, lo que agrava los brotes.
 :::
+
+![Ilustración / Figura #1](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_hkzv0lhkzv0lhkzv.webp)
+
