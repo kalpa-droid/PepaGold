@@ -1269,8 +1269,10 @@
         showToast('¡Respuesta recibida de Paper Banana! Procesando WebP...');
         loadPostImages(slug);
       } catch (err) {
-        showToast('Servidor local Paper Banana no respondió en el puerto ' + serverUrl + '. Verificá que esté corriendo.');
+        showToast('Servidor local Paper Banana no respondió en ' + serverUrl);
       }
+    }
+
     // Insert Image Modal for Editor
     async function openInsertImageModal() {
       const slug = document.getElementById('ed-slug').value.trim() || currentEditingSlug;
