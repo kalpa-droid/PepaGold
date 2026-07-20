@@ -874,26 +874,41 @@
       }
     }
 
-    // Load Articles from GitHub
+    // Load Articles (GitHub API + Fallback to bundled posts.json)
     async function loadArticles() {
-      try {
-        const contents = await ghFetch('contents/blog/posts/es-ar');
-        articlesList = [];
+      const grid = document.getElementById('articles-grid');
+      if (grid) grid.innerHTML = '<p style="color: var(--color-dark-muted); grid-column: 1/-1; text-align: center; padding: 40px;">⏳ Cargando artículos de PepaGold...</p>';
 
-        for (const item of contents) {
-          if (item.name.endsWith('.md')) {
-            const fileData = await ghFetch(`contents/${item.path}`);
-            const rawContent = decodeURIComponent(escape(atob(fileData.content.replace(/\s/g, ''))));
-            const parsed = parseMarkdownPost(rawContent);
-            parsed.sha = fileData.sha;
-            parsed.path = item.path;
-            articlesList.push(parsed);
+      try {
+        if (ghToken) {
+          try {
+            const contents = await ghFetch('contents/blog/posts/es-ar');
+            articlesList = [];
+            for (const item of contents) {
+              if (item.name.endsWith('.md')) {
+                const fileData = await ghFetch(`contents/${item.path}`);
+                const rawContent = decodeURIComponent(escape(atob(fileData.content.replace(/\s/g, ''))));
+                const parsed = parseMarkdownPost(rawContent);
+                parsed.sha = fileData.sha;
+                parsed.path = item.path;
+                articlesList.push(parsed);
+              }
+            }
+          } catch(e) {
+            console.warn('GitHub API fetch failed, loading posts.json fallback', e);
+            const res = await fetch('/admin/posts.json');
+            articlesList = await res.json();
           }
+        } else {
+          const res = await fetch('/admin/posts.json');
+          articlesList = await res.json();
         }
+
         renderSidebarCategories();
         renderArticlesGrid();
       } catch (err) {
         showToast('Error cargando artículos: ' + err.message);
+        if (grid) grid.innerHTML = `<p style="color: #D32F2F; grid-column: 1/-1; text-align: center; padding: 40px;">⚠️ Error cargando artículos: ${err.message}</p>`;
       }
     }
 

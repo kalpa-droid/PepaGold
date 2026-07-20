@@ -958,8 +958,17 @@ def main():
         index_url = render_index(locale, posts)
         new_urls.append(index_url)
 
+    # Bundled posts.json for CMS fallback & guest mode
+    json_posts = []
+    for meta, body_md in all_meta:
+        if meta.get("locale") == "es-ar":
+            json_posts.append({"meta": meta, "body": body_md, "path": f"blog/posts/es-ar/{meta['slug']}.md"})
+    os.makedirs("admin", exist_ok=True)
+    with open("admin/posts.json", "w", encoding="utf-8") as f:
+        json.dump(json_posts, f, ensure_ascii=False, indent=2)
+
     update_sitemap(new_urls)
-    print(f"Listo: {len(all_meta)} artículo(s) generado(s) en {len(posts_by_locale)} idioma(s).")
+    print(f"Listo: {len(all_meta)} artículo(s) generado(s) en {len(posts_by_locale)} idioma(s). Admin posts.json actualizado.")
 
 if __name__ == "__main__":
     main()
