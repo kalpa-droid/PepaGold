@@ -1,40 +1,39 @@
 # Protocolo y Flujo de Trabajo del Editor IA de PepaGold
 
-Este documento establece la normativa estricta para la edición, optimización SEO, imágenes y traducción multilingüe de los artículos del blog PepaGold.
+Este documento establece la normativa estricta para la edición, optimización SEO, accesibilidad de contraste, imágenes y traducción multilingüe de los artículos del blog PepaGold.
 
 ---
 
 ## 📌 Principios Fundamentales del Flujo
 
-1. **Autoconversión a `.webp` Transparente:**
-   - **Toda imagen** que el usuario suba manualmente o que la IA genere se convierte automáticamente en el navegador a `.webp` de alta definición (calidad 85%).
-   - Se elimina cualquier requerimiento de botones manuales de optimización.
+1. **Alto Contraste y Accesibilidad Obligatorios (Bloques `:::stat`):**
+   - **Regla Estricta:** Ningún bloque de texto, cita o estadística debe renderizar texto muted o con opacidad sobre fondos oscuros.
+   - Todos los bloques `:::stat` deben usar fondo de alto contraste (`#FDF7F7`) con borde rosa empolvado (`#D48C90`), número grande en `2.6rem` y texto en color oscuro (`#2A2523`) con **ratio de contraste AAA (mínimo 15:1)**.
 
-2. **Imágenes Visualmente Limpias (Sin Textos Incrustados):**
-   - Las imágenes generadas (diagramas o fotorrealismo) **no deben incluir palabras ni números escritos en los píxeles de la imagen**.
-   - **Toda referencia, número o explicación** se redacta en el texto Markdown del artículo. Esto garantiza que las referencias se traduzcan automáticamente y de forma nativa a los **10 idiomas**.
+2. **Flujo Inteligente de Asignación de Imágenes (`✨ Aplicar Imágenes al Artículo`):**
+   - **Paso 1 (Planificación IA):** La IA editora redacta el artículo, reserva los espacios para imágenes (Portada `media[0]`, Cuerpo `imagen_1.webp`), escribe las referencias explicativas en el texto Markdown y genera los prompts ultra-detallados de 8K en `meta.image_prompts`.
+   - **Paso 2 (Generación Usuario):** El usuario copia el prompt con el botón **`📋 Copiar Prompt`**, genera o busca su foto y la sube en el CMS con **`➕ Subir Imagen (Auto WebP)`**.
+   - **Paso 3 (Publicación en 1 Clic):** Al tocar **`✨ Aplicar Imágenes al Artículo y Publicar`**, el CMS asigna automáticamente las imágenes `.webp` subidas a la portada y a los espacios del texto, publica en GitHub y distribuye los cambios a los **10 idiomas del blog**.
 
-3. **Respeto a las Imágenes Manuales del Usuario:**
-   - Si el usuario sube su propia foto o gráfico a la carpeta `assets/imagenes/blog/{slug}/`, la IA la respeta y redacta las referencias en torno a esa imagen.
+3. **Imágenes Visualmente Limpias (Sin Textos Incrustados):**
+   - Las imágenes generadas se mantienen **sin textos incrustados dentro del gráfico**.
+   - Toda leyenda o explicación se redacta en el cuerpo Markdown para garantizar que se traduzca nativamente a los 10 idiomas.
 
 ---
 
-## 🚀 Pasos de Ejecución Autónoma (Comando "Procesá el artículo PG-XXX")
+## 🚀 Pasos de Ejecución Autónoma
 
-1. **Lectura y SEO del Borrador `es-ar`:**
+1. **SEO y Maquetación `es-ar`:**
    - Optimiza `title` y `description`.
-   - Organiza la estructura con `<h1>`, `<h2>`, `<h3>` y bloques (`:::tip`, `:::info`, `:::stat`, `:::checklist`, `:::quiz`, `:::funfact`).
+   - Incluye bloques de alto contraste (`:::tip`, `:::info`, `:::stat`, `:::checklist`, `:::quiz`, `:::funfact`).
 
-2. **Generación e Inyección de Imágenes `.webp`:**
-   - Escribe los prompts en `meta.image_prompts`.
-   - Genera las imágenes `.webp` con Paper Banana local (`python3 scripts/generate_paper_banana.py`).
-   - Inserta la portada y las imágenes en el cuerpo del texto en `es-ar`.
+2. **Prompts e Inyección:**
+   - Escribe los prompts 8K en `meta.image_prompts`.
+   - Deja listos los espacios de imágenes en el texto Markdown.
 
 3. **Traducción y Adaptación Multilingüe (10 Idiomas):**
-   - Genera los 10 archivos `.md` (`es-ar`, `es-mx`, `es-es`, `en-us`, `fr-fr`, `de-de`, `it-it`, `pt-br`, `ru-ru`, `zh-hans`).
-   - Aplica la **Regla de Fallback Genérico Universal** (*"Viento seco y fuerte"* si no hay equivalente local).
-   - Traduce todas las explicaciones y leyendas de las imágenes en cada idioma.
+   - Genera los 10 archivos `.md` aplicando la Regla de Fallback Genérico Universal si no hay fenómeno local equivalente.
 
-4. **Sellado de Estado:**
-   - **Únicamente al completar el 100% de las 10 regiones**, setea `date_ai_processed: "YYYY-MM-DD"`.
+4. **Publicación y Deploy:**
+   - Setea `date_ai_processed: "YYYY-MM-DD"`.
    - Ejecuta `./venv/bin/python build_blog.py` y `git push origin main`.

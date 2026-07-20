@@ -663,6 +663,7 @@
             <input type="file" id="img-upload-input" accept="image/*" style="display: none;" onchange="uploadImageToPost(this)" />
           </label>
           <button class="btn btn-secondary btn-sm" onclick="openImagePromptsModal()">📋 Prompts e Indicaciones</button>
+          <button class="btn btn-primary btn-sm" onclick="applyUploadedImagesToArticle()" style="background: #2E7D32; border-color: #2E7D32;">✨ Aplicar Imágenes al Artículo y Publicar</button>
         </div>
         <div id="modal-img-grid" class="image-grid">
           <!-- Populated dynamically -->
@@ -1217,6 +1218,45 @@
         loadPostImages(slug);
       } catch (err) {
         showToast('Error al eliminar: ' + err.message);
+      }
+    }
+
+    async function applyUploadedImagesToArticle() {
+      if (!activeModalPost) return;
+      if (!ghToken) return alert('🔑 Para guardar y publicar cambios necesitás ingresar con tu Personal Access Token.');
+
+      const slug = activeModalPost.meta.slug;
+      showToast('✨ Asignando imágenes subidas a los espacios del artículo...');
+
+      try {
+        const files = await ghFetch(`contents/assets/imagenes/blog/${slug}`).catch(() => []);
+        const webpFiles = files.filter(f => f.name.endsWith('.webp') || f.name.endsWith('.png') || f.name.endsWith('.jpg'));
+
+        if (!webpFiles.length) {
+          return alert('No hay imágenes subidas todavía en esta carpeta. Subí al menos una imagen primero.');
+        }
+
+        const sortedPaths = webpFiles.map(f => `/${f.path}`);
+        const meta = { ...activeModalPost.meta, media: sortedPaths };
+
+        const fullMarkdown = dumpMarkdownPost(meta, activeModalPost.body);
+        const encodedContent = btoa(unescape(encodeURIComponent(fullMarkdown)));
+
+        await ghFetch(`contents/blog/posts/es-ar/${slug}.md`, {
+          method: 'PUT',
+          body: JSON.stringify({
+            message: `Assign uploaded images to post ${slug}`,
+            content: encodedContent,
+            sha: activeModalPost.sha,
+            branch: BRANCH
+          })
+        });
+
+        showToast('🎉 ¡Imágenes aplicadas con éxito al artículo!');
+        await loadArticles();
+        closeModal('modal-images');
+      } catch (err) {
+        showToast('Error al aplicar imágenes: ' + err.message);
       }
     }
 

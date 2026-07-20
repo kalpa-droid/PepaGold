@@ -189,12 +189,24 @@ def render_funfact(title, content):
 
 def render_stat(content):
     lines = [l for l in content.strip().split("\n") if l.strip()]
-    number = lines[0] if lines else ""
-    caption = " ".join(lines[1:]) if len(lines) > 1 else ""
-    return (
-        f'<div class="callout stat-box"><p class="stat-number">{_inline(number)}</p>'
-        f'<p class="stat-caption">{_inline(caption)}</p></div>'
-    )
+    if not lines: return ""
+    first_line = lines[0]
+
+    match = re.match(r"^\*\*(.*?)\*\*\s*(.*)$", first_line)
+    if match:
+        number = match.group(1)
+        caption = (match.group(2) + " " + " ".join(lines[1:])).strip()
+    elif len(lines) > 1:
+        number = first_line
+        caption = " ".join(lines[1:])
+    else:
+        number = ""
+        caption = first_line
+
+    num_html = f'<p class="stat-number">{_inline(number)}</p>' if number else ""
+    cap_html = f'<p class="stat-caption">{_inline(caption)}</p>' if caption else ""
+
+    return f'<div class="callout stat-box">{num_html}{cap_html}</div>'
 
 def render_checklist(title, content, block_id):
     items = [l[2:].strip() for l in content.strip().split("\n") if l.strip().startswith("- ")]
@@ -375,9 +387,9 @@ BRAND_HEAD = """<!DOCTYPE html>
   .callout-info {{ background:var(--bg-secondary); border-left:4px solid var(--color-accent); }}
   .callout-funfact {{ background:#FFF9E6; border:1px solid #FFE082; border-left:4px solid #FFB300; }}
   
-  .stat-box {{ text-align:center; background:var(--color-dark); color:#fff; padding:34px 20px; }}
-  .stat-number {{ font-family:Georgia,serif; font-size:2.4rem; margin-bottom:6px; }}
-  .stat-caption {{ font-size:0.95rem; color:rgba(255,255,255,0.75); }}
+  .stat-box {{ text-align:center; background:var(--bg-accent-light); border:1px solid var(--border-color); border-left:5px solid var(--color-accent); padding:26px 24px; border-radius:14px; margin:28px 0; box-shadow: var(--shadow-md); }}
+  .stat-number {{ font-family:Georgia,serif; font-size:2.6rem; font-weight:700; color:var(--color-dark); margin-bottom:8px; line-height:1.1; }}
+  .stat-caption {{ font-size:1.05rem; font-weight:500; color:var(--color-dark); line-height:1.6; opacity:1; }}
   
   .checklist-box {{ background:var(--bg-secondary); border:1px solid var(--border-color); }}
   .checklist {{ list-style:none; margin-top:10px; }}
