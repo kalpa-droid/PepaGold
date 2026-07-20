@@ -958,14 +958,34 @@ def main():
         index_url = render_index(locale, posts)
         new_urls.append(index_url)
 
-    # Bundled posts.json for CMS fallback & guest mode
+    # Bundled posts.json for CMS fallback & concept lookup
     json_posts = []
+    concept_map = {}
+
     for meta, body_md in all_meta:
-        if meta.get("locale") == "es-ar":
+        loc = meta.get("locale", "es-ar")
+        concept = meta.get("concept", meta["slug"])
+        folder = LOCALE_FOLDERS.get(loc, "")
+        web_url = f"/{folder}/blog/{meta['slug']}" if folder else f"/blog/{meta['slug']}"
+
+        concept_map.setdefault(concept, {})[loc] = {
+            "slug": meta["slug"],
+            "title": meta["title"],
+            "web_url": web_url,
+            "phenomenon": meta.get("local_phenomenon", "Fenómeno Genérico"),
+            "region_label": meta.get("region_label", loc)
+        }
+
+        if loc == "es-ar":
             json_posts.append({"meta": meta, "body": body_md, "path": f"blog/posts/es-ar/{meta['slug']}.md"})
+
+    admin_bundle = {
+        "posts": json_posts,
+        "concept_map": concept_map
+    }
     os.makedirs("admin", exist_ok=True)
     with open("admin/posts.json", "w", encoding="utf-8") as f:
-        json.dump(json_posts, f, ensure_ascii=False, indent=2)
+        json.dump(admin_bundle, f, ensure_ascii=False, indent=2)
 
     update_sitemap(new_urls)
     print(f"Listo: {len(all_meta)} artículo(s) generado(s) en {len(posts_by_locale)} idioma(s). Admin posts.json actualizado.")

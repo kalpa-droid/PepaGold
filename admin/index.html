@@ -1300,34 +1300,18 @@
       showToast('Imagen insertada en el texto.');
     }
 
-    // Metadata IA Modal (Fetches ALL 10 Locales dynamically from GitHub)
+    // Metadata IA Modal (Uses Concept Map)
     async function openMetadataModal(slug) {
       const art = articlesList.find(a => a.meta.slug === slug);
       if (!art) return;
 
-      const modalContent = document.getElementById('modal-meta-content');
-      modalContent.innerHTML = '<p style="font-size: 13px;">Consultando las 10 regiones en GitHub...</p>';
       openModal('modal-metadata');
+      const modalContent = document.getElementById('modal-meta-content');
 
       const meta = art.meta;
-      const localeResults = {};
-
-      for (const [code, info] of Object.entries(LOCALES)) {
-        try {
-          const fileData = await ghFetch(`contents/blog/posts/${code}/${slug}.md`).catch(() => null);
-          if (fileData) {
-            const rawContent = decodeURIComponent(escape(atob(fileData.content.replace(/\s/g, ''))));
-            const parsed = parseMarkdownPost(rawContent);
-            localeResults[code] = parsed.meta;
-          } else {
-            localeResults[code] = null;
-          }
-        } catch (e) {
-          localeResults[code] = null;
-        }
-      }
-
-      const completedLocalesCount = Object.values(localeResults).filter(m => m !== null).length;
+      const concept = meta.concept || slug;
+      const conceptData = (window.conceptMap && window.conceptMap[concept]) ? window.conceptMap[concept] : {};
+      const completedLocalesCount = Object.keys(conceptData).length;
 
       const html = `
         <div class="meta-box-row"><span class="meta-box-label">📋 Article ID:</span><span class="meta-box-val">${meta.article_id || 'PG-001'}</span></div>
@@ -1339,11 +1323,11 @@
         <h4 style="margin-top: 18px; margin-bottom: 8px; font-family: var(--font-serif);">🌎 Adaptaciones por Región (${completedLocalesCount}/10 Idiomas)</h4>
         <div class="region-grid">
           ${Object.entries(LOCALES).map(([code, info]) => {
-            const locMeta = localeResults[code];
+            const locMeta = conceptData[code];
             if (!locMeta) {
               return `<div class="region-card-mini" style="opacity: 0.65;">${info.flag} <b>${info.name}:</b> ⏳ Pendiente</div>`;
             }
-            const phenom = locMeta.local_phenomenon || 'Fenómeno Genérico';
+            const phenom = locMeta.phenomenon || 'Fenómeno Genérico';
             const regLabel = locMeta.region_label || info.name;
             return `<div class="region-card-mini">${info.flag} <b>${info.name}:</b> ${phenom} (${regLabel})</div>`;
           }).join('')}
@@ -1361,52 +1345,36 @@
       modalContent.innerHTML = html;
     }
 
-    // Translations Modal (With Real Slug Preview & Direct Reading Modal)
+    // Translations Modal (With Real Localized Slug & 200 OK Web Preview)
     async function openTranslationsModal(slug) {
       const art = articlesList.find(a => a.meta.slug === slug);
       if (!art) return;
 
       const modalContent = document.getElementById('modal-trans-content');
-      modalContent.innerHTML = '<p style="font-size: 13px;">Consultando traducciones en GitHub...</p>';
+      modalContent.innerHTML = '<p style="font-size: 13px;">Cargando traducciones...</p>';
       openModal('modal-translations');
 
-      const localeData = {};
       const concept = art.meta.concept || slug;
-
-      for (const [code, info] of Object.entries(LOCALES)) {
-        try {
-          const fileData = await ghFetch(`contents/blog/posts/${code}/${slug}.md`).catch(() => null);
-          if (fileData) {
-            const rawContent = decodeURIComponent(escape(atob(fileData.content.replace(/\s/g, ''))));
-            const parsed = parseMarkdownPost(rawContent);
-            localeData[code] = parsed;
-          } else {
-            localeData[code] = null;
-          }
-        } catch (e) {
-          localeData[code] = null;
-        }
-      }
+      const conceptData = (window.conceptMap && window.conceptMap[concept]) ? window.conceptMap[concept] : {};
 
       const html = Object.entries(LOCALES).map(([code, info]) => {
-        const post = localeData[code];
-        const folder = code === 'es-ar' ? '' : code.split('-')[1];
-        const realSlug = post ? (post.meta.slug || slug) : slug;
-        const webUrl = folder ? `/${folder}/blog/${realSlug}/` : `/blog/${realSlug}/`;
+        const locInfo = conceptData[code];
+        const realSlug = locInfo ? locInfo.slug : slug;
+        const webUrl = locInfo ? locInfo.web_url : `/blog/${slug}`;
 
         return `
           <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; border-bottom: 1px solid var(--border-color);">
             <div>
               <span>${info.flag} <b>${info.name}</b></span>
               <span style="font-size: 11px; color: var(--color-dark-muted); margin-left: 8px;">(${code})</span>
-              ${post ? `<div style="font-size: 11px; color: var(--color-accent);">🔗 /${realSlug}</div>` : ''}
+              ${locInfo ? `<div style="font-size: 11px; color: var(--color-accent);">🔗 ${locInfo.web_url}</div>` : ''}
             </div>
             <div style="display: flex; gap: 6px; align-items: center;">
-              ${post 
+              ${locInfo 
                 ? `<span class="cat-badge" style="background: #E8F5E9; color: #2E7D32;">✅ Listo</span>` 
                 : `<span class="cat-badge" style="background: #FFF3E0; color: #E65100;">⏳ Pendiente</span>`}
-              ${post ? `<a href="${webUrl}" target="_blank" class="btn btn-secondary btn-sm" style="text-decoration: none;">👁️ Ver en Web</a>` : ''}
-              ${post ? `<button onclick="readTranslationModal('${code}', '${realSlug}')" class="btn btn-secondary btn-sm">📖 Ver Contenido</button>` : ''}
+              ${locInfo ? `<a href="${webUrl}" target="_blank" class="btn btn-secondary btn-sm" style="text-decoration: none;">👁️ Ver en Web</a>` : ''}
+              <button onclick="readTranslationModal('${code}', '${realSlug}')" class="btn btn-secondary btn-sm">📖 Ver Contenido</button>
             </div>
           </div>
         `;
