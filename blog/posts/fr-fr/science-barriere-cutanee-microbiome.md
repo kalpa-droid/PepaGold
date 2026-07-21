@@ -15,11 +15,11 @@ concept: barrera-cutanea-y-microbioma
 local_phenomenon: Air sec du chauffage & Pollution
 region_label: France
 media:
-- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
-- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_1.webp
-- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_2.webp
-- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_3.webp
-- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_4.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_1.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_2.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_3.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_4.webp
 author: PepaGold
 epigraph:
   text: La peau n'a pas besoin de plus de produits ; elle a besoin qu'on la laisse

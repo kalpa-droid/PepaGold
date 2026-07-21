@@ -15,11 +15,11 @@ concept: barrera-cutanea-y-microbioma
 local_phenomenon: Trockene Heizungsluft & Winterkälte
 region_label: Deutschland
 media:
-- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
-- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_1.webp
-- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_2.webp
-- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_3.webp
-- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_4.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_1.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_2.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_3.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_4.webp
 author: PepaGold
 epigraph:
   text: Die Haut braucht nicht mehr Produkte; sie braucht die Freiheit, sich selbst

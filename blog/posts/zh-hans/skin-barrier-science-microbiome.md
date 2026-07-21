@@ -13,11 +13,11 @@ concept: barrera-cutanea-y-microbioma
 local_phenomenon: 城市空气污染与PM2.5
 region_label: 中国
 media:
-- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
-- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_1.webp
-- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_2.webp
-- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_3.webp
-- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_4.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_1.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_2.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_3.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_4.webp
 author: PepaGold
 epigraph:
   text: 肌肤不需要堆砌过多护肤品；它需要的是恢复自我防御力。

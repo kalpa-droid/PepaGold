@@ -15,13 +15,17 @@ concept: barrera-cutanea-y-microbioma
 local_phenomenon: Clima Mediterráneo & Calima
 region_label: España
 media:
-  - >-
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_1.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_2.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_3.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_4.webp
     /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
   - >-
-    /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_hkzv0lhkzv0lhkzv.webp
-  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/p3.webp
-  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/p4.webp
-  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/p5.webp
+    /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_1.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_2.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_3.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_4.webp
 author: PepaGold
 epigraph:
   text: La piel no necesita más productos; necesita que la dejes defenderse.
@@ -119,7 +123,7 @@ Imagina la capa más externa de tu piel como una pared de ladrillos diseñada pa
 - **Los Ladrillos (Corneocitos):** Células súper resistentes empaquetadas con queratina que te protegen de rasguños y fricción.
 - **El Cemento (Matriz Lipídica):** El pegamento biológico que mantiene unidos los ladrillos. Está compuesto por **Ceramidas (50%)**, Colesterol (25%) y Ácidos Grasos Libres (15%).
 
-![Diagrama 3D de la arquitectura de la piel: ladrillos de queratina y cemento lipídico](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_hkzv0lhkzv0lhkzv.webp)
+![Diagrama 3D de la arquitectura de la piel: ladrillos de queratina y cemento lipídico](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_1.webp)
 
 Cuando ese cemento lipídico se degrada, la humedad de tu piel se escapa y cualquier bacteria entra sin pedir permiso.
 
@@ -137,7 +141,7 @@ Por encima de esa pared de ladrillos tienes una película protectora invisible d
 
 Este ambiente ácido desactiva bacterias dañinas y crea el hábitat ideal para tu **microbioma cutáneo**: millones de bacterias buenas que viven en tu piel y luchan por ti.
 
-![Ecosistema del microbioma cutáneo y bacterias benéficas en superficie](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/p3.webp)
+![Ecosistema del microbioma cutáneo y bacterias benéficas en superficie](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_2.webp)
 
 Bacterias benéficas como el _Staphylococcus epidermidis_ se alimentan de tus lípidos naturales y sintetizan defensas naturales contra patógenos. Si usas jabones comunes alcalinos, destruyes el manto ácido y tus bacterias protectoras mueren.
 
@@ -153,7 +157,7 @@ Tu piel soporta agresiones diarias, pero tiene un límite:
 2. **Limpiadores Agresivos (Sulfatos):** Tensoactivos pesados como SLS o SLES disuelven tu matriz lipídica como si fuera grasa en una sartén.
 3. **Exfoliación Excesiva:** Usar ácidos o cepillos físicos con demasiada frecuencia retira capas protectoras antes de su regeneración.
 
-![Microfisuras en el estrato córneo causadas por calima y sulfatos](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/p4.webp)
+![Microfisuras en el estrato córneo causadas por calima y sulfatos](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_3.webp)
 
 :::checklist Señales de Alarma: ¿Tu barrera está rota?
 - Tu piel se ve opaca y sin luz natural.
@@ -170,7 +174,7 @@ La regla de oro para reparar la piel es muy simple: **dejar de agredirla**.
 2. **Reposición Lipídica:** Utiliza cremas enriquecidas con ceramidas, ácido hialurónico y escualano.
 3. **Prebióticos Tópicos:** Prefiere cosméticos con inulina para nutrir las bacterias benéficas y reequilibrar la flora cutánea.
 
-![Limpieza atraumática sin fricción con tecnología de microfibra Laska Mini](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/p5.webp)
+![Limpieza atraumática sin fricción con tecnología de microfibra Laska Mini](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_4.webp)
 
 :::quiz Test de Diagnóstico Cutáneo
 Q: ¿Cuál es el síntoma más claro de que tu barrera cutánea perdió su cemento lipídico?

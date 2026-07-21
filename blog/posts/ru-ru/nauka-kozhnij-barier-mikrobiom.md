@@ -14,11 +14,11 @@ concept: barrera-cutanea-y-microbioma
 local_phenomenon: Сухой воздух отопления и морозы
 region_label: Россия
 media:
-- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
-- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_1.webp
-- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_2.webp
-- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_3.webp
-- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_4.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_1.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_2.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_3.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_4.webp
 author: PepaGold
 epigraph:
   text: Коже не нужно больше косметики; ей нужно не мешать защищаться.
