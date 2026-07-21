@@ -14,6 +14,7 @@ category_label: Skin Science
 concept: barrera-cutanea-y-microbioma
 local_phenomenon: Dry HVAC Indoor Air & Pollution
 region_label: United States
+cover_image: /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
 media:
   - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
   - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_1.webp

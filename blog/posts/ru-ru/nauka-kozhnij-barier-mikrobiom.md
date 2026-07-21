@@ -13,6 +13,7 @@ category_label: Наука о коже
 concept: barrera-cutanea-y-microbioma
 local_phenomenon: Сухой воздух отопления и морозы
 region_label: Россия
+cover_image: /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
 media:
   - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
   - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_1.webp

@@ -14,12 +14,13 @@ category_label: Ciencia & Piel
 concept: barrera-cutanea-y-microbioma
 local_phenomenon: Contaminación por PM2.5 & Clima Cálido
 region_label: México
+cover_image: /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
 media:
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
   - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_1.webp
   - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_2.webp
   - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_3.webp
   - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_4.webp
-  - >-
     /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
 author: PepaGold
 epigraph:

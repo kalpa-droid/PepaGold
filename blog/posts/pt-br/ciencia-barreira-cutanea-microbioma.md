@@ -13,6 +13,7 @@ category_label: Ciência da Pele
 concept: barrera-cutanea-y-microbioma
 local_phenomenon: Clima Tropical Seco & Poluição
 region_label: Brasil
+cover_image: /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
 media:
   - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
   - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_1.webp

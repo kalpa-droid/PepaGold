@@ -346,10 +346,6 @@ def preprocess_custom_blocks(md_text, slug, locale="es-ar"):
         return ""
     return BLOCK_RE.sub(repl, md_text)
 
-# =========================================================================
-# FUNCIONES MULTIMEDIA (Fase 2)
-# =========================================================================
-
 def render_media(media_list):
     if not media_list:
         return (
@@ -366,6 +362,23 @@ def render_media(media_list):
             html += f'<img src="{src}" style="flex: 1; width: 100%; object-fit: cover; border-radius: 8px;" alt="Blog Media">'
     html += '</div>'
     return html
+
+def get_cover_image(meta):
+    if meta.get("cover_image"):
+        return meta["cover_image"]
+    media = meta.get("media", [])
+    if not media:
+        return ""
+    for item in media:
+        src = item if isinstance(item, str) else item.get('file', '')
+        if any(k in src.lower() for k in ['portada', 'gemini_generated_image', 'cover', 'hero']):
+            return src
+    for item in media:
+        src = item if isinstance(item, str) else item.get('file', '')
+        if 'cuerpo' not in src.lower():
+            return src
+    first = media[0]
+    return first if isinstance(first, str) else first.get('file', '')
 
 # =========================================================================
 # PLANTILLAS HTML
@@ -857,20 +870,10 @@ def render_article(meta, body_md, hreflang_tags, lookup):
     home_url = f"/{base}" if folder else "/"
     blog_index_url = f"/{base}blog/"
     
-    raw_media = meta.get("media", [])
-    if not raw_media and meta.get("cover_image"):
-        raw_media = [meta.get("cover_image")]
-
-    valid_media = []
-    for m in raw_media:
-        if isinstance(m, str):
-            clean_p = m.lstrip("/")
-            if os.path.exists(clean_p):
-                valid_media.append(m)
-
-    cover_abs = f"{SITE_URL}{valid_media[0]}" if valid_media else f"{SITE_URL}/assets/imagenes/icono.svg"
-    if valid_media:
-        media_gallery = render_media([valid_media[0]])
+    cover_src = get_cover_image(meta)
+    cover_abs = f"{SITE_URL}{cover_src}" if cover_src else f"{SITE_URL}/assets/imagenes/icono.svg"
+    if cover_src:
+        media_gallery = render_media([cover_src])
         media_html = f'<div class="hero-image-placeholder">{media_gallery}</div>'
     else:
         media_html = ""
@@ -972,11 +975,8 @@ def render_index(locale, posts):
     cards = []
     for p in posts_sorted:
         url = f"/{base}blog/{p['slug']}/"
-        media = p.get("media", [])
-        if not media and p.get("cover_image"):
-            media = [p.get("cover_image")]
-        cover = [media[0]] if media else []
-        media_html = render_media(cover)
+        cover_src = get_cover_image(p)
+        media_html = render_media([cover_src]) if cover_src else ""
         cat_label = get_cat_label(p.get("category"), locale)
         
         card = f"""

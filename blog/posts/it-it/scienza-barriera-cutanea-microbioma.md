@@ -13,6 +13,7 @@ category_label: Scienza della Pelle
 concept: barrera-cutanea-y-microbioma
 local_phenomenon: Aria secca dei riscaldamenti & Smog
 region_label: Italia
+cover_image: /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
 media:
   - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
   - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_1.webp

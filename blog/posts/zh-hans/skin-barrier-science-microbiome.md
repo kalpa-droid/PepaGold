@@ -12,6 +12,7 @@ category_label: 皮肤科学
 concept: barrera-cutanea-y-microbioma
 local_phenomenon: 城市空气污染与PM2.5
 region_label: 中国
+cover_image: /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
 media:
   - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
   - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_1.webp
