@@ -659,8 +659,8 @@
       <div class="modal-body">
         <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px;">
           <label class="btn btn-primary btn-sm">
-            ➕ Subir Imagen (Auto WebP)
-            <input type="file" id="img-upload-input" accept="image/*" style="display: none;" onchange="uploadImageToPost(this)" />
+            ➕ Subir Imágenes (Auto WebP Múltiple)
+            <input type="file" id="img-upload-input" accept="image/*" multiple style="display: none;" onchange="uploadImageToPost(this)" />
           </label>
           <button class="btn btn-secondary btn-sm" onclick="openImagePromptsModal()">📋 Prompts e Indicaciones</button>
           <button class="btn btn-primary btn-sm" onclick="applyUploadedImagesToArticle()" style="background: #2E7D32; border-color: #2E7D32;">✨ Aplicar Imágenes al Artículo y Publicar</button>
@@ -1226,51 +1226,59 @@
     }
 
     async function uploadImageToPost(input) {
-      if (!input.files || !input.files[0] || !activeModalPost) return;
+      if (!input.files || !input.files.length || !activeModalPost) return;
       if (!ghToken) return alert('🔑 Para subir imágenes a GitHub necesitás ingresar con tu Personal Access Token.');
       
-      const file = input.files[0];
-      showToast('⚡ Convirtiendo imagen a .webp en el navegador...');
+      const files = Array.from(input.files);
+      const total = files.length;
+      showToast(`⚡ Procesando ${total} imagen(es) con conversión automática a .webp...`);
 
-      const img = new Image();
-      const objectUrl = URL.createObjectURL(file);
-      img.src = objectUrl;
-      await new Promise(res => img.onload = res);
+      for (let i = 0; i < total; i++) {
+        const file = files[i];
+        showToast(`⚡ Convirtiendo y subiendo (${i + 1}/${total}): ${file.name}...`);
 
-      const canvas = document.createElement('canvas');
-      canvas.width = img.width;
-      canvas.height = img.height;
-      const ctx = canvas.getContext('2d');
-      ctx.drawImage(img, 0, 0);
+        try {
+          const img = new Image();
+          const objectUrl = URL.createObjectURL(file);
+          img.src = objectUrl;
+          await new Promise(res => img.onload = res);
 
-      const webpDataUrl = canvas.toDataURL('image/webp', 0.85);
-      const webpBase64 = webpDataUrl.split(',')[1];
-      
-      const rawName = file.name.substring(0, file.name.lastIndexOf('.')) || file.name;
-      const cleanName = rawName.toLowerCase().replace(/[^a-z0-9._-]/g, '-') + '.webp';
-      const path = `assets/imagenes/blog/${activeModalPost.meta.slug}/${cleanName}`;
+          const canvas = document.createElement('canvas');
+          canvas.width = img.width;
+          canvas.height = img.height;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0);
 
-      try {
-        const existingFile = await ghFetch(`contents/${path}`).catch(() => null);
-        const bodyPayload = {
-          message: `Upload ${cleanName} to ${activeModalPost.meta.slug}`,
-          content: webpBase64,
-          branch: BRANCH
-        };
-        if (existingFile && existingFile.sha) {
-          bodyPayload.sha = existingFile.sha;
+          const webpDataUrl = canvas.toDataURL('image/webp', 0.85);
+          const webpBase64 = webpDataUrl.split(',')[1];
+          URL.revokeObjectURL(objectUrl);
+          
+          const rawName = file.name.substring(0, file.name.lastIndexOf('.')) || file.name;
+          const cleanName = rawName.toLowerCase().replace(/[^a-z0-9._-]/g, '-') + '.webp';
+          const path = `assets/imagenes/blog/${activeModalPost.meta.slug}/${cleanName}`;
+
+          const existingFile = await ghFetch(`contents/${path}`).catch(() => null);
+          const bodyPayload = {
+            message: `Upload ${cleanName} to ${activeModalPost.meta.slug}`,
+            content: webpBase64,
+            branch: BRANCH
+          };
+          if (existingFile && existingFile.sha) {
+            bodyPayload.sha = existingFile.sha;
+          }
+
+          await ghFetch(`contents/${path}`, {
+            method: 'PUT',
+            body: JSON.stringify(bodyPayload)
+          });
+        } catch (err) {
+          console.error(`Error uploading ${file.name}:`, err);
         }
-
-        await ghFetch(`contents/${path}`, {
-          method: 'PUT',
-          body: JSON.stringify(bodyPayload)
-        });
-
-        showToast('¡Imagen subida y convertida a .webp automáticamente con éxito!');
-        loadPostImages(activeModalPost.meta.slug);
-      } catch (err) {
-        showToast('Error al subir imagen a GitHub: ' + err.message);
       }
+
+      showToast(`✨ ¡Las ${total} imágenes fueron convertidas a .webp y subidas con éxito!`);
+      loadPostImages(activeModalPost.meta.slug);
+      input.value = '';
     }
 
     async function deletePostImage(slug, filename, sha) {
