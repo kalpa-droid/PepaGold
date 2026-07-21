@@ -1389,9 +1389,14 @@
 
       const html = `
         <div style="font-size: 14px; color: var(--color-dark-muted); line-height: 1.6;">
-          <div style="margin-bottom: 16px; background: var(--bg-accent-light); padding: 14px; border-radius: 12px; border: 1px solid var(--border-color);">
-            <div style="font-weight: 600; color: var(--color-dark); margin-bottom: 4px;">🎨 Prompts Ultra-Detallados para Generadores de IA</div>
-            <div style="font-size: 12px;">Copiá cualquiera de estos prompts y pegalo en tu generador de imágenes preferido (Midjourney, DALL-E 3, Imagen 3, ChatGPT). Luego subí la imagen con el botón <b>➕ Subir Imagen (Auto WebP)</b>.</div>
+          <div style="margin-bottom: 16px; background: var(--bg-accent-light); padding: 14px; border-radius: 12px; border: 1px solid var(--border-color); display: flex; flex-direction: column; gap: 10px;">
+            <div>
+              <div style="font-weight: 600; color: var(--color-dark); margin-bottom: 4px;">🎨 Prompts Ultra-Detallados para Generadores de IA</div>
+              <div style="font-size: 12px;">Copiá cualquiera de estos prompts y pegalo en tu generador de imágenes preferido (Midjourney, DALL-E 3, Imagen 3, ChatGPT). Luego subí la imagen con el botón <b>➕ Subir Imagen (Auto WebP)</b>.</div>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="copyAllPromptsToClipboard()" style="background: #2E7D32; border-color: #2E7D32; font-weight: 600; align-self: flex-start;">
+              ✨ Copiar Todos los Prompts Juntos (1 a ${prompts.length})
+            </button>
           </div>
           ${prompts.map((p, idx) => `
             <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; padding: 16px; margin-bottom: 14px;">
@@ -1416,6 +1421,17 @@
       el.select();
       navigator.clipboard.writeText(el.value);
       showToast(`¡Prompt #${idx + 1} copiado al portapapeles!`);
+    }
+
+    function copyAllPromptsToClipboard() {
+      if (!activeModalPost) return;
+      const prompts = activeModalPost.meta.image_prompts || [];
+      if (!prompts.length) return alert('No hay prompts disponibles para este artículo.');
+      
+      const allText = prompts.map((p, idx) => `=== PROMPT #${idx + 1} (${idx === 0 ? 'PORTADA 16:9' : 'SECCIÓN H2 1:1'}) ===\n${p}`).join('\n\n');
+      
+      navigator.clipboard.writeText(allText);
+      showToast(`✨ ¡Los ${prompts.length} prompts fueron copiados juntos al portapapeles!`);
     }
 
     // Insert Image Modal for Editor
