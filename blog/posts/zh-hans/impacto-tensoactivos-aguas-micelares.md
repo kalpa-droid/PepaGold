@@ -7,8 +7,8 @@ date: '2026-07-21'
 date_created: '2026-07-21'
 date_ai_processed: '2026-07-21'
 locale: zh-hans
-category: cuidado-producto
-category_label: "🧼 产品使用与护理"
+category: barrera-cutanea
+category_label: "🔬 皮肤科学"
 concept: el-impacto-de-tensoactivos-jabones-y-aguas-micelares-en-la-barrera-cut-nea
 local_phenomenon: "城市雾霾 PM2.5 与季节性干旱风"
 cover_image: /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/gemini_generated_image_8b2pk18b2pk18b2p.webp

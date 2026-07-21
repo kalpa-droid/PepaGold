@@ -7,8 +7,8 @@ date: '2026-07-21'
 date_created: '2026-07-21'
 date_ai_processed: '2026-07-21'
 locale: es-ar
-category: cuidado-producto
-category_label: "🧼 Uso y Cuidado del Producto"
+category: barrera-cutanea
+category_label: "🔬 Ciencia de la Piel"
 concept: el-impacto-de-tensoactivos-jabones-y-aguas-micelares-en-la-barrera-cut-nea
 local_phenomenon: "Viento Zonda y sequedad extrema de montaña"
 cover_image: /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/gemini_generated_image_8b2pk18b2pk18b2p.webp

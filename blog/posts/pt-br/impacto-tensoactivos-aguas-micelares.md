@@ -7,8 +7,8 @@ date: '2026-07-21'
 date_created: '2026-07-21'
 date_ai_processed: '2026-07-21'
 locale: pt-br
-category: cuidado-producto
-category_label: "🧼 Uso e Cuidados com o Produto"
+category: barrera-cutanea
+category_label: "🔬 Ciência da Pele"
 concept: el-impacto-de-tensoactivos-jabones-y-aguas-micelares-en-la-barrera-cut-nea
 local_phenomenon: "Alta umidade, radiação UV e poluição tropical"
 cover_image: /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/gemini_generated_image_8b2pk18b2pk18b2p.webp
