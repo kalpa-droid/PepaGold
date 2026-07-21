@@ -402,9 +402,9 @@
       border-radius: 20px;
       border: 1px solid var(--border-color);
       box-shadow: var(--shadow-lg);
-      width: 100%;
-      max-width: 700px;
-      max-height: 85vh;
+      width: 92vw;
+      max-width: 960px;
+      max-height: 88vh;
       display: flex;
       flex-direction: column;
       overflow: hidden;
@@ -437,7 +437,7 @@
     /* Image Gallery Grid */
     .image-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
       gap: 16px;
       margin-top: 16px;
     }
@@ -1141,12 +1141,24 @@
         console.warn('GitHub API contents fetch failed, falling back to local media list');
       }
 
+      if ((!files || !files.length) && activeModalPost && activeModalPost.meta && activeModalPost.meta.media) {
+        files = activeModalPost.meta.media.map(m => {
+          const p = typeof m === 'string' ? m : m.file;
+          const name = p.split('/').pop();
+          return {
+            name: name,
+            path: p.replace(/^\//, ''),
+            download_url: p
+          };
+        });
+      }
+
       if (!files || !files.length) {
         grid.innerHTML = '<p style="font-size: 13px; color: var(--color-dark-muted); grid-column: 1/-1; text-align: center; padding: 30px;">📷 No hay imágenes cargadas todavía.<br><span style="font-size: 12px; opacity: 0.8;">Copiá el prompt desde <b>📋 Prompts e Indicaciones</b>, generá la foto y subila con <b>➕ Subir Imagen (Auto WebP)</b>.</span></p>';
         return;
       }
 
-      const promptsCount = (activeModalPost && activeModalPost.meta.image_prompts) ? activeModalPost.meta.image_prompts.length : 2;
+      const promptsCount = Math.max(5, (activeModalPost && activeModalPost.meta && activeModalPost.meta.image_prompts) ? activeModalPost.meta.image_prompts.length : 5);
 
       grid.innerHTML = files.map((f, idx) => {
         const defaultTag = idx === 0 ? 'portada' : `cuerpo-${idx}`;
@@ -1161,13 +1173,17 @@
           optionsHtml += `<option value="${val}" ${isSelected}>${label}</option>`;
         }
 
+        const imgSrc = f.download_url || (f.path ? '/' + f.path.replace(/^\//, '') : `/assets/imagenes/blog/${slug}/${f.name}`);
+
         return `
           <div class="image-card" style="height: auto; padding-bottom: 8px;">
-            <img src="${f.download_url}" alt="${f.name}" style="height: 140px; object-fit: cover;" />
-            <div style="padding: 6px;">
-              <div style="font-size: 10px; font-weight: 600; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; margin-bottom: 4px;">${f.name}</div>
-              <label style="font-size: 10px; font-weight: 600; color: var(--color-accent);">🏷️ Posición del Artículo:</label>
-              <select class="input-field" style="font-size: 11px; padding: 4px; margin-top: 2px; margin-bottom: 0;" onchange="assignTagToImage('${f.name}', this.value)">
+            <div style="width: 100%; height: 140px; background: #FAF6F5; display: flex; align-items: center; justify-content: center; overflow: hidden; border-bottom: 1px solid var(--border-color);">
+              <img src="${imgSrc}" alt="${f.name}" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <div style="padding: 8px 10px;">
+              <div style="font-size: 11px; font-weight: 600; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; margin-bottom: 6px; color: var(--color-dark);" title="${f.name}">${f.name}</div>
+              <label style="font-size: 10px; font-weight: 600; color: var(--color-accent); display: block; margin-bottom: 2px;">🏷️ Posición del Artículo:</label>
+              <select class="input-field" style="font-size: 11px; padding: 5px; margin: 0; width: 100%;" onchange="assignTagToImage('${f.name}', this.value)">
                 ${optionsHtml}
               </select>
             </div>
