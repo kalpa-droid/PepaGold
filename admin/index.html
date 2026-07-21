@@ -1137,6 +1137,26 @@
 
     let imageTagsState = {};
 
+    function detectTagFromFilename(filename, idx) {
+      const name = filename.toLowerCase();
+      if (name.includes('prompt-1') || name.includes('prompt_1') || name.includes('prompt1') || name.includes('portada') || name.includes('cover') || name.includes('hero')) {
+        return 'portada';
+      }
+      if (name.includes('prompt-2') || name.includes('prompt_2') || name.includes('prompt2') || name.includes('cuerpo-1') || name.includes('cuerpo_1') || name.includes('cuerpo1')) {
+        return 'cuerpo-1';
+      }
+      if (name.includes('prompt-3') || name.includes('prompt_3') || name.includes('prompt3') || name.includes('cuerpo-2') || name.includes('cuerpo_2') || name.includes('cuerpo2')) {
+        return 'cuerpo-2';
+      }
+      if (name.includes('prompt-4') || name.includes('prompt_4') || name.includes('prompt4') || name.includes('cuerpo-3') || name.includes('cuerpo_3') || name.includes('cuerpo3')) {
+        return 'cuerpo-3';
+      }
+      if (name.includes('prompt-5') || name.includes('prompt_5') || name.includes('prompt5') || name.includes('cuerpo-4') || name.includes('cuerpo_4') || name.includes('cuerpo4')) {
+        return 'cuerpo-4';
+      }
+      return idx === 0 ? 'portada' : `cuerpo-${idx}`;
+    }
+
     async function loadPostImages(slug) {
       const grid = document.getElementById('modal-img-grid');
       grid.innerHTML = '<p style="font-size: 13px; color: var(--color-dark-muted);">Cargando imágenes...</p>';
@@ -1168,8 +1188,8 @@
       const promptsCount = Math.max(5, (activeModalPost && activeModalPost.meta && activeModalPost.meta.image_prompts) ? activeModalPost.meta.image_prompts.length : 5);
 
       grid.innerHTML = files.map((f, idx) => {
-        const defaultTag = idx === 0 ? 'portada' : `cuerpo-${idx}`;
-        const assignedTag = imageTagsState[f.name] || defaultTag;
+        const autoTag = detectTagFromFilename(f.name, idx);
+        const assignedTag = imageTagsState[f.name] || autoTag;
         imageTagsState[f.name] = assignedTag;
 
         let optionsHtml = '';
