@@ -766,17 +766,20 @@ def parse_post(path):
 
 def build_article_schema(meta, canonical, cover_abs):
     faq = meta.get("faq") or []
+    locale = meta.get("locale", "es-ar")
     blocks = [{
         "@context": "https://schema.org", "@type": "Article",
         "headline": meta.get("title", ""), "description": meta.get("description", ""),
+        "inLanguage": locale,
         "image": [cover_abs] if cover_abs else [], "datePublished": str(meta.get("date", "")),
         "author": {"@type": "Organization", "name": meta.get("author", "PepaGold")},
-        "publisher": {"@type": "Organization", "name": "PepaGold"},
+        "publisher": {"@type": "Organization", "name": "PepaGold", "logo": {"@type": "ImageObject", "url": f"{SITE_URL}/assets/imagenes/icono.svg"}},
         "mainEntityOfPage": canonical,
     }]
     if faq:
         blocks.append({
             "@context": "https://schema.org", "@type": "FAQPage",
+            "inLanguage": locale,
             "mainEntity": [
                 {"@type": "Question", "name": item["q"],
                  "acceptedAnswer": {"@type": "Answer", "text": item["a"]}}
