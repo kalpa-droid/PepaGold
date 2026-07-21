@@ -1331,6 +1331,8 @@
           activeModalPost.meta.date_images_applied = todayStr;
         }
 
+        const conceptData = (window.conceptMap && window.conceptMap[concept]) ? window.conceptMap[concept] : {};
+
         for (const [code, info] of Object.entries(LOCALES)) {
           const locSlug = (conceptData[code] && conceptData[code].slug) ? conceptData[code].slug : slug;
           const filePath = `contents/blog/posts/${code}/${locSlug}.md`;
