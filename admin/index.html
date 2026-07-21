@@ -1284,6 +1284,12 @@
         let portadaFile = webpFiles.find(f => imageTagsState[f.name] === 'portada') || webpFiles[0];
         let bodyFiles = webpFiles.filter(f => f.name !== portadaFile.name);
 
+        bodyFiles.sort((a, b) => {
+          const tagA = imageTagsState[a.name] || '';
+          const tagB = imageTagsState[b.name] || '';
+          return tagA.localeCompare(tagB);
+        });
+
         const mediaPaths = [`/${portadaFile.path}`, ...bodyFiles.map(f => `/${f.path}`)];
         const conceptData = (window.conceptMap && window.conceptMap[concept]) ? window.conceptMap[concept] : {};
 
@@ -1296,6 +1302,7 @@
             const rawContent = decodeURIComponent(escape(atob(fileData.content.replace(/\s/g, ''))));
             const parsed = parseMarkdownPost(rawContent);
 
+            parsed.meta.cover_image = `/${portadaFile.path}`;
             parsed.meta.media = mediaPaths;
 
             let updatedLocBody = parsed.body;
