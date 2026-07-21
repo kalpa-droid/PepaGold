@@ -1,6 +1,6 @@
 ---
 article_id: PG-001
-title: 'La Ciencia de la Barrera Cutánea: Qué es, Cómo se Daña y Cómo Repararla'
+title: "¿Sientes que la cara te arde al ponerte crema? La Ciencia de la Barrera Cutánea y Cómo Repararla"
 description: >-
   ¿Sientes que la cara te arde al ponerte crema o que te tira la piel al salir
   de la regadera? Aprende a reparar tu barrera cutánea paso a paso.

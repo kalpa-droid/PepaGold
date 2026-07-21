@@ -14,6 +14,12 @@ Todo artículo publicado en PepaGold debe seguir estrictamente estas 8 reglas fi
 - **Autenticidad sobre autoridad:** Primero validar lo que la lectora siente (sus molestias, tirantez, ardor), después explicar por qué pasa.
 - **Respeto e Inteligencia:** Tratamiento de alguien inteligente que busca respuestas reales. Cero condescendencia ni infantilización.
 
+### 1.1. Fórmula Estricta de Títulos (SEO + Gancho Emocional para Chicas 18-28)
+Todo título debe combinar la búsqueda real que hacen las chicas en Google/TikTok con la solución médica clara.
+- **Fórmula:** `[Pregunta o Síntoma Real en Google/TikTok] + [Palabra Clave Científica y Solución]`
+- **Ejemplo:** `¿Te arde la cara al ponerte crema? La Ciencia de la Barrera Cutánea y Cómo Repararla`
+- **PROHIBIDO:** Títulos aburridos de manual universitario (*"Análisis del Estrato Córneo e Hidratantes"*).
+
 ### 2. La Apertura (Primeras 2-3 líneas del artículo)
 - **PROHIBIDO ARRANCAR CON:**
   - Definiciones técnicas frías (*"El estrato córneo es..."*).

@@ -3,7 +3,7 @@
     {
       "meta": {
         "article_id": "PG-001",
-        "title": "La Ciencia de la Barrera Cutánea: Qué es, Cómo se Daña y Cómo Repararla",
+        "title": "¿Te arde la cara al ponerte crema? La Ciencia de la Barrera Cutánea y Cómo Repararla",
         "description": "Descubrí por qué te arde la cara al ponerte crema o por qué te tira la piel al salir de la ducha. Aprendé a reparar tu barrera cutánea paso a paso.",
         "slug": "ciencia-barrera-cutanea-microbioma",
         "date": "2026-07-17",
@@ -63,70 +63,70 @@
     "barrera-cutanea-y-microbioma": {
       "de-de": {
         "slug": "wissenschaft-hautbarriere-mikrobiom",
-        "title": "Die Wissenschaft der Hautbarriere: Was sie ist, wie sie geschädigt wird und wie man sie repariert",
+        "title": "Brennt deine Haut beim Eincremen? Die Wissenschaft der Hautbarriere und wie du sie reparierst",
         "web_url": "/de/blog/wissenschaft-hautbarriere-mikrobiom",
         "phenomenon": "Trockene Heizungsluft & Winterkälte",
         "region_label": "Deutschland"
       },
       "en-us": {
         "slug": "skin-barrier-science-microbiome",
-        "title": "The Science of the Skin Barrier: What It Is, How It Gets Damaged, and How to Repair It",
+        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier & How to Repair It",
         "web_url": "/us/blog/skin-barrier-science-microbiome",
         "phenomenon": "Dry HVAC Indoor Air & Pollution",
         "region_label": "United States"
       },
       "es-ar": {
         "slug": "ciencia-barrera-cutanea-microbioma",
-        "title": "La Ciencia de la Barrera Cutánea: Qué es, Cómo se Daña y Cómo Repararla",
+        "title": "¿Te arde la cara al ponerte crema? La Ciencia de la Barrera Cutánea y Cómo Repararla",
         "web_url": "/blog/ciencia-barrera-cutanea-microbioma",
         "phenomenon": "Viento Zonda",
         "region_label": "Salta, Argentina"
       },
       "es-es": {
         "slug": "ciencia-barrera-cutanea-microbioma",
-        "title": "La Ciencia de la Barrera Cutánea: Qué es, Cómo se Daña y Cómo Repararla",
+        "title": "¿Te pica o arde la piel al usar crema? La Ciencia de la Barrera Cutánea y Cómo Repararla",
         "web_url": "/es/blog/ciencia-barrera-cutanea-microbioma",
         "phenomenon": "Clima Mediterráneo & Calima",
         "region_label": "España"
       },
       "es-mx": {
         "slug": "ciencia-barrera-cutanea-microbioma",
-        "title": "La Ciencia de la Barrera Cutánea: Qué es, Cómo se Daña y Cómo Repararla",
+        "title": "¿Sientes que la cara te arde al ponerte crema? La Ciencia de la Barrera Cutánea y Cómo Repararla",
         "web_url": "/mx/blog/ciencia-barrera-cutanea-microbioma",
         "phenomenon": "Contaminación por PM2.5 & Clima Cálido",
         "region_label": "México"
       },
       "fr-fr": {
         "slug": "science-barriere-cutanee-microbiome",
-        "title": "La Science de la Barrière Cutanée : Qu'est-ce que c'est, comment elle s'endommage et comment la réparer",
+        "title": "Votre peau brûle quand vous appliquez une crème ? La science de la barrière cutanée et comment la réparer",
         "web_url": "/fr/blog/science-barriere-cutanee-microbiome",
         "phenomenon": "Air sec du chauffage & Pollution",
         "region_label": "France"
       },
       "it-it": {
         "slug": "scienza-barriera-cutanea-microbioma",
-        "title": "La Scienza della Barriera Cutanea: Cos'è, come si danneggia e come ripararla",
+        "title": "La pelle brucia quando metti la crema? La Scienza della Barriera Cutanea e Come Ripararla",
         "web_url": "/it/blog/scienza-barriera-cutanea-microbioma",
         "phenomenon": "Aria secca dei riscaldamenti & Smog",
         "region_label": "Italia"
       },
       "pt-br": {
         "slug": "ciencia-barreira-cutanea-microbioma",
-        "title": "A Ciência da Barreira Cutânea: O que é, Como se Danifica e Como Reparar",
+        "title": "Sua pele arde ao passar creme? A Ciência da Barreira Cutânea e Como Recuperá-la",
         "web_url": "/pt/blog/ciencia-barreira-cutanea-microbioma",
         "phenomenon": "Clima Tropical Seco & Poluição",
         "region_label": "Brasil"
       },
       "ru-ru": {
         "slug": "nauka-kozhnij-barier-mikrobiom",
-        "title": "Наука о кожном барьере: что это, как повреждается и как его восстановить",
+        "title": "Жжет лицо при нанесении крема? Наука о кожном барьере и как его восстановить",
         "web_url": "/ru/blog/nauka-kozhnij-barier-mikrobiom",
         "phenomenon": "Сухой воздух отопления и морозы",
         "region_label": "Россия"
       },
       "zh-hans": {
         "slug": "skin-barrier-science-microbiome",
-        "title": "皮肤屏障的科学：构成、受损机制与修复指南",
+        "title": "涂护肤品突然脸部刺痛？皮肤屏障受损原理与科学修复指南",
         "web_url": "/zh/blog/skin-barrier-science-microbiome",
         "phenomenon": "城市空气污染与PM2.5",
         "region_label": "中国"

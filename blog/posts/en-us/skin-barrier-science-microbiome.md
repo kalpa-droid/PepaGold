@@ -1,7 +1,6 @@
 ---
 article_id: PG-001
-title: 'The Science of the Skin Barrier: What It Is, How It Gets Damaged, and How
-  to Repair It'
+title: "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier & How to Repair It"
 description: Does your face burn when applying moisturizer? Learn how to identify
   skin barrier damage and master science-backed repair steps.
 slug: skin-barrier-science-microbiome
@@ -90,7 +89,6 @@ image_prompts:
   logos, NO watermarks.'
 show_science_link: true
 ---
-
 Does your face burn the second you apply your go-to moisturizer? Or does your skin feel uncomfortably tight right after washing your face? No, it's not in your head: your skin barrier is screaming for help.
 
 Behind that constant tightness, burning, or sudden breakouts lies a single culprit: a compromised skin barrier and an imbalanced microbiome.

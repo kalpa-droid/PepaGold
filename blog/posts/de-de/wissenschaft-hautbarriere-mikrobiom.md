@@ -1,7 +1,6 @@
 ---
 article_id: PG-001
-title: 'Die Wissenschaft der Hautbarriere: Was sie ist, wie sie geschädigt wird und
-  wie man sie repariert'
+title: "Brennt deine Haut beim Eincremen? Die Wissenschaft der Hautbarriere und wie du sie reparierst"
 description: Brennt Ihr Gesicht beim Eincremen? Erfahren Sie, wie Sie eine geschädigte
   Hautbarriere erkennen und effektiv reparieren.
 slug: wissenschaft-hautbarriere-mikrobiom
@@ -91,7 +90,6 @@ image_prompts:
   logos, NO watermarks.'
 show_science_link: true
 ---
-
 Brennt Ihr Gesicht beim Auftragen Ihrer gewohnten Feuchtigkeitscreme? Oder spannt die Haut direkt nach dem Waschen? Das ist keine Einbildung: Ihre Hautbarriere schlägt Alarm.
 
 Hinter ständiger Trockenheit oder plötzlichen Unreinheiten steckt meist eine geschädigte Barriere und ein aus dem Gleichgewicht geratenes Mikrobiom.

@@ -1,7 +1,6 @@
 ---
 article_id: PG-001
-title: 'La Science de la Barrière Cutanée : Qu''est-ce que c''est, comment elle s''endommage
-  et comment la réparer'
+title: "Votre peau brûle quand vous appliquez une crème ? La science de la barrière cutanée et comment la réparer"
 description: Votre peau brûle-t-elle lors de l'application d'une crème ? Découvrez
   les vraies causes de l'altération de la barrière cutanée et comment la réparer.
 slug: science-barriere-cutanee-microbiome
@@ -92,7 +91,6 @@ image_prompts:
   logos, NO watermarks.'
 show_science_link: true
 ---
-
 Votre visage vous brûle-t-il dès que vous appliquez votre crème hydratante habituelle ? Ou ressentez-vous un tiraillement intense juste après le nettoyage ? Ce n'est pas une impression : votre barrière cutanée lance un cri d'alarme.
 
 Derrière cette sécheresse persistante ou ces imperfections soudaines se cache un seul coupable : une barrière altérée et un microbiome déséquilibré.

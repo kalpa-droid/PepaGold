@@ -1,6 +1,6 @@
 ---
 article_id: PG-001
-title: 'La Scienza della Barriera Cutanea: Cos''è, come si danneggia e come ripararla'
+title: "La pelle brucia quando metti la crema? La Scienza della Barriera Cutanea e Come Ripararla"
 description: La pelle brucia quando applichi la crema? Scopri le vere cause dei danni
   alla barriera cutanea e i passi per ripararla.
 slug: scienza-barriera-cutanea-microbioma
@@ -89,7 +89,6 @@ image_prompts:
   logos, NO watermarks.'
 show_science_link: true
 ---
-
 Senti che il viso brucia non appena applichi una semplice crema idratante? O la pelle tira appena esci dalla doccia? Non è una tua sensazione: la tua barriera cutanea sta chiedendo aiuto.
 
 Dietro quella secchezza costante o quelle imperfezioni improvvise c'è un solo responsabile: una barriera danneggiata e un microbioma alterato.
