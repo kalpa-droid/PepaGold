@@ -125,7 +125,7 @@
 
 <div style="padding-top: 130px; margin-bottom: 20px;"></div>
 
-<div class="chips"><a href="#" class="active">Todos</a><a href="#barrera-cutanea">🔬 Ciência da Pele</a><a href="#rutinas-minimalismo">🧘‍♀️ Rotinas e Skinimalismo</a></div>
+<div class="chips"><a href="#" class="active" data-cat="">Todos</a><a href="#barrera-cutanea" data-cat="barrera-cutanea">🔬 Ciência da Pele</a><a href="#rutinas-minimalismo" data-cat="rutinas-minimalismo">🧘‍♀️ Rotinas e Skinimalismo</a></div>
 <section class="pain-agitation-section">
   <div class="interactive-pain">
     
@@ -191,6 +191,28 @@
     btn.addEventListener('click', (e) => { e.stopPropagation(); container.classList.toggle('is-active'); });
     document.addEventListener('click', () => { container.classList.remove('is-active'); });
   }
+
+  // Filtrado dinámico de artículos por categoría
+  document.querySelectorAll('.chips a').forEach(function(chip) {
+    chip.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelectorAll('.chips a').forEach(function(c) { c.classList.remove('active'); });
+      chip.classList.add('active');
+      
+      const targetCat = chip.getAttribute('data-cat') || '';
+      const cards = document.querySelectorAll('.pain-card-v2');
+      
+      cards.forEach(function(card) {
+        if (!targetCat || targetCat === '' || targetCat === 'all') {
+          card.style.display = 'grid';
+        } else if (card.dataset.cat === targetCat) {
+          card.style.display = 'grid';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
 </script>
 </body>
 </html>

@@ -758,6 +758,28 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
     btn.addEventListener('click', (e) => {{ e.stopPropagation(); container.classList.toggle('is-active'); }});
     document.addEventListener('click', () => {{ container.classList.remove('is-active'); }});
   }}
+
+  // Filtrado dinámico de artículos por categoría
+  document.querySelectorAll('.chips a').forEach(function(chip) {{
+    chip.addEventListener('click', function(e) {{
+      e.preventDefault();
+      document.querySelectorAll('.chips a').forEach(function(c) {{ c.classList.remove('active'); }});
+      chip.classList.add('active');
+      
+      const targetCat = chip.getAttribute('data-cat') || '';
+      const cards = document.querySelectorAll('.pain-card-v2');
+      
+      cards.forEach(function(card) {{
+        if (!targetCat || targetCat === '' || targetCat === 'all') {{
+          card.style.display = 'grid';
+        }} else if (card.dataset.cat === targetCat) {{
+          card.style.display = 'grid';
+        }} else {{
+          card.style.display = 'none';
+        }}
+      }});
+    }});
+  }});
 </script>
 </body>
 </html>
@@ -968,9 +990,9 @@ def render_index(locale, posts):
     
     cats_present = sorted({p.get("category") for p in posts_sorted if p.get("category")})
     all_label = i18n.get("index_all", "Todos")
-    chips = [f'<a href="#" class="active">{all_label}</a>']
+    chips = [f'<a href="#" class="active" data-cat="">{all_label}</a>']
     for c in cats_present:
-        chips.append(f'<a href="#{c}">{get_cat_label(c, locale)}</a>')
+        chips.append(f'<a href="#{c}" data-cat="{c}">{get_cat_label(c, locale)}</a>')
         
     cards = []
     for p in posts_sorted:
