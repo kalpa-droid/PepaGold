@@ -736,7 +736,7 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
   </div>
 </section>
 <footer class="site-footer">
-  <p>&copy; 2025&ndash;2026 PepaGold &middot; Todos los derechos reservados.</p>
+  <p>{footer_copy}</p>
 </footer>
 <script>
   const container = document.querySelector('.lang-selector-container');
