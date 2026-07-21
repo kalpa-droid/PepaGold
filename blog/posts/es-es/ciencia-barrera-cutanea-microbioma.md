@@ -181,7 +181,3 @@ Q: ¿Cuál es el síntoma más claro de que tu barrera cutánea perdió su cemen
 Si tienes piel grasa o tendencia al acné, es muy común caer en la trampa de lavarte la cara tres o cuatro veces al día para "secar" los granos.
 
 ¡Es un gran mito! Al lavarte en exceso, eliminas las ceramidas y tu flora protectora. Tu piel reacciona produciendo el doble de sebo como mecanismo de defensa, lo que termina tapando más poros y empeorando los brotes. Para curar el acné, primero tienes que reparar la barrera cutánea.
-
-
-![Figura #1](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_hkzv0lhkzv0lhkzv.webp)
-

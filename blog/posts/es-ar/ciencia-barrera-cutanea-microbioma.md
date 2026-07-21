@@ -183,7 +183,3 @@ Si tenés piel grasa o tendencia al acné, es muy común caer en la trampa de la
 ¡Es un gran mito! Al lavarte en exceso, eliminás las ceramidas y tu flora protectora. Tu piel reacciona produciendo el doble de sebo como mecanismo de defensa, lo que termina tapando más poros y empeorando los brotes.
 
 Para curar el acné, primero tenés que reparar la barrera cutánea.
-
-
-![Figura #1](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_hkzv0lhkzv0lhkzv.webp)
-

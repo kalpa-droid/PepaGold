@@ -1283,12 +1283,40 @@
             parsed.meta.media = mediaPaths;
 
             let updatedLocBody = parsed.body;
-            bodyFiles.forEach((bFile, idx) => {
-              const imgMarkdown = `\n\n![Figura #${idx + 1}](/${bFile.path})\n\n`;
-              if (!updatedLocBody.includes(bFile.path)) {
-                updatedLocBody += imgMarkdown;
-              }
-            });
+            // 1. Clean up any trailing ![Figura #...] tags appended at end
+            updatedLocBody = updatedLocBody.replace(/\n*!\[Figura #\d+\]\([^)]+\)/g, '').trim();
+
+            // 2. Replace existing inline image tags inside H2 sections in order
+            let imgMatchIndex = 0;
+            let hasInlineImages = /!\[.*?\]\(\/assets\/imagenes\/blog\/[^)]+\)/.test(updatedLocBody);
+
+            if (hasInlineImages) {
+              updatedLocBody = updatedLocBody.replace(/!\[(.*?)\]\(\/assets\/imagenes\/blog\/[^)]+\)/g, (match, altText) => {
+                if (imgMatchIndex < bodyFiles.length) {
+                  const bFile = bodyFiles[imgMatchIndex++];
+                  return `![${altText || 'Imagen de sección'}](/${bFile.path})`;
+                }
+                return match;
+              });
+            } else if (bodyFiles.length > 0) {
+              // 3. Fallback: Inject bodyFiles into H2 sections if no inline image tags exist
+              const sections = updatedLocBody.split(/\n(?=## )/);
+              let bIdx = 0;
+              const newSections = sections.map((sec, sIdx) => {
+                if (sIdx > 0 && bIdx < bodyFiles.length && sec.startsWith('## ')) {
+                  const bFile = bodyFiles[bIdx++];
+                  const paragraphs = sec.split(/\n\n+/);
+                  if (paragraphs.length >= 2) {
+                    paragraphs.splice(2, 0, `![Imagen de sección](/${bFile.path})`);
+                    return paragraphs.join('\n\n');
+                  } else {
+                    return sec + `\n\n![Imagen de sección](/${bFile.path})`;
+                  }
+                }
+                return sec;
+              });
+              updatedLocBody = newSections.join('\n');
+            }
 
             const newFullMd = dumpMarkdownPost(parsed.meta, updatedLocBody);
             const encoded = btoa(unescape(encodeURIComponent(newFullMd)));

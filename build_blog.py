@@ -45,6 +45,87 @@ CATEGORY_LABELS_DEFAULT = {
     "tendencias-skincare": "📈 Tendencias Globales",
 }
 
+CATEGORY_LABELS_I18N = {
+    "es-ar": CATEGORY_LABELS_DEFAULT,
+    "es-mx": CATEGORY_LABELS_DEFAULT,
+    "es-es": CATEGORY_LABELS_DEFAULT,
+    "en-us": {
+        "barrera-cutanea": "🔬 Skin Science",
+        "sostenibilidad": "🌱 Sustainability & Ecology",
+        "rutinas-minimalismo": "🧘‍♀️ Routines & Skinimalism",
+        "comparativas-economia": "⚖️ Comparisons & Savings",
+        "guias-regionales": "🏜️ Regional Guides & Climate",
+        "cuidado-producto": "🧼 Product Use & Care",
+        "testimonios-estilo-vida": "💬 Stories & Lifestyle",
+        "tendencias-skincare": "📈 Global Trends",
+    },
+    "fr-fr": {
+        "barrera-cutanea": "🔬 Science de la Peau",
+        "sostenibilidad": "🌱 Écologie & Durabilité",
+        "rutinas-minimalismo": "🧘‍♀️ Routines & Skinimalisme",
+        "comparativas-economia": "⚖️ Comparatifs & Économies",
+        "guias-regionales": "🏜️ Guides Régionaux & Climat",
+        "cuidado-producto": "🧼 Utilisation & Entretien",
+        "testimonios-estilo-vida": "💬 Témoignages & Mode de Vie",
+        "tendencias-skincare": "📈 Tendances Globales",
+    },
+    "de-de": {
+        "barrera-cutanea": "🔬 Hautwissenschaft",
+        "sostenibilidad": "🌱 Nachhaltigkeit & Ökologie",
+        "rutinas-minimalismo": "🧘‍♀️ Routinen & Skinimalismus",
+        "comparativas-economia": "⚖️ Vergleiche & Ersparnisse",
+        "guias-regionales": "🏜️ Regionale Ratgeber & Klima",
+        "cuidado-producto": "🧼 Produktnutzung & Pflege",
+        "testimonios-estilo-vida": "💬 Berichte & Lebensstil",
+        "tendencias-skincare": "📈 Globale Trends",
+    },
+    "it-it": {
+        "barrera-cutanea": "🔬 Scienza della Pelle",
+        "sostenibilidad": "🌱 Sostenibilità ed Ecologia",
+        "rutinas-minimalismo": "🧘‍♀️ Routine e Skinimalismo",
+        "comparativas-economia": "⚖️ Confronti ed Economia",
+        "guias-regionales": "🏜️ Guide Regionali e Clima",
+        "cuidado-producto": "🧼 Uso e Cura del Prodotto",
+        "testimonios-estilo-vida": "💬 Storie e Stile di Vita",
+        "tendencias-skincare": "📈 Tendenze Globali",
+    },
+    "pt-br": {
+        "barrera-cutanea": "🔬 Ciência da Pele",
+        "sostenibilidad": "🌱 Sustentabilidade e Ecologia",
+        "rutinas-minimalismo": "🧘‍♀️ Rotinas e Skinimalismo",
+        "comparativas-economia": "⚖️ Comparativos e Economia",
+        "guias-regionales": "🏜️ Guias Regionais e Clima",
+        "cuidado-producto": "🧼 Uso e Cuidados com o Produto",
+        "testimonios-estilo-vida": "💬 Depoimentos e Estilo de Vida",
+        "tendencias-skincare": "📈 Tendências Globales",
+    },
+    "ru-ru": {
+        "barrera-cutanea": "🔬 Наука о коже",
+        "sostenibilidad": "🌱 Экология и устойчивость",
+        "rutinas-minimalismo": "🧘‍♀️ Уход и скиннимализм",
+        "comparativas-economia": "⚖️ Сравнение и экономика",
+        "guias-regionales": "🏜️ Региональные гиды и климат",
+        "cuidado-producto": "🧼 Использование и уход",
+        "testimonios-estilo-vida": "💬 Отзывы и стиль жизни",
+        "tendencias-skincare": "📈 Мировые тренды",
+    },
+    "zh-hans": {
+        "barrera-cutanea": "🔬 皮肤科学",
+        "sostenibilidad": "🌱 环保与可持续",
+        "rutinas-minimalismo": "🧘‍♀️ 极简护肤",
+        "comparativas-economia": "⚖️ 对比与护肤经济",
+        "guias-regionales": "🏜️ 气候与区域指南",
+        "cuidado-producto": "🧼 产品使用与护理",
+        "testimonios-estilo-vida": "💬 真实体验与生活",
+        "tendencias-skincare": "📈 全球趋势",
+    },
+}
+
+def get_cat_label(cat_key, locale):
+    cats = CATEGORY_LABELS_I18N.get(locale, CATEGORY_LABELS_DEFAULT)
+    return cats.get(cat_key, CATEGORY_LABELS_DEFAULT.get(cat_key, cat_key or ""))
+
+
 I18N_STRINGS = {
     "es-ar": {
         "summary_title": "⏱️ En 30 segundos", "toc_title": "En este artículo", "reading_time": "min de lectura",
@@ -52,7 +133,7 @@ I18N_STRINGS = {
         "cta_desc": "<strong>Laska Mini Set</strong> — el set de microfibra que reemplaza discos de algodón, agua micelar y desmaquillante. Solo con agua.",
         "cta_btn": "Conocer el producto &rarr;", "faq_title": "Preguntas frecuentes", "related_title": "Seguí leyendo",
         "footer_copy": "&copy; 2025&ndash;2026 PepaGold &middot; Todos los derechos reservados.", "read_btn": "Leer Artículo",
-        "index_desc": "Artículos sobre cuidado de la piel sin químicos, sostenibilidad y skincare consciente."
+        "index_desc": "Artículos sobre cuidado de la piel sin químicos, sostenibilidad y skincare consciente.", "index_title": "Blog | PepaGold", "index_all": "Todos", "checklist_hint": "Se guarda solo en este navegador — marcá a tu ritmo."
     },
     "es-mx": {
         "summary_title": "⏱️ En 30 segundos", "toc_title": "En este artículo", "reading_time": "min de lectura",
@@ -60,7 +141,7 @@ I18N_STRINGS = {
         "cta_desc": "<strong>Laska Mini Set</strong> — el set de microfibra que reemplaza pads de algodón, agua micelar y desmaquillantes. Solo con agua.",
         "cta_btn": "Conocer el producto &rarr;", "faq_title": "Preguntas frecuentes", "related_title": "Sigue leyendo",
         "footer_copy": "&copy; 2025&ndash;2026 PepaGold &middot; Todos los derechos reservados.", "read_btn": "Leer Artículo",
-        "index_desc": "Artículos sobre cuidado de la piel sin químicos, sostenibilidad y skincare consciente."
+        "index_desc": "Artículos sobre cuidado de la piel sin químicos, sostenibilidad y skincare consciente.", "index_title": "Blog | PepaGold", "index_all": "Todos", "checklist_hint": "Se guarda solo en este navegador — marca a tu ritmo."
     },
     "es-es": {
         "summary_title": "⏱️ En 30 segundos", "toc_title": "En este artículo", "reading_time": "min de lectura",
@@ -68,7 +149,7 @@ I18N_STRINGS = {
         "cta_desc": "<strong>Laska Mini Set</strong> — el set de microfibra que reemplaza algodones, agua micelar y desmaquillante. Solo con agua.",
         "cta_btn": "Descubrir producto &rarr;", "faq_title": "Preguntas frecuentes", "related_title": "Sigue leyendo",
         "footer_copy": "&copy; 2025&ndash;2026 PepaGold &middot; Todos los derechos reservados.", "read_btn": "Leer Artículo",
-        "index_desc": "Artículos sobre cuidado de la piel sin químicos, sostenibilidad y skincare consciente."
+        "index_desc": "Artículos sobre cuidado de la piel sin químicos, sostenibilidad y skincare consciente.", "index_title": "Blog | PepaGold", "index_all": "Todos", "checklist_hint": "Se guarda solo en este navegador — marca a tu ritmo."
     },
     "en-us": {
         "summary_title": "⏱️ In 30 seconds", "toc_title": "In this article", "reading_time": "min read",
@@ -76,7 +157,7 @@ I18N_STRINGS = {
         "cta_desc": "<strong>Laska Mini Set</strong> — the reusable UpPoly microfiber set replacing cotton pads, micellar water, and cleansers. Water only.",
         "cta_btn": "Explore Product &rarr;", "faq_title": "Frequently Asked Questions", "related_title": "Keep reading",
         "footer_copy": "&copy; 2025&ndash;2026 PepaGold &middot; All rights reserved.", "read_btn": "Read Article",
-        "index_desc": "Articles on chemical-free skincare, sustainability, and skinimalism."
+        "index_desc": "Articles on chemical-free skincare, sustainability, and skinimalism.", "index_title": "Blog | PepaGold", "index_all": "All", "checklist_hint": "Saved locally in your browser — mark at your own pace."
     },
     "fr-fr": {
         "summary_title": "⏱️ En 30 secondes", "toc_title": "Dans cet article", "reading_time": "min de lecture",
@@ -84,7 +165,7 @@ I18N_STRINGS = {
         "cta_desc": "<strong>Laska Mini Set</strong> — le coffret en microfibre réutilisable qui remplace le coton, l'eau micellaire et le démaquillant. Rien qu'avec de l'eau.",
         "cta_btn": "Découvrir le produit &rarr;", "faq_title": "Foire aux questions", "related_title": "Poursuivez votre lecture",
         "footer_copy": "&copy; 2025&ndash;2026 PepaGold &middot; Tous droits réservés.", "read_btn": "Lire l'article",
-        "index_desc": "Articles sur les soins de la peau sans produits chimiques et la beauté durable."
+        "index_desc": "Articles sur les soins de la peau sans produits chimiques et la beauté durable.", "index_title": "Blog | PepaGold", "index_all": "Tous", "checklist_hint": "Enregistré localement dans votre navigateur — cochez à votre rythme."
     },
     "de-de": {
         "summary_title": "⏱️ In 30 Sekunden", "toc_title": "In diesem Artikel", "reading_time": "Min. Lesezeit",
@@ -92,7 +173,7 @@ I18N_STRINGS = {
         "cta_desc": "<strong>Laska Mini Set</strong> — das wiederverwendbare Mikrofaser-Set, das Wattepads, Mizellenwasser und Abschminkmittel ersetzt. Nur mit Wasser.",
         "cta_btn": "Produkt entdecken &rarr;", "faq_title": "Häufig gestellte Fragen", "related_title": "Weiterlesen",
         "footer_copy": "&copy; 2025&ndash;2026 PepaGold &middot; Alle Rechte vorbehalten.", "read_btn": "Artikel lesen",
-        "index_desc": "Artikel über chemiefreie Hautpflege, Nachhaltigkeit und Skinimalismus."
+        "index_desc": "Artikel über chemiefreie Hautpflege, Nachhaltigkeit und Skinimalismus.", "index_title": "Blog | PepaGold", "index_all": "Alle", "checklist_hint": "Lokal im Browser gespeichert — markieren Sie in Ihrem eigenen Tempo."
     },
     "it-it": {
         "summary_title": "⏱️ In 30 secondi", "toc_title": "In questo articolo", "reading_time": "min di lettura",
@@ -100,7 +181,7 @@ I18N_STRINGS = {
         "cta_desc": "<strong>Laska Mini Set</strong> — il set di microfibra riutilizzabile che sostituisce dischetti di cotone, acqua micellare e struccanti. Solo con acqua.",
         "cta_btn": "Scopri il prodotto &rarr;", "faq_title": "Domande frequenti", "related_title": "Continua a leggere",
         "footer_copy": "&copy; 2025&ndash;2026 PepaGold &middot; Tutti i diritti riservati.", "read_btn": "Leggi l'articolo",
-        "index_desc": "Articoli sulla cura della pelle senza sostanze chimiche e sostenibilità."
+        "index_desc": "Articoli sulla cura della pelle senza sostanze chimiche e sostenibilità.", "index_title": "Blog | PepaGold", "index_all": "Tutti", "checklist_hint": "Salvato localmente nel tuo browser — segna al tuo ritmo."
     },
     "pt-br": {
         "summary_title": "⏱️ Em 30 segundos", "toc_title": "Neste artigo", "reading_time": "min de leitura",
@@ -108,7 +189,7 @@ I18N_STRINGS = {
         "cta_desc": "<strong>Laska Mini Set</strong> — o conjunto de microfibra reutilizável que substitui algodão, água micelar e demaquilante. Apenas com água.",
         "cta_btn": "Conheça o produto &rarr;", "faq_title": "Perguntas frequentes", "related_title": "Continue lendo",
         "footer_copy": "&copy; 2025&ndash;2026 PepaGold &middot; Todos os direitos reservados.", "read_btn": "Ler Artigo",
-        "index_desc": "Artigos sobre cuidados com a pele sem químicos e sustentabilidade."
+        "index_desc": "Artigos sobre cuidados com a pele sem químicos e sustentabilidade.", "index_title": "Blog | PepaGold", "index_all": "Todos", "checklist_hint": "Salvo localmente no seu navegador — marque no seu próprio ritmo."
     },
     "ru-ru": {
         "summary_title": "⏱️ За 30 секунд", "toc_title": "В этой статье", "reading_time": "мин чтение",
@@ -116,7 +197,7 @@ I18N_STRINGS = {
         "cta_desc": "<strong>Laska Mini Set</strong> — набор из микроволокна UpPoly, заменяющий ватные диски и мицеллярную воду. Только вода.",
         "cta_btn": "Узнать больше о продукте &rarr;", "faq_title": "Часто задаваемые вопросы", "related_title": "Читайте также",
         "footer_copy": "&copy; 2025&ndash;2026 PepaGold &middot; Все права защищены.", "read_btn": "Читать статью",
-        "index_desc": "Статьи об уходе за кожей без химии, экологии и осознанном уходе."
+        "index_desc": "Статьи об уходе за кожей без химии, экологии и осознанном уходе.", "index_title": "Блог | PepaGold", "index_all": "Все", "checklist_hint": "Сохраняется локально в вашем браузере — отмечайте в своем темпе."
     },
     "zh-hans": {
         "summary_title": "⏱️ 30秒速览", "toc_title": "本文目录", "reading_time": "分钟阅读",
@@ -124,7 +205,7 @@ I18N_STRINGS = {
         "cta_desc": "<strong>Laska Mini Set</strong> — 替代卸妆棉、卸妆水和清洁乳的可重复使用超细纤维套装。只需清水。",
         "cta_btn": "了解产品详情 &rarr;", "faq_title": "常见问题解答", "related_title": "推荐阅读",
         "footer_copy": "&copy; 2025&ndash;2026 PepaGold &middot; 保留所有权利。", "read_btn": "阅读文章",
-        "index_desc": "关于无化学护肤、环保与极简护肤的文章。"
+        "index_desc": "关于无化学护肤、环保与极简护肤的文章。", "index_title": "博客 | PepaGold", "index_all": "全部", "checklist_hint": "保存在您的浏览器中 — 请按自己的节奏标记。"
     }
 }
 
@@ -208,7 +289,7 @@ def render_stat(content):
 
     return f'<div class="callout stat-box">{num_html}{cap_html}</div>'
 
-def render_checklist(title, content, block_id):
+def render_checklist(title, content, block_id, locale="es-ar"):
     items = [l[2:].strip() for l in content.strip().split("\n") if l.strip().startswith("- ")]
     lis = "".join(
         f'<li><label><input type="checkbox" class="cl-item" data-key="{block_id}-{i}"> '
@@ -216,11 +297,13 @@ def render_checklist(title, content, block_id):
         for i, item in enumerate(items)
     )
     label = title or "Probalo en casa"
+    i18n = I18N_STRINGS.get(locale, I18N_STRINGS["es-ar"])
+    hint = i18n.get("checklist_hint", "Se guarda solo en este navegador — marcá a tu ritmo.")
     return (
         f'<div class="callout checklist-box">'
         f'<p class="callout-title">✅ {label}</p>'
         f'<ul class="checklist">{lis}</ul>'
-        f'<p class="checklist-hint">Se guarda solo en este navegador — marcá a tu ritmo.</p>'
+        f'<p class="checklist-hint">{hint}</p>'
         f'</div>'
     )
 
@@ -249,7 +332,7 @@ def render_quiz(title, content, block_id):
     out.append('</div>')
     return "".join(out)
 
-def preprocess_custom_blocks(md_text, slug):
+def preprocess_custom_blocks(md_text, slug, locale="es-ar"):
     counter = {"n": 0}
     def repl(m):
         kind, title, content = m.group(1), (m.group(2) or "").strip(), m.group(3)
@@ -258,7 +341,7 @@ def preprocess_custom_blocks(md_text, slug):
         if kind in ("tip", "info"): return render_tip_or_info(kind, title, content)
         if kind == "funfact": return render_funfact(title, content)
         if kind == "stat": return render_stat(content)
-        if kind == "checklist": return render_checklist(title, content, bid)
+        if kind == "checklist": return render_checklist(title, content, bid, locale=locale)
         if kind == "quiz": return render_quiz(title, content, bid)
         return ""
     return BLOCK_RE.sub(repl, md_text)
@@ -791,7 +874,7 @@ def render_article(meta, body_md, hreflang_tags, lookup):
     
     region_tag_html = f'<span class="region-tag">{meta["region_label"]}</span><br>' if meta.get("region_label") else ""
 
-    processed_md = preprocess_custom_blocks(body_md, slug)
+    processed_md = preprocess_custom_blocks(body_md, slug, locale=locale)
     md_engine = markdown.Markdown(extensions=["extra", "sane_lists", "toc"])
     body_html = md_engine.convert(processed_md)
     toc_raw = md_engine.toc
@@ -805,7 +888,7 @@ def render_article(meta, body_md, hreflang_tags, lookup):
     reading_time_str = f"{reading_time_num} {i18n['reading_time']}"
     date_display = format_localized_date(meta.get("date", ""), locale)
 
-    category_label = meta.get("category_label") or CATEGORY_LABELS_DEFAULT.get(meta.get("category"), "")
+    category_label = meta.get("category_label") or get_cat_label(meta.get("category"), locale)
     schema = build_article_schema(meta, canonical, cover_abs)
 
     active_flag = LOCALE_INFO[locale]["flag"]
@@ -878,9 +961,10 @@ def render_index(locale, posts):
     posts_sorted = sorted(posts, key=lambda p: str(p.get("date", "")), reverse=True)
     
     cats_present = sorted({p.get("category") for p in posts_sorted if p.get("category")})
-    chips = ['<a href="#" class="active">Todos</a>']
+    all_label = i18n.get("index_all", "Todos")
+    chips = [f'<a href="#" class="active">{all_label}</a>']
     for c in cats_present:
-        chips.append(f'<a href="#{c}">{CATEGORY_LABELS_DEFAULT.get(c, c)}</a>')
+        chips.append(f'<a href="#{c}">{get_cat_label(c, locale)}</a>')
         
     cards = []
     for p in posts_sorted:
@@ -889,7 +973,7 @@ def render_index(locale, posts):
         if not media and p.get("cover_image"):
             media = [p.get("cover_image")]
         media_html = render_media(media)
-        cat_label = CATEGORY_LABELS_DEFAULT.get(p.get("category"), "")
+        cat_label = get_cat_label(p.get("category"), locale)
         
         card = f"""
     <div class="pain-card-v2" data-cat="{p.get("category","")}">
@@ -918,6 +1002,7 @@ def render_index(locale, posts):
         lang_attr=locale.split("-")[0], lang_upper=locale.split("-")[0].upper(),
         canonical=canonical, home_url=home_url, chips_html="".join(chips), cards_html="".join(cards),
         active_flag=active_flag, lang_dropdown_html=lang_dropdown_html, blog_index_url=blog_index_url,
+        index_title=i18n.get("index_title", "Blog | PepaGold"),
         index_desc=i18n["index_desc"], footer_copy=i18n["footer_copy"]
     )
     out_dir = os.path.join(folder, "blog") if folder else "blog"
