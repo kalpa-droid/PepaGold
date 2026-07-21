@@ -972,7 +972,8 @@ def render_index(locale, posts):
         media = p.get("media", [])
         if not media and p.get("cover_image"):
             media = [p.get("cover_image")]
-        media_html = render_media(media)
+        cover = [media[0]] if media else []
+        media_html = render_media(cover)
         cat_label = get_cat_label(p.get("category"), locale)
         
         card = f"""
