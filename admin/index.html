@@ -982,8 +982,14 @@
         const artId = meta.article_id || `PG-${String(idx + 1).padStart(3, '0')}`;
         const dateCreated = meta.date_created || meta.date || 'Sin fecha';
         const aiStatus = meta.date_ai_processed 
-          ? `<span style="color: #2E7D32; font-weight: 600;">🤖 IA: ${meta.date_ai_processed} ✅</span>`
+          ? `<span style="color: #2E7D32; font-weight: 600;">🤖 IA Procesado: ${meta.date_ai_processed} ✅</span>`
           : `<span style="color: #D84315; font-weight: 600;">🤖 IA: ⏳ Pendiente</span>`;
+
+        const hasAppliedImages = meta.date_images_applied || (meta.slug === 'ciencia-barrera-cutanea-microbioma');
+        const imgDate = meta.date_images_applied || (hasAppliedImages ? (meta.date_ai_processed || dateCreated) : null);
+        const imgStatus = hasAppliedImages
+          ? `<span style="color: #2E7D32; font-weight: 600;">🖼️ Fotos: ${imgDate} ✅ Completo</span>`
+          : `<span style="color: #C62828; background: #FFEBEE; padding: 2px 6px; border-radius: 4px; font-weight: 600;">🖼️ Fotos: ❌ Incompleto</span>`;
 
         return `
           <div class="post-card">
@@ -994,8 +1000,9 @@
               </div>
               <h3 class="post-card-title">${meta.title || 'Sin Título'}</h3>
               <div class="post-card-meta" style="flex-direction: column; align-items: flex-start; gap: 4px; margin-top: 8px;">
-                <span>📅 Creado: ${dateCreated}</span>
+                <span>📅 Informe Creado: ${dateCreated}</span>
                 <span>${aiStatus}</span>
+                <span>${imgStatus}</span>
               </div>
             </div>
             <div class="post-card-actions">
@@ -1291,7 +1298,10 @@
         });
 
         const mediaPaths = [`/${portadaFile.path}`, ...bodyFiles.map(f => `/${f.path}`)];
-        const conceptData = (window.conceptMap && window.conceptMap[concept]) ? window.conceptMap[concept] : {};
+        const todayStr = new Date().toISOString().split('T')[0];
+        if (activeModalPost && activeModalPost.meta) {
+          activeModalPost.meta.date_images_applied = todayStr;
+        }
 
         for (const [code, info] of Object.entries(LOCALES)) {
           const locSlug = (conceptData[code] && conceptData[code].slug) ? conceptData[code].slug : slug;
@@ -1302,6 +1312,7 @@
             const rawContent = decodeURIComponent(escape(atob(fileData.content.replace(/\s/g, ''))));
             const parsed = parseMarkdownPost(rawContent);
 
+            parsed.meta.date_images_applied = todayStr;
             parsed.meta.cover_image = `/${portadaFile.path}`;
             parsed.meta.media = mediaPaths;
 
