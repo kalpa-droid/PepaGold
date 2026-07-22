@@ -13,7 +13,7 @@ category: barrera-cutanea
 category_label: 🔬 Skin Science
 concept: piel-sensible-ros-cea-y-acn-cosm-tico-diagn-stico-y-estrategias-de-limpieza
 local_phenomenon: HVAC dry air & seasonal winds
-cover_image: /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_1.webp
+cover_image: ''
 media:
   - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_1.webp
   - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_2.webp
