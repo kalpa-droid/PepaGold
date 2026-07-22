@@ -18,7 +18,6 @@ cover_image: /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.we
 media:
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
 author: PepaGold
 epigraph:
@@ -131,7 +130,7 @@ El daño bioquímico causado por productos inadecuados se multiplica exponencial
 
 Fenómenos como **Contaminación por micropartículas PM2.5 en CDMX** ejercen un estrés osmótico severo sobre la epidermis:
 
-![Diagrama biofísico del impacto del estrés ambiental y micro-fisuras en la epidermis](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp)
+
 
 Si la matriz lipídica está debilitada, el aire seco y los contaminantes actúan como una "lija invisible", desencadenando descamación, tirantez y alergias por contacto.
 
