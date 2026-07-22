@@ -1168,11 +1168,21 @@
       loadPostImages(slug);
     }
 
-            let imageTagsState = {};
+    let imageTagsState = {};
     let currentLoadedFilesState = [];
     let deletedFilesState = {};
+    let emptySlotsState = {};
 
-    function detectTagFromFilename(filename, idx) {
+    const SLOT_TAGS = ['portada', 'cuerpo-1', 'cuerpo-2', 'cuerpo-3', 'cuerpo-4'];
+    const SLOT_LABELS = {
+      'portada': '🖼️ Portada (16:9)',
+      'cuerpo-1': '📷 Sección H2 #1',
+      'cuerpo-2': '📷 Sección H2 #2',
+      'cuerpo-3': '📷 Sección H2 #3',
+      'cuerpo-4': '📷 Sección H2 #4'
+    };
+
+    function detectTagFromFilename(filename) {
       const name = filename.toLowerCase();
       if (name.includes('portada') || name.includes('prompt-1') || name.includes('prompt_1') || name.includes('prompt1') || name.includes('cover') || name.includes('hero')) {
         return 'portada';
@@ -1189,17 +1199,15 @@
       if (name.includes('cuerpo-4') || name.includes('cuerpo_4') || name.includes('cuerpo4') || name.includes('prompt-5') || name.includes('prompt_5')) {
         return 'cuerpo-4';
       }
-      const tags = ['portada', 'cuerpo-1', 'cuerpo-2', 'cuerpo-3', 'cuerpo-4'];
-      return tags[idx % 5];
+      return null;
     }
 
     async function loadPostImages(slug) {
       const grid = document.getElementById('modal-img-grid');
       grid.innerHTML = '<p style="font-size: 13px; color: var(--color-dark-muted);">Cargando imágenes...</p>';
 
-      if (!deletedFilesState[slug]) {
-        deletedFilesState[slug] = new Set();
-      }
+      if (!deletedFilesState[slug]) deletedFilesState[slug] = new Set();
+      if (!emptySlotsState[slug]) emptySlotsState[slug] = new Set();
 
       let files = [];
       try {
@@ -1228,44 +1236,51 @@
         }
       });
 
-      currentLoadedFilesState = Array.from(uniqueFilesMap.values());
+      const activeFiles = Array.from(uniqueFilesMap.values());
+      currentLoadedFilesState = activeFiles;
 
-      const allTags = ['portada', 'cuerpo-1', 'cuerpo-2', 'cuerpo-3', 'cuerpo-4'];
-      
-      // Auto assign non-conflicting tags for active files
-      const assignedTags = new Set();
-      currentLoadedFilesState.forEach((f, idx) => {
-        if (!imageTagsState[f.name]) {
-          let detected = detectTagFromFilename(f.name, idx);
-          if (assignedTags.has(detected)) {
-            detected = allTags.find(t => !assignedTags.has(t)) || detected;
-          }
-          imageTagsState[f.name] = detected;
+      // Assign non-conflicting tags for active files without auto-filling deleted slots
+      const occupiedTags = new Set();
+      activeFiles.forEach(f => {
+        if (imageTagsState[f.name] && !emptySlotsState[slug].has(imageTagsState[f.name])) {
+          occupiedTags.add(imageTagsState[f.name]);
         }
-        assignedTags.add(imageTagsState[f.name]);
       });
 
-      // Render 5 fixed position slots (cards for active files or empty upload boxes for empty slots)
+      activeFiles.forEach(f => {
+        if (!imageTagsState[f.name]) {
+          let detected = detectTagFromFilename(f.name);
+          if (detected && !occupiedTags.has(detected) && !emptySlotsState[slug].has(detected)) {
+            imageTagsState[f.name] = detected;
+          } else {
+            let freeTag = SLOT_TAGS.find(t => !occupiedTags.has(t) && !emptySlotsState[slug].has(t));
+            if (freeTag) imageTagsState[f.name] = freeTag;
+          }
+        }
+        if (imageTagsState[f.name]) {
+          occupiedTags.add(imageTagsState[f.name]);
+        }
+      });
+
+      // Render exactly the 5 fixed position slots
       let htmlCards = [];
 
-      allTags.forEach((tagVal, pIdx) => {
-        const label = pIdx === 0 ? '🖼️ Portada (16:9)' : `📷 Sección H2 #${pIdx}`;
-        const activeFile = currentLoadedFilesState.find(f => imageTagsState[f.name] === tagVal);
+      SLOT_TAGS.forEach((tagVal, pIdx) => {
+        const label = SLOT_LABELS[tagVal];
+        const activeFile = activeFiles.find(f => imageTagsState[f.name] === tagVal);
 
         if (activeFile) {
           let optionsHtml = '';
-          allTags.forEach((val, optionIdx) => {
-            const optLabel = optionIdx === 0 ? '🖼️ Portada (16:9 Panorámica)' : `📷 Sección H2 #${optionIdx}`;
+          SLOT_TAGS.forEach((val, optionIdx) => {
+            const optLabel = SLOT_LABELS[val];
             const isSelected = tagVal === val ? 'selected' : '';
-            const occupiedFile = currentLoadedFilesState.find(other => other.name !== activeFile.name && imageTagsState[other.name] === val);
-            const occupiedText = occupiedFile ? ` (Intercambiar con ${occupiedFile.name})` : '';
-            optionsHtml += `<option value="${val}" ${isSelected}>${optLabel}${occupiedText}</option>`;
+            optionsHtml += `<option value="${val}" ${isSelected}>${optLabel}</option>`;
           });
 
           const imgSrc = activeFile.download_url || (activeFile.path ? '/' + activeFile.path.replace(/^\//, '') : `/assets/imagenes/blog/${slug}/${activeFile.name}`);
 
           htmlCards.push(`
-            <div class="image-card" style="height: auto; padding-bottom: 8px; border: 2px solid ${tagVal === 'portada' ? '#D48C90' : 'var(--border-color)'};">
+            <div class="image-card" style="height: auto; padding-bottom: 8px; border: 2px solid ${tagVal === 'portada' ? '#D48C90' : 'var(--border-color)'}; border-radius: 14px; background: #fff;">
               <div style="width: 100%; height: 140px; background: #FAF6F5; display: flex; align-items: center; justify-content: center; overflow: hidden; border-bottom: 1px solid var(--border-color); position: relative;">
                 <img src="${imgSrc}" alt="${activeFile.name}" style="width: 100%; height: 100%; object-fit: cover;" />
                 <span style="position: absolute; top: 6px; left: 6px; background: rgba(42,37,35,0.85); color: #fff; font-size: 10px; font-weight: 700; padding: 3px 7px; border-radius: 4px; backdrop-filter: blur(4px);">
@@ -1279,16 +1294,21 @@
                   ${optionsHtml}
                 </select>
               </div>
-              <button type="button" class="image-card-del" onclick="deletePostImage('${slug}', '${activeFile.name}', '${activeFile.sha || ''}')">✕</button>
+              <button type="button" class="image-card-del" title="Eliminar esta imagen y vaciar tarjeta" onclick="deletePostImage('${slug}', '${activeFile.name}', '${activeFile.sha || ''}', '${tagVal}')">✕</button>
             </div>
           `);
         } else {
-          // Empty Slot Card
+          // EXPLICIT EMPTY SLOT CARD
           htmlCards.push(`
-            <div class="image-card" style="min-height: 220px; border: 2px dashed #D48C90; background: #FAF6F5; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 16px; text-align: center; border-radius: 14px; position: relative;">
-              <span style="font-size: 26px; margin-bottom: 4px; opacity: 0.8;">➕</span>
-              <span style="font-size: 11px; font-weight: 700; color: #D48C90; text-transform: uppercase;">${label} (Vacío)</span>
-              <span style="font-size: 10.5px; color: var(--color-dark-muted); margin-top: 4px; line-height: 1.3;">Casillero libre. Subí una foto para esta sección.</span>
+            <div class="image-card empty-card" style="min-height: 230px; border: 2px dashed #D48C90; background: #FAF6F5; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 16px; text-align: center; border-radius: 14px; position: relative;">
+              <span style="font-size: 30px; margin-bottom: 4px; opacity: 0.85;">📷</span>
+              <span style="font-size: 11px; font-weight: 700; color: #D48C90; text-transform: uppercase; letter-spacing: 0.5px;">${label}</span>
+              <span style="font-size: 11.5px; font-weight: 600; color: #C62828; margin-top: 6px; background: #FFEBEE; padding: 3px 10px; border-radius: 12px; border: 1px solid #FFCDD2;">TARJETA IMAGEN VACÍA</span>
+              <span style="font-size: 10.5px; color: var(--color-dark-muted); margin-top: 6px; line-height: 1.3;">Casillero libre. Todavía no hay imagen cargada.</span>
+              <label class="btn btn-primary btn-sm" style="margin-top: 12px; font-size: 11.5px; background: #D48C90; border: none; cursor: pointer;">
+                ➕ Subir Imagen a este Casillero
+                <input type="file" accept="image/*" style="display: none;" onchange="uploadImageToSlot(this, '${slug}', '${tagVal}')" />
+              </label>
             </div>
           `);
         }
@@ -1305,10 +1325,75 @@
         }
       }
       imageTagsState[fileName] = newTagValue;
+      if (activeModalPost && activeModalPost.meta && emptySlotsState[activeModalPost.meta.slug]) {
+        emptySlotsState[activeModalPost.meta.slug].delete(newTagValue);
+      }
       showToast(`🏷️ Posición de ${fileName} asignada a: ${newTagValue}`);
       if (activeModalPost) {
         loadPostImages(activeModalPost.meta.slug);
       }
+    }
+
+    async function uploadImageToSlot(input, slug, targetTag) {
+      if (!input.files || !input.files.length) return;
+      if (!ghToken) {
+        const inputToken = prompt('🔑 Para subir archivos a GitHub ingresá tu Personal Access Token:');
+        if (inputToken && inputToken.trim()) {
+          ghToken = inputToken.trim();
+          localStorage.setItem('pepagold_gh_token', ghToken);
+        } else {
+          return alert('Se requiere token para subir imágenes.');
+        }
+      }
+
+      const file = input.files[0];
+      showToast(`⚡ Procesando y convirtiendo ${file.name} a .webp para slot ${targetTag}...`);
+
+      try {
+        const img = new Image();
+        const objectUrl = URL.createObjectURL(file);
+        img.src = objectUrl;
+        await new Promise(res => img.onload = res);
+
+        const canvas = document.createElement('canvas');
+        canvas.width = img.width;
+        canvas.height = img.height;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0);
+
+        const webpDataUrl = canvas.toDataURL('image/webp', 0.85);
+        const webpBase64 = webpDataUrl.split(',')[1];
+        URL.revokeObjectURL(objectUrl);
+
+        const cleanName = `${targetTag.replace(/[^a-z0-9]/g, '-')}-${Date.now().toString().slice(-4)}.webp`;
+        const path = `assets/imagenes/blog/${slug}/${cleanName}`;
+
+        if (deletedFilesState[slug]) deletedFilesState[slug].delete(cleanName);
+        if (emptySlotsState[slug]) emptySlotsState[slug].delete(targetTag);
+
+        imageTagsState[cleanName] = targetTag;
+
+        const existingFile = await ghFetch(`contents/${path}`).catch(() => null);
+        const bodyPayload = {
+          message: `Upload ${cleanName} for slot ${targetTag} in ${slug}`,
+          content: webpBase64,
+          branch: BRANCH
+        };
+        if (existingFile && existingFile.sha) {
+          bodyPayload.sha = existingFile.sha;
+        }
+
+        await ghFetch(`contents/${path}`, {
+          method: 'PUT',
+          body: JSON.stringify(bodyPayload)
+        });
+
+        showToast(`✨ ¡Imagen subida y asignada a ${targetTag}!`);
+        loadPostImages(slug);
+      } catch (err) {
+        showToast('Error al subir imagen: ' + err.message);
+      }
+      input.value = '';
     }
 
     async function uploadImageToPost(input) {
@@ -1325,21 +1410,13 @@
       }
       
       const filesToUpload = Array.from(input.files);
-      const currentCount = currentLoadedFilesState.length;
-      
-      if (currentCount + filesToUpload.length > 5) {
-        alert(`🚫 Límite alcanzado: Un artículo en PepaGold solo permite 5 imágenes como máximo (1 Portada + 4 Secciones H2).\\nActualmente tenés ${currentCount} imagen(es) y estás intentando subir ${filesToUpload.length}.\\n\\nPor favor eliminá primero alguna imagen existente antes de subir una nueva.`);
-        input.value = '';
-        return;
-      }
-
-      const total = filesToUpload.length;
       const slug = activeModalPost.meta.slug;
-      showToast(`⚡ Procesando ${total} imagen(es) con conversión automática a .webp...`);
 
-      for (let i = 0; i < total; i++) {
+      showToast(`⚡ Procesando ${filesToUpload.length} imagen(es) con conversión automática a .webp...`);
+
+      for (let i = 0; i < filesToUpload.length; i++) {
         const file = filesToUpload[i];
-        showToast(`⚡ Convirtiendo y subiendo (${i + 1}/${total}): ${file.name}...`);
+        showToast(`⚡ Convirtiendo y subiendo (${i + 1}/${filesToUpload.length}): ${file.name}...`);
 
         try {
           const img = new Image();
@@ -1361,7 +1438,6 @@
           const cleanName = rawName.toLowerCase().replace(/[^a-z0-9._-]/g, '-') + '.webp';
           const path = `assets/imagenes/blog/${slug}/${cleanName}`;
 
-          // Remove from deleted state if previously deleted
           if (deletedFilesState[slug]) {
             deletedFilesState[slug].delete(cleanName);
           }
@@ -1385,12 +1461,12 @@
         }
       }
 
-      showToast(`✨ ¡Las ${total} imágenes fueron convertidas a .webp y subidas con éxito!`);
+      showToast(`✨ ¡Imágenes convertidas a .webp y subidas con éxito!`);
       loadPostImages(slug);
       input.value = '';
     }
 
-    async function deletePostImage(slug, filename, sha) {
+    async function deletePostImage(slug, filename, sha, slotTag) {
       if (!ghToken) {
         const inputToken = prompt('🔑 Para eliminar archivos de GitHub ingresá tu Personal Access Token (con permisos "repo"):');
         if (inputToken && inputToken.trim()) {
@@ -1401,20 +1477,35 @@
         }
       }
 
-      if (!confirm(`¿Eliminar la imagen "${filename}" del artículo?`)) return;
+      if (!confirm(`¿Eliminar la imagen "${filename}" del artículo? La tarjeta quedará completamente vacía.`)) return;
 
-      // Mark file as DELETED in local state immediately so it vanishes from UI
-      if (!deletedFilesState[slug]) {
-        deletedFilesState[slug] = new Set();
-      }
+      // 1. Mark file as DELETED and slot as EMPTY in local state immediately so it vanishes from UI
+      if (!deletedFilesState[slug]) deletedFilesState[slug] = new Set();
+      if (!emptySlotsState[slug]) emptySlotsState[slug] = new Set();
+
       deletedFilesState[slug].add(filename);
+      const tagAssociated = slotTag || imageTagsState[filename];
+      if (tagAssociated) emptySlotsState[slug].add(tagAssociated);
 
       delete imageTagsState[filename];
       currentLoadedFilesState = currentLoadedFilesState.filter(f => f.name !== filename);
 
+      // 2. Remove reference from activeModalPost if present
+      if (activeModalPost && activeModalPost.meta) {
+        if (activeModalPost.meta.cover_image && activeModalPost.meta.cover_image.includes(filename)) {
+          activeModalPost.meta.cover_image = '';
+        }
+        if (activeModalPost.meta.media) {
+          activeModalPost.meta.media = activeModalPost.meta.media.filter(m => {
+            const p = typeof m === 'string' ? m : m.file;
+            return !p.includes(filename);
+          });
+        }
+      }
+
       showToast(`🗑️ Eliminando ${filename}...`);
 
-      let deletedOnGithub = false;
+      // 3. Delete file from GitHub API
       try {
         const path = `contents/assets/imagenes/blog/${slug}/${filename}`;
         let latestSha = sha;
@@ -1437,13 +1528,63 @@
               branch: BRANCH
             })
           });
-          deletedOnGithub = true;
         }
       } catch (err) {
         console.error('Error deleting image from GitHub API:', err);
       }
 
-      showToast(`🗑️ Imagen ${filename} eliminada correctamente.`);
+      // 4. Update Frontmatter across all 10 language posts on GitHub so reference is completely purged
+      try {
+        for (const code of Object.keys(LOCALES)) {
+          const filePath = `contents/blog/posts/${code}/${slug}.md`;
+          try {
+            const fileData = await ghFetch(filePath);
+            const rawContent = decodeURIComponent(escape(atob(fileData.content.replace(/\s/g, ''))));
+            const parsed = parseMarkdownPost(rawContent);
+
+            let modified = false;
+            if (parsed.meta.cover_image && parsed.meta.cover_image.includes(filename)) {
+              parsed.meta.cover_image = '';
+              modified = true;
+            }
+            if (parsed.meta.media && Array.isArray(parsed.meta.media)) {
+              const originalLen = parsed.meta.media.length;
+              parsed.meta.media = parsed.meta.media.filter(m => {
+                const p = typeof m === 'string' ? m : m.file;
+                return !p.includes(filename);
+              });
+              if (parsed.meta.media.length !== originalLen) modified = true;
+            }
+
+            // Remove inline markdown image reference if present
+            const imgRegex = new RegExp(`!\\[[^\\]]*\\]\\([^)]*${filename.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}[^)]*\\)`, 'g');
+            if (imgRegex.test(parsed.body)) {
+              parsed.body = parsed.body.replace(imgRegex, '');
+              modified = true;
+            }
+
+            if (modified) {
+              const newFullMd = dumpMarkdownPost(parsed.meta, parsed.body);
+              const encoded = btoa(unescape(encodeURIComponent(newFullMd)));
+              await ghFetch(filePath, {
+                method: 'PUT',
+                body: JSON.stringify({
+                  message: `Remove deleted image ${filename} reference from ${code}`,
+                  content: encoded,
+                  sha: fileData.sha,
+                  branch: BRANCH
+                })
+              });
+            }
+          } catch (eLoc) {
+            // Ignore if post in that locale does not exist
+          }
+        }
+      } catch (errLocSync) {
+        console.warn('Error syncing post deletion across locales:', errLocSync);
+      }
+
+      showToast(`🗑️ Imagen ${filename} eliminada correctamente. Tarjeta vacía.`);
       loadPostImages(slug);
     }
 
@@ -1453,35 +1594,30 @@
 
       const slug = activeModalPost.meta.slug;
       const concept = activeModalPost.meta.concept || slug;
-      showToast('✨ Asignando y sincronizando imágenes en los 10 idiomas del blog...');
+      showToast('✨ Sincronizando imágenes y tarjetas en los 10 idiomas del blog...');
 
       try {
         const files = await ghFetch(`contents/assets/imagenes/blog/${slug}`).catch(() => []);
-        const webpFiles = files.filter(f => f.name.endsWith('.webp') || f.name.endsWith('.png') || f.name.endsWith('.jpg'));
+        const activeFiles = (files || []).filter(f => f.name && (!deletedFilesState[slug] || !deletedFilesState[slug].has(f.name)) && (f.name.endsWith('.webp') || f.name.endsWith('.png') || f.name.endsWith('.jpg')));
 
-        if (!webpFiles.length) {
-          return alert('No hay imágenes subidas todavía en esta carpeta. Subí al menos una imagen primero.');
-        }
-
-        let portadaFile = webpFiles.find(f => imageTagsState[f.name] === 'portada') || webpFiles[0];
+        let portadaFile = activeFiles.find(f => imageTagsState[f.name] === 'portada');
         
         const bodyFilesMap = {
-          'cuerpo-1': webpFiles.find(f => imageTagsState[f.name] === 'cuerpo-1'),
-          'cuerpo-2': webpFiles.find(f => imageTagsState[f.name] === 'cuerpo-2'),
-          'cuerpo-3': webpFiles.find(f => imageTagsState[f.name] === 'cuerpo-3'),
-          'cuerpo-4': webpFiles.find(f => imageTagsState[f.name] === 'cuerpo-4'),
+          'cuerpo-1': activeFiles.find(f => imageTagsState[f.name] === 'cuerpo-1'),
+          'cuerpo-2': activeFiles.find(f => imageTagsState[f.name] === 'cuerpo-2'),
+          'cuerpo-3': activeFiles.find(f => imageTagsState[f.name] === 'cuerpo-3'),
+          'cuerpo-4': activeFiles.find(f => imageTagsState[f.name] === 'cuerpo-4'),
         };
 
-        const bodyFilesList = [
-          bodyFilesMap['cuerpo-1'],
-          bodyFilesMap['cuerpo-2'],
-          bodyFilesMap['cuerpo-3'],
-          bodyFilesMap['cuerpo-4']
-        ].filter(Boolean);
+        const mediaPaths = [];
+        if (portadaFile) mediaPaths.push(`/${portadaFile.path}`);
+        ['cuerpo-1', 'cuerpo-2', 'cuerpo-3', 'cuerpo-4'].forEach(tagKey => {
+          if (bodyFilesMap[tagKey]) {
+            mediaPaths.push(`/${bodyFilesMap[tagKey].path}`);
+          }
+        });
 
-        const mediaPaths = [`/${portadaFile.path}`, ...bodyFilesList.map(f => `/${f.path}`)];
         const todayStr = new Date().toISOString().split('T')[0];
-
         const conceptData = (window.conceptMap && window.conceptMap[concept]) ? window.conceptMap[concept] : {};
 
         for (const [code, info] of Object.entries(LOCALES)) {
@@ -1493,30 +1629,23 @@
             const rawContent = decodeURIComponent(escape(atob(fileData.content.replace(/\s/g, ''))));
             const parsed = parseMarkdownPost(rawContent);
 
-            parsed.meta.date_images_applied = todayStr;
-            parsed.meta.cover_image = `/${portadaFile.path}`;
+            parsed.meta.date_images_applied = mediaPaths.length > 0 ? todayStr : null;
+            parsed.meta.cover_image = portadaFile ? `/${portadaFile.path}` : '';
             parsed.meta.media = mediaPaths;
 
             let updatedLocBody = parsed.body;
             updatedLocBody = updatedLocBody.replace(/\n*!\[Figura #\d+\]\([^)]+\)/g, '').trim();
 
-            let imgMatchIndex = 0;
-            let hasInlineImages = /!\[.*?\]\(\/assets\/imagenes\/blog\/[^)]+\)/.test(updatedLocBody);
+            const activeBodyFiles = ['cuerpo-1', 'cuerpo-2', 'cuerpo-3', 'cuerpo-4'].map(tagKey => bodyFilesMap[tagKey]).filter(Boolean);
 
-            if (hasInlineImages) {
-              updatedLocBody = updatedLocBody.replace(/!\[(.*?)\]\(\/assets\/imagenes\/blog\/[^)]+\)/g, (match, altText) => {
-                if (imgMatchIndex < bodyFilesList.length) {
-                  const bFile = bodyFilesList[imgMatchIndex++];
-                  return `![${altText || 'Imagen de sección'}](/${bFile.path})`;
-                }
-                return match;
-              });
-            } else if (bodyFilesList.length > 0) {
+            updatedLocBody = updatedLocBody.replace(/!\[.*?\]\(\/assets\/imagenes\/blog\/[^)]+\)/g, '').replace(/\n{3,}/g, '\n\n');
+
+            if (activeBodyFiles.length > 0) {
               const sections = updatedLocBody.split(/\n(?=## )/);
               let bIdx = 0;
               const newSections = sections.map((sec, sIdx) => {
-                if (sIdx > 0 && bIdx < bodyFilesList.length && sec.startsWith('## ')) {
-                  const bFile = bodyFilesList[bIdx++];
+                if (sIdx > 0 && bIdx < activeBodyFiles.length && sec.startsWith('## ')) {
+                  const bFile = activeBodyFiles[bIdx++];
                   const paragraphs = sec.split(/\n\n+/);
                   if (paragraphs.length >= 2) {
                     paragraphs.splice(2, 0, `![Imagen de sección](/${bFile.path})`);
@@ -1536,7 +1665,7 @@
             await ghFetch(filePath, {
               method: 'PUT',
               body: JSON.stringify({
-                message: `Sync images across 10 locales for ${locSlug}`,
+                message: `Sync active images across locales for ${locSlug}`,
                 content: encoded,
                 sha: fileData.sha,
                 branch: BRANCH
@@ -1547,7 +1676,7 @@
           }
         }
 
-        showToast('🎉 ¡Imágenes aplicadas y sincronizadas con éxito en los 10 idiomas del blog!');
+        showToast('🎉 ¡Imágenes aplicadas y tarjetas sincronizadas con éxito en los 10 idiomas!');
         await loadArticles();
         closeModal('modal-images');
       } catch (err) {

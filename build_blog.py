@@ -1061,6 +1061,37 @@ def update_sitemap(new_urls):
         f.write(content)
     print(f"sitemap.xml actualizado: {added} URL(s) nueva(s).")
 
+def cleanup_orphan_images(all_meta):
+    referenced = set()
+    for meta, body in all_meta:
+        if meta.get("cover_image"):
+            referenced.add(meta["cover_image"].lstrip("/"))
+        for m in meta.get("media", []):
+            p = m if isinstance(m, str) else m.get("file", "")
+            if p:
+                referenced.add(p.lstrip("/"))
+        if body:
+            for img in re.findall(r'!\[.*?\]\((/assets/imagenes/blog/[^)]+)\)', body):
+                referenced.add(img.lstrip("/"))
+
+    blog_img_dir = "assets/imagenes/blog"
+    if not os.path.exists(blog_img_dir):
+        return
+
+    removed = 0
+    for root, _, files in os.walk(blog_img_dir):
+        for f in files:
+            full_path = os.path.join(root, f)
+            rel_path = os.path.relpath(full_path, ".").replace("\\", "/")
+            if f.endswith((".webp", ".png", ".jpg", ".jpeg")) and rel_path not in referenced:
+                try:
+                    os.remove(full_path)
+                    removed += 1
+                except Exception as e:
+                    print(f"No se pudo eliminar archivo local {rel_path}: {e}")
+    if removed > 0:
+        print(f"🧹 Limpieza local: {removed} imagen(es) huérfana(s) eliminada(s) del disco.")
+
 def main():
     md_files = []
     for root, _, files in os.walk(POSTS_DIR):
@@ -1080,6 +1111,8 @@ def main():
         if meta["locale"] not in LOCALE_FOLDERS: meta["locale"] = "es-ar"
         if "slug" not in meta: meta["slug"] = os.path.basename(path).replace(".md", "")
         all_meta.append((meta, body_md))
+
+    cleanup_orphan_images(all_meta)
 
     posts_by_concept = {}
     lookup = {}
