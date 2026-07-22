@@ -35,6 +35,16 @@ faq:
 - q: Warum brennt mein Gesicht beim Eincremen?
   a: Das Brennen weist auf Mikrorisse in der Hornschicht hin.
 show_science_link: true
+image_prompts:
+- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+
+  Architectural Scandinavian minimalist beauty photography celebrating skinimalism.
+  A serene woman''s bare, radiant face resting gracefully near a single pristine white
+  Laska Mini UpPoly microfiber cloth on a smooth nude clay pedestal, illuminated by
+  soft natural morning sunlight and delicate dew drops. Palette dominated by warm
+  dusty rose (#D48C90), warm sand, and raw linen textures. Organic soft shadows, peaceful
+  zen aesthetic. Shot on Hasselblad 85mm f/2.0 lens. Completely clean minimalist composition.
+  NO text, NO watermarks, NO brand logos.'
 ---
 Spüren Sie ein Brennen, wenn Sie Ihre gewohnte Feuchtigkeitscreme auftragen? Ihre Hautbarriere bittet um Hilfe.
 

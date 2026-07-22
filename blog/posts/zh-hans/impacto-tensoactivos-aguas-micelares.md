@@ -13,33 +13,42 @@ concept: el-impacto-de-tensoactivos-jabones-y-aguas-micelares-en-la-barrera-cut-
 local_phenomenon: HVAC dry air & seasonal winds
 cover_image: /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_1.webp
 media:
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_1.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_1.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_2.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_2.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_3.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_3.webp
-  - >-
-    /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/gemini_generated_image_8b2pk18b2pk18b2p.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_4.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_4.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_5.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_1.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_1.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_2.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_2.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_3.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_3.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/gemini_generated_image_8b2pk18b2pk18b2p.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_4.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_4.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_5.webp
 author: PepaGold
 epigraph:
   text: 卸妆水是为了紧急卸妆而设计的；让它残留在脸上就等于让洗涤剂在脸上持续作用。
   author: PepaGold 博士
 summary:
-  - 卸妆水使用非离子表面活性剂（Poloxamer 184、PEG），其作用类似于工业清洁剂。
-  - “免洗”说明会导致游离单体在数小时内溶解皮肤自有的神经酰胺。
-  - 眼周残留的胶束成分会溶解泪膜脂质层，导致干眼症和刺激。
-  - UpPoly 技术通过纯水动力毛细作用清洁，无需化学溶剂即可吸出污垢。
+- 卸妆水使用非离子表面活性剂（Poloxamer 184、PEG），其作用类似于工业清洁剂。
+- “免洗”说明会导致游离单体在数小时内溶解皮肤自有的神经酰胺。
+- 眼周残留的胶束成分会溶解泪膜脂质层，导致干眼症和刺激。
+- UpPoly 技术通过纯水动力毛细作用清洁，无需化学溶剂即可吸出污垢。
 faq:
-  - q: 为什么卸妆水标签上写着“无需冲洗”？
-    a: 这是商业便利宣传。在皮肤学上，所有表面活性剂都必须用温水冲洗。
-  - q: 如果卸妆水进眼睛会怎么样？
-    a: 泊洛沙姆（Poloxamer）会溶解泪膜中的脂质，引起灼热感和刺激。
+- q: 为什么卸妆水标签上写着“无需冲洗”？
+  a: 这是商业便利宣传。在皮肤学上，所有表面活性剂都必须用温水冲洗。
+- q: 如果卸妆水进眼睛会怎么样？
+  a: 泊洛沙姆（Poloxamer）会溶解泪膜中的脂质，引起灼热感和刺激。
 show_science_link: true
 date_images_applied: '2026-07-22'
+image_prompts:
+- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+
+  High-concept liquid splash beauty photography. A crystal-clear pure water droplet
+  creating a dramatic, pristine splash ripple against smooth, porcelain-toned skin,
+  washing away harsh chemical foam and cloudy surfactant residue to reveal luminous
+  natural skin. Palette of warm dusty rose (#D48C90), pure liquid crystal blue, and
+  nude ivory. High-speed macro photography capturing crisp liquid droplets in mid-air,
+  studio backlight. Shot on Hasselblad 100MP, 1/8000s shutter speed, f/4.0. Clean
+  editorial visual style. NO text, NO watermarks, NO logos.'
 ---
 您是否想过为什么使用温和的卸妆水后，皮肤依然感觉紧绷或长痘？在现代皮肤学中，将清洁表面活性剂留在皮肤上被认作导致慢性炎症的罪魁祸首。
 

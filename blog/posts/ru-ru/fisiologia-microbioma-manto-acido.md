@@ -1,7 +1,8 @@
 ---
 article_id: PG-003
 title: Наука о Кожном Барьере и Микробиоме
-description: Узнайте все о науке кожного барьера, микробиома и кислотной мантии pH 5.5.
+description: Узнайте все о науке кожного барьера, микробиома и кислотной мантии pH
+  5.5.
 slug: fisiologia-microbioma-manto-acido
 date: '2026-07-21'
 date_created: '2026-07-21'
@@ -9,38 +10,42 @@ date_ai_processed: '2026-07-21'
 locale: ru-ru
 category: barrera-cutanea
 category_label: 🔬 Наука о Коже
-concept: >-
-  fisiolog-a-y-ecolog-a-de-la-barrera-cut-nea-din-mica-del-microbioma-mantos-hidrolip-dicos-y-estrategias-terap-uticas-avanzadas
+concept: fisiolog-a-y-ecolog-a-de-la-barrera-cut-nea-din-mica-del-microbioma-mantos-hidrolip-dicos-y-estrategias-terap-uticas-avanzadas
 local_phenomenon: HVAC dry air & seasonal winds
 cover_image: /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
 media:
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_2.webp
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
+- /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
+- /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_2.webp
+- /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
+- /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp
+- /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
 author: PepaGold
 epigraph:
-  text: >-
-    Коже не нужна лишняя химия; ей нужна свобода для самостоятельного
-    восстановления.
+  text: Коже не нужна лишняя химия; ей нужна свобода для самостоятельного восстановления.
   author: Д-р PepaGold
 summary:
-  - >-
-    Кожный барьер — это липидный матрикс из церамидов, холестерина и жирных
-    кислот.
-  - >-
-    Кислотная мантия (pH 4.5-5.5) и микробиом образуют первую линию
-    биологической защиты.
-  - Сухой климат и агрессивные очистители создают микротрещины.
-  - Восстановление требует атравматичного физического очищения.
+- Кожный барьер — это липидный матрикс из церамидов, холестерина и жирных кислот.
+- Кислотная мантия (pH 4.5-5.5) и микробиом образуют первую линию биологической защиты.
+- Сухой климат и агрессивные очистители создают микротрещины.
+- Восстановление требует атравматичного физического очищения.
 faq:
-  - q: Сколько времени требуется для восстановления кожного барьера?
-    a: Обновление клеток занимает 14–28 дней.
-  - q: Почему лицо жжет при нанесении крема?
-    a: Жжение указывает на микротрещины в роговом слое.
+- q: Сколько времени требуется для восстановления кожного барьера?
+  a: Обновление клеток занимает 14–28 дней.
+- q: Почему лицо жжет при нанесении крема?
+  a: Жжение указывает на микротрещины в роговом слое.
 show_science_link: true
 date_images_applied: '2026-07-22'
+image_prompts:
+- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+
+  Scientific-editorial concept photography of the skin microbiome and acid mantle.
+  Macro close-up of fresh, radiant skin texture with subtle glowing bioluminescent
+  golden-rose micro-particles hovering gracefully above the epidermal surface, symbolizing
+  a thriving bacterial ecosystem and pH 5.5 protective shield. Aesthetic palette of
+  warm dusty rose (#D48C90), soft amber glow, and nude cream. Ethereal studio backlighting
+  creating a soft protective halo along the jawline. Shot on Hasselblad 100MP with
+  120mm macro f/2.8 lens. Clean high-fashion medical aesthetic. NO text, NO labels,
+  NO watermarks, NO logos.'
 ---
 Чувствуете ли вы жжение при нанесении обычного увлажняющего крема? Ваш кожный барьер просит о помощи.
 

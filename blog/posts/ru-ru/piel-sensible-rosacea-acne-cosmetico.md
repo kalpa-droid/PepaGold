@@ -34,6 +34,16 @@ faq:
 - q: Почему лицо жжет при нанесении крема?
   a: Жжение указывает на микротрещины в роговом слое.
 show_science_link: true
+image_prompts:
+- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+
+  Editorial beauty macro photography depicting sensitive skin relief. Split visual
+  narrative on a woman''s delicate face: a faint rosy flushed cheek on one side, seamlessly
+  transitioning into calm, velvety hydrated skin refreshed by a soft, luxurious Laska
+  Mini UpPoly micro-cloth soaked in cool water. Aesthetic palette of muted dusty rose
+  (#D48C90), soft botanical sage green accents, and ivory nude. Soothing, tranquil
+  studio lighting atmosphere. Shot on 100mm f/2.8 macro lens, shallow depth of field.
+  Clean serene composition. NO text, NO watermarks, NO logos.'
 ---
 Чувствуете ли вы жжение при нанесении обычного увлажняющего крема? Ваш кожный барьер просит о помощи.
 

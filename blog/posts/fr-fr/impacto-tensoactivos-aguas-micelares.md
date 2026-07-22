@@ -1,9 +1,8 @@
 ---
 article_id: PG-002
 title: La Science de la Barrière Cutanée et du Microbiome
-description: >-
-  Découvrez la science de la barrière cutanée, du microbiome et du manteau acide
-  pH 5.5.
+description: Découvrez la science de la barrière cutanée, du microbiome et du manteau
+  acide pH 5.5.
 slug: impacto-tensoactivos-aguas-micelares
 date: '2026-07-21'
 date_created: '2026-07-21'
@@ -15,39 +14,45 @@ concept: el-impacto-de-tensoactivos-jabones-y-aguas-micelares-en-la-barrera-cut-
 local_phenomenon: HVAC dry air & seasonal winds
 cover_image: /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_1.webp
 media:
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_1.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_1.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_2.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_2.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_3.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_3.webp
-  - >-
-    /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/gemini_generated_image_8b2pk18b2pk18b2p.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_4.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_4.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_5.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_1.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_1.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_2.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_2.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_3.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_3.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/gemini_generated_image_8b2pk18b2pk18b2p.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_4.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_4.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_5.webp
 author: PepaGold
 epigraph:
-  text: >-
-    La peau n'a pas besoin de plus de chimie ; elle a besoin de la liberté de se
-    réparer seule.
+  text: La peau n'a pas besoin de plus de chimie ; elle a besoin de la liberté de
+    se réparer seule.
   author: Dr. PepaGold
 summary:
-  - >-
-    La barrière cutanée est une matrice lipidique de céramides, cholestérol et
-    acides gras.
-  - >-
-    Le manteau acide (pH 4.5-5.5) et le microbiote forment la première ligne de
-    défense biologique.
-  - Le climat sec et les nettoyants agressifs évaporent l'eau cellulaire.
-  - La réparation nécessite un nettoyage physique atraumatique et des céramides.
+- La barrière cutanée est une matrice lipidique de céramides, cholestérol et acides
+  gras.
+- Le manteau acide (pH 4.5-5.5) et le microbiote forment la première ligne de défense
+  biologique.
+- Le climat sec et les nettoyants agressifs évaporent l'eau cellulaire.
+- La réparation nécessite un nettoyage physique atraumatique et des céramides.
 faq:
-  - q: Combien de temps faut-il pour réparer une barrière cutanée abîmée ?
-    a: Le renouvellement cellulaire dure 14 à 28 jours.
-  - q: Pourquoi la peau brûle-t-elle lors de l'application d'une crème ?
-    a: La brûlure indique des micro-fissures exposant les terminaisons nerveuses.
+- q: Combien de temps faut-il pour réparer une barrière cutanée abîmée ?
+  a: Le renouvellement cellulaire dure 14 à 28 jours.
+- q: Pourquoi la peau brûle-t-elle lors de l'application d'une crème ?
+  a: La brûlure indique des micro-fissures exposant les terminaisons nerveuses.
 show_science_link: true
 date_images_applied: '2026-07-22'
+image_prompts:
+- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+
+  High-concept liquid splash beauty photography. A crystal-clear pure water droplet
+  creating a dramatic, pristine splash ripple against smooth, porcelain-toned skin,
+  washing away harsh chemical foam and cloudy surfactant residue to reveal luminous
+  natural skin. Palette of warm dusty rose (#D48C90), pure liquid crystal blue, and
+  nude ivory. High-speed macro photography capturing crisp liquid droplets in mid-air,
+  studio backlight. Shot on Hasselblad 100MP, 1/8000s shutter speed, f/4.0. Clean
+  editorial visual style. NO text, NO watermarks, NO logos.'
 ---
 Ressentez-vous des picotements lorsque vous appliquez votre crème hydratante ? Votre barrière cutanée demande de l'aide.
 

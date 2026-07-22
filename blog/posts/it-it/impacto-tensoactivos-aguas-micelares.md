@@ -1,9 +1,8 @@
 ---
 article_id: PG-002
 title: La Scienza della Barriera Cutanea e del Microbioma
-description: >-
-  Scopri la scienza della barriera cutanea, del microbioma e del mantello acido
-  pH 5.5.
+description: Scopri la scienza della barriera cutanea, del microbioma e del mantello
+  acido pH 5.5.
 slug: impacto-tensoactivos-aguas-micelares
 date: '2026-07-21'
 date_created: '2026-07-21'
@@ -15,39 +14,43 @@ concept: el-impacto-de-tensoactivos-jabones-y-aguas-micelares-en-la-barrera-cut-
 local_phenomenon: HVAC dry air & seasonal winds
 cover_image: /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_1.webp
 media:
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_1.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_1.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_2.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_2.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_3.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_3.webp
-  - >-
-    /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/gemini_generated_image_8b2pk18b2pk18b2p.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_4.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_4.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_5.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_1.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_1.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_2.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_2.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_3.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_3.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/gemini_generated_image_8b2pk18b2pk18b2p.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_4.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_4.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_5.webp
 author: PepaGold
 epigraph:
-  text: >-
-    La pelle non ha bisogno di altra chimica; ha bisogno della libertà di
-    rigenerarsi.
+  text: La pelle non ha bisogno di altra chimica; ha bisogno della libertà di rigenerarsi.
   author: Dott.ssa PepaGold
 summary:
-  - >-
-    La barriera cutanea è una matrice lipidica di ceramidi, colesterolo e acidi
-    grassi.
-  - >-
-    Il mantello acido (pH 4.5-5.5) e il microbioma costituiscono la prima linea
-    di difesa biologica.
-  - Il clima secco e i detergenti aggressivi creano micro-fessure.
-  - La riparazione richiede igiene fisica atraumatica e ceramidi biomimetiche.
+- La barriera cutanea è una matrice lipidica di ceramidi, colesterolo e acidi grassi.
+- Il mantello acido (pH 4.5-5.5) e il microbioma costituiscono la prima linea di difesa
+  biologica.
+- Il clima secco e i detergenti aggressivi creano micro-fessure.
+- La riparazione richiede igiene fisica atraumatica e ceramidi biomimetiche.
 faq:
-  - q: Quanto tempo occorre per riparare una barriera cutanea danneggiata?
-    a: Il rinnovo cellulare richiede da 14 a 28 giorni.
-  - q: Perché il viso brucia quando applico una crema idratante?
-    a: Il bruciore indica micro-fessure nello strato corneo.
+- q: Quanto tempo occorre per riparare una barriera cutanea danneggiata?
+  a: Il rinnovo cellulare richiede da 14 a 28 giorni.
+- q: Perché il viso brucia quando applico una crema idratante?
+  a: Il bruciore indica micro-fessure nello strato corneo.
 show_science_link: true
 date_images_applied: '2026-07-22'
+image_prompts:
+- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+
+  High-concept liquid splash beauty photography. A crystal-clear pure water droplet
+  creating a dramatic, pristine splash ripple against smooth, porcelain-toned skin,
+  washing away harsh chemical foam and cloudy surfactant residue to reveal luminous
+  natural skin. Palette of warm dusty rose (#D48C90), pure liquid crystal blue, and
+  nude ivory. High-speed macro photography capturing crisp liquid droplets in mid-air,
+  studio backlight. Shot on Hasselblad 100MP, 1/8000s shutter speed, f/4.0. Clean
+  editorial visual style. NO text, NO watermarks, NO logos.'
 ---
 Senti bruciore quando applichi la tua solita crema idratante? La tua barriera cutanea sta chiedendo aiuto.
 

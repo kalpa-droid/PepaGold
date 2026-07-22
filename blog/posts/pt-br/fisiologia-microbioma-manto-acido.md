@@ -1,7 +1,8 @@
 ---
 article_id: PG-003
 title: A Ciência da Barreira Cutânea e do Microbioma
-description: Descubra a ciência da barreira cutânea, do microbioma e do manto ácido pH 5.5.
+description: Descubra a ciência da barreira cutânea, do microbioma e do manto ácido
+  pH 5.5.
 slug: fisiologia-microbioma-manto-acido
 date: '2026-07-21'
 date_created: '2026-07-21'
@@ -9,40 +10,43 @@ date_ai_processed: '2026-07-21'
 locale: pt-br
 category: barrera-cutanea
 category_label: 🔬 Ciência da Pele
-concept: >-
-  fisiolog-a-y-ecolog-a-de-la-barrera-cut-nea-din-mica-del-microbioma-mantos-hidrolip-dicos-y-estrategias-terap-uticas-avanzadas
+concept: fisiolog-a-y-ecolog-a-de-la-barrera-cut-nea-din-mica-del-microbioma-mantos-hidrolip-dicos-y-estrategias-terap-uticas-avanzadas
 local_phenomenon: HVAC dry air & seasonal winds
 cover_image: /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
 media:
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_2.webp
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
+- /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
+- /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_2.webp
+- /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
+- /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp
+- /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
 author: PepaGold
 epigraph:
-  text: >-
-    A pele não precisa de mais química; precisa da liberdade de se restaurar
-    sozinha.
+  text: A pele não precisa de mais química; precisa da liberdade de se restaurar sozinha.
   author: Dra. PepaGold
 summary:
-  - >-
-    A barreira cutânea é uma matriz lipídica de ceramidas, colesterol e ácidos
-    graxos.
-  - >-
-    O manto ácido (pH 4.5-5.5) e o microbioma constituem a primeira linha de
-    defesa biológica.
-  - Clima seco e sabões agressivos criam microfissuras.
-  - A reparação exige limpeza física atraumática e ceramidas biomiméticas.
+- A barreira cutânea é uma matriz lipídica de ceramidas, colesterol e ácidos graxos.
+- O manto ácido (pH 4.5-5.5) e o microbioma constituem a primeira linha de defesa
+  biológica.
+- Clima seco e sabões agressivos criam microfissuras.
+- A reparação exige limpeza física atraumática e ceramidas biomiméticas.
 faq:
-  - q: Quanto tempo leva para reparar uma barreira cutânea danificada?
-    a: A renovação celular leva de 14 a 28 dias.
-  - q: Por que meu rosto arde ao aplicar um hidratante neutro?
-    a: >-
-      A ardência indica microfissuras no estrato córneo expondo as terminações
-      nervosas.
+- q: Quanto tempo leva para reparar uma barreira cutânea danificada?
+  a: A renovação celular leva de 14 a 28 dias.
+- q: Por que meu rosto arde ao aplicar um hidratante neutro?
+  a: A ardência indica microfissuras no estrato córneo expondo as terminações nervosas.
 show_science_link: true
 date_images_applied: '2026-07-22'
+image_prompts:
+- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+
+  Scientific-editorial concept photography of the skin microbiome and acid mantle.
+  Macro close-up of fresh, radiant skin texture with subtle glowing bioluminescent
+  golden-rose micro-particles hovering gracefully above the epidermal surface, symbolizing
+  a thriving bacterial ecosystem and pH 5.5 protective shield. Aesthetic palette of
+  warm dusty rose (#D48C90), soft amber glow, and nude cream. Ethereal studio backlighting
+  creating a soft protective halo along the jawline. Shot on Hasselblad 100MP with
+  120mm macro f/2.8 lens. Clean high-fashion medical aesthetic. NO text, NO labels,
+  NO watermarks, NO logos.'
 ---
 Você sente a pele ardendo ao aplicar seu creme hidratante habitual? Sua barreira cutânea está pedindo socorro.
 

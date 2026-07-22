@@ -1,9 +1,8 @@
 ---
 article_id: PG-001
 title: La Science de la Barrière Cutanée et du Microbiome
-description: >-
-  Découvrez la science de la barrière cutanée, du microbiome et du manteau acide
-  pH 5.5.
+description: Découvrez la science de la barrière cutanée, du microbiome et du manteau
+  acide pH 5.5.
 slug: ciencia-barrera-cutanea-microbioma
 date: '2026-07-21'
 date_created: '2026-07-21'
@@ -15,33 +14,41 @@ concept: barrera-cutanea-y-microbioma
 local_phenomenon: HVAC dry air & seasonal winds
 cover_image: /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_1.webp
 media:
-  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_1.webp
-  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_2.webp
-  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_3.webp
-  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_4.webp
-  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_5.webp
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_1.webp
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_2.webp
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_3.webp
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_4.webp
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_5.webp
 author: PepaGold
 epigraph:
-  text: >-
-    La peau n'a pas besoin de plus de chimie ; elle a besoin de la liberté de se
-    réparer seule.
+  text: La peau n'a pas besoin de plus de chimie ; elle a besoin de la liberté de
+    se réparer seule.
   author: Dr. PepaGold
 summary:
-  - >-
-    La barrière cutanée est une matrice lipidique de céramides, cholestérol et
-    acides gras.
-  - >-
-    Le manteau acide (pH 4.5-5.5) et le microbiote forment la première ligne de
-    défense biologique.
-  - Le climat sec et les nettoyants agressifs évaporent l'eau cellulaire.
-  - La réparation nécessite un nettoyage physique atraumatique et des céramides.
+- La barrière cutanée est une matrice lipidique de céramides, cholestérol et acides
+  gras.
+- Le manteau acide (pH 4.5-5.5) et le microbiote forment la première ligne de défense
+  biologique.
+- Le climat sec et les nettoyants agressifs évaporent l'eau cellulaire.
+- La réparation nécessite un nettoyage physique atraumatique et des céramides.
 faq:
-  - q: Combien de temps faut-il pour réparer une barrière cutanée abîmée ?
-    a: Le renouvellement cellulaire dure 14 à 28 jours.
-  - q: Pourquoi la peau brûle-t-elle lors de l'application d'une crème ?
-    a: La brûlure indique des micro-fissures exposant les terminaisons nerveuses.
+- q: Combien de temps faut-il pour réparer une barrière cutanée abîmée ?
+  a: Le renouvellement cellulaire dure 14 à 28 jours.
+- q: Pourquoi la peau brûle-t-elle lors de l'application d'une crème ?
+  a: La brûlure indique des micro-fissures exposant les terminaisons nerveuses.
 show_science_link: true
 date_images_applied: '2026-07-22'
+image_prompts:
+- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+
+  High-end luxury editorial photography of skin barrier repair. Extreme macro close-up
+  of a serene woman''s cheek profile with glowing, deeply hydrated skin texture, surrounded
+  by translucent golden-rose lipid moisture droplets forming a protective barrier
+  aura. Aesthetic palette dominated by warm dusty rose (#D48C90), champagne ivory,
+  and soft nude clay. Soft diffused studio morning lighting creating a silky protective
+  glow on refined pores. Shot on Hasselblad 100MP with 120mm macro f/2.8 lens, shallow
+  depth of field. Completely clean beauty composition. NO text, NO numbers, NO watermarks,
+  NO brand logos, NO graphic overlays.'
 ---
 Ressentez-vous des picotements lorsque vous appliquez votre crème hydratante ? Votre barrière cutanée demande de l'aide.
 

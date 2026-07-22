@@ -1,9 +1,8 @@
 ---
 article_id: PG-002
 title: Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier
-description: >-
-  Does your face burn when applying moisturizer? Learn how to identify skin
-  barrier damage and master science-backed repair steps.
+description: Does your face burn when applying moisturizer? Learn how to identify
+  skin barrier damage and master science-backed repair steps.
 slug: impacto-tensoactivos-aguas-micelares
 date: '2026-07-21'
 date_created: '2026-07-21'
@@ -15,47 +14,47 @@ concept: el-impacto-de-tensoactivos-jabones-y-aguas-micelares-en-la-barrera-cut-
 local_phenomenon: HVAC dry air & seasonal winds
 cover_image: /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_1.webp
 media:
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_1.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_1.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_2.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_2.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_3.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_3.webp
-  - >-
-    /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/gemini_generated_image_8b2pk18b2pk18b2p.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_4.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_4.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_5.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_1.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_1.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_2.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_2.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_3.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_3.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/gemini_generated_image_8b2pk18b2pk18b2p.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_4.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_4.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_5.webp
 author: PepaGold
 epigraph:
-  text: >-
-    Skin does not need more chemical layers; it needs the freedom to restore
-    itself.
+  text: Skin does not need more chemical layers; it needs the freedom to restore itself.
   author: Dr. PepaGold
 summary:
-  - >-
-    The skin barrier is a lipid matrix of ceramides, cholesterol, and free fatty
-    acids that retains moisture.
-  - >-
-    The acid mantle (pH 4.5-5.5) and microbiome act as your first biological
-    defense line against pathogens.
-  - >-
-    Extreme weather, harsh sulfates, and over-exfoliation evaporate cellular
-    water and create micro-cracks.
-  - >-
-    Repair requires physical atraumatic cleansing, biomimetic ceramides (3:1:1
-    ratio), and prebiotic nourishment.
+- The skin barrier is a lipid matrix of ceramides, cholesterol, and free fatty acids
+  that retains moisture.
+- The acid mantle (pH 4.5-5.5) and microbiome act as your first biological defense
+  line against pathogens.
+- Extreme weather, harsh sulfates, and over-exfoliation evaporate cellular water and
+  create micro-cracks.
+- Repair requires physical atraumatic cleansing, biomimetic ceramides (3:1:1 ratio),
+  and prebiotic nourishment.
 faq:
-  - q: How long does it take to repair a damaged skin barrier?
-    a: >-
-      Cell renewal takes 14 to 28 days. Relief begins in 3 to 5 days with
-      atraumatic cleansing.
-  - q: Why does my face burn when applying neutral moisturizer?
-    a: >-
-      Stinging indicates micro-cracks in the stratum corneum exposing nerve
-      endings.
+- q: How long does it take to repair a damaged skin barrier?
+  a: Cell renewal takes 14 to 28 days. Relief begins in 3 to 5 days with atraumatic
+    cleansing.
+- q: Why does my face burn when applying neutral moisturizer?
+  a: Stinging indicates micro-cracks in the stratum corneum exposing nerve endings.
 show_science_link: true
 date_images_applied: '2026-07-22'
+image_prompts:
+- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+
+  High-concept liquid splash beauty photography. A crystal-clear pure water droplet
+  creating a dramatic, pristine splash ripple against smooth, porcelain-toned skin,
+  washing away harsh chemical foam and cloudy surfactant residue to reveal luminous
+  natural skin. Palette of warm dusty rose (#D48C90), pure liquid crystal blue, and
+  nude ivory. High-speed macro photography capturing crisp liquid droplets in mid-air,
+  studio backlight. Shot on Hasselblad 100MP, 1/8000s shutter speed, f/4.0. Clean
+  editorial visual style. NO text, NO watermarks, NO logos.'
 ---
 Do you feel your skin stinging when applying your usual moisturizer? Your skin barrier is asking for help.
 

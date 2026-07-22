@@ -1,7 +1,8 @@
 ---
 article_id: PG-001
 title: A Ciência da Barreira Cutânea e do Microbioma
-description: Descubra a ciência da barreira cutânea, do microbioma e do manto ácido pH 5.5.
+description: Descubra a ciência da barreira cutânea, do microbioma e do manto ácido
+  pH 5.5.
 slug: ciencia-barrera-cutanea-microbioma
 date: '2026-07-21'
 date_created: '2026-07-21'
@@ -13,35 +14,39 @@ concept: barrera-cutanea-y-microbioma
 local_phenomenon: HVAC dry air & seasonal winds
 cover_image: /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_1.webp
 media:
-  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_1.webp
-  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_2.webp
-  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_3.webp
-  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_4.webp
-  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_5.webp
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_1.webp
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_2.webp
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_3.webp
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_4.webp
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_5.webp
 author: PepaGold
 epigraph:
-  text: >-
-    A pele não precisa de mais química; precisa da liberdade de se restaurar
-    sozinha.
+  text: A pele não precisa de mais química; precisa da liberdade de se restaurar sozinha.
   author: Dra. PepaGold
 summary:
-  - >-
-    A barreira cutânea é uma matriz lipídica de ceramidas, colesterol e ácidos
-    graxos.
-  - >-
-    O manto ácido (pH 4.5-5.5) e o microbioma constituem a primeira linha de
-    defesa biológica.
-  - Clima seco e sabões agressivos criam microfissuras.
-  - A reparação exige limpeza física atraumática e ceramidas biomiméticas.
+- A barreira cutânea é uma matriz lipídica de ceramidas, colesterol e ácidos graxos.
+- O manto ácido (pH 4.5-5.5) e o microbioma constituem a primeira linha de defesa
+  biológica.
+- Clima seco e sabões agressivos criam microfissuras.
+- A reparação exige limpeza física atraumática e ceramidas biomiméticas.
 faq:
-  - q: Quanto tempo leva para reparar uma barreira cutânea danificada?
-    a: A renovação celular leva de 14 a 28 dias.
-  - q: Por que meu rosto arde ao aplicar um hidratante neutro?
-    a: >-
-      A ardência indica microfissuras no estrato córneo expondo as terminações
-      nervosas.
+- q: Quanto tempo leva para reparar uma barreira cutânea danificada?
+  a: A renovação celular leva de 14 a 28 dias.
+- q: Por que meu rosto arde ao aplicar um hidratante neutro?
+  a: A ardência indica microfissuras no estrato córneo expondo as terminações nervosas.
 show_science_link: true
 date_images_applied: '2026-07-22'
+image_prompts:
+- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+
+  High-end luxury editorial photography of skin barrier repair. Extreme macro close-up
+  of a serene woman''s cheek profile with glowing, deeply hydrated skin texture, surrounded
+  by translucent golden-rose lipid moisture droplets forming a protective barrier
+  aura. Aesthetic palette dominated by warm dusty rose (#D48C90), champagne ivory,
+  and soft nude clay. Soft diffused studio morning lighting creating a silky protective
+  glow on refined pores. Shot on Hasselblad 100MP with 120mm macro f/2.8 lens, shallow
+  depth of field. Completely clean beauty composition. NO text, NO numbers, NO watermarks,
+  NO brand logos, NO graphic overlays.'
 ---
 Você sente a pele ardendo ao aplicar seu creme hidratante habitual? Sua barreira cutânea está pedindo socorro.
 

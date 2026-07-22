@@ -1,9 +1,8 @@
 ---
 article_id: PG-003
 title: La Science de la Barrière Cutanée et du Microbiome
-description: >-
-  Découvrez la science de la barrière cutanée, du microbiome et du manteau acide
-  pH 5.5.
+description: Découvrez la science de la barrière cutanée, du microbiome et du manteau
+  acide pH 5.5.
 slug: fisiologia-microbioma-manto-acido
 date: '2026-07-21'
 date_created: '2026-07-21'
@@ -11,38 +10,45 @@ date_ai_processed: '2026-07-21'
 locale: fr-fr
 category: barrera-cutanea
 category_label: 🔬 Science de la Peau
-concept: >-
-  fisiolog-a-y-ecolog-a-de-la-barrera-cut-nea-din-mica-del-microbioma-mantos-hidrolip-dicos-y-estrategias-terap-uticas-avanzadas
+concept: fisiolog-a-y-ecolog-a-de-la-barrera-cut-nea-din-mica-del-microbioma-mantos-hidrolip-dicos-y-estrategias-terap-uticas-avanzadas
 local_phenomenon: HVAC dry air & seasonal winds
 cover_image: /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
 media:
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_2.webp
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
+- /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
+- /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_2.webp
+- /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
+- /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp
+- /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
 author: PepaGold
 epigraph:
-  text: >-
-    La peau n'a pas besoin de plus de chimie ; elle a besoin de la liberté de se
-    réparer seule.
+  text: La peau n'a pas besoin de plus de chimie ; elle a besoin de la liberté de
+    se réparer seule.
   author: Dr. PepaGold
 summary:
-  - >-
-    La barrière cutanée est une matrice lipidique de céramides, cholestérol et
-    acides gras.
-  - >-
-    Le manteau acide (pH 4.5-5.5) et le microbiote forment la première ligne de
-    défense biologique.
-  - Le climat sec et les nettoyants agressifs évaporent l'eau cellulaire.
-  - La réparation nécessite un nettoyage physique atraumatique et des céramides.
+- La barrière cutanée est une matrice lipidique de céramides, cholestérol et acides
+  gras.
+- Le manteau acide (pH 4.5-5.5) et le microbiote forment la première ligne de défense
+  biologique.
+- Le climat sec et les nettoyants agressifs évaporent l'eau cellulaire.
+- La réparation nécessite un nettoyage physique atraumatique et des céramides.
 faq:
-  - q: Combien de temps faut-il pour réparer une barrière cutanée abîmée ?
-    a: Le renouvellement cellulaire dure 14 à 28 jours.
-  - q: Pourquoi la peau brûle-t-elle lors de l'application d'une crème ?
-    a: La brûlure indique des micro-fissures exposant les terminaisons nerveuses.
+- q: Combien de temps faut-il pour réparer une barrière cutanée abîmée ?
+  a: Le renouvellement cellulaire dure 14 à 28 jours.
+- q: Pourquoi la peau brûle-t-elle lors de l'application d'une crème ?
+  a: La brûlure indique des micro-fissures exposant les terminaisons nerveuses.
 show_science_link: true
 date_images_applied: '2026-07-22'
+image_prompts:
+- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+
+  Scientific-editorial concept photography of the skin microbiome and acid mantle.
+  Macro close-up of fresh, radiant skin texture with subtle glowing bioluminescent
+  golden-rose micro-particles hovering gracefully above the epidermal surface, symbolizing
+  a thriving bacterial ecosystem and pH 5.5 protective shield. Aesthetic palette of
+  warm dusty rose (#D48C90), soft amber glow, and nude cream. Ethereal studio backlighting
+  creating a soft protective halo along the jawline. Shot on Hasselblad 100MP with
+  120mm macro f/2.8 lens. Clean high-fashion medical aesthetic. NO text, NO labels,
+  NO watermarks, NO logos.'
 ---
 Ressentez-vous des picotements lorsque vous appliquez votre crème hydratante ? Votre barrière cutanée demande de l'aide.
 
