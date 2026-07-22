@@ -11,9 +11,9 @@ category: barrera-cutanea
 category_label: "🔬 Ciencia de la Piel"
 concept: piel-sensible-ros-cea-y-acn-cosm-tico-diagn-stico-y-estrategias-de-limpieza
 local_phenomenon: "Polvo sahariano (Calima) y calor mediterráneo"
-cover_image: /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/gemini_generated_image_8b2pk18b2pk18b2p.webp
+cover_image: /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_1.webp
 media:
-  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/gemini_generated_image_8b2pk18b2pk18b2p.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
   - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_1.webp
   - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_2.webp
   - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_3.webp

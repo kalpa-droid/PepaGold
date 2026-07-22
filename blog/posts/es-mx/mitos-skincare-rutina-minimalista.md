@@ -11,9 +11,9 @@ category: rutinas-minimalismo
 category_label: "🧘‍♀️ Rutinas y Skinimalismo"
 concept: el-skinimalismo-y-la-reducci-n-de-pasos-en-el-skincare
 local_phenomenon: "Contaminación por micropartículas PM2.5 en CDMX"
-cover_image: /assets/imagenes/blog/mitos-skincare-rutina-minimalista/gemini_generated_image_8b2pk18b2pk18b2p.webp
+cover_image: /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp
 media:
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/gemini_generated_image_8b2pk18b2pk18b2p.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
   - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_1.webp
   - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp
   - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_3.webp
