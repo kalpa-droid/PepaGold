@@ -1,16 +1,18 @@
 ---
 article_id: PG-001
-title: "La Scienza della Barriera Cutanea e del Microbioma"
-description: "Scopri la scienza della barriera cutanea, del microbioma e del mantello acido pH 5.5."
+title: La Scienza della Barriera Cutanea e del Microbioma
+description: >-
+  Scopri la scienza della barriera cutanea, del microbioma e del mantello acido
+  pH 5.5.
 slug: ciencia-barrera-cutanea-microbioma
 date: '2026-07-21'
 date_created: '2026-07-21'
 date_ai_processed: '2026-07-21'
 locale: it-it
 category: barrera-cutanea
-category_label: "🔬 Scienza della Pelle"
+category_label: 🔬 Scienza della Pelle
 concept: barrera-cutanea-y-microbioma
-local_phenomenon: "HVAC dry air & seasonal winds"
+local_phenomenon: HVAC dry air & seasonal winds
 cover_image: /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_1.webp
 media:
   - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_1.webp
@@ -18,23 +20,31 @@ media:
   - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_2.webp
   - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_3.webp
   - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_4.webp
+  - >-
+    /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
 author: PepaGold
 epigraph:
-  text: "La pelle non ha bisogno di altra chimica; ha bisogno della libertà di rigenerarsi."
-  author: "Dott.ssa PepaGold"
+  text: >-
+    La pelle non ha bisogno di altra chimica; ha bisogno della libertà di
+    rigenerarsi.
+  author: Dott.ssa PepaGold
 summary:
-  - "La barriera cutanea è una matrice lipidica di ceramidi, colesterolo e acidi grassi."
-  - "Il mantello acido (pH 4.5-5.5) e il microbioma costituiscono la prima linea di difesa biologica."
-  - "Il clima secco e i detergenti aggressivi creano micro-fessure."
-  - "La riparazione richiede igiene fisica atraumatica e ceramidi biomimetiche."
+  - >-
+    La barriera cutanea è una matrice lipidica di ceramidi, colesterolo e acidi
+    grassi.
+  - >-
+    Il mantello acido (pH 4.5-5.5) e il microbioma costituiscono la prima linea
+    di difesa biologica.
+  - Il clima secco e i detergenti aggressivi creano micro-fessure.
+  - La riparazione richiede igiene fisica atraumatica e ceramidi biomimetiche.
 faq:
-  - q: "Quanto tempo occorre per riparare una barriera cutanea danneggiata?"
-    a: "Il rinnovo cellulare richiede da 14 a 28 giorni."
-  - q: "Perché il viso brucia quando applico una crema idratante?"
-    a: "Il bruciore indica micro-fessure nello strato corneo."
+  - q: Quanto tempo occorre per riparare una barriera cutanea danneggiata?
+    a: Il rinnovo cellulare richiede da 14 a 28 giorni.
+  - q: Perché il viso brucia quando applico una crema idratante?
+    a: Il bruciore indica micro-fessure nello strato corneo.
 show_science_link: true
+date_images_applied: '2026-07-22'
 ---
-
 Senti bruciore quando applichi la tua solita crema idratante? La tua barriera cutanea sta chiedendo aiuto.
 
 Dietro la sensazione di tensione e arrossamento si cela una barriera compromessa e un microbioma squilibrato.
@@ -46,7 +56,7 @@ Immagina lo strato più esterno della tua pelle come un muro di mattoni protetti
 - **Mattoni (Corneociti):** Cellule ricche di cheratina che proteggono dalla frizione.
 - **Cemento (Matrice lipidica):** Cemento biologico composto per il **50% da Ceramidi**, 25% Colesterolo e 15% Acidi Grassi.
 
-![Illustrazione 3D della struttura mattoni e cemento della pelle](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_2.webp)
+![Illustrazione 3D della struttura mattoni e cemento della pelle](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_1.webp)
 
 Quando il cemento lipidico si degrada, l'acqua evapora rapidamente.
 
@@ -64,7 +74,7 @@ Sopra il muro di mattoni si trova il **mantello acido** (pH 4.5 a 5.5).
 
 Questo ambiente acido inibisce i patogeni e nutre il tuo **microbioma cutaneo**.
 
-![Diagramma scientifico del microbioma cutaneo](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_3.webp)
+![Diagramma scientifico del microbioma cutaneo](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_2.webp)
 
 Batteri benefici come *Staphylococcus epidermidis* sintetizzano difese naturali. I saponi alcalini distruggono questa protezione.
 
@@ -78,7 +88,7 @@ La disbiosi si verifica quando i microbi benefici vengono eliminati, innescando 
 2. **D detergenti aggressivi:** I solfati sciolgono il cemento lipidico come il grasso in padella.
 3. **Esfoliazione eccessiva:** Gli acidi chimici rimuovono gli strati protettivi.
 
-![Micro-fessure nello strato corneo](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_4.webp)
+![Micro-fessure nello strato corneo](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_3.webp)
 
 :::checklist Segnali d'allarme: La tua barriera è danneggiata?
 - Pelle spenta e priva di luminosità.
@@ -93,7 +103,7 @@ La disbiosi si verifica quando i microbi benefici vengono eliminati, innescando 
 2. **Ripristino lipidico:** Applica creme arricchite con ceramidi e squalane.
 3. **Prebiotici topici:** Scegli formule con inulina per nutrire i batteri buoni.
 
-![Detersione fisica atraumatica con microfibra UpPoly Laska Mini](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp)
+![Detersione fisica atraumatica con microfibra UpPoly Laska Mini](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_4.webp)
 
 :::quiz Test diagnostico
 Q: Qual è il segnale principale del degrado del cemento lipidico?
