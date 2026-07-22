@@ -1,8 +1,9 @@
 ---
 article_id: PG-003
 title: Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier
-description: Does your face burn when applying moisturizer? Learn how to identify
-  skin barrier damage and master science-backed repair steps.
+description: >-
+  Does your face burn when applying moisturizer? Learn how to identify skin
+  barrier damage and master science-backed repair steps.
 slug: fisiologia-microbioma-manto-acido
 date: '2026-07-21'
 date_created: '2026-07-21'
@@ -10,47 +11,58 @@ date_ai_processed: '2026-07-21'
 locale: en-us
 category: barrera-cutanea
 category_label: 🔬 Skin Science
-concept: fisiolog-a-y-ecolog-a-de-la-barrera-cut-nea-din-mica-del-microbioma-mantos-hidrolip-dicos-y-estrategias-terap-uticas-avanzadas
+concept: >-
+  fisiolog-a-y-ecolog-a-de-la-barrera-cut-nea-din-mica-del-microbioma-mantos-hidrolip-dicos-y-estrategias-terap-uticas-avanzadas
 local_phenomenon: HVAC dry air & seasonal winds
 cover_image: /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
 media:
-- /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
-- /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_2.webp
-- /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
-- /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp
-- /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
+  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
+  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
+  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp
+  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
 author: PepaGold
 epigraph:
-  text: Skin does not need more chemical layers; it needs the freedom to restore itself.
+  text: >-
+    Skin does not need more chemical layers; it needs the freedom to restore
+    itself.
   author: Dr. PepaGold
 summary:
-- The skin barrier is a lipid matrix of ceramides, cholesterol, and free fatty acids
-  that retains moisture.
-- The acid mantle (pH 4.5-5.5) and microbiome act as your first biological defense
-  line against pathogens.
-- Extreme weather, harsh sulfates, and over-exfoliation evaporate cellular water and
-  create micro-cracks.
-- Repair requires physical atraumatic cleansing, biomimetic ceramides (3:1:1 ratio),
-  and prebiotic nourishment.
+  - >-
+    The skin barrier is a lipid matrix of ceramides, cholesterol, and free fatty
+    acids that retains moisture.
+  - >-
+    The acid mantle (pH 4.5-5.5) and microbiome act as your first biological
+    defense line against pathogens.
+  - >-
+    Extreme weather, harsh sulfates, and over-exfoliation evaporate cellular
+    water and create micro-cracks.
+  - >-
+    Repair requires physical atraumatic cleansing, biomimetic ceramides (3:1:1
+    ratio), and prebiotic nourishment.
 faq:
-- q: How long does it take to repair a damaged skin barrier?
-  a: Cell renewal takes 14 to 28 days. Relief begins in 3 to 5 days with atraumatic
-    cleansing.
-- q: Why does my face burn when applying neutral moisturizer?
-  a: Stinging indicates micro-cracks in the stratum corneum exposing nerve endings.
+  - q: How long does it take to repair a damaged skin barrier?
+    a: >-
+      Cell renewal takes 14 to 28 days. Relief begins in 3 to 5 days with
+      atraumatic cleansing.
+  - q: Why does my face burn when applying neutral moisturizer?
+    a: >-
+      Stinging indicates micro-cracks in the stratum corneum exposing nerve
+      endings.
 show_science_link: true
 date_images_applied: '2026-07-22'
 image_prompts:
-- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+  - >-
+    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
 
-  Scientific-editorial concept photography of the skin microbiome and acid mantle.
-  Macro close-up of fresh, radiant skin texture with subtle glowing bioluminescent
-  golden-rose micro-particles hovering gracefully above the epidermal surface, symbolizing
-  a thriving bacterial ecosystem and pH 5.5 protective shield. Aesthetic palette of
-  warm dusty rose (#D48C90), soft amber glow, and nude cream. Ethereal studio backlighting
-  creating a soft protective halo along the jawline. Shot on Hasselblad 100MP with
-  120mm macro f/2.8 lens. Clean high-fashion medical aesthetic. NO text, NO labels,
-  NO watermarks, NO logos.'
+    Scientific-editorial concept photography of the skin microbiome and acid
+    mantle. Macro close-up of fresh, radiant skin texture with subtle glowing
+    bioluminescent golden-rose micro-particles hovering gracefully above the
+    epidermal surface, symbolizing a thriving bacterial ecosystem and pH 5.5
+    protective shield. Aesthetic palette of warm dusty rose (#D48C90), soft
+    amber glow, and nude cream. Ethereal studio backlighting creating a soft
+    protective halo along the jawline. Shot on Hasselblad 100MP with 120mm macro
+    f/2.8 lens. Clean high-fashion medical aesthetic. NO text, NO labels, NO
+    watermarks, NO logos.
 ---
 Do you feel your skin stinging when applying your usual moisturizer? Your skin barrier is asking for help.
 
@@ -63,7 +75,7 @@ Imagine the outermost layer of your skin as a protective brick wall:
 - **Bricks (Corneocytes):** Keratin-packed cells protecting against physical friction.
 - **Mortar (Lipid Matrix):** Biological cement composed of **50% Ceramides**, 25% Cholesterol, and 15% Free Fatty Acids.
 
-![3D illustration of skin barrier architecture](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_2.webp)
+
 
 When the lipid mortar degrades over time, internal cellular water escapes rapidly into the surrounding dry atmosphere.
 
