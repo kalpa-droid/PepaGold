@@ -9,42 +9,44 @@ date_ai_processed: '2026-07-21'
 locale: zh-hans
 category: barrera-cutanea
 category_label: 🔬 皮肤科学
-concept: fisiolog-a-y-ecolog-a-de-la-barrera-cut-nea-din-mica-del-microbioma-mantos-hidrolip-dicos-y-estrategias-terap-uticas-avanzadas
+concept: >-
+  fisiolog-a-y-ecolog-a-de-la-barrera-cut-nea-din-mica-del-microbioma-mantos-hidrolip-dicos-y-estrategias-terap-uticas-avanzadas
 local_phenomenon: HVAC dry air & seasonal winds
-cover_image: /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
+cover_image: ''
 media:
-- /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
-- /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_2.webp
-- /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
-- /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp
-- /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
+  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_2.webp
+  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
+  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp
+  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
 author: PepaGold
 epigraph:
   text: 皮肤不需要叠加更多化学成分；它 need 的是自我修复的自由。
   author: PepaGold 博士
 summary:
-- 表皮葡萄球菌（S. epidermidis）编码鞘磷脂酶（sph），直接在表皮生成神经酰胺 2 和 5。
-- 脂质相由密集的正交晶相（OR）转变为疏松的六方晶相（HEX），会导致细胞锁水能力丧失。
-- 共生菌群分泌的 lugdunina 和抗菌肽能有效抵御金黄色葡萄球菌等致病菌。
-- 肠-皮轴研究表明，肠道通透性增加（肠漏）会直接反映为面部炎症与敏感。
+  - 表皮葡萄球菌（S. epidermidis）编码鞘磷脂酶（sph），直接在表皮生成神经酰胺 2 和 5。
+  - 脂质相由密集的正交晶相（OR）转变为疏松的六方晶相（HEX），会导致细胞锁水能力丧失。
+  - 共生菌群分泌的 lugdunina 和抗菌肽能有效抵御金黄色葡萄球菌等致病菌。
+  - 肠-皮轴研究表明，肠道通透性增加（肠漏）会直接反映为面部炎症与敏感。
 faq:
-- q: 表皮葡萄球菌如何帮助皮肤合成神经酰胺？
-  a: 该有益菌分泌鞘磷脂酶，可将皮肤表面的鞘脂转化为游离神经酰胺。
-- q: 什么是肠-皮轴？
-  a: 肠-皮轴是消化系统与肌肤屏障的生物学纽带。
+  - q: 表皮葡萄球菌如何帮助皮肤合成神经酰胺？
+    a: 该有益菌分泌鞘磷脂酶，可将皮肤表面的鞘脂转化为游离神经酰胺。
+  - q: 什么是肠-皮轴？
+    a: 肠-皮轴是消化系统与肌肤屏障的生物学纽带。
 show_science_link: true
 date_images_applied: '2026-07-22'
 image_prompts:
-- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+  - >-
+    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
 
-  Scientific-editorial concept photography of the skin microbiome and acid mantle.
-  Macro close-up of fresh, radiant skin texture with subtle glowing bioluminescent
-  golden-rose micro-particles hovering gracefully above the epidermal surface, symbolizing
-  a thriving bacterial ecosystem and pH 5.5 protective shield. Aesthetic palette of
-  warm dusty rose (#D48C90), soft amber glow, and nude cream. Ethereal studio backlighting
-  creating a soft protective halo along the jawline. Shot on Hasselblad 100MP with
-  120mm macro f/2.8 lens. Clean high-fashion medical aesthetic. NO text, NO labels,
-  NO watermarks, NO logos.'
+    Scientific-editorial concept photography of the skin microbiome and acid
+    mantle. Macro close-up of fresh, radiant skin texture with subtle glowing
+    bioluminescent golden-rose micro-particles hovering gracefully above the
+    epidermal surface, symbolizing a thriving bacterial ecosystem and pH 5.5
+    protective shield. Aesthetic palette of warm dusty rose (#D48C90), soft
+    amber glow, and nude cream. Ethereal studio backlighting creating a soft
+    protective halo along the jawline. Shot on Hasselblad 100MP with 120mm macro
+    f/2.8 lens. Clean high-fashion medical aesthetic. NO text, NO labels, NO
+    watermarks, NO logos.
 ---
 您是否曾经感到即使使用了高端护肤品，面部皮肤依然容易发红、刺痛或者感到极度紧绷？在现代临床皮肤学研究中，过度护肤与合成表面活性剂被证实是导致肌肤屏障受损的主要原因。
 
