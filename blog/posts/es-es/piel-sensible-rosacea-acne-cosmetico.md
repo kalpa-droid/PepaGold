@@ -1,7 +1,10 @@
 ---
 article_id: PG-004
-title: ¿Rojez, Rosácea o Granitos inesperados? Cómo Calmar la Piel Sensible Sin Químicos
-description: Diferencias clínicas entre rosácea, piel reactiva y acné cosmético. Cómo
+title: >-
+  ¿Rojez, Rosácea o Granitos inesperados? Cómo Calmar la Piel Sensible Sin
+  Químicos
+description: >-
+  Diferencias clínicas entre rosácea, piel reactiva y acné cosmético. Cómo
   calmar la inflamación endotelial.
 slug: piel-sensible-rosacea-acne-cosmetico
 date: '2026-07-21'
@@ -14,55 +17,70 @@ concept: piel-sensible-ros-cea-y-acn-cosm-tico-diagn-stico-y-estrategias-de-limp
 local_phenomenon: Polvo sahariano (Calima) y calor mediterráneo
 cover_image: /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_1.webp
 media:
-- /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
-- /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_1.webp
-- /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_2.webp
-- /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_3.webp
-- /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_2.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_3.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
 author: PepaGold
 epigraph:
-  text: La rojez no es un defecto cosmético; es la señal de que los capilares de tu
+  text: >-
+    La rojez no es un defecto cosmético; es la señal de que los capilares de tu
     piel están exhaustos.
   author: Dra. PepaGold
 summary:
-- El acné cosmético surge por la oclusión de los ostium foliculares provocada por
-  aceites pesados y tensoactivos.
-- La rosácea involucra hiperreactividad vascular y sobrecrecimiento del ácaro Demodex
-  folliculorum.
-- Los sulfatos y fragancias sintéticas activan los receptores tipo Toll (TLR-2) liberando
-  citoquinas inflamatorias.
-- La remoción física atraumática sin limpiadores sintéticos previene la congestión
-  vascular y calma el eritema.
+  - >-
+    El acné cosmético surge por la oclusión de los ostium foliculares provocada
+    por aceites pesados y tensoactivos.
+  - >-
+    La rosácea involucra hiperreactividad vascular y sobrecrecimiento del ácaro
+    Demodex folliculorum.
+  - >-
+    Los sulfatos y fragancias sintéticas activan los receptores tipo Toll
+    (TLR-2) liberando citoquinas inflamatorias.
+  - >-
+    La remoción física atraumática sin limpiadores sintéticos previene la
+    congestión vascular y calma el eritema.
 faq:
-- q: ¿De qué manera puedo identificar si mi rostro tiene acné común o acné cosmético
-    secundario?
-  a: El acné cosmético aparece como pequeños comeditones cerrados y pústulas superficiales
-    días después de estrenar una crema o base de maquillaje densa.
-- q: ¿Puedo lavarme la cara si tengo rosácea activa?
-  a: Sí, pero evitando el agua caliente y los geles espumosos. Usá agua tibia y una
-    microfibra inerte atraumática para no inflamar los capilares.
+  - q: >-
+      ¿De qué manera puedo identificar si mi rostro tiene acné común o acné
+      cosmético secundario?
+    a: >-
+      El acné cosmético aparece como pequeños comeditones cerrados y pústulas
+      superficiales días después de estrenar una crema o base de maquillaje
+      densa.
+  - q: ¿Puedo lavarme la cara si tengo rosácea activa?
+    a: >-
+      Sí, pero evitando el agua caliente y los geles espumosos. Usá agua tibia y
+      una microfibra inerte atraumática para no inflamar los capilares.
 image_prompts:
-- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+  - >-
+    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
 
-  Editorial beauty macro photography depicting sensitive skin relief. Split visual
-  narrative on a woman''s delicate face: a faint rosy flushed cheek on one side, seamlessly
-  transitioning into calm, velvety hydrated skin refreshed by a soft, luxurious Laska
-  Mini UpPoly micro-cloth soaked in cool water. Aesthetic palette of muted dusty rose
-  (#D48C90), soft botanical sage green accents, and ivory nude. Soothing, tranquil
-  studio lighting atmosphere. Shot on 100mm f/2.8 macro lens, shallow depth of field.
-  Clean serene composition. NO text, NO watermarks, NO logos.'
-- '📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): Medical 3D graphic
-  showing dermal micro-capillaries dilating under chemical irritation versus normal
-  vasodilation. Soft rose and beige tones. NO text.'
-- '📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Detailed microscopic
-  3D render of a hair follicle clogged by synthetic cosmetic oils and sebrum, leading
-  to follicular acne inflammation. NO text.'
-- '📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Scientific illustration
-  depicting Demodex folliculorum mites interaction on sensitive epidermal layer with
-  TLR-2 immune receptors glowing. NO text.'
-- '📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): Commercial beauty
-  studio macro shot of gentle cooling cleansing on reactive skin using soft Laska
-  Mini microfiber soaked in pure water. Soft soothing vibe. NO text.'
+    Editorial beauty macro photography depicting sensitive skin relief. Split
+    visual narrative on a woman's delicate face: a faint rosy flushed cheek on
+    one side, seamlessly transitioning into calm, velvety hydrated skin
+    refreshed by a soft, luxurious Laska Mini UpPoly micro-cloth soaked in cool
+    water. Aesthetic palette of muted dusty rose (#D48C90), soft botanical sage
+    green accents, and ivory nude. Soothing, tranquil studio lighting
+    atmosphere. Shot on 100mm f/2.8 macro lens, shallow depth of field. Clean
+    serene composition. NO text, NO watermarks, NO logos.
+  - >-
+    📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): Medical 3D
+    graphic showing dermal micro-capillaries dilating under chemical irritation
+    versus normal vasodilation. Soft rose and beige tones. NO text.
+  - >-
+    📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Detailed
+    microscopic 3D render of a hair follicle clogged by synthetic cosmetic oils
+    and sebrum, leading to follicular acne inflammation. NO text.
+  - >-
+    📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Scientific
+    illustration depicting Demodex folliculorum mites interaction on sensitive
+    epidermal layer with TLR-2 immune receptors glowing. NO text.
+  - >-
+    📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): Commercial
+    beauty studio macro shot of gentle cooling cleansing on reactive skin using
+    soft Laska Mini microfiber soaked in pure water. Soft soothing vibe. NO
+    text.
 show_science_link: true
 ---
 ¿Alguna vez te preguntaste por qué tu piel reacciona con ardor o tirantez a pesar de seguir una rutina impecable? En la dermatología moderna, la sobrecargas cosméticas y el uso de tensoactivos sintéticos son reconocidos como los principales desencadenantes de sensibilidad y envejecimiento prematuro.
@@ -73,7 +91,7 @@ Este análisis científico explora la fisiología real de tu piel, desmintiendo 
 
 El estrato córneo es la interfaz biológica principal entre tu cuerpo y el exterior. Funciona mediante corneocitos ricas en queratina suspendidos en una matriz de ceramidas, colesterol y ácidos grasos libres.
 
-![Ilustración médica 3D de la estructura epidérmica y la matriz lipídica](/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_1.webp)
+
 
 Cuando esta matriz se perturba, la barrera pierde su densidad cristalográfica ortorrómbica, permitiendo que el agua se evapore velozmente.
 
