@@ -15,8 +15,7 @@ concept: >-
   fisiolog-a-y-ecolog-a-de-la-barrera-cut-nea-din-mica-del-microbioma-mantos-hidrolip-dicos-y-estrategias-terap-uticas-avanzadas
 local_phenomenon: HVAC dry air & seasonal winds
 cover_image: ''
-media:
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
+media: []
 author: PepaGold
 epigraph:
   text: >-
@@ -90,7 +89,7 @@ Above the brick wall lies an invisible hydro-lipid shield called the **acid mant
 
 This acidic habitat inhibits pathogens while nourishing your **skin microbiome**.
 
-![Scientific diagram of skin microbiome ecosystem](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp)
+
 
 Symbiotic bacteria like *Staphylococcus epidermidis* synthesize natural antimicrobial defenses.
 
