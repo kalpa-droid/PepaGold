@@ -1,8 +1,9 @@
 ---
 article_id: PG-005
 title: La Science de la Barrière Cutanée et du Microbiome
-description: Découvrez la science de la barrière cutanée, du microbiome et du manteau
-  acide pH 5.5.
+description: >-
+  Découvrez la science de la barrière cutanée, du microbiome et du manteau acide
+  pH 5.5.
 slug: mitos-skincare-rutina-minimalista
 date: '2026-07-21'
 date_created: '2026-07-21'
@@ -14,39 +15,45 @@ concept: el-skinimalismo-y-la-reducci-n-de-pasos-en-el-skincare
 local_phenomenon: HVAC dry air & seasonal winds
 cover_image: /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp
 media:
-- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
-- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_1.webp
-- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp
-- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_3.webp
-- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_2.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_3.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_4.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_5.webp
 author: PepaGold
 epigraph:
-  text: La peau n'a pas besoin de plus de chimie ; elle a besoin de la liberté de
-    se réparer seule.
+  text: >-
+    La peau n'a pas besoin de plus de chimie ; elle a besoin de la liberté de se
+    réparer seule.
   author: Dr. PepaGold
 summary:
-- La barrière cutanée est une matrice lipidique de céramides, cholestérol et acides
-  gras.
-- Le manteau acide (pH 4.5-5.5) et le microbiote forment la première ligne de défense
-  biologique.
-- Le climat sec et les nettoyants agressifs évaporent l'eau cellulaire.
-- La réparation nécessite un nettoyage physique atraumatique et des céramides.
+  - >-
+    La barrière cutanée est une matrice lipidique de céramides, cholestérol et
+    acides gras.
+  - >-
+    Le manteau acide (pH 4.5-5.5) et le microbiote forment la première ligne de
+    défense biologique.
+  - Le climat sec et les nettoyants agressifs évaporent l'eau cellulaire.
+  - La réparation nécessite un nettoyage physique atraumatique et des céramides.
 faq:
-- q: Combien de temps faut-il pour réparer une barrière cutanée abîmée ?
-  a: Le renouvellement cellulaire dure 14 à 28 jours.
-- q: Pourquoi la peau brûle-t-elle lors de l'application d'une crème ?
-  a: La brûlure indique des micro-fissures exposant les terminaisons nerveuses.
+  - q: Combien de temps faut-il pour réparer une barrière cutanée abîmée ?
+    a: Le renouvellement cellulaire dure 14 à 28 jours.
+  - q: Pourquoi la peau brûle-t-elle lors de l'application d'une crème ?
+    a: La brûlure indique des micro-fissures exposant les terminaisons nerveuses.
 show_science_link: true
 image_prompts:
-- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+  - >-
+    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
 
-  Architectural Scandinavian minimalist beauty photography celebrating skinimalism.
-  A serene woman''s bare, radiant face resting gracefully near a single pristine white
-  Laska Mini UpPoly microfiber cloth on a smooth nude clay pedestal, illuminated by
-  soft natural morning sunlight and delicate dew drops. Palette dominated by warm
-  dusty rose (#D48C90), warm sand, and raw linen textures. Organic soft shadows, peaceful
-  zen aesthetic. Shot on Hasselblad 85mm f/2.0 lens. Completely clean minimalist composition.
-  NO text, NO watermarks, NO brand logos.'
+    Architectural Scandinavian minimalist beauty photography celebrating
+    skinimalism. A serene woman's bare, radiant face resting gracefully near a
+    single pristine white Laska Mini UpPoly microfiber cloth on a smooth nude
+    clay pedestal, illuminated by soft natural morning sunlight and delicate dew
+    drops. Palette dominated by warm dusty rose (#D48C90), warm sand, and raw
+    linen textures. Organic soft shadows, peaceful zen aesthetic. Shot on
+    Hasselblad 85mm f/2.0 lens. Completely clean minimalist composition. NO
+    text, NO watermarks, NO brand logos.
+date_images_applied: '2026-07-22'
 ---
 Ressentez-vous des picotements lorsque vous appliquez votre crème hydratante ? Votre barrière cutanée demande de l'aide.
 
@@ -56,7 +63,7 @@ Derrière les tiraillements constants et les rougeurs se cache une barrière cut
 
 Imaginez la couche externe de votre peau comme un mur de briques protecteur :
 
-![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_1.webp)
+![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_2.webp)
 
 - **Les briques (Cornéocytes) :** Cellules riches en kératine protégeant contre la friction physique.
 - **Le ciment (Matrice lipidique) :** Ciment biologique composé de **50% de céramides**, 25% de cholestérol et 15% d'acides gras libres.
@@ -75,7 +82,7 @@ Pour un ciment cutané solide, les céramides, le cholestérol et les acides gra
 
 Au-dessus du mur de briques se trouve le **manteau acide** (pH 4.5 à 5.5).
 
-![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp)
+![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_3.webp)
 
 Cet environnement acide inhibe les agents pathogènes tout en nourrissant votre **microbiote cutané**.
 
@@ -91,7 +98,7 @@ La dysbiose survient lorsque les microbes bénéfiques disparaissent, provoquant
 2. **Nettoyants agressifs :** Les sulfates dissolvent le ciment lipidique.
 3. **Exfoliation excessive :** Les acides chimiques retirent les couches protectrices.
 
-![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_3.webp)
+![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_4.webp)
 
 :::checklist Signes d'alarme : Votre barrière est-elle abîmée ?
 - Peau terne et manque d'éclat.
@@ -106,7 +113,7 @@ La dysbiose survient lorsque les microbes bénéfiques disparaissent, provoquant
 2. **Reconstitution lipidique :** Appliquez des soins enrichis en céramides et squalane.
 3. **Prébiotiques :** Choisissez des formules à l'inuline pour nourrir les bonnes bactéries.
 
-![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp)
+![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_5.webp)
 
 :::quiz Test de diagnostic
 Q: Quel est le symptôme principal de la dégradation du ciment lipidique ?
