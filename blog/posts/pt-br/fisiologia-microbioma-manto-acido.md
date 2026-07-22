@@ -16,7 +16,6 @@ cover_image: ''
 media:
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_2.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
 author: PepaGold
 epigraph:
@@ -99,7 +98,7 @@ A disbiose ocorre quando os micróbios benéficos são removidos, desencadeando 
 2. **Sabões agressivos (Sulfatos):** Tensoativos dissolvem o cimento lipídico como gordura na frigideira.
 3. **Esfoliação excessiva:** Ácidos químicos removem camadas protetoras.
 
-![Microfissuras no estrato córneo causadas por sabões](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp)
+
 
 :::checklist Sinais de alerta: Sua barreira está danificada?
 - Pele opaca e sem luminosidade natural.
