@@ -13,12 +13,13 @@ category: rutinas-minimalismo
 category_label: 🔬 Skin Science
 concept: el-skinimalismo-y-la-reducci-n-de-pasos-en-el-skincare
 local_phenomenon: HVAC dry air & seasonal winds
-cover_image: ''
+cover_image: /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp
 media:
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_3.webp
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_2.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_3.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_4.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_5.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -60,6 +61,7 @@ image_prompts:
     linen textures. Organic soft shadows, peaceful zen aesthetic. Shot on
     Hasselblad 85mm f/2.0 lens. Completely clean minimalist composition. NO
     text, NO watermarks, NO brand logos.
+date_images_applied: '2026-07-22'
 ---
 Do you feel your skin stinging when applying your usual moisturizer? Your skin barrier is asking for help.
 
@@ -69,7 +71,7 @@ Behind constant tightness and burning lies a compromised skin barrier and an imb
 
 Imagine the outermost layer of your skin as a protective brick wall:
 
-
+![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_2.webp)
 
 - **Bricks (Corneocytes):** Keratin-packed cells protecting against physical friction.
 - **Mortar (Lipid Matrix):** Biological cement composed of **50% Ceramides**, 25% Cholesterol, and 15% Free Fatty Acids.
@@ -88,7 +90,7 @@ For impenetrable skin mortar, ceramides, cholesterol, and fatty acids must exist
 
 Above the brick wall lies an invisible hydro-lipid shield called the **acid mantle** (pH 4.5 to 5.5).
 
-![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp)
+![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_3.webp)
 
 This acidic habitat inhibits pathogens while nourishing your **skin microbiome**.
 
@@ -104,7 +106,7 @@ Dysbiosis occurs when beneficial microbes are stripped away, triggering chronic 
 2. **Aggressive Cleansers (Sulfates):** Heavy surfactants dissolve lipid mortar like grease in a pan.
 3. **Over-Exfoliation:** Chemical acids remove protective layers before cellular regeneration.
 
-![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_3.webp)
+![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_4.webp)
 
 :::checklist Warning Signs: Is your barrier damaged?
 - Skin appears dull and lacks natural luminosity.
@@ -119,7 +121,7 @@ Dysbiosis occurs when beneficial microbes are stripped away, triggering chronic 
 2. **Lipid Replenishment:** Use creams enriched with ceramides and squalane.
 3. **Topical Prebiotics:** Choose cosmetic formulations with inulin to nourish commensal bacteria.
 
-![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp)
+![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_5.webp)
 
 :::quiz Barrier Diagnostic Test
 Q: What is the primary indicator of lipid mortar breakdown?
