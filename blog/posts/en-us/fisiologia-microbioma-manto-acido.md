@@ -18,7 +18,6 @@ cover_image: /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.we
 media:
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -121,7 +120,7 @@ Dysbiosis occurs when beneficial microbes are stripped away, triggering chronic 
 2. **Lipid Replenishment:** Use creams enriched with ceramides and squalane.
 3. **Topical Prebiotics:** Choose cosmetic formulations with inulin to nourish commensal bacteria.
 
-![Atraumatic physical cleaning with UpPoly microfiber Laska Mini](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp)
+
 
 :::quiz Barrier Diagnostic Test
 Q: What is the primary indicator of lipid mortar breakdown?
