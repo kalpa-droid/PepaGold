@@ -1,8 +1,9 @@
 ---
 article_id: PG-004
 title: Die Wissenschaft der Hautbarriere und des Mikrobioms
-description: Erfahren Sie alles über die Wissenschaft der Hautbarriere, des Mikrobioms
-  und des Säureschutzmantels pH 5.5.
+description: >-
+  Erfahren Sie alles über die Wissenschaft der Hautbarriere, des Mikrobioms und
+  des Säureschutzmantels pH 5.5.
 slug: piel-sensible-rosacea-acne-cosmetico
 date: '2026-07-21'
 date_created: '2026-07-21'
@@ -12,39 +13,46 @@ category: barrera-cutanea
 category_label: 🔬 Hautwissenschaft
 concept: piel-sensible-ros-cea-y-acn-cosm-tico-diagn-stico-y-estrategias-de-limpieza
 local_phenomenon: HVAC dry air & seasonal winds
-cover_image: /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_1.webp
+cover_image: ''
 media:
-- /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
-- /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_1.webp
-- /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_2.webp
-- /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_3.webp
-- /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_1.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_2.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_3.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
 author: PepaGold
 epigraph:
-  text: Die Haut braucht nicht mehr Chemie; sie braucht die Freiheit, sich selbst
-    zu regenerieren.
+  text: >-
+    Die Haut braucht nicht mehr Chemie; sie braucht die Freiheit, sich selbst zu
+    regenerieren.
   author: Dr. PepaGold
 summary:
-- Die Hautbarriere ist eine Lipidmatrix aus Ceramiden, Cholesterin und Fettsäuren.
-- Der Säureschutzmantel (pH 4.5-5.5) und das Mikrobiom bilden die erste Abwehrlinie.
-- Trockenes Klima und aggressive Reiniger erzeugen Mikrorisse.
-- Die Reparatur erfordert atraumatische physikalische Reinigung.
+  - >-
+    Die Hautbarriere ist eine Lipidmatrix aus Ceramiden, Cholesterin und
+    Fettsäuren.
+  - >-
+    Der Säureschutzmantel (pH 4.5-5.5) und das Mikrobiom bilden die erste
+    Abwehrlinie.
+  - Trockenes Klima und aggressive Reiniger erzeugen Mikrorisse.
+  - Die Reparatur erfordert atraumatische physikalische Reinigung.
 faq:
-- q: Wie lange dauert es, eine geschädigte Hautbarriere zu reparieren?
-  a: Die Zellerneuerung dauert 14 bis 28 Tage.
-- q: Warum brennt mein Gesicht beim Eincremen?
-  a: Das Brennen weist auf Mikrorisse in der Hornschicht hin.
+  - q: Wie lange dauert es, eine geschädigte Hautbarriere zu reparieren?
+    a: Die Zellerneuerung dauert 14 bis 28 Tage.
+  - q: Warum brennt mein Gesicht beim Eincremen?
+    a: Das Brennen weist auf Mikrorisse in der Hornschicht hin.
 show_science_link: true
 image_prompts:
-- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+  - >-
+    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
 
-  Editorial beauty macro photography depicting sensitive skin relief. Split visual
-  narrative on a woman''s delicate face: a faint rosy flushed cheek on one side, seamlessly
-  transitioning into calm, velvety hydrated skin refreshed by a soft, luxurious Laska
-  Mini UpPoly micro-cloth soaked in cool water. Aesthetic palette of muted dusty rose
-  (#D48C90), soft botanical sage green accents, and ivory nude. Soothing, tranquil
-  studio lighting atmosphere. Shot on 100mm f/2.8 macro lens, shallow depth of field.
-  Clean serene composition. NO text, NO watermarks, NO logos.'
+    Editorial beauty macro photography depicting sensitive skin relief. Split
+    visual narrative on a woman's delicate face: a faint rosy flushed cheek on
+    one side, seamlessly transitioning into calm, velvety hydrated skin
+    refreshed by a soft, luxurious Laska Mini UpPoly micro-cloth soaked in cool
+    water. Aesthetic palette of muted dusty rose (#D48C90), soft botanical sage
+    green accents, and ivory nude. Soothing, tranquil studio lighting
+    atmosphere. Shot on 100mm f/2.8 macro lens, shallow depth of field. Clean
+    serene composition. NO text, NO watermarks, NO logos.
 ---
 Spüren Sie ein Brennen, wenn Sie Ihre gewohnte Feuchtigkeitscreme auftragen? Ihre Hautbarriere bittet um Hilfe.
 
