@@ -1,5 +1,5 @@
 ---
-article_id: PG-003
+article_id: PG-004
 title: "泛红、酒渣鼻或发痘？不用化学品如何抚平敏感肌"
 description: "关于反应性肌肤综合征、神经性炎症与预防化妆品性痤疮的临床指南。"
 slug: piel-sensible-rosacea-acne-cosmetico
@@ -9,35 +9,29 @@ date_ai_processed: '2026-07-21'
 locale: zh-hans
 category: barrera-cutanea
 category_label: "🔬 皮肤科学"
-concept: piel-sensible-rosacea-y-acne-cosmetico
+concept: piel-sensible-ros-cea-y-acn-cosm-tico-diagn-stico-y-estrategias-de-limpieza
 local_phenomenon: "城市雾霾 PM2.5 与季节性干旱风"
-cover_image: /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/gemini_generated_image_8b2pk18b2pk18b2p.webp
+cover_image: /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_1.webp
 media:
-  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/gemini_generated_image_8b2pk18b2pk18b2p.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_1.webp
   - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_1.webp
   - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_2.webp
   - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_3.webp
   - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
 author: PepaGold
 epigraph:
-  text: "La rojez no es un defecto cosmético; es la señal de que los capilares de tu piel están exhaustos."
-  author: "Dra. PepaGold"
+  text: "敏感肌肤不是一种病，而是皮肤对过多化学品发出的抗议。"
+  author: "PepaGold 博士"
 summary:
-  - "El acné cosmético surge por la oclusión de los ostium foliculares provocada por aceites pesados y tensoactivos."
-  - "La rosácea involucra hiperreactividad vascular y sobrecrecimiento del ácaro Demodex folliculorum."
-  - "Los sulfatos y fragancias sintéticas activan los receptores tipo Toll (TLR-2) liberando citoquinas inflamatorias."
-  - "La remoción física atraumática sin limpiadores sintéticos previene la congestión vascular y calma el eritema."
+  - "敏感肌具有高反应度的皮下神经网络与脆弱的面部微毛细血管。"
+  - "化妆品性痤疮是由于残留产品堵塞毛孔引发，不同于激素引起的寻常痤疮。"
+  - "表面活性剂剥离脂质后，面部血管会代偿性扩张，加重酒渣鼻（酒槽鼻）。"
+  - "UpPoly 超细纤维可以零化学表面活性剂吸附污垢，帮助神经与毛细血管休养生息。"
 faq:
-  - q: "¿Cómo sé si tengo acné común o acné cosmético?"
-    a: "El acné cosmético aparece como pequeños comeditones cerrados y pústulas superficiales días después de estrenar una crema o base de maquillaje densa."
-  - q: "¿Puedo lavarme la cara si tengo rosácea activa?"
-    a: "Sí, pero evitando el agua caliente y los geles espumosos. Usá agua tibia y una microfibra inerte atraumática para no inflamar los capilares."
-image_prompts:
-  - '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9): High resolution dermatological photograph of sensitive facial skin showing subtle blush erythema transitioning into calm, dewy hydration. Warm minimalist studio aesthetic, dusty rose background (#D48C90). NO text.'
-  - '📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): Medical 3D graphic showing dermal micro-capillaries dilating under chemical irritation versus normal vasodilation. Soft rose and beige tones. NO text.'
-  - '📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Detailed microscopic 3D render of a hair follicle clogged by synthetic cosmetic oils and sebrum, leading to follicular acne inflammation. NO text.'
-  - '📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Scientific illustration depicting Demodex folliculorum mites interaction on sensitive epidermal layer with TLR-2 immune receptors glowing. NO text.'
-  - '📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): Commercial beauty studio macro shot of gentle cooling cleansing on reactive skin using soft Laska Mini microfiber soaked in pure water. Soft soothing vibe. NO text.'
+  - q: "化妆品性痤疮和寻常痤疮有什么区别？"
+    a: "化妆品性痤疮主要是由重质护肤品或未冲洗干净的卸妆水堵塞毛孔引起的密集小粉刺，而非体内激素波动所致。"
+  - q: "洗热水澡会加重泛红和酒渣鼻吗？"
+    a: "是的。高热会导致面部微毛细血管剧烈扩张，加重潮红与神经性炎症。"
 show_science_link: true
 ---
 
@@ -73,7 +67,7 @@ show_science_link: true
 
 ## **环境压力源：城市污染与气温骤变**
 
-环境暴露如 **城市空气污染与气候突变** 会加剧皮肤反应：
+环境暴露如 **城市雾霾 PM2.5 与季节性干旱风** 会加剧皮肤反应：
 
 ![空气污染对反应性肌肤影响的生物物理图](/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_3.webp)
 

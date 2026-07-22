@@ -492,13 +492,6 @@
         "web_url": "/ru/blog/mitos-skincare-rutina-minimalista",
         "phenomenon": "Сухой воздух от отопления и сильный мороз",
         "region_label": "ru-ru"
-      },
-      "zh-hans": {
-        "slug": "mitos-skincare-rutina-minimalista",
-        "title": "10步护肤法正在毁掉你的皮肤？护肤误区大揭秘",
-        "web_url": "/zh/blog/mitos-skincare-rutina-minimalista",
-        "phenomenon": "城市雾霾 PM2.5 与季节性干旱风",
-        "region_label": "zh-hans"
       }
     },
     "piel-sensible-rosacea-y-acne-cosmetico": {
@@ -564,13 +557,6 @@
         "web_url": "/ru/blog/piel-sensible-rosacea-acne-cosmetico",
         "phenomenon": "Сухой воздух от отопления и сильный мороз",
         "region_label": "ru-ru"
-      },
-      "zh-hans": {
-        "slug": "piel-sensible-rosacea-acne-cosmetico",
-        "title": "泛红、酒渣鼻或发痘？不用化学品如何抚平敏感肌",
-        "web_url": "/zh/blog/piel-sensible-rosacea-acne-cosmetico",
-        "phenomenon": "城市雾霾 PM2.5 与季节性干旱风",
-        "region_label": "zh-hans"
       }
     },
     "barrera-cutanea-y-microbioma": {
@@ -641,8 +627,26 @@
         "slug": "skin-barrier-science-microbiome",
         "title": "涂护肤品突然脸部刺痛？皮肤屏障受损原理与科学修复指南",
         "web_url": "/zh/blog/skin-barrier-science-microbiome",
-        "phenomenon": "城市空气污染与PM2.5",
-        "region_label": "中国"
+        "phenomenon": "城市雾霾 PM2.5 与季节性干旱风",
+        "region_label": "zh-hans"
+      }
+    },
+    "el-skinimalismo-y-la-reducci-n-de-pasos-en-el-skincare": {
+      "zh-hans": {
+        "slug": "mitos-skincare-rutina-minimalista",
+        "title": "10步护肤法正在毁掉你的皮肤？护肤误区大揭秘",
+        "web_url": "/zh/blog/mitos-skincare-rutina-minimalista",
+        "phenomenon": "城市雾霾 PM2.5 与季节性干旱风",
+        "region_label": "zh-hans"
+      }
+    },
+    "piel-sensible-ros-cea-y-acn-cosm-tico-diagn-stico-y-estrategias-de-limpieza": {
+      "zh-hans": {
+        "slug": "piel-sensible-rosacea-acne-cosmetico",
+        "title": "泛红、酒渣鼻或发痘？不用化学品如何抚平敏感肌",
+        "web_url": "/zh/blog/piel-sensible-rosacea-acne-cosmetico",
+        "phenomenon": "城市雾霾 PM2.5 与季节性干旱风",
+        "region_label": "zh-hans"
       }
     }
   }
