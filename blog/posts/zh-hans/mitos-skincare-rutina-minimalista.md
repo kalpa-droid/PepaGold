@@ -13,10 +13,8 @@ concept: el-skinimalismo-y-la-reducci-n-de-pasos-en-el-skincare
 local_phenomenon: HVAC dry air & seasonal winds
 cover_image: /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp
 media:
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
   - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_1.webp
   - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
 author: PepaGold
 epigraph:
   text: 肌肤不需要10层化学品；它需要的是呼吸与自我修复的时间。
@@ -88,7 +86,7 @@ image_prompts:
 
 日本 **UpPoly** 超细纤维（Laska Mini 系列）仅需温水即可吸附彩妆与污垢：
 
-![Laska Mini 极简护肤工作室写真](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp)
+
 
 :::quiz 什么是极简护肤（Skinimalism）？
 - 倡导精简、高效、无刺激护肤步骤的皮肤学理念 *correct*
