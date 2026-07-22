@@ -13,13 +13,13 @@ category: barrera-cutanea
 category_label: 🔬 Hautwissenschaft
 concept: piel-sensible-ros-cea-y-acn-cosm-tico-diagn-stico-y-estrategias-de-limpieza
 local_phenomenon: HVAC dry air & seasonal winds
-cover_image: ''
+cover_image: /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_1.webp
 media:
-  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
-  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_1.webp
-  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_2.webp
-  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_3.webp
-  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_1.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_2.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_3.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_4.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_5.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -53,6 +53,7 @@ image_prompts:
     green accents, and ivory nude. Soothing, tranquil studio lighting
     atmosphere. Shot on 100mm f/2.8 macro lens, shallow depth of field. Clean
     serene composition. NO text, NO watermarks, NO logos.
+date_images_applied: '2026-07-22'
 ---
 Spüren Sie ein Brennen, wenn Sie Ihre gewohnte Feuchtigkeitscreme auftragen? Ihre Hautbarriere bittet um Hilfe.
 
@@ -62,7 +63,7 @@ Hinter ständiger Spannkraft und Rötungen steckt eine geschädigte Hautbarriere
 
 Stellen Sie sich die äußerste Schicht Ihrer Haut wie eine Schutzmauer aus Ziegeln vor:
 
-![Imagen de sección](/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_1.webp)
+![Imagen de sección](/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_2.webp)
 
 - **Ziegel (Korneozyten):** Keratinreiche Zellen, die vor mechanischer Reibung schützen.
 - **Zement (Lipidmatrix):** Biologischer Zement aus **50% Ceramiden**, 25% Cholesterin und 15% freien Fettsäuren.
@@ -81,7 +82,7 @@ Für eine undurchdringliche Hautmauer müssen Ceramide, Cholesterin und Fettsäu
 
 Über der Ziegelmauer liegt ein unsichtbarer Schutzschild: der **Säureschutzmantel** (pH 4.5 bis 5.5).
 
-![Imagen de sección](/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_2.webp)
+![Imagen de sección](/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_3.webp)
 
 Dieses saure Milieu hemmt Krankheitserreger und nährt Ihr **Hautmikrobiom**.
 
@@ -97,7 +98,7 @@ Dysbiose entsteht, wenn nützliche Mikroben ausgewaschen werden, was zu chronisc
 2. **Aggressive Reiniger (Sulfate):** Mizellen und Sulfate lösen Lipidzement wie Fett in einer Pfanne.
 3. **Übermäßige Exfoliation:** Chemische Säuren entfernen Schutzschichten vor der Regeneration.
 
-![Imagen de sección](/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_3.webp)
+![Imagen de sección](/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_4.webp)
 
 :::checklist Warnzeichen: Ist Ihre Barriere geschädigt?
 - Die Haut wirkt fahl und glanzlos.
@@ -112,7 +113,7 @@ Dysbiose entsteht, wenn nützliche Mikroben ausgewaschen werden, was zu chronisc
 2. **Lipidversorgung:** Verwenden Sie Cremes mit Ceramiden, Hyaluronsäure und Squalansäure.
 3. **Präbiotika:** Wählen Sie Kosmetika mit Inulin zur Nahrung nützlicher Bakterien.
 
-![Imagen de sección](/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp)
+![Imagen de sección](/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_5.webp)
 
 :::quiz Diagnosetest
 Q: Was ist das Hauptanzeichen für den Abbau des Lipidzements?
