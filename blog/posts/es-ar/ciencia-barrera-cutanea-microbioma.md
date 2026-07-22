@@ -16,8 +16,9 @@ category_label: Ciencia & Piel
 concept: barrera-cutanea-y-microbioma
 local_phenomenon: Viento Zonda
 region_label: Salta, Argentina
-cover_image: ''
+cover_image: /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_1.webp
 media:
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_1.webp
   - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_2.webp
   - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_3.webp
   - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_4.webp
