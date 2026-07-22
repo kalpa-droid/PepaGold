@@ -80,6 +80,7 @@ def main():
     concept_by_article = defaultdict(set)
     slug_by_article = defaultdict(set)
     articles_seen = defaultdict(set)
+    image_count_by_article = defaultdict(dict)
 
     for path in all_paths:
         meta, body_md = parse_post(path)
@@ -122,7 +123,13 @@ def main():
                     f"se detectó '{detected}': \"{snippet}...\""
                 )
 
-    # 3) Consistencia de concepto entre idiomas del mismo article_id
+        # 4) Colección de imágenes en el cuerpo y metadatos
+        body_images = re.findall(r'!\[.*?\]\((.*?)\)', body_md)
+        image_count_by_article[article_id][folder_locale] = len(body_images)
+        if not meta.get("cover_image"):
+            problems.append(f"[IMAGEN PORTADA] {path}: le falta el campo 'cover_image' en el frontmatter")
+
+    # 3) Consistencia de concepto y slugs entre idiomas del mismo article_id
     for article_id, concepts in concept_by_article.items():
         if len(concepts) > 1:
             problems.append(
@@ -135,6 +142,16 @@ def main():
                 f"[SLUG] {article_id}: el slug NO es idéntico en todos los idiomas "
                 f"(rompe el hreflang entre versiones) — valores encontrados: {slugs}"
             )
+
+    # 4) Consistencia de imágenes entre idiomas (contra es-ar como referencia)
+    for article_id, counts in image_count_by_article.items():
+        ref_count = counts.get("es-ar", 0)
+        for loc, count in counts.items():
+            if count != ref_count and loc != "es-ar":
+                problems.append(
+                    f"[IMÁGENES DESIGUALES] {article_id} [{loc}]: tiene {count} imágenes en el cuerpo "
+                    f"mientras que es-ar tiene {ref_count} imágenes."
+                )
 
     print(f"Artículos escaneados: {len(all_paths)}\n")
 

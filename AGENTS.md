@@ -42,12 +42,13 @@ Debes ejecutar **automáticamente y en un solo paso de 0 a 100%** lo siguiente:
 3. **Generar Prompts e Indicaciones:**
    - Redacta 5 prompts ultra-detallados en `meta.image_prompts` (1 Portada 16:9 + 4 Secciones H2).
 
-4. **Traducciones Multilingües e Inspección Preventiva de Idioma:**
+4. **Traducciones Multilingües, Inserción de Imágenes e Inspección Preventiva:**
    - Genera los 10 archivos `.md` (`es-ar`, `es-mx`, `es-es`, `en-us`, `fr-fr`, `de-de`, `it-it`, `pt-br`, `ru-ru`, `zh-hans`) manteniendo `concept` e hiper-localización.
-   - **AUDITORÍA INTERMEDIA OBLIGATORIA (Fase 1):** Ejecuta `./venv/bin/python validate_translations.py --article PG-XXX` inmediatamente después de traducir. Si el script detecta mezcla de idiomas o desalineación de metadatos, corrígelo antes de proceder con imágenes o compilación.
+   - **Garantía de Imágenes:** Verifica que todas las versiones regionales contengan la imagen de portada y **exactamente 1 imagen intercalada por cada sección H2**, alineadas con la versión `es-ar`.
+   - **AUDITORÍA INTERMEDIA OBLIGATORIA (Fase 1):** Ejecuta `./venv/bin/python validate_translations.py --article PG-XXX` inmediatamente después de traducir. Si el script detecta mezcla de idiomas, desalineación de metadatos o imágenes desiguales/faltantes, corrígelo antes de proceder.
 
 5. **Compilación, Auditoría Final y Deploy:**
    - Setea `date_ai_processed: "YYYY-MM-DD"`.
    - Ejecuta `./venv/bin/python build_blog.py`.
-   - **AUDITORÍA COMPLETA OBLIGATORIA (Fase 2):** Ejecuta `./venv/bin/python audit_all.py` para validar artículos y la estructura del sitio.
-   - Si la auditoría da `🟢 0 errores`, ejecuta `git add . && git commit -m "feat(blog): procesar artículo PG-XXX con guía 18-28 años en 10 idiomas" && git push origin main`. Si la auditoría falla, corrige el problema y re-audita antes de hacer push.
+   - **AUDITORÍA COMPLETA OBLIGATORIA (Fase 2):** Ejecuta `./venv/bin/python audit_all.py` para validar artículos (idioma, imágenes, estructura) y la estructura del sitio.
+   - Si la auditoría da 🟢 0 errores, ejecuta `git add . && git commit -m "feat(blog): procesar artículo PG-XXX con guía 18-28 años en 10 idiomas" && git push origin main`. Si la auditoría falla, corrige el problema y re-audita antes de hacer push.
