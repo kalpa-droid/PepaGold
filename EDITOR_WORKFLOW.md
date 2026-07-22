@@ -6,7 +6,7 @@ Este documento establece la normativa estricta e innegociable para la edición, 
 
 ## 🎯 Guía de Redacción Estricta (Público Objetivo 18-28 años)
 
-Todo artículo publicado en PepaGold debe seguir estrictamente estas 8 reglas fijas para convertir información científica/técnica en notas que atrapen a lectoras de 18 a 28 años:
+Todo artículo publicado en PepaGold debe seguir strictly estas 8 reglas fijas para convertir información científica/técnica en notas que atrapen a lectoras de 18 a 28 años:
 
 ### 1. Voz y Tono
 - **Segunda persona:** Hablar directamente en "vos" / "tú" / "tu piel". Nunca en tercera persona impersonal.
@@ -101,6 +101,25 @@ Todo título debe combinar la búsqueda real que hacen las chicas en Google/TikT
 
 ---
 
+## 🖼️ Regla Estricta de Sincronización de Imágenes (Anti-Corrupción)
+
+**Contexto:** Insertar la referencia a una imagen recién subida sin comprobar que el archivo existe de verdad en disco es la causa raíz de artículos con imágenes rotas o cruzadas entre idiomas.
+
+**Regla obligatoria:** El Agente IA **NUNCA** debe escribir manualmente una ruta de imagen en el frontmatter (`cover_image`, `media`) ni en el cuerpo Markdown de un artículo. Para insertar o sincronizar imágenes, el único método permitido es:
+
+```bash
+python3 insert_images.py PG-XXX
+```
+
+Este comando:
+1. Verifica que **cada archivo de imagen esperado exista en disco y no esté vacío/corrupto** — antes de tocar un solo artículo.
+2. Si falta algo, **no modifica ningún archivo** e imprime exactamente qué falta. El Agente debe mostrarle ese mensaje al usuario tal cual, sin inventar un tiempo de espera — no hace falta adivinar cuánto tarda, alcanza con volver a correr el comando cuando el archivo ya esté.
+3. Si todo está confirmado, sincroniza los 10 idiomas de forma atómica (todo o nada — nunca puede quedar la mitad bien y la mitad mal).
+
+**Prohibido:** Que el Agente le diga al usuario "ya la inserté" sin haber corrido `insert_images.py` y haber visto la salida `🟢`. Si el comando devuelve `🔴`, el Agente comunica el mensaje de error tal cual y se detiene — no reintenta con otro nombre de archivo ni asume una ruta distinta.
+
+---
+
 ## 🚀 8. Flujo de Trabajo Automatizado (Desde Informe Técnico hasta Git Push)
 
 Cuando el usuario indique que subió un nuevo informe técnico (ejemplo: *"He subido el informe PG-006"* en `/reports/PG-006.txt` o en el chat), el Agente IA ejecutará **automáticamente e íntegramente** los siguientes 6 pasos sin requerir intervención manual:
@@ -113,11 +132,10 @@ Cuando el usuario indique que subió un nuevo informe técnico (ejemplo: *"He su
 3. **Traducción Nativa e Identidad Multilingüe:**
    - Traducir al 100% el artículo en las 9 carpetas restantes (`en-us`, `fr-fr`, `de-de`, `it-it`, `pt-br`, `ru-ru`, `zh-hans`, `es-mx`, `es-es`).
    - Sincronizar de forma estricta los metadatos `article_id`, `slug` y `concept`.
-4. **Compilación del Sitio:**
-   - Ejecutar `/home/mappo/Kalpagrafica/PepaGold/venv/bin/python build_blog.py` para generar los 50 artículos estáticos HTML.
-5. **Auditoría Completa y Control de Calidad Automático:**
-   - Ejecutar `/home/mappo/Kalpagrafica/PepaGold/venv/bin/python audit_all.py`.
-   - Verificar que `validate_translations.py` (artículos) y `validate_site_translations.py` (estructura) retornen `🟢 0 errores`.
+4. **Sincronización Atómica de Imágenes:**
+   - Ejecutar `python3 insert_images.py PG-XXX` para verificar la existencia real de los archivos en disco y enlazar los 10 idiomas.
+5. **Compilación del Sitio y Auditoría Completa:**
+   - Ejecutar `python3 build_blog.py` para generar los artículos estáticos HTML.
+   - Ejecutar `python3 audit_all.py` y verificar que retorne `🟢 0 errores`.
 6. **Publicación y Deploy a GitHub:**
    - Realizar `git add .`, `git commit` y `git push origin main` únicamente si la auditoría dio luz verde en 100%. Si hay cualquier advertencia o error, corregirlo de inmediato antes de subir.
-
