@@ -1164,6 +1164,7 @@
     // Images Modal Manager
     async function openImagesModal(slug) {
       activeModalPost = articlesList.find(a => a.meta.slug === slug);
+      imageTagsState = {};
       document.getElementById('modal-img-title').innerText = `🖼️ Imágenes: ${slug}`;
       openModal('modal-images');
       loadPostImages(slug);
@@ -1207,9 +1208,7 @@
     function refreshPostImagesState() {
       if (!activeModalPost || !activeModalPost.meta) return;
       const slug = activeModalPost.meta.slug;
-      if (deletedFilesState[slug]) deletedFilesState[slug].clear();
-      if (emptySlotsState[slug]) emptySlotsState[slug].clear();
-      showToast('🔄 Refrescando y sincronizando estado de imágenes desde GitHub...');
+      showToast('🔄 Sincronizando imágenes en vivo desde servidor GitHub...');
       loadPostImages(slug, true);
     }
 
@@ -1250,7 +1249,7 @@
       const activeFiles = Array.from(uniqueFilesMap.values());
       currentLoadedFilesState = activeFiles;
 
-      // Assign non-conflicting tags for active files without auto-filling deleted slots
+      // Assign non-conflicting tags for active files strictly matching filenames
       const occupiedTags = new Set();
       activeFiles.forEach(f => {
         if (imageTagsState[f.name] && !emptySlotsState[slug].has(imageTagsState[f.name])) {
@@ -1263,9 +1262,6 @@
           let detected = detectTagFromFilename(f.name);
           if (detected && !occupiedTags.has(detected) && !emptySlotsState[slug].has(detected)) {
             imageTagsState[f.name] = detected;
-          } else {
-            let freeTag = SLOT_TAGS.find(t => !occupiedTags.has(t) && !emptySlotsState[slug].has(t));
-            if (freeTag) imageTagsState[f.name] = freeTag;
           }
         }
         if (imageTagsState[f.name]) {
