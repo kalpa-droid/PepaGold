@@ -1,8 +1,9 @@
 ---
 article_id: PG-005
 title: Die Wissenschaft der Hautbarriere und des Mikrobioms
-description: Erfahren Sie alles über die Wissenschaft der Hautbarriere, des Mikrobioms
-  und des Säureschutzmantels pH 5.5.
+description: >-
+  Erfahren Sie alles über die Wissenschaft der Hautbarriere, des Mikrobioms und
+  des Säureschutzmantels pH 5.5.
 slug: mitos-skincare-rutina-minimalista
 date: '2026-07-21'
 date_created: '2026-07-21'
@@ -14,37 +15,43 @@ concept: el-skinimalismo-y-la-reducci-n-de-pasos-en-el-skincare
 local_phenomenon: HVAC dry air & seasonal winds
 cover_image: /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp
 media:
-- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
-- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_1.webp
-- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp
-- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_3.webp
-- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_1.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
 author: PepaGold
 epigraph:
-  text: Die Haut braucht nicht mehr Chemie; sie braucht die Freiheit, sich selbst
-    zu regenerieren.
+  text: >-
+    Die Haut braucht nicht mehr Chemie; sie braucht die Freiheit, sich selbst zu
+    regenerieren.
   author: Dr. PepaGold
 summary:
-- Die Hautbarriere ist eine Lipidmatrix aus Ceramiden, Cholesterin und Fettsäuren.
-- Der Säureschutzmantel (pH 4.5-5.5) und das Mikrobiom bilden die erste Abwehrlinie.
-- Trockenes Klima und aggressive Reiniger erzeugen Mikrorisse.
-- Die Reparatur erfordert atraumatische physikalische Reinigung.
+  - >-
+    Die Hautbarriere ist eine Lipidmatrix aus Ceramiden, Cholesterin und
+    Fettsäuren.
+  - >-
+    Der Säureschutzmantel (pH 4.5-5.5) und das Mikrobiom bilden die erste
+    Abwehrlinie.
+  - Trockenes Klima und aggressive Reiniger erzeugen Mikrorisse.
+  - Die Reparatur erfordert atraumatische physikalische Reinigung.
 faq:
-- q: Wie lange dauert es, eine geschädigte Hautbarriere zu reparieren?
-  a: Die Zellerneuerung dauert 14 bis 28 Tage.
-- q: Warum brennt mein Gesicht beim Eincremen?
-  a: Das Brennen weist auf Mikrorisse in der Hornschicht hin.
+  - q: Wie lange dauert es, eine geschädigte Hautbarriere zu reparieren?
+    a: Die Zellerneuerung dauert 14 bis 28 Tage.
+  - q: Warum brennt mein Gesicht beim Eincremen?
+    a: Das Brennen weist auf Mikrorisse in der Hornschicht hin.
 show_science_link: true
 image_prompts:
-- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+  - >-
+    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
 
-  Architectural Scandinavian minimalist beauty photography celebrating skinimalism.
-  A serene woman''s bare, radiant face resting gracefully near a single pristine white
-  Laska Mini UpPoly microfiber cloth on a smooth nude clay pedestal, illuminated by
-  soft natural morning sunlight and delicate dew drops. Palette dominated by warm
-  dusty rose (#D48C90), warm sand, and raw linen textures. Organic soft shadows, peaceful
-  zen aesthetic. Shot on Hasselblad 85mm f/2.0 lens. Completely clean minimalist composition.
-  NO text, NO watermarks, NO brand logos.'
+    Architectural Scandinavian minimalist beauty photography celebrating
+    skinimalism. A serene woman's bare, radiant face resting gracefully near a
+    single pristine white Laska Mini UpPoly microfiber cloth on a smooth nude
+    clay pedestal, illuminated by soft natural morning sunlight and delicate dew
+    drops. Palette dominated by warm dusty rose (#D48C90), warm sand, and raw
+    linen textures. Organic soft shadows, peaceful zen aesthetic. Shot on
+    Hasselblad 85mm f/2.0 lens. Completely clean minimalist composition. NO
+    text, NO watermarks, NO brand logos.
 ---
 Spüren Sie ein Brennen, wenn Sie Ihre gewohnte Feuchtigkeitscreme auftragen? Ihre Hautbarriere bittet um Hilfe.
 
@@ -89,7 +96,7 @@ Dysbiose entsteht, wenn nützliche Mikroben ausgewaschen werden, was zu chronisc
 2. **Aggressive Reiniger (Sulfate):** Mizellen und Sulfate lösen Lipidzement wie Fett in einer Pfanne.
 3. **Übermäßige Exfoliation:** Chemische Säuren entfernen Schutzschichten vor der Regeneration.
 
-![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_3.webp)
+
 
 :::checklist Warnzeichen: Ist Ihre Barriere geschädigt?
 - Die Haut wirkt fahl und glanzlos.
