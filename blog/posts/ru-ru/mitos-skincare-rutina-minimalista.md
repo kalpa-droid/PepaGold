@@ -11,13 +11,13 @@ category: barrera-cutanea
 category_label: 🔬 Наука о Коже
 concept: el-skinimalismo-y-la-reducci-n-de-pasos-en-el-skincare
 local_phenomenon: HVAC dry air & seasonal winds
-cover_image: ''
+cover_image: /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp
 media:
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_1.webp
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_3.webp
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_2.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_3.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_4.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_5.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -51,6 +51,7 @@ image_prompts:
     linen textures. Organic soft shadows, peaceful zen aesthetic. Shot on
     Hasselblad 85mm f/2.0 lens. Completely clean minimalist composition. NO
     text, NO watermarks, NO brand logos.
+date_images_applied: '2026-07-22'
 ---
 Чувствуете ли вы жжение при нанесении обычного увлажняющего крема? Ваш кожный барьер просит о помощи.
 
@@ -60,7 +61,7 @@ image_prompts:
 
 Представьте самый внешний слой кожи как защитную кирпичную стену:
 
-![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_1.webp)
+![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_2.webp)
 
 - **Кирпичи (Корнеоциты):** Клетки, богатые кератином, защищающие от трения.
 - **Цемент (Липидный матрикс):** Биологический цемент, состоящий из **50% Церамидов**, 25% Холестерина и 15% Свободных Жирных Кислот.
@@ -79,7 +80,7 @@ image_prompts:
 
 Поверх кирпичной стены расположен **кислотный мантий** (pH 4.5–5.5).
 
-![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp)
+![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_3.webp)
 
 Эта кислая среда подавляет патогены и питает ваш **микробиом кожи**.
 
@@ -95,7 +96,7 @@ image_prompts:
 2. **Агрессивные очистители:** Сульфаты растворяют липидный цемент, как жир на сковороде.
 3. **Переизбыток пилингов:** Химические кислоты удаляют защитные слои.
 
-![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_3.webp)
+![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_4.webp)
 
 :::checklist Предупреждающие знаки: Поврежден ли ваш барьер?
 - Кожа выглядит тусклой и лишена естественного сияния.
@@ -110,7 +111,7 @@ image_prompts:
 2. **Восполнение липидов:** Наносите кремы с церамидами и скваланом.
 3. **Пребиотики:** Выбирайте косметику с инулином для питания полезных бактерий.
 
-![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp)
+![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_5.webp)
 
 :::quiz Диагностический тест
 Q: Что является главным признаком разрушения липидного цемента?
