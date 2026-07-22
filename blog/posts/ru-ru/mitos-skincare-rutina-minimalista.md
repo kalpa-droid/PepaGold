@@ -14,7 +14,7 @@ concept: el-skinimalismo-y-la-reducci-n-de-pasos-en-el-skincare
 local_phenomenon: HVAC dry air & seasonal winds
 cover_image: /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp
 media:
-- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp
+- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
 - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_1.webp
 - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp
 - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_3.webp
