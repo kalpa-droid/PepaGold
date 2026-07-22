@@ -1347,18 +1347,26 @@
       input.value = '';
     }
 
-    async function deletePostImage(slug, filename, sha) {
+        async function deletePostImage(slug, filename, sha) {
       if (!ghToken) {
-        const inputToken = prompt('🔑 Para eliminar archivos de GitHub ingresá tu Personal Access Token:');
+        const inputToken = prompt('🔑 Para eliminar archivos de GitHub ingresá tu Personal Access Token (debe tener permisos "repo"):');
         if (inputToken && inputToken.trim()) {
           ghToken = inputToken.trim();
           localStorage.setItem('pepagold_gh_token', ghToken);
         } else {
-          return alert('Se requiere token para eliminar imágenes.');
+          // Fallback: Remove locally from UI if user cancels token prompt
+          currentLoadedFilesState = currentLoadedFilesState.filter(f => f.name !== filename);
+          delete imageTagsState[filename];
+          showToast(`🗑️ Imagen ${filename} removida de la pantalla.`);
+          if (activeModalPost) loadPostImages(slug);
+          return;
         }
       }
 
-      if (!confirm(`¿Eliminar permanentemente la imagen "${filename}"?`)) return;
+      if (!confirm(`¿Eliminar la imagen "${filename}" del artículo?`)) return;
+
+      let deletedOnGithub = false;
+      let errorMsg = '';
 
       try {
         const path = `contents/assets/imagenes/blog/${slug}/${filename}`;
@@ -1371,7 +1379,7 @@
             latestSha = freshData.sha;
           }
         } catch (fetchErr) {
-          console.warn('Could not fetch fresh SHA for deletion, proceeding with stored SHA:', fetchErr);
+          console.warn('Could not fetch fresh SHA for deletion:', fetchErr);
         }
 
         if (latestSha) {
@@ -1383,17 +1391,28 @@
               branch: BRANCH
             })
           });
+          deletedOnGithub = true;
         }
-
-        // Instant DOM update & state cleanup
-        currentLoadedFilesState = currentLoadedFilesState.filter(f => f.name !== filename);
-        delete imageTagsState[filename];
-
-        showToast(`🗑️ Imagen ${filename} eliminada con éxito.`);
-        loadPostImages(slug);
       } catch (err) {
-        console.error('Error deleting image:', err);
-        showToast('❌ Error al eliminar de GitHub: ' + err.message);
+        console.error('Error deleting image from GitHub API:', err);
+        errorMsg = err.message || 'Sin permisos suficientes de escritura en GitHub';
+      }
+
+      // Always remove from local UI state so the user is never stuck
+      currentLoadedFilesState = currentLoadedFilesState.filter(f => f.name !== filename);
+      delete imageTagsState[filename];
+
+      if (deletedOnGithub) {
+        showToast(`🗑️ Imagen ${filename} eliminada físicamente de GitHub y de la vista.`);
+      } else if (errorMsg) {
+        alert(`⚠️ Atención: La imagen se quitó de la vista, pero en GitHub dio el siguiente aviso: "${errorMsg}".\n\n💡 Verificá que tu Personal Access Token tenga activado el permiso "repo".`);
+        showToast(`🗑️ Imagen ${filename} removida de la vista.`);
+      } else {
+        showToast(`🗑️ Imagen ${filename} eliminada con éxito.`);
+      }
+
+      if (activeModalPost) {
+        loadPostImages(slug);
       }
     }
 
