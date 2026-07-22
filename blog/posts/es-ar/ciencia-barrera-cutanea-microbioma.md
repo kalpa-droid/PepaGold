@@ -120,10 +120,10 @@ Detrás de esa tirantez constante, el ardor o los brotes inesperados, suele habe
 
 Imaginá la capa más externa de tu piel como una pared de ladrillos diseñada para protegerte del mundo exterior:
 
+![Imagen de sección](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_2.webp)
+
 - **Los Ladrillos (Corneocitos):** Células súper resistentes empaquetadas con queratina que te protegen de rasguños y fricción.
 - **El Cemento (Matriz Lipídica):** El pegamento biológico que mantiene unidos los ladrillos. Está compuesto por **Ceramidas (50%)**, Colesterol (25%) y Ácidos Grasos Libres (15%).
-
-![Diagrama 3D de la arquitectura de la piel: ladrillos de queratina y cemento lipídico](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_2.webp)
 
 Cuando ese cemento lipídico se degrada, la humedad de tu piel se escapa y cualquier bacteria entra sin pedir permiso.
 
@@ -139,9 +139,9 @@ Para que el "cemento" de tu piel sea impenetrable, las ceramidas, el colesterol 
 
 Por encima de esa pared de ladrillos tenés una película protectora invisible de agua y sebo llamada **manto ácido** (pH 4.5 a 5.5).
 
-Este ambiente ácido desactiva bacterias dañinas y crea el hábitat ideal para tu **microbioma cutáneo**: millones de bacterias buenas que viven en tu piel y luchan por vos.
+![Imagen de sección](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_3.webp)
 
-![Ecosistema del microbioma cutáneo y bacterias benéficas en superficie](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_3.webp)
+Este ambiente ácido desactiva bacterias dañinas y crea el hábitat ideal para tu **microbioma cutáneo**: millones de bacterias buenas que viven en tu piel y luchan por vos.
 
 Bacterias benéficas como el _Staphylococcus epidermidis_ se alimentan de tus lípidos naturales y sintetizan defensas naturales contra patógenos. Si usás jabones comunes alcalinos, destruís el manto ácido y tus bacterias protectoras mueren.
 
@@ -153,11 +153,11 @@ La disbiosis ocurre cuando alterás tu microbioma por lavado excesivo o químico
 
 Tu piel soporta agresiones diarias, pero tiene un límite:
 
+![Imagen de sección](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_4.webp)
+
 1. **El Clima Extremo (Viento Zonda):** El aire seco y cálido extrae agua de tus células. El fenómeno de Viento Zonda en Salta, Argentina desploma la humedad ambiental, acelerando la pérdida de agua (TEWL) y creando microfisuras.
 2. **Limpiadores Agresivos (Sulfatos):** Tensoactivos pesados como SLS o SLES disuelven tu matriz lipídica como si fuera grasa en un sartén.
 3. **Exfoliación Excesiva:** Usar ácidos o cepillos físicos con demasiada frecuencia retira capas protectoras antes de su regeneración.
-
-![Microfisuras en el estrato córneo causadas por clima seco y sulfatos](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_4.webp)
 
 :::checklist Señales de Alarma: ¿Tu barrera está rota?
 - Tu piel se ve opaca y sin luz natural.
@@ -170,11 +170,11 @@ Tu piel soporta agresiones diarias, pero tiene un límite:
 
 La regla de oro para reparar la piel es muy simple: **dejar de agredirla**.
 
+![Imagen de sección](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_5.webp)
+
 1. **Higiene Atraumática:** Evitá el agua muy caliente y los jabones espumosos. Optá por limpiadores Syndet o tecnologías de microfibra física (como Laska Mini) que limpian poros por succión capilar sin remover lípidos esenciales.
 2. **Reposición Lipídica:** Utilizá cremas enriquecidas con ceramidas, ácido hialurónico y escualano.
 3. **Prebióticos Tópicos:** Preferí cosméticos con inulina para nutrir las bacterias benéficas y reequilibrar la flora cutánea.
-
-![Limpieza atraumática sin fricción con tecnología de microfibra Laska Mini](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_5.webp)
 
 :::quiz Test de Diagnóstico Cutáneo
 Q: ¿Cuál es el síntoma más claro de que tu barrera cutánea perdió su cemento lipídico?
