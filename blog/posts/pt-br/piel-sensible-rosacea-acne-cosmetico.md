@@ -13,11 +13,9 @@ concept: piel-sensible-ros-cea-y-acn-cosm-tico-diagn-stico-y-estrategias-de-limp
 local_phenomenon: HVAC dry air & seasonal winds
 cover_image: ''
 media:
-  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
   - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_1.webp
   - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_2.webp
   - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_3.webp
-  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -112,7 +110,7 @@ A disbiose ocorre quando os micróbios benéficos são removidos, desencadeando 
 2. **Reposição lipídica:** Aplique cremes enriquecidos com ceramidas, ácido hialurônico e esqualano.
 3. **Prebióticos tópicos:** Escolha cosméticos com inulina para nutrir as bactérias boas.
 
-![Imagen de sección](/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp)
+
 
 :::quiz Teste diagnóstico
 Q: Qual é o principal indicador de degradação do cimento lipídico?
