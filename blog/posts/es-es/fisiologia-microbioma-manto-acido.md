@@ -15,8 +15,7 @@ concept: >-
   fisiolog-a-y-ecolog-a-de-la-barrera-cut-nea-din-mica-del-microbioma-mantos-hidrolip-dicos-y-estrategias-terap-uticas-avanzadas
 local_phenomenon: Polvo sahariano (Calima) y calor mediterráneo
 cover_image: ''
-media:
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
+media: []
 author: PepaGold
 epigraph:
   text: >-
@@ -114,7 +113,7 @@ Sobre tu piel habita una micro-comunidad viva de bacterias simbióticas, donde d
 
 Esta bacteria amiga no solo se alimenta de los aceites naturales, sino que secreta péptidos antimicrobianos que previenen brotes de acné y rojeces.
 
-![Representación científica del microbioma cutáneo y la bacteria protectora S. epidermidis](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp)
+
 
 Cuando abusás de jabones espumosos o aguas micelares sin enjuague, erradicás a tus bacterias protectoras. El resultado es un desequilibrio (disbiosis) que abre la puerta a bacterias patógenas.
 
