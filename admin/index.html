@@ -666,6 +666,7 @@
             <input type="file" id="img-upload-input" accept="image/*" multiple style="display: none;" onchange="uploadImageToPost(this)" />
           </label>
           <button class="btn btn-secondary btn-sm" onclick="openImagePromptsModal()">📋 Prompts e Indicaciones</button>
+          <button class="btn btn-secondary btn-sm" onclick="refreshPostImagesState()" style="background: #FAF6F5; color: var(--color-dark); border: 1px solid var(--border-color);">🔄 Refrescar Estado de Imágenes</button>
           <button class="btn btn-primary btn-sm" onclick="applyUploadedImagesToArticle()" style="background: #2E7D32; border-color: #2E7D32;">✨ Aplicar Imágenes al Artículo y Publicar</button>
         </div>
         <div id="modal-img-grid" class="image-grid">
@@ -1203,7 +1204,16 @@
       return null;
     }
 
-    async function loadPostImages(slug) {
+    function refreshPostImagesState() {
+      if (!activeModalPost || !activeModalPost.meta) return;
+      const slug = activeModalPost.meta.slug;
+      if (deletedFilesState[slug]) deletedFilesState[slug].clear();
+      if (emptySlotsState[slug]) emptySlotsState[slug].clear();
+      showToast('🔄 Refrescando y sincronizando estado de imágenes desde GitHub...');
+      loadPostImages(slug, true);
+    }
+
+    async function loadPostImages(slug, isRefresh = false) {
       const grid = document.getElementById('modal-img-grid');
       grid.innerHTML = '<p style="font-size: 13px; color: var(--color-dark-muted);">Cargando imágenes...</p>';
 
@@ -1278,7 +1288,8 @@
             optionsHtml += `<option value="${val}" ${isSelected}>${optLabel}</option>`;
           });
 
-          const imgSrc = activeFile.download_url || (activeFile.path ? '/' + activeFile.path.replace(/^\//, '') : `/assets/imagenes/blog/${slug}/${activeFile.name}`);
+          const rawSrc = activeFile.download_url || (activeFile.path ? '/' + activeFile.path.replace(/^\//, '') : `/assets/imagenes/blog/${slug}/${activeFile.name}`);
+          const imgSrc = rawSrc.includes('?v=') ? rawSrc : `${rawSrc}?v=${Date.now()}`;
 
           htmlCards.push(`
             <div class="image-card" style="height: auto; padding-bottom: 8px; border: 2px solid ${tagVal === 'portada' ? '#D48C90' : 'var(--border-color)'}; border-radius: 14px; background: #fff;">

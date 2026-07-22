@@ -349,21 +349,15 @@ def preprocess_custom_blocks(md_text, slug, locale="es-ar"):
     return BLOCK_RE.sub(repl, md_text)
 
 def is_custom_image_applied(meta):
-    if meta.get("date_images_applied"):
-        return True
     cover = meta.get("cover_image", "")
-    if cover and "assets/imagenes/blog/" in cover and not cover.endswith("prompt_1.webp"):
+    if cover:
+        return True
+    media = meta.get("media", [])
+    if media:
         return True
     return False
 
 def render_media(media_list, meta=None):
-    if meta and not is_custom_image_applied(meta):
-        return (
-            '<div class="pepagold-placeholder-card" style="width: 100%; height: 100%; min-height: 220px; background: linear-gradient(135deg, #FAF6F5 0%, #FDF7F7 100%); border-radius: 14px; border: 1px solid rgba(212, 140, 144, 0.25); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 20px; box-shadow: 0 4px 15px rgba(42, 37, 35, 0.04);">'
-            '<img src="/assets/imagenes/icono.svg" style="width: 48px; height: 48px; opacity: 0.8;" alt="PepaGold Logo">'
-            '<span style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.8px; color: #D48C90; opacity: 0.9;">PepaGold &middot; Ciencia de la Piel</span>'
-            '</div>'
-        )
     if not media_list:
         return (
             '<div class="pepagold-placeholder-card" style="width: 100%; height: 100%; min-height: 220px; background: linear-gradient(135deg, #FAF6F5 0%, #FDF7F7 100%); border-radius: 14px; border: 1px solid rgba(212, 140, 144, 0.25); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 20px; box-shadow: 0 4px 15px rgba(42, 37, 35, 0.04);">'
