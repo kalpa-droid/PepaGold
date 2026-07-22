@@ -18,7 +18,6 @@ cover_image: ''
 media:
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_2.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
 author: PepaGold
 epigraph:
@@ -99,7 +98,7 @@ La disbiosi si verifica quando i microbi benefici vengono eliminati, innescando 
 2. **D detergenti aggressivi:** I solfati sciolgono il cemento lipidico come il grasso in padella.
 3. **Esfoliazione eccessiva:** Gli acidi chimici rimuovono gli strati protettivi.
 
-![Micro-fessure nello strato corneo](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp)
+
 
 :::checklist Segnali d'allarme: La tua barriera è danneggiata?
 - Pelle spenta e priva di luminosità.
