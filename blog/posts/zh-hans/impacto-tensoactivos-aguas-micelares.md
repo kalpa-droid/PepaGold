@@ -1,40 +1,46 @@
 ---
 article_id: PG-002
-title: "卸妆水会导致致痘和干燥吗？揭开面部表面活性剂的真相"
-description: "关于免洗清洁剂对肌肤屏障毒性与流体物理清洁替代方案的皮肤学研究。"
+title: 卸妆水会导致致痘和干燥吗？揭开面部表面活性剂的真相
+description: 关于免洗清洁剂对肌肤屏障毒性与流体物理清洁替代方案的皮肤学研究。
 slug: impacto-tensoactivos-aguas-micelares
 date: '2026-07-21'
 date_created: '2026-07-21'
 date_ai_processed: '2026-07-21'
 locale: zh-hans
 category: barrera-cutanea
-category_label: "🔬 皮肤科学"
+category_label: 🔬 皮肤科学
 concept: el-impacto-de-tensoactivos-jabones-y-aguas-micelares-en-la-barrera-cut-nea
-local_phenomenon: "HVAC dry air & seasonal winds"
+local_phenomenon: HVAC dry air & seasonal winds
 cover_image: /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_1.webp
 media:
   - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_1.webp
   - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_1.webp
+  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_2.webp
   - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_2.webp
+  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_3.webp
   - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_3.webp
+  - >-
+    /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/gemini_generated_image_8b2pk18b2pk18b2p.webp
+  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_4.webp
   - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_4.webp
+  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_5.webp
 author: PepaGold
 epigraph:
-  text: "卸妆水是为了紧急卸妆而设计的；让它残留在脸上就等于让洗涤剂在脸上持续作用。"
-  author: "PepaGold 博士"
+  text: 卸妆水是为了紧急卸妆而设计的；让它残留在脸上就等于让洗涤剂在脸上持续作用。
+  author: PepaGold 博士
 summary:
-  - "卸妆水使用非离子表面活性剂（Poloxamer 184、PEG），其作用类似于工业清洁剂。"
-  - "“免洗”说明会导致游离单体在数小时内溶解皮肤自有的神经酰胺。"
-  - "眼周残留的胶束成分会溶解泪膜脂质层，导致干眼症和刺激。"
-  - "UpPoly 技术通过纯水动力毛细作用清洁，无需化学溶剂即可吸出污垢。"
+  - 卸妆水使用非离子表面活性剂（Poloxamer 184、PEG），其作用类似于工业清洁剂。
+  - “免洗”说明会导致游离单体在数小时内溶解皮肤自有的神经酰胺。
+  - 眼周残留的胶束成分会溶解泪膜脂质层，导致干眼症和刺激。
+  - UpPoly 技术通过纯水动力毛细作用清洁，无需化学溶剂即可吸出污垢。
 faq:
-  - q: "为什么卸妆水标签上写着“无需冲洗”？"
-    a: "这是商业便利宣传。在皮肤学上，所有表面活性剂都必须用温水冲洗。"
-  - q: "如果卸妆水进眼睛会怎么样？"
-    a: "泊洛沙姆（Poloxamer）会溶解泪膜中的脂质，引起灼热感和刺激。"
+  - q: 为什么卸妆水标签上写着“无需冲洗”？
+    a: 这是商业便利宣传。在皮肤学上，所有表面活性剂都必须用温水冲洗。
+  - q: 如果卸妆水进眼睛会怎么样？
+    a: 泊洛沙姆（Poloxamer）会溶解泪膜中的脂质，引起灼热感和刺激。
 show_science_link: true
+date_images_applied: '2026-07-22'
 ---
-
 您是否想过为什么使用温和的卸妆水后，皮肤依然感觉紧绷或长痘？在现代皮肤学中，将清洁表面活性剂留在皮肤上被认作导致慢性炎症的罪魁祸首。
 
 ## **表面活性剂化学：游离单体与临界胶束浓度**
@@ -57,7 +63,7 @@ show_science_link: true
 
 您的皮肤栖息着以 **表皮葡萄球菌（S. epidermidis）** 为首的共生菌群。
 
-![皮肤微生物组微观显微图](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_2.webp)
+![皮肤微生物组微观显微图](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_2.webp)
 
 残留在皮肤上的洗涤单体会破坏这一有益菌群，导致致病菌滋生。
 
@@ -69,7 +75,7 @@ show_science_link: true
 
 在眼周，卸妆水残留会破坏脆弱的泪膜脂质层，引发干眼症与慢性睑缘炎。
 
-![眼部泪膜脂质层破坏示意图](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_3.webp)
+![眼部泪膜脂质层破坏示意图](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_2.webp)
 
 :::checklist 自测清单：卸妆水是否正在伤害您的皮肤？
 - 您每晚使用卸妆水后，不再用清水洗脸。
@@ -82,7 +88,7 @@ show_science_link: true
 
 日本 **UpPoly** 超细纤维技术（Laska Mini 系列）仅需温水即可吸附彩妆与氧化皮脂：
 
-![Laska Mini 物理清洁工作室写真](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_4.webp)
+![Laska Mini 物理清洁工作室写真](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_3.webp)
 
 :::quiz 使用卸妆水后，皮肤科医生的统一建议是什么？
 - 始终用温水冲洗面部，以清除表面活性剂残留 *correct*
