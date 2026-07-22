@@ -17,7 +17,6 @@ local_phenomenon: HVAC dry air & seasonal winds
 cover_image: ''
 media:
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_2.webp
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
 author: PepaGold
 epigraph:
@@ -84,7 +83,7 @@ Für eine undurchdringliche Hautmauer müssen Ceramide, Cholesterin und Fettsäu
 
 Dieses saure Milieu hemmt Krankheitserreger und nährt Ihr **Hautmikrobiom**.
 
-![Wissenschaftliches Diagramm des Hautmikrobioms](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp)
+
 
 Nützliche Bakterien wie *Staphylococcus epidermidis* bilden natürliche Abwehrstoffe. Alkalische Seifen zerstören diesen Schutz.
 
