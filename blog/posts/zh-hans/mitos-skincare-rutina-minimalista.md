@@ -13,8 +13,11 @@ concept: el-skinimalismo-y-la-reducci-n-de-pasos-en-el-skincare
 local_phenomenon: HVAC dry air & seasonal winds
 cover_image: /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp
 media:
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_1.webp
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_2.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_3.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_4.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_5.webp
 author: PepaGold
 epigraph:
   text: 肌肤不需要10层化学品；它需要的是呼吸与自我修复的时间。
@@ -42,6 +45,7 @@ image_prompts:
     linen textures. Organic soft shadows, peaceful zen aesthetic. Shot on
     Hasselblad 85mm f/2.0 lens. Completely clean minimalist composition. NO
     text, NO watermarks, NO brand logos.
+date_images_applied: '2026-07-22'
 ---
 您是否花了高昂费用购买多步护肤品，却发现皮肤越来越敏感甚至频繁长痘？在现代皮肤学中，过度护肤是导致屏障损坏的主要原因。
 
@@ -49,7 +53,7 @@ image_prompts:
 
 层层叠加精华、酸类与重质面霜会导致角质层充斥着化学防腐剂。
 
-![产品在表皮层堆积的3D医学示意图](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_1.webp)
+![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_2.webp)
 
 :::stat
 **屏障降解：** 过度叠加活性成分会导致皮肤刺激风险增加 **250%**。
@@ -63,7 +67,7 @@ image_prompts:
 
 为了控油而频繁洗脸会洗掉关键的天然神经酰胺。
 
-![皮脂腺过度分泌的微观渲染图](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp)
+![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_3.webp)
 
 :::info 皮脂平衡
 保留天然脂质层能够维持皮脂腺分泌平衡。
@@ -73,7 +77,7 @@ image_prompts:
 
 践行 **极简护肤（Skinimalism）** 可以减少化学负担，强化肌底防御。
 
-
+![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_4.webp)
 
 :::checklist 自测清单：您是否处于过度护肤状态？
 - 每天早晚护肤耗时超过 15 分钟。
@@ -86,7 +90,7 @@ image_prompts:
 
 日本 **UpPoly** 超细纤维（Laska Mini 系列）仅需温水即可吸附彩妆与污垢：
 
-
+![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_5.webp)
 
 :::quiz 什么是极简护肤（Skinimalism）？
 - 倡导精简、高效、无刺激护肤步骤的皮肤学理念 *correct*
