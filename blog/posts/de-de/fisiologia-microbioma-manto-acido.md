@@ -18,7 +18,6 @@ cover_image: ''
 media:
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_2.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
 author: PepaGold
 epigraph:
@@ -99,7 +98,7 @@ Dysbiose entsteht, wenn nützliche Mikroben ausgewaschen werden, was zu chronisc
 2. **Aggressive Reiniger (Sulfate):** Mizellen und Sulfate lösen Lipidzement wie Fett in einer Pfanne.
 3. **Übermäßige Exfoliation:** Chemische Säuren entfernen Schutzschichten vor der Regeneration.
 
-![Mikrorisse in der Hornschicht](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp)
+
 
 :::checklist Warnzeichen: Ist Ihre Barriere geschädigt?
 - Die Haut wirkt fahl und glanzlos.
