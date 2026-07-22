@@ -1,8 +1,7 @@
 ---
 article_id: PG-005
 title: A Ciência da Barreira Cutânea e do Microbioma
-description: Descubra a ciência da barreira cutânea, do microbioma e do manto ácido
-  pH 5.5.
+description: Descubra a ciência da barreira cutânea, do microbioma e do manto ácido pH 5.5.
 slug: mitos-skincare-rutina-minimalista
 date: '2026-07-21'
 date_created: '2026-07-21'
@@ -12,39 +11,48 @@ category: barrera-cutanea
 category_label: 🔬 Ciência da Pele
 concept: el-skinimalismo-y-la-reducci-n-de-pasos-en-el-skincare
 local_phenomenon: HVAC dry air & seasonal winds
-cover_image: /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp
+cover_image: ''
 media:
-- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
-- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_1.webp
-- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp
-- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_3.webp
-- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_1.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_3.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
 author: PepaGold
 epigraph:
-  text: A pele não precisa de mais química; precisa da liberdade de se restaurar sozinha.
+  text: >-
+    A pele não precisa de mais química; precisa da liberdade de se restaurar
+    sozinha.
   author: Dra. PepaGold
 summary:
-- A barreira cutânea é uma matriz lipídica de ceramidas, colesterol e ácidos graxos.
-- O manto ácido (pH 4.5-5.5) e o microbioma constituem a primeira linha de defesa
-  biológica.
-- Clima seco e sabões agressivos criam microfissuras.
-- A reparação exige limpeza física atraumática e ceramidas biomiméticas.
+  - >-
+    A barreira cutânea é uma matriz lipídica de ceramidas, colesterol e ácidos
+    graxos.
+  - >-
+    O manto ácido (pH 4.5-5.5) e o microbioma constituem a primeira linha de
+    defesa biológica.
+  - Clima seco e sabões agressivos criam microfissuras.
+  - A reparação exige limpeza física atraumática e ceramidas biomiméticas.
 faq:
-- q: Quanto tempo leva para reparar uma barreira cutânea danificada?
-  a: A renovação celular leva de 14 a 28 dias.
-- q: Por que meu rosto arde ao aplicar um hidratante neutro?
-  a: A ardência indica microfissuras no estrato córneo expondo as terminações nervosas.
+  - q: Quanto tempo leva para reparar uma barreira cutânea danificada?
+    a: A renovação celular leva de 14 a 28 dias.
+  - q: Por que meu rosto arde ao aplicar um hidratante neutro?
+    a: >-
+      A ardência indica microfissuras no estrato córneo expondo as terminações
+      nervosas.
 show_science_link: true
 image_prompts:
-- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+  - >-
+    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
 
-  Architectural Scandinavian minimalist beauty photography celebrating skinimalism.
-  A serene woman''s bare, radiant face resting gracefully near a single pristine white
-  Laska Mini UpPoly microfiber cloth on a smooth nude clay pedestal, illuminated by
-  soft natural morning sunlight and delicate dew drops. Palette dominated by warm
-  dusty rose (#D48C90), warm sand, and raw linen textures. Organic soft shadows, peaceful
-  zen aesthetic. Shot on Hasselblad 85mm f/2.0 lens. Completely clean minimalist composition.
-  NO text, NO watermarks, NO brand logos.'
+    Architectural Scandinavian minimalist beauty photography celebrating
+    skinimalism. A serene woman's bare, radiant face resting gracefully near a
+    single pristine white Laska Mini UpPoly microfiber cloth on a smooth nude
+    clay pedestal, illuminated by soft natural morning sunlight and delicate dew
+    drops. Palette dominated by warm dusty rose (#D48C90), warm sand, and raw
+    linen textures. Organic soft shadows, peaceful zen aesthetic. Shot on
+    Hasselblad 85mm f/2.0 lens. Completely clean minimalist composition. NO
+    text, NO watermarks, NO brand logos.
 ---
 Você sente a pele ardendo ao aplicar seu creme hidratante habitual? Sua barreira cutânea está pedindo socorro.
 
