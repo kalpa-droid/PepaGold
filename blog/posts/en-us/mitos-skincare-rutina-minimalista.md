@@ -1,8 +1,9 @@
 ---
 article_id: PG-005
 title: Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier
-description: Does your face burn when applying moisturizer? Learn how to identify
-  skin barrier damage and master science-backed repair steps.
+description: >-
+  Does your face burn when applying moisturizer? Learn how to identify skin
+  barrier damage and master science-backed repair steps.
 slug: mitos-skincare-rutina-minimalista
 date: '2026-07-21'
 date_created: '2026-07-21'
@@ -12,43 +13,54 @@ category: rutinas-minimalismo
 category_label: 🔬 Skin Science
 concept: el-skinimalismo-y-la-reducci-n-de-pasos-en-el-skincare
 local_phenomenon: HVAC dry air & seasonal winds
-cover_image: /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp
+cover_image: ''
 media:
-- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
-- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_1.webp
-- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp
-- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_3.webp
-- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_1.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_3.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
 author: PepaGold
 epigraph:
-  text: Skin does not need more chemical layers; it needs the freedom to restore itself.
+  text: >-
+    Skin does not need more chemical layers; it needs the freedom to restore
+    itself.
   author: Dr. PepaGold
 summary:
-- The skin barrier is a lipid matrix of ceramides, cholesterol, and free fatty acids
-  that retains moisture.
-- The acid mantle (pH 4.5-5.5) and microbiome act as your first biological defense
-  line against pathogens.
-- Extreme weather, harsh sulfates, and over-exfoliation evaporate cellular water and
-  create micro-cracks.
-- Repair requires physical atraumatic cleansing, biomimetic ceramides (3:1:1 ratio),
-  and prebiotic nourishment.
+  - >-
+    The skin barrier is a lipid matrix of ceramides, cholesterol, and free fatty
+    acids that retains moisture.
+  - >-
+    The acid mantle (pH 4.5-5.5) and microbiome act as your first biological
+    defense line against pathogens.
+  - >-
+    Extreme weather, harsh sulfates, and over-exfoliation evaporate cellular
+    water and create micro-cracks.
+  - >-
+    Repair requires physical atraumatic cleansing, biomimetic ceramides (3:1:1
+    ratio), and prebiotic nourishment.
 faq:
-- q: How long does it take to repair a damaged skin barrier?
-  a: Cell renewal takes 14 to 28 days. Relief begins in 3 to 5 days with atraumatic
-    cleansing.
-- q: Why does my face burn when applying neutral moisturizer?
-  a: Stinging indicates micro-cracks in the stratum corneum exposing nerve endings.
+  - q: How long does it take to repair a damaged skin barrier?
+    a: >-
+      Cell renewal takes 14 to 28 days. Relief begins in 3 to 5 days with
+      atraumatic cleansing.
+  - q: Why does my face burn when applying neutral moisturizer?
+    a: >-
+      Stinging indicates micro-cracks in the stratum corneum exposing nerve
+      endings.
 show_science_link: true
 image_prompts:
-- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+  - >-
+    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
 
-  Architectural Scandinavian minimalist beauty photography celebrating skinimalism.
-  A serene woman''s bare, radiant face resting gracefully near a single pristine white
-  Laska Mini UpPoly microfiber cloth on a smooth nude clay pedestal, illuminated by
-  soft natural morning sunlight and delicate dew drops. Palette dominated by warm
-  dusty rose (#D48C90), warm sand, and raw linen textures. Organic soft shadows, peaceful
-  zen aesthetic. Shot on Hasselblad 85mm f/2.0 lens. Completely clean minimalist composition.
-  NO text, NO watermarks, NO brand logos.'
+    Architectural Scandinavian minimalist beauty photography celebrating
+    skinimalism. A serene woman's bare, radiant face resting gracefully near a
+    single pristine white Laska Mini UpPoly microfiber cloth on a smooth nude
+    clay pedestal, illuminated by soft natural morning sunlight and delicate dew
+    drops. Palette dominated by warm dusty rose (#D48C90), warm sand, and raw
+    linen textures. Organic soft shadows, peaceful zen aesthetic. Shot on
+    Hasselblad 85mm f/2.0 lens. Completely clean minimalist composition. NO
+    text, NO watermarks, NO brand logos.
 ---
 Do you feel your skin stinging when applying your usual moisturizer? Your skin barrier is asking for help.
 
