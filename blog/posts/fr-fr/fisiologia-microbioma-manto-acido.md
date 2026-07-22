@@ -18,7 +18,6 @@ cover_image: /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.we
 media:
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
 author: PepaGold
 epigraph:
@@ -99,7 +98,7 @@ La dysbiose survient lorsque les microbes bénéfiques disparaissent, provoquant
 2. **Nettoyants agressifs :** Les sulfates dissolvent le ciment lipidique.
 3. **Exfoliation excessive :** Les acides chimiques retirent les couches protectrices.
 
-![Micro-fissures du stratum corneum](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp)
+
 
 :::checklist Signes d'alarme : Votre barrière est-elle abîmée ?
 - Peau terne et manque d'éclat.
