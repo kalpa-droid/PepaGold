@@ -51,10 +51,10 @@ Derrière les tiraillements constants et les rougeurs se cache une barrière cut
 
 Imaginez la couche externe de votre peau comme un mur de briques protecteur :
 
+![Imagen de sección](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_2.webp)
+
 - **Les briques (Cornéocytes) :** Cellules riches en kératine protégeant contre la friction physique.
 - **Le ciment (Matrice lipidique) :** Ciment biologique composé de **50% de céramides**, 25% de cholestérol et 15% d'acides gras libres.
-
-![Illustration 3D de la structure en briques et ciment](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_2.webp)
 
 Lorsque le ciment lipidique se dégrade, l'eau s'évapore rapidement.
 
@@ -70,9 +70,9 @@ Pour un ciment cutané solide, les céramides, le cholestérol et les acides gra
 
 Au-dessus du mur de briques se trouve le **manteau acide** (pH 4.5 à 5.5).
 
-Cet environnement acide inhibe les agents pathogènes tout en nourrissant votre **microbiote cutané**.
+![Imagen de sección](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_3.webp)
 
-![Schéma scientifique du microbiote et S. epidermidis](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_3.webp)
+Cet environnement acide inhibe les agents pathogènes tout en nourrissant votre **microbiote cutané**.
 
 Les bactéries symbiotiques comme *Staphylococcus epidermidis* fabriquent des défenses naturelles. Les savons alcalins détruisent cette protection.
 
@@ -86,7 +86,7 @@ La dysbiose survient lorsque les microbes bénéfiques disparaissent, provoquant
 2. **Nettoyants agressifs :** Les sulfates dissolvent le ciment lipidique.
 3. **Exfoliation excessive :** Les acides chimiques retirent les couches protectrices.
 
-![Micro-fissures du stratum corneum](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_4.webp)
+![Imagen de sección](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_4.webp)
 
 :::checklist Signes d'alarme : Votre barrière est-elle abîmée ?
 - Peau terne et manque d'éclat.
@@ -101,7 +101,7 @@ La dysbiose survient lorsque les microbes bénéfiques disparaissent, provoquant
 2. **Reconstitution lipidique :** Appliquez des soins enrichis en céramides et squalane.
 3. **Prébiotiques :** Choisissez des formules à l'inuline pour nourrir les bonnes bactéries.
 
-![Nettoyage atraumatique avec microfibre UpPoly Laska Mini](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_5.webp)
+![Imagen de sección](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_5.webp)
 
 :::quiz Test de diagnostic
 Q: Quel est le symptôme principal de la dégradation du ciment lipidique ?
