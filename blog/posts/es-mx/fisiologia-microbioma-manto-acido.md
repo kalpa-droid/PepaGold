@@ -14,9 +14,8 @@ category_label: 🔬 Ciencia de la Piel
 concept: >-
   fisiolog-a-y-ecolog-a-de-la-barrera-cut-nea-din-mica-del-microbioma-mantos-hidrolip-dicos-y-estrategias-terap-uticas-avanzadas
 local_phenomenon: Smog urbano PM2.5 y clima cálido húmedo
-cover_image: /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
+cover_image: ''
 media:
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
 author: PepaGold
