@@ -16,7 +16,6 @@ concept: >-
 local_phenomenon: Viento Zonda y sequedad extrema de montaña
 cover_image: ''
 media:
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
 author: PepaGold
 epigraph:
@@ -129,7 +128,7 @@ El daño bioquímico causado por productos inadecuados se multiplica exponencial
 
 Fenómenos como **Viento Zonda y sequedad extrema de montaña** ejercen un estrés osmótico severo sobre la epidermis:
 
-![Diagrama biofísico del impacto del estrés ambiental y micro-fisuras en la epidermis](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp)
+
 
 Si la matriz lipídica está debilitada, el aire seco y los contaminantes actúan como una "lija invisible", desencadenando descamación, tirantez y alergias por contacto.
 
