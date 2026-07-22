@@ -1,8 +1,7 @@
 ---
 article_id: PG-004
 title: A Ciência da Barreira Cutânea e do Microbioma
-description: Descubra a ciência da barreira cutânea, do microbioma e do manto ácido
-  pH 5.5.
+description: Descubra a ciência da barreira cutânea, do microbioma e do manto ácido pH 5.5.
 slug: piel-sensible-rosacea-acne-cosmetico
 date: '2026-07-21'
 date_created: '2026-07-21'
@@ -12,39 +11,48 @@ category: barrera-cutanea
 category_label: 🔬 Ciência da Pele
 concept: piel-sensible-ros-cea-y-acn-cosm-tico-diagn-stico-y-estrategias-de-limpieza
 local_phenomenon: HVAC dry air & seasonal winds
-cover_image: /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_1.webp
+cover_image: ''
 media:
-- /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
-- /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_1.webp
-- /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_2.webp
-- /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_3.webp
-- /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_1.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_2.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_3.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
 author: PepaGold
 epigraph:
-  text: A pele não precisa de mais química; precisa da liberdade de se restaurar sozinha.
+  text: >-
+    A pele não precisa de mais química; precisa da liberdade de se restaurar
+    sozinha.
   author: Dra. PepaGold
 summary:
-- A barreira cutânea é uma matriz lipídica de ceramidas, colesterol e ácidos graxos.
-- O manto ácido (pH 4.5-5.5) e o microbioma constituem a primeira linha de defesa
-  biológica.
-- Clima seco e sabões agressivos criam microfissuras.
-- A reparação exige limpeza física atraumática e ceramidas biomiméticas.
+  - >-
+    A barreira cutânea é uma matriz lipídica de ceramidas, colesterol e ácidos
+    graxos.
+  - >-
+    O manto ácido (pH 4.5-5.5) e o microbioma constituem a primeira linha de
+    defesa biológica.
+  - Clima seco e sabões agressivos criam microfissuras.
+  - A reparação exige limpeza física atraumática e ceramidas biomiméticas.
 faq:
-- q: Quanto tempo leva para reparar uma barreira cutânea danificada?
-  a: A renovação celular leva de 14 a 28 dias.
-- q: Por que meu rosto arde ao aplicar um hidratante neutro?
-  a: A ardência indica microfissuras no estrato córneo expondo as terminações nervosas.
+  - q: Quanto tempo leva para reparar uma barreira cutânea danificada?
+    a: A renovação celular leva de 14 a 28 dias.
+  - q: Por que meu rosto arde ao aplicar um hidratante neutro?
+    a: >-
+      A ardência indica microfissuras no estrato córneo expondo as terminações
+      nervosas.
 show_science_link: true
 image_prompts:
-- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+  - >-
+    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
 
-  Editorial beauty macro photography depicting sensitive skin relief. Split visual
-  narrative on a woman''s delicate face: a faint rosy flushed cheek on one side, seamlessly
-  transitioning into calm, velvety hydrated skin refreshed by a soft, luxurious Laska
-  Mini UpPoly micro-cloth soaked in cool water. Aesthetic palette of muted dusty rose
-  (#D48C90), soft botanical sage green accents, and ivory nude. Soothing, tranquil
-  studio lighting atmosphere. Shot on 100mm f/2.8 macro lens, shallow depth of field.
-  Clean serene composition. NO text, NO watermarks, NO logos.'
+    Editorial beauty macro photography depicting sensitive skin relief. Split
+    visual narrative on a woman's delicate face: a faint rosy flushed cheek on
+    one side, seamlessly transitioning into calm, velvety hydrated skin
+    refreshed by a soft, luxurious Laska Mini UpPoly micro-cloth soaked in cool
+    water. Aesthetic palette of muted dusty rose (#D48C90), soft botanical sage
+    green accents, and ivory nude. Soothing, tranquil studio lighting
+    atmosphere. Shot on 100mm f/2.8 macro lens, shallow depth of field. Clean
+    serene composition. NO text, NO watermarks, NO logos.
 ---
 Você sente a pele ardendo ao aplicar seu creme hidratante habitual? Sua barreira cutânea está pedindo socorro.
 
