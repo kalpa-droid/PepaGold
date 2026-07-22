@@ -18,7 +18,6 @@ cover_image: /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.we
 media:
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
 author: PepaGold
 epigraph:
@@ -107,7 +106,7 @@ Dysbiosis occurs when beneficial microbes are stripped away, triggering chronic 
 2. **Aggressive Cleansers (Sulfates):** Heavy surfactants dissolve lipid mortar like grease in a pan.
 3. **Over-Exfoliation:** Chemical acids remove protective layers before cellular regeneration.
 
-![Micro-cracks in stratum corneum](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp)
+
 
 :::checklist Warning Signs: Is your barrier damaged?
 - Skin appears dull and lacks natural luminosity.
