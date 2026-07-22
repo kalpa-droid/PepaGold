@@ -1,8 +1,9 @@
 ---
 article_id: PG-004
 title: Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier
-description: Does your face burn when applying moisturizer? Learn how to identify
-  skin barrier damage and master science-backed repair steps.
+description: >-
+  Does your face burn when applying moisturizer? Learn how to identify skin
+  barrier damage and master science-backed repair steps.
 slug: piel-sensible-rosacea-acne-cosmetico
 date: '2026-07-21'
 date_created: '2026-07-21'
@@ -14,41 +15,50 @@ concept: piel-sensible-ros-cea-y-acn-cosm-tico-diagn-stico-y-estrategias-de-limp
 local_phenomenon: HVAC dry air & seasonal winds
 cover_image: /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_1.webp
 media:
-- /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
-- /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_1.webp
-- /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_2.webp
-- /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_3.webp
-- /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_1.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_2.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_3.webp
 author: PepaGold
 epigraph:
-  text: Skin does not need more chemical layers; it needs the freedom to restore itself.
+  text: >-
+    Skin does not need more chemical layers; it needs the freedom to restore
+    itself.
   author: Dr. PepaGold
 summary:
-- The skin barrier is a lipid matrix of ceramides, cholesterol, and free fatty acids
-  that retains moisture.
-- The acid mantle (pH 4.5-5.5) and microbiome act as your first biological defense
-  line against pathogens.
-- Extreme weather, harsh sulfates, and over-exfoliation evaporate cellular water and
-  create micro-cracks.
-- Repair requires physical atraumatic cleansing, biomimetic ceramides (3:1:1 ratio),
-  and prebiotic nourishment.
+  - >-
+    The skin barrier is a lipid matrix of ceramides, cholesterol, and free fatty
+    acids that retains moisture.
+  - >-
+    The acid mantle (pH 4.5-5.5) and microbiome act as your first biological
+    defense line against pathogens.
+  - >-
+    Extreme weather, harsh sulfates, and over-exfoliation evaporate cellular
+    water and create micro-cracks.
+  - >-
+    Repair requires physical atraumatic cleansing, biomimetic ceramides (3:1:1
+    ratio), and prebiotic nourishment.
 faq:
-- q: How long does it take to repair a damaged skin barrier?
-  a: Cell renewal takes 14 to 28 days. Relief begins in 3 to 5 days with atraumatic
-    cleansing.
-- q: Why does my face burn when applying neutral moisturizer?
-  a: Stinging indicates micro-cracks in the stratum corneum exposing nerve endings.
+  - q: How long does it take to repair a damaged skin barrier?
+    a: >-
+      Cell renewal takes 14 to 28 days. Relief begins in 3 to 5 days with
+      atraumatic cleansing.
+  - q: Why does my face burn when applying neutral moisturizer?
+    a: >-
+      Stinging indicates micro-cracks in the stratum corneum exposing nerve
+      endings.
 show_science_link: true
 image_prompts:
-- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+  - >-
+    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
 
-  Editorial beauty macro photography depicting sensitive skin relief. Split visual
-  narrative on a woman''s delicate face: a faint rosy flushed cheek on one side, seamlessly
-  transitioning into calm, velvety hydrated skin refreshed by a soft, luxurious Laska
-  Mini UpPoly micro-cloth soaked in cool water. Aesthetic palette of muted dusty rose
-  (#D48C90), soft botanical sage green accents, and ivory nude. Soothing, tranquil
-  studio lighting atmosphere. Shot on 100mm f/2.8 macro lens, shallow depth of field.
-  Clean serene composition. NO text, NO watermarks, NO logos.'
+    Editorial beauty macro photography depicting sensitive skin relief. Split
+    visual narrative on a woman's delicate face: a faint rosy flushed cheek on
+    one side, seamlessly transitioning into calm, velvety hydrated skin
+    refreshed by a soft, luxurious Laska Mini UpPoly micro-cloth soaked in cool
+    water. Aesthetic palette of muted dusty rose (#D48C90), soft botanical sage
+    green accents, and ivory nude. Soothing, tranquil studio lighting
+    atmosphere. Shot on 100mm f/2.8 macro lens, shallow depth of field. Clean
+    serene composition. NO text, NO watermarks, NO logos.
 ---
 Do you feel your skin stinging when applying your usual moisturizer? Your skin barrier is asking for help.
 
@@ -108,7 +118,7 @@ Dysbiosis occurs when beneficial microbes are stripped away, triggering chronic 
 2. **Lipid Replenishment:** Use creams enriched with ceramides and squalane.
 3. **Topical Prebiotics:** Choose cosmetic formulations with inulin to nourish commensal bacteria.
 
-![Imagen de sección](/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp)
+
 
 :::quiz Barrier Diagnostic Test
 Q: What is the primary indicator of lipid mortar breakdown?
