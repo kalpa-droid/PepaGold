@@ -43,10 +43,10 @@ date_images_applied: '2026-07-22'
 
 将皮肤最外层想象为一面高科技防卫砖墙：
 
+![Imagen de sección](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_2.webp)
+
 - **砖块（角质形成细胞）：** 富含角蛋白的高强度细胞，抵御摩擦与物理损伤。
 - **水泥（脂质基质）：** 粘合砖块的生物胶水。由 **50% 神经酰胺**、25% 胆固醇和 15% 游离脂肪酸组成。
-
-![皮肤屏障砖墙结构3D示意图](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_2.webp)
 
 当水泥脂质遭到剥离，肌肤内部的水分就会迅速挥发，外界细菌也能趁虚而入。
 
@@ -62,9 +62,9 @@ date_images_applied: '2026-07-22'
 
 在砖墙结构之上，覆盖着一层由水和皮脂组成的隐形保护膜——**酸性皮脂膜**（pH 4.5 至 5.5）。
 
-酸性环境能抑制有害菌，并为 **皮肤微生物组** 提供理想的生存栖息地。
+![Imagen de sección](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_3.webp)
 
-![皮肤微生物组与益生菌生态示意图](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_3.webp)
+酸性环境能抑制有害菌，并为 **皮肤微生物组** 提供理想的生存栖息地。
 
 表皮葡萄球菌等益生菌能够以天然脂质为食，并在表皮合成自然抗体与神经酰胺。如果使用碱性普通肥皂清洁面部，会破坏保护性酸性膜。
 
@@ -78,7 +78,7 @@ date_images_applied: '2026-07-22'
 2. **刺激性清洁剂（硫酸盐）：** 表面活性剂会像洗煎锅油脂一样强力溶解您的脂质基质。
 3. **过度去角质：** 频繁使用酸类强行剥离保护层。
 
-![环境压力导致角质层出现微裂隙示意图](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_4.webp)
+![Imagen de sección](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_4.webp)
 
 :::checklist 预警信号：您的屏障受损了吗？
 - 皮肤看起来暗沉无光泽。
@@ -93,7 +93,7 @@ date_images_applied: '2026-07-22'
 2. **脂质补充：** 使用富含神经酰胺、透明质酸和角鲨烷的面霜。
 3. **外用益生元：** 优先选择含有菊粉的护肤品，滋养益生菌。
 
-![使用 Laska Mini 超细纤维进行无创物理清洁](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_5.webp)
+![Imagen de sección](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_5.webp)
 
 :::quiz 诊断测试
 Q: 皮肤屏障丧失水泥脂质的最明显信号是什么？
