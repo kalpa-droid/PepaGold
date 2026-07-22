@@ -1159,7 +1159,7 @@
       return tags[idx % 5];
     }
 
-    async function loadPostImages(slug) {
+        async function loadPostImages(slug) {
       const grid = document.getElementById('modal-img-grid');
       grid.innerHTML = '<p style="font-size: 13px; color: var(--color-dark-muted);">Cargando imágenes...</p>';
 
@@ -1189,31 +1189,29 @@
           uniqueFilesMap.set(f.name, f);
         }
       });
-      currentLoadedFilesState = Array.from(uniqueFilesMap.values());
+      let allFound = Array.from(uniqueFilesMap.values());
+
+      // STRICT RULE: Only keep standard 5 allowed files (prompt_1.webp, cuerpo_1..4.webp)
+      const allowedStandardNames = ['prompt_1.webp', 'cuerpo_1.webp', 'cuerpo_2.webp', 'cuerpo_3.webp', 'cuerpo_4.webp'];
+      let filteredStandard = allFound.filter(f => allowedStandardNames.includes(f.name));
+      
+      if (filteredStandard.length === 5) {
+        currentLoadedFilesState = filteredStandard;
+      } else {
+        currentLoadedFilesState = allFound.slice(0, 5);
+      }
 
       if (!currentLoadedFilesState.length) {
         grid.innerHTML = '<p style="font-size: 13px; color: var(--color-dark-muted); grid-column: 1/-1; text-align: center; padding: 30px;">📷 No hay imágenes cargadas todavía.<br><span style="font-size: 12px; opacity: 0.8;">Copiá el prompt desde <b>📋 Prompts e Indicaciones</b>, generá la foto y subila con <b>➕ Subir Imagen (Auto WebP)</b>. (Máximo 5 imágenes: 1 Portada + 4 Secciones H2).</span></p>';
         return;
       }
 
-      // Auto-assign non-conflicting unique tags for images that don't have a tag set
-      const usedTags = new Set();
-      currentLoadedFilesState.forEach((f, idx) => {
-        if (imageTagsState[f.name]) {
-          usedTags.add(imageTagsState[f.name]);
-        }
-      });
-
       const allTags = ['portada', 'cuerpo-1', 'cuerpo-2', 'cuerpo-3', 'cuerpo-4'];
+      
+      // Auto assign tags if not present
       currentLoadedFilesState.forEach((f, idx) => {
         if (!imageTagsState[f.name]) {
-          let detected = detectTagFromFilename(f.name, idx);
-          if (usedTags.has(detected)) {
-            // Pick first unused tag
-            detected = allTags.find(t => !usedTags.has(t)) || detected;
-          }
-          imageTagsState[f.name] = detected;
-          usedTags.add(detected);
+          imageTagsState[f.name] = detectTagFromFilename(f.name, idx);
         }
       });
 
@@ -1225,7 +1223,6 @@
           const label = pIdx === 0 ? '🖼️ Portada (16:9 Panorámica)' : `📷 Sección H2 #${pIdx}`;
           const isSelected = assignedTag === val ? 'selected' : '';
           
-          // Find if another file is using this tag
           const occupiedFile = currentLoadedFilesState.find(other => other.name !== f.name && imageTagsState[other.name] === val);
           const occupiedText = occupiedFile ? ` (En uso por ${occupiedFile.name})` : '';
           
@@ -1235,7 +1232,7 @@
         const imgSrc = f.download_url || (f.path ? '/' + f.path.replace(/^\//, '') : `/assets/imagenes/blog/${slug}/${f.name}`);
 
         return `
-          <div class="image-card" style="height: auto; padding-bottom: 8px;">
+          <div class="image-card" id="img-card-${idx}" style="height: auto; padding-bottom: 8px;">
             <div style="width: 100%; height: 140px; background: #FAF6F5; display: flex; align-items: center; justify-content: center; overflow: hidden; border-bottom: 1px solid var(--border-color);">
               <img src="${imgSrc}" alt="${f.name}" style="width: 100%; height: 100%; object-fit: cover;" />
             </div>
@@ -1246,7 +1243,7 @@
                 ${optionsHtml}
               </select>
             </div>
-            ${f.sha ? `<button class="image-card-del" onclick="deletePostImage('${slug}', '${f.name}', '${f.sha}')">✕</button>` : `<button class="image-card-del" onclick="deletePostImage('${slug}', '${f.name}', '')">✕</button>`}
+            <button type="button" class="image-card-del" onclick="deletePostImage('${slug}', '${f.name}', '${f.sha || ''}')">✕</button>
           </div>
         `;
       }).join('');
@@ -1254,7 +1251,6 @@
 
     function assignTagToImage(fileName, newTagValue) {
       const oldTag = imageTagsState[fileName] || '';
-      // Swap tag with any other file using newTagValue to prevent duplicate tags
       for (const fName in imageTagsState) {
         if (fName !== fileName && imageTagsState[fName] === newTagValue) {
           imageTagsState[fName] = oldTag;
@@ -1269,13 +1265,22 @@
 
     async function uploadImageToPost(input) {
       if (!input.files || !input.files.length || !activeModalPost) return;
-      if (!ghToken) return alert('🔑 Para subir imágenes a GitHub necesitás ingresar con tu Personal Access Token.');
+      
+      if (!ghToken) {
+        const inputToken = prompt('🔑 Para subir archivos a GitHub ingresá tu Personal Access Token:');
+        if (inputToken && inputToken.trim()) {
+          ghToken = inputToken.trim();
+          localStorage.setItem('pepagold_gh_token', ghToken);
+        } else {
+          return alert('Se requiere token para subir imágenes.');
+        }
+      }
       
       const filesToUpload = Array.from(input.files);
       const currentCount = currentLoadedFilesState.length;
       
       if (currentCount + filesToUpload.length > 5) {
-        alert(`🚫 Límite alcanzado: Un artículo en PepaGold solo permite 5 imágenes como máximo (1 Portada + 4 Secciones H2).\n Actualmente tenés ${currentCount} imagen(es) y estás intentando subir ${filesToUpload.length}.\n\nPor favor eliminá primero alguna imagen existente antes de subir una nueva.`);
+        alert(`🚫 Límite alcanzado: Un artículo en PepaGold solo permite 5 imágenes como máximo (1 Portada + 4 Secciones H2).\nActualmente tenés ${currentCount} imagen(es) y estás intentando subir ${filesToUpload.length}.\n\nPor favor eliminá primero alguna imagen existente antes de subir una nueva.`);
         input.value = '';
         return;
       }
@@ -1332,14 +1337,23 @@
     }
 
     async function deletePostImage(slug, filename, sha) {
-      if (!ghToken) return alert('🔑 Para eliminar archivos de GitHub necesitás ingresar con tu Personal Access Token.');
-      if (!confirm(`¿Eliminar la imagen ${filename}? Esta acción borrará el archivo de GitHub.`)) return;
+      if (!ghToken) {
+        const inputToken = prompt('🔑 Para eliminar archivos de GitHub ingresá tu Personal Access Token:');
+        if (inputToken && inputToken.trim()) {
+          ghToken = inputToken.trim();
+          localStorage.setItem('pepagold_gh_token', ghToken);
+        } else {
+          return alert('Se requiere token para eliminar imágenes.');
+        }
+      }
+
+      if (!confirm(`¿Eliminar permanentemente la imagen "${filename}"?`)) return;
 
       try {
         const path = `contents/assets/imagenes/blog/${slug}/${filename}`;
         let latestSha = sha;
 
-        // Fetch fresh SHA directly from GitHub API to guarantee error-free deletion
+        // Fetch fresh SHA directly from GitHub API to prevent 409 stale SHA errors
         try {
           const freshData = await ghFetch(path);
           if (freshData && freshData.sha) {
@@ -1349,18 +1363,23 @@
           console.warn('Could not fetch fresh SHA for deletion, proceeding with stored SHA:', fetchErr);
         }
 
-        await ghFetch(path, {
-          method: 'DELETE',
-          body: JSON.stringify({
-            message: `Delete image ${filename} from ${slug}`,
-            sha: latestSha,
-            branch: BRANCH
-          })
-        });
+        if (latestSha) {
+          await ghFetch(path, {
+            method: 'DELETE',
+            body: JSON.stringify({
+              message: `Delete image ${filename} from ${slug}`,
+              sha: latestSha,
+              branch: BRANCH
+            })
+          });
+        }
 
+        // Instant DOM update & state cleanup
+        currentLoadedFilesState = currentLoadedFilesState.filter(f => f.name !== filename);
         delete imageTagsState[filename];
+
         showToast(`🗑️ Imagen ${filename} eliminada con éxito.`);
-        await loadPostImages(slug);
+        loadPostImages(slug);
       } catch (err) {
         console.error('Error deleting image:', err);
         showToast('❌ Error al eliminar de GitHub: ' + err.message);
