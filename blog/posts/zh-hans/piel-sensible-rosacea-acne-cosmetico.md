@@ -13,11 +13,9 @@ concept: piel-sensible-ros-cea-y-acn-cosm-tico-diagn-stico-y-estrategias-de-limp
 local_phenomenon: HVAC dry air & seasonal winds
 cover_image: ''
 media:
-  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
   - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_1.webp
   - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_2.webp
   - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_3.webp
-  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
 author: PepaGold
 epigraph:
   text: 敏感肌肤不是一种病，而是皮肤对过多化学品发出的抗议。
@@ -91,7 +89,7 @@ image_prompts:
 
 日本 **UpPoly** 超细纤维（Laska Mini 系列）仅需温水即可吸附彩妆与污垢：
 
-![Laska Mini 舒缓清洁工作室写真](/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp)
+
 
 :::quiz 化妆品性痤疮与寻常痤疮的主要区别是什么？
 - 化妆品性痤疮是由产品封闭毛孔诱发，而非由激素波动引起 *correct*
