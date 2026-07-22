@@ -12,9 +12,12 @@ category_label: 🔬 皮肤科学
 concept: >-
   fisiolog-a-y-ecolog-a-de-la-barrera-cut-nea-din-mica-del-microbioma-mantos-hidrolip-dicos-y-estrategias-terap-uticas-avanzadas
 local_phenomenon: HVAC dry air & seasonal winds
-cover_image: ''
+cover_image: /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
 media:
+  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_2.webp
+  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
+  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
 author: PepaGold
 epigraph:
@@ -52,7 +55,7 @@ image_prompts:
 
 角质层是人体与外界环境的主要生物学界面。它由富含角蛋白的角质形成细胞组成，悬浮在由神经酰胺、胆固醇和游离脂肪酸构成的脂质基质中。
 
-![皮肤屏障与脂质基质3D医学插图](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_2.webp)
+![Imagen de sección](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_2.webp)
 
 当该基质受到破坏时，它会失去正交（OR）结晶密实度，导致水分迅速蒸发。
 
@@ -68,7 +71,7 @@ image_prompts:
 
 您的皮肤栖息着以 **表皮葡萄球菌（S. epidermidis）** 为首的共生菌群，它们能生成抗菌肽和游离神经酰胺。
 
-
+![Imagen de sección](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp)
 
 :::info 炎症性菌群失调
 有益菌的流失直接导致健康皮肤出现过敏、红斑或化妆品性痤疮。
@@ -78,7 +81,7 @@ image_prompts:
 
 环境因素如城市雾霾 PM2.5 与干旱风会对受损皮肤施加剧烈的渗透压压力：
 
-
+![Imagen de sección](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp)
 
 :::checklist 自测清单：您的皮肤微生物组是否失调？
 - 您使用 pH 值高于 7.0 的碱性皂清洁面部。
@@ -91,7 +94,7 @@ image_prompts:
 
 日本 **UpPoly** 超细纤维技术（Laska Mini 系列）仅需温水即可吸附彩妆与氧化皮脂：
 
-![Laska Mini 物理清洁工作室写真](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp)
+![Imagen de sección](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp)
 
 :::quiz 表皮葡萄球菌的哪个基因负责在皮肤中直接合成神经酰胺？
 - sph 基因（细菌鞘磷脂酶） *correct*
