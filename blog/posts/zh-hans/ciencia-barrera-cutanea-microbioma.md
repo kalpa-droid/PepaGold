@@ -11,40 +11,41 @@ category: barrera-cutanea
 category_label: 🔬 皮肤科学
 concept: barrera-cutanea-y-microbioma
 local_phenomenon: HVAC dry air & seasonal winds
-cover_image: /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_1.webp
+cover_image: ''
 media:
-- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_1.webp
-- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_2.webp
-- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_3.webp
-- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_4.webp
-- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_5.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_2.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_3.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_4.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_5.webp
 author: PepaGold
 epigraph:
   text: 皮肤不需要叠加更多化学品；它需要的是自我修复的自由。
   author: PepaGold 博士
 summary:
-- 皮肤屏障是由神经酰胺、胆固醇和游离脂肪酸构成的脂质基质，能有效锁水并抵御细菌。
-- 酸性保护膜（pH 4.5-5.5）和微生物组是抵御病原体的第一道免疫防线。
-- 恶劣气候、硫酸盐和过度角质剥脱会导致水分迅速蒸发。
-- 屏障修复需要无创物理清洁、仿生神经酰胺（比例 3:1:1）与益生元滋养。
+  - 皮肤屏障是由神经酰胺、胆固醇和游离脂肪酸构成的脂质基质，能有效锁水并抵御细菌。
+  - 酸性保护膜（pH 4.5-5.5）和微生物组是抵御病原体的第一道免疫防线。
+  - 恶劣气候、硫酸盐和过度角质剥脱会导致水分迅速蒸发。
+  - 屏障修复需要无创物理清洁、仿生神经酰胺（比例 3:1:1）与益生元滋养。
 faq:
-- q: 修复受损的皮肤屏障需要多长时间？
-  a: 角质层细胞更新周期为 14 至 28 天。采用无创清洁，3 到 5 天即可缓解刺痛。
-- q: 为什么涂抹普通保湿面霜时脸部会刺痛？
-  a: 刺痛是角质层存在微小裂隙的首要信号。面霜成分直接接触暴露的神经末梢。
+  - q: 修复受损的皮肤屏障需要多长时间？
+    a: 角质层细胞更新周期为 14 至 28 天。采用无创清洁，3 到 5 天即可缓解刺痛。
+  - q: 为什么涂抹普通保湿面霜时脸部会刺痛？
+    a: 刺痛是角质层存在微小裂隙的首要信号。面霜成分直接接触暴露的神经末梢。
 show_science_link: true
 date_images_applied: '2026-07-22'
 image_prompts:
-- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+  - >-
+    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
 
-  High-end luxury editorial photography of skin barrier repair. Extreme macro close-up
-  of a serene woman''s cheek profile with glowing, deeply hydrated skin texture, surrounded
-  by translucent golden-rose lipid moisture droplets forming a protective barrier
-  aura. Aesthetic palette dominated by warm dusty rose (#D48C90), champagne ivory,
-  and soft nude clay. Soft diffused studio morning lighting creating a silky protective
-  glow on refined pores. Shot on Hasselblad 100MP with 120mm macro f/2.8 lens, shallow
-  depth of field. Completely clean beauty composition. NO text, NO numbers, NO watermarks,
-  NO brand logos, NO graphic overlays.'
+    High-end luxury editorial photography of skin barrier repair. Extreme macro
+    close-up of a serene woman's cheek profile with glowing, deeply hydrated
+    skin texture, surrounded by translucent golden-rose lipid moisture droplets
+    forming a protective barrier aura. Aesthetic palette dominated by warm dusty
+    rose (#D48C90), champagne ivory, and soft nude clay. Soft diffused studio
+    morning lighting creating a silky protective glow on refined pores. Shot on
+    Hasselblad 100MP with 120mm macro f/2.8 lens, shallow depth of field.
+    Completely clean beauty composition. NO text, NO numbers, NO watermarks, NO
+    brand logos, NO graphic overlays.
 ---
 您是否感觉涂抹普通面霜时脸部忽然刺痛？或者洗完澡后皮肤紧绷？您的皮肤屏障正在发出求救信号。
 
