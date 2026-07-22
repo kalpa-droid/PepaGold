@@ -16,7 +16,6 @@ media:
   - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
   - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_1.webp
   - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_3.webp
   - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
 author: PepaGold
 epigraph:
@@ -97,7 +96,7 @@ A disbiose ocorre quando os micróbios benéficos são removidos, desencadeando 
 2. **Sabões agressivos (Sulfatos):** Tensoativos dissolvem o cimento lipídico como gordura na frigideira.
 3. **Esfoliação excessiva:** Ácidos químicos removem camadas protetoras.
 
-![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_3.webp)
+
 
 :::checklist Sinais de alerta: Sua barreira está danificada?
 - Pele opaca e sem luminosidade natural.
