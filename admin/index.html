@@ -547,13 +547,16 @@
   <main class="app-body">
 
     <!-- Auth Screen -->
-    <div id="auth-screen">
-      <h2>PepaGold CMS Admin</h2>
-      <p>Ingresá tu Personal Access Token de GitHub para administrar los artículos e imágenes del repositorio <code>kalpa-droid/PepaGold</code>.</p>
-      <input type="text" id="gh-token-input" class="input-field" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" onkeydown="if(event.key==='Enter') loginWithToken()" />
-      <div id="auth-error-msg" style="display: none; color: #D32F2F; background: #FFEBEE; padding: 10px; border-radius: 8px; font-size: 13px; margin-bottom: 12px;"></div>
-      <button class="btn btn-primary" style="width: 100%; margin-bottom: 10px;" onclick="loginWithToken()">Conectar con GitHub</button>
-      <button class="btn btn-secondary" style="width: 100%; font-size: 12px;" onclick="loginAsGuest()">Ingresar al CMS sin Token (Solo Lectura)</button>
+    <div id="auth-screen" style="max-width: 440px; margin: 60px auto; padding: 32px; background: #fff; border-radius: 20px; border: 1px solid var(--border-color); box-shadow: var(--shadow-lg); text-align: center;">
+      <img src="/assets/imagenes/icono.svg" style="width: 52px; height: 52px; margin-bottom: 12px;" alt="PepaGold Logo">
+      <h2 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 8px; color: var(--color-dark);">PepaGold CMS Admin</h2>
+      <p style="font-size: 13px; color: var(--color-dark-muted); line-height: 1.5; margin-bottom: 20px;">Acceso privado restringido. Ingresá tu Personal Access Token de GitHub (con permiso <code>repo</code>) para administrar el sitio.</p>
+      <div style="text-align: left; margin-bottom: 14px;">
+        <label style="font-size: 11px; font-weight: 600; color: var(--color-accent); text-transform: uppercase; display: block; margin-bottom: 4px;">Llave API / Personal Access Token</label>
+        <input type="password" id="gh-token-input" class="input-field" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" onkeydown="if(event.key==='Enter') loginWithToken()" style="margin: 0; font-family: monospace; font-size: 13px;" />
+      </div>
+      <div id="auth-error-msg" style="display: none; color: #D32F2F; background: #FFEBEE; padding: 10px; border-radius: 8px; font-size: 12.5px; margin-bottom: 14px; text-align: left;"></div>
+      <button class="btn btn-primary" style="width: 100%; padding: 12px; font-size: 14px; font-weight: 600;" onclick="loginWithToken()">🔒 Autenticar e Ingresar al CMS</button>
     </div>
 
     <!-- Dashboard Screen -->
@@ -807,51 +810,81 @@
     function initAuth() {
       const urlParams = new URLSearchParams(window.location.search);
       const urlToken = urlParams.get('token');
-      const isGuest = urlParams.get('guest');
 
-      if (urlToken) {
+      if (urlToken && urlToken.trim()) {
         ghToken = urlToken.trim();
         localStorage.setItem('pepagold_gh_token', ghToken);
-        enterDashboard();
-        return;
-      }
-      if (isGuest === '1' || isGuest === 'true') {
-        enterDashboard();
+        validateAndEnterToken(ghToken);
         return;
       }
 
-      if (ghToken) {
-        enterDashboard();
+      if (ghToken && ghToken.trim()) {
+        validateAndEnterToken(ghToken);
       } else {
-        const authScreen = document.getElementById('auth-screen');
-        const dashView = document.getElementById('dashboard-view');
-        if (authScreen) authScreen.style.display = 'block';
-        if (dashView) dashView.style.display = 'none';
+        showAuthScreen('🔒 Ingresá tu llave API de GitHub para acceder al gestor.');
+      }
+    }
+
+    function showAuthScreen(msg = '') {
+      const authScreen = document.getElementById('auth-screen');
+      const dashView = document.getElementById('dashboard-view');
+      const edView = document.getElementById('editor-view');
+      const navTabs = document.getElementById('nav-tabs');
+      const btnNew = document.getElementById('btn-new-article');
+      const btnLogout = document.getElementById('btn-logout');
+
+      if (authScreen) authScreen.style.display = 'block';
+      if (dashView) dashView.style.display = 'none';
+      if (edView) edView.style.display = 'none';
+      if (navTabs) navTabs.style.display = 'none';
+      if (btnNew) btnNew.style.display = 'none';
+      if (btnLogout) btnLogout.style.display = 'none';
+
+      const errEl = document.getElementById('auth-error-msg');
+      if (errEl && msg) {
+        errEl.innerText = msg;
+        errEl.style.display = 'block';
+      }
+    }
+
+    async function validateAndEnterToken(tokenVal) {
+      showToast('🔑 Validando llave API con GitHub...');
+      try {
+        // Validate token against GitHub API user endpoint
+        const res = await fetch('https://api.github.com/user', {
+          headers: {
+            'Accept': 'application/vnd.github.v3+json',
+            'Authorization': tokenVal.startsWith('token ') || tokenVal.startsWith('Bearer ') ? tokenVal : `token ${tokenVal}`
+          }
+        });
+
+        if (!res.ok) {
+          throw new Error('Llave API inválida o expirada en GitHub.');
+        }
+
+        ghToken = tokenVal;
+        localStorage.setItem('pepagold_gh_token', ghToken);
+        showToast('🟢 Llave API validada correctamente.');
+        enterDashboard();
+      } catch (err) {
+        console.error('Auth validation failed:', err);
+        localStorage.removeItem('pepagold_gh_token');
+        ghToken = '';
+        showAuthScreen('❌ La llave API ingresada es inválida o no tiene permisos en GitHub. Por favor ingresá un token con permiso "repo".');
       }
     }
 
     async function loginWithToken() {
       const inputEl = document.getElementById('gh-token-input');
-      const errEl = document.getElementById('auth-error-msg');
       const val = inputEl ? inputEl.value.trim() : '';
 
-      if (errEl) errEl.style.display = 'none';
-
       if (!val) {
-        if (errEl) { errEl.innerText = 'Por favor ingresá un token de GitHub válido (o tocá "Ingresar sin Token").'; errEl.style.display = 'block'; }
-        return alert('Por favor ingresá un token de GitHub válido.');
+        showAuthScreen('⚠️ Por favor ingresá tu Personal Access Token de GitHub.');
+        return;
       }
-      
-      showToast('🔑 Conectando con GitHub...');
-      ghToken = val;
-      localStorage.setItem('pepagold_gh_token', val);
-      enterDashboard();
-    }
 
-    function loginAsGuest() {
-      showToast('👀 Ingresando al CMS...');
-      enterDashboard();
-    }
+      await validateAndEnterToken(val);
+    } 
 
     function logout() {
       localStorage.removeItem('pepagold_gh_token');
