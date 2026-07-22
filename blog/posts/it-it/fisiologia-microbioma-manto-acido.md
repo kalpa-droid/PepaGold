@@ -1,8 +1,9 @@
 ---
 article_id: PG-003
 title: La Scienza della Barriera Cutanea e del Microbioma
-description: Scopri la scienza della barriera cutanea, del microbioma e del mantello
-  acido pH 5.5.
+description: >-
+  Scopri la scienza della barriera cutanea, del microbioma e del mantello acido
+  pH 5.5.
 slug: fisiologia-microbioma-manto-acido
 date: '2026-07-21'
 date_created: '2026-07-21'
@@ -10,43 +11,50 @@ date_ai_processed: '2026-07-21'
 locale: it-it
 category: barrera-cutanea
 category_label: 🔬 Scienza della Pelle
-concept: fisiolog-a-y-ecolog-a-de-la-barrera-cut-nea-din-mica-del-microbioma-mantos-hidrolip-dicos-y-estrategias-terap-uticas-avanzadas
+concept: >-
+  fisiolog-a-y-ecolog-a-de-la-barrera-cut-nea-din-mica-del-microbioma-mantos-hidrolip-dicos-y-estrategias-terap-uticas-avanzadas
 local_phenomenon: HVAC dry air & seasonal winds
-cover_image: /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
+cover_image: ''
 media:
-- /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
-- /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_2.webp
-- /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
-- /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp
-- /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
+  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_2.webp
+  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
+  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp
+  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
 author: PepaGold
 epigraph:
-  text: La pelle non ha bisogno di altra chimica; ha bisogno della libertà di rigenerarsi.
+  text: >-
+    La pelle non ha bisogno di altra chimica; ha bisogno della libertà di
+    rigenerarsi.
   author: Dott.ssa PepaGold
 summary:
-- La barriera cutanea è una matrice lipidica di ceramidi, colesterolo e acidi grassi.
-- Il mantello acido (pH 4.5-5.5) e il microbioma costituiscono la prima linea di difesa
-  biologica.
-- Il clima secco e i detergenti aggressivi creano micro-fessure.
-- La riparazione richiede igiene fisica atraumatica e ceramidi biomimetiche.
+  - >-
+    La barriera cutanea è una matrice lipidica di ceramidi, colesterolo e acidi
+    grassi.
+  - >-
+    Il mantello acido (pH 4.5-5.5) e il microbioma costituiscono la prima linea
+    di difesa biologica.
+  - Il clima secco e i detergenti aggressivi creano micro-fessure.
+  - La riparazione richiede igiene fisica atraumatica e ceramidi biomimetiche.
 faq:
-- q: Quanto tempo occorre per riparare una barriera cutanea danneggiata?
-  a: Il rinnovo cellulare richiede da 14 a 28 giorni.
-- q: Perché il viso brucia quando applico una crema idratante?
-  a: Il bruciore indica micro-fessure nello strato corneo.
+  - q: Quanto tempo occorre per riparare una barriera cutanea danneggiata?
+    a: Il rinnovo cellulare richiede da 14 a 28 giorni.
+  - q: Perché il viso brucia quando applico una crema idratante?
+    a: Il bruciore indica micro-fessure nello strato corneo.
 show_science_link: true
 date_images_applied: '2026-07-22'
 image_prompts:
-- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+  - >-
+    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
 
-  Scientific-editorial concept photography of the skin microbiome and acid mantle.
-  Macro close-up of fresh, radiant skin texture with subtle glowing bioluminescent
-  golden-rose micro-particles hovering gracefully above the epidermal surface, symbolizing
-  a thriving bacterial ecosystem and pH 5.5 protective shield. Aesthetic palette of
-  warm dusty rose (#D48C90), soft amber glow, and nude cream. Ethereal studio backlighting
-  creating a soft protective halo along the jawline. Shot on Hasselblad 100MP with
-  120mm macro f/2.8 lens. Clean high-fashion medical aesthetic. NO text, NO labels,
-  NO watermarks, NO logos.'
+    Scientific-editorial concept photography of the skin microbiome and acid
+    mantle. Macro close-up of fresh, radiant skin texture with subtle glowing
+    bioluminescent golden-rose micro-particles hovering gracefully above the
+    epidermal surface, symbolizing a thriving bacterial ecosystem and pH 5.5
+    protective shield. Aesthetic palette of warm dusty rose (#D48C90), soft
+    amber glow, and nude cream. Ethereal studio backlighting creating a soft
+    protective halo along the jawline. Shot on Hasselblad 100MP with 120mm macro
+    f/2.8 lens. Clean high-fashion medical aesthetic. NO text, NO labels, NO
+    watermarks, NO logos.
 ---
 Senti bruciore quando applichi la tua solita crema idratante? La tua barriera cutanea sta chiedendo aiuto.
 
