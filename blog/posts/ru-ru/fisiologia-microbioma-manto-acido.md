@@ -16,7 +16,6 @@ cover_image: ''
 media:
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_2.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
 author: PepaGold
 epigraph:
@@ -97,7 +96,7 @@ image_prompts:
 2. **Агрессивные очистители:** Сульфаты растворяют липидный цемент, как жир на сковороде.
 3. **Переизбыток пилингов:** Химические кислоты удаляют защитные слои.
 
-![Микротрещины в роговом слое](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp)
+
 
 :::checklist Предупреждающие знаки: Поврежден ли ваш барьер?
 - Кожа выглядит тусклой и лишена естественного сияния.
