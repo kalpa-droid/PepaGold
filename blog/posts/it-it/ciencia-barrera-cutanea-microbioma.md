@@ -1,8 +1,9 @@
 ---
 article_id: PG-001
 title: La Scienza della Barriera Cutanea e del Microbioma
-description: Scopri la scienza della barriera cutanea, del microbioma e del mantello
-  acido pH 5.5.
+description: >-
+  Scopri la scienza della barriera cutanea, del microbioma e del mantello acido
+  pH 5.5.
 slug: ciencia-barrera-cutanea-microbioma
 date: '2026-07-21'
 date_created: '2026-07-21'
@@ -12,41 +13,47 @@ category: barrera-cutanea
 category_label: 🔬 Scienza della Pelle
 concept: barrera-cutanea-y-microbioma
 local_phenomenon: HVAC dry air & seasonal winds
-cover_image: /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_1.webp
+cover_image: ''
 media:
-- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_1.webp
-- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_2.webp
-- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_3.webp
-- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_4.webp
-- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_5.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_2.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_3.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_4.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_5.webp
 author: PepaGold
 epigraph:
-  text: La pelle non ha bisogno di altra chimica; ha bisogno della libertà di rigenerarsi.
+  text: >-
+    La pelle non ha bisogno di altra chimica; ha bisogno della libertà di
+    rigenerarsi.
   author: Dott.ssa PepaGold
 summary:
-- La barriera cutanea è una matrice lipidica di ceramidi, colesterolo e acidi grassi.
-- Il mantello acido (pH 4.5-5.5) e il microbioma costituiscono la prima linea di difesa
-  biologica.
-- Il clima secco e i detergenti aggressivi creano micro-fessure.
-- La riparazione richiede igiene fisica atraumatica e ceramidi biomimetiche.
+  - >-
+    La barriera cutanea è una matrice lipidica di ceramidi, colesterolo e acidi
+    grassi.
+  - >-
+    Il mantello acido (pH 4.5-5.5) e il microbioma costituiscono la prima linea
+    di difesa biologica.
+  - Il clima secco e i detergenti aggressivi creano micro-fessure.
+  - La riparazione richiede igiene fisica atraumatica e ceramidi biomimetiche.
 faq:
-- q: Quanto tempo occorre per riparare una barriera cutanea danneggiata?
-  a: Il rinnovo cellulare richiede da 14 a 28 giorni.
-- q: Perché il viso brucia quando applico una crema idratante?
-  a: Il bruciore indica micro-fessure nello strato corneo.
+  - q: Quanto tempo occorre per riparare una barriera cutanea danneggiata?
+    a: Il rinnovo cellulare richiede da 14 a 28 giorni.
+  - q: Perché il viso brucia quando applico una crema idratante?
+    a: Il bruciore indica micro-fessure nello strato corneo.
 show_science_link: true
 date_images_applied: '2026-07-22'
 image_prompts:
-- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+  - >-
+    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
 
-  High-end luxury editorial photography of skin barrier repair. Extreme macro close-up
-  of a serene woman''s cheek profile with glowing, deeply hydrated skin texture, surrounded
-  by translucent golden-rose lipid moisture droplets forming a protective barrier
-  aura. Aesthetic palette dominated by warm dusty rose (#D48C90), champagne ivory,
-  and soft nude clay. Soft diffused studio morning lighting creating a silky protective
-  glow on refined pores. Shot on Hasselblad 100MP with 120mm macro f/2.8 lens, shallow
-  depth of field. Completely clean beauty composition. NO text, NO numbers, NO watermarks,
-  NO brand logos, NO graphic overlays.'
+    High-end luxury editorial photography of skin barrier repair. Extreme macro
+    close-up of a serene woman's cheek profile with glowing, deeply hydrated
+    skin texture, surrounded by translucent golden-rose lipid moisture droplets
+    forming a protective barrier aura. Aesthetic palette dominated by warm dusty
+    rose (#D48C90), champagne ivory, and soft nude clay. Soft diffused studio
+    morning lighting creating a silky protective glow on refined pores. Shot on
+    Hasselblad 100MP with 120mm macro f/2.8 lens, shallow depth of field.
+    Completely clean beauty composition. NO text, NO numbers, NO watermarks, NO
+    brand logos, NO graphic overlays.
 ---
 Senti bruciore quando applichi la tua solita crema idratante? La tua barriera cutanea sta chiedendo aiuto.
 
