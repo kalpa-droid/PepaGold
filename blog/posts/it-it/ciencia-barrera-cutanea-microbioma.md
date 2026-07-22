@@ -13,8 +13,9 @@ category: barrera-cutanea
 category_label: 🔬 Scienza della Pelle
 concept: barrera-cutanea-y-microbioma
 local_phenomenon: HVAC dry air & seasonal winds
-cover_image: ''
+cover_image: /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_1.webp
 media:
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_1.webp
   - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_2.webp
   - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_3.webp
   - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_4.webp
