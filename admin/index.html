@@ -1183,20 +1183,21 @@
     };
 
     function detectTagFromFilename(filename) {
-      const name = filename.toLowerCase();
-      if (name.includes('portada') || name.includes('prompt-1') || name.includes('prompt_1') || name.includes('prompt1') || name.includes('cover') || name.includes('hero')) {
+      if (!filename) return null;
+      const name = filename.toLowerCase().replace(/[\s_]/g, '-');
+      if (name.includes('portada') || name.includes('prompt-1') || name.includes('prompt1') || name.includes('cover') || name.includes('hero')) {
         return 'portada';
       }
-      if (name.includes('cuerpo-1') || name.includes('cuerpo_1') || name.includes('cuerpo1') || name.includes('prompt-2') || name.includes('prompt_2')) {
+      if (name.includes('cuerpo-1') || name.includes('cuerpo1') || name.includes('prompt-2') || name.includes('prompt2')) {
         return 'cuerpo-1';
       }
-      if (name.includes('cuerpo-2') || name.includes('cuerpo_2') || name.includes('cuerpo2') || name.includes('prompt-3') || name.includes('prompt_3')) {
+      if (name.includes('cuerpo-2') || name.includes('cuerpo2') || name.includes('prompt-3') || name.includes('prompt3')) {
         return 'cuerpo-2';
       }
-      if (name.includes('cuerpo-3') || name.includes('cuerpo_3') || name.includes('cuerpo3') || name.includes('prompt-4') || name.includes('prompt_4')) {
+      if (name.includes('cuerpo-3') || name.includes('cuerpo3') || name.includes('prompt-4') || name.includes('prompt4')) {
         return 'cuerpo-3';
       }
-      if (name.includes('cuerpo-4') || name.includes('cuerpo_4') || name.includes('cuerpo4') || name.includes('prompt-5') || name.includes('prompt_5')) {
+      if (name.includes('cuerpo-4') || name.includes('cuerpo4') || name.includes('prompt-5') || name.includes('prompt5')) {
         return 'cuerpo-4';
       }
       return null;
@@ -1347,7 +1348,7 @@
       }
 
       const file = input.files[0];
-      showToast(`⚡ Procesando y convirtiendo ${file.name} a .webp para slot ${targetTag}...`);
+      showToast(`⚡ Procesando y convirtiendo ${file.name} a .webp para ${SLOT_LABELS[targetTag]}...`);
 
       try {
         const img = new Image();
@@ -1365,11 +1366,20 @@
         const webpBase64 = webpDataUrl.split(',')[1];
         URL.revokeObjectURL(objectUrl);
 
-        const cleanName = `${targetTag.replace(/[^a-z0-9]/g, '-')}-${Date.now().toString().slice(-4)}.webp`;
+        const rawName = file.name.substring(0, file.name.lastIndexOf('.')) || file.name;
+        const cleanName = rawName.toLowerCase().replace(/[^a-z0-9._-]/g, '-') + '.webp';
         const path = `assets/imagenes/blog/${slug}/${cleanName}`;
 
         if (deletedFilesState[slug]) deletedFilesState[slug].delete(cleanName);
         if (emptySlotsState[slug]) emptySlotsState[slug].delete(targetTag);
+
+        // Unassign and delete previous file in targetTag slot
+        for (const fname in imageTagsState) {
+          if (imageTagsState[fname] === targetTag && fname !== cleanName) {
+            delete imageTagsState[fname];
+            if (deletedFilesState[slug]) deletedFilesState[slug].add(fname);
+          }
+        }
 
         imageTagsState[cleanName] = targetTag;
 
@@ -1388,7 +1398,7 @@
           body: JSON.stringify(bodyPayload)
         });
 
-        showToast(`✨ ¡Imagen subida y asignada a ${targetTag}!`);
+        showToast(`✨ ¡Imagen subida y asignada a ${SLOT_LABELS[targetTag]}!`);
         loadPostImages(slug);
       } catch (err) {
         showToast('Error al subir imagen: ' + err.message);
@@ -1440,6 +1450,18 @@
 
           if (deletedFilesState[slug]) {
             deletedFilesState[slug].delete(cleanName);
+          }
+
+          const tagDetected = detectTagFromFilename(file.name);
+          if (tagDetected) {
+            for (const fname in imageTagsState) {
+              if (imageTagsState[fname] === tagDetected && fname !== cleanName) {
+                delete imageTagsState[fname];
+                if (deletedFilesState[slug]) deletedFilesState[slug].add(fname);
+              }
+            }
+            imageTagsState[cleanName] = tagDetected;
+            if (emptySlotsState[slug]) emptySlotsState[slug].delete(tagDetected);
           }
 
           const existingFile = await ghFetch(`contents/${path}`).catch(() => null);
