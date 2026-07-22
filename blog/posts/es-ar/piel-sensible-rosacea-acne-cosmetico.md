@@ -19,7 +19,6 @@ cover_image: ''
 media:
   - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
   - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_1.webp
-  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_2.webp
   - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_3.webp
   - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
 author: PepaGold
@@ -108,7 +107,7 @@ Mantener el manto ácido en pH 4.5 - 5.5 es indispensable para que las enzimas b
 
 Tu piel alberga un ecosistema vivo de bacterias simbióticas, encabezadas por **Staphylococcus epidermidis**, que producen péptidos antimicrobianos naturales y ceramidas libres.
 
-![Visualización microscópica del microbioma cutáneo y la bacteria S. epidermidis](/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_2.webp)
+
 
 Los lavados excesivos y los limpiadores alcalinos destruyen este escudo biológico (disbiosis), permitiendo la colonización de gérmenes patógenos como *S. aureus*.
 
