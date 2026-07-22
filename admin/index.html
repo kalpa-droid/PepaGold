@@ -1174,6 +1174,7 @@
     let currentLoadedFilesState = [];
     let deletedFilesState = {};
     let emptySlotsState = {};
+    let uploadedFilesState = {};
 
     const SLOT_TAGS = ['portada', 'cuerpo-1', 'cuerpo-2', 'cuerpo-3', 'cuerpo-4'];
     const SLOT_LABELS = {
@@ -1218,10 +1219,11 @@
 
       if (!deletedFilesState[slug]) deletedFilesState[slug] = new Set();
       if (!emptySlotsState[slug]) emptySlotsState[slug] = new Set();
+      if (!uploadedFilesState[slug]) uploadedFilesState[slug] = new Map();
 
       let files = [];
       try {
-        files = await ghFetch(`contents/assets/imagenes/blog/${slug}`);
+        files = await ghFetch(`contents/assets/imagenes/blog/${slug}?t=${Date.now()}`);
       } catch (err) {
         console.warn('GitHub API contents fetch failed, falling back to local media list');
       }
@@ -1237,6 +1239,14 @@
           };
         });
       }
+
+      // Merge optimistic uploaded files that haven't been deleted
+      if (!Array.isArray(files)) files = [];
+      uploadedFilesState[slug].forEach((fileObj, fileName) => {
+        if (!deletedFilesState[slug].has(fileName) && !files.some(f => f.name === fileName)) {
+          files.push(fileObj);
+        }
+      });
 
       // Deduplicate files by filename and exclude files marked as DELETED
       const uniqueFilesMap = new Map();
@@ -1390,6 +1400,13 @@
 
         imageTagsState[cleanName] = targetTag;
 
+        if (!uploadedFilesState[slug]) uploadedFilesState[slug] = new Map();
+        uploadedFilesState[slug].set(cleanName, {
+          name: cleanName,
+          path: path,
+          download_url: webpDataUrl
+        });
+
         const existingFile = await ghFetch(`contents/${path}`).catch(() => null);
         const bodyPayload = {
           message: `Upload ${cleanName} for slot ${targetTag} in ${slug}`,
@@ -1471,6 +1488,13 @@
             if (emptySlotsState[slug]) emptySlotsState[slug].delete(tagDetected);
           }
 
+          if (!uploadedFilesState[slug]) uploadedFilesState[slug] = new Map();
+          uploadedFilesState[slug].set(cleanName, {
+            name: cleanName,
+            path: path,
+            download_url: webpDataUrl
+          });
+
           const existingFile = await ghFetch(`contents/${path}`).catch(() => null);
           const bodyPayload = {
             message: `Upload ${cleanName} to ${slug}`,
@@ -1513,11 +1537,14 @@
       if (!emptySlotsState[slug]) emptySlotsState[slug] = new Set();
 
       deletedFilesState[slug].add(filename);
+      if (uploadedFilesState[slug]) uploadedFilesState[slug].delete(filename);
       const tagAssociated = slotTag || imageTagsState[filename];
       if (tagAssociated) emptySlotsState[slug].add(tagAssociated);
 
       delete imageTagsState[filename];
       currentLoadedFilesState = currentLoadedFilesState.filter(f => f.name !== filename);
+
+      loadPostImages(slug);
 
       // 2. Remove reference from activeModalPost if present
       if (activeModalPost && activeModalPost.meta) {
