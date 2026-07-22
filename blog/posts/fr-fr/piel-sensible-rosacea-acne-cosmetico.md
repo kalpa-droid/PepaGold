@@ -1,8 +1,9 @@
 ---
 article_id: PG-004
 title: La Science de la Barrière Cutanée et du Microbiome
-description: Découvrez la science de la barrière cutanée, du microbiome et du manteau
-  acide pH 5.5.
+description: >-
+  Découvrez la science de la barrière cutanée, du microbiome et du manteau acide
+  pH 5.5.
 slug: piel-sensible-rosacea-acne-cosmetico
 date: '2026-07-21'
 date_created: '2026-07-21'
@@ -12,41 +13,46 @@ category: barrera-cutanea
 category_label: 🔬 Science de la Peau
 concept: piel-sensible-ros-cea-y-acn-cosm-tico-diagn-stico-y-estrategias-de-limpieza
 local_phenomenon: HVAC dry air & seasonal winds
-cover_image: /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_1.webp
+cover_image: ''
 media:
-- /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
-- /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_1.webp
-- /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_2.webp
-- /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_3.webp
-- /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_1.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_2.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_3.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
 author: PepaGold
 epigraph:
-  text: La peau n'a pas besoin de plus de chimie ; elle a besoin de la liberté de
-    se réparer seule.
+  text: >-
+    La peau n'a pas besoin de plus de chimie ; elle a besoin de la liberté de se
+    réparer seule.
   author: Dr. PepaGold
 summary:
-- La barrière cutanée est une matrice lipidique de céramides, cholestérol et acides
-  gras.
-- Le manteau acide (pH 4.5-5.5) et le microbiote forment la première ligne de défense
-  biologique.
-- Le climat sec et les nettoyants agressifs évaporent l'eau cellulaire.
-- La réparation nécessite un nettoyage physique atraumatique et des céramides.
+  - >-
+    La barrière cutanée est une matrice lipidique de céramides, cholestérol et
+    acides gras.
+  - >-
+    Le manteau acide (pH 4.5-5.5) et le microbiote forment la première ligne de
+    défense biologique.
+  - Le climat sec et les nettoyants agressifs évaporent l'eau cellulaire.
+  - La réparation nécessite un nettoyage physique atraumatique et des céramides.
 faq:
-- q: Combien de temps faut-il pour réparer une barrière cutanée abîmée ?
-  a: Le renouvellement cellulaire dure 14 à 28 jours.
-- q: Pourquoi la peau brûle-t-elle lors de l'application d'une crème ?
-  a: La brûlure indique des micro-fissures exposant les terminaisons nerveuses.
+  - q: Combien de temps faut-il pour réparer une barrière cutanée abîmée ?
+    a: Le renouvellement cellulaire dure 14 à 28 jours.
+  - q: Pourquoi la peau brûle-t-elle lors de l'application d'une crème ?
+    a: La brûlure indique des micro-fissures exposant les terminaisons nerveuses.
 show_science_link: true
 image_prompts:
-- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+  - >-
+    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
 
-  Editorial beauty macro photography depicting sensitive skin relief. Split visual
-  narrative on a woman''s delicate face: a faint rosy flushed cheek on one side, seamlessly
-  transitioning into calm, velvety hydrated skin refreshed by a soft, luxurious Laska
-  Mini UpPoly micro-cloth soaked in cool water. Aesthetic palette of muted dusty rose
-  (#D48C90), soft botanical sage green accents, and ivory nude. Soothing, tranquil
-  studio lighting atmosphere. Shot on 100mm f/2.8 macro lens, shallow depth of field.
-  Clean serene composition. NO text, NO watermarks, NO logos.'
+    Editorial beauty macro photography depicting sensitive skin relief. Split
+    visual narrative on a woman's delicate face: a faint rosy flushed cheek on
+    one side, seamlessly transitioning into calm, velvety hydrated skin
+    refreshed by a soft, luxurious Laska Mini UpPoly micro-cloth soaked in cool
+    water. Aesthetic palette of muted dusty rose (#D48C90), soft botanical sage
+    green accents, and ivory nude. Soothing, tranquil studio lighting
+    atmosphere. Shot on 100mm f/2.8 macro lens, shallow depth of field. Clean
+    serene composition. NO text, NO watermarks, NO logos.
 ---
 Ressentez-vous des picotements lorsque vous appliquez votre crème hydratante ? Votre barrière cutanée demande de l'aide.
 
