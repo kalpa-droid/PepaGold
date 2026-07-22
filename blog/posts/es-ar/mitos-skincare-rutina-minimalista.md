@@ -15,9 +15,13 @@ category: rutinas-minimalismo
 category_label: 🧘‍♀️ Rutinas y Skinimalismo
 concept: el-skinimalismo-y-la-reducci-n-de-pasos-en-el-skincare
 local_phenomenon: Viento Zonda y sequedad extrema de montaña
-cover_image: ''
+cover_image: /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp
 media:
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_2.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_3.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_4.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_5.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -78,6 +82,7 @@ image_prompts:
     shot of physical atraumatic cleansing with UpPoly split microfibers lifting
     makeup without friction. Pure water droplets, dusty rose aesthetic. NO text.
 show_science_link: true
+date_images_applied: '2026-07-22'
 ---
 ¿Alguna vez te preguntaste por qué tu piel reacciona con ardor o tirantez a pesar de seguir una rutina impecable? En la dermatología moderna, la sobrecargas cosméticas y el uso de tensoactivos sintéticos son reconocidos como los principales desencadenantes de sensibilidad y envejecimiento prematuro.
 
@@ -87,7 +92,7 @@ Este análisis científico explora la fisiología real de tu piel, desmintiendo 
 
 El estrato córneo es la interfaz biológica principal entre tu cuerpo y el exterior. Funciona mediante corneocitos ricas en queratina suspendidos en una matriz de ceramidas, colesterol y ácidos grasos libres.
 
-
+![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_2.webp)
 
 Cuando esta matriz se perturba, la barrera pierde su densidad cristalográfica ortorrómbica, permitiendo que el agua se evapore velozmente.
 
@@ -103,7 +108,7 @@ Mantener el manto ácido en pH 4.5 - 5.5 es indispensable para que las enzimas b
 
 Tu piel alberga un ecosistema vivo de bacterias simbióticas, encabezadas por **Staphylococcus epidermidis**, que producen péptidos antimicrobianos naturales y ceramidas libres.
 
-![Visualización microscópica del microbioma cutáneo y la bacteria S. epidermidis](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp)
+![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_3.webp)
 
 Los lavados excesivos y los limpiadores alcalinos destruyen este escudo biológico (disbiosis), permitiendo la colonización de gérmenes patógenos como *S. aureus*.
 
@@ -115,9 +120,9 @@ La pérdida de bacterias benéficas es la causa directa de que pieles sanas desa
 
 Las agresiones químicas de los cosméticos se agravan severamente al interactuar con el clima y el exposoma.
 
+![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_4.webp)
+
 Fenómenos ambientales como **Viento Zonda y sequedad extrema de montaña** ejercen un estrés osmótico extremo sobre la epidermis vulnerada:
-
-
 
 Cuando el cemento lipídico está dañado, el aire seco y la contaminación urbana actúan como una lija invisible que acelera el agrietamiento y la irritación.
 
@@ -132,9 +137,9 @@ Cuando el cemento lipídico está dañado, el aire seco y la contaminación urba
 
 Para restaurar una barrera dañada, la dermatología clínica recomienda la **limpieza física atraumática por capilaridad**.
 
+![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_5.webp)
+
 La tecnología textil japonesa **UpPoly** (línea Laska Mini) utiliza microfibras divididas nanométricamente que succionan la suciedad y el sebo oxidado usando exclusivamente agua tibia:
-
-
 
 Al eliminar los detergentes químicos, preservás intactos los lípidos estructurales y mantenés tu microbioma en perfecto equilibrio.
 
