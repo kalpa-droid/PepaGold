@@ -13,10 +13,8 @@ concept: el-skinimalismo-y-la-reducci-n-de-pasos-en-el-skincare
 local_phenomenon: HVAC dry air & seasonal winds
 cover_image: ''
 media:
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
   - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_1.webp
   - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -111,7 +109,7 @@ A disbiose ocorre quando os micróbios benéficos são removidos, desencadeando 
 2. **Reposição lipídica:** Aplique cremes enriquecidos com ceramidas, ácido hialurônico e esqualano.
 3. **Prebióticos tópicos:** Escolha cosméticos com inulina para nutrir as bactérias boas.
 
-![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp)
+
 
 :::quiz Teste diagnóstico
 Q: Qual é o principal indicador de degradação do cimento lipídico?
