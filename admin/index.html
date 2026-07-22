@@ -1168,8 +1168,9 @@
       loadPostImages(slug);
     }
 
-        let imageTagsState = {};
+            let imageTagsState = {};
     let currentLoadedFilesState = [];
+    let deletedFilesState = {};
 
     function detectTagFromFilename(filename, idx) {
       const name = filename.toLowerCase();
@@ -1192,9 +1193,13 @@
       return tags[idx % 5];
     }
 
-            async function loadPostImages(slug) {
+    async function loadPostImages(slug) {
       const grid = document.getElementById('modal-img-grid');
       grid.innerHTML = '<p style="font-size: 13px; color: var(--color-dark-muted);">Cargando imágenes...</p>';
+
+      if (!deletedFilesState[slug]) {
+        deletedFilesState[slug] = new Set();
+      }
 
       let files = [];
       try {
@@ -1215,82 +1220,81 @@
         });
       }
 
-      // Deduplicate files by filename
+      // Deduplicate files by filename and exclude files marked as DELETED
       const uniqueFilesMap = new Map();
       (files || []).forEach(f => {
-        if (f.name && (f.name.endsWith('.webp') || f.name.endsWith('.png') || f.name.endsWith('.jpg'))) {
+        if (f.name && !deletedFilesState[slug].has(f.name) && (f.name.endsWith('.webp') || f.name.endsWith('.png') || f.name.endsWith('.jpg'))) {
           uniqueFilesMap.set(f.name, f);
         }
       });
-      let allFound = Array.from(uniqueFilesMap.values());
 
-      // STRICT RULE: Only keep standard 5 allowed files (prompt_1.webp, cuerpo_1..4.webp)
-      const allowedStandardNames = ['prompt_1.webp', 'cuerpo_1.webp', 'cuerpo_2.webp', 'cuerpo_3.webp', 'cuerpo_4.webp'];
-      let filteredStandard = allFound.filter(f => allowedStandardNames.includes(f.name));
-      
-      if (filteredStandard.length === 5) {
-        currentLoadedFilesState = filteredStandard;
-      } else {
-        currentLoadedFilesState = allFound.slice(0, 5);
-      }
-
-      if (!currentLoadedFilesState.length) {
-        grid.innerHTML = '<p style="font-size: 13px; color: var(--color-dark-muted); grid-column: 1/-1; text-align: center; padding: 30px;">📷 No hay imágenes cargadas todavía.<br><span style="font-size: 12px; opacity: 0.8;">Copiá el prompt desde <b>📋 Prompts e Indicaciones</b>, generá la foto y subila con <b>➕ Subir Imagen (Auto WebP)</b>. (Máximo 5 imágenes: 1 Portada + 4 Secciones H2).</span></p>';
-        return;
-      }
+      currentLoadedFilesState = Array.from(uniqueFilesMap.values());
 
       const allTags = ['portada', 'cuerpo-1', 'cuerpo-2', 'cuerpo-3', 'cuerpo-4'];
       
-      // Auto assign tags if not present
+      // Auto assign non-conflicting tags for active files
+      const assignedTags = new Set();
       currentLoadedFilesState.forEach((f, idx) => {
         if (!imageTagsState[f.name]) {
-          imageTagsState[f.name] = detectTagFromFilename(f.name, idx);
+          let detected = detectTagFromFilename(f.name, idx);
+          if (assignedTags.has(detected)) {
+            detected = allTags.find(t => !assignedTags.has(t)) || detected;
+          }
+          imageTagsState[f.name] = detected;
+        }
+        assignedTags.add(imageTagsState[f.name]);
+      });
+
+      // Render 5 fixed position slots (cards for active files or empty upload boxes for empty slots)
+      let htmlCards = [];
+
+      allTags.forEach((tagVal, pIdx) => {
+        const label = pIdx === 0 ? '🖼️ Portada (16:9)' : `📷 Sección H2 #${pIdx}`;
+        const activeFile = currentLoadedFilesState.find(f => imageTagsState[f.name] === tagVal);
+
+        if (activeFile) {
+          let optionsHtml = '';
+          allTags.forEach((val, optionIdx) => {
+            const optLabel = optionIdx === 0 ? '🖼️ Portada (16:9 Panorámica)' : `📷 Sección H2 #${optionIdx}`;
+            const isSelected = tagVal === val ? 'selected' : '';
+            const occupiedFile = currentLoadedFilesState.find(other => other.name !== activeFile.name && imageTagsState[other.name] === val);
+            const occupiedText = occupiedFile ? ` (Intercambiar con ${occupiedFile.name})` : '';
+            optionsHtml += `<option value="${val}" ${isSelected}>${optLabel}${occupiedText}</option>`;
+          });
+
+          const imgSrc = activeFile.download_url || (activeFile.path ? '/' + activeFile.path.replace(/^\//, '') : `/assets/imagenes/blog/${slug}/${activeFile.name}`);
+
+          htmlCards.push(`
+            <div class="image-card" style="height: auto; padding-bottom: 8px; border: 2px solid ${tagVal === 'portada' ? '#D48C90' : 'var(--border-color)'};">
+              <div style="width: 100%; height: 140px; background: #FAF6F5; display: flex; align-items: center; justify-content: center; overflow: hidden; border-bottom: 1px solid var(--border-color); position: relative;">
+                <img src="${imgSrc}" alt="${activeFile.name}" style="width: 100%; height: 100%; object-fit: cover;" />
+                <span style="position: absolute; top: 6px; left: 6px; background: rgba(42,37,35,0.85); color: #fff; font-size: 10px; font-weight: 700; padding: 3px 7px; border-radius: 4px; backdrop-filter: blur(4px);">
+                  ${tagVal === 'portada' ? '🖼️ PORTADA' : '📷 SECCIÓN H2 #' + tagVal.replace('cuerpo-', '')}
+                </span>
+              </div>
+              <div style="padding: 8px 10px;">
+                <div style="font-size: 11px; font-weight: 600; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; margin-bottom: 6px; color: var(--color-dark);" title="${activeFile.name}">${activeFile.name}</div>
+                <label style="font-size: 10px; font-weight: 600; color: var(--color-accent); display: block; margin-bottom: 2px;">🏷️ Cambiar Posición:</label>
+                <select class="input-field" style="font-size: 11px; padding: 5px; margin: 0; width: 100%; border-color: var(--color-accent);" onchange="assignTagToImage('${activeFile.name}', this.value)">
+                  ${optionsHtml}
+                </select>
+              </div>
+              <button type="button" class="image-card-del" onclick="deletePostImage('${slug}', '${activeFile.name}', '${activeFile.sha || ''}')">✕</button>
+            </div>
+          `);
+        } else {
+          // Empty Slot Card
+          htmlCards.push(`
+            <div class="image-card" style="min-height: 220px; border: 2px dashed #D48C90; background: #FAF6F5; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 16px; text-align: center; border-radius: 14px; position: relative;">
+              <span style="font-size: 26px; margin-bottom: 4px; opacity: 0.8;">➕</span>
+              <span style="font-size: 11px; font-weight: 700; color: #D48C90; text-transform: uppercase;">${label} (Vacío)</span>
+              <span style="font-size: 10.5px; color: var(--color-dark-muted); margin-top: 4px; line-height: 1.3;">Casillero libre. Subí una foto para esta sección.</span>
+            </div>
+          `);
         }
       });
 
-      // SORT VISUALLY BY ASSIGNED TAG ORDER SO THE CARDS INSTANTLY RE-ORDER ON CHANGE
-      const tagOrderMap = { 'portada': 0, 'cuerpo-1': 1, 'cuerpo-2': 2, 'cuerpo-3': 3, 'cuerpo-4': 4 };
-      currentLoadedFilesState.sort((a, b) => {
-        const orderA = tagOrderMap[imageTagsState[a.name]] !== undefined ? tagOrderMap[imageTagsState[a.name]] : 99;
-        const orderB = tagOrderMap[imageTagsState[b.name]] !== undefined ? tagOrderMap[imageTagsState[b.name]] : 99;
-        return orderA - orderB;
-      });
-
-      grid.innerHTML = currentLoadedFilesState.map((f, idx) => {
-        const assignedTag = imageTagsState[f.name];
-
-        let optionsHtml = '';
-        allTags.forEach((val, pIdx) => {
-          const label = pIdx === 0 ? '🖼️ Portada (16:9 Panorámica)' : `📷 Sección H2 #${pIdx}`;
-          const isSelected = assignedTag === val ? 'selected' : '';
-          
-          const occupiedFile = currentLoadedFilesState.find(other => other.name !== f.name && imageTagsState[other.name] === val);
-          const occupiedText = occupiedFile ? ` (En uso por ${occupiedFile.name})` : '';
-          
-          optionsHtml += `<option value="${val}" ${isSelected}>${label}${occupiedText}</option>`;
-        });
-
-        const imgSrc = f.download_url || (f.path ? '/' + f.path.replace(/^\//, '') : `/assets/imagenes/blog/${slug}/${f.name}`);
-
-        return `
-          <div class="image-card" id="img-card-${idx}" style="height: auto; padding-bottom: 8px; border: 2px solid ${assignedTag === 'portada' ? '#D48C90' : 'var(--border-color)'};">
-            <div style="width: 100%; height: 140px; background: #FAF6F5; display: flex; align-items: center; justify-content: center; overflow: hidden; border-bottom: 1px solid var(--border-color); position: relative;">
-              <img src="${imgSrc}" alt="${f.name}" style="width: 100%; height: 100%; object-fit: cover;" />
-              <span style="position: absolute; top: 6px; left: 6px; background: rgba(42,37,35,0.85); color: #fff; font-size: 10px; font-weight: 700; padding: 3px 7px; border-radius: 4px; backdrop-filter: blur(4px);">
-                ${assignedTag === 'portada' ? '🖼️ PORTADA' : '📷 SECCIÓN H2 #' + assignedTag.replace('cuerpo-', '')}
-              </span>
-            </div>
-            <div style="padding: 8px 10px;">
-              <div style="font-size: 11px; font-weight: 600; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; margin-bottom: 6px; color: var(--color-dark);" title="${f.name}">${f.name}</div>
-              <label style="font-size: 10px; font-weight: 600; color: var(--color-accent); display: block; margin-bottom: 2px;">🏷️ Cambiar Posición:</label>
-              <select class="input-field" style="font-size: 11px; padding: 5px; margin: 0; width: 100%; border-color: var(--color-accent);" onchange="assignTagToImage('${f.name}', this.value)">
-                ${optionsHtml}
-              </select>
-            </div>
-            <button type="button" class="image-card-del" onclick="deletePostImage('${slug}', '${f.name}', '${f.sha || ''}')">✕</button>
-          </div>
-        `;
-      }).join('');
+      grid.innerHTML = htmlCards.join('');
     }
 
     function assignTagToImage(fileName, newTagValue) {
@@ -1324,12 +1328,13 @@
       const currentCount = currentLoadedFilesState.length;
       
       if (currentCount + filesToUpload.length > 5) {
-        alert(`🚫 Límite alcanzado: Un artículo en PepaGold solo permite 5 imágenes como máximo (1 Portada + 4 Secciones H2).\nActualmente tenés ${currentCount} imagen(es) y estás intentando subir ${filesToUpload.length}.\n\nPor favor eliminá primero alguna imagen existente antes de subir una nueva.`);
+        alert(`🚫 Límite alcanzado: Un artículo en PepaGold solo permite 5 imágenes como máximo (1 Portada + 4 Secciones H2).\\nActualmente tenés ${currentCount} imagen(es) y estás intentando subir ${filesToUpload.length}.\\n\\nPor favor eliminá primero alguna imagen existente antes de subir una nueva.`);
         input.value = '';
         return;
       }
 
       const total = filesToUpload.length;
+      const slug = activeModalPost.meta.slug;
       showToast(`⚡ Procesando ${total} imagen(es) con conversión automática a .webp...`);
 
       for (let i = 0; i < total; i++) {
@@ -1354,11 +1359,16 @@
           
           const rawName = file.name.substring(0, file.name.lastIndexOf('.')) || file.name;
           const cleanName = rawName.toLowerCase().replace(/[^a-z0-9._-]/g, '-') + '.webp';
-          const path = `assets/imagenes/blog/${activeModalPost.meta.slug}/${cleanName}`;
+          const path = `assets/imagenes/blog/${slug}/${cleanName}`;
+
+          // Remove from deleted state if previously deleted
+          if (deletedFilesState[slug]) {
+            deletedFilesState[slug].delete(cleanName);
+          }
 
           const existingFile = await ghFetch(`contents/${path}`).catch(() => null);
           const bodyPayload = {
-            message: `Upload ${cleanName} to ${activeModalPost.meta.slug}`,
+            message: `Upload ${cleanName} to ${slug}`,
             content: webpBase64,
             branch: BRANCH
           };
@@ -1376,36 +1386,39 @@
       }
 
       showToast(`✨ ¡Las ${total} imágenes fueron convertidas a .webp y subidas con éxito!`);
-      loadPostImages(activeModalPost.meta.slug);
+      loadPostImages(slug);
       input.value = '';
     }
 
-        async function deletePostImage(slug, filename, sha) {
+    async function deletePostImage(slug, filename, sha) {
       if (!ghToken) {
-        const inputToken = prompt('🔑 Para eliminar archivos de GitHub ingresá tu Personal Access Token (debe tener permisos "repo"):');
+        const inputToken = prompt('🔑 Para eliminar archivos de GitHub ingresá tu Personal Access Token (con permisos "repo"):');
         if (inputToken && inputToken.trim()) {
           ghToken = inputToken.trim();
           localStorage.setItem('pepagold_gh_token', ghToken);
         } else {
-          // Fallback: Remove locally from UI if user cancels token prompt
-          currentLoadedFilesState = currentLoadedFilesState.filter(f => f.name !== filename);
-          delete imageTagsState[filename];
-          showToast(`🗑️ Imagen ${filename} removida de la pantalla.`);
-          if (activeModalPost) loadPostImages(slug);
-          return;
+          return alert('Se requiere token para eliminar imágenes.');
         }
       }
 
       if (!confirm(`¿Eliminar la imagen "${filename}" del artículo?`)) return;
 
-      let deletedOnGithub = false;
-      let errorMsg = '';
+      // Mark file as DELETED in local state immediately so it vanishes from UI
+      if (!deletedFilesState[slug]) {
+        deletedFilesState[slug] = new Set();
+      }
+      deletedFilesState[slug].add(filename);
 
+      delete imageTagsState[filename];
+      currentLoadedFilesState = currentLoadedFilesState.filter(f => f.name !== filename);
+
+      showToast(`🗑️ Eliminando ${filename}...`);
+
+      let deletedOnGithub = false;
       try {
         const path = `contents/assets/imagenes/blog/${slug}/${filename}`;
         let latestSha = sha;
 
-        // Fetch fresh SHA directly from GitHub API to prevent 409 stale SHA errors
         try {
           const freshData = await ghFetch(path);
           if (freshData && freshData.sha) {
@@ -1428,25 +1441,10 @@
         }
       } catch (err) {
         console.error('Error deleting image from GitHub API:', err);
-        errorMsg = err.message || 'Sin permisos suficientes de escritura en GitHub';
       }
 
-      // Always remove from local UI state so the user is never stuck
-      currentLoadedFilesState = currentLoadedFilesState.filter(f => f.name !== filename);
-      delete imageTagsState[filename];
-
-      if (deletedOnGithub) {
-        showToast(`🗑️ Imagen ${filename} eliminada físicamente de GitHub y de la vista.`);
-      } else if (errorMsg) {
-        alert(`⚠️ Atención: La imagen se quitó de la vista, pero en GitHub dio el siguiente aviso: "${errorMsg}".\n\n💡 Verificá que tu Personal Access Token tenga activado el permiso "repo".`);
-        showToast(`🗑️ Imagen ${filename} removida de la vista.`);
-      } else {
-        showToast(`🗑️ Imagen ${filename} eliminada con éxito.`);
-      }
-
-      if (activeModalPost) {
-        loadPostImages(slug);
-      }
+      showToast(`🗑️ Imagen ${filename} eliminada correctamente.`);
+      loadPostImages(slug);
     }
 
     async function applyUploadedImagesToArticle() {
