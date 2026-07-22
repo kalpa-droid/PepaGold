@@ -1,8 +1,9 @@
 ---
 article_id: PG-002
 title: La Scienza della Barriera Cutanea e del Microbioma
-description: Scopri la scienza della barriera cutanea, del microbioma e del mantello
-  acido pH 5.5.
+description: >-
+  Scopri la scienza della barriera cutanea, del microbioma e del mantello acido
+  pH 5.5.
 slug: impacto-tensoactivos-aguas-micelares
 date: '2026-07-21'
 date_created: '2026-07-21'
@@ -14,43 +15,45 @@ concept: el-impacto-de-tensoactivos-jabones-y-aguas-micelares-en-la-barrera-cut-
 local_phenomenon: HVAC dry air & seasonal winds
 cover_image: /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_1.webp
 media:
-- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_1.webp
-- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_1.webp
-- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_2.webp
-- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_2.webp
-- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_3.webp
-- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_3.webp
-- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/gemini_generated_image_8b2pk18b2pk18b2p.webp
-- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_4.webp
-- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_4.webp
-- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_5.webp
+  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_1.webp
+  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_1.webp
+  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_2.webp
+  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_3.webp
+  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_4.webp
 author: PepaGold
 epigraph:
-  text: La pelle non ha bisogno di altra chimica; ha bisogno della libertà di rigenerarsi.
+  text: >-
+    La pelle non ha bisogno di altra chimica; ha bisogno della libertà di
+    rigenerarsi.
   author: Dott.ssa PepaGold
 summary:
-- La barriera cutanea è una matrice lipidica di ceramidi, colesterolo e acidi grassi.
-- Il mantello acido (pH 4.5-5.5) e il microbioma costituiscono la prima linea di difesa
-  biologica.
-- Il clima secco e i detergenti aggressivi creano micro-fessure.
-- La riparazione richiede igiene fisica atraumatica e ceramidi biomimetiche.
+  - >-
+    La barriera cutanea è una matrice lipidica di ceramidi, colesterolo e acidi
+    grassi.
+  - >-
+    Il mantello acido (pH 4.5-5.5) e il microbioma costituiscono la prima linea
+    di difesa biologica.
+  - Il clima secco e i detergenti aggressivi creano micro-fessure.
+  - La riparazione richiede igiene fisica atraumatica e ceramidi biomimetiche.
 faq:
-- q: Quanto tempo occorre per riparare una barriera cutanea danneggiata?
-  a: Il rinnovo cellulare richiede da 14 a 28 giorni.
-- q: Perché il viso brucia quando applico una crema idratante?
-  a: Il bruciore indica micro-fessure nello strato corneo.
+  - q: Quanto tempo occorre per riparare una barriera cutanea danneggiata?
+    a: Il rinnovo cellulare richiede da 14 a 28 giorni.
+  - q: Perché il viso brucia quando applico una crema idratante?
+    a: Il bruciore indica micro-fessure nello strato corneo.
 show_science_link: true
 date_images_applied: '2026-07-22'
 image_prompts:
-- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+  - >-
+    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
 
-  High-concept liquid splash beauty photography. A crystal-clear pure water droplet
-  creating a dramatic, pristine splash ripple against smooth, porcelain-toned skin,
-  washing away harsh chemical foam and cloudy surfactant residue to reveal luminous
-  natural skin. Palette of warm dusty rose (#D48C90), pure liquid crystal blue, and
-  nude ivory. High-speed macro photography capturing crisp liquid droplets in mid-air,
-  studio backlight. Shot on Hasselblad 100MP, 1/8000s shutter speed, f/4.0. Clean
-  editorial visual style. NO text, NO watermarks, NO logos.'
+    High-concept liquid splash beauty photography. A crystal-clear pure water
+    droplet creating a dramatic, pristine splash ripple against smooth,
+    porcelain-toned skin, washing away harsh chemical foam and cloudy surfactant
+    residue to reveal luminous natural skin. Palette of warm dusty rose
+    (#D48C90), pure liquid crystal blue, and nude ivory. High-speed macro
+    photography capturing crisp liquid droplets in mid-air, studio backlight.
+    Shot on Hasselblad 100MP, 1/8000s shutter speed, f/4.0. Clean editorial
+    visual style. NO text, NO watermarks, NO logos.
 ---
 Senti bruciore quando applichi la tua solita crema idratante? La tua barriera cutanea sta chiedendo aiuto.
 
@@ -60,10 +63,10 @@ Dietro la sensazione di tensione e arrossamento si cela una barriera compromessa
 
 Immagina lo strato più esterno della tua pelle come un muro di mattoni protettivo:
 
+![Imagen de sección](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_1.webp)
+
 - **Mattoni (Corneociti):** Cellule ricche di cheratina che proteggono dalla frizione.
 - **Cemento (Matrice lipidica):** Cemento biologico composto per il **50% da Ceramidi**, 25% Colesterolo e 15% Acidi Grassi.
-
-![Illustrazione 3D della struttura mattoni e cemento della pelle](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_1.webp)
 
 Quando il cemento lipidico si degrada, l'acqua evapora rapidamente.
 
@@ -79,9 +82,9 @@ Per un cemento cutaneo solido, ceramidi, colesterolo e acidi grassi devono rispe
 
 Sopra il muro di mattoni si trova il **mantello acido** (pH 4.5 a 5.5).
 
-Questo ambiente acido inibisce i patogeni e nutre il tuo **microbioma cutaneo**.
+![Imagen de sección](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_2.webp)
 
-![Diagramma scientifico del microbioma cutaneo](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_2.webp)
+Questo ambiente acido inibisce i patogeni e nutre il tuo **microbioma cutaneo**.
 
 Batteri benefici come *Staphylococcus epidermidis* sintetizzano difese naturali. I saponi alcalini distruggono questa protezione.
 
@@ -95,7 +98,7 @@ La disbiosi si verifica quando i microbi benefici vengono eliminati, innescando 
 2. **D detergenti aggressivi:** I solfati sciolgono il cemento lipidico come il grasso in padella.
 3. **Esfoliazione eccessiva:** Gli acidi chimici rimuovono gli strati protettivi.
 
-![Micro-fessure nello strato corneo](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_2.webp)
+![Imagen de sección](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_3.webp)
 
 :::checklist Segnali d'allarme: La tua barriera è danneggiata?
 - Pelle spenta e priva di luminosità.
@@ -110,7 +113,7 @@ La disbiosi si verifica quando i microbi benefici vengono eliminati, innescando 
 2. **Ripristino lipidico:** Applica creme arricchite con ceramidi e squalane.
 3. **Prebiotici topici:** Scegli formule con inulina per nutrire i batteri buoni.
 
-![Detersione fisica atraumatica con microfibra UpPoly Laska Mini](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_3.webp)
+![Imagen de sección](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_4.webp)
 
 :::quiz Test diagnostico
 Q: Qual è il segnale principale del degrado del cemento lipidico?
