@@ -1159,7 +1159,7 @@
       return tags[idx % 5];
     }
 
-        async function loadPostImages(slug) {
+            async function loadPostImages(slug) {
       const grid = document.getElementById('modal-img-grid');
       grid.innerHTML = '<p style="font-size: 13px; color: var(--color-dark-muted);">Cargando imágenes...</p>';
 
@@ -1215,6 +1215,14 @@
         }
       });
 
+      // SORT VISUALLY BY ASSIGNED TAG ORDER SO THE CARDS INSTANTLY RE-ORDER ON CHANGE
+      const tagOrderMap = { 'portada': 0, 'cuerpo-1': 1, 'cuerpo-2': 2, 'cuerpo-3': 3, 'cuerpo-4': 4 };
+      currentLoadedFilesState.sort((a, b) => {
+        const orderA = tagOrderMap[imageTagsState[a.name]] !== undefined ? tagOrderMap[imageTagsState[a.name]] : 99;
+        const orderB = tagOrderMap[imageTagsState[b.name]] !== undefined ? tagOrderMap[imageTagsState[b.name]] : 99;
+        return orderA - orderB;
+      });
+
       grid.innerHTML = currentLoadedFilesState.map((f, idx) => {
         const assignedTag = imageTagsState[f.name];
 
@@ -1232,14 +1240,17 @@
         const imgSrc = f.download_url || (f.path ? '/' + f.path.replace(/^\//, '') : `/assets/imagenes/blog/${slug}/${f.name}`);
 
         return `
-          <div class="image-card" id="img-card-${idx}" style="height: auto; padding-bottom: 8px;">
-            <div style="width: 100%; height: 140px; background: #FAF6F5; display: flex; align-items: center; justify-content: center; overflow: hidden; border-bottom: 1px solid var(--border-color);">
+          <div class="image-card" id="img-card-${idx}" style="height: auto; padding-bottom: 8px; border: 2px solid ${assignedTag === 'portada' ? '#D48C90' : 'var(--border-color)'};">
+            <div style="width: 100%; height: 140px; background: #FAF6F5; display: flex; align-items: center; justify-content: center; overflow: hidden; border-bottom: 1px solid var(--border-color); position: relative;">
               <img src="${imgSrc}" alt="${f.name}" style="width: 100%; height: 100%; object-fit: cover;" />
+              <span style="position: absolute; top: 6px; left: 6px; background: rgba(42,37,35,0.85); color: #fff; font-size: 10px; font-weight: 700; padding: 3px 7px; border-radius: 4px; backdrop-filter: blur(4px);">
+                ${assignedTag === 'portada' ? '🖼️ PORTADA' : '📷 SECCIÓN H2 #' + assignedTag.replace('cuerpo-', '')}
+              </span>
             </div>
             <div style="padding: 8px 10px;">
               <div style="font-size: 11px; font-weight: 600; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; margin-bottom: 6px; color: var(--color-dark);" title="${f.name}">${f.name}</div>
-              <label style="font-size: 10px; font-weight: 600; color: var(--color-accent); display: block; margin-bottom: 2px;">🏷️ Posición Única del Artículo:</label>
-              <select class="input-field" style="font-size: 11px; padding: 5px; margin: 0; width: 100%;" onchange="assignTagToImage('${f.name}', this.value)">
+              <label style="font-size: 10px; font-weight: 600; color: var(--color-accent); display: block; margin-bottom: 2px;">🏷️ Cambiar Posición:</label>
+              <select class="input-field" style="font-size: 11px; padding: 5px; margin: 0; width: 100%; border-color: var(--color-accent);" onchange="assignTagToImage('${f.name}', this.value)">
                 ${optionsHtml}
               </select>
             </div>
