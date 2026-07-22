@@ -1,30 +1,18 @@
 #!/usr/bin/env python3
 """
-insert_images.py — El "botón de sincronizar imagen", pero con verificación
-real antes de escribir nada.
+insert_images.py — El "botón de sincronizar imagen", con verificación real
+antes de escribir nada y reconstrucción atómica de metadatos.
 
-Por qué existe: hasta ahora, cuando se le pedía a la IA que insertara una
-imagen recién subida, escribía la referencia en los 10 artículos SIN
-comprobar que el archivo existiera de verdad en el disco. Si la subida
-todavía no había terminado, o el nombre no coincidía, el resultado era una
-imagen rota o equivocada — y como se escribía en los 10 idiomas a la vez,
-a veces quedaba bien en unos y mal en otros.
-
-Qué hace este script en cambio:
+Qué hace este script:
   1. Busca la carpeta canónica de imágenes del artículo (la del es-ar
-     original — es la única fuente de verdad, sin importar que el slug
-     traducido sea distinto en otros idiomas).
-  2. Verifica CADA archivo esperado: que exista Y que no esté vacío/roto
-     (un .webp de 0 bytes o de pocos KB es señal de una subida a medias).
-  3. Si falta o está roto UN SOLO archivo, no toca NINGÚN artículo — imprime
-     exactamente qué falta y se detiene ahí. No hay que adivinar cuánto
-     esperar: simplemente se vuelve a correr el comando cuando el archivo
-     ya esté.
-  4. Si todo está bien, recién ahí reescribe los 10 archivos de idioma para
-     que TODOS apunten a la carpeta canónica — es una operación atómica,
-     no puede quedar la mitad bien y la mitad mal.
-  5. Al final corre el chequeo de imágenes de validate_translations.py
-     como confirmación cruzada.
+     original — es la única fuente de verdad).
+  2. Verifica CADA archivo esperado: que exista Y que no esté vacío/roto.
+  3. Reconstruye el frontmatter (`cover_image` y `media`) desde cero en los
+     10 idiomas usando la lista canónica de es-ar (pisando cualquier basura o
+     duplicado previo).
+  4. Mapea las imágenes del cuerpo por posición. Si un idioma traducido
+     perdió etiquetas de imagen en el cuerpo, advierte exactamente qué idioma
+     necesita revisión manual sin inventar posiciones al azar.
 
 Uso:
     python3 insert_images.py PG-001
@@ -32,12 +20,10 @@ Uso:
 import os
 import re
 import sys
-import glob
 import yaml
 
 POSTS_DIR = "blog/posts"
-MIN_FILE_SIZE_BYTES = 8_000  # un webp real de foto pesa bastante más que esto;
-                              # menos que esto es señal de subida cortada/rota
+MIN_FILE_SIZE_BYTES = 8_000  # un webp real pesa más que esto
 
 
 def parse_post(path):
@@ -60,11 +46,10 @@ def find_article_files(article_id):
             meta, _, _ = parse_post(path)
             if meta and meta.get("article_id") == article_id:
                 files.append(path)
-    return files
+    return sorted(files)
 
 
 def find_source_file(files):
-    """El archivo de es-ar es la fuente de verdad de la carpeta de imágenes."""
     for path in files:
         if os.path.basename(os.path.dirname(path)) == "es-ar":
             return path
@@ -72,7 +57,6 @@ def find_source_file(files):
 
 
 def verify_images(canonical_dir, expected_basenames):
-    """Devuelve (ok: bool, detalle: list[str])."""
     problems = []
     for name in expected_basenames:
         fs_path = os.path.join(canonical_dir.lstrip("/"), name)
@@ -88,13 +72,45 @@ def verify_images(canonical_dir, expected_basenames):
     return (len(problems) == 0), problems
 
 
-def rewrite_image_paths(raw_content, canonical_dir, expected_basenames):
-    """Reescribe cover_image, media[] y los ![...](...) del cuerpo para que
-    TODOS apunten a la carpeta canónica, preservando el nombre de archivo."""
-    for name in expected_basenames:
-        pattern = re.compile(r"/assets/imagenes/blog/[^)\s\"']+/" + re.escape(name))
-        raw_content = pattern.sub(f"{canonical_dir}/{name}", raw_content)
-    return raw_content
+def update_post_images(path, canonical_cover, canonical_media, ref_body_images):
+    meta, body, raw = parse_post(path)
+    if meta is None:
+        return False, "no se pudo parsear"
+
+    modified = False
+
+    # 1. Reconstruir frontmatter cover_image y media desde cero
+    if meta.get("cover_image") != canonical_cover:
+        meta["cover_image"] = canonical_cover
+        modified = True
+
+    if meta.get("media") != canonical_media:
+        meta["media"] = canonical_media
+        modified = True
+
+    # 2. Verificar y actualizar imágenes en el cuerpo
+    cur_body_imgs = re.findall(r'!\[.*?\]\((.*?)\)', body)
+    warning = None
+
+    if len(cur_body_imgs) == len(ref_body_images):
+        # Mapear imágenes 1 a 1 por posición exacta
+        new_body = body
+        for idx, (old_img, ref_img) in enumerate(zip(cur_body_imgs, ref_body_images)):
+            if old_img != ref_img:
+                new_body = new_body.replace(old_img, ref_img)
+                modified = True
+        body = new_body
+    elif len(cur_body_imgs) > 0 and len(cur_body_imgs) != len(ref_body_images):
+        warning = f"⚠️ {path}: tiene {len(cur_body_imgs)} imágenes en el cuerpo (se esperaban {len(ref_body_images)} como es-ar)"
+
+    if modified:
+        new_yaml = yaml.safe_dump(meta, allow_unicode=True, sort_keys=False, width=1000)
+        new_content = f"---\n{new_yaml}---\n{body}"
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(new_content)
+        return True, warning
+
+    return False, warning
 
 
 def main():
@@ -113,16 +129,20 @@ def main():
         print(f"🔴 No encontré la versión es-ar de {article_id} (es la fuente de verdad de las imágenes).")
         return 1
 
-    source_meta, _, _ = parse_post(source_path)
-    canonical_dir = os.path.dirname(source_meta.get("cover_image", ""))
-    if not canonical_dir:
+    source_meta, source_body, _ = parse_post(source_path)
+    canonical_cover = source_meta.get("cover_image", "")
+    if not canonical_cover:
         print(f"🔴 {source_path} no tiene 'cover_image' definido todavía — generá y asigná las imágenes primero.")
         return 1
 
+    canonical_dir = os.path.dirname(canonical_cover)
+    canonical_media = source_meta.get("media") or []
+    ref_body_images = re.findall(r'!\[.*?\]\((.*?)\)', source_body)
+
     expected = []
-    if source_meta.get("cover_image"):
-        expected.append(os.path.basename(source_meta["cover_image"]))
-    for m in source_meta.get("media") or []:
+    if canonical_cover:
+        expected.append(os.path.basename(canonical_cover))
+    for m in canonical_media:
         bn = os.path.basename(m)
         if bn not in expected:
             expected.append(bn)
@@ -138,25 +158,32 @@ def main():
             print(f"  - {p}")
         print(
             "\n👉 Generá/subí el archivo que falta a esa carpeta local y volvé a "
-            "correr este mismo comando. No hace falta esperar un tiempo fijo — "
-            "en cuanto el archivo esté ahí, el comando va a pasar solo."
+            "correr este mismo comando."
         )
         return 1
 
     print("🟢 Todas las imágenes están confirmadas en disco. Sincronizando los 10 idiomas...\n")
+    warnings = []
+    updated_count = 0
+
     for path in files:
-        with open(path, encoding="utf-8") as f:
-            raw = f.read()
-        new_raw = rewrite_image_paths(raw, canonical_dir, expected)
-        if new_raw != raw:
-            with open(path, "w", encoding="utf-8") as f:
-                f.write(new_raw)
+        changed, warn = update_post_images(path, canonical_cover, canonical_media, ref_body_images)
+        if warn:
+            warnings.append(warn)
+        if changed:
+            updated_count += 1
             print(f"  ✓ actualizado: {path}")
         else:
             print(f"  = sin cambios: {path}")
 
-    print(f"\n🟢 {article_id}: imágenes sincronizadas en los {len(files)} idiomas.")
-    print("Corré ahora: python3 validate_translations.py  (para la confirmación cruzada final)")
+    print(f"\n🟢 {article_id}: metadatos e imágenes procesados en los {len(files)} idiomas.")
+
+    if warnings:
+        print("\n⚠️ Advertencias de imágenes en cuerpo:")
+        for w in warnings:
+            print(f"  - {w}")
+
+    print("\nCorré ahora: python3 validate_translations.py  (para la confirmación cruzada final)")
     return 0
 
 
