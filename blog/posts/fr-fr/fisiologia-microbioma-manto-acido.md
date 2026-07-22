@@ -16,7 +16,6 @@ concept: >-
 local_phenomenon: HVAC dry air & seasonal winds
 cover_image: ''
 media:
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
 author: PepaGold
 epigraph:
@@ -83,7 +82,7 @@ Au-dessus du mur de briques se trouve le **manteau acide** (pH 4.5 à 5.5).
 
 Cet environnement acide inhibe les agents pathogènes tout en nourrissant votre **microbiote cutané**.
 
-![Schéma scientifique du microbiote et S. epidermidis](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp)
+
 
 Les bactéries symbiotiques comme *Staphylococcus epidermidis* fabriquent des défenses naturelles. Les savons alcalins détruisent cette protection.
 
