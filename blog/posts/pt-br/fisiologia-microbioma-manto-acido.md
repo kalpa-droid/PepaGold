@@ -15,7 +15,6 @@ local_phenomenon: HVAC dry air & seasonal winds
 cover_image: ''
 media:
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_2.webp
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
 author: PepaGold
 epigraph:
@@ -84,7 +83,7 @@ Sobre a parede de tijolos existe um escudo invisível: o **manto ácido** (pH 4.
 
 Este ambiente ácido inibe bactérias nocivas enquanto nutre o **microbioma cutâneo**.
 
-![Diagrama científico do microbioma cutâneo e S. epidermidis](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp)
+
 
 Bactérias benéficas como *Staphylococcus epidermidis* sintetizam defesas naturais. Sabões alcalinos destroem essa proteção.
 
