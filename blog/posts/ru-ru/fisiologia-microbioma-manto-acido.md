@@ -12,9 +12,12 @@ category_label: 🔬 Наука о Коже
 concept: >-
   fisiolog-a-y-ecolog-a-de-la-barrera-cut-nea-din-mica-del-microbioma-mantos-hidrolip-dicos-y-estrategias-terap-uticas-avanzadas
 local_phenomenon: HVAC dry air & seasonal winds
-cover_image: ''
+cover_image: /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
 media:
+  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_2.webp
+  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
+  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
 author: PepaGold
 epigraph:
@@ -60,10 +63,10 @@ image_prompts:
 
 Представьте самый внешний слой кожи как защитную кирпичную стену:
 
+![Imagen de sección](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_2.webp)
+
 - **Кирпичи (Корнеоциты):** Клетки, богатые кератином, защищающие от трения.
 - **Цемент (Липидный матрикс):** Биологический цемент, состоящий из **50% Церамидов**, 25% Холестерина и 15% Свободных Жирных Кислот.
-
-![3D-иллюстрация структуры кожного барьера](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_2.webp)
 
 Когда липидный цемент разрушается, клеточная вода быстро испаряется.
 
@@ -79,9 +82,9 @@ image_prompts:
 
 Поверх кирпичной стены расположен **кислотный мантий** (pH 4.5–5.5).
 
+![Imagen de sección](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp)
+
 Эта кислая среда подавляет патогены и питает ваш **микробиом кожи**.
-
-
 
 Полезные бактерии, такие как *Staphylococcus epidermidis*, синтезируют естественную защиту. Щелочное мыло разрушает мантию.
 
@@ -95,7 +98,7 @@ image_prompts:
 2. **Агрессивные очистители:** Сульфаты растворяют липидный цемент, как жир на сковороде.
 3. **Переизбыток пилингов:** Химические кислоты удаляют защитные слои.
 
-
+![Imagen de sección](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp)
 
 :::checklist Предупреждающие знаки: Поврежден ли ваш барьер?
 - Кожа выглядит тусклой и лишена естественного сияния.
@@ -110,7 +113,7 @@ image_prompts:
 2. **Восполнение липидов:** Наносите кремы с церамидами и скваланом.
 3. **Пребиотики:** Выбирайте косметику с инулином для питания полезных бактерий.
 
-![Атравматичное очищение микроволокном UpPoly Laska Mini](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp)
+![Imagen de sección](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp)
 
 :::quiz Диагностический тест
 Q: Что является главным признаком разрушения липидного цемента?
