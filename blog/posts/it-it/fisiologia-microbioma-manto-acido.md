@@ -17,7 +17,6 @@ local_phenomenon: HVAC dry air & seasonal winds
 cover_image: ''
 media:
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_2.webp
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
 author: PepaGold
 epigraph:
@@ -84,7 +83,7 @@ Sopra il muro di mattoni si trova il **mantello acido** (pH 4.5 a 5.5).
 
 Questo ambiente acido inibisce i patogeni e nutre il tuo **microbioma cutaneo**.
 
-![Diagramma scientifico del microbioma cutaneo](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp)
+
 
 Batteri benefici come *Staphylococcus epidermidis* sintetizzano difese naturali. I saponi alcalini distruggono questa protezione.
 
