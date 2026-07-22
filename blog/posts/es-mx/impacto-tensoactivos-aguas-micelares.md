@@ -1,46 +1,84 @@
 ---
 article_id: PG-005
-title: "¿El agua micelar causa acné y sequedad? La Verdad Sobre los Detergentes en tu Cara"
-description: "Estudio dermatológico sobre la toxicidad de dejar detergentes sin enjuagar (leave-on) y la alternativa biomecánica."
+title: >-
+  ¿El agua micelar causa acné y sequedad? La Verdad Sobre los Detergentes en tu
+  Cara
+description: >-
+  Estudio dermatológico sobre la toxicidad de dejar detergentes sin enjuagar
+  (leave-on) y la alternativa biomecánica.
 slug: impacto-tensoactivos-aguas-micelares
 date: '2026-07-21'
 date_created: '2026-07-21'
 date_ai_processed: '2026-07-21'
 locale: es-mx
 category: barrera-cutanea
-category_label: "🔬 Ciencia de la Piel"
+category_label: 🔬 Ciencia de la Piel
 concept: el-impacto-de-tensoactivos-jabones-y-aguas-micelares-en-la-barrera-cut-nea
-local_phenomenon: "Contaminación por micropartículas PM2.5 en CDMX"
-cover_image: /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/gemini_generated_image_8b2pk18b2pk18b2p.webp
+local_phenomenon: Contaminación por micropartículas PM2.5 en CDMX
+cover_image: /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_1.webp
 media:
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/gemini_generated_image_8b2pk18b2pk18b2p.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_1.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_2.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_3.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_4.webp
+  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_1.webp
+  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_2.webp
+  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_3.webp
+  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_4.webp
+  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_5.webp
 author: PepaGold
 epigraph:
-  text: "El agua micelar fue creada para desmaquillar en emergencias; dejarla en tu cara es dejar detergente encendido."
-  author: "Dra. PepaGold"
+  text: >-
+    El agua micelar fue creada para desmaquillar en emergencias; dejarla en tu
+    cara es dejar detergente encendido.
+  author: Dra. PepaGold
 summary:
-  - "Las aguas micelares utilizan tensoactivos no iónicos (Poloxamer 184, PEG) que actúan como detergentes."
-  - "Instrucciones 'leave-on' (sin enjuague) dejan monómeros libres que solubilizan las ceramidas propias durante horas."
-  - "Los residuos micelares en los ojos disuelven la película lagrimal lipídica, provocando ojo seco e irritación."
-  - "La tecnología UpPoly limpia por capilaridad hidrodinámica pura, succionando la suciedad sin solventes."
+  - >-
+    Las aguas micelares utilizan tensoactivos no iónicos (Poloxamer 184, PEG)
+    que actúan como detergentes.
+  - >-
+    Instrucciones 'leave-on' (sin enjuague) dejan monómeros libres que
+    solubilizan las ceramidas propias durante horas.
+  - >-
+    Los residuos micelares en los ojos disuelven la película lagrimal lipídica,
+    provocando ojo seco e irritación.
+  - >-
+    La tecnología UpPoly limpia por capilaridad hidrodinámica pura, succionando
+    la suciedad sin solventes.
 faq:
-  - q: "¿Por qué el agua micelar dice 'sin enjuague' en la etiqueta?"
-    a: "Es un reclamo comercial de conveniencia. Dermatológicamente, todo detergente debe enjuagarse con agua tibia para evitar la extracción lipídica silente."
-  - q: "¿Qué pasa si me entra agua micelar en los ojos?"
-    a: "Los Poloxámeros disuelven los lípidos de la película lagrimal, causando ardor, enrojecimiento y conjuntivitis química de contacto."
+  - q: ¿Por qué el agua micelar dice 'sin enjuague' en la etiqueta?
+    a: >-
+      Es un reclamo comercial de conveniencia. Dermatológicamente, todo
+      detergente debe enjuagarse con agua tibia para evitar la extracción
+      lipídica silente.
+  - q: ¿Qué pasa si me entra agua micelar en los ojos?
+    a: >-
+      Los Poloxámeros disuelven los lípidos de la película lagrimal, causando
+      ardor, enrojecimiento y conjuntivitis química de contacto.
 image_prompts:
-  - '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9): Macro studio photograph of a drop of micellar liquid evaporating on skin surface, leaving behind a glowing microscopic chemical monomer film. Dusty rose palette (#D48C90), professional lighting. NO text.'
-  - '📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): Scientific 3D render showing surfactant monomer molecules (anionic vs non-ionic) penetrating stratum corneum and dissolving lipid bilayers. Medical graphic style. NO text.'
-  - '📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Microscopic diagram of micellar detergent film sitting on human skin hours post-application, solubilizing intercellular ceramides. Warm nude clay colors. NO text.'
-  - '📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Medical visualization of eye lacrimal lipid film dissolution caused by micellar water residues, leading to dry eye irritation. Clean soft aesthetic. NO text.'
-  - '📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): High resolution studio photograph of UpPoly split microfiber capillary suction lifting makeup and micellar residue using pure warm water. NO text.'
+  - >-
+    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9): Macro studio
+    photograph of a drop of micellar liquid evaporating on skin surface, leaving
+    behind a glowing microscopic chemical monomer film. Dusty rose palette
+    (#D48C90), professional lighting. NO text.
+  - >-
+    📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): Scientific 3D
+    render showing surfactant monomer molecules (anionic vs non-ionic)
+    penetrating stratum corneum and dissolving lipid bilayers. Medical graphic
+    style. NO text.
+  - >-
+    📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Microscopic
+    diagram of micellar detergent film sitting on human skin hours
+    post-application, solubilizing intercellular ceramides. Warm nude clay
+    colors. NO text.
+  - >-
+    📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Medical
+    visualization of eye lacrimal lipid film dissolution caused by micellar
+    water residues, leading to dry eye irritation. Clean soft aesthetic. NO
+    text.
+  - >-
+    📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): High
+    resolution studio photograph of UpPoly split microfiber capillary suction
+    lifting makeup and micellar residue using pure warm water. NO text.
 show_science_link: true
+date_images_applied: '2026-07-22'
 ---
-
 ¿Alguna vez te preguntaste por qué tu piel reacciona con ardor o tirantez a pesar de seguir una rutina impecable? En la dermatología moderna, la sobrecargas cosméticas y el uso de tensoactivos sintéticos son reconocidos como los principales desencadenantes de sensibilidad y envejecimiento prematuro.
 
 Este análisis científico explora la fisiología real de tu piel, desmintiendo mitos comerciales y ofreciendo un camino claro hacia la regeneración epidérmica.
@@ -49,7 +87,7 @@ Este análisis científico explora la fisiología real de tu piel, desmintiendo 
 
 El estrato córneo es la interfaz biológica principal entre tu cuerpo y el exterior. Funciona mediante corneocitos ricas en queratina suspendidos en una matriz de ceramidas, colesterol y ácidos grasos libres.
 
-![Ilustración médica 3D de la estructura epidérmica y la matriz lipídica](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_1.webp)
+![Ilustración médica 3D de la estructura epidérmica y la matriz lipídica](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_2.webp)
 
 Cuando esta matriz se perturba, la barrera pierde su densidad cristalográfica ortorrómbica, permitiendo que el agua se evapore velozmente.
 
@@ -65,7 +103,7 @@ Mantener el manto ácido en pH 4.5 - 5.5 es indispensable para que las enzimas b
 
 Tu piel alberga un ecosistema vivo de bacterias simbióticas, encabezadas por **Staphylococcus epidermidis**, que producen péptidos antimicrobianos naturales y ceramidas libres.
 
-![Visualización microscópica del microbioma cutáneo y la bacteria S. epidermidis](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_2.webp)
+![Visualización microscópica del microbioma cutáneo y la bacteria S. epidermidis](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_3.webp)
 
 Los lavados excesivos y los limpiadores alcalinos destruyen este escudo biológico (disbiosis), permitiendo la colonización de gérmenes patógenos como *S. aureus*.
 
@@ -79,7 +117,7 @@ Las agresiones químicas de los cosméticos se agravan severamente al interactua
 
 Fenómenos ambientales como **Contaminación por micropartículas PM2.5 en CDMX** ejercen un estrés osmótico extremo sobre la epidermis vulnerada:
 
-![Diagrama biofísico del impacto del estrés ambiental en la barrera cutánea](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_3.webp)
+![Diagrama biofísico del impacto del estrés ambiental en la barrera cutánea](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_4.webp)
 
 Cuando el cemento lipídico está dañado, el aire seco y la contaminación urbana actúan como una lija invisible que acelera el agrietamiento y la irritación.
 
@@ -96,7 +134,7 @@ Para restaurar una barrera dañada, la dermatología clínica recomienda la **li
 
 La tecnología textil japonesa **UpPoly** (línea Laska Mini) utiliza microfibras divididas nanométricamente que succionan la suciedad y el sebo oxidado usando exclusivamente agua tibia:
 
-![Fotografía de estudio de la limpieza biomecánica física con Laska Mini](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_4.webp)
+![Fotografía de estudio de la limpieza biomecánica física con Laska Mini](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_5.webp)
 
 Al eliminar los detergentes químicos, preservás intactos los lípidos estructurales y mantenés tu microbioma en perfecto equilibrio.
 
