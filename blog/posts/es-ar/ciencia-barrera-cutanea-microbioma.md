@@ -1,6 +1,8 @@
 ---
 article_id: PG-001
-title: "¿Te arde la cara al ponerte crema? La Ciencia de la Barrera Cutánea y Cómo Repararla"
+title: >-
+  ¿Te arde la cara al ponerte crema? La Ciencia de la Barrera Cutánea y Cómo
+  Repararla
 description: >-
   Descubrí por qué te arde la cara al ponerte crema o por qué te tira la piel al
   salir de la ducha. Aprendé a reparar tu barrera cutánea paso a paso.
@@ -14,13 +16,14 @@ category_label: Ciencia & Piel
 concept: barrera-cutanea-y-microbioma
 local_phenomenon: Viento Zonda
 region_label: Salta, Argentina
-cover_image: /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
+cover_image: /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_1.webp
 media:
-  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_1.webp
   - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_1.webp
   - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_2.webp
   - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_3.webp
   - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_4.webp
+  - >-
     /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp
 author: PepaGold
 epigraph:
@@ -45,7 +48,9 @@ faq:
       El ciclo de renovación celular dura entre 14 y 28 días. Con higiene
       atraumática y ceramidas biomiméticas sentirás alivio en 3 a 5 días y
       recuperación total en 4 semanas.
-  - q: ¿Por qué razón mi piel siente ardor y tirantez cuando me aplico crema hidratante habitual?
+  - q: >-
+      ¿Por qué razón mi piel siente ardor y tirantez cuando me aplico crema
+      hidratante habitual?
     a: >-
       El ardor es el síntoma #1 de microfisuras en el estrato córneo. Sin
       cemento lipídico ni manto ácido, la crema toma contacto directo con
@@ -107,8 +112,8 @@ image_prompts:
     lens f/2.0. Completely clean beauty imagery. NO text, NO logos, NO
     watermarks.
 show_science_link: true
+date_images_applied: '2026-07-22'
 ---
-
 ¿Sentís que la piel te arde apenas te ponés cualquier crema? O salís de la ducha y la cara te tira como si te hubieras puesto pegamento. No, no es paranoia tuya: tu barrera cutánea te está pidiendo ayuda a gritos.
 
 Detrás de esa tirantez constante, el ardor o los brotes inesperados, suele haber un único culpable: una barrera cutánea fisurada y un microbioma desequilibrado.
@@ -120,7 +125,7 @@ Imaginá la capa más externa de tu piel como una pared de ladrillos diseñada p
 - **Los Ladrillos (Corneocitos):** Células súper resistentes empaquetadas con queratina que te protegen de rasguños y fricción.
 - **El Cemento (Matriz Lipídica):** El pegamento biológico que mantiene unidos los ladrillos. Está compuesto por **Ceramidas (50%)**, Colesterol (25%) y Ácidos Grasos Libres (15%).
 
-![Diagrama 3D de la arquitectura de la piel: ladrillos de queratina y cemento lipídico](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_2.webp)
+![Diagrama 3D de la arquitectura de la piel: ladrillos de queratina y cemento lipídico](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_1.webp)
 
 Cuando ese cemento lipídico se degrada, la humedad de tu piel se escapa y cualquier bacteria entra sin pedir permiso.
 
@@ -138,7 +143,7 @@ Por encima de esa pared de ladrillos tenés una película protectora invisible d
 
 Este ambiente ácido desactiva bacterias dañinas y crea el hábitat ideal para tu **microbioma cutáneo**: millones de bacterias buenas que viven en tu piel y luchan por vos.
 
-![Ecosistema del microbioma cutáneo y bacterias benéficas en superficie](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_3.webp)
+![Ecosistema del microbioma cutáneo y bacterias benéficas en superficie](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_2.webp)
 
 Bacterias benéficas como el _Staphylococcus epidermidis_ se alimentan de tus lípidos naturales y sintetizan defensas naturales contra patógenos. Si usás jabones comunes alcalinos, destruís el manto ácido y tus bacterias protectoras mueren.
 
@@ -154,7 +159,7 @@ Tu piel soporta agresiones diarias, pero tiene un límite:
 2. **Limpiadores Agresivos (Sulfatos):** Tensoactivos pesados como SLS o SLES disuelven tu matriz lipídica como si fuera grasa en un sartén.
 3. **Exfoliación Excesiva:** Usar ácidos o cepillos físicos con demasiada frecuencia retira capas protectoras antes de su regeneración.
 
-![Microfisuras en el estrato córneo causadas por clima seco y sulfatos](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_4.webp)
+![Microfisuras en el estrato córneo causadas por clima seco y sulfatos](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_3.webp)
 
 :::checklist Señales de Alarma: ¿Tu barrera está rota?
 - Tu piel se ve opaca y sin luz natural.
@@ -171,7 +176,7 @@ La regla de oro para reparar la piel es muy simple: **dejar de agredirla**.
 2. **Reposición Lipídica:** Utilizá cremas enriquecidas con ceramidas, ácido hialurónico y escualano.
 3. **Prebióticos Tópicos:** Preferí cosméticos con inulina para nutrir las bacterias benéficas y reequilibrar la flora cutánea.
 
-![Limpieza atraumática sin fricción con tecnología de microfibra Laska Mini](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp)
+![Limpieza atraumática sin fricción con tecnología de microfibra Laska Mini](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_4.webp)
 
 :::quiz Test de Diagnóstico Cutáneo
 Q: ¿Cuál es el síntoma más claro de que tu barrera cutánea perdió su cemento lipídico?
