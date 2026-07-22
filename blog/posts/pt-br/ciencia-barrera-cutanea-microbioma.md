@@ -51,10 +51,10 @@ Por trás do repuxamento constante e da ardência existe uma barreira comprometi
 
 Imagine a camada externa da sua pele como uma parede de tijolos protetora:
 
+![Imagen de sección](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_2.webp)
+
 - **Tijolos (Córneocitos):** Células ricas em queratina que protegem contra a fricção física.
 - **Cimento (Matriz Lipídica):** Cimento biológico composto por **50% de Ceramidas**, 25% de Colesterol e 15% de Ácidos Graxos Livres.
-
-![Ilustração 3D da estrutura de tijolos e cimento da barreira cutânea](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_2.webp)
 
 Quando o cimento lipídico se degrada, a água evapora rapidamente.
 
@@ -70,9 +70,9 @@ Para um cimento cutâneo impenetrável, ceramidas, colesterol e ácidos graxos d
 
 Sobre a parede de tijolos existe um escudo invisível: o **manto ácido** (pH 4.5 a 5.5).
 
-Este ambiente ácido inibe bactérias nocivas enquanto nutre o **microbioma cutâneo**.
+![Imagen de sección](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_3.webp)
 
-![Diagrama científico do microbioma cutâneo e S. epidermidis](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_3.webp)
+Este ambiente ácido inibe bactérias nocivas enquanto nutre o **microbioma cutâneo**.
 
 Bactérias benéficas como *Staphylococcus epidermidis* sintetizam defesas naturais. Sabões alcalinos destroem essa proteção.
 
@@ -86,7 +86,7 @@ A disbiose ocorre quando os micróbios benéficos são removidos, desencadeando 
 2. **Sabões agressivos (Sulfatos):** Tensoativos dissolvem o cimento lipídico como gordura na frigideira.
 3. **Esfoliação excessiva:** Ácidos químicos removem camadas protetoras.
 
-![Microfissuras no estrato córneo causadas por sabões](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_4.webp)
+![Imagen de sección](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_4.webp)
 
 :::checklist Sinais de alerta: Sua barreira está danificada?
 - Pele opaca e sem luminosidade natural.
@@ -101,7 +101,7 @@ A disbiose ocorre quando os micróbios benéficos são removidos, desencadeando 
 2. **Reposição lipídica:** Aplique cremes enriquecidos com ceramidas, ácido hialurônico e esqualano.
 3. **Prebióticos tópicos:** Escolha cosméticos com inulina para nutrir as bactérias boas.
 
-![Limpeza física atraumática com microfibra UpPoly Laska Mini](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_5.webp)
+![Imagen de sección](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_5.webp)
 
 :::quiz Teste diagnóstico
 Q: Qual é o principal indicador de degradação do cimento lipídico?
