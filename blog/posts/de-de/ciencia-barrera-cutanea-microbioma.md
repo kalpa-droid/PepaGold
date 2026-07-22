@@ -16,12 +16,10 @@ local_phenomenon: HVAC dry air & seasonal winds
 cover_image: /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_1.webp
 media:
   - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_1.webp
-  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_1.webp
-  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_2.webp
-  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_3.webp
-  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_4.webp
-  - >-
-    /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_4.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_2.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_3.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_4.webp
+  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_5.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -56,7 +54,7 @@ Stellen Sie sich die äußerste Schicht Ihrer Haut wie eine Schutzmauer aus Zieg
 - **Ziegel (Korneozyten):** Keratinreiche Zellen, die vor mechanischer Reibung schützen.
 - **Zement (Lipidmatrix):** Biologischer Zement aus **50% Ceramiden**, 25% Cholesterin und 15% freien Fettsäuren.
 
-![3D-Illustration der Ziegel-und-Mörtel-Struktur](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_1.webp)
+![3D-Illustration der Ziegel-und-Mörtel-Struktur](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_2.webp)
 
 Wenn der Lipidzement degradiert, verdunstet Zellwasser schnell.
 
@@ -74,7 +72,7 @@ Für eine undurchdringliche Hautmauer müssen Ceramide, Cholesterin und Fettsäu
 
 Dieses saure Milieu hemmt Krankheitserreger und nährt Ihr **Hautmikrobiom**.
 
-![Wissenschaftliches Diagramm des Hautmikrobioms](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_2.webp)
+![Wissenschaftliches Diagramm des Hautmikrobioms](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_3.webp)
 
 Nützliche Bakterien wie *Staphylococcus epidermidis* bilden natürliche Abwehrstoffe. Alkalische Seifen zerstören diesen Schutz.
 
@@ -88,7 +86,7 @@ Dysbiose entsteht, wenn nützliche Mikroben ausgewaschen werden, was zu chronisc
 2. **Aggressive Reiniger (Sulfate):** Mizellen und Sulfate lösen Lipidzement wie Fett in einer Pfanne.
 3. **Übermäßige Exfoliation:** Chemische Säuren entfernen Schutzschichten vor der Regeneration.
 
-![Mikrorisse in der Hornschicht](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_3.webp)
+![Mikrorisse in der Hornschicht](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_4.webp)
 
 :::checklist Warnzeichen: Ist Ihre Barriere geschädigt?
 - Die Haut wirkt fahl und glanzlos.
@@ -103,7 +101,7 @@ Dysbiose entsteht, wenn nützliche Mikroben ausgewaschen werden, was zu chronisc
 2. **Lipidversorgung:** Verwenden Sie Cremes mit Ceramiden, Hyaluronsäure und Squalansäure.
 3. **Präbiotika:** Wählen Sie Kosmetika mit Inulin zur Nahrung nützlicher Bakterien.
 
-![Atraumatische Reinigung mit UpPoly Mikrofaser Laska Mini](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_4.webp)
+![Atraumatische Reinigung mit UpPoly Mikrofaser Laska Mini](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_5.webp)
 
 :::quiz Diagnosetest
 Q: Was ist das Hauptanzeichen für den Abbau des Lipidzements?
