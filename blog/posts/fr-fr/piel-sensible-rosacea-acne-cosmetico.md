@@ -13,13 +13,13 @@ category: barrera-cutanea
 category_label: 🔬 Science de la Peau
 concept: piel-sensible-ros-cea-y-acn-cosm-tico-diagn-stico-y-estrategias-de-limpieza
 local_phenomenon: HVAC dry air & seasonal winds
-cover_image: ''
+cover_image: /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_1.webp
 media:
-  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
-  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_1.webp
-  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_2.webp
-  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_3.webp
-  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_1.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_2.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_3.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_4.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_5.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -53,6 +53,7 @@ image_prompts:
     green accents, and ivory nude. Soothing, tranquil studio lighting
     atmosphere. Shot on 100mm f/2.8 macro lens, shallow depth of field. Clean
     serene composition. NO text, NO watermarks, NO logos.
+date_images_applied: '2026-07-22'
 ---
 Ressentez-vous des picotements lorsque vous appliquez votre crème hydratante ? Votre barrière cutanée demande de l'aide.
 
@@ -62,7 +63,7 @@ Derrière les tiraillements constants et les rougeurs se cache une barrière cut
 
 Imaginez la couche externe de votre peau comme un mur de briques protecteur :
 
-![Imagen de sección](/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_1.webp)
+![Imagen de sección](/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_2.webp)
 
 - **Les briques (Cornéocytes) :** Cellules riches en kératine protégeant contre la friction physique.
 - **Le ciment (Matrice lipidique) :** Ciment biologique composé de **50% de céramides**, 25% de cholestérol et 15% d'acides gras libres.
@@ -81,7 +82,7 @@ Pour un ciment cutané solide, les céramides, le cholestérol et les acides gra
 
 Au-dessus du mur de briques se trouve le **manteau acide** (pH 4.5 à 5.5).
 
-![Imagen de sección](/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_2.webp)
+![Imagen de sección](/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_3.webp)
 
 Cet environnement acide inhibe les agents pathogènes tout en nourrissant votre **microbiote cutané**.
 
@@ -97,7 +98,7 @@ La dysbiose survient lorsque les microbes bénéfiques disparaissent, provoquant
 2. **Nettoyants agressifs :** Les sulfates dissolvent le ciment lipidique.
 3. **Exfoliation excessive :** Les acides chimiques retirent les couches protectrices.
 
-![Imagen de sección](/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_3.webp)
+![Imagen de sección](/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_4.webp)
 
 :::checklist Signes d'alarme : Votre barrière est-elle abîmée ?
 - Peau terne et manque d'éclat.
@@ -112,7 +113,7 @@ La dysbiose survient lorsque les microbes bénéfiques disparaissent, provoquant
 2. **Reconstitution lipidique :** Appliquez des soins enrichis en céramides et squalane.
 3. **Prébiotiques :** Choisissez des formules à l'inuline pour nourrir les bonnes bactéries.
 
-![Imagen de sección](/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp)
+![Imagen de sección](/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_5.webp)
 
 :::quiz Test de diagnostic
 Q: Quel est le symptôme principal de la dégradation du ciment lipidique ?
