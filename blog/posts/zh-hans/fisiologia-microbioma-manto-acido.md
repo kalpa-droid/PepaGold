@@ -15,7 +15,6 @@ local_phenomenon: HVAC dry air & seasonal winds
 cover_image: ''
 media:
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_2.webp
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
 author: PepaGold
@@ -70,7 +69,7 @@ image_prompts:
 
 您的皮肤栖息着以 **表皮葡萄球菌（S. epidermidis）** 为首的共生菌群，它们能生成抗菌肽和游离神经酰胺。
 
-![皮肤微生物组微观显微图](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp)
+
 
 :::info 炎症性菌群失调
 有益菌的流失直接导致健康皮肤出现过敏、红斑或化妆品性痤疮。
