@@ -1,8 +1,7 @@
 ---
 article_id: PG-004
 title: Наука о Кожном Барьере и Микробиоме
-description: Узнайте все о науке кожного барьера, микробиома и кислотной мантии pH
-  5.5.
+description: Узнайте все о науке кожного барьера, микробиома и кислотной мантии pH 5.5.
 slug: piel-sensible-rosacea-acne-cosmetico
 date: '2026-07-21'
 date_created: '2026-07-21'
@@ -14,36 +13,43 @@ concept: piel-sensible-ros-cea-y-acn-cosm-tico-diagn-stico-y-estrategias-de-limp
 local_phenomenon: HVAC dry air & seasonal winds
 cover_image: /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_1.webp
 media:
-- /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
-- /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_1.webp
-- /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_2.webp
-- /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_3.webp
-- /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_2.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_3.webp
+  - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
 author: PepaGold
 epigraph:
-  text: Коже не нужна лишняя химия; ей нужна свобода для самостоятельного восстановления.
+  text: >-
+    Коже не нужна лишняя химия; ей нужна свобода для самостоятельного
+    восстановления.
   author: Д-р PepaGold
 summary:
-- Кожный барьер — это липидный матрикс из церамидов, холестерина и жирных кислот.
-- Кислотная мантия (pH 4.5-5.5) и микробиом образуют первую линию биологической защиты.
-- Сухой климат и агрессивные очистители создают микротрещины.
-- Восстановление требует атравматичного физического очищения.
+  - >-
+    Кожный барьер — это липидный матрикс из церамидов, холестерина и жирных
+    кислот.
+  - >-
+    Кислотная мантия (pH 4.5-5.5) и микробиом образуют первую линию
+    биологической защиты.
+  - Сухой климат и агрессивные очистители создают микротрещины.
+  - Восстановление требует атравматичного физического очищения.
 faq:
-- q: Сколько времени требуется для восстановления кожного барьера?
-  a: Обновление клеток занимает 14–28 дней.
-- q: Почему лицо жжет при нанесении крема?
-  a: Жжение указывает на микротрещины в роговом слое.
+  - q: Сколько времени требуется для восстановления кожного барьера?
+    a: Обновление клеток занимает 14–28 дней.
+  - q: Почему лицо жжет при нанесении крема?
+    a: Жжение указывает на микротрещины в роговом слое.
 show_science_link: true
 image_prompts:
-- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+  - >-
+    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
 
-  Editorial beauty macro photography depicting sensitive skin relief. Split visual
-  narrative on a woman''s delicate face: a faint rosy flushed cheek on one side, seamlessly
-  transitioning into calm, velvety hydrated skin refreshed by a soft, luxurious Laska
-  Mini UpPoly micro-cloth soaked in cool water. Aesthetic palette of muted dusty rose
-  (#D48C90), soft botanical sage green accents, and ivory nude. Soothing, tranquil
-  studio lighting atmosphere. Shot on 100mm f/2.8 macro lens, shallow depth of field.
-  Clean serene composition. NO text, NO watermarks, NO logos.'
+    Editorial beauty macro photography depicting sensitive skin relief. Split
+    visual narrative on a woman's delicate face: a faint rosy flushed cheek on
+    one side, seamlessly transitioning into calm, velvety hydrated skin
+    refreshed by a soft, luxurious Laska Mini UpPoly micro-cloth soaked in cool
+    water. Aesthetic palette of muted dusty rose (#D48C90), soft botanical sage
+    green accents, and ivory nude. Soothing, tranquil studio lighting
+    atmosphere. Shot on 100mm f/2.8 macro lens, shallow depth of field. Clean
+    serene composition. NO text, NO watermarks, NO logos.
 ---
 Чувствуете ли вы жжение при нанесении обычного увлажняющего крема? Ваш кожный барьер просит о помощи.
 
@@ -53,7 +59,7 @@ image_prompts:
 
 Представьте самый внешний слой кожи как защитную кирпичную стену:
 
-![Imagen de sección](/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_1.webp)
+
 
 - **Кирпичи (Корнеоциты):** Клетки, богатые кератином, защищающие от трения.
 - **Цемент (Липидный матрикс):** Биологический цемент, состоящий из **50% Церамидов**, 25% Холестерина и 15% Свободных Жирных Кислот.
