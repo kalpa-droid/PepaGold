@@ -18,7 +18,6 @@ cover_image: /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.we
 media:
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -147,7 +146,7 @@ Para recuperar una barrera destruida, la dermatología moderna aconseja eliminar
 
 La tecnología textil de microfibra japonesa **UpPoly** (presente en la línea Laska Mini) utiliza filamentos divididos nanométricamente que funcionan como micro-aspiradores pasivos:
 
-![Fotografía de estudio de la limpieza física atraumática con microfibra Laska Mini](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp)
+
 
 Al humedecer la fibra exclusivamente con agua tibia, la tensión capilar retira restos de maquillaje, sebo oxidado y contaminación sin disolver las ceramidas ni alterar el pH 5.5 de tu rostro.
 
