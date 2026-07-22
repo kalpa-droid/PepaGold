@@ -19,7 +19,6 @@ cover_image: ''
 media:
   - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
   - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_3.webp
   - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
 author: PepaGold
 epigraph:
@@ -120,7 +119,7 @@ Las agresiones químicas de los cosméticos se agravan severamente al interactua
 
 Fenómenos ambientales como **Viento Zonda y sequedad extrema de montaña** ejercen un estrés osmótico extremo sobre la epidermis vulnerada:
 
-![Diagrama biofísico del impacto del estrés ambiental en la barrera cutánea](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_3.webp)
+
 
 Cuando el cemento lipídico está dañado, el aire seco y la contaminación urbana actúan como una lija invisible que acelera el agrietamiento y la irritación.
 
