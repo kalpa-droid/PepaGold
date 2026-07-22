@@ -18,7 +18,6 @@ local_phenomenon: Viento Zonda y sequedad extrema de montaña
 cover_image: ''
 media:
   - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_1.webp
   - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp
   - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_3.webp
   - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
@@ -91,7 +90,7 @@ Este análisis científico explora la fisiología real de tu piel, desmintiendo 
 
 El estrato córneo es la interfaz biológica principal entre tu cuerpo y el exterior. Funciona mediante corneocitos ricas en queratina suspendidos en una matriz de ceramidas, colesterol y ácidos grasos libres.
 
-![Ilustración médica 3D de la estructura epidérmica y la matriz lipídica](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_1.webp)
+
 
 Cuando esta matriz se perturba, la barrera pierde su densidad cristalográfica ortorrómbica, permitiendo que el agua se evapore velozmente.
 
