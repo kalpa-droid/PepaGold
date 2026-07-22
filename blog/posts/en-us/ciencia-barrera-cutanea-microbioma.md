@@ -59,10 +59,10 @@ Behind constant tightness and burning lies a compromised skin barrier and an imb
 
 Imagine the outermost layer of your skin as a protective brick wall:
 
+![Imagen de sección](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_2.webp)
+
 - **Bricks (Corneocytes):** Keratin-packed cells protecting against physical friction.
 - **Mortar (Lipid Matrix):** Biological cement composed of **50% Ceramides**, 25% Cholesterol, and 15% Free Fatty Acids.
-
-![3D illustration of skin barrier architecture](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_2.webp)
 
 When the lipid mortar degrades over time, internal cellular water escapes rapidly into the surrounding dry atmosphere.
 
@@ -78,9 +78,9 @@ For impenetrable skin mortar, ceramides, cholesterol, and fatty acids must exist
 
 Above the brick wall lies an invisible hydro-lipid shield called the **acid mantle** (pH 4.5 to 5.5).
 
-This acidic habitat inhibits pathogens while nourishing your **skin microbiome**.
+![Imagen de sección](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_3.webp)
 
-![Scientific diagram of skin microbiome ecosystem](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_3.webp)
+This acidic habitat inhibits pathogens while nourishing your **skin microbiome**.
 
 Symbiotic bacteria like *Staphylococcus epidermidis* synthesize natural antimicrobial defenses.
 
@@ -94,7 +94,7 @@ Dysbiosis occurs when beneficial microbes are stripped away, triggering chronic 
 2. **Aggressive Cleansers (Sulfates):** Heavy surfactants dissolve lipid mortar like grease in a pan.
 3. **Over-Exfoliation:** Chemical acids remove protective layers before cellular regeneration.
 
-![Micro-cracks in stratum corneum](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_4.webp)
+![Imagen de sección](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_4.webp)
 
 :::checklist Warning Signs: Is your barrier damaged?
 - Skin appears dull and lacks natural luminosity.
@@ -109,7 +109,7 @@ Dysbiosis occurs when beneficial microbes are stripped away, triggering chronic 
 2. **Lipid Replenishment:** Use creams enriched with ceramides and squalane.
 3. **Topical Prebiotics:** Choose cosmetic formulations with inulin to nourish commensal bacteria.
 
-![Atraumatic physical cleaning with UpPoly microfiber Laska Mini](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_5.webp)
+![Imagen de sección](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_5.webp)
 
 :::quiz Barrier Diagnostic Test
 Q: What is the primary indicator of lipid mortar breakdown?
