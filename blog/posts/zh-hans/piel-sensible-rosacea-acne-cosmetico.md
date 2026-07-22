@@ -10,7 +10,7 @@ locale: zh-hans
 category: barrera-cutanea
 category_label: "🔬 皮肤科学"
 concept: piel-sensible-ros-cea-y-acn-cosm-tico-diagn-stico-y-estrategias-de-limpieza
-local_phenomenon: "城市雾霾 PM2.5 与季节性干旱风"
+local_phenomenon: "HVAC dry air & seasonal winds"
 cover_image: /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_1.webp
 media:
   - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_1.webp
@@ -25,13 +25,13 @@ epigraph:
 summary:
   - "敏感肌具有高反应度的皮下神经网络与脆弱的面部微毛细血管。"
   - "化妆品性痤疮是由于残留产品堵塞毛孔引发，不同于激素引起的寻常痤疮。"
-  - "表面活性剂剥离脂质后，面部血管会代偿性扩张，加重酒渣鼻（酒槽鼻）。"
+  - "表面活性剂剥离脂质后，面部血管会代偿性扩张，加重酒渣鼻。"
   - "UpPoly 超细纤维可以零化学表面活性剂吸附污垢，帮助神经与毛细血管休养生息。"
 faq:
   - q: "化妆品性痤疮和寻常痤疮有什么区别？"
-    a: "化妆品性痤疮主要是由重质护肤品或未冲洗干净的卸妆水堵塞毛孔引起的密集小粉刺，而非体内激素波动所致。"
+    a: "化妆品性痤疮主要是由重质护肤品或未冲洗干净的卸妆水堵塞毛孔引起的。"
   - q: "洗热水澡会加重泛红和酒渣鼻吗？"
-    a: "是的。高热会导致面部微毛细血管剧烈扩张，加重潮红与神经性炎症。"
+    a: "是的。高热会导致面部微毛细血管剧烈扩张。"
 show_science_link: true
 ---
 
@@ -50,7 +50,7 @@ show_science_link: true
 :::
 
 :::tip 缓解热应激
-切勿用热水洗脸；高热会导致面部毛细血管扩张，加重酒渣鼻（酒槽鼻）泛红。
+切勿用热水洗脸；高热会导致面部毛细血管扩张，加重酒渣鼻泛红。
 :::
 
 ## **化妆品性痤疮 VS 寻常痤疮：识别堵塞型粉刺**
@@ -59,19 +59,15 @@ show_science_link: true
 
 ![毛囊堵塞与细菌滋生的显微示意图](/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_2.webp)
 
-重质乳化剂与硅油会封堵皮脂，引发局部的毛囊炎症和密集的均匀小粉刺。
-
 :::info 酒渣鼻诱发因素
 化学表面活性剂会剥离天然脂质，迫使血管扩张作为防御机制。
 :::
 
 ## **环境压力源：城市污染与气温骤变**
 
-环境暴露如 **城市雾霾 PM2.5 与季节性干旱风** 会加剧皮肤反应：
+环境暴露如城市雾霾 PM2.5 与干旱风会加剧皮肤反应：
 
 ![空气污染对反应性肌肤影响的生物物理图](/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_3.webp)
-
-当脂质屏障遭到破坏时，悬浮颗粒物会深入渗透至表皮层，导致慢性泛红。
 
 :::checklist 自测清单：您的肌肤是否正遭受化妆品不耐受？
 - 涂抹面霜或精华后，面部立即感觉刺痛或泛红。
@@ -82,13 +78,9 @@ show_science_link: true
 
 ## **纯物理舒缓：UpPoly 无创清洁技术**
 
-为了阻断敏感循环，皮肤科医生建议从日常护理中剔除合成刺激物。
-
 日本 **UpPoly** 超细纤维（Laska Mini 系列）仅需温水即可吸附彩妆与污垢：
 
 ![Laska Mini 舒缓清洁工作室写真](/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp)
-
-零表面活性剂清洁能够抚平高反应度的神经，让受损的微毛细血管得以休养生息。
 
 :::quiz 化妆品性痤疮与寻常痤疮的主要区别是什么？
 - 化妆品性痤疮是由产品封闭毛孔诱发，而非由激素波动引起 *correct*

@@ -1,143 +1,95 @@
 ---
-article_id: PG-005
-title: 卸妆水会导致致痘和干燥吗？揭开面部表面活性剂的真相
-description: 关于免洗清洁剂对肌肤屏障毒性与流体物理清洁替代方案的皮肤学研究。
+article_id: PG-002
+title: "卸妆水会导致致痘和干燥吗？揭开面部表面活性剂的真相"
+description: "关于免洗清洁剂对肌肤屏障毒性与流体物理清洁替代方案的皮肤学研究。"
 slug: impacto-tensoactivos-aguas-micelares
 date: '2026-07-21'
 date_created: '2026-07-21'
 date_ai_processed: '2026-07-21'
 locale: zh-hans
 category: barrera-cutanea
-category_label: 🔬 Ciencia de la Piel
+category_label: "🔬 皮肤科学"
 concept: el-impacto-de-tensoactivos-jabones-y-aguas-micelares-en-la-barrera-cut-nea
-local_phenomenon: 城市雾霾 PM2.5 与季节性干旱风
+local_phenomenon: "HVAC dry air & seasonal winds"
 cover_image: /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_1.webp
 media:
   - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_1.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_2.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_3.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_4.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_5.webp
+  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_1.webp
+  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_2.webp
+  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_3.webp
+  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_4.webp
 author: PepaGold
 epigraph:
-  text: >-
-    El agua micelar fue creada para desmaquillar en emergencias; dejarla en tu
-    cara es dejar detergente encendido.
-  author: Dra. PepaGold
+  text: "卸妆水是为了紧急卸妆而设计的；让它残留在脸上就等于让洗涤剂在脸上持续作用。"
+  author: "PepaGold 博士"
 summary:
-  - >-
-    Las aguas micelares utilizan tensoactivos no iónicos (Poloxamer 184, PEG)
-    que actúan como detergentes.
-  - >-
-    Instrucciones 'leave-on' (sin enjuague) dejan monómeros libres que
-    solubilizan las ceramidas propias durante horas.
-  - >-
-    Los residuos micelares en los ojos disuelven la película lagrimal lipídica,
-    provocando ojo seco e irritación.
-  - >-
-    La tecnología UpPoly limpia por capilaridad hidrodinámica pura, succionando
-    la suciedad sin solventes.
+  - "卸妆水使用非离子表面活性剂（Poloxamer 184、PEG），其作用类似于工业清洁剂。"
+  - "“免洗”说明会导致游离单体在数小时内溶解皮肤自有的神经酰胺。"
+  - "眼周残留的胶束成分会溶解泪膜脂质层，导致干眼症和刺激。"
+  - "UpPoly 技术通过纯水动力毛细作用清洁，无需化学溶剂即可吸出污垢。"
 faq:
-  - q: ¿Por qué el agua micelar dice 'sin enjuague' en la etiqueta?
-    a: >-
-      Es un reclamo comercial de conveniencia. Dermatológicamente, todo
-      detergente debe enjuagarse con agua tibia para evitar la extracción
-      lipídica silente.
-  - q: ¿Qué pasa si me entra agua micelar en los ojos?
-    a: >-
-      Los Poloxámeros disuelven los lípidos de la película lagrimal, causando
-      ardor, enrojecimiento y conjuntivitis química de contacto.
-image_prompts:
-  - >-
-    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9): Macro studio
-    photograph of a drop of micellar liquid evaporating on skin surface, leaving
-    behind a glowing microscopic chemical monomer film. Dusty rose palette
-    (#D48C90), professional lighting. NO text.
-  - >-
-    📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): Scientific 3D
-    render showing surfactant monomer molecules (anionic vs non-ionic)
-    penetrating stratum corneum and dissolving lipid bilayers. Medical graphic
-    style. NO text.
-  - >-
-    📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Microscopic
-    diagram of micellar detergent film sitting on human skin hours
-    post-application, solubilizing intercellular ceramides. Warm nude clay
-    colors. NO text.
-  - >-
-    📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Medical
-    visualization of eye lacrimal lipid film dissolution caused by micellar
-    water residues, leading to dry eye irritation. Clean soft aesthetic. NO
-    text.
-  - >-
-    📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): High
-    resolution studio photograph of UpPoly split microfiber capillary suction
-    lifting makeup and micellar residue using pure warm water. NO text.
+  - q: "为什么卸妆水标签上写着“无需冲洗”？"
+    a: "这是商业便利宣传。在皮肤学上，所有表面活性剂都必须用温水冲洗。"
+  - q: "如果卸妆水进眼睛会怎么样？"
+    a: "泊洛沙姆（Poloxamer）会溶解泪膜中的脂质，引起灼热感和刺激。"
 show_science_link: true
-date_images_applied: '2026-07-22'
 ---
-Are you wondering why your skin feels tight or breaks out despite using gentle micellar water? In modern dermatology, leaving cleansing surfactants on the skin is recognized as a major trigger for chronic inflammation and sensitivity.
 
-## **Detergent Chemistry: Free Monomers and Critical Micelle Concentration**
+您是否想过为什么使用温和的卸妆水后，皮肤依然感觉紧绷或长痘？在现代皮肤学中，将清洁表面活性剂留在皮肤上被认作导致慢性炎症的罪魁祸首。
 
-The stratum corneum is your skin's primary protective barrier. It relies on keratin-rich corneocytes surrounded by a lipid matrix of ceramides, cholesterol, and free fatty acids.
+## **表面活性剂化学：游离单体与临界胶束浓度**
 
-![3D medical illustration of epidermal structure and lipid matrix](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_2.webp)
+角质层是皮肤的第一道防御屏障。它依赖于由神经酰胺、胆固醇和游离脂肪酸组成的脂质基质。
 
-When surfactants sit on the skin, free monomeric molecules penetrate lipid bilayers, disrupting their protective structure and dramatically increasing water loss.
+![表面活性剂单体渗透角质层3D渲染图](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_1.webp)
+
+当表面活性剂残留在皮肤上时，游离单体分子会渗透脂质双分子层，溶解屏障结构并加速水分流失。
 
 :::stat
-**Transepidermal Water Loss (TEWL):** Unrinsed surfactants elevate TEWL by up to **300%**, causing immediate tightness and allergen vulnerability.
+**经皮水分流失（TEWL）：** 免洗表面活性剂会导致 TEWL 增加高达 **300%**。
 :::
 
-:::tip The pH 5.5 Secret
-Keeping the acid mantle at pH 4.5 - 5.5 is essential for beta-glucocerebrosidase enzymes to synthesize natural ceramides.
+:::tip pH 5.5 的奥秘
+将皮脂膜维持在 pH 4.5 - 5.5 是 β-葡萄糖脑苷脂酶自然合成神经酰胺的必要条件。
 :::
 
-## **The Myth of 'No Rinse' Micellar Water: Silent Lipid Solubilization**
+## **“免洗”卸妆水的误区：隐蔽的脂质溶解**
 
-Your skin hosts a living ecosystem of symbiotic bacteria led by *Staphylococcus epidermidis*, which produce natural antimicrobial peptides and free ceramides.
+您的皮肤栖息着以 **表皮葡萄球菌（S. epidermidis）** 为首的共生菌群。
 
-![Microscopic visualization of skin microbiome and S. epidermidis](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_3.webp)
+![皮肤微生物组微观显微图](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_2.webp)
 
-Leaving detergent monomers on your skin destroys this beneficial microbiome, allowing pathogenic bacteria like *S. aureus* to take over.
+残留在皮肤上的洗涤单体会破坏这一有益菌群，导致致病菌滋生。
 
-:::info Inflammatory Dysbiosis
-The loss of protective bacteria leads directly to hypersensitivity, rosacea flare-ups, and cosmetic acne.
+:::info 炎症性菌群失调
+有益菌的流失直接导致健康皮肤出现过敏、红斑或化妆品性痤疮。
 :::
 
-## **Periocular Toxicity: Disruption of the Tear Film**
+## **眼周毒性：泪膜脂质层的破坏**
 
-The chemical aggression of leave-on surfactants is further magnified under environmental exposure.
+在眼周，卸妆水残留会破坏脆弱的泪膜脂质层，引发干眼症与慢性睑缘炎。
 
-Environmental factors like **dry indoor heating and mountain winds** place severe osmotic stress on compromised skin:
+![眼部泪膜脂质层破坏示意图](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_3.webp)
 
-![Biophysical diagram of environmental stress on skin barrier](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_4.webp)
-
-Around the eyes, micellar surfactants breakdown the delicate tear film lipid layer, leading to dry eye syndrome and chronic blepharitis.
-
-:::checklist Checklist: Is micellar water damaging your skin?
-- You use micellar water every night without rinsing with water afterwards.
-- You feel slight stinging or burning on your eyelids after removing eye makeup.
-- You notice small breakouts on your cheeks and jawline.
-- Your skin feels tight and dull despite applying moisturizer.
+:::checklist 自测清单：卸妆水是否正在伤害您的皮肤？
+- 您每晚使用卸妆水后，不再用清水洗脸。
+- 卸眼妆后，眼睑有轻微的刺痛感或灼热感。
+- 颊部和下巴周围频繁长出小粉刺。
+- 尽管涂抹了保湿霜，皮肤仍感觉紧绷无光泽。
 :::
 
-## **The Physical Revolution: Hydrodynamic Capillarity with UpPoly Microfiber**
+## **物理革新：UpPoly 超细纤维的流体毛细作用**
 
-To restore damaged skin, clinical dermatology recommends **atraumatic physical cleansing by capillarity**.
+日本 **UpPoly** 超细纤维技术（Laska Mini 系列）仅需温水即可吸附彩妆与氧化皮脂：
 
-Japanese **UpPoly** microfibers (Laska Mini line) use split nanothreads that suction makeup and oxidized sebum using only warm water:
+![Laska Mini 物理清洁工作室写真](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_4.webp)
 
-![Studio photography of biomechanical physical cleaning with Laska Mini](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_5.webp)
-
-By eliminating chemical detergents, you preserve your structural lipids and keep your microbiome balanced.
-
-:::quiz What is the unanimous dermatological recommendation after using micellar water?
-- Always rinse the face with warm water to remove surfactant residues *correct*
-- Let the product air-dry on the skin
-- Apply glycolic acid immediately afterwards
+:::quiz 使用卸妆水后，皮肤科医生的统一建议是什么？
+- 始终用温水冲洗面部，以清除表面活性剂残留 *correct*
+- 让产品在皮肤上自然风干
+- 随后立即涂抹水杨酸或果酸
 :::
 
-## **Conclusion: True Skin Health**
+## **结语：真正健康的肌肤**
 
-Caring for your face does not require dozens of chemical solvents. It requires respecting your skin's biology, protecting its acid mantle, and allowing it to heal naturally.
+护理面部无需几十种化学溶剂。尊重皮肤生物学，保护酸性膜，才能恢复自然健康。

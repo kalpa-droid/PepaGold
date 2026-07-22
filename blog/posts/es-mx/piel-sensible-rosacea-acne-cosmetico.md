@@ -2,14 +2,14 @@
 article_id: PG-003
 title: "¿Rojez, Rosácea o Granitos inesperados? Cómo Calmar la Piel Sensible Sin Químicos"
 description: "Diferencias clínicas entre rosácea, piel reactiva y acné cosmético. Cómo calmar la inflamación endotelial."
-slug: piel-sensible-rosacea-acne-cosmetico
+slug: fisiologia-microbioma-manto-acido
 date: '2026-07-21'
 date_created: '2026-07-21'
 date_ai_processed: '2026-07-21'
 locale: es-mx
 category: barrera-cutanea
 category_label: "🔬 Ciencia de la Piel"
-concept: piel-sensible-rosacea-y-acne-cosmetico
+concept: fisiolog-a-y-ecolog-a-de-la-barrera-cut-nea-din-mica-del-microbioma-mantos-hidrolip-dicos-y-estrategias-terap-uticas-avanzadas
 local_phenomenon: "Contaminación por micropartículas PM2.5 en CDMX"
 cover_image: /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/gemini_generated_image_8b2pk18b2pk18b2p.webp
 media:

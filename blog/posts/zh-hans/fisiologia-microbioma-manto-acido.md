@@ -1,5 +1,5 @@
 ---
-article_id: PG-004
+article_id: PG-003
 title: "面部紧绷与暗沉？探索皮肤微生态与酸性保护膜的秘密"
 description: "探索表皮葡萄球菌（Staphylococcus epidermidis）如何自动合成天然神经酰胺并调节肌肤 pH 5.5。"
 slug: fisiologia-microbioma-manto-acido
@@ -10,7 +10,7 @@ locale: zh-hans
 category: barrera-cutanea
 category_label: "🔬 皮肤科学"
 concept: fisiolog-a-y-ecolog-a-de-la-barrera-cut-nea-din-mica-del-microbioma-mantos-hidrolip-dicos-y-estrategias-terap-uticas-avanzadas
-local_phenomenon: "城市雾霾 PM2.5 与季节性干旱风"
+local_phenomenon: "HVAC dry air & seasonal winds"
 cover_image: /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
 media:
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
@@ -20,7 +20,7 @@ media:
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/cuerpo_4.webp
 author: PepaGold
 epigraph:
-  text: "皮肤不需要叠加更多化学成分；它需要的是自我修复的自由。"
+  text: "皮肤不需要叠加更多化学成分；它 need 的是自我修复的自由。"
   author: "PepaGold 博士"
 summary:
   - "表皮葡萄球菌（S. epidermidis）编码鞘磷脂酶（sph），直接在表皮生成神经酰胺 2 和 5。"
@@ -29,15 +29,13 @@ summary:
   - "肠-皮轴研究表明，肠道通透性增加（肠漏）会直接反映为面部炎症与敏感。"
 faq:
   - q: "表皮葡萄球菌如何帮助皮肤合成神经酰胺？"
-    a: "该有益菌分泌鞘磷脂酶，可将皮肤表面的鞘脂转化为游离神经酰胺，从而修补皮肤屏障。"
+    a: "该有益菌分泌鞘磷脂酶，可将皮肤表面的鞘脂转化为游离神经酰胺。"
   - q: "什么是肠-皮轴？"
-    a: "肠-皮轴是消化系统与肌肤屏障的生物学纽带。肠道菌群失调释放的内毒素会通过血液循环加剧面部炎症。"
+    a: "肠-皮轴是消化系统与肌肤屏障的生物学纽带。"
 show_science_link: true
 ---
 
 您是否曾感到即使使用高端护肤品，皮肤依然泛红、刺痛或极度紧绷？在现代临床皮肤学中，过度护肤与合成表面活性剂被认作导致肌肤屏障受损的主要诱因。
-
-本篇科学深度解析将带您探索真实的皮肤生理学，揭开商业宣传的误区，寻找肌肤自我再生的明确路径。
 
 ## **脂质结晶学：正交相向六方相的转变**
 
@@ -48,7 +46,7 @@ show_science_link: true
 当该基质受到破坏时，它会失去正交（OR）结晶密实度，导致水分迅速蒸发。
 
 :::stat
-**经皮水分流失（TEWL）：** 脂质排列遭到破坏会导致 TEWL 增加高达 **300%**，引发即刻的紧绷感与过敏隐患。
+**经皮水分流失（TEWL）：** 脂质排列遭到破坏会导致 TEWL 增加高达 **300%**。
 :::
 
 :::tip pH 5.5 的奥秘
@@ -61,19 +59,15 @@ show_science_link: true
 
 ![皮肤微生物组微观显微图](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/cuerpo_2.webp)
 
-过度清洁和碱性皂类会破坏这一生物屏障（菌群失调），导致金黄色葡萄球菌等致病菌滋生。
-
 :::info 炎症性菌群失调
 有益菌的流失直接导致健康皮肤出现过敏、红斑或化妆品性痤疮。
 :::
 
 ## **肠-皮轴：消化健康如何调控面部炎症**
 
-环境因素如 **城市雾霾 PM2.5 与季节性干旱风** 会对受损皮肤施加剧烈的渗透压压力：
+环境因素如城市雾霾 PM2.5 与干旱风会对受损皮肤施加剧烈的渗透压压力：
 
 ![环境压力对皮肤屏障影响生物物理图](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/cuerpo_3.webp)
-
-肠道通透性增加会导致细菌内毒素（LPS）进入血液循环，加剧面部微炎症。
 
 :::checklist 自测清单：您的皮肤微生物组是否失调？
 - 您使用 pH 值高于 7.0 的碱性皂清洁面部。
@@ -84,13 +78,9 @@ show_science_link: true
 
 ## **后生元与无创物理清洁：滋养原生生态**
 
-皮肤科医生建议采用 **流体物理毛细管无创清洁** 来修复受损屏障。
-
 日本 **UpPoly** 超细纤维技术（Laska Mini 系列）仅需温水即可吸附彩妆与氧化皮脂：
 
 ![Laska Mini 物理清洁工作室写真](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/cuerpo_4.webp)
-
-消除化学表面活性剂，能够完整保留结构脂质，维持微生物组平衡。
 
 :::quiz 表皮葡萄球菌的哪个基因负责在皮肤中直接合成神经酰胺？
 - sph 基因（细菌鞘磷脂酶） *correct*

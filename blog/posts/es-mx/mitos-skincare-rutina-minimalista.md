@@ -2,14 +2,14 @@
 article_id: PG-002
 title: "¿Tu rutina de 10 pasos te está arruinando la piel? Mitos del Skincare Desmentidos"
 description: "El peligro de la sobre-exfoliación, el Skin Fasting y por qué acumular productos destruye la regeneración celular."
-slug: mitos-skincare-rutina-minimalista
+slug: impacto-tensoactivos-aguas-micelares
 date: '2026-07-21'
 date_created: '2026-07-21'
 date_ai_processed: '2026-07-21'
 locale: es-mx
 category: rutinas-minimalismo
 category_label: "🧘‍♀️ Rutinas y Skinimalismo"
-concept: desmitificacion-clinica-del-cuidado-facial
+concept: el-impacto-de-tensoactivos-jabones-y-aguas-micelares-en-la-barrera-cut-nea
 local_phenomenon: "Contaminación por micropartículas PM2.5 en CDMX"
 cover_image: /assets/imagenes/blog/mitos-skincare-rutina-minimalista/gemini_generated_image_8b2pk18b2pk18b2p.webp
 media:

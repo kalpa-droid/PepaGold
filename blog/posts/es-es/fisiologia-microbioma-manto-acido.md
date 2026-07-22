@@ -1,5 +1,5 @@
 ---
-article_id: PG-004
+article_id: PG-003
 title: ¿Piel tirante y apagada? La Ciencia del Microbioma Cutáneo y el Manto Ácido
 description: >-
   Análisis biológico de la bacteria protectora Staphylococcus epidermidis y el
@@ -11,7 +11,7 @@ date_ai_processed: '2026-07-21'
 locale: es-es
 category: barrera-cutanea
 category_label: 🔬 Ciencia de la Piel
-concept: >-
+concept: fisiolog-a-y-ecolog-a-de-la-barrera-cut-nea-din-mica-del-microbioma-mantos-hidrolip-dicos-y-estrategias-terap-uticas-avanzadas
   fisiolog-a-y-ecolog-a-de-la-barrera-cut-nea-din-mica-del-microbioma-mantos-hidrolip-dicos-y-estrategias-terap-uticas-avanzadas
 local_phenomenon: Polvo sahariano (Calima) y calor mediterráneo
 cover_image: /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
@@ -81,6 +81,7 @@ image_prompts:
 show_science_link: true
 date_images_applied: '2026-07-21'
 ---
+
 # ¿Piel tirante y apagada? La Ciencia del Microbioma Cutáneo y el Manto Ácido
 
 ¿Alguna vez sentiste que la piel te arde repentinamente al ponerte tu crema de siempre, o que te levantás con la cara tirante y llena de imperfecciones sin explicación? No estás sola: tu barrera cutánea te está enviando una señal de auxilio.

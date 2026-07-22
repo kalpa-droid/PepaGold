@@ -10,10 +10,10 @@ locale: zh-hans
 category: rutinas-minimalismo
 category_label: "🧘‍♀️ 极简护肤"
 concept: el-skinimalismo-y-la-reducci-n-de-pasos-en-el-skincare
-local_phenomenon: "城市雾霾 PM2.5 与季节性干旱风"
-cover_image: /assets/imagenes/blog/mitos-skincare-rutina-minimalista/gemini_generated_image_8b2pk18b2pk18b2p.webp
+local_phenomenon: "HVAC dry air & seasonal winds"
+cover_image: /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp
 media:
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/gemini_generated_image_8b2pk18b2pk18b2p.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp
   - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_1.webp
   - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp
   - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_3.webp
@@ -24,14 +24,14 @@ epigraph:
   author: "PepaGold 博士"
 summary:
   - "叠加多种精华和酸类会导致角质层充斥着竞争性防腐剂与乳化剂。"
-  - "频繁洗脸控油会剥离天然神经酰胺，引发皮脂腺代偿性大量出油（油脂反弹）。"
+  - "频繁洗脸控油会剥离天然神经酰胺，引发皮脂腺代偿性大量出油。"
   - "极简护肤（Skinimalism）主张精简护肤步骤，强化皮肤天然屏障力。"
   - "UpPoly 超细纤维仅需温水即可卸除彩妆与污垢，提供 2 分钟无创夜间护理。"
 faq:
   - q: "什么是极简护肤（Skinimalism）？"
-    a: "极简护肤是一种皮肤学倡导的理念，主张使用最少、高效、无刺激的步骤，让皮肤屏障自然恢复。"
+    a: "极简护肤是一种主张使用最少、高效、无刺激步骤的皮肤学理念。"
   - q: "为什么洗脸越勤，皮肤反而越容易出油？"
-    a: "过度清洁剥离了天然脂质，导致皮脂腺收到‘干燥信号’，从而分泌双倍油脂进行自我保护。"
+    a: "过度清洁剥离了天然脂质，导致皮脂腺收到干燥信号，分泌双倍油脂保护。"
 show_science_link: true
 ---
 
@@ -42,8 +42,6 @@ show_science_link: true
 层层叠加精华、酸类与重质面霜会导致角质层充斥着化学防腐剂。
 
 ![产品在表皮层堆积的3D医学示意图](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_1.webp)
-
-化学残留非但不能改善肤质，反而会干扰细胞的自然更新。
 
 :::stat
 **屏障降解：** 过度叠加活性成分会导致皮肤刺激风险增加 **250%**。
@@ -59,19 +57,15 @@ show_science_link: true
 
 ![皮脂腺过度分泌的微观渲染图](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp)
 
-作为代偿性防御机制，皮脂腺会分泌双倍油脂，导致油光满面。
-
 :::info 皮脂平衡
 保留天然脂质层能够维持皮脂腺分泌平衡。
 :::
 
 ## **极简护肤（Skinimalism）：化繁为简，重塑健康**
 
-环境压力考验着皮肤的自然御力：
+践行 **极简护肤（Skinimalism）** 可以减少化学负担，强化肌底防御。
 
 ![环境暴露对极简护肤方案的影响图](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_3.webp)
-
-践行 **极简护肤（Skinimalism）** 可以减少化学负担，强化肌底防御。
 
 :::checklist 自测清单：您是否处于过度护肤状态？
 - 每天早晚护肤耗时超过 15 分钟。
@@ -82,13 +76,9 @@ show_science_link: true
 
 ## **极简护理方案：UpPoly 纯水清洁**
 
-利用 **无创物理清洁** 简化您的夜间护理。
-
 日本 **UpPoly** 超细纤维（Laska Mini 系列）仅需温水即可吸附彩妆与污垢：
 
 ![Laska Mini 极简护肤工作室写真](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp)
-
-告别合成洁面乳，不仅省时高效，更能让皮肤自然呼吸。
 
 :::quiz 什么是极简护肤（Skinimalism）？
 - 倡导精简、高效、无刺激护肤步骤的皮肤学理念 *correct*

@@ -1,5 +1,5 @@
 ---
-article_id: PG-005
+article_id: PG-002
 title: >-
   ¿El agua micelar causa acné y sequedad? La Verdad Sobre los Detergentes en tu
   Cara
@@ -79,6 +79,7 @@ image_prompts:
 show_science_link: true
 date_images_applied: '2026-07-22'
 ---
+
 ¿Alguna vez te preguntaste por qué tu piel reacciona con ardor o tirantez a pesar de seguir una rutina impecable? En la dermatología moderna, la sobrecargas cosméticas y el uso de tensoactivos sintéticos son reconocidos como los principales desencadenantes de sensibilidad y envejecimiento prematuro.
 
 Este análisis científico explora la fisiología real de tu piel, desmintiendo mitos comerciales y ofreciendo un camino claro hacia la regeneración epidérmica.
