@@ -98,3 +98,26 @@ Todo título debe combinar la búsqueda real que hacen las chicas en Google/TikT
    - Si una región no posee un fenómeno local directo, usar una traducción genérica equivalente (*"vientos secos"*, *"dry winds"*, *"干燥风"*).
 4. **Cero Duplicados:**
    - En cada carpeta regional (`blog/posts/{locale}/`), debe existir **únicamente 1 archivo `.md` por `article_id`**.
+
+---
+
+## 🚀 8. Flujo de Trabajo Automatizado (Desde Informe Técnico hasta Git Push)
+
+Cuando el usuario indique que subió un nuevo informe técnico (ejemplo: *"He subido el informe PG-006"* en `/reports/PG-006.txt` o en el chat), el Agente IA ejecutará **automáticamente e íntegramente** los siguientes 6 pasos sin requerir intervención manual:
+
+1. **Lectura y Conciencia Histórica:**
+   - Leer el informe `/reports/PG-XXX.txt`.
+   - Comparar contra los informes anteriores (`PG-001` a `PG-005`) para garantizar un título, enfoque, checklist, quiz y prompts de imagen 100% únicos.
+2. **Generación del Artículo en Español (`es-ar`):**
+   - Crear `blog/posts/es-ar/{slug}.md` siguiendo las reglas de tono, jerarquía H2 (sin H1 en cuerpo) y bloques dinámicos (`:::checklist`, `:::quiz`, `:::stat`, `:::tip`, `:::info`).
+3. **Traducción Nativa e Identidad Multilingüe:**
+   - Traducir al 100% el artículo en las 9 carpetas restantes (`en-us`, `fr-fr`, `de-de`, `it-it`, `pt-br`, `ru-ru`, `zh-hans`, `es-mx`, `es-es`).
+   - Sincronizar de forma estricta los metadatos `article_id`, `slug` y `concept`.
+4. **Compilación del Sitio:**
+   - Ejecutar `/home/mappo/Kalpagrafica/PepaGold/venv/bin/python build_blog.py` para generar los 50 artículos estáticos HTML.
+5. **Auditoría Completa y Control de Calidad Automático:**
+   - Ejecutar `/home/mappo/Kalpagrafica/PepaGold/venv/bin/python audit_all.py`.
+   - Verificar que `validate_translations.py` (artículos) y `validate_site_translations.py` (estructura) retornen `🟢 0 errores`.
+6. **Publicación y Deploy a GitHub:**
+   - Realizar `git add .`, `git commit` y `git push origin main` únicamente si la auditoría dio luz verde en 100%. Si hay cualquier advertencia o error, corregirlo de inmediato antes de subir.
+
