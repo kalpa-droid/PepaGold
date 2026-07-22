@@ -14,8 +14,12 @@ category_label: 🔬 Ciencia de la Piel
 concept: >-
   fisiolog-a-y-ecolog-a-de-la-barrera-cut-nea-din-mica-del-microbioma-mantos-hidrolip-dicos-y-estrategias-terap-uticas-avanzadas
 local_phenomenon: Viento Zonda y sequedad extrema de montaña
-cover_image: ''
+cover_image: /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
 media:
+  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp
+  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_2.webp
+  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
+  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
 author: PepaGold
 epigraph:
@@ -93,10 +97,10 @@ En el afán de lograr una "piel perfecta", muchas veces caemos en rutinas sobrec
 
 La capa más superficial de tu piel (el estrato córneo) funciona exactamente como una pared protectora de alta tecnología:
 
+![Imagen de sección](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_2.webp)
+
 - **Los Ladrillos (Corneocitos):** Células ricas en queratina que protegen contra roces y agresiones externas.
 - **El Cemento (Matriz Lipídica):** Un complejo biológico compuesto por **50% Ceramidas**, 25% Colesterol y 15% Ácidos Grasos Libres.
-
-
 
 Cuando los limpiadores con tensoactivos o jabones alcalinos disuelven este cemento lipídico, la pared se fractura. El agua de tu rostro se evapora velozmente y las bacterias penetran directamente.
 
@@ -112,9 +116,9 @@ Tu piel posee un manto protector con un pH natural de **4.5 a 5.5**. Mantener es
 
 Sobre tu piel habita una micro-comunidad viva de bacterias simbióticas, donde destaca **Staphylococcus epidermidis**.
 
+![Imagen de sección](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp)
+
 Esta bacteria amiga no solo se alimenta de los aceites naturales, sino que secreta péptidos antimicrobianos que previenen brotes de acné y rojeces.
-
-
 
 Cuando abusás de jabones espumosos o aguas micelares sin enjuague, erradicás a tus bacterias protectoras. El resultado es un desequilibrio (disbiosis) que abre la puerta a bacterias patógenas.
 
@@ -126,9 +130,9 @@ La pérdida de diversidad microbiana es la causa directa por la cual pieles sana
 
 El daño bioquímico causado por productos inadecuados se multiplica exponencialmente al interactuar con el entorno ambiental.
 
+![Imagen de sección](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp)
+
 Fenómenos como **Viento Zonda y sequedad extrema de montaña** ejercen un estrés osmótico severo sobre la epidermis:
-
-
 
 Si la matriz lipídica está debilitada, el aire seco y los contaminantes actúan como una "lija invisible", desencadenando descamación, tirantez y alergias por contacto.
 
@@ -143,9 +147,9 @@ Si la matriz lipídica está debilitada, el aire seco y los contaminantes actúa
 
 Para recuperar una barrera destruida, la dermatología moderna aconseja eliminar la agresión química y adoptar la **limpieza física por capilaridad**.
 
-La tecnología textil de microfibra japonesa **UpPoly** (presente en la línea Laska Mini) utiliza filamentos divididos nanométricamente que funcionan como micro-aspiradores pasivos:
+![Imagen de sección](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp)
 
-![Fotografía de estudio de la limpieza física atraumática con microfibra Laska Mini](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp)
+La tecnología textil de microfibra japonesa **UpPoly** (presente en la línea Laska Mini) utiliza filamentos divididos nanométricamente que funcionan como micro-aspiradores pasivos:
 
 Al humedecer la fibra exclusivamente con agua tibia, la tensión capilar retira restos de maquillaje, sebo oxidado y contaminación sin disolver las ceramidas ni alterar el pH 5.5 de tu rostro.
 
