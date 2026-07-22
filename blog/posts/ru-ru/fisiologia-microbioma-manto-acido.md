@@ -15,7 +15,6 @@ local_phenomenon: HVAC dry air & seasonal winds
 cover_image: ''
 media:
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_2.webp
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
 author: PepaGold
 epigraph:
@@ -82,7 +81,7 @@ image_prompts:
 
 Эта кислая среда подавляет патогены и питает ваш **микробиом кожи**.
 
-![Схема микробиома кожи и S. epidermidis](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp)
+
 
 Полезные бактерии, такие как *Staphylococcus epidermidis*, синтезируют естественную защиту. Щелочное мыло разрушает мантию.
 
