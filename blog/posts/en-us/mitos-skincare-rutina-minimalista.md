@@ -16,7 +16,6 @@ local_phenomenon: HVAC dry air & seasonal winds
 cover_image: ''
 media:
   - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_1.webp
   - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp
   - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_3.webp
   - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
@@ -70,7 +69,7 @@ Behind constant tightness and burning lies a compromised skin barrier and an imb
 
 Imagine the outermost layer of your skin as a protective brick wall:
 
-![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_1.webp)
+
 
 - **Bricks (Corneocytes):** Keratin-packed cells protecting against physical friction.
 - **Mortar (Lipid Matrix):** Biological cement composed of **50% Ceramides**, 25% Cholesterol, and 15% Free Fatty Acids.
