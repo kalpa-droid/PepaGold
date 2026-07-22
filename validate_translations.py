@@ -129,6 +129,16 @@ def main():
         if not meta.get("cover_image"):
             problems.append(f"[IMAGEN PORTADA] {path}: le falta el campo 'cover_image' en el frontmatter")
 
+        # 5) Verificación física de imágenes en disco
+        all_imgs = list(body_images)
+        if meta.get("cover_image"):
+            all_imgs.append(meta["cover_image"])
+        for img_rel in all_imgs:
+            img_clean = img_rel.strip().lstrip('/')
+            img_disk_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), img_clean)
+            if not os.path.exists(img_disk_path):
+                problems.append(f"[IMAGEN EN DISCO] {path}: el archivo de imagen '{img_rel}' NO existe físicamente en el servidor.")
+
     # 3) Consistencia de concepto y slugs entre idiomas del mismo article_id
     for article_id, concepts in concept_by_article.items():
         if len(concepts) > 1:
