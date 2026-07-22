@@ -11,10 +11,13 @@ category: barrera-cutanea
 category_label: 🔬 Ciência da Pele
 concept: el-skinimalismo-y-la-reducci-n-de-pasos-en-el-skincare
 local_phenomenon: HVAC dry air & seasonal winds
-cover_image: ''
+cover_image: /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp
 media:
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_1.webp
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_2.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_3.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_4.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_5.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -50,6 +53,7 @@ image_prompts:
     linen textures. Organic soft shadows, peaceful zen aesthetic. Shot on
     Hasselblad 85mm f/2.0 lens. Completely clean minimalist composition. NO
     text, NO watermarks, NO brand logos.
+date_images_applied: '2026-07-22'
 ---
 Você sente a pele ardendo ao aplicar seu creme hidratante habitual? Sua barreira cutânea está pedindo socorro.
 
@@ -59,7 +63,7 @@ Por trás do repuxamento constante e da ardência existe uma barreira comprometi
 
 Imagine a camada externa da sua pele como uma parede de tijolos protetora:
 
-![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_1.webp)
+![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_2.webp)
 
 - **Tijolos (Córneocitos):** Células ricas em queratina que protegem contra a fricção física.
 - **Cimento (Matriz Lipídica):** Cimento biológico composto por **50% de Ceramidas**, 25% de Colesterol e 15% de Ácidos Graxos Livres.
@@ -78,7 +82,7 @@ Para um cimento cutâneo impenetrável, ceramidas, colesterol e ácidos graxos d
 
 Sobre a parede de tijolos existe um escudo invisível: o **manto ácido** (pH 4.5 a 5.5).
 
-![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp)
+![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_3.webp)
 
 Este ambiente ácido inibe bactérias nocivas enquanto nutre o **microbioma cutâneo**.
 
@@ -94,7 +98,7 @@ A disbiose ocorre quando os micróbios benéficos são removidos, desencadeando 
 2. **Sabões agressivos (Sulfatos):** Tensoativos dissolvem o cimento lipídico como gordura na frigideira.
 3. **Esfoliação excessiva:** Ácidos químicos removem camadas protetoras.
 
-
+![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_4.webp)
 
 :::checklist Sinais de alerta: Sua barreira está danificada?
 - Pele opaca e sem luminosidade natural.
@@ -109,7 +113,7 @@ A disbiose ocorre quando os micróbios benéficos são removidos, desencadeando 
 2. **Reposição lipídica:** Aplique cremes enriquecidos com ceramidas, ácido hialurônico e esqualano.
 3. **Prebióticos tópicos:** Escolha cosméticos com inulina para nutrir as bactérias boas.
 
-
+![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_5.webp)
 
 :::quiz Teste diagnóstico
 Q: Qual é o principal indicador de degradação do cimento lipídico?
