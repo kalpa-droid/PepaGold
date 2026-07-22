@@ -3,9 +3,7 @@ article_id: PG-004
 title: >-
   Pelle che Tira e Spenta? La Scienza del Microbioma Cutaneo e del Mantello
   Acido
-description: >-
-  Análisis biológico de la bacteria protectora Staphylococcus epidermidis y el
-  pH 5.5 de tu piel.
+description: "Scopri come il batterio Staphylococcus epidermidis produce ceramidi naturali e regola il pH 5.5 del tuo viso."
 slug: fisiologia-microbioma-manto-acido
 date: '2026-07-21'
 date_created: '2026-07-21'

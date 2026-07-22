@@ -1,9 +1,7 @@
 ---
 article_id: PG-004
 title: Tight, Dull Skin? The Science of the Skin Microbiome & Acid Mantle
-description: >-
-  Análisis biológico de la bacteria protectora Staphylococcus epidermidis y el
-  pH 5.5 de tu piel.
+description: "Discover how Staphylococcus epidermidis bacteria produce natural ceramides and regulate your skin pH 5.5."
 slug: fisiologia-microbioma-manto-acido
 date: '2026-07-21'
 date_created: '2026-07-21'

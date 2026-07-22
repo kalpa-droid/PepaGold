@@ -1,9 +1,7 @@
 ---
 article_id: PG-004
 title: 面部紧绷与暗沉？探索皮肤微生态与酸性保护膜的秘密
-description: >-
-  Análisis biológico de la bacteria protectora Staphylococcus epidermidis y el
-  pH 5.5 de tu piel.
+description: "探索表皮葡萄球菌（Staphylococcus epidermidis）如何自动合成天然神经酰胺并调节肌肤 pH 5.5。"
 slug: fisiologia-microbioma-manto-acido
 date: '2026-07-21'
 date_created: '2026-07-21'

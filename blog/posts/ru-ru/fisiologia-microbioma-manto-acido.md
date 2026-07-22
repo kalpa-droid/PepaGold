@@ -1,9 +1,7 @@
 ---
 article_id: PG-004
 title: Стянуть и тусклая кожа? Наука о кожном микробиоме и кислотной мантии
-description: >-
-  Análisis biológico de la bacteria protectora Staphylococcus epidermidis y el
-  pH 5.5 de tu piel.
+description: "Узнайте, как бактерия Staphylococcus epidermidis производит натуральные церамиды и регулирует pH 5.5 вашей кожи."
 slug: fisiologia-microbioma-manto-acido
 date: '2026-07-21'
 date_created: '2026-07-21'

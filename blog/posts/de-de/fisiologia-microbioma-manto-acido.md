@@ -3,9 +3,7 @@ article_id: PG-004
 title: >-
   Spannende, fahl wirkende Haut? Die Wissenschaft des Hautmikrobioms &
   Säureschutzmantels
-description: >-
-  Análisis biológico de la bacteria protectora Staphylococcus epidermidis y el
-  pH 5.5 de tu piel.
+description: "Erfahren Sie, wie das Bakterium Staphylococcus epidermidis natürliche Ceramide herstellt und den pH-Wert 5.5 Ihrer Haut reguliert."
 slug: fisiologia-microbioma-manto-acido
 date: '2026-07-21'
 date_created: '2026-07-21'

@@ -1,9 +1,7 @@
 ---
 article_id: PG-004
 title: Pele Repuxada e Sem Vida? A Ciência do Microbioma Cutâneo e do Manto Ácido
-description: >-
-  Análisis biológico de la bacteria protectora Staphylococcus epidermidis y el
-  pH 5.5 de tu piel.
+description: "Descubra como a bactéria Staphylococcus epidermidis fabrica ceramidas naturais e regula o pH 5.5 do seu rosto."
 slug: fisiologia-microbioma-manto-acido
 date: '2026-07-21'
 date_created: '2026-07-21'

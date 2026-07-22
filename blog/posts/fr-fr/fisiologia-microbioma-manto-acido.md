@@ -1,9 +1,7 @@
 ---
 article_id: PG-004
 title: Peau Tirable et Terne ? La Science du Microbiome Cutané et du Manteau Acide
-description: >-
-  Análisis biológico de la bacteria protectora Staphylococcus epidermidis y el
-  pH 5.5 de tu piel.
+description: "Découvrez comment la bactérie Staphylococcus epidermidis fabrique des céramides naturelles et régule le pH 5.5 de votre visage."
 slug: fisiologia-microbioma-manto-acido
 date: '2026-07-21'
 date_created: '2026-07-21'
