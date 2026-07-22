@@ -15,7 +15,6 @@ local_phenomenon: HVAC dry air & seasonal winds
 cover_image: ''
 media:
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_2.webp
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
 author: PepaGold
 epigraph:
@@ -79,7 +78,7 @@ image_prompts:
 
 环境因素如城市雾霾 PM2.5 与干旱风会对受损皮肤施加剧烈的渗透压压力：
 
-![环境压力对皮肤屏障影响生物物理图](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp)
+
 
 :::checklist 自测清单：您的皮肤微生物组是否失调？
 - 您使用 pH 值高于 7.0 的碱性皂清洁面部。
