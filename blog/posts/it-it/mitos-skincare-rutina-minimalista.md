@@ -13,11 +13,13 @@ category: barrera-cutanea
 category_label: 🔬 Scienza della Pelle
 concept: el-skinimalismo-y-la-reducci-n-de-pasos-en-el-skincare
 local_phenomenon: HVAC dry air & seasonal winds
-cover_image: ''
+cover_image: /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp
 media:
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_1.webp
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_3.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_2.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_3.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_4.webp
+  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_5.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -51,6 +53,7 @@ image_prompts:
     linen textures. Organic soft shadows, peaceful zen aesthetic. Shot on
     Hasselblad 85mm f/2.0 lens. Completely clean minimalist composition. NO
     text, NO watermarks, NO brand logos.
+date_images_applied: '2026-07-22'
 ---
 Senti bruciore quando applichi la tua solita crema idratante? La tua barriera cutanea sta chiedendo aiuto.
 
@@ -60,7 +63,7 @@ Dietro la sensazione di tensione e arrossamento si cela una barriera compromessa
 
 Immagina lo strato più esterno della tua pelle come un muro di mattoni protettivo:
 
-![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_1.webp)
+![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_2.webp)
 
 - **Mattoni (Corneociti):** Cellule ricche di cheratina che proteggono dalla frizione.
 - **Cemento (Matrice lipidica):** Cemento biologico composto per il **50% da Ceramidi**, 25% Colesterolo e 15% Acidi Grassi.
@@ -79,7 +82,7 @@ Per un cemento cutaneo solido, ceramidi, colesterolo e acidi grassi devono rispe
 
 Sopra il muro di mattoni si trova il **mantello acido** (pH 4.5 a 5.5).
 
-![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp)
+![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_3.webp)
 
 Questo ambiente acido inibisce i patogeni e nutre il tuo **microbioma cutaneo**.
 
@@ -95,7 +98,7 @@ La disbiosi si verifica quando i microbi benefici vengono eliminati, innescando 
 2. **D detergenti aggressivi:** I solfati sciolgono il cemento lipidico come il grasso in padella.
 3. **Esfoliazione eccessiva:** Gli acidi chimici rimuovono gli strati protettivi.
 
-![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_3.webp)
+![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_4.webp)
 
 :::checklist Segnali d'allarme: La tua barriera è danneggiata?
 - Pelle spenta e priva di luminosità.
@@ -110,7 +113,7 @@ La disbiosi si verifica quando i microbi benefici vengono eliminati, innescando 
 2. **Ripristino lipidico:** Applica creme arricchite con ceramidi e squalane.
 3. **Prebiotici topici:** Scegli formule con inulina per nutrire i batteri buoni.
 
-
+![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_5.webp)
 
 :::quiz Test diagnostico
 Q: Qual è il segnale principale del degrado del cemento lipidico?
