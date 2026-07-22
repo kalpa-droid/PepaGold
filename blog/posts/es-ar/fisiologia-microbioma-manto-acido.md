@@ -16,7 +16,6 @@ concept: >-
 local_phenomenon: Viento Zonda y sequedad extrema de montaña
 cover_image: ''
 media:
-  - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_4.webp
   - /assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_5.webp
 author: PepaGold
@@ -116,7 +115,7 @@ Sobre tu piel habita una micro-comunidad viva de bacterias simbióticas, donde d
 
 Esta bacteria amiga no solo se alimenta de los aceites naturales, sino que secreta péptidos antimicrobianos que previenen brotes de acné y rojeces.
 
-![Representación científica del microbioma cutáneo y la bacteria protectora S. epidermidis](/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_3.webp)
+
 
 Cuando abusás de jabones espumosos o aguas micelares sin enjuague, erradicás a tus bacterias protectoras. El resultado es un desequilibrio (disbiosis) que abre la puerta a bacterias patógenas.
 
