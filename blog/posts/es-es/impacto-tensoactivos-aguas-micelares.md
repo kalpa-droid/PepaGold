@@ -18,9 +18,15 @@ local_phenomenon: Polvo sahariano (Calima) y calor mediterráneo
 cover_image: /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_1.webp
 media:
   - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_1.webp
+  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_1.webp
   - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_2.webp
+  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_2.webp
   - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_3.webp
+  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_3.webp
+  - >-
+    /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/gemini_generated_image_8b2pk18b2pk18b2p.webp
   - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_4.webp
+  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_4.webp
   - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_5.webp
 author: PepaGold
 epigraph:
@@ -42,7 +48,9 @@ summary:
     La tecnología UpPoly limpia por capilaridad hidrodinámica pura, succionando
     la suciedad sin solventes.
 faq:
-  - q: ¿Por qué razón el agua micelar indica en su etiqueta comercial que es un producto sin enjuague?
+  - q: >-
+      ¿Por qué razón el agua micelar indica en su etiqueta comercial que es un
+      producto sin enjuague?
     a: >-
       Es un reclamo comercial de conveniencia. Dermatológicamente, todo
       detergente debe enjuagarse con agua tibia para evitar la extracción
@@ -79,7 +87,6 @@ image_prompts:
 show_science_link: true
 date_images_applied: '2026-07-22'
 ---
-
 ¿Alguna vez te preguntaste por qué tu piel reacciona con ardor o tirantez a pesar de seguir una rutina impecable? En la dermatología moderna, la sobrecargas cosméticas y el uso de tensoactivos sintéticos son reconocidos como los principales desencadenantes de sensibilidad y envejecimiento prematuro.
 
 Este análisis científico explora la fisiología real de tu piel, desmintiendo mitos comerciales y ofreciendo un camino claro hacia la regeneración epidérmica.
@@ -88,7 +95,7 @@ Este análisis científico explora la fisiología real de tu piel, desmintiendo 
 
 El estrato córneo es la interfaz biológica principal entre tu cuerpo y el exterior. Funciona mediante corneocitos ricas en queratina suspendidos en una matriz de ceramidas, colesterol y ácidos grasos libres.
 
-![Ilustración médica 3D de la estructura epidérmica y la matriz lipídica](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_2.webp)
+![Ilustración médica 3D de la estructura epidérmica y la matriz lipídica](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_1.webp)
 
 Cuando esta matriz se perturba, la barrera pierde su densidad cristalográfica ortorrómbica, permitiendo que el agua se evapore velozmente.
 
@@ -104,7 +111,7 @@ Mantener el manto ácido en pH 4.5 - 5.5 es indispensable para que las enzimas b
 
 Tu piel alberga un ecosistema vivo de bacterias simbióticas, encabezadas por **Staphylococcus epidermidis**, que producen péptidos antimicrobianos naturales y ceramidas libres.
 
-![Visualización microscópica del microbioma cutáneo y la bacteria S. epidermidis](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_3.webp)
+![Visualización microscópica del microbioma cutáneo y la bacteria S. epidermidis](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_2.webp)
 
 Los lavados excesivos y los limpiadores alcalinos destruyen este escudo biológico (disbiosis), permitiendo la colonización de gérmenes patógenos como *S. aureus*.
 
@@ -118,7 +125,7 @@ Las agresiones químicas de los cosméticos se agravan severamente al interactua
 
 Fenómenos ambientales como **Polvo sahariano (Calima) y calor mediterráneo** ejercen un estrés osmótico extremo sobre la epidermis vulnerada:
 
-![Diagrama biofísico del impacto del estrés ambiental en la barrera cutánea](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_4.webp)
+![Diagrama biofísico del impacto del estrés ambiental en la barrera cutánea](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_2.webp)
 
 Cuando el cemento lipídico está dañado, el aire seco y la contaminación urbana actúan como una lija invisible que acelera el agrietamiento y la irritación.
 
@@ -135,7 +142,7 @@ Para restaurar una barrera dañada, la dermatología clínica recomienda la **li
 
 La tecnología textil japonesa **UpPoly** (línea Laska Mini) utiliza microfibras divididas nanométricamente que succionan la suciedad y el sebo oxidado usando exclusivamente agua tibia:
 
-![Fotografía de estudio de la limpieza biomecánica física con Laska Mini](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_5.webp)
+![Fotografía de estudio de la limpieza biomecánica física con Laska Mini](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_3.webp)
 
 Al eliminar los detergentes químicos, preservás intactos los lípidos estructurales y mantenés tu microbioma en perfecto equilibrio.
 
