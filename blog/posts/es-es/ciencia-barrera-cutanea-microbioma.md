@@ -108,6 +108,7 @@ image_prompts:
     watermarks.
 show_science_link: true
 ---
+
 ¿Sientes que la cara te arde apenas te pones cualquier crema? O sales de la ducha y la piel te tira como si te hubieras puesto pegamento. No, no es paranoia tuya: tu barrera cutánea te está pidiendo ayuda a gritos.
 
 Detrás de esa tirantez constante, el ardor o los brotes inesperados, suele haber un único culpable: una barrera cutánea fisurada y un microbioma desequilibrado.

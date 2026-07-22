@@ -89,6 +89,7 @@ image_prompts:
   logos, NO watermarks.'
 show_science_link: true
 ---
+
 Senti che il viso brucia non appena applichi una semplice crema idratante? O la pelle tira appena esci dalla doccia? Non è una tua sensazione: la tua barriera cutanea sta chiedendo aiuto.
 
 Dietro quella secchezza costante o quelle imperfezioni improvvise c'è un solo responsabile: una barriera danneggiata e un microbioma alterato.

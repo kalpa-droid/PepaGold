@@ -1,0 +1,19 @@
+INFORME TÉCNICO REGIONAL PG-001: ARQUITECTURA DE LA BARRERA CUTÁNEA Y MICROBIOMA
+===================================================================================
+1. Fisiología y Bioquímica:
+- Estrato córneo: Modelo ladrillos y cemento (Corneocitos + Matriz lipídica).
+- Composición de matriz lipídica: Ceramidas (50%), Colesterol (25%), Ácidos grasos libres (15%). Ratio óptimo biomimético: 3:1:1.
+- Manto Ácido: pH fisiológico 4.5 - 5.5.
+- Genética: Mutación en gen de filagrina (FLG) presente en 30-50% de casos atópicos.
+
+2. Microbioma Cutáneo:
+- Especie dominante: Staphylococcus epidermidis (bacterias comensales benéficas).
+- Función: Síntesis de péptidos antimicrobianos (AMPs) y fermentación de lípidos protectores.
+
+3. Exposoma y Factores Climáticos Regionales:
+- Fenómenos regionales: Viento Zonda (Argentina), Polvo Sahariano Calima (España), Smog PM2.5 (México CDMX), HVAC Aire Acondicionado (EE.UU.).
+- Agresores: Sulfatos aniónicos (SLS, SLES), exfoliación excesiva con AHA/BHA.
+- Consecuencia: Pérdida Transepidérmica de Agua (TEWL) descontrolada y microfisuras con ardor.
+
+4. Alternativa Biomecánica Atrauma:
+- Tecnología UpPoly (Laska Mini): Microfibra japonesa dividida nanométricamente que limpia por capilaridad hidrodinámica exclusiva con agua tibia, sin disolver ceramidas ni alterar el pH 5.5.

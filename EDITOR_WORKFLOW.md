@@ -54,6 +54,17 @@ Todo título debe combinar la búsqueda real que hacen las chicas en Google/TikT
 11. CTA de Producto traducido
 12. Preguntas Frecuentes (FAQ Schema en lenguaje de búsqueda real)
 
+### 6. Regla Estricta Anti-Duplicación y Conciencia de Artículos Previos
+- **PROHIBIDO:** Redactar un nuevo artículo reciclando la misma estructura, las mismas preguntas del quiz, la misma lista de verificación (checklist) o los mismos prompts de imagen de un artículo anterior. 
+- **OBLIGATORIO:** Antes de redactar o generar contenido nuevo, el Editor IA DEBE revisar los informes técnicos crudos guardados en la carpeta `/reports/` (ej. `PG-001.txt`, `PG-002.txt`) y los artículos publicados, para asegurar que el nuevo artículo:
+  - Tenga un enfoque científico, título y ángulo **totalmente nuevo y distinto**.
+  - Incluya secciones H2, un Checklist y un Quiz con datos **exclusivos y específicos** de ese nuevo informe técnico.
+  - Genere **prompts de imagen 100% únicos** que ilustren la ciencia exacta de ese nuevo artículo (nunca reciclar prompts genéricos).
+
+### 7. Jerarquía Tipográfica y Regla Estricta de Encabezados (H1 vs H2)
+- **PROHIBIDO:** Incluir `# Título` (encabezado H1) dentro del cuerpo del artículo en el archivo Markdown. La plantilla del blog ya genera automáticamente el título como el único `<h1>` principal del documento.
+- **OBLIGATORIO:** El cuerpo del artículo debe comenzar directamente con la introducción y usar únicamente `## Nombre de Sección` (H2) para los apartados. Colocar un H1 dentro del cuerpo rompe la jerarquía tipográfica, genera un título gigante duplicado y desajusta el diseño visual y el SEO.
+
 ---
 
 ## 📸 Regla Estricta de Imágenes e Indicaciones Prompts

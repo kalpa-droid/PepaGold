@@ -91,6 +91,7 @@ image_prompts:
   logos, NO watermarks.'
 show_science_link: true
 ---
+
 Votre visage vous brûle-t-il dès que vous appliquez votre crème hydratante habituelle ? Ou ressentez-vous un tiraillement intense juste après le nettoyage ? Ce n'est pas une impression : votre barrière cutanée lance un cri d'alarme.
 
 Derrière cette sécheresse persistante ou ces imperfections soudaines se cache un seul coupable : une barrière altérée et un microbiome déséquilibré.

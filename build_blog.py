@@ -133,7 +133,7 @@ I18N_STRINGS = {
         "cta_desc": "<strong>Laska Mini Set</strong> — el set de microfibra que reemplaza discos de algodón, agua micelar y desmaquillante. Solo con agua.",
         "cta_btn": "Conocer el producto &rarr;", "faq_title": "Preguntas frecuentes", "related_title": "Seguí leyendo",
         "footer_copy": "&copy; 2025&ndash;2026 PepaGold &middot; Todos los derechos reservados.", "read_btn": "Leer Artículo",
-        "index_desc": "Artículos sobre cuidado de la piel sin químicos, sostenibilidad y skincare consciente.", "index_title": "Blog | PepaGold", "index_all": "Todos", "checklist_hint": "Se guarda solo en este navegador — marcá a tu ritmo."
+        "index_desc": "Artículos sobre cuidado de la piel sin químicos, sostenibilidad y skincare consciente.", "index_title": "Blog | PepaGold", "nav_blog": "Blog", "index_all": "Todos", "checklist_hint": "Se guarda solo en este navegador — marcá a tu ritmo."
     },
     "es-mx": {
         "summary_title": "⏱️ En 30 segundos", "toc_title": "En este artículo", "reading_time": "min de lectura",
@@ -141,7 +141,7 @@ I18N_STRINGS = {
         "cta_desc": "<strong>Laska Mini Set</strong> — el set de microfibra que reemplaza pads de algodón, agua micelar y desmaquillantes. Solo con agua.",
         "cta_btn": "Conocer el producto &rarr;", "faq_title": "Preguntas frecuentes", "related_title": "Sigue leyendo",
         "footer_copy": "&copy; 2025&ndash;2026 PepaGold &middot; Todos los derechos reservados.", "read_btn": "Leer Artículo",
-        "index_desc": "Artículos sobre cuidado de la piel sin químicos, sostenibilidad y skincare consciente.", "index_title": "Blog | PepaGold", "index_all": "Todos", "checklist_hint": "Se guarda solo en este navegador — marca a tu ritmo."
+        "index_desc": "Artículos sobre cuidado de la piel sin químicos, sostenibilidad y skincare consciente.", "index_title": "Blog | PepaGold", "nav_blog": "Blog", "index_all": "Todos", "checklist_hint": "Se guarda solo en este navegador — marca a tu ritmo."
     },
     "es-es": {
         "summary_title": "⏱️ En 30 segundos", "toc_title": "En este artículo", "reading_time": "min de lectura",
@@ -149,7 +149,7 @@ I18N_STRINGS = {
         "cta_desc": "<strong>Laska Mini Set</strong> — el set de microfibra que reemplaza algodones, agua micelar y desmaquillante. Solo con agua.",
         "cta_btn": "Descubrir producto &rarr;", "faq_title": "Preguntas frecuentes", "related_title": "Sigue leyendo",
         "footer_copy": "&copy; 2025&ndash;2026 PepaGold &middot; Todos los derechos reservados.", "read_btn": "Leer Artículo",
-        "index_desc": "Artículos sobre cuidado de la piel sin químicos, sostenibilidad y skincare consciente.", "index_title": "Blog | PepaGold", "index_all": "Todos", "checklist_hint": "Se guarda solo en este navegador — marca a tu ritmo."
+        "index_desc": "Artículos sobre cuidado de la piel sin químicos, sostenibilidad y skincare consciente.", "index_title": "Blog | PepaGold", "nav_blog": "Blog", "index_all": "Todos", "checklist_hint": "Se guarda solo en este navegador — marca a tu ritmo."
     },
     "en-us": {
         "summary_title": "⏱️ In 30 seconds", "toc_title": "In this article", "reading_time": "min read",
@@ -157,7 +157,7 @@ I18N_STRINGS = {
         "cta_desc": "<strong>Laska Mini Set</strong> — the reusable UpPoly microfiber set replacing cotton pads, micellar water, and cleansers. Water only.",
         "cta_btn": "Explore Product &rarr;", "faq_title": "Frequently Asked Questions", "related_title": "Keep reading",
         "footer_copy": "&copy; 2025&ndash;2026 PepaGold &middot; All rights reserved.", "read_btn": "Read Article",
-        "index_desc": "Articles on chemical-free skincare, sustainability, and skinimalism.", "index_title": "Blog | PepaGold", "index_all": "All", "checklist_hint": "Saved locally in your browser — mark at your own pace."
+        "index_desc": "Articles on chemical-free skincare, sustainability, and skinimalism.", "index_title": "Blog | PepaGold", "nav_blog": "Blog", "index_all": "All", "checklist_hint": "Saved locally in your browser — mark at your own pace."
     },
     "fr-fr": {
         "summary_title": "⏱️ En 30 secondes", "toc_title": "Dans cet article", "reading_time": "min de lecture",
@@ -165,7 +165,7 @@ I18N_STRINGS = {
         "cta_desc": "<strong>Laska Mini Set</strong> — le coffret en microfibre réutilisable qui remplace le coton, l'eau micellaire et le démaquillant. Rien qu'avec de l'eau.",
         "cta_btn": "Découvrir le produit &rarr;", "faq_title": "Foire aux questions", "related_title": "Poursuivez votre lecture",
         "footer_copy": "&copy; 2025&ndash;2026 PepaGold &middot; Tous droits réservés.", "read_btn": "Lire l'article",
-        "index_desc": "Articles sur les soins de la peau sans produits chimiques et la beauté durable.", "index_title": "Blog | PepaGold", "index_all": "Tous", "checklist_hint": "Enregistré localement dans votre navigateur — cochez à votre rythme."
+        "index_desc": "Articles sur les soins de la peau sans produits chimiques et la beauté durable.", "index_title": "Blog | PepaGold", "nav_blog": "Blog", "index_all": "Tous", "checklist_hint": "Enregistré localement dans votre navigateur — cochez à votre rythme."
     },
     "de-de": {
         "summary_title": "⏱️ In 30 Sekunden", "toc_title": "In diesem Artikel", "reading_time": "Min. Lesezeit",
@@ -173,7 +173,7 @@ I18N_STRINGS = {
         "cta_desc": "<strong>Laska Mini Set</strong> — das wiederverwendbare Mikrofaser-Set, das Wattepads, Mizellenwasser und Abschminkmittel ersetzt. Nur mit Wasser.",
         "cta_btn": "Produkt entdecken &rarr;", "faq_title": "Häufig gestellte Fragen", "related_title": "Weiterlesen",
         "footer_copy": "&copy; 2025&ndash;2026 PepaGold &middot; Alle Rechte vorbehalten.", "read_btn": "Artikel lesen",
-        "index_desc": "Artikel über chemiefreie Hautpflege, Nachhaltigkeit und Skinimalismus.", "index_title": "Blog | PepaGold", "index_all": "Alle", "checklist_hint": "Lokal im Browser gespeichert — markieren Sie in Ihrem eigenen Tempo."
+        "index_desc": "Artikel über chemiefreie Hautpflege, Nachhaltigkeit und Skinimalismus.", "index_title": "Blog | PepaGold", "nav_blog": "Blog", "index_all": "Alle", "checklist_hint": "Lokal im Browser gespeichert — markieren Sie in Ihrem eigenen Tempo."
     },
     "it-it": {
         "summary_title": "⏱️ In 30 secondi", "toc_title": "In questo articolo", "reading_time": "min di lettura",
@@ -181,7 +181,7 @@ I18N_STRINGS = {
         "cta_desc": "<strong>Laska Mini Set</strong> — il set di microfibra riutilizzabile che sostituisce dischetti di cotone, acqua micellare e struccanti. Solo con acqua.",
         "cta_btn": "Scopri il prodotto &rarr;", "faq_title": "Domande frequenti", "related_title": "Continua a leggere",
         "footer_copy": "&copy; 2025&ndash;2026 PepaGold &middot; Tutti i diritti riservati.", "read_btn": "Leggi l'articolo",
-        "index_desc": "Articoli sulla cura della pelle senza sostanze chimiche e sostenibilità.", "index_title": "Blog | PepaGold", "index_all": "Tutti", "checklist_hint": "Salvato localmente nel tuo browser — segna al tuo ritmo."
+        "index_desc": "Articoli sulla cura della pelle senza sostanze chimiche e sostenibilità.", "index_title": "Blog | PepaGold", "nav_blog": "Blog", "index_all": "Tutti", "checklist_hint": "Salvato localmente nel tuo browser — segna al tuo ritmo."
     },
     "pt-br": {
         "summary_title": "⏱️ Em 30 segundos", "toc_title": "Neste artigo", "reading_time": "min de leitura",
@@ -189,7 +189,7 @@ I18N_STRINGS = {
         "cta_desc": "<strong>Laska Mini Set</strong> — o conjunto de microfibra reutilizável que substitui algodão, água micelar e demaquilante. Apenas com água.",
         "cta_btn": "Conheça o produto &rarr;", "faq_title": "Perguntas frequentes", "related_title": "Continue lendo",
         "footer_copy": "&copy; 2025&ndash;2026 PepaGold &middot; Todos os direitos reservados.", "read_btn": "Ler Artigo",
-        "index_desc": "Artigos sobre cuidados com a pele sem químicos e sustentabilidade.", "index_title": "Blog | PepaGold", "index_all": "Todos", "checklist_hint": "Salvo localmente no seu navegador — marque no seu próprio ritmo."
+        "index_desc": "Artigos sobre cuidados com a pele sem químicos e sustentabilidade.", "index_title": "Blog | PepaGold", "nav_blog": "Blog", "index_all": "Todos", "checklist_hint": "Salvo localmente no seu navegador — marque no seu próprio ritmo."
     },
     "ru-ru": {
         "summary_title": "⏱️ За 30 секунд", "toc_title": "В этой статье", "reading_time": "мин чтение",
@@ -197,7 +197,7 @@ I18N_STRINGS = {
         "cta_desc": "<strong>Laska Mini Set</strong> — набор из микроволокна UpPoly, заменяющий ватные диски и мицеллярную воду. Только вода.",
         "cta_btn": "Узнать больше о продукте &rarr;", "faq_title": "Часто задаваемые вопросы", "related_title": "Читайте также",
         "footer_copy": "&copy; 2025&ndash;2026 PepaGold &middot; Все права защищены.", "read_btn": "Читать статью",
-        "index_desc": "Статьи об уходе за кожей без химии, экологии и осознанном уходе.", "index_title": "Блог | PepaGold", "index_all": "Все", "checklist_hint": "Сохраняется локально в вашем браузере — отмечайте в своем темпе."
+        "index_desc": "Статьи об уходе за кожей без химии, экологии и осознанном уходе.", "index_title": "Блог | PepaGold", "nav_blog": "Блог", "index_all": "Все", "checklist_hint": "Сохраняется локально в вашем браузере — отмечайте в своем темпе."
     },
     "zh-hans": {
         "summary_title": "⏱️ 30秒速览", "toc_title": "本文目录", "reading_time": "分钟阅读",
@@ -205,7 +205,7 @@ I18N_STRINGS = {
         "cta_desc": "<strong>Laska Mini Set</strong> — 替代卸妆棉、卸妆水和清洁乳的可重复使用超细纤维套装。只需清水。",
         "cta_btn": "了解产品详情 &rarr;", "faq_title": "常见问题解答", "related_title": "推荐阅读",
         "footer_copy": "&copy; 2025&ndash;2026 PepaGold &middot; 保留所有权利。", "read_btn": "阅读文章",
-        "index_desc": "关于无化学护肤、环保与极简护肤的文章。", "index_title": "博客 | PepaGold", "index_all": "全部", "checklist_hint": "保存在您的浏览器中 — 请按自己的节奏标记。"
+        "index_desc": "关于无化学护肤、环保与极简护肤的文章。", "index_title": "博客 | PepaGold", "nav_blog": "博客", "index_all": "全部", "checklist_hint": "保存在您的浏览器中 — 请按自己的节奏标记。"
     }
 }
 
@@ -333,6 +333,8 @@ def render_quiz(title, content, block_id):
     return "".join(out)
 
 def preprocess_custom_blocks(md_text, slug, locale="es-ar"):
+    # Strip any redundant leading H1 header line from body to preserve typographic hierarchy
+    md_text = re.sub(r'^\s*#\s+[^\n]+\n*', '', md_text)
     counter = {"n": 0}
     def repl(m):
         kind, title, content = m.group(1), (m.group(2) or "").strip(), m.group(3)
@@ -545,7 +547,7 @@ ARTICLE_TEMPLATE = BRAND_HEAD + """<body>
 <!-- Botón al Blog flotante -->
 <a class="lang-selector-btn blog-nav-btn-floating" href="{blog_index_url}" style="position: fixed; top: 65px; z-index: 1000; text-decoration: none;" title="PepaGold Blog">
   <span class="active-flag">{active_flag}</span>
-  <span class="blog-btn-text" style="font-weight: 500;">Blog</span>
+  <span class="blog-btn-text" style="font-weight: 500;">{nav_blog}</span>
 </a>
 <!-- Selector de idiomas flotante -->
 <div class="lang-selector-container">
@@ -726,7 +728,7 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
 <!-- Botón al Blog flotante -->
 <a class="lang-selector-btn blog-nav-btn-floating" href="{blog_index_url}" style="position: fixed; top: 65px; z-index: 1000; text-decoration: none;" title="PepaGold Blog">
   <span class="active-flag">{active_flag}</span>
-  <span class="blog-btn-text" style="font-weight: 500;">Blog</span>
+  <span class="blog-btn-text" style="font-weight: 500;">{nav_blog}</span>
 </a>
 <!-- Selector de idiomas flotante -->
 <div class="lang-selector-container">
@@ -958,7 +960,7 @@ def render_article(meta, body_md, hreflang_tags, lookup):
         category_label=category_label, date_display=date_display, reading_time=reading_time_str,
         author=meta.get("author", "PepaGold"), epigraph_html=render_epigraph(meta), summary_html=render_summary(meta),
         media_html=media_html, toc_html=toc_html, body_html=body_html, science_link_html=render_science_link(meta, home_url),
-        product_cta_html=product_cta_html, footer_copy=i18n["footer_copy"],
+        product_cta_html=product_cta_html, footer_copy=i18n["footer_copy"], nav_blog=i18n.get("nav_blog", "Blog"),
         faq_html=render_faq(meta), related_html=render_related(meta, lookup),
         active_flag=active_flag, lang_dropdown_html=lang_dropdown_html,
     )
@@ -1028,7 +1030,7 @@ def render_index(locale, posts):
         lang_attr=locale.split("-")[0], lang_upper=locale.split("-")[0].upper(),
         canonical=canonical, home_url=home_url, chips_html="".join(chips), cards_html="".join(cards),
         active_flag=active_flag, lang_dropdown_html=lang_dropdown_html, blog_index_url=blog_index_url,
-        index_title=i18n.get("index_title", "Blog | PepaGold"),
+        index_title=i18n.get("index_title", "Blog | PepaGold"), nav_blog=i18n.get("nav_blog", "Blog"),
         index_desc=i18n["index_desc"], footer_copy=i18n["footer_copy"]
     )
     out_dir = os.path.join(folder, "blog") if folder else "blog"

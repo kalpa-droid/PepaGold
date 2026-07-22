@@ -88,6 +88,7 @@ image_prompts:
   logos, NO watermarks.'
 show_science_link: true
 ---
+
 Você sente o rosto arder assim que aplica qualquer creme hidratante? Ou sai do banho sentindo a pele esticar como se tivesse passado cola? Não é frescura: sua barreira cutânea está pedindo socorro.
 
 Por trás desse repuxamento constante ou das espinhas inesperadas, existe um único vilão: a barreira danificada e um microbioma desequilibrado.

@@ -89,6 +89,7 @@ image_prompts:
   logos, NO watermarks.'
 show_science_link: true
 ---
+
 Does your face burn the second you apply your go-to moisturizer? Or does your skin feel uncomfortably tight right after washing your face? No, it's not in your head: your skin barrier is screaming for help.
 
 Behind that constant tightness, burning, or sudden breakouts lies a single culprit: a compromised skin barrier and an imbalanced microbiome.

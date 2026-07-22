@@ -90,6 +90,7 @@ image_prompts:
   logos, NO watermarks.'
 show_science_link: true
 ---
+
 Brennt Ihr Gesicht beim Auftragen Ihrer gewohnten Feuchtigkeitscreme? Oder spannt die Haut direkt nach dem Waschen? Das ist keine Einbildung: Ihre Hautbarriere schlägt Alarm.
 
 Hinter ständiger Trockenheit oder plötzlichen Unreinheiten steckt meist eine geschädigte Barriere und ein aus dem Gleichgewicht geratenes Mikrobiom.
