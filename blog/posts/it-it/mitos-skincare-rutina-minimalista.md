@@ -15,11 +15,9 @@ concept: el-skinimalismo-y-la-reducci-n-de-pasos-en-el-skincare
 local_phenomenon: HVAC dry air & seasonal winds
 cover_image: ''
 media:
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
   - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_1.webp
   - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp
   - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_3.webp
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -112,7 +110,7 @@ La disbiosi si verifica quando i microbi benefici vengono eliminati, innescando 
 2. **Ripristino lipidico:** Applica creme arricchite con ceramidi e squalane.
 3. **Prebiotici topici:** Scegli formule con inulina per nutrire i batteri buoni.
 
-![Imagen de sección](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp)
+
 
 :::quiz Test diagnostico
 Q: Qual è il segnale principale del degrado del cemento lipidico?
