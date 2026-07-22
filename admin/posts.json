@@ -360,7 +360,7 @@
     "el-impacto-de-tensoactivos-jabones-y-aguas-micelares-en-la-barrera-cut-nea": {
       "de-de": {
         "slug": "impacto-tensoactivos-aguas-micelares",
-        "title": "Does Micellar Water Cause Acne and Dryness? The Truth About Detergents on Your Face",
+        "title": "Verursacht Mizellenwasser Akne und Trockenheit? Die Wahrheit über Tenside in Ihrem Gesicht",
         "web_url": "/de/blog/impacto-tensoactivos-aguas-micelares",
         "phenomenon": "Trockene Heizungsluft & Winterkälte",
         "region_label": "de-de"
@@ -402,28 +402,28 @@
       },
       "it-it": {
         "slug": "impacto-tensoactivos-aguas-micelares",
-        "title": "Does Micellar Water Cause Acne and Dryness? The Truth About Detergents on Your Face",
+        "title": "L'acqua micellare causa acne e secchezza? La verità sui detergenti sul tuo viso",
         "web_url": "/it/blog/impacto-tensoactivos-aguas-micelares",
         "phenomenon": "Inquinamento urbano e aria secca autunnale",
         "region_label": "it-it"
       },
       "pt-br": {
         "slug": "impacto-tensoactivos-aguas-micelares",
-        "title": "Does Micellar Water Cause Acne and Dryness? The Truth About Detergents on Your Face",
+        "title": "Água micelar causa acne e ressecamento? A verdade sobre detergentes no seu rosto",
         "web_url": "/pt/blog/impacto-tensoactivos-aguas-micelares",
         "phenomenon": "Alta umidade, radiação UV e poluição tropical",
         "region_label": "pt-br"
       },
       "ru-ru": {
         "slug": "impacto-tensoactivos-aguas-micelares",
-        "title": "Does Micellar Water Cause Acne and Dryness? The Truth About Detergents on Your Face",
+        "title": "Мицеллярная вода вызывает акне и сухость? Вся правда о ПАВ на вашем лице",
         "web_url": "/ru/blog/impacto-tensoactivos-aguas-micelares",
         "phenomenon": "Сухой воздух от отопления и сильный мороз",
         "region_label": "ru-ru"
       },
       "zh-hans": {
         "slug": "impacto-tensoactivos-aguas-micelares",
-        "title": "Does Micellar Water Cause Acne and Dryness? The Truth About Detergents on Your Face",
+        "title": "卸妆水会导致致痘和干燥吗？揭开面部表面活性剂的真相",
         "web_url": "/zh/blog/impacto-tensoactivos-aguas-micelares",
         "phenomenon": "城市雾霾 PM2.5 与季节性干旱风",
         "region_label": "zh-hans"
@@ -576,7 +576,7 @@
     "barrera-cutanea-y-microbioma": {
       "de-de": {
         "slug": "wissenschaft-hautbarriere-mikrobiom",
-        "title": "Brennt deine Haut beim Eincremen? Die Wissenschaft der Hautbarriere und wie du sie reparierst",
+        "title": "Brennt Ihr Gesicht beim Eincremen? Die Wissenschaft der Hautbarriere & wie man sie repariert",
         "web_url": "/de/blog/wissenschaft-hautbarriere-mikrobiom",
         "phenomenon": "Trockene Heizungsluft & Winterkälte",
         "region_label": "Deutschland"
@@ -618,21 +618,21 @@
       },
       "it-it": {
         "slug": "scienza-barriera-cutanea-microbioma",
-        "title": "La pelle brucia quando metti la crema? La Scienza della Barriera Cutanea e Come Ripararla",
+        "title": "La tua pelle brucia quando applichi la crema? La scienza della barriera cutanea e come ripararla",
         "web_url": "/it/blog/scienza-barriera-cutanea-microbioma",
         "phenomenon": "Aria secca dei riscaldamenti & Smog",
         "region_label": "Italia"
       },
       "pt-br": {
         "slug": "ciencia-barreira-cutanea-microbioma",
-        "title": "Sua pele arde ao passar creme? A Ciência da Barreira Cutânea e Como Recuperá-la",
+        "title": "Sua pele arde ao passar creme? A ciência da barreira cutânea e como repará-la",
         "web_url": "/pt/blog/ciencia-barreira-cutanea-microbioma",
         "phenomenon": "Clima Tropical Seco & Poluição",
         "region_label": "Brasil"
       },
       "ru-ru": {
         "slug": "nauka-kozhnij-barier-mikrobiom",
-        "title": "Жжет лицо при нанесении крема? Наука о кожном барьере и как его восстановить",
+        "title": "Горит лицо при нанесении крема? Наука о кожном барьере и способы его восстановления",
         "web_url": "/ru/blog/nauka-kozhnij-barier-mikrobiom",
         "phenomenon": "Сухой воздух отопления и морозы",
         "region_label": "Россия"

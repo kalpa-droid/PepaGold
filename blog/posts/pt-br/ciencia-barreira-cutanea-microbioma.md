@@ -1,6 +1,6 @@
 ---
 article_id: PG-001
-title: "Sua pele arde ao passar creme? A Ciência da Barreira Cutânea e Como Recuperá-la"
+title: "Sua pele arde ao passar creme? A ciência da barreira cutânea e como repará-la"
 description: Sente sua pele arder ao passar hidratante? Entenda os sinais de uma barreira
   cutânea danificada e como recuperá-la passo a passo.
 slug: ciencia-barreira-cutanea-microbioma

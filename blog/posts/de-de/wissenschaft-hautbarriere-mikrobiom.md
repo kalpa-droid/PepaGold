@@ -1,6 +1,6 @@
 ---
 article_id: PG-001
-title: "Brennt deine Haut beim Eincremen? Die Wissenschaft der Hautbarriere und wie du sie reparierst"
+title: "Brennt Ihr Gesicht beim Eincremen? Die Wissenschaft der Hautbarriere & wie man sie repariert"
 description: Brennt Ihr Gesicht beim Eincremen? Erfahren Sie, wie Sie eine geschädigte
   Hautbarriere erkennen und effektiv reparieren.
 slug: wissenschaft-hautbarriere-mikrobiom

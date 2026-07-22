@@ -1,6 +1,6 @@
 ---
 article_id: PG-001
-title: "La pelle brucia quando metti la crema? La Scienza della Barriera Cutanea e Come Ripararla"
+title: "La tua pelle brucia quando applichi la crema? La scienza della barriera cutanea e come ripararla"
 description: La pelle brucia quando applichi la crema? Scopri le vere cause dei danni
   alla barriera cutanea e i passi per ripararla.
 slug: scienza-barriera-cutanea-microbioma

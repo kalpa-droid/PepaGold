@@ -1,7 +1,7 @@
 ---
 article_id: PG-005
-title: "Does Micellar Water Cause Acne and Dryness? The Truth About Detergents on Your Face"
-description: "Dermatological study on the toxicity of leave-on detergents and the biomechanical cleaning alternative."
+title: "卸妆水会导致致痘和干燥吗？揭开面部表面活性剂的真相"
+description: "关于免洗清洁剂对肌肤屏障毒性与流体物理清洁替代方案的皮肤学研究。"
 slug: impacto-tensoactivos-aguas-micelares
 date: '2026-07-21'
 date_created: '2026-07-21'

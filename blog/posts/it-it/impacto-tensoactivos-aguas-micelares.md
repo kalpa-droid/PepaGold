@@ -1,7 +1,7 @@
 ---
 article_id: PG-005
-title: "Does Micellar Water Cause Acne and Dryness? The Truth About Detergents on Your Face"
-description: "Dermatological study on the toxicity of leave-on detergents and the biomechanical cleaning alternative."
+title: "L'acqua micellare causa acne e secchezza? La verità sui detergenti sul tuo viso"
+description: "Studio dermatologico sulla tossicità dei detergenti senza risciacquo e l'alternativa biomeccanica."
 slug: impacto-tensoactivos-aguas-micelares
 date: '2026-07-21'
 date_created: '2026-07-21'
