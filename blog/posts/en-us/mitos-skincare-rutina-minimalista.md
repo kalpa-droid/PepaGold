@@ -48,7 +48,7 @@ Imagine the outermost layer of your skin as a protective brick wall:
 
 ![3D illustration of skin barrier architecture](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_2.webp)
 
-When lipid mortar degrades, cellular water escapes rapidly.
+When the lipid mortar degrades over time, internal cellular water escapes rapidly into the surrounding dry atmosphere.
 
 :::stat
 **30% to 50%** of severe eczema patients present filaggrin protein mutations.

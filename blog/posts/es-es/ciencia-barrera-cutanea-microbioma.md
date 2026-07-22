@@ -45,7 +45,7 @@ faq:
       El ciclo de renovación celular dura entre 14 y 28 días. Con higiene
       atraumática y ceramidas biomiméticas sentirás alivio en 3 a 5 días y
       recuperación total en 4 semanas.
-  - q: ¿Por qué me arde la cara cuando me pongo crema hidratante?
+  - q: ¿Por qué razón mi piel siente ardor y tirantez cuando me aplico crema hidratante habitual?
     a: >-
       El ardor es el síntoma #1 de microfisuras en el estrato córneo. Sin
       cemento lipídico ni manto ácido, la crema toma contacto directo con

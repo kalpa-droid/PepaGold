@@ -1,15 +1,15 @@
 ---
-article_id: PG-003
+article_id: PG-004
 title: "¿Rojez, Rosácea o Granitos inesperados? Cómo Calmar la Piel Sensible Sin Químicos"
 description: "Diferencias clínicas entre rosácea, piel reactiva y acné cosmético. Cómo calmar la inflamación endotelial."
-slug: fisiologia-microbioma-manto-acido
+slug: piel-sensible-rosacea-acne-cosmetico
 date: '2026-07-21'
 date_created: '2026-07-21'
 date_ai_processed: '2026-07-21'
 locale: es-es
 category: barrera-cutanea
 category_label: "🔬 Ciencia de la Piel"
-concept: fisiolog-a-y-ecolog-a-de-la-barrera-cut-nea-din-mica-del-microbioma-mantos-hidrolip-dicos-y-estrategias-terap-uticas-avanzadas
+concept: piel-sensible-ros-cea-y-acn-cosm-tico-diagn-stico-y-estrategias-de-limpieza
 local_phenomenon: "Polvo sahariano (Calima) y calor mediterráneo"
 cover_image: /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/gemini_generated_image_8b2pk18b2pk18b2p.webp
 media:
@@ -28,7 +28,7 @@ summary:
   - "Los sulfatos y fragancias sintéticas activan los receptores tipo Toll (TLR-2) liberando citoquinas inflamatorias."
   - "La remoción física atraumática sin limpiadores sintéticos previene la congestión vascular y calma el eritema."
 faq:
-  - q: "¿Cómo sé si tengo acné común o acné cosmético?"
+  - q: "¿De qué manera puedo identificar si mi rostro tiene acné común o acné cosmético secundario?"
     a: "El acné cosmético aparece como pequeños comeditones cerrados y pústulas superficiales días después de estrenar una crema o base de maquillaje densa."
   - q: "¿Puedo lavarme la cara si tengo rosácea activa?"
     a: "Sí, pero evitando el agua caliente y los geles espumosos. Usá agua tibia y una microfibra inerte atraumática para no inflamar los capilares."

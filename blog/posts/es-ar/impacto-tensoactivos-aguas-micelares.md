@@ -42,7 +42,7 @@ summary:
     La tecnología UpPoly limpia por capilaridad hidrodinámica pura, succionando
     la suciedad sin solventes.
 faq:
-  - q: ¿Por qué el agua micelar dice 'sin enjuague' en la etiqueta?
+  - q: ¿Por qué razón el agua micelar indica en su etiqueta comercial que es un producto sin enjuague?
     a: >-
       Es un reclamo comercial de conveniencia. Dermatológicamente, todo
       detergente debe enjuagarse con agua tibia para evitar la extracción

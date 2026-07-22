@@ -66,7 +66,7 @@ show_science_link: true
 
 ![皮肤微生物组与益生菌生态示意图](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_3.webp)
 
-表皮葡萄球菌（*Staphylococcus epidermidis*）等益生菌以天然油脂为食，并能合成天然抗体。如果使用碱性普通肥皂，会破坏酸性膜。
+表皮葡萄球菌等益生菌能够以天然脂质为食，并在表皮合成自然抗体与神经酰胺。如果使用碱性普通肥皂清洁面部，会破坏保护性酸性膜。
 
 :::info 菌群失调：当益生菌消失时
 当过度清洁或刺激性化学品破坏微生物组时，就会发生菌群失调，引发慢性敏感。

@@ -6,6 +6,7 @@ Si mañana agregás una marca o producto nuevo, se agrega ACÁ UNA SOLA VEZ y
 automáticamente protege tanto los artículos del blog como la estructura del
 sitio. Nunca dupliques esta lista en otro archivo.
 """
+import re
 from langdetect import detect, DetectorFactory, LangDetectException
 
 DetectorFactory.seed = 0
@@ -39,10 +40,9 @@ BLOG_EXPECTED_LANG = {
     "it-it": "it", "pt-br": "pt", "ru-ru": "ru", "zh-hans": "zh-cn",
 }
 
-import re
-
 HTML_TAG_RE = re.compile(r"<[^>]+>")
 PLACEHOLDER_TOKEN_RE = re.compile(r"\{[a-zA-Z_]+\}")
+CJK_CHAR_RE = re.compile(r"[\u4e00-\u9fff]")
 
 
 def strip_brands(text):
@@ -64,6 +64,12 @@ def detect_lang(text):
     text = strip_for_detection(text).strip()
     if len(text) < MIN_CHARS:
         return None
+    
+    # CJK Unicode Range check: langdetect often misidentifies Chinese without spaces as Korean ('ko')
+    cjk_count = len(CJK_CHAR_RE.findall(text))
+    if cjk_count >= 10:
+        return "zh-cn"
+
     try:
         return detect(text)
     except LangDetectException:

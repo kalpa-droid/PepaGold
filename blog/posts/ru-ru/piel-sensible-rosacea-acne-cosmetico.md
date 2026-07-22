@@ -1,14 +1,14 @@
 ---
 article_id: PG-004
-title: "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier"
-description: "Does your face burn when applying moisturizer? Learn how to identify skin barrier damage and master science-backed repair steps."
+title: "Наука о Кожном Барьере и Микробиоме"
+description: "Узнайте все о науке кожного барьера, микробиома и кислотной мантии pH 5.5."
 slug: piel-sensible-rosacea-acne-cosmetico
 date: '2026-07-21'
 date_created: '2026-07-21'
 date_ai_processed: '2026-07-21'
 locale: ru-ru
 category: barrera-cutanea
-category_label: "🔬 Skin Science"
+category_label: "🔬 Наука о Коже"
 concept: piel-sensible-ros-cea-y-acn-cosm-tico-diagn-stico-y-estrategias-de-limpieza
 local_phenomenon: "HVAC dry air & seasonal winds"
 cover_image: /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_1.webp
@@ -20,88 +20,88 @@ media:
   - /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp
 author: PepaGold
 epigraph:
-  text: "Skin does not need more chemical layers; it needs the freedom to restore itself."
-  author: "Dr. PepaGold"
+  text: "Коже не нужна лишняя химия; ей нужна свобода для самостоятельного восстановления."
+  author: "Д-р PepaGold"
 summary:
-  - "The skin barrier is a lipid matrix of ceramides, cholesterol, and free fatty acids that retains moisture."
-  - "The acid mantle (pH 4.5-5.5) and microbiome act as your first biological defense line against pathogens."
-  - "Extreme weather, harsh sulfates, and over-exfoliation evaporate cellular water and create micro-cracks."
-  - "Repair requires physical atraumatic cleansing, biomimetic ceramides (3:1:1 ratio), and prebiotic nourishment."
+  - "Кожный барьер — это липидный матрикс из церамидов, холестерина и жирных кислот."
+  - "Кислотная мантия (pH 4.5-5.5) и микробиом образуют первую линию биологической защиты."
+  - "Сухой климат и агрессивные очистители создают микротрещины."
+  - "Восстановление требует атравматичного физического очищения."
 faq:
-  - q: "How long does it take to repair a damaged skin barrier?"
-    a: "Cell renewal takes 14 to 28 days. Relief begins in 3 to 5 days with atraumatic cleansing."
-  - q: "Why does my face burn when applying neutral moisturizer?"
-    a: "Stinging indicates micro-cracks in the stratum corneum exposing nerve endings."
+  - q: "Сколько времени требуется для восстановления кожного барьера?"
+    a: "Обновление клеток занимает 14–28 дней."
+  - q: "Почему лицо жжет при нанесении крема?"
+    a: "Жжение указывает на микротрещины в роговом слое."
 show_science_link: true
 ---
 
-Do you feel your skin stinging when applying your usual moisturizer? Your skin barrier is asking for help.
+Чувствуете ли вы жжение при нанесении обычного увлажняющего крема? Ваш кожный барьер просит о помощи.
 
-Behind constant tightness and burning lies a compromised skin barrier and an imbalanced microbiome.
+За постоянным чувством стянутости и покраснением скрывается поврежденный барьер и нарушенный микробиом.
 
-## **What is the Skin Barrier? Bricks and Mortar**
+## **Что такое кожный барьер? Кирпичи и цемент**
 
-Imagine the outermost layer of your skin as a protective brick wall:
+Представьте самый внешний слой кожи как защитную кирпичную стену:
 
-- **Bricks (Corneocytes):** Keratin-packed cells protecting against physical friction.
-- **Mortar (Lipid Matrix):** Biological cement composed of **50% Ceramides**, 25% Cholesterol, and 15% Free Fatty Acids.
+- **Кирпичи (Корнеоциты):** Клетки, богатые кератином, защищающие от трения.
+- **Цемент (Липидный матрикс):** Биологический цемент, состоящий из **50% Церамидов**, 25% Холестерина и 15% Свободных Жирных Кислот.
 
-![3D illustration of skin barrier architecture](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_2.webp)
+![3D-иллюстрация структуры кожного барьера](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_2.webp)
 
-When lipid mortar degrades, cellular water escapes rapidly.
+Когда липидный цемент разрушается, клеточная вода быстро испаряется.
 
 :::stat
-**30% to 50%** of severe eczema patients present filaggrin protein mutations.
+От **30% до 50%** пациентов с атопическим дерматитом имеют мутации белка филаггрина.
 :::
 
-:::tip The 3:1:1 Ratio Secret
-For impenetrable skin mortar, ceramides, cholesterol, and fatty acids must exist in an exact 3:1:1 ratio.
+:::tip Секрет соотношения 3:1:1
+Для прочного кожного цемента церамиды, холестерин и жирные кислоты должны находиться в соотношении 3:1:1.
 :::
 
-## **The Acid Mantle and Microbiome**
+## **Кислотная мантия и микробиом**
 
-Above the brick wall lies an invisible hydro-lipid shield called the **acid mantle** (pH 4.5 to 5.5).
+Поверх кирпичной стены расположен **кислотный мантий** (pH 4.5–5.5).
 
-This acidic habitat inhibits pathogens while nourishing your **skin microbiome**.
+Эта кислая среда подавляет патогены и питает ваш **микробиом кожи**.
 
-![Scientific diagram of skin microbiome ecosystem](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_3.webp)
+![Схема микробиома кожи и S. epidermidis](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_3.webp)
 
-Symbiotic bacteria like *Staphylococcus epidermidis* synthesize natural antimicrobial defenses.
+Полезные бактерии, такие как *Staphylococcus epidermidis*, синтезируют естественную защиту. Щелочное мыло разрушает мантию.
 
-:::info Inflammatory Dysbiosis
-Dysbiosis occurs when beneficial microbes are stripped away, triggering chronic sensitivity.
+:::info Воспалительный Дисбиоз
+Дисбиоз возникает, когда полезные микробы вымываются, вызывая хроническую чувствительность.
 :::
 
-## **What Destroys Your Skin Barrier Daily?**
+## **Что ежедневно разрушает ваш кожный барьер?**
 
-1. **Extreme Weather:** Low humidity accelerates Transepidermal Water Loss (TEWL).
-2. **Aggressive Cleansers (Sulfates):** Heavy surfactants dissolve lipid mortar like grease in a pan.
-3. **Over-Exfoliation:** Chemical acids remove protective layers before cellular regeneration.
+1. **Сухой климат:** Низкая влажность ускоряет трансэпидермальную потерю воды (TEWL).
+2. **Агрессивные очистители:** Сульфаты растворяют липидный цемент, как жир на сковороде.
+3. **Переизбыток пилингов:** Химические кислоты удаляют защитные слои.
 
-![Micro-cracks in stratum corneum](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_4.webp)
+![Микротрещины в роговом слое](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/cuerpo_4.webp)
 
-:::checklist Warning Signs: Is your barrier damaged?
-- Skin appears dull and lacks natural luminosity.
-- Immediate tightness upon exiting the shower.
-- Mild burning or stinging when applying gentle moisturizer.
-- Persistent flaking and rough surface texture.
+:::checklist Предупреждающие знаки: Поврежден ли ваш барьер?
+- Кожа выглядит тусклой и лишена естественного сияния.
+- Стянутость сразу после душа.
+- Легкое жжение при нанесении нейтрального крема.
+- Шелушение и шероховатость.
 :::
 
-## **Step-by-Step: Repairing Your Skin Barrier Today**
+## **Шаг за шагом: Восстановите ваш кожный барьер**
 
-1. **Atraumatic Physical Hygiene:** Avoid hot water and foaming soaps. Opt for UpPoly microfiber technology (Laska Mini line) that cleans pores via capillary action.
-2. **Lipid Replenishment:** Use creams enriched with ceramides and squalane.
-3. **Topical Prebiotics:** Choose cosmetic formulations with inulin to nourish commensal bacteria.
+1. **Атравматичная физическая гигиена:** Используйте микроволокно UpPoly (линия Laska Mini), очищающее поры за счет капиллярного эффекта.
+2. **Восполнение липидов:** Наносите кремы с церамидами и скваланом.
+3. **Пребиотики:** Выбирайте косметику с инулином для питания полезных бактерий.
 
-![Atraumatic physical cleaning with UpPoly microfiber Laska Mini](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp)
+![Атравматичное очищение микроволокном UpPoly Laska Mini](/assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/gemini_generated_image_8b2pk18b2pk18b2p.webp)
 
-:::quiz Barrier Diagnostic Test
-Q: What is the primary indicator of lipid mortar breakdown?
-- Stinging or burning sensation when applying neutral moisturizer *correct*
-- Smooth skin after washing with alkaline bar soap
-- Increased collagen production in the T-zone
+:::quiz Диагностический тест
+Q: Что является главным признаком разрушения липидного цемента?
+- Ощущение жжения при нанесении нейтрального крема *correct*
+- Гладкая кожа после мытья щелочным мылом
+- Увеличение выработки коллагена в T-зоне
 :::
 
-## **The Acne Myth**
+## **Миф об акне**
 
-Washing your face multiple times a day to dry out pimples strips essential ceramides, triggering sebaceous glands to produce double the oil. Repairing the barrier is essential for clearing acne.
+Частое умывание для «подсушивания» прыщей разрушает церамиды и заставляет сальные железы выделять вдвое больше кожного сала. Восстановление барьера — первый шаг к чистой коже.

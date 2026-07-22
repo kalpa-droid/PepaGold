@@ -40,7 +40,7 @@
             "a": "El ciclo de renovación celular dura entre 14 y 28 días. Con higiene atraumática y ceramidas biomiméticas sentirás alivio en 3 a 5 días y recuperación total en 4 semanas."
           },
           {
-            "q": "¿Por qué me arde la cara cuando me pongo crema hidratante?",
+            "q": "¿Por qué razón mi piel siente ardor y tirantez cuando me aplico crema hidratante habitual?",
             "a": "El ardor es el síntoma #1 de microfisuras en el estrato córneo. Sin cemento lipídico ni manto ácido, la crema toma contacto directo con nervios expuestos."
           }
         ],
@@ -70,7 +70,7 @@
         "locale": "es-ar",
         "category": "barrera-cutanea",
         "category_label": "🔬 Ciencia de la Piel",
-        "concept": "fisiolog-a-y-ecolog-a-de-la-barrera-cut-nea-din-mica-del-microbioma-mantos-hidrolip-dicos-y-estrategias-terap-uticas-avanzadas fisiolog-a-y-ecolog-a-de-la-barrera-cut-nea-din-mica-del-microbioma-mantos-hidrolip-dicos-y-estrategias-terap-uticas-avanzadas",
+        "concept": "fisiolog-a-y-ecolog-a-de-la-barrera-cut-nea-din-mica-del-microbioma-mantos-hidrolip-dicos-y-estrategias-terap-uticas-avanzadas",
         "local_phenomenon": "Viento Zonda y sequedad extrema de montaña",
         "cover_image": "/assets/imagenes/blog/fisiologia-microbioma-manto-acido/prompt_1.webp",
         "media": [
@@ -150,7 +150,7 @@
         ],
         "faq": [
           {
-            "q": "¿Por qué el agua micelar dice 'sin enjuague' en la etiqueta?",
+            "q": "¿Por qué razón el agua micelar indica en su etiqueta comercial que es un producto sin enjuague?",
             "a": "Es un reclamo comercial de conveniencia. Dermatológicamente, todo detergente debe enjuagarse con agua tibia para evitar la extracción lipídica silente."
           },
           {
@@ -174,17 +174,17 @@
     },
     {
       "meta": {
-        "article_id": "PG-002",
+        "article_id": "PG-005",
         "title": "¿Tu rutina de 10 pasos te está arruinando la piel? Mitos del Skincare Desmentidos",
         "description": "El peligro de la sobre-exfoliación, el Skin Fasting y por qué acumular productos destruye la regeneración celular.",
-        "slug": "impacto-tensoactivos-aguas-micelares",
+        "slug": "mitos-skincare-rutina-minimalista",
         "date": "2026-07-21",
         "date_created": "2026-07-21",
         "date_ai_processed": "2026-07-21",
         "locale": "es-ar",
         "category": "rutinas-minimalismo",
         "category_label": "🧘‍♀️ Rutinas y Skinimalismo",
-        "concept": "el-impacto-de-tensoactivos-jabones-y-aguas-micelares-en-la-barrera-cut-nea",
+        "concept": "el-skinimalismo-y-la-reducci-n-de-pasos-en-el-skincare",
         "local_phenomenon": "Viento Zonda y sequedad extrema de montaña",
         "cover_image": "/assets/imagenes/blog/mitos-skincare-rutina-minimalista/gemini_generated_image_8b2pk18b2pk18b2p.webp",
         "media": [
@@ -226,21 +226,21 @@
         "_source": "blog/posts/es-ar/mitos-skincare-rutina-minimalista.md"
       },
       "body": "¿Alguna vez te preguntaste por qué tu piel reacciona con ardor o tirantez a pesar de seguir una rutina impecable? En la dermatología moderna, la sobrecargas cosméticas y el uso de tensoactivos sintéticos son reconocidos como los principales desencadenantes de sensibilidad y envejecimiento prematuro.\n\nEste análisis científico explora la fisiología real de tu piel, desmintiendo mitos comerciales y ofreciendo un camino claro hacia la regeneración epidérmica.\n\n## **El Mito de los 10 Pasos: Cuando Más Productos Significan Más Irritación**\n\nEl estrato córneo es la interfaz biológica principal entre tu cuerpo y el exterior. Funciona mediante corneocitos ricas en queratina suspendidos en una matriz de ceramidas, colesterol y ácidos grasos libres.\n\n![Ilustración médica 3D de la estructura epidérmica y la matriz lipídica](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_1.webp)\n\nCuando esta matriz se perturba, la barrera pierde su densidad cristalográfica ortorrómbica, permitiendo que el agua se evapore velozmente.\n\n:::stat\n**Pérdida Transepidérmica de Agua (TEWL):** La desestructuración de la matriz lipídica eleva la TEWL hasta un **300%**, provocando tirantez inmediata y vulnerabilidad a alérgenos.\n:::\n\n:::tip El Secreto de la Acidez (pH 5.5)\nMantener el manto ácido en pH 4.5 - 5.5 es indispensable para que las enzimas beta-glucocerebrosidasas sinteticen ceramidas de forma natural.\n:::\n\n## **Sobre-Exfoliación y Micro-Fisuras: El Peligro de los Ácidos Diarios**\n\nTu piel alberga un ecosistema vivo de bacterias simbióticas, encabezadas por **Staphylococcus epidermidis**, que producen péptidos antimicrobianos naturales y ceramidas libres.\n\n![Visualización microscópica del microbioma cutáneo y la bacteria S. epidermidis](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_2.webp)\n\nLos lavados excesivos y los limpiadores alcalinos destruyen este escudo biológico (disbiosis), permitiendo la colonización de gérmenes patógenos como *S. aureus*.\n\n:::info Disbiosis Inflamatoria\nLa pérdida de bacterias benéficas es la causa directa de que pieles sanas desarrollen hipersensibilidad, rosácea o acné cosmético.\n:::\n\n## **Skin Fasting: ¿Por qué tu Piel Necesita Descansar de los Químicos?**\n\nLas agresiones químicas de los cosméticos se agravan severamente al interactuar con el clima y el exposoma.\n\nFenómenos ambientales como **Viento Zonda y sequedad extrema de montaña** ejercen un estrés osmótico extremo sobre la epidermis vulnerada:\n\n![Diagrama biofísico del impacto del estrés ambiental en la barrera cutánea](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_3.webp)\n\nCuando el cemento lipídico está dañado, el aire seco y la contaminación urbana actúan como una lija invisible que acelera el agrietamiento y la irritación.\n\n:::checklist Checklist: ¿Estás sufriendo sobre-carga cosmética?\n- Usás más de 4 productos distintos todas las mañanas y tu piel sigue viéndose opaca.\n- Sentís picazón o ardor al aplicar un suero que antes no te molestaba.\n- Tus poros se ven dilatados y tenés brotes en zonas donde nunca tuviste acné.\n- La cara te brilla por exceso de sebo a las pocas horas de lavártela.\n:::\n\n## **La Alternativa Biomecánica: Skinimalismo Real con Tecnología UpPoly**\n\nPara restaurar una barrera dañada, la dermatología clínica recomienda la **limpieza física atraumática por capilaridad**.\n\nLa tecnología textil japonesa **UpPoly** (línea Laska Mini) utiliza microfibras divididas nanométricamente que succionan la suciedad y el sebo oxidado usando exclusivamente agua tibia:\n\n![Fotografía de estudio de la limpieza biomecánica física con Laska Mini](/assets/imagenes/blog/mitos-skincare-rutina-minimalista/cuerpo_4.webp)\n\nAl eliminar los detergentes químicos, preservás intactos los lípidos estructurales y mantenés tu microbioma en perfecto equilibrio.\n\n:::quiz ¿Cuál es la consecuencia directa de la sobre-exfoliación diaria con hidroxiácidos?\n- Destruir los corneodesmosomas y provocar hiperqueratosis reactiva con rebote de sebo *correct*\n- Aumentar el grosor de la dermis y la producción de elastina\n- Eliminar permanentemente los poros dilatados\n:::\n\n## **Conclusión: La Verdadera Salud Cutánea**\n\nCuidar tu rostro no requiere decenas de frascos químicos. Requiere respetar su biología, proteger su manto ácido y permitirle restaurar su propio equilibrio de forma natural.\n",
-      "path": "blog/posts/es-ar/impacto-tensoactivos-aguas-micelares.md"
+      "path": "blog/posts/es-ar/mitos-skincare-rutina-minimalista.md"
     },
     {
       "meta": {
-        "article_id": "PG-003",
+        "article_id": "PG-004",
         "title": "¿Rojez, Rosácea o Granitos inesperados? Cómo Calmar la Piel Sensible Sin Químicos",
         "description": "Diferencias clínicas entre rosácea, piel reactiva y acné cosmético. Cómo calmar la inflamación endotelial.",
-        "slug": "fisiologia-microbioma-manto-acido",
+        "slug": "piel-sensible-rosacea-acne-cosmetico",
         "date": "2026-07-21",
         "date_created": "2026-07-21",
         "date_ai_processed": "2026-07-21",
         "locale": "es-ar",
         "category": "barrera-cutanea",
         "category_label": "🔬 Ciencia de la Piel",
-        "concept": "fisiolog-a-y-ecolog-a-de-la-barrera-cut-nea-din-mica-del-microbioma-mantos-hidrolip-dicos-y-estrategias-terap-uticas-avanzadas",
+        "concept": "piel-sensible-ros-cea-y-acn-cosm-tico-diagn-stico-y-estrategias-de-limpieza",
         "local_phenomenon": "Viento Zonda y sequedad extrema de montaña",
         "cover_image": "/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/gemini_generated_image_8b2pk18b2pk18b2p.webp",
         "media": [
@@ -263,7 +263,7 @@
         ],
         "faq": [
           {
-            "q": "¿Cómo sé si tengo acné común o acné cosmético?",
+            "q": "¿De qué manera puedo identificar si mi rostro tiene acné común o acné cosmético secundario?",
             "a": "El acné cosmético aparece como pequeños comeditones cerrados y pústulas superficiales días después de estrenar una crema o base de maquillaje densa."
           },
           {
@@ -282,14 +282,14 @@
         "_source": "blog/posts/es-ar/piel-sensible-rosacea-acne-cosmetico.md"
       },
       "body": "¿Alguna vez te preguntaste por qué tu piel reacciona con ardor o tirantez a pesar de seguir una rutina impecable? En la dermatología moderna, la sobrecargas cosméticas y el uso de tensoactivos sintéticos son reconocidos como los principales desencadenantes de sensibilidad y envejecimiento prematuro.\n\nEste análisis científico explora la fisiología real de tu piel, desmintiendo mitos comerciales y ofreciendo un camino claro hacia la regeneración epidérmica.\n\n## **¿Sensibilidad o Barrera Destruida? La Diferencia Clínica que Nadie te Cuenta**\n\nEl estrato córneo es la interfaz biológica principal entre tu cuerpo y el exterior. Funciona mediante corneocitos ricas en queratina suspendidos en una matriz de ceramidas, colesterol y ácidos grasos libres.\n\n![Ilustración médica 3D de la estructura epidérmica y la matriz lipídica](/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_1.webp)\n\nCuando esta matriz se perturba, la barrera pierde su densidad cristalográfica ortorrómbica, permitiendo que el agua se evapore velozmente.\n\n:::stat\n**Pérdida Transepidérmica de Agua (TEWL):** La desestructuración de la matriz lipídica eleva la TEWL hasta un **300%**, provocando tirantez inmediata y vulnerabilidad a alérgenos.\n:::\n\n:::tip El Secreto de la Acidez (pH 5.5)\nMantener el manto ácido en pH 4.5 - 5.5 es indispensable para que las enzimas beta-glucocerebrosidasas sinteticen ceramidas de forma natural.\n:::\n\n## **Acné Cosmético: Cuando tus Propias Cremas Tapan los Poros**\n\nTu piel alberga un ecosistema vivo de bacterias simbióticas, encabezadas por **Staphylococcus epidermidis**, que producen péptidos antimicrobianos naturales y ceramidas libres.\n\n![Visualización microscópica del microbioma cutáneo y la bacteria S. epidermidis](/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_2.webp)\n\nLos lavados excesivos y los limpiadores alcalinos destruyen este escudo biológico (disbiosis), permitiendo la colonización de gérmenes patógenos como *S. aureus*.\n\n:::info Disbiosis Inflamatoria\nLa pérdida de bacterias benéficas es la causa directa de que pieles sanas desarrollen hipersensibilidad, rosácea o acné cosmético.\n:::\n\n## **Rosácea y Reactividad: La Inflamación de los Capilares Dérmicos**\n\nLas agresiones químicas de los cosméticos se agravan severamente al interactuar con el clima y el exposoma.\n\nFenómenos ambientales como **Viento Zonda y sequedad extrema de montaña** ejercen un estrés osmótico extremo sobre la epidermis vulnerada:\n\n![Diagrama biofísico del impacto del estrés ambiental en la barrera cutánea](/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_3.webp)\n\nCuando el cemento lipídico está dañado, el aire seco y la contaminación urbana actúan como una lija invisible que acelera el agrietamiento y la irritación.\n\n:::checklist Checklist: Síntomas de Piel Sensible y Reactiva\n- Sentís sofocón o rubor rosado en los pómulos al cambiar de temperatura.\n- Te aparecen granitos blancos pequeños después de usar maquillaje denso.\n- Cualquier producto con fragancia te provoca picazón o manchas rojas.\n- Tus mejillas se ven hiper-reactivas y con venitas dilatadas.\n:::\n\n## **Calma Absoluta: Limpieza Atrauma con Laska Mini y Cero Fragancias**\n\nPara restaurar una barrera dañada, la dermatología clínica recomienda la **limpieza física atraumática por capilaridad**.\n\nLa tecnología textil japonesa **UpPoly** (línea Laska Mini) utiliza microfibras divididas nanométricamente que succionan la suciedad y el sebo oxidado usando exclusivamente agua tibia:\n\n![Fotografía de estudio de la limpieza biomecánica física con Laska Mini](/assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/cuerpo_4.webp)\n\nAl eliminar los detergentes químicos, preservás intactos los lípidos estructurales y mantenés tu microbioma en perfecto equilibrio.\n\n:::quiz ¿Qué ingrediente desencadena la activación de los receptores TLR-2 en pieles con rosácea?\n- Fragancias sintéticas, sulfatos aniónicos y metabolitos de Demodex *correct*\n- Agua purificada tibia\n- Ceramidas biomiméticas en ratio 3:1:1\n:::\n\n## **Conclusión: La Verdadera Salud Cutánea**\n\nCuidar tu rostro no requiere decenas de frascos químicos. Requiere respetar su biología, proteger su manto ácido y permitirle restaurar su propio equilibrio de forma natural.\n",
-      "path": "blog/posts/es-ar/fisiologia-microbioma-manto-acido.md"
+      "path": "blog/posts/es-ar/piel-sensible-rosacea-acne-cosmetico.md"
     }
   ],
   "concept_map": {
     "barrera-cutanea-y-microbioma": {
       "de-de": {
         "slug": "ciencia-barrera-cutanea-microbioma",
-        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
+        "title": "Die Wissenschaft der Hautbarriere und des Mikrobioms",
         "web_url": "/de/blog/ciencia-barrera-cutanea-microbioma",
         "phenomenon": "HVAC dry air & seasonal winds",
         "region_label": "de-de"
@@ -324,28 +324,28 @@
       },
       "fr-fr": {
         "slug": "ciencia-barrera-cutanea-microbioma",
-        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
+        "title": "La Science de la Barrière Cutanée et du Microbiome",
         "web_url": "/fr/blog/ciencia-barrera-cutanea-microbioma",
         "phenomenon": "HVAC dry air & seasonal winds",
         "region_label": "fr-fr"
       },
       "it-it": {
         "slug": "ciencia-barrera-cutanea-microbioma",
-        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
+        "title": "La Scienza della Barriera Cutanea e del Microbioma",
         "web_url": "/it/blog/ciencia-barrera-cutanea-microbioma",
         "phenomenon": "HVAC dry air & seasonal winds",
         "region_label": "it-it"
       },
       "pt-br": {
         "slug": "ciencia-barrera-cutanea-microbioma",
-        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
+        "title": "A Ciência da Barreira Cutânea e do Microbioma",
         "web_url": "/pt/blog/ciencia-barrera-cutanea-microbioma",
         "phenomenon": "HVAC dry air & seasonal winds",
         "region_label": "pt-br"
       },
       "ru-ru": {
         "slug": "ciencia-barrera-cutanea-microbioma",
-        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
+        "title": "Наука о Кожном Барьере и Микробиоме",
         "web_url": "/ru/blog/ciencia-barrera-cutanea-microbioma",
         "phenomenon": "HVAC dry air & seasonal winds",
         "region_label": "ru-ru"
@@ -361,7 +361,7 @@
     "fisiolog-a-y-ecolog-a-de-la-barrera-cut-nea-din-mica-del-microbioma-mantos-hidrolip-dicos-y-estrategias-terap-uticas-avanzadas": {
       "de-de": {
         "slug": "fisiologia-microbioma-manto-acido",
-        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
+        "title": "Die Wissenschaft der Hautbarriere und des Mikrobioms",
         "web_url": "/de/blog/fisiologia-microbioma-manto-acido",
         "phenomenon": "HVAC dry air & seasonal winds",
         "region_label": "de-de"
@@ -373,238 +373,6 @@
         "phenomenon": "HVAC dry air & seasonal winds",
         "region_label": "en-us"
       },
-      "es-ar": {
-        "slug": "fisiologia-microbioma-manto-acido",
-        "title": "¿Rojez, Rosácea o Granitos inesperados? Cómo Calmar la Piel Sensible Sin Químicos",
-        "web_url": "/blog/fisiologia-microbioma-manto-acido",
-        "phenomenon": "Viento Zonda y sequedad extrema de montaña",
-        "region_label": "es-ar"
-      },
-      "es-es": {
-        "slug": "fisiologia-microbioma-manto-acido",
-        "title": "¿Rojez, Rosácea o Granitos inesperados? Cómo Calmar la Piel Sensible Sin Químicos",
-        "web_url": "/es/blog/fisiologia-microbioma-manto-acido",
-        "phenomenon": "Polvo sahariano (Calima) y calor mediterráneo",
-        "region_label": "es-es"
-      },
-      "es-mx": {
-        "slug": "fisiologia-microbioma-manto-acido",
-        "title": "¿Rojez, Rosácea o Granitos inesperados? Cómo Calmar la Piel Sensible Sin Químicos",
-        "web_url": "/mx/blog/fisiologia-microbioma-manto-acido",
-        "phenomenon": "Contaminación por micropartículas PM2.5 en CDMX",
-        "region_label": "es-mx"
-      },
-      "fr-fr": {
-        "slug": "fisiologia-microbioma-manto-acido",
-        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
-        "web_url": "/fr/blog/fisiologia-microbioma-manto-acido",
-        "phenomenon": "HVAC dry air & seasonal winds",
-        "region_label": "fr-fr"
-      },
-      "it-it": {
-        "slug": "fisiologia-microbioma-manto-acido",
-        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
-        "web_url": "/it/blog/fisiologia-microbioma-manto-acido",
-        "phenomenon": "HVAC dry air & seasonal winds",
-        "region_label": "it-it"
-      },
-      "pt-br": {
-        "slug": "fisiologia-microbioma-manto-acido",
-        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
-        "web_url": "/pt/blog/fisiologia-microbioma-manto-acido",
-        "phenomenon": "HVAC dry air & seasonal winds",
-        "region_label": "pt-br"
-      },
-      "ru-ru": {
-        "slug": "fisiologia-microbioma-manto-acido",
-        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
-        "web_url": "/ru/blog/fisiologia-microbioma-manto-acido",
-        "phenomenon": "HVAC dry air & seasonal winds",
-        "region_label": "ru-ru"
-      },
-      "zh-hans": {
-        "slug": "fisiologia-microbioma-manto-acido",
-        "title": "面部紧绷与暗沉？探索皮肤微生态与酸性保护膜的秘密",
-        "web_url": "/zh/blog/fisiologia-microbioma-manto-acido",
-        "phenomenon": "HVAC dry air & seasonal winds",
-        "region_label": "zh-hans"
-      }
-    },
-    "el-impacto-de-tensoactivos-jabones-y-aguas-micelares-en-la-barrera-cut-nea": {
-      "de-de": {
-        "slug": "impacto-tensoactivos-aguas-micelares",
-        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
-        "web_url": "/de/blog/impacto-tensoactivos-aguas-micelares",
-        "phenomenon": "HVAC dry air & seasonal winds",
-        "region_label": "de-de"
-      },
-      "en-us": {
-        "slug": "impacto-tensoactivos-aguas-micelares",
-        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
-        "web_url": "/us/blog/impacto-tensoactivos-aguas-micelares",
-        "phenomenon": "HVAC dry air & seasonal winds",
-        "region_label": "en-us"
-      },
-      "es-ar": {
-        "slug": "impacto-tensoactivos-aguas-micelares",
-        "title": "¿Tu rutina de 10 pasos te está arruinando la piel? Mitos del Skincare Desmentidos",
-        "web_url": "/blog/impacto-tensoactivos-aguas-micelares",
-        "phenomenon": "Viento Zonda y sequedad extrema de montaña",
-        "region_label": "es-ar"
-      },
-      "es-es": {
-        "slug": "impacto-tensoactivos-aguas-micelares",
-        "title": "¿Tu rutina de 10 pasos te está arruinando la piel? Mitos del Skincare Desmentidos",
-        "web_url": "/es/blog/impacto-tensoactivos-aguas-micelares",
-        "phenomenon": "Polvo sahariano (Calima) y calor mediterráneo",
-        "region_label": "es-es"
-      },
-      "es-mx": {
-        "slug": "impacto-tensoactivos-aguas-micelares",
-        "title": "¿Tu rutina de 10 pasos te está arruinando la piel? Mitos del Skincare Desmentidos",
-        "web_url": "/mx/blog/impacto-tensoactivos-aguas-micelares",
-        "phenomenon": "Contaminación por micropartículas PM2.5 en CDMX",
-        "region_label": "es-mx"
-      },
-      "fr-fr": {
-        "slug": "impacto-tensoactivos-aguas-micelares",
-        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
-        "web_url": "/fr/blog/impacto-tensoactivos-aguas-micelares",
-        "phenomenon": "HVAC dry air & seasonal winds",
-        "region_label": "fr-fr"
-      },
-      "it-it": {
-        "slug": "impacto-tensoactivos-aguas-micelares",
-        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
-        "web_url": "/it/blog/impacto-tensoactivos-aguas-micelares",
-        "phenomenon": "HVAC dry air & seasonal winds",
-        "region_label": "it-it"
-      },
-      "pt-br": {
-        "slug": "impacto-tensoactivos-aguas-micelares",
-        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
-        "web_url": "/pt/blog/impacto-tensoactivos-aguas-micelares",
-        "phenomenon": "HVAC dry air & seasonal winds",
-        "region_label": "pt-br"
-      },
-      "ru-ru": {
-        "slug": "impacto-tensoactivos-aguas-micelares",
-        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
-        "web_url": "/ru/blog/impacto-tensoactivos-aguas-micelares",
-        "phenomenon": "HVAC dry air & seasonal winds",
-        "region_label": "ru-ru"
-      },
-      "zh-hans": {
-        "slug": "impacto-tensoactivos-aguas-micelares",
-        "title": "卸妆水会导致致痘和干燥吗？揭开面部表面活性剂的真相",
-        "web_url": "/zh/blog/impacto-tensoactivos-aguas-micelares",
-        "phenomenon": "HVAC dry air & seasonal winds",
-        "region_label": "zh-hans"
-      }
-    },
-    "el-skinimalismo-y-la-reducci-n-de-pasos-en-el-skincare": {
-      "de-de": {
-        "slug": "mitos-skincare-rutina-minimalista",
-        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
-        "web_url": "/de/blog/mitos-skincare-rutina-minimalista",
-        "phenomenon": "HVAC dry air & seasonal winds",
-        "region_label": "de-de"
-      },
-      "en-us": {
-        "slug": "mitos-skincare-rutina-minimalista",
-        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
-        "web_url": "/us/blog/mitos-skincare-rutina-minimalista",
-        "phenomenon": "HVAC dry air & seasonal winds",
-        "region_label": "en-us"
-      },
-      "fr-fr": {
-        "slug": "mitos-skincare-rutina-minimalista",
-        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
-        "web_url": "/fr/blog/mitos-skincare-rutina-minimalista",
-        "phenomenon": "HVAC dry air & seasonal winds",
-        "region_label": "fr-fr"
-      },
-      "it-it": {
-        "slug": "mitos-skincare-rutina-minimalista",
-        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
-        "web_url": "/it/blog/mitos-skincare-rutina-minimalista",
-        "phenomenon": "HVAC dry air & seasonal winds",
-        "region_label": "it-it"
-      },
-      "pt-br": {
-        "slug": "mitos-skincare-rutina-minimalista",
-        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
-        "web_url": "/pt/blog/mitos-skincare-rutina-minimalista",
-        "phenomenon": "HVAC dry air & seasonal winds",
-        "region_label": "pt-br"
-      },
-      "ru-ru": {
-        "slug": "mitos-skincare-rutina-minimalista",
-        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
-        "web_url": "/ru/blog/mitos-skincare-rutina-minimalista",
-        "phenomenon": "HVAC dry air & seasonal winds",
-        "region_label": "ru-ru"
-      },
-      "zh-hans": {
-        "slug": "mitos-skincare-rutina-minimalista",
-        "title": "10步护肤法正在毁掉你的皮肤？护肤误区大揭秘",
-        "web_url": "/zh/blog/mitos-skincare-rutina-minimalista",
-        "phenomenon": "HVAC dry air & seasonal winds",
-        "region_label": "zh-hans"
-      }
-    },
-    "piel-sensible-ros-cea-y-acn-cosm-tico-diagn-stico-y-estrategias-de-limpieza": {
-      "de-de": {
-        "slug": "piel-sensible-rosacea-acne-cosmetico",
-        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
-        "web_url": "/de/blog/piel-sensible-rosacea-acne-cosmetico",
-        "phenomenon": "HVAC dry air & seasonal winds",
-        "region_label": "de-de"
-      },
-      "en-us": {
-        "slug": "piel-sensible-rosacea-acne-cosmetico",
-        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
-        "web_url": "/us/blog/piel-sensible-rosacea-acne-cosmetico",
-        "phenomenon": "HVAC dry air & seasonal winds",
-        "region_label": "en-us"
-      },
-      "fr-fr": {
-        "slug": "piel-sensible-rosacea-acne-cosmetico",
-        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
-        "web_url": "/fr/blog/piel-sensible-rosacea-acne-cosmetico",
-        "phenomenon": "HVAC dry air & seasonal winds",
-        "region_label": "fr-fr"
-      },
-      "it-it": {
-        "slug": "piel-sensible-rosacea-acne-cosmetico",
-        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
-        "web_url": "/it/blog/piel-sensible-rosacea-acne-cosmetico",
-        "phenomenon": "HVAC dry air & seasonal winds",
-        "region_label": "it-it"
-      },
-      "pt-br": {
-        "slug": "piel-sensible-rosacea-acne-cosmetico",
-        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
-        "web_url": "/pt/blog/piel-sensible-rosacea-acne-cosmetico",
-        "phenomenon": "HVAC dry air & seasonal winds",
-        "region_label": "pt-br"
-      },
-      "ru-ru": {
-        "slug": "piel-sensible-rosacea-acne-cosmetico",
-        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
-        "web_url": "/ru/blog/piel-sensible-rosacea-acne-cosmetico",
-        "phenomenon": "HVAC dry air & seasonal winds",
-        "region_label": "ru-ru"
-      },
-      "zh-hans": {
-        "slug": "piel-sensible-rosacea-acne-cosmetico",
-        "title": "泛红、酒渣鼻或发痘？不用化学品如何抚平敏感肌",
-        "web_url": "/zh/blog/piel-sensible-rosacea-acne-cosmetico",
-        "phenomenon": "HVAC dry air & seasonal winds",
-        "region_label": "zh-hans"
-      }
-    },
-    "fisiolog-a-y-ecolog-a-de-la-barrera-cut-nea-din-mica-del-microbioma-mantos-hidrolip-dicos-y-estrategias-terap-uticas-avanzadas fisiolog-a-y-ecolog-a-de-la-barrera-cut-nea-din-mica-del-microbioma-mantos-hidrolip-dicos-y-estrategias-terap-uticas-avanzadas": {
       "es-ar": {
         "slug": "fisiologia-microbioma-manto-acido",
         "title": "¿Piel tirante y sin vida? La Ciencia del Microbioma Cutáneo y el Manto Ácido",
@@ -623,8 +391,259 @@
         "slug": "fisiologia-microbioma-manto-acido",
         "title": "¿Piel tirante y sin brillo? La Ciencia del Microbioma Cutáneo y el Manto Ácido",
         "web_url": "/mx/blog/fisiologia-microbioma-manto-acido",
+        "phenomenon": "Smog urbano PM2.5 y clima cálido húmedo",
+        "region_label": "es-mx"
+      },
+      "fr-fr": {
+        "slug": "fisiologia-microbioma-manto-acido",
+        "title": "La Science de la Barrière Cutanée et du Microbiome",
+        "web_url": "/fr/blog/fisiologia-microbioma-manto-acido",
+        "phenomenon": "HVAC dry air & seasonal winds",
+        "region_label": "fr-fr"
+      },
+      "it-it": {
+        "slug": "fisiologia-microbioma-manto-acido",
+        "title": "La Scienza della Barriera Cutanea e del Microbioma",
+        "web_url": "/it/blog/fisiologia-microbioma-manto-acido",
+        "phenomenon": "HVAC dry air & seasonal winds",
+        "region_label": "it-it"
+      },
+      "pt-br": {
+        "slug": "fisiologia-microbioma-manto-acido",
+        "title": "A Ciência da Barreira Cutânea e do Microbioma",
+        "web_url": "/pt/blog/fisiologia-microbioma-manto-acido",
+        "phenomenon": "HVAC dry air & seasonal winds",
+        "region_label": "pt-br"
+      },
+      "ru-ru": {
+        "slug": "fisiologia-microbioma-manto-acido",
+        "title": "Наука о Кожном Барьере и Микробиоме",
+        "web_url": "/ru/blog/fisiologia-microbioma-manto-acido",
+        "phenomenon": "HVAC dry air & seasonal winds",
+        "region_label": "ru-ru"
+      },
+      "zh-hans": {
+        "slug": "fisiologia-microbioma-manto-acido",
+        "title": "面部紧绷与暗沉？探索皮肤微生态与酸性保护膜的秘密",
+        "web_url": "/zh/blog/fisiologia-microbioma-manto-acido",
+        "phenomenon": "HVAC dry air & seasonal winds",
+        "region_label": "zh-hans"
+      }
+    },
+    "el-impacto-de-tensoactivos-jabones-y-aguas-micelares-en-la-barrera-cut-nea": {
+      "de-de": {
+        "slug": "impacto-tensoactivos-aguas-micelares",
+        "title": "Die Wissenschaft der Hautbarriere und des Mikrobioms",
+        "web_url": "/de/blog/impacto-tensoactivos-aguas-micelares",
+        "phenomenon": "HVAC dry air & seasonal winds",
+        "region_label": "de-de"
+      },
+      "en-us": {
+        "slug": "impacto-tensoactivos-aguas-micelares",
+        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
+        "web_url": "/us/blog/impacto-tensoactivos-aguas-micelares",
+        "phenomenon": "HVAC dry air & seasonal winds",
+        "region_label": "en-us"
+      },
+      "es-ar": {
+        "slug": "impacto-tensoactivos-aguas-micelares",
+        "title": "¿El agua micelar causa acné y sequedad? La Verdad Sobre los Detergentes en tu Cara",
+        "web_url": "/blog/impacto-tensoactivos-aguas-micelares",
+        "phenomenon": "Viento Zonda y sequedad extrema de montaña",
+        "region_label": "es-ar"
+      },
+      "es-es": {
+        "slug": "impacto-tensoactivos-aguas-micelares",
+        "title": "¿El agua micelar causa acné y sequedad? La Verdad Sobre los Detergentes en tu Cara",
+        "web_url": "/es/blog/impacto-tensoactivos-aguas-micelares",
+        "phenomenon": "Polvo sahariano (Calima) y calor mediterráneo",
+        "region_label": "es-es"
+      },
+      "es-mx": {
+        "slug": "impacto-tensoactivos-aguas-micelares",
+        "title": "¿El agua micelar causa acné y sequedad? La Verdad Sobre los Detergentes en tu Cara",
+        "web_url": "/mx/blog/impacto-tensoactivos-aguas-micelares",
         "phenomenon": "Contaminación por micropartículas PM2.5 en CDMX",
         "region_label": "es-mx"
+      },
+      "fr-fr": {
+        "slug": "impacto-tensoactivos-aguas-micelares",
+        "title": "La Science de la Barrière Cutanée et du Microbiome",
+        "web_url": "/fr/blog/impacto-tensoactivos-aguas-micelares",
+        "phenomenon": "HVAC dry air & seasonal winds",
+        "region_label": "fr-fr"
+      },
+      "it-it": {
+        "slug": "impacto-tensoactivos-aguas-micelares",
+        "title": "La Scienza della Barriera Cutanea e del Microbioma",
+        "web_url": "/it/blog/impacto-tensoactivos-aguas-micelares",
+        "phenomenon": "HVAC dry air & seasonal winds",
+        "region_label": "it-it"
+      },
+      "pt-br": {
+        "slug": "impacto-tensoactivos-aguas-micelares",
+        "title": "A Ciência da Barreira Cutânea e do Microbioma",
+        "web_url": "/pt/blog/impacto-tensoactivos-aguas-micelares",
+        "phenomenon": "HVAC dry air & seasonal winds",
+        "region_label": "pt-br"
+      },
+      "ru-ru": {
+        "slug": "impacto-tensoactivos-aguas-micelares",
+        "title": "Наука о Кожном Барьере и Микробиоме",
+        "web_url": "/ru/blog/impacto-tensoactivos-aguas-micelares",
+        "phenomenon": "HVAC dry air & seasonal winds",
+        "region_label": "ru-ru"
+      },
+      "zh-hans": {
+        "slug": "impacto-tensoactivos-aguas-micelares",
+        "title": "卸妆水会导致致痘和干燥吗？揭开面部表面活性剂的真相",
+        "web_url": "/zh/blog/impacto-tensoactivos-aguas-micelares",
+        "phenomenon": "HVAC dry air & seasonal winds",
+        "region_label": "zh-hans"
+      }
+    },
+    "el-skinimalismo-y-la-reducci-n-de-pasos-en-el-skincare": {
+      "de-de": {
+        "slug": "mitos-skincare-rutina-minimalista",
+        "title": "Die Wissenschaft der Hautbarriere und des Mikrobioms",
+        "web_url": "/de/blog/mitos-skincare-rutina-minimalista",
+        "phenomenon": "HVAC dry air & seasonal winds",
+        "region_label": "de-de"
+      },
+      "en-us": {
+        "slug": "mitos-skincare-rutina-minimalista",
+        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
+        "web_url": "/us/blog/mitos-skincare-rutina-minimalista",
+        "phenomenon": "HVAC dry air & seasonal winds",
+        "region_label": "en-us"
+      },
+      "es-ar": {
+        "slug": "mitos-skincare-rutina-minimalista",
+        "title": "¿Tu rutina de 10 pasos te está arruinando la piel? Mitos del Skincare Desmentidos",
+        "web_url": "/blog/mitos-skincare-rutina-minimalista",
+        "phenomenon": "Viento Zonda y sequedad extrema de montaña",
+        "region_label": "es-ar"
+      },
+      "es-es": {
+        "slug": "mitos-skincare-rutina-minimalista",
+        "title": "¿Tu rutina de 10 pasos te está arruinando la piel? Mitos del Skincare Desmentidos",
+        "web_url": "/es/blog/mitos-skincare-rutina-minimalista",
+        "phenomenon": "Polvo sahariano (Calima) y calor mediterráneo",
+        "region_label": "es-es"
+      },
+      "es-mx": {
+        "slug": "mitos-skincare-rutina-minimalista",
+        "title": "¿Tu rutina de 10 pasos te está arruinando la piel? Mitos del Skincare Desmentidos",
+        "web_url": "/mx/blog/mitos-skincare-rutina-minimalista",
+        "phenomenon": "Contaminación por micropartículas PM2.5 en CDMX",
+        "region_label": "es-mx"
+      },
+      "fr-fr": {
+        "slug": "mitos-skincare-rutina-minimalista",
+        "title": "La Science de la Barrière Cutanée et du Microbiome",
+        "web_url": "/fr/blog/mitos-skincare-rutina-minimalista",
+        "phenomenon": "HVAC dry air & seasonal winds",
+        "region_label": "fr-fr"
+      },
+      "it-it": {
+        "slug": "mitos-skincare-rutina-minimalista",
+        "title": "La Scienza della Barriera Cutanea e del Microbioma",
+        "web_url": "/it/blog/mitos-skincare-rutina-minimalista",
+        "phenomenon": "HVAC dry air & seasonal winds",
+        "region_label": "it-it"
+      },
+      "pt-br": {
+        "slug": "mitos-skincare-rutina-minimalista",
+        "title": "A Ciência da Barreira Cutânea e do Microbioma",
+        "web_url": "/pt/blog/mitos-skincare-rutina-minimalista",
+        "phenomenon": "HVAC dry air & seasonal winds",
+        "region_label": "pt-br"
+      },
+      "ru-ru": {
+        "slug": "mitos-skincare-rutina-minimalista",
+        "title": "Наука о Кожном Барьере и Микробиоме",
+        "web_url": "/ru/blog/mitos-skincare-rutina-minimalista",
+        "phenomenon": "HVAC dry air & seasonal winds",
+        "region_label": "ru-ru"
+      },
+      "zh-hans": {
+        "slug": "mitos-skincare-rutina-minimalista",
+        "title": "10步护肤法正在毁掉你的皮肤？护肤误区大揭秘",
+        "web_url": "/zh/blog/mitos-skincare-rutina-minimalista",
+        "phenomenon": "HVAC dry air & seasonal winds",
+        "region_label": "zh-hans"
+      }
+    },
+    "piel-sensible-ros-cea-y-acn-cosm-tico-diagn-stico-y-estrategias-de-limpieza": {
+      "de-de": {
+        "slug": "piel-sensible-rosacea-acne-cosmetico",
+        "title": "Die Wissenschaft der Hautbarriere und des Mikrobioms",
+        "web_url": "/de/blog/piel-sensible-rosacea-acne-cosmetico",
+        "phenomenon": "HVAC dry air & seasonal winds",
+        "region_label": "de-de"
+      },
+      "en-us": {
+        "slug": "piel-sensible-rosacea-acne-cosmetico",
+        "title": "Does Your Face Burn When Applying Moisturizer? The Science of the Skin Barrier",
+        "web_url": "/us/blog/piel-sensible-rosacea-acne-cosmetico",
+        "phenomenon": "HVAC dry air & seasonal winds",
+        "region_label": "en-us"
+      },
+      "es-ar": {
+        "slug": "piel-sensible-rosacea-acne-cosmetico",
+        "title": "¿Rojez, Rosácea o Granitos inesperados? Cómo Calmar la Piel Sensible Sin Químicos",
+        "web_url": "/blog/piel-sensible-rosacea-acne-cosmetico",
+        "phenomenon": "Viento Zonda y sequedad extrema de montaña",
+        "region_label": "es-ar"
+      },
+      "es-es": {
+        "slug": "piel-sensible-rosacea-acne-cosmetico",
+        "title": "¿Rojez, Rosácea o Granitos inesperados? Cómo Calmar la Piel Sensible Sin Químicos",
+        "web_url": "/es/blog/piel-sensible-rosacea-acne-cosmetico",
+        "phenomenon": "Polvo sahariano (Calima) y calor mediterráneo",
+        "region_label": "es-es"
+      },
+      "es-mx": {
+        "slug": "piel-sensible-rosacea-acne-cosmetico",
+        "title": "¿Rojez, Rosácea o Granitos inesperados? Cómo Calmar la Piel Sensible Sin Químicos",
+        "web_url": "/mx/blog/piel-sensible-rosacea-acne-cosmetico",
+        "phenomenon": "Contaminación por micropartículas PM2.5 en CDMX",
+        "region_label": "es-mx"
+      },
+      "fr-fr": {
+        "slug": "piel-sensible-rosacea-acne-cosmetico",
+        "title": "La Science de la Barrière Cutanée et du Microbiome",
+        "web_url": "/fr/blog/piel-sensible-rosacea-acne-cosmetico",
+        "phenomenon": "HVAC dry air & seasonal winds",
+        "region_label": "fr-fr"
+      },
+      "it-it": {
+        "slug": "piel-sensible-rosacea-acne-cosmetico",
+        "title": "La Scienza della Barriera Cutanea e del Microbioma",
+        "web_url": "/it/blog/piel-sensible-rosacea-acne-cosmetico",
+        "phenomenon": "HVAC dry air & seasonal winds",
+        "region_label": "it-it"
+      },
+      "pt-br": {
+        "slug": "piel-sensible-rosacea-acne-cosmetico",
+        "title": "A Ciência da Barreira Cutânea e do Microbioma",
+        "web_url": "/pt/blog/piel-sensible-rosacea-acne-cosmetico",
+        "phenomenon": "HVAC dry air & seasonal winds",
+        "region_label": "pt-br"
+      },
+      "ru-ru": {
+        "slug": "piel-sensible-rosacea-acne-cosmetico",
+        "title": "Наука о Кожном Барьере и Микробиоме",
+        "web_url": "/ru/blog/piel-sensible-rosacea-acne-cosmetico",
+        "phenomenon": "HVAC dry air & seasonal winds",
+        "region_label": "ru-ru"
+      },
+      "zh-hans": {
+        "slug": "piel-sensible-rosacea-acne-cosmetico",
+        "title": "泛红、酒渣鼻或发痘？不用化学品如何抚平敏感肌",
+        "web_url": "/zh/blog/piel-sensible-rosacea-acne-cosmetico",
+        "phenomenon": "HVAC dry air & seasonal winds",
+        "region_label": "zh-hans"
       }
     }
   }
