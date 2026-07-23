@@ -8,7 +8,7 @@ date_created: '2026-07-21'
 date_ai_processed: '2026-07-21'
 locale: es-mx
 category: rutinas-minimalismo
-category_label: 🔬 Ciencia de la Piel
+category_label: 🧘‍♀️ Rutinas y Skinimalismo
 concept: el-skinimalismo-y-la-reducci-n-de-pasos-en-el-skincare
 local_phenomenon: Contaminación por micropartículas PM2.5 en CDMX
 cover_image: /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp

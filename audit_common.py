@@ -2,9 +2,8 @@
 """
 audit_common.py — Lo que comparten los dos auditores (artículos y estructura).
 
-Si mañana agregás una marca o producto nuevo, se agrega ACÁ UNA SOLA VEZ y
-automáticamente protege tanto los artículos del blog como la estructura del
-sitio. Nunca dupliques esta lista en otro archivo.
+Si mañana agregás una marca, producto o categoría nueva, se agrega ACÁ UNA SOLA VEZ
+y automáticamente protege tanto los artículos del blog como la estructura del sitio.
 """
 import re
 from langdetect import detect, DetectorFactory, LangDetectException
@@ -40,6 +39,70 @@ BLOG_EXPECTED_LANG = {
     "it-it": "it", "pt-br": "pt", "ru-ru": "ru", "zh-hans": "zh-cn",
 }
 
+# MATRIZ UNIVERSAL DE CATEGORÍAS TRADUCIDAS (10 LOCALES)
+CATEGORY_TRANSLATION_MAP = {
+    "barrera-cutanea": {
+        "es-ar": "🔬 Ciencia de la Piel",
+        "es-mx": "🔬 Ciencia de la Piel",
+        "es-es": "🔬 Ciencia de la Piel",
+        "en-us": "🔬 Skin Science",
+        "fr-fr": "🔬 Science de la Peau",
+        "de-de": "🔬 Hautwissenschaft",
+        "it-it": "🔬 Scienza della Pelle",
+        "pt-br": "🔬 Ciência da Pele",
+        "ru-ru": "🔬 Наука о коже",
+        "zh-hans": "🔬 皮肤科学"
+    },
+    "rutinas-minimalismo": {
+        "es-ar": "🧘‍♀️ Rutinas y Skinimalismo",
+        "es-mx": "🧘‍♀️ Rutinas y Skinimalismo",
+        "es-es": "🧘‍♀️ Rutinas y Skinimalismo",
+        "en-us": "🧘‍♀️ Routines & Skinimalism",
+        "fr-fr": "🧘‍♀️ Routines & Skinimalisme",
+        "de-de": "🧘‍♀️ Routinen & Skinimalismus",
+        "it-it": "🧘‍♀️ Routine & Skinimalismo",
+        "pt-br": "🧘‍♀️ Rotinas e Skinimalismo",
+        "ru-ru": "🧘‍♀️ Уход и скиннимализм",
+        "zh-hans": "🧘‍♀️ 护肤流程与极简主义"
+    },
+    "ingredientes-dermatologia": {
+        "es-ar": "🧪 Ingredientes y Ciencia",
+        "es-mx": "🧪 Ingredientes y Ciencia",
+        "es-es": "🧪 Ingredientes y Ciencia",
+        "en-us": "🧪 Ingredients & Science",
+        "fr-fr": "🧪 Ingrédients & Science",
+        "de-de": "🧪 Inhaltsstoffe & Wissenschaft",
+        "it-it": "🧪 Ingredienti e Scienza",
+        "pt-br": "🧪 Ingredientes e Ciência",
+        "ru-ru": "🧪 Ингредиенты и наука",
+        "zh-hans": "🧪 成分与科学"
+    },
+    "salud-sensibilidad": {
+        "es-ar": "🌿 Piel Sensible y Salud",
+        "es-mx": "🌿 Piel Sensible y Salud",
+        "es-es": "🌿 Piel Sensible y Salud",
+        "en-us": "🌿 Sensitive Skin & Health",
+        "fr-fr": "🌿 Peau Sensible & Santé",
+        "de-de": "🌿 Empfindliche Haut & Gesundheit",
+        "it-it": "🌿 Pelle Sensibile e Salute",
+        "pt-br": "🌿 Pele Sensível e Saúde",
+        "ru-ru": "🌿 Чувствительная кожа и здоровье",
+        "zh-hans": "🌿 敏感肌与健康"
+    },
+    "exposoma-ambiente": {
+        "es-ar": "🛡️ Exposoma y Ambiente",
+        "es-mx": "🛡️ Exposoma y Ambiente",
+        "es-es": "🛡️ Exposoma y Ambiente",
+        "en-us": "🛡️ Exposome & Environment",
+        "fr-fr": "🛡️ Exposome & Environnement",
+        "de-de": "🛡️ Exposom & Umwelt",
+        "it-it": "🛡️ Esposoma e Ambiente",
+        "pt-br": "🛡️ Exposoma e Ambiente",
+        "ru-ru": "🛡️ Экспозом и окружающая среда",
+        "zh-hans": "🛡️ 暴露组与环境"
+    }
+}
+
 HTML_TAG_RE = re.compile(r"<[^>]+>")
 PLACEHOLDER_TOKEN_RE = re.compile(r"\{[a-zA-Z_]+\}")
 CJK_CHAR_RE = re.compile(r"[\u4e00-\u9fff]")
@@ -65,7 +128,6 @@ def detect_lang(text):
     if len(text) < MIN_CHARS:
         return None
     
-    # CJK Unicode Range check: langdetect often misidentifies Chinese without spaces as Korean ('ko')
     cjk_count = len(CJK_CHAR_RE.findall(text))
     if cjk_count >= 10:
         return "zh-cn"

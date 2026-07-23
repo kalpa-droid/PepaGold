@@ -8,7 +8,7 @@ date_created: '2026-07-21'
 date_ai_processed: '2026-07-21'
 locale: zh-hans
 category: rutinas-minimalismo
-category_label: 🔬 皮肤科学
+category_label: 🧘‍♀️ 护肤流程与极简主义
 concept: el-skinimalismo-y-la-reducci-n-de-pasos-en-el-skincare
 local_phenomenon: HVAC dry air & seasonal winds
 cover_image: /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp

@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """
-validate_translations.py — Auditoría de pureza de idioma (v2.1).
+validate_translations.py — Auditoría de pureza de idioma (v2.2).
 
 Chequea:
   1. PUREZA DE IDIOMA: el texto de cada campo/párrafo está en el idioma que corresponde.
-  2. CATEGORÍAS TRADUCIDAS: valida expresamente que 'category_label' esté traducido al idioma del locale.
+  2. TODAS LAS CATEGORÍAS TRADUCIDAS: valida expresamente que 'category_label' coincida
+     con el mapa universal CATEGORY_TRANSLATION_MAP para cualquier categoría y locale.
   3. CONSISTENCIA ESTRUCTURAL: el archivo vive en la carpeta correcta para su `locale`.
   4. CONSISTENCIA DE CONCEPTO Y SLUG: todos los archivos que comparten `article_id` tienen el mismo `concept` y `slug`.
   5. VERIFICACIÓN FÍSICA DE IMÁGENES EN DISCO.
@@ -14,23 +15,10 @@ import re
 import sys
 import yaml
 from collections import defaultdict
-from audit_common import BRAND_WHITELIST, BLOG_EXPECTED_LANG, detect_lang
+from audit_common import BRAND_WHITELIST, BLOG_EXPECTED_LANG, CATEGORY_TRANSLATION_MAP, detect_lang
 
 POSTS_DIR = "blog/posts"
 EXPECTED_LANG = BLOG_EXPECTED_LANG
-
-EXPECTED_CATEGORY_LABELS = {
-    "es-ar": "🔬 Ciencia de la Piel",
-    "es-mx": "🔬 Ciencia de la Piel",
-    "es-es": "🔬 Ciencia de la Piel",
-    "en-us": "🔬 Skin Science",
-    "fr-fr": "🔬 Science de la Peau",
-    "de-de": "🔬 Hautwissenschaft",
-    "it-it": "🔬 Scienza della Pelle",
-    "pt-br": "🔬 Ciência da Pele",
-    "ru-ru": "🔬 Наука о коже",
-    "zh-hans": "🔬 皮肤科学"
-}
 
 
 def parse_post(path):
@@ -39,7 +27,8 @@ def parse_post(path):
     m = re.match(r"^---\s*\n(.*?)\n---\s*\n(.*)$", raw, re.S)
     if not m:
         return None, None
-    return yaml.safe_load(m.group(1)) or {}, m.group(2)
+    meta = yaml.safe_load(m.group(1)) or {}
+    return meta, m.group(2)
 
 
 def collect_text_blocks(meta, body_md):
@@ -112,14 +101,18 @@ def main():
         if meta.get("slug"):
             slug_by_article[article_id].add(meta["slug"])
 
-        # 2) Verificación explícita de category_label traducida
-        expected_cat_label = EXPECTED_CATEGORY_LABELS.get(locale)
+        # 2) Verificación explícita e inquebrantable de TODAS LAS CATEGORÍAS TRADUCIDAS
+        cat_id = meta.get("category")
         current_cat_label = meta.get("category_label")
-        if expected_cat_label and current_cat_label != expected_cat_label:
-            problems.append(
-                f"[CATEGORÍA NO TRADUCIDA] {path}: category_label es '{current_cat_label}', "
-                f"se esperaba la versión traducida '{expected_cat_label}'"
-            )
+        if cat_id in CATEGORY_TRANSLATION_MAP:
+            expected_cat_label = CATEGORY_TRANSLATION_MAP[cat_id].get(locale)
+            if expected_cat_label and current_cat_label != expected_cat_label:
+                problems.append(
+                    f"[CATEGORÍA NO TRADUCIDA] {path} (Categoría '{cat_id}'): "
+                    f"category_label es '{current_cat_label}', se esperaba '{expected_cat_label}' para {locale}"
+                )
+        elif not current_cat_label:
+            problems.append(f"[CATEGORÍA FALTANTE] {path}: le falta el campo 'category_label'")
 
         # 3) Pureza de idioma de bloques largos
         expected = EXPECTED_LANG.get(locale)
@@ -176,7 +169,7 @@ def main():
         missing = sorted(set(EXPECTED_LANG) - locales)
         status = "🟢 completo" if not missing else f"🟡 faltan: {', '.join(missing)}"
         print(f"  {article_id}: {len(locales)}/10 — {status}")
-        print()
+    print()
 
     if problems:
         print(f"🔴 {len(problems)} problema(s) encontrado(s):\n")
