@@ -8,49 +8,35 @@ date_created: '2026-07-21'
 date_ai_processed: '2026-07-21'
 locale: ru-ru
 category: barrera-cutanea
-category_label: 🔬 Наука о Коже
+category_label: 🔬 Наука о коже
 concept: el-skinimalismo-y-la-reducci-n-de-pasos-en-el-skincare
 local_phenomenon: HVAC dry air & seasonal winds
 cover_image: /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp
 media:
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_2.webp
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_3.webp
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_4.webp
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_5.webp
+- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp
+- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_2.webp
+- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_3.webp
+- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_4.webp
+- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_5.webp
 author: PepaGold
 epigraph:
-  text: >-
-    Коже не нужна лишняя химия; ей нужна свобода для самостоятельного
-    восстановления.
+  text: Коже не нужна лишняя химия; ей нужна свобода для самостоятельного восстановления.
   author: Д-р PepaGold
 summary:
-  - >-
-    Кожный барьер — это липидный матрикс из церамидов, холестерина и жирных
-    кислот.
-  - >-
-    Кислотная мантия (pH 4.5-5.5) и микробиом образуют первую линию
-    биологической защиты.
-  - Сухой климат и агрессивные очистители создают микротрещины.
-  - Восстановление требует атравматичного физического очищения.
+- Кожный барьер — это липидный матрикс из церамидов, холестерина и жирных кислот.
+- Кислотная мантия (pH 4.5-5.5) и микробиом образуют первую линию биологической защиты.
+- Сухой климат и агрессивные очистители создают микротрещины.
+- Восстановление требует атравматичного физического очищения.
 faq:
-  - q: Сколько времени требуется для восстановления кожного барьера?
-    a: Обновление клеток занимает 14–28 дней.
-  - q: Почему лицо жжет при нанесении крема?
-    a: Жжение указывает на микротрещины в роговом слое.
+- q: Сколько времени требуется для восстановления кожного барьера?
+  a: Обновление клеток занимает 14–28 дней.
+- q: Почему лицо жжет при нанесении крема?
+  a: Жжение указывает на микротрещины в роговом слое.
 show_science_link: true
 image_prompts:
-  - >-
-    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
 
-    Architectural Scandinavian minimalist beauty photography celebrating
-    skinimalism. A serene woman's bare, radiant face resting gracefully near a
-    single pristine white Laska Mini UpPoly microfiber cloth on a smooth nude
-    clay pedestal, illuminated by soft natural morning sunlight and delicate dew
-    drops. Palette dominated by warm dusty rose (#D48C90), warm sand, and raw
-    linen textures. Organic soft shadows, peaceful zen aesthetic. Shot on
-    Hasselblad 85mm f/2.0 lens. Completely clean minimalist composition. NO
-    text, NO watermarks, NO brand logos.
+  Architectural Scandinavian minimalist beauty photography celebrating skinimalism. A serene woman''s bare, radiant face resting gracefully near a single pristine white Laska Mini UpPoly microfiber cloth on a smooth nude clay pedestal, illuminated by soft natural morning sunlight and delicate dew drops. Palette dominated by warm dusty rose (#D48C90), warm sand, and raw linen textures. Organic soft shadows, peaceful zen aesthetic. Shot on Hasselblad 85mm f/2.0 lens. Completely clean minimalist composition. NO text, NO watermarks, NO brand logos.'
 date_images_applied: '2026-07-22'
 ---
 Чувствуете ли вы жжение при нанесении обычного увлажняющего крема? Ваш кожный барьер просит о помощи.

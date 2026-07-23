@@ -8,51 +8,36 @@ date_created: '2026-07-21'
 date_ai_processed: '2026-07-21'
 locale: ru-ru
 category: barrera-cutanea
-category_label: 🔬 Наука о Коже
+category_label: 🔬 Наука о коже
 concept: barrera-cutanea-y-microbioma
 local_phenomenon: HVAC dry air & seasonal winds
 cover_image: /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_1.webp
 media:
-  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_1.webp
-  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_2.webp
-  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_3.webp
-  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_4.webp
-  - /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_5.webp
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_1.webp
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_2.webp
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_3.webp
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_4.webp
+- /assets/imagenes/blog/ciencia-barrera-cutanea-microbioma/prompt_5.webp
 author: PepaGold
 epigraph:
-  text: >-
-    Коже не нужна лишняя химия; ей нужна свобода для самостоятельного
-    восстановления.
+  text: Коже не нужна лишняя химия; ей нужна свобода для самостоятельного восстановления.
   author: Д-р PepaGold
 summary:
-  - >-
-    Кожный барьер — это липидный матрикс из церамидов, холестерина и жирных
-    кислот.
-  - >-
-    Кислотная мантия (pH 4.5-5.5) и микробиом образуют первую линию
-    биологической защиты.
-  - Сухой климат и агрессивные очистители создают микротрещины.
-  - Восстановление требует атравматичного физического очищения.
+- Кожный барьер — это липидный матрикс из церамидов, холестерина и жирных кислот.
+- Кислотная мантия (pH 4.5-5.5) и микробиом образуют первую линию биологической защиты.
+- Сухой климат и агрессивные очистители создают микротрещины.
+- Восстановление требует атравматичного физического очищения.
 faq:
-  - q: Сколько времени требуется для восстановления кожного барьера?
-    a: Обновление клеток занимает 14–28 дней.
-  - q: Почему лицо жжет при нанесении крема?
-    a: Жжение указывает на микротрещины в роговом слое.
+- q: Сколько времени требуется для восстановления кожного барьера?
+  a: Обновление клеток занимает 14–28 дней.
+- q: Почему лицо жжет при нанесении крема?
+  a: Жжение указывает на микротрещины в роговом слое.
 show_science_link: true
 date_images_applied: '2026-07-22'
 image_prompts:
-  - >-
-    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
 
-    High-end luxury editorial photography of skin barrier repair. Extreme macro
-    close-up of a serene woman's cheek profile with glowing, deeply hydrated
-    skin texture, surrounded by translucent golden-rose lipid moisture droplets
-    forming a protective barrier aura. Aesthetic palette dominated by warm dusty
-    rose (#D48C90), champagne ivory, and soft nude clay. Soft diffused studio
-    morning lighting creating a silky protective glow on refined pores. Shot on
-    Hasselblad 100MP with 120mm macro f/2.8 lens, shallow depth of field.
-    Completely clean beauty composition. NO text, NO numbers, NO watermarks, NO
-    brand logos, NO graphic overlays.
+  High-end luxury editorial photography of skin barrier repair. Extreme macro close-up of a serene woman''s cheek profile with glowing, deeply hydrated skin texture, surrounded by translucent golden-rose lipid moisture droplets forming a protective barrier aura. Aesthetic palette dominated by warm dusty rose (#D48C90), champagne ivory, and soft nude clay. Soft diffused studio morning lighting creating a silky protective glow on refined pores. Shot on Hasselblad 100MP with 120mm macro f/2.8 lens, shallow depth of field. Completely clean beauty composition. NO text, NO numbers, NO watermarks, NO brand logos, NO graphic overlays.'
 ---
 Чувствуете ли вы жжение при нанесении обычного увлажняющего крема? Ваш кожный барьер просит о помощи.
 

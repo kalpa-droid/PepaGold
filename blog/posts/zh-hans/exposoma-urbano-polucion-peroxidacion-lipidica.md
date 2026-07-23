@@ -1,70 +1,43 @@
 ---
 article_id: PG-006
 title: 早起面色暗沉粗糙？城市暴露组学与脂质过氧化反应科学解析
-description: >-
-  城市空气中的微细颗粒物PM2.5与面部油脂结合引发脂质过氧化反应。采用UpPoly物理微纤维微孔导流技术，仅需温水即可温和吸附碳微粒，保护角质层pH5.5酸碱屏障与微生态平衡。
+description: 城市空气中的微细颗粒物PM2.5与面部油脂结合引发脂质过氧化反应。采用UpPoly物理微纤维微孔导流技术，仅需温水即可温和吸附碳微粒，保护角质层pH5.5酸碱屏障与微生态平衡。
 slug: exposoma-urbano-polucion-peroxidacion-lipidica
 date: '2026-07-23'
 date_created: '2026-07-23'
 date_ai_processed: '2026-07-23'
 locale: zh-hans
 category: barrera-cutanea
-category_label: 🔬 Ciencia de la Piel
+category_label: 🔬 皮肤科学
 concept: exposoma-urbano-polucion-pm25-peroxidacion-lipidica-barrera-cutanea
 local_phenomenon: Smog urbano y partículas finas PM2.5
-cover_image: >-
-  /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_1.webp
+cover_image: /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_1.webp
 media:
-  - >-
-    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_1.webp
-  - >-
-    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp
-  - >-
-    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp
-  - >-
-    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp
-  - >-
-    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp
+- /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_1.webp
+- /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp
+- /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp
+- /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp
+- /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp
 author: PepaGold
 epigraph:
   text: 城市中看不见的污染时刻侵蚀着肌肤；采用温和生物物理方式清洁，能重换面部活力。
   author: PepaGold 博士
 summary:
-  - 超细微粒PM2.5深入毛孔，引发剧烈的脂质过氧化反应。
-  - 天然角鲨烯氧化生成致痘副产物，阻塞毛孔并导致面部暗沉。
-  - 强力化学清洁剂会破坏神经酰胺，增加重金属的皮肤渗透性。
-  - UpPoly生物力学微纤维技术仅需温水即可物理吸附碳微粒，完好保留pH5.5酸碱屏障。
+- 超细微粒PM2.5深入毛孔，引发剧烈的脂质过氧化反应。
+- 天然角鲨烯氧化生成致痘副产物，阻塞毛孔并导致面部暗沉。
+- 强力化学清洁剂会破坏神经酰胺，增加重金属的皮肤渗透性。
+- UpPoly生物力学微纤维技术仅需温水即可物理吸附碳微粒，完好保留pH5.5酸碱屏障。
 faq:
-  - q: 为什么在城市工作一天后，皮肤会显得发灰疲惫？
-    a: 空气中的PM2.5细颗粒物与面部油脂结合并迅速氧化，形成一层堵塞毛孔的隐形薄膜。
-  - q: 自来水能单独清洗掉城市污染吗？
-    a: 单纯清水无法附着并带走亲脂性的尾气颗粒，需要UpPoly微纤维的毛细管吸引力才能安全清洁。
+- q: 为什么在城市工作一天后，皮肤会显得发灰疲惫？
+  a: 空气中的PM2.5细颗粒物与面部油脂结合并迅速氧化，形成一层堵塞毛孔的隐形薄膜。
+- q: 自来水能单独清洗掉城市污染吗？
+  a: 单纯清水无法附着并带走亲脂性的尾气颗粒，需要UpPoly微纤维的毛细管吸引力才能安全清洁。
 image_prompts:
-  - >-
-    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
-    Scientific-editorial concept photography of urban exposome and skin
-    pollution shield. Macro close-up of luminous, rejuvenated skin texture with
-    subtle iridescent protective atmosphere repelling microscopic charcoal-gray
-    pollution dust particles. Warm rose and dusty amber studio backlight. Shot
-    on Hasselblad 100MP, 120mm macro lens. NO text, NO logos.
-  - >-
-    📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): High-end
-    medical 3D rendering of microscopic PM2.5 particulate matter hovering near
-    the stratum corneum cell layer. Soft warm lighting highlighting lipid
-    membrane structure. Medical aesthetic. NO text.
-  - >-
-    📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Macro
-    photography of squalene oxidation process on skin surface, showing
-    transformation from oxidized dullness to glowing golden lipid balance. Clean
-    clinical framing. NO text.
-  - >-
-    📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Editorial
-    photography of urban environment backdrop with a calm, protected face
-    reflecting crystal clear atmospheric purity. Warm sunset glow. NO text.
-  - >-
-    📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): Ultra macro
-    shot of UpPoly micro-fibers capturing microscopic carbon residues using pure
-    water droplets. High contrast science detail. NO text.
+- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9): Scientific-editorial concept photography of urban exposome and skin pollution shield. Macro close-up of luminous, rejuvenated skin texture with subtle iridescent protective atmosphere repelling microscopic charcoal-gray pollution dust particles. Warm rose and dusty amber studio backlight. Shot on Hasselblad 100MP, 120mm macro lens. NO text, NO logos.'
+- '📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): High-end medical 3D rendering of microscopic PM2.5 particulate matter hovering near the stratum corneum cell layer. Soft warm lighting highlighting lipid membrane structure. Medical aesthetic. NO text.'
+- '📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Macro photography of squalene oxidation process on skin surface, showing transformation from oxidized dullness to glowing golden lipid balance. Clean clinical framing. NO text.'
+- '📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Editorial photography of urban environment backdrop with a calm, protected face reflecting crystal clear atmospheric purity. Warm sunset glow. NO text.'
+- '📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): Ultra macro shot of UpPoly micro-fibers capturing microscopic carbon residues using pure water droplets. High contrast science detail. NO text.'
 show_science_link: true
 date_images_applied: '2026-07-23'
 ---

@@ -1,88 +1,43 @@
 ---
 article_id: PG-006
-title: >-
-  Waking Up to Dull, Exhausted Skin? The Science of Urban Exposome & Lipid
-  Peroxidation
-description: >-
-  Dermatological analysis of PM2.5 micro-particles, squalene oxidation, and
-  urban skin asphyxiation.
+title: Waking Up to Dull, Exhausted Skin? The Science of Urban Exposome & Lipid Peroxidation
+description: Dermatological analysis of PM2.5 micro-particles, squalene oxidation, and urban skin asphyxiation.
 slug: exposoma-urbano-polucion-peroxidacion-lipidica
 date: '2026-07-23'
 date_created: '2026-07-23'
 date_ai_processed: '2026-07-23'
 locale: en-us
 category: barrera-cutanea
-category_label: 🔬 Ciencia de la Piel
+category_label: 🔬 Skin Science
 concept: exposoma-urbano-polucion-pm25-peroxidacion-lipidica-barrera-cutanea
 local_phenomenon: Urban smog & airborne PM2.5 fine particulates
-cover_image: >-
-  /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_1.webp
+cover_image: /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_1.webp
 media:
-  - >-
-    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_1.webp
-  - >-
-    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp
-  - >-
-    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp
-  - >-
-    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp
-  - >-
-    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp
+- /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_1.webp
+- /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp
+- /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp
+- /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp
+- /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp
 author: PepaGold
 epigraph:
-  text: >-
-    Invisible urban pollution attacks your skin every minute; gentle physical
-    cleansing restores its natural breath.
+  text: Invisible urban pollution attacks your skin every minute; gentle physical cleansing restores its natural breath.
   author: Dr. PepaGold
 summary:
-  - >-
-    Microscopic PM2.5 pollution particles sink into facial pores triggering
-    rapid lipid oxidation.
-  - >-
-    Natural squalene oxidation creates sticky comedogenic byproducts that clog
-    pores and extinguish natural radiance.
-  - >-
-    Harsh chemical surfactants degrade corneal ceramide matrices, increasing
-    heavy metal skin permeability.
-  - >-
-    UpPoly micro-fiber biomechanical technology removes carbon micro-residues
-    with warm water without altering pH 5.5.
+- Microscopic PM2.5 pollution particles sink into facial pores triggering rapid lipid oxidation.
+- Natural squalene oxidation creates sticky comedogenic byproducts that clog pores and extinguish natural radiance.
+- Harsh chemical surfactants degrade corneal ceramide matrices, increasing heavy metal skin permeability.
+- UpPoly micro-fiber biomechanical technology removes carbon micro-residues with warm water without altering pH 5.5.
 faq:
-  - q: Why does my skin feel dull and exhausted after commuting in the city?
-    a: >-
-      Airborne PM2.5 fine particles bind to facial sebum and oxidize rapidly,
-      creating an invisible film that suffocates pores and dulls radiance.
-  - q: Does tap water remove urban pollution by itself?
-    a: >-
-      Tap water alone cannot lift lipophilic vehicular exhaust particles; gentle
-      capillary attraction from UpPoly microfiber is required to cleanse without
-      damaging the acid mantle.
+- q: Why does my skin feel dull and exhausted after commuting in the city?
+  a: Airborne PM2.5 fine particles bind to facial sebum and oxidize rapidly, creating an invisible film that suffocates pores and dulls radiance.
+- q: Does tap water remove urban pollution by itself?
+  a: Tap water alone cannot lift lipophilic vehicular exhaust particles; gentle capillary attraction from UpPoly microfiber is required to cleanse without damaging the acid mantle.
 image_prompts:
-  - >-
-    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
-    Scientific-editorial concept photography of urban exposome and skin
-    pollution shield. Macro close-up of luminous, rejuvenated skin texture with
-    subtle iridescent protective atmosphere repelling microscopic charcoal-gray
-    pollution dust particles. Warm rose and dusty amber studio backlight. Shot
-    on Hasselblad 100MP, 120mm macro lens. NO text, NO logos.
-  - >-
-    📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): High-end
-    medical 3D rendering of microscopic PM2.5 particulate matter hovering near
-    the stratum corneum cell layer. Soft warm lighting highlighting lipid
-    membrane structure. Medical aesthetic. NO text.
-  - >-
-    📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Macro
-    photography of squalene oxidation process on skin surface, showing
-    transformation from oxidized dullness to glowing golden lipid balance. Clean
-    clinical framing. NO text.
-  - >-
-    📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Editorial
-    photography of urban environment backdrop with a calm, protected face
-    reflecting crystal clear atmospheric purity. Warm sunset glow. NO text.
-  - >-
-    📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): Ultra macro
-    shot of UpPoly micro-fibers capturing microscopic carbon residues using pure
-    water droplets. High contrast science detail. NO text.
+- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9): Scientific-editorial concept photography of urban exposome and skin pollution shield. Macro close-up of luminous, rejuvenated skin texture with subtle iridescent protective atmosphere repelling microscopic charcoal-gray pollution dust particles. Warm rose and dusty amber studio backlight. Shot on Hasselblad 100MP, 120mm macro lens. NO text, NO logos.'
+- '📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): High-end medical 3D rendering of microscopic PM2.5 particulate matter hovering near the stratum corneum cell layer. Soft warm lighting highlighting lipid membrane structure. Medical aesthetic. NO text.'
+- '📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Macro photography of squalene oxidation process on skin surface, showing transformation from oxidized dullness to glowing golden lipid balance. Clean clinical framing. NO text.'
+- '📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Editorial photography of urban environment backdrop with a calm, protected face reflecting crystal clear atmospheric purity. Warm sunset glow. NO text.'
+- '📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): Ultra macro shot of UpPoly micro-fibers capturing microscopic carbon residues using pure water droplets. High contrast science detail. NO text.'
 show_science_link: true
 date_images_applied: '2026-07-23'
 region_label: 🇺🇸 United States

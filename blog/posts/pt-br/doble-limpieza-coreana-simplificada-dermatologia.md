@@ -8,7 +8,7 @@ date_created: '2026-07-23'
 date_ai_processed: '2026-07-23'
 locale: pt-br
 category: barrera-cutanea
-category_label: 🔬 Ciencia de la Piel
+category_label: 🔬 Ciência da Pele
 concept: doble-limpieza-coreana-simplificada-tensoactivos-rebound-mercado-sudamericano
 local_phenomenon: Umidade do clima tropical e acúmulo de óleos da cosmética K-Beauty
 cover_image: /assets/imagenes/blog/doble-limpieza-coreana-simplificada-dermatologia/prompt_1.webp

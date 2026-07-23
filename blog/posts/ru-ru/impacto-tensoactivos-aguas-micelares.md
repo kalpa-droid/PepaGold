@@ -8,50 +8,36 @@ date_created: '2026-07-21'
 date_ai_processed: '2026-07-21'
 locale: ru-ru
 category: barrera-cutanea
-category_label: 🔬 Наука о Коже
+category_label: 🔬 Наука о коже
 concept: el-impacto-de-tensoactivos-jabones-y-aguas-micelares-en-la-barrera-cut-nea
 local_phenomenon: HVAC dry air & seasonal winds
 cover_image: /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_1.webp
 media:
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_1.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_1.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_2.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_3.webp
-  - /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_4.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/prompt_1.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_1.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_2.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_3.webp
+- /assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_4.webp
 author: PepaGold
 epigraph:
-  text: >-
-    Коже не нужна лишняя химия; ей нужна свобода для самостоятельного
-    восстановления.
+  text: Коже не нужна лишняя химия; ей нужна свобода для самостоятельного восстановления.
   author: Д-р PepaGold
 summary:
-  - >-
-    Кожный барьер — это липидный матрикс из церамидов, холестерина и жирных
-    кислот.
-  - >-
-    Кислотная мантия (pH 4.5-5.5) и микробиом образуют первую линию
-    биологической защиты.
-  - Сухой климат и агрессивные очистители создают микротрещины.
-  - Восстановление требует атравматичного физического очищения.
+- Кожный барьер — это липидный матрикс из церамидов, холестерина и жирных кислот.
+- Кислотная мантия (pH 4.5-5.5) и микробиом образуют первую линию биологической защиты.
+- Сухой климат и агрессивные очистители создают микротрещины.
+- Восстановление требует атравматичного физического очищения.
 faq:
-  - q: Сколько времени требуется для восстановления кожного барьера?
-    a: Обновление клеток занимает 14–28 дней.
-  - q: Почему лицо жжет при нанесении крема?
-    a: Жжение указывает на микротрещины в роговом слое.
+- q: Сколько времени требуется для восстановления кожного барьера?
+  a: Обновление клеток занимает 14–28 дней.
+- q: Почему лицо жжет при нанесении крема?
+  a: Жжение указывает на микротрещины в роговом слое.
 show_science_link: true
 date_images_applied: '2026-07-22'
 image_prompts:
-  - >-
-    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
 
-    High-concept liquid splash beauty photography. A crystal-clear pure water
-    droplet creating a dramatic, pristine splash ripple against smooth,
-    porcelain-toned skin, washing away harsh chemical foam and cloudy surfactant
-    residue to reveal luminous natural skin. Palette of warm dusty rose
-    (#D48C90), pure liquid crystal blue, and nude ivory. High-speed macro
-    photography capturing crisp liquid droplets in mid-air, studio backlight.
-    Shot on Hasselblad 100MP, 1/8000s shutter speed, f/4.0. Clean editorial
-    visual style. NO text, NO watermarks, NO logos.
+  High-concept liquid splash beauty photography. A crystal-clear pure water droplet creating a dramatic, pristine splash ripple against smooth, porcelain-toned skin, washing away harsh chemical foam and cloudy surfactant residue to reveal luminous natural skin. Palette of warm dusty rose (#D48C90), pure liquid crystal blue, and nude ivory. High-speed macro photography capturing crisp liquid droplets in mid-air, studio backlight. Shot on Hasselblad 100MP, 1/8000s shutter speed, f/4.0. Clean editorial visual style. NO text, NO watermarks, NO logos.'
 ---
 Чувствуете ли вы жжение при нанесении обычного увлажняющего крема? Ваш кожный барьер просит о помощи.
 

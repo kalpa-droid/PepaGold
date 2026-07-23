@@ -8,43 +8,35 @@ date_created: '2026-07-21'
 date_ai_processed: '2026-07-21'
 locale: zh-hans
 category: rutinas-minimalismo
-category_label: 🧘‍♀️ 极简护肤
+category_label: 🔬 皮肤科学
 concept: el-skinimalismo-y-la-reducci-n-de-pasos-en-el-skincare
 local_phenomenon: HVAC dry air & seasonal winds
 cover_image: /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp
 media:
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_2.webp
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_3.webp
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_4.webp
-  - /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_5.webp
+- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_1.webp
+- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_2.webp
+- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_3.webp
+- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_4.webp
+- /assets/imagenes/blog/mitos-skincare-rutina-minimalista/prompt_5.webp
 author: PepaGold
 epigraph:
   text: 肌肤不需要10层化学品；它需要的是呼吸与自我修复的时间。
   author: PepaGold 博士
 summary:
-  - 叠加多种精华和酸类会导致角质层充斥着竞争性防腐剂与乳化剂。
-  - 频繁洗脸控油会剥离天然神经酰胺，引发皮脂腺代偿性大量出油。
-  - 极简护肤（Skinimalism）主张精简护肤步骤，强化皮肤天然屏障力。
-  - UpPoly 超细纤维仅需温水即可卸除彩妆与污垢，提供 2 分钟无创夜间护理。
+- 叠加多种精华和酸类会导致角质层充斥着竞争性防腐剂与乳化剂。
+- 频繁洗脸控油会剥离天然神经酰胺，引发皮脂腺代偿性大量出油。
+- 极简护肤（Skinimalism）主张精简护肤步骤，强化皮肤天然屏障力。
+- UpPoly 超细纤维仅需温水即可卸除彩妆与污垢，提供 2 分钟无创夜间护理。
 faq:
-  - q: 什么是极简护肤（Skinimalism）？
-    a: 极简护肤是一种主张使用最少、高效、无刺激步骤的皮肤学理念。
-  - q: 为什么洗脸越勤，皮肤反而越容易出油？
-    a: 过度清洁剥离了天然脂质，导致皮脂腺收到干燥信号，分泌双倍油脂保护。
+- q: 什么是极简护肤（Skinimalism）？
+  a: 极简护肤是一种主张使用最少、高效、无刺激步骤的皮肤学理念。
+- q: 为什么洗脸越勤，皮肤反而越容易出油？
+  a: 过度清洁剥离了天然脂质，导致皮脂腺收到干燥信号，分泌双倍油脂保护。
 show_science_link: true
 image_prompts:
-  - >-
-    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
 
-    Architectural Scandinavian minimalist beauty photography celebrating
-    skinimalism. A serene woman's bare, radiant face resting gracefully near a
-    single pristine white Laska Mini UpPoly microfiber cloth on a smooth nude
-    clay pedestal, illuminated by soft natural morning sunlight and delicate dew
-    drops. Palette dominated by warm dusty rose (#D48C90), warm sand, and raw
-    linen textures. Organic soft shadows, peaceful zen aesthetic. Shot on
-    Hasselblad 85mm f/2.0 lens. Completely clean minimalist composition. NO
-    text, NO watermarks, NO brand logos.
+  Architectural Scandinavian minimalist beauty photography celebrating skinimalism. A serene woman''s bare, radiant face resting gracefully near a single pristine white Laska Mini UpPoly microfiber cloth on a smooth nude clay pedestal, illuminated by soft natural morning sunlight and delicate dew drops. Palette dominated by warm dusty rose (#D48C90), warm sand, and raw linen textures. Organic soft shadows, peaceful zen aesthetic. Shot on Hasselblad 85mm f/2.0 lens. Completely clean minimalist composition. NO text, NO watermarks, NO brand logos.'
 date_images_applied: '2026-07-22'
 ---
 您是否花了高昂费用购买多步护肤品，却发现皮肤越来越敏感甚至频繁长痘？在现代皮肤学中，过度护肤是导致屏障损坏的主要原因。

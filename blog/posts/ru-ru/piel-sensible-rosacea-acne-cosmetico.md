@@ -1,15 +1,14 @@
 ---
 article_id: PG-004
 title: Наука о Кожном Барьере и Микробиоме
-description: Узнайте все о науке кожного барьера, микробиома и кислотной мантии pH
-  5.5.
+description: Узнайте все о науке кожного барьера, микробиома и кислотной мантии pH 5.5.
 slug: piel-sensible-rosacea-acne-cosmetico
 date: '2026-07-21'
 date_created: '2026-07-21'
 date_ai_processed: '2026-07-21'
 locale: ru-ru
 category: barrera-cutanea
-category_label: 🔬 Наука о Коже
+category_label: 🔬 Наука о коже
 concept: piel-sensible-ros-cea-y-acn-cosm-tico-diagn-stico-y-estrategias-de-limpieza
 local_phenomenon: HVAC dry air & seasonal winds
 cover_image: /assets/imagenes/blog/piel-sensible-rosacea-acne-cosmetico/prompt_1.webp
@@ -37,13 +36,7 @@ show_science_link: true
 image_prompts:
 - '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
 
-  Editorial beauty macro photography depicting sensitive skin relief. Split visual
-  narrative on a woman''s delicate face: a faint rosy flushed cheek on one side, seamlessly
-  transitioning into calm, velvety hydrated skin refreshed by a soft, luxurious Laska
-  Mini UpPoly micro-cloth soaked in cool water. Aesthetic palette of muted dusty rose
-  (#D48C90), soft botanical sage green accents, and ivory nude. Soothing, tranquil
-  studio lighting atmosphere. Shot on 100mm f/2.8 macro lens, shallow depth of field.
-  Clean serene composition. NO text, NO watermarks, NO logos.'
+  Editorial beauty macro photography depicting sensitive skin relief. Split visual narrative on a woman''s delicate face: a faint rosy flushed cheek on one side, seamlessly transitioning into calm, velvety hydrated skin refreshed by a soft, luxurious Laska Mini UpPoly micro-cloth soaked in cool water. Aesthetic palette of muted dusty rose (#D48C90), soft botanical sage green accents, and ivory nude. Soothing, tranquil studio lighting atmosphere. Shot on 100mm f/2.8 macro lens, shallow depth of field. Clean serene composition. NO text, NO watermarks, NO logos.'
 ---
 Чувствуете ли вы жжение при нанесении обычного увлажняющего крема? Ваш кожный барьер просит о помощи.
 

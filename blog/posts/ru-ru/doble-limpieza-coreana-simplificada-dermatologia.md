@@ -8,7 +8,7 @@ date_created: '2026-07-23'
 date_ai_processed: '2026-07-23'
 locale: ru-ru
 category: barrera-cutanea
-category_label: 🔬 Ciencia de la Piel
+category_label: 🔬 Наука о коже
 concept: doble-limpieza-coreana-simplificada-tensoactivos-rebound-mercado-sudamericano
 local_phenomenon: Чрезмерное эмульгирование липидов и косметический акне-рикошет
 cover_image: /assets/imagenes/blog/doble-limpieza-coreana-simplificada-dermatologia/prompt_1.webp
