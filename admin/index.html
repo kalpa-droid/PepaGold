@@ -12,7 +12,286 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <!-- js-yaml library for parsing and dumping frontmatter -->
-  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js">
+    // =========================================================================
+    // LEADS & REGISTRATION MANAGEMENT ENGINE
+    // =========================================================================
+    let leadsList = [];
+
+    async function loadLeadsFromApi() {
+      const container = document.getElementById('leads-container');
+      if (container) container.innerHTML = '<p style="color: var(--color-dark-muted); text-align: center; padding: 40px;">⏳ Cargando solicitudes de registro...</p>';
+
+      try {
+        const resp = await fetch('/api/leads');
+        if (resp.ok) {
+          leadsList = await resp.json();
+        } else {
+          leadsList = await loadLeadsFromGitHubFallback();
+        }
+      } catch (err) {
+        leadsList = await loadLeadsFromGitHubFallback();
+      }
+
+      renderLeadsList();
+    }
+
+    async function loadLeadsFromGitHubFallback() {
+      try {
+        const data = await ghFetch('contents/admin/leads.json');
+        const content = decodeURIComponent(escape(atob(data.content.replace(/\s/g, ''))));
+        return JSON.parse(content || '[]');
+      } catch (err) {
+        return [];
+      }
+    }
+
+    async function saveLeadsListState() {
+      try {
+        await fetch('/api/leads', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(leadsList)
+        });
+      } catch (e) {}
+
+      if (ghToken) {
+        try {
+          const contentEncoded = btoa(unescape(encodeURIComponent(JSON.stringify(leadsList, null, 2))));
+          let sha = null;
+          try {
+            const current = await ghFetch('contents/admin/leads.json');
+            sha = current.sha;
+          } catch(e) {}
+
+          await ghFetch('contents/admin/leads.json', {
+            method: 'PUT',
+            body: JSON.stringify({
+              message: 'update(admin): actualizar solicitudes de registro de clientes',
+              content: contentEncoded,
+              sha: sha,
+              branch: BRANCH
+            })
+          });
+        } catch (e) {}
+      }
+    }
+
+    function renderLeadsList() {
+      const container = document.getElementById('leads-container');
+      if (!container) return;
+
+      const q = (document.getElementById('lead-search-input')?.value || '').toLowerCase();
+      const statusFilter = document.getElementById('lead-filter-status')?.value || 'all';
+
+      let filtered = leadsList.filter(l => {
+        const matchQ = !q || (l.name || '').toLowerCase().includes(q) ||
+                            (l.email || '').toLowerCase().includes(q) ||
+                            (l.phone || '').toLowerCase().includes(q) ||
+                            (l.province || '').toLowerCase().includes(q) ||
+                            (l.neighborhood || '').toLowerCase().includes(q);
+        const matchStatus = statusFilter === 'all' || (l.status || 'Pendiente').startsWith(statusFilter);
+        return matchQ && matchStatus;
+      });
+
+      // Update KPI counters
+      document.getElementById('kpi-total-leads').textContent = leadsList.length;
+      document.getElementById('kpi-pending-leads').textContent = leadsList.filter(l => (l.status || 'Pendiente') === 'Pendiente').length;
+      document.getElementById('kpi-completed-leads').textContent = leadsList.filter(l => (l.status || '') === 'Registrado en Greenway' || (l.status || '').includes('Registrado')).length;
+      document.getElementById('kpi-contacted-leads').textContent = leadsList.filter(l => (l.status || '').includes('Contactado')).length;
+
+      if (filtered.length === 0) {
+        container.innerHTML = '<div style="background: #fff; padding: 40px; text-align: center; border-radius: 16px; border: 1px dashed var(--border-color); color: var(--color-dark-muted);">No se encontraron solicitudes de registro con los filtros seleccionados.</div>';
+        return;
+      }
+
+      container.innerHTML = filtered.map(l => {
+        const dateStr = l.createdAt ? new Date(l.createdAt).toLocaleString('es-AR') : 'Reciente';
+        const cleanPhone = (l.phone || '').replace(/[^0-9+]/g, '');
+        const waUrl = cleanPhone ? `https://wa.me/${cleanPhone.replace('+', '')}?text=${encodeURIComponent('¡Hola ' + l.name + '! Te contacto de PepaGold / Greenway Global sobre tu registro...')}` : '#';
+
+        let badgeBg = '#FFF8E1';
+        let badgeColor = '#F57F17';
+        if ((l.status || '').includes('Registrado')) { badgeBg = '#E8F5E9'; badgeColor = '#2E7D32'; }
+        if ((l.status || '').includes('Contactado')) { badgeBg = '#E3F2FD'; badgeColor = '#1565C0'; }
+
+        return `
+          <div style="background: #ffffff; border: 1px solid var(--border-color); border-radius: 16px; padding: 20px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 14px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px;">
+              <div>
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 4px;">
+                  <span style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--color-dark);">${l.name || 'Sin Nombre'}</span>
+                  <span style="font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; background: rgba(212, 140, 144, 0.15); color: var(--color-primary);">${l.type || 'Cliente Gratuito'}</span>
+                </div>
+                <div style="font-size: 12px; color: var(--color-dark-muted);">📅 Solicitado el: ${dateStr}</div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 20px; background: ${badgeBg}; color: ${badgeColor};">
+                  ${l.status || 'Pendiente'}
+                </span>
+                <select class="input-field" style="margin: 0; padding: 4px 8px; font-size: 12px; width: auto;" onchange="changeLeadStatus('${l.id}', this.value)">
+                  <option value="Pendiente" ${(l.status === 'Pendiente') ? 'selected' : ''}>⏳ Pendiente</option>
+                  <option value="Registrado en Greenway" ${(l.status === 'Registrado en Greenway') ? 'selected' : ''}>✅ Registrado</option>
+                  <option value="Contactado por WhatsApp" ${(l.status === 'Contactado por WhatsApp') ? 'selected' : ''}>📞 Contactado</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Detail Grid -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; background: #FAF6F5; padding: 14px 16px; border-radius: 12px; font-size: 13px;">
+              <div><strong>🎂 Nacimiento:</strong> ${l.birthdate || 'No especificada'}</div>
+              <div><strong>📱 WhatsApp:</strong> <a href="${waUrl}" target="_blank" style="color: #2E7D32; font-weight: 600; text-decoration: none;">${l.phone || 'Sin número'} 💬</a></div>
+              <div><strong>📧 Email:</strong> ${l.email || 'Sin correo'}</div>
+              <div><strong>📍 Dirección:</strong> ${l.address || '—'}</div>
+              <div><strong>🏘️ Barrio/Localidad:</strong> ${l.neighborhood || '—'} (CP: ${l.zipCode || '—'})</div>
+              <div><strong>🌎 Ubicación:</strong> ${l.province || ''}, ${l.country || 'Argentina'}</div>
+            </div>
+
+            ${l.notes ? `<div style="font-size: 12.5px; color: var(--color-dark-muted); background: #FFF8E1; padding: 10px 14px; border-radius: 10px; border-left: 3px solid #FFE082;">📝 <strong>Notas:</strong> ${l.notes}</div>` : ''}
+
+            <!-- Card Actions -->
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; margin-top: 4px;">
+              <button class="btn btn-primary btn-sm" style="background: #2E7D32; border-color: #2E7D32;" onclick="copyLeadFormatted('${l.id}')">📋 Copiar Ficha para Greenway</button>
+              ${cleanPhone ? `<a href="${waUrl}" target="_blank" class="btn btn-secondary btn-sm" style="background: #E8F5E9; color: #2E7D32; border-color: #A5D6A7; text-decoration: none;">💬 WhatsApp Directo</a>` : ''}
+              <button class="btn btn-secondary btn-sm" onclick="editLeadModal('${l.id}')">✏️ Editar</button>
+              <button class="btn btn-secondary btn-sm" style="color: #D32F2F; border-color: #FFCDD2;" onclick="deleteLeadItem('${l.id}')">🗑️ Eliminar</button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function openLeadModal(leadData = null) {
+      document.getElementById('lead-form-id').value = leadData ? leadData.id : '';
+      document.getElementById('lead-form-name').value = leadData ? leadData.name : '';
+      document.getElementById('lead-form-birthdate').value = leadData ? leadData.birthdate : '';
+      document.getElementById('lead-form-email').value = leadData ? leadData.email : '';
+      document.getElementById('lead-form-phone').value = leadData ? leadData.phone : '';
+      document.getElementById('lead-form-address').value = leadData ? leadData.address : '';
+      document.getElementById('lead-form-neighborhood').value = leadData ? leadData.neighborhood : '';
+      document.getElementById('lead-form-zip').value = leadData ? leadData.zipCode : '';
+      document.getElementById('lead-form-province').value = leadData ? leadData.province : '';
+      document.getElementById('lead-form-country').value = leadData ? leadData.country : 'Argentina';
+      document.getElementById('lead-form-type').value = leadData ? leadData.type : 'Cliente Gratuito (Green Priority)';
+      document.getElementById('lead-form-notes').value = leadData ? leadData.notes : '';
+
+      document.getElementById('modal-lead-title').textContent = leadData ? '✏️ Editar Solicitud' : '📋 Nueva Solicitud Manual';
+      document.getElementById('modal-lead').classList.add('active');
+    }
+
+    function editLeadModal(id) {
+      const lead = leadsList.find(l => l.id === id);
+      if (lead) openLeadModal(lead);
+    }
+
+    async function saveLeadFromModal() {
+      const id = document.getElementById('lead-form-id').value;
+      const name = document.getElementById('lead-form-name').value.trim();
+      const phone = document.getElementById('lead-form-phone').value.trim();
+
+      if (!name || !phone) {
+        alert('Por favor completá al menos el Nombre y el Teléfono del cliente.');
+        return;
+      }
+
+      const leadObj = {
+        id: id || ('lead-' + Date.now()),
+        createdAt: id ? (leadsList.find(l => l.id === id)?.createdAt || new Date().toISOString()) : new Date().toISOString(),
+        name: name,
+        birthdate: document.getElementById('lead-form-birthdate').value,
+        email: document.getElementById('lead-form-email').value.trim(),
+        phone: phone,
+        address: document.getElementById('lead-form-address').value.trim(),
+        neighborhood: document.getElementById('lead-form-neighborhood').value.trim(),
+        zipCode: document.getElementById('lead-form-zip').value.trim(),
+        province: document.getElementById('lead-form-province').value.trim(),
+        country: document.getElementById('lead-form-country').value.trim() || 'Argentina',
+        type: document.getElementById('lead-form-type').value,
+        status: id ? (leadsList.find(l => l.id === id)?.status || 'Pendiente') : 'Pendiente',
+        notes: document.getElementById('lead-form-notes').value.trim()
+      };
+
+      if (id) {
+        const idx = leadsList.findIndex(l => l.id === id);
+        if (idx !== -1) leadsList[idx] = leadObj;
+      } else {
+        leadsList.unshift(leadObj);
+      }
+
+      closeModal('modal-lead');
+      renderLeadsList();
+      showToast('✅ Solicitud guardada exitosamente');
+      await saveLeadsListState();
+    }
+
+    async function changeLeadStatus(id, newStatus) {
+      const lead = leadsList.find(l => l.id === id);
+      if (lead) {
+        lead.status = newStatus;
+        renderLeadsList();
+        showToast(`✅ Estado actualizado a: ${newStatus}`);
+        await saveLeadsListState();
+      }
+    }
+
+    async function deleteLeadItem(id) {
+      if (confirm('¿Seguro que deseas eliminar esta solicitud?')) {
+        leadsList = leadsList.filter(l => l.id !== id);
+        renderLeadsList();
+        showToast('🗑️ Solicitud eliminada');
+        await saveLeadsListState();
+      }
+    }
+
+    function copyLeadFormatted(id) {
+      const l = leadsList.find(item => item.id === id);
+      if (!l) return;
+
+      const formatted = `=== DATOS PARA REGISTRO EN GREENWAY GLOBAL ===
+• Nombre Completo: ${l.name || ''}
+• Fecha de Nacimiento: ${l.birthdate || ''}
+• Email: ${l.email || ''}
+• Teléfono: ${l.phone || ''}
+• Dirección: ${l.address || ''}
+• Barrio/Colonia: ${l.neighborhood || ''}
+• Código Postal: ${l.zipCode || ''}
+• Provincia/Estado: ${l.province || ''}
+• País: ${l.country || 'Argentina'}
+• Tipo de Cuenta: ${l.type || 'Cliente Gratuito'}
+• Notas/Pedido: ${l.notes || ''}
+==============================================`;
+
+      navigator.clipboard.writeText(formatted).then(() => {
+        showToast('📋 ¡Datos copiados al portapapeles! Listos para pegar en Greenway.');
+      }).catch(() => {
+        alert(formatted);
+      });
+    }
+
+    function exportLeadsCSV() {
+      if (leadsList.length === 0) {
+        alert('No hay solicitudes para exportar.');
+        return;
+      }
+
+      const headers = ['ID', 'Fecha', 'Nombre', 'Fecha Nacimiento', 'Email', 'Telefono', 'Direccion', 'Barrio', 'CP', 'Provincia', 'Pais', 'Tipo', 'Estado', 'Notas'];
+      const rows = leadsList.map(l => [
+        l.id, l.createdAt, `"${l.name || ''}"`, l.birthdate, l.email, `"${l.phone || ''}"`,
+        `"${l.address || ''}"`, `"${l.neighborhood || ''}"`, l.zipCode, `"${l.province || ''}"`,
+        `"${l.country || ''}"`, `"${l.type || ''}"`, `"${l.status || ''}"`, `"${(l.notes || '').replace(/"/g, '""')}"`
+      ]);
+
+      const csvContent = 'data:text/csv;charset=utf-8,﻿' + [headers.join(','), ...rows.map(e => e.join(','))].join('\n');
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement('a');
+      link.setAttribute('href', encodedUri);
+      link.setAttribute('download', `greenway_solicitudes_registro_${new Date().toISOString().slice(0,10)}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+  </script>
   <style>
     :root {
       --color-primary: #D48C90;
@@ -531,7 +810,7 @@
     </a>
     <div class="nav-tabs" id="nav-tabs" style="display: none;">
       <button class="nav-tab-btn active" onclick="switchView('dashboard')">📝 Artículos</button>
-      <button class="nav-tab-btn" onclick="switchView('images-global')">🖼️ Imágenes</button>
+      <button class="nav-tab-btn" onclick="switchView('leads-view')">📋 Solicitudes de Registro</button>
     </div>
     <div class="nav-actions">
       <button class="btn btn-primary" id="btn-new-article" onclick="openNewArticleEditor()" style="display: none;">
@@ -636,16 +915,55 @@
       </div>
     </div>
 
-    <!-- Global Images View -->
-    <div id="images-global-view" style="display: none; width: 100%;">
+    <!-- Leads & Registration View -->
+    <div id="leads-view" style="display: none; width: 100%;">
       <div class="editor-container">
-        <div class="editor-header">
-          <h3>🖼️ Carpetas de Imágenes por Artículo</h3>
-          <button class="btn btn-secondary btn-sm" onclick="switchView('dashboard')">← Volver al Dashboard</button>
+        <div class="editor-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 20px;">
+          <div>
+            <h3 style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--color-dark); margin-bottom: 4px;">📋 Solicitudes de Registro en Greenway Global</h3>
+            <p style="font-size: 13px; color: var(--color-dark-muted);">Gestión de clientes y socios interesados en darse de alta en la plataforma oficial.</p>
+          </div>
+          <div style="display: flex; gap: 10px;">
+            <button class="btn btn-primary btn-sm" onclick="openLeadModal()">➕ Nueva Solicitud Manual</button>
+            <button class="btn btn-secondary btn-sm" onclick="exportLeadsCSV()">📥 Exportar a CSV</button>
+            <button class="btn btn-secondary btn-sm" onclick="loadLeadsFromApi()">🔄 Refrescar</button>
+          </div>
         </div>
-        <p style="font-size: 14px; color: var(--color-dark-muted);">Seleccioná un artículo para gestionar sus archivos multimedia:</p>
-        <div id="global-image-folders-list" style="display: flex; flex-direction: column; gap: 16px; margin-top: 14px;">
-          <!-- Rendered dynamically -->
+
+        <!-- KPI Cards Summary -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px;">
+          <div style="background: #FAF6F5; border: 1px solid var(--border-color); padding: 16px 20px; border-radius: 14px;">
+            <div style="font-size: 12px; font-weight: 600; color: var(--color-accent); text-transform: uppercase;">Total Solicitudes</div>
+            <div id="kpi-total-leads" style="font-size: 1.8rem; font-weight: 700; color: var(--color-dark); margin-top: 4px;">0</div>
+          </div>
+          <div style="background: #FFF8E1; border: 1px solid #FFE082; padding: 16px 20px; border-radius: 14px;">
+            <div style="font-size: 12px; font-weight: 600; color: #F57F17; text-transform: uppercase;">⏳ Pendientes por Dar de Alta</div>
+            <div id="kpi-pending-leads" style="font-size: 1.8rem; font-weight: 700; color: #F57F17; margin-top: 4px;">0</div>
+          </div>
+          <div style="background: #E8F5E9; border: 1px solid #A5D6A7; padding: 16px 20px; border-radius: 14px;">
+            <div style="font-size: 12px; font-weight: 600; color: #2E7D32; text-transform: uppercase;">✅ Registrados en Greenway</div>
+            <div id="kpi-completed-leads" style="font-size: 1.8rem; font-weight: 700; color: #2E7D32; margin-top: 4px;">0</div>
+          </div>
+          <div style="background: #E3F2FD; border: 1px solid #90CAF9; padding: 16px 20px; border-radius: 14px;">
+            <div style="font-size: 12px; font-weight: 600; color: #1565C0; text-transform: uppercase;">📞 Contactados</div>
+            <div id="kpi-contacted-leads" style="font-size: 1.8rem; font-weight: 700; color: #1565C0; margin-top: 4px;">0</div>
+          </div>
+        </div>
+
+        <!-- Search & Filter Controls -->
+        <div style="display: flex; gap: 14px; margin-bottom: 18px; flex-wrap: wrap;">
+          <input type="text" id="lead-search-input" class="input-field" placeholder="Buscar por nombre, email, teléfono o ciudad..." oninput="renderLeadsList()" style="flex: 1; min-width: 240px; margin: 0;" />
+          <select id="lead-filter-status" class="input-field" onchange="renderLeadsList()" style="width: auto; min-width: 180px; margin: 0;">
+            <option value="all">Todos los Estados</option>
+            <option value="Pendiente">⏳ Pendiente</option>
+            <option value="Registrado">✅ Registrado en Greenway</option>
+            <option value="Contactado">📞 Contactado por WhatsApp</option>
+          </select>
+        </div>
+
+        <!-- Leads List Table Container -->
+        <div id="leads-container" style="display: flex; flex-direction: column; gap: 14px;">
+          <!-- Populated dynamically -->
         </div>
       </div>
     </div>
@@ -723,6 +1041,83 @@
       </div>
       <div class="modal-footer">
         <button class="btn btn-secondary" onclick="closeModal('modal-translations')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+    <!-- MODAL: Formulario de Solicitud de Registro -->
+  <div class="modal-overlay" id="modal-lead">
+    <div class="modal-card" style="max-width: 620px;">
+      <div class="modal-header">
+        <h3 id="modal-lead-title">📋 Solicitud de Registro en Greenway</h3>
+        <button class="modal-close" onclick="closeModal('modal-lead')">✕</button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="lead-form-id" />
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <div>
+            <label style="font-size: 11px; font-weight: 600; color: var(--color-accent); text-transform: uppercase;">Nombre Completo *</label>
+            <input type="text" id="lead-form-name" class="input-field" placeholder="Ej: María Rossi" required />
+          </div>
+          <div>
+            <label style="font-size: 11px; font-weight: 600; color: var(--color-accent); text-transform: uppercase;">Fecha de Nacimiento</label>
+            <input type="date" id="lead-form-birthdate" class="input-field" />
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 10px;">
+          <div>
+            <label style="font-size: 11px; font-weight: 600; color: var(--color-accent); text-transform: uppercase;">Correo Electrónico</label>
+            <input type="email" id="lead-form-email" class="input-field" placeholder="ejemplo@email.com" />
+          </div>
+          <div>
+            <label style="font-size: 11px; font-weight: 600; color: var(--color-accent); text-transform: uppercase;">Teléfono Móvil (WhatsApp) *</label>
+            <input type="text" id="lead-form-phone" class="input-field" placeholder="+5491154892019" required />
+          </div>
+        </div>
+
+        <div style="margin-top: 10px;">
+          <label style="font-size: 11px; font-weight: 600; color: var(--color-accent); text-transform: uppercase;">Dirección de Envío Completa</label>
+          <input type="text" id="lead-form-address" class="input-field" placeholder="Calle, Nro, Depto / Edificio" />
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 10px;">
+          <div>
+            <label style="font-size: 11px; font-weight: 600; color: var(--color-accent); text-transform: uppercase;">Barrio / Colonia</label>
+            <input type="text" id="lead-form-neighborhood" class="input-field" placeholder="Ej: Recoleta" />
+          </div>
+          <div>
+            <label style="font-size: 11px; font-weight: 600; color: var(--color-accent); text-transform: uppercase;">Código Postal</label>
+            <input type="text" id="lead-form-zip" class="input-field" placeholder="Ej: C1425" />
+          </div>
+          <div>
+            <label style="font-size: 11px; font-weight: 600; color: var(--color-accent); text-transform: uppercase;">Provincia / Estado</label>
+            <input type="text" id="lead-form-province" class="input-field" placeholder="Ej: Buenos Aires" />
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 10px;">
+          <div>
+            <label style="font-size: 11px; font-weight: 600; color: var(--color-accent); text-transform: uppercase;">País</label>
+            <input type="text" id="lead-form-country" class="input-field" value="Argentina" />
+          </div>
+          <div>
+            <label style="font-size: 11px; font-weight: 600; color: var(--color-accent); text-transform: uppercase;">Tipo de Registro</label>
+            <select id="lead-form-type" class="input-field">
+              <option value="Cliente Gratuito (Green Priority)">Cliente Gratuito (Green Priority)</option>
+              <option value="Socio / Distribuidor (Hacer el Negocio)">Socio / Distribuidor (Hacer el Negocio)</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="margin-top: 10px;">
+          <label style="font-size: 11px; font-weight: 600; color: var(--color-accent); text-transform: uppercase;">Notas Adicionales / Pedido</label>
+          <textarea id="lead-form-notes" class="input-field" rows="2" placeholder="Detalles de los productos pedidos o comentarios del cliente..."></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeModal('modal-lead')">Cancelar</button>
+        <button class="btn btn-primary" onclick="saveLeadFromModal()">💾 Guardar Solicitud</button>
       </div>
     </div>
   </div>
@@ -897,14 +1292,15 @@
     function switchView(viewName) {
       document.getElementById('dashboard-view').style.display = viewName === 'dashboard' ? 'flex' : 'none';
       document.getElementById('editor-view').style.display = viewName === 'editor' ? 'block' : 'none';
-      document.getElementById('images-global-view').style.display = viewName === 'images-global' ? 'block' : 'none';
+      const leadsView = document.getElementById('leads-view');
+      if (leadsView) leadsView.style.display = viewName === 'leads-view' ? 'block' : 'none';
 
       const tabs = document.querySelectorAll('.nav-tab-btn');
       tabs.forEach(t => t.classList.remove('active'));
       if (viewName === 'dashboard') tabs[0].classList.add('active');
-      if (viewName === 'images-global') {
-        tabs[1].classList.add('active');
-        renderGlobalImageFolders();
+      if (viewName === 'leads-view') {
+        if (tabs[1]) tabs[1].classList.add('active');
+        loadLeadsFromApi();
       }
     }
 
@@ -1999,6 +2395,285 @@
 
     // Auto-Init
     window.addEventListener('DOMContentLoaded', initAuth);
+  
+    // =========================================================================
+    // LEADS & REGISTRATION MANAGEMENT ENGINE
+    // =========================================================================
+    let leadsList = [];
+
+    async function loadLeadsFromApi() {
+      const container = document.getElementById('leads-container');
+      if (container) container.innerHTML = '<p style="color: var(--color-dark-muted); text-align: center; padding: 40px;">⏳ Cargando solicitudes de registro...</p>';
+
+      try {
+        const resp = await fetch('/api/leads');
+        if (resp.ok) {
+          leadsList = await resp.json();
+        } else {
+          leadsList = await loadLeadsFromGitHubFallback();
+        }
+      } catch (err) {
+        leadsList = await loadLeadsFromGitHubFallback();
+      }
+
+      renderLeadsList();
+    }
+
+    async function loadLeadsFromGitHubFallback() {
+      try {
+        const data = await ghFetch('contents/admin/leads.json');
+        const content = decodeURIComponent(escape(atob(data.content.replace(/\s/g, ''))));
+        return JSON.parse(content || '[]');
+      } catch (err) {
+        return [];
+      }
+    }
+
+    async function saveLeadsListState() {
+      try {
+        await fetch('/api/leads', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(leadsList)
+        });
+      } catch (e) {}
+
+      if (ghToken) {
+        try {
+          const contentEncoded = btoa(unescape(encodeURIComponent(JSON.stringify(leadsList, null, 2))));
+          let sha = null;
+          try {
+            const current = await ghFetch('contents/admin/leads.json');
+            sha = current.sha;
+          } catch(e) {}
+
+          await ghFetch('contents/admin/leads.json', {
+            method: 'PUT',
+            body: JSON.stringify({
+              message: 'update(admin): actualizar solicitudes de registro de clientes',
+              content: contentEncoded,
+              sha: sha,
+              branch: BRANCH
+            })
+          });
+        } catch (e) {}
+      }
+    }
+
+    function renderLeadsList() {
+      const container = document.getElementById('leads-container');
+      if (!container) return;
+
+      const q = (document.getElementById('lead-search-input')?.value || '').toLowerCase();
+      const statusFilter = document.getElementById('lead-filter-status')?.value || 'all';
+
+      let filtered = leadsList.filter(l => {
+        const matchQ = !q || (l.name || '').toLowerCase().includes(q) ||
+                            (l.email || '').toLowerCase().includes(q) ||
+                            (l.phone || '').toLowerCase().includes(q) ||
+                            (l.province || '').toLowerCase().includes(q) ||
+                            (l.neighborhood || '').toLowerCase().includes(q);
+        const matchStatus = statusFilter === 'all' || (l.status || 'Pendiente').startsWith(statusFilter);
+        return matchQ && matchStatus;
+      });
+
+      // Update KPI counters
+      document.getElementById('kpi-total-leads').textContent = leadsList.length;
+      document.getElementById('kpi-pending-leads').textContent = leadsList.filter(l => (l.status || 'Pendiente') === 'Pendiente').length;
+      document.getElementById('kpi-completed-leads').textContent = leadsList.filter(l => (l.status || '') === 'Registrado en Greenway' || (l.status || '').includes('Registrado')).length;
+      document.getElementById('kpi-contacted-leads').textContent = leadsList.filter(l => (l.status || '').includes('Contactado')).length;
+
+      if (filtered.length === 0) {
+        container.innerHTML = '<div style="background: #fff; padding: 40px; text-align: center; border-radius: 16px; border: 1px dashed var(--border-color); color: var(--color-dark-muted);">No se encontraron solicitudes de registro con los filtros seleccionados.</div>';
+        return;
+      }
+
+      container.innerHTML = filtered.map(l => {
+        const dateStr = l.createdAt ? new Date(l.createdAt).toLocaleString('es-AR') : 'Reciente';
+        const cleanPhone = (l.phone || '').replace(/[^0-9+]/g, '');
+        const waUrl = cleanPhone ? `https://wa.me/${cleanPhone.replace('+', '')}?text=${encodeURIComponent('¡Hola ' + l.name + '! Te contacto de PepaGold / Greenway Global sobre tu registro...')}` : '#';
+
+        let badgeBg = '#FFF8E1';
+        let badgeColor = '#F57F17';
+        if ((l.status || '').includes('Registrado')) { badgeBg = '#E8F5E9'; badgeColor = '#2E7D32'; }
+        if ((l.status || '').includes('Contactado')) { badgeBg = '#E3F2FD'; badgeColor = '#1565C0'; }
+
+        return `
+          <div style="background: #ffffff; border: 1px solid var(--border-color); border-radius: 16px; padding: 20px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 14px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px;">
+              <div>
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 4px;">
+                  <span style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--color-dark);">${l.name || 'Sin Nombre'}</span>
+                  <span style="font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; background: rgba(212, 140, 144, 0.15); color: var(--color-primary);">${l.type || 'Cliente Gratuito'}</span>
+                </div>
+                <div style="font-size: 12px; color: var(--color-dark-muted);">📅 Solicitado el: ${dateStr}</div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 20px; background: ${badgeBg}; color: ${badgeColor};">
+                  ${l.status || 'Pendiente'}
+                </span>
+                <select class="input-field" style="margin: 0; padding: 4px 8px; font-size: 12px; width: auto;" onchange="changeLeadStatus('${l.id}', this.value)">
+                  <option value="Pendiente" ${(l.status === 'Pendiente') ? 'selected' : ''}>⏳ Pendiente</option>
+                  <option value="Registrado en Greenway" ${(l.status === 'Registrado en Greenway') ? 'selected' : ''}>✅ Registrado</option>
+                  <option value="Contactado por WhatsApp" ${(l.status === 'Contactado por WhatsApp') ? 'selected' : ''}>📞 Contactado</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Detail Grid -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; background: #FAF6F5; padding: 14px 16px; border-radius: 12px; font-size: 13px;">
+              <div><strong>🎂 Nacimiento:</strong> ${l.birthdate || 'No especificada'}</div>
+              <div><strong>📱 WhatsApp:</strong> <a href="${waUrl}" target="_blank" style="color: #2E7D32; font-weight: 600; text-decoration: none;">${l.phone || 'Sin número'} 💬</a></div>
+              <div><strong>📧 Email:</strong> ${l.email || 'Sin correo'}</div>
+              <div><strong>📍 Dirección:</strong> ${l.address || '—'}</div>
+              <div><strong>🏘️ Barrio/Localidad:</strong> ${l.neighborhood || '—'} (CP: ${l.zipCode || '—'})</div>
+              <div><strong>🌎 Ubicación:</strong> ${l.province || ''}, ${l.country || 'Argentina'}</div>
+            </div>
+
+            ${l.notes ? `<div style="font-size: 12.5px; color: var(--color-dark-muted); background: #FFF8E1; padding: 10px 14px; border-radius: 10px; border-left: 3px solid #FFE082;">📝 <strong>Notas:</strong> ${l.notes}</div>` : ''}
+
+            <!-- Card Actions -->
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; margin-top: 4px;">
+              <button class="btn btn-primary btn-sm" style="background: #2E7D32; border-color: #2E7D32;" onclick="copyLeadFormatted('${l.id}')">📋 Copiar Ficha para Greenway</button>
+              ${cleanPhone ? `<a href="${waUrl}" target="_blank" class="btn btn-secondary btn-sm" style="background: #E8F5E9; color: #2E7D32; border-color: #A5D6A7; text-decoration: none;">💬 WhatsApp Directo</a>` : ''}
+              <button class="btn btn-secondary btn-sm" onclick="editLeadModal('${l.id}')">✏️ Editar</button>
+              <button class="btn btn-secondary btn-sm" style="color: #D32F2F; border-color: #FFCDD2;" onclick="deleteLeadItem('${l.id}')">🗑️ Eliminar</button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function openLeadModal(leadData = null) {
+      document.getElementById('lead-form-id').value = leadData ? leadData.id : '';
+      document.getElementById('lead-form-name').value = leadData ? leadData.name : '';
+      document.getElementById('lead-form-birthdate').value = leadData ? leadData.birthdate : '';
+      document.getElementById('lead-form-email').value = leadData ? leadData.email : '';
+      document.getElementById('lead-form-phone').value = leadData ? leadData.phone : '';
+      document.getElementById('lead-form-address').value = leadData ? leadData.address : '';
+      document.getElementById('lead-form-neighborhood').value = leadData ? leadData.neighborhood : '';
+      document.getElementById('lead-form-zip').value = leadData ? leadData.zipCode : '';
+      document.getElementById('lead-form-province').value = leadData ? leadData.province : '';
+      document.getElementById('lead-form-country').value = leadData ? leadData.country : 'Argentina';
+      document.getElementById('lead-form-type').value = leadData ? leadData.type : 'Cliente Gratuito (Green Priority)';
+      document.getElementById('lead-form-notes').value = leadData ? leadData.notes : '';
+
+      document.getElementById('modal-lead-title').textContent = leadData ? '✏️ Editar Solicitud' : '📋 Nueva Solicitud Manual';
+      document.getElementById('modal-lead').classList.add('active');
+    }
+
+    function editLeadModal(id) {
+      const lead = leadsList.find(l => l.id === id);
+      if (lead) openLeadModal(lead);
+    }
+
+    async function saveLeadFromModal() {
+      const id = document.getElementById('lead-form-id').value;
+      const name = document.getElementById('lead-form-name').value.trim();
+      const phone = document.getElementById('lead-form-phone').value.trim();
+
+      if (!name || !phone) {
+        alert('Por favor completá al menos el Nombre y el Teléfono del cliente.');
+        return;
+      }
+
+      const leadObj = {
+        id: id || ('lead-' + Date.now()),
+        createdAt: id ? (leadsList.find(l => l.id === id)?.createdAt || new Date().toISOString()) : new Date().toISOString(),
+        name: name,
+        birthdate: document.getElementById('lead-form-birthdate').value,
+        email: document.getElementById('lead-form-email').value.trim(),
+        phone: phone,
+        address: document.getElementById('lead-form-address').value.trim(),
+        neighborhood: document.getElementById('lead-form-neighborhood').value.trim(),
+        zipCode: document.getElementById('lead-form-zip').value.trim(),
+        province: document.getElementById('lead-form-province').value.trim(),
+        country: document.getElementById('lead-form-country').value.trim() || 'Argentina',
+        type: document.getElementById('lead-form-type').value,
+        status: id ? (leadsList.find(l => l.id === id)?.status || 'Pendiente') : 'Pendiente',
+        notes: document.getElementById('lead-form-notes').value.trim()
+      };
+
+      if (id) {
+        const idx = leadsList.findIndex(l => l.id === id);
+        if (idx !== -1) leadsList[idx] = leadObj;
+      } else {
+        leadsList.unshift(leadObj);
+      }
+
+      closeModal('modal-lead');
+      renderLeadsList();
+      showToast('✅ Solicitud guardada exitosamente');
+      await saveLeadsListState();
+    }
+
+    async function changeLeadStatus(id, newStatus) {
+      const lead = leadsList.find(l => l.id === id);
+      if (lead) {
+        lead.status = newStatus;
+        renderLeadsList();
+        showToast(`✅ Estado actualizado a: ${newStatus}`);
+        await saveLeadsListState();
+      }
+    }
+
+    async function deleteLeadItem(id) {
+      if (confirm('¿Seguro que deseas eliminar esta solicitud?')) {
+        leadsList = leadsList.filter(l => l.id !== id);
+        renderLeadsList();
+        showToast('🗑️ Solicitud eliminada');
+        await saveLeadsListState();
+      }
+    }
+
+    function copyLeadFormatted(id) {
+      const l = leadsList.find(item => item.id === id);
+      if (!l) return;
+
+      const formatted = `=== DATOS PARA REGISTRO EN GREENWAY GLOBAL ===
+• Nombre Completo: ${l.name || ''}
+• Fecha de Nacimiento: ${l.birthdate || ''}
+• Email: ${l.email || ''}
+• Teléfono: ${l.phone || ''}
+• Dirección: ${l.address || ''}
+• Barrio/Colonia: ${l.neighborhood || ''}
+• Código Postal: ${l.zipCode || ''}
+• Provincia/Estado: ${l.province || ''}
+• País: ${l.country || 'Argentina'}
+• Tipo de Cuenta: ${l.type || 'Cliente Gratuito'}
+• Notas/Pedido: ${l.notes || ''}
+==============================================`;
+
+      navigator.clipboard.writeText(formatted).then(() => {
+        showToast('📋 ¡Datos copiados al portapapeles! Listos para pegar en Greenway.');
+      }).catch(() => {
+        alert(formatted);
+      });
+    }
+
+    function exportLeadsCSV() {
+      if (leadsList.length === 0) {
+        alert('No hay solicitudes para exportar.');
+        return;
+      }
+
+      const headers = ['ID', 'Fecha', 'Nombre', 'Fecha Nacimiento', 'Email', 'Telefono', 'Direccion', 'Barrio', 'CP', 'Provincia', 'Pais', 'Tipo', 'Estado', 'Notas'];
+      const rows = leadsList.map(l => [
+        l.id, l.createdAt, `"${l.name || ''}"`, l.birthdate, l.email, `"${l.phone || ''}"`,
+        `"${l.address || ''}"`, `"${l.neighborhood || ''}"`, l.zipCode, `"${l.province || ''}"`,
+        `"${l.country || ''}"`, `"${l.type || ''}"`, `"${l.status || ''}"`, `"${(l.notes || '').replace(/"/g, '""')}"`
+      ]);
+
+      const csvContent = 'data:text/csv;charset=utf-8,﻿' + [headers.join(','), ...rows.map(e => e.join(','))].join('\n');
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement('a');
+      link.setAttribute('href', encodedUri);
+      link.setAttribute('download', `greenway_solicitudes_registro_${new Date().toISOString().slice(0,10)}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
   </script>
 </body>
 </html>
