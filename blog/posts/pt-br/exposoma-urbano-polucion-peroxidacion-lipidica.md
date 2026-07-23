@@ -25,6 +25,10 @@ media:
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp
   - >-
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp
+  - >-
+    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp
+  - >-
+    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -86,7 +90,7 @@ Todos os dias, milhões de micropartículas invisíveis se depositam nos poros, 
 
 A poluição urbana é composta por micropartículas **PM2.5** que penetram nos poros e alteram a barreira lipídica.
 
-![Partículas PM2.5 e impacto na camada córnea](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp)
+![Imagen de sección](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp)
 
 - **Partículas de carbono:** Provenientes do trânsito e indústrias que aderem ao sebo.
 - **Metais pesados:** Geram espécies reativas de oxigênio (ROS).
@@ -103,7 +107,7 @@ Seu estrato córneo é a fronteira entre as toxinas e suas células. Mantê-lo d
 
 O esqualeno natural se oxida ao entrar em contato com a poluição, formando peróxido de esqualeno irritante que obstrui os poros.
 
-![Oxidação lipídica na superfície da pele](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp)
+![Imagen de sección](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp)
 
 1. **Formação de Peróxido de Esqualeno:** Subproduto viscoso e irritante.
 2. **Obstrução dos Poros:** O sebo oxidado engrossa e bloqueia os folículos.
@@ -117,7 +121,7 @@ Cravos e espinhas após dias de alta poluição são o resultado direto de sebo 
 
 Lavar o rosto com sabonetes adstringentes fortes dissolve as ceramidas protetoras e fragiliza a barreira cutânea.
 
-
+![Imagen de sección](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp)
 
 :::checklist Sinais de Asfixia por Poluição
 - Tom de pele cinzento e opaco apesar de dormir bem.
@@ -129,7 +133,7 @@ Lavar o rosto com sabonetes adstringentes fortes dissolve as ceramidas protetora
 
 A microfibra **UpPoly** remove as partículas PM2.5 e o sebo oxidado por atração capilar usando apenas água morna, preservando o pH 5.5.
 
-
+![Imagen de sección](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp)
 
 :::quiz Teste de Conhecimento
 Q: Qual o principal efeito das partículas PM2.5 ao oxidar o esqualeno?
