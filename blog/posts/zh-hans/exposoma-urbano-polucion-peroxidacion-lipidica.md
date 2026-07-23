@@ -18,8 +18,6 @@ media:
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp
   - >-
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp
-  - >-
-    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp
 author: PepaGold
 epigraph:
   text: 城市中看不见的污染时刻侵蚀着肌肤；采用温和生物物理方式清洁，能重换面部活力。
@@ -112,7 +110,7 @@ date_images_applied: '2026-07-23'
 
 日本 **UpPoly** 极细微纤维结构利用微孔毛细管吸附力，仅需温水即可物理物理吸附PM2.5颗粒与氧化皮脂，完好保留pH5.5酸碱屏障。
 
-![UpPoly微纤维无创物理清洁](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp)
+
 
 :::quiz 污染防护知识测试
 Q: PM2.5颗粒氧化天然角鲨烯的主要危害是什么？
