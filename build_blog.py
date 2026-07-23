@@ -22,7 +22,8 @@ LOCALE_FOLDERS = {
 HREFLANG_MAP = {k: k for k in LOCALE_FOLDERS}
 
 LOCALE_INFO = {
-    "es-ar": {"flag": "🇦🇷", "name": "Español (AR)", "code": "AR"},
+    "es-ar": {
+        "nav_chat": "Chat","flag": "🇦🇷", "name": "Español (AR)", "code": "AR"},
     "es-mx": {"flag": "🇲🇽", "name": "Español (MX)", "code": "MX"},
     "es-es": {"flag": "🇪🇸", "name": "Español (ES)", "code": "ES"},
     "en-us": {"flag": "🇺🇸", "name": "English", "code": "US"},
@@ -30,8 +31,10 @@ LOCALE_INFO = {
     "de-de": {"flag": "🇩🇪", "name": "Deutsch", "code": "DE"},
     "it-it": {"flag": "🇮🇹", "name": "Italiano", "code": "IT"},
     "pt-br": {"flag": "🇧🇷", "name": "Português", "code": "PT"},
-    "ru-ru": {"flag": "🇷🇺", "name": "Русский", "code": "RU"},
-    "zh-hans": {"flag": "🇨🇳", "name": "简体中文", "code": "ZH"},
+    "ru-ru": {
+        "nav_chat": "Чат","flag": "🇷🇺", "name": "Русский", "code": "RU"},
+    "zh-hans": {
+        "nav_chat": "聊天","flag": "🇨🇳", "name": "简体中文", "code": "ZH"},
 }
 
 CATEGORY_LABELS_DEFAULT = {
@@ -433,7 +436,8 @@ BRAND_HEAD = """<!DOCTYPE html>
   .lang-option {{ padding: 10px 18px; font-size: 14px; color: var(--color-dark); cursor: pointer; display: flex; align-items: center; gap: 10px; text-decoration: none; transition: all 0.2s ease; }}
   .lang-option:hover {{ background: rgba(212, 140, 144, 0.08); color: var(--color-primary-hover); }}
   .lang-option.is-selected {{ background: rgba(212, 140, 144, 0.12); color: var(--color-primary); font-weight: 600; }}
-  .blog-nav-btn-floating {{ right: 130px; top: 65px; }}
+  .blog-nav-btn-floating {{ right: 125px; top: 65px; }}
+  .chat-nav-btn-floating {{ right: 220px; top: 65px; }}
 
   /* Scrollbar personalizado para el menú de idiomas */
   .lang-dropdown-menu::-webkit-scrollbar {{ width: 4px; }}
@@ -446,7 +450,8 @@ BRAND_HEAD = """<!DOCTYPE html>
     .floating-droplet img {{ width: 22px; height: 22px; }}
     .lang-selector-container {{ top: 65px; right: 12px; }}
     .lang-selector-btn {{ padding: 5px 11px; font-size: 12px; }}
-    .blog-nav-btn-floating {{ right: 110px !important; }}
+    .blog-nav-btn-floating {{ right: 95px !important; }}
+    .chat-nav-btn-floating {{ right: 165px !important; }}
   }}
 
   /* Maquetación del artículo */
@@ -623,6 +628,7 @@ ARTICLE_TEMPLATE = BRAND_HEAD + """<body>
     }});
   }}
 </script>
+<script src="/js/chat-widget.js" defer></script>
 </body>
 </html>
 """
@@ -697,7 +703,8 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
   .lang-option {{ padding: 10px 18px; font-size: 14px; color: var(--color-dark); cursor: pointer; display: flex; align-items: center; gap: 10px; text-decoration: none; transition: all 0.2s ease; }}
   .lang-option:hover {{ background: rgba(212, 140, 144, 0.08); color: var(--color-primary-hover); }}
   .lang-option.is-selected {{ background: rgba(212, 140, 144, 0.12); color: var(--color-primary); font-weight: 600; }}
-  .blog-nav-btn-floating {{ right: 130px; top: 65px; }}
+  .blog-nav-btn-floating {{ right: 125px; top: 65px; }}
+  .chat-nav-btn-floating {{ right: 220px; top: 65px; }}
 
   /* Scrollbar personalizado para el menú de idiomas */
   .lang-dropdown-menu::-webkit-scrollbar {{ width: 4px; }}
@@ -710,7 +717,8 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
     .floating-droplet img {{ width: 22px; height: 22px; }}
     .lang-selector-container {{ top: 65px; right: 12px; }}
     .lang-selector-btn {{ padding: 5px 11px; font-size: 12px; }}
-    .blog-nav-btn-floating {{ right: 110px !important; }}
+    .blog-nav-btn-floating {{ right: 95px !important; }}
+    .chat-nav-btn-floating {{ right: 165px !important; }}
   }}
   
   footer.site-footer {{ background: var(--color-dark); color: rgba(255,255,255,0.7); text-align:center; padding: 40px 24px; font-size:0.85rem; }}
@@ -784,6 +792,7 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
     }});
   }});
 </script>
+<script src="/js/chat-widget.js" defer></script>
 </body>
 </html>
 """
@@ -961,7 +970,7 @@ def render_article(meta, body_md, hreflang_tags, lookup):
         category_label=category_label, date_display=date_display, reading_time=reading_time_str,
         author=meta.get("author", "PepaGold"), epigraph_html=render_epigraph(meta), summary_html=render_summary(meta),
         media_html=media_html, toc_html=toc_html, body_html=body_html, science_link_html=render_science_link(meta, home_url),
-        product_cta_html=product_cta_html, footer_copy=i18n["footer_copy"], nav_blog=i18n.get("nav_blog", "Blog"),
+        product_cta_html=product_cta_html, footer_copy=i18n["footer_copy"], nav_blog=i18n.get("nav_blog", "Blog"), nav_chat=i18n.get("nav_chat", "Chat"),
         faq_html=render_faq(meta), related_html=render_related(meta, lookup),
         active_flag=active_flag, lang_dropdown_html=lang_dropdown_html,
     )
@@ -1031,7 +1040,7 @@ def render_index(locale, posts):
         lang_attr=locale.split("-")[0], lang_upper=locale.split("-")[0].upper(),
         canonical=canonical, home_url=home_url, chips_html="".join(chips), cards_html="".join(cards),
         active_flag=active_flag, lang_dropdown_html=lang_dropdown_html, blog_index_url=blog_index_url,
-        index_title=i18n.get("index_title", "Blog | PepaGold"), nav_blog=i18n.get("nav_blog", "Blog"),
+        index_title=i18n.get("index_title", "Blog | PepaGold"), nav_blog=i18n.get("nav_blog", "Blog"), nav_chat=i18n.get("nav_chat", "Chat"),
         index_desc=i18n["index_desc"], footer_copy=i18n["footer_copy"]
     )
     out_dir = os.path.join(folder, "blog") if folder else "blog"

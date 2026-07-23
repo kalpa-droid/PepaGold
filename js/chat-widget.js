@@ -1,0 +1,247 @@
+/*
+  Widget de Chat Inteligente PepaGold — Soporte Multilingüe en 10 Locales
+  Incluye integración con botón en la barra superior de navegación y chat flotante inferior derecho.
+*/
+(function () {
+  "use strict";
+
+  const API_ENDPOINT = "/api/chat";
+  const MAX_CHARS = 1500;
+
+  const LANG_MAP = {
+    "es-ar": "es-AR", "es-mx": "es-MX", "es-es": "es-ES", "en-us": "en-US",
+    "fr-fr": "fr-FR", "de-de": "de-DE", "it-it": "it-IT", "pt-br": "pt-BR",
+    "ru-ru": "ru-RU", "zh-hans": "zh-CN"
+  };
+
+  const rawLang = (document.documentElement.lang || "es-ar").toLowerCase();
+  const pageLang = LANG_MAP[rawLang] ? rawLang : (rawLang.startsWith("es") ? "es-ar" : (rawLang.startsWith("en") ? "en-us" : "es-ar"));
+  const speechLang = LANG_MAP[pageLang] || "es-AR";
+
+  const STRINGS = {
+    "es-ar": { title: "¿Tenés dudas?", placeholder: "Escribí tu pregunta…", send: "Enviar", greeting: "¡Hola! Preguntame lo que quieras sobre PepaGold y Laska Mini Set 😊", navBtn: "Chat", tooLong: "Achicá un poco el mensaje, por favor.", error: "Algo falló. Intentá de nuevo en un momento." },
+    "es-mx": { title: "¿Tienes dudas?", placeholder: "Escribe tu pregunta…", send: "Enviar", greeting: "¡Hola! Pregúntame lo que quieras sobre PepaGold y Laska Mini Set 😊", navBtn: "Chat", tooLong: "Acorta un poco tu mensaje, por favor.", error: "Algo falló. Intenta de nuevo en un momento." },
+    "es-es": { title: "¿Tienes dudas?", placeholder: "Escribe tu pregunta…", send: "Enviar", greeting: "¡Hola! Pregúntame lo que quieras sobre PepaGold y Laska Mini Set 😊", navBtn: "Chat", tooLong: "Acorta un poco tu mensaje, por favor.", error: "Algo falló. Intenta de nuevo en un momento." },
+    "en-us": { title: "Questions?", placeholder: "Type your question…", send: "Send", greeting: "Hi! Ask me anything about PepaGold and the Laska Mini Set 😊", navBtn: "Chat", tooLong: "Please shorten your message.", error: "Something went wrong. Please try again." },
+    "fr-fr": { title: "Des questions ?", placeholder: "Posez votre question…", send: "Envoyer", greeting: "Bonjour ! Posez-moi vos questions sur PepaGold et le Laska Mini Set 😊", navBtn: "Chat", tooLong: "Veuillez raccourcir votre message.", error: "Une erreur est survenue. Veuillez réessayer." },
+    "de-de": { title: "Fragen?", placeholder: "Stellen Sie Ihre Frage…", send: "Senden", greeting: "Hallo! Fragen Sie mich alles über PepaGold und das Laska Mini Set 😊", navBtn: "Chat", tooLong: "Bitte kürzen Sie Ihre Nachricht.", error: "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut." },
+    "it-it": { title: "Domande?", placeholder: "Scrivi la tua domanda…", send: "Invia", greeting: "Ciao! Chiedimi qualsiasi cosa su PepaGold e il Laska Mini Set 😊", navBtn: "Chat", tooLong: "Per favore accorcia il tuo messaggio.", error: "Si è verificato un errore. Riprova tra poco." },
+    "pt-br": { title: "Dúvidas?", placeholder: "Digite sua pergunta…", send: "Enviar", greeting: "Olá! Pergunte-me qualquer coisa sobre o PepaGold e o Laska Mini Set 😊", navBtn: "Chat", tooLong: "Por favor encurte sua mensagem.", error: "Ocorreu um erro. Tente novamente em instantes." },
+    "ru-ru": { title: "Есть вопросы?", placeholder: "Напишите ваш вопрос…", send: "Отправить", greeting: "Привет! Спросите меня что угодно о PepaGold и Laska Mini Set 😊", navBtn: "Чат", tooLong: "Пожалуйста, сократите сообщение.", error: "Произошла ошибка. Попробуйте еще раз." },
+    "zh-hans": { title: "有疑问吗？", placeholder: "请输入您的问题…", send: "发送", greeting: "您好！关于 PepaGold 和 Laska Mini Set 欢迎随时咨询 😊", navBtn: "聊天", tooLong: "请缩短您的消息。", error: "出错了，请稍后再试。" }
+  };
+
+  const t = STRINGS[pageLang] || STRINGS["es-ar"];
+
+  // ---------------------------------------------------------------- Estilos PepaGold
+  const style = document.createElement("style");
+  style.textContent = `
+    #pg-chat-btn { position: fixed; bottom: 20px; right: 20px; width: 58px; height: 58px;
+      border-radius: 50%; background: linear-gradient(135deg, #c9a24b 0%, #a67c1e 100%); color: #fff; border: 2px solid rgba(255,255,255,0.4); cursor: pointer;
+      box-shadow: 0 8px 24px rgba(201,162,75,0.4); font-size: 26px; z-index: 9999; transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; align-items: center; justify-content: center; }
+    #pg-chat-btn:hover { transform: scale(1.08); box-shadow: 0 10px 28px rgba(201,162,75,0.6); }
+    #pg-chat-win { position: fixed; bottom: 90px; right: 20px; width: 350px; max-width: 92vw;
+      height: 490px; max-height: 75vh; background: #ffffff; border-radius: 18px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.25); display: none; flex-direction: column;
+      overflow: hidden; font-family: 'Inter', system-ui, -apple-system, sans-serif; z-index: 9999; border: 1px solid rgba(201,162,75,0.3); }
+    #pg-chat-win.open { display: flex; animation: pgPopIn 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
+    @keyframes pgPopIn { from { opacity: 0; transform: translateY(12px) scale(0.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
+    #pg-chat-head { background: linear-gradient(135deg, #111827 0%, #1f2937 100%); color: #f3f4f6; padding: 14px 16px; font-weight: 600; font-size: 15px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #c9a24b; }
+    #pg-chat-head span { display: flex; align-items: center; gap: 8px; }
+    #pg-chat-close { background: none; border: none; color: #9ca3af; font-size: 20px; cursor: pointer; padding: 0 4px; transition: color 0.15s; }
+    #pg-chat-close:hover { color: #ffffff; }
+    #pg-chat-log { flex: 1; overflow-y: auto; padding: 14px; font-size: 14px; background: #f9fafb; display: flex; flex-direction: column; gap: 10px; }
+    .pg-msg { padding: 10px 14px; border-radius: 14px; max-width: 85%; line-height: 1.45; font-size: 13.5px; word-wrap: break-word; }
+    .pg-msg.user { background: linear-gradient(135deg, #c9a24b 0%, #b38b34 100%); color: #ffffff; margin-left: auto; border-bottom-right-radius: 2px; box-shadow: 0 2px 8px rgba(201,162,75,0.25); }
+    .pg-msg.bot { background: #ffffff; color: #1f2937; border: 1px solid #e5e7eb; border-bottom-left-radius: 2px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
+    #pg-chat-inputrow { display: flex; align-items: center; border-top: 1px solid #f3f4f6; padding: 10px; gap: 8px; background: #ffffff; }
+    #pg-chat-text { flex: 1; border: 1px solid #e5e7eb; border-radius: 10px; padding: 9px 12px; font-size: 13.5px; resize: none; outline: none; transition: border-color 0.15s; font-family: inherit; }
+    #pg-chat-text:focus { border-color: #c9a24b; box-shadow: 0 0 0 3px rgba(201,162,75,0.15); }
+    #pg-chat-mic, #pg-chat-send { border: none; background: #f3f4f6; color: #4b5563; width: 36px; height: 36px; border-radius: 10px; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.15s, color 0.15s; }
+    #pg-chat-mic:hover, #pg-chat-send:hover { background: #e5e7eb; color: #111827; }
+    #pg-chat-send { background: #c9a24b; color: #ffffff; }
+    #pg-chat-send:hover { background: #b38b34; }
+    #pg-chat-mic.listening { background: #fee2e2; color: #dc2626; animation: pgPulse 1.2s infinite; }
+    @keyframes pgPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+    #pg-chat-counter { font-size: 10.5px; color: #9ca3af; text-align: right; padding: 0 14px 4px; background: #ffffff; }
+  `;
+  document.head.appendChild(style);
+
+  // ---------------------------------------------------------------- DOM
+  const btn = document.createElement("button");
+  btn.id = "pg-chat-btn";
+  btn.textContent = "💬";
+  btn.setAttribute("aria-label", t.title);
+
+  const win = document.createElement("div");
+  win.id = "pg-chat-win";
+  win.innerHTML = `
+    <div id="pg-chat-head">
+      <span>✨ ${t.title}</span>
+      <button id="pg-chat-close" title="Cerrar">✕</button>
+    </div>
+    <div id="pg-chat-log"></div>
+    <div id="pg-chat-counter">0 / ${MAX_CHARS}</div>
+    <div id="pg-chat-inputrow">
+      <button id="pg-chat-mic" title="Voz" aria-label="Voz">🎙️</button>
+      <textarea id="pg-chat-text" rows="1" maxlength="${MAX_CHARS}" placeholder="${t.placeholder}"></textarea>
+      <button id="pg-chat-send" title="${t.send}" aria-label="${t.send}">➤</button>
+    </div>
+  `;
+  document.body.appendChild(btn);
+  document.body.appendChild(win);
+
+  const closeBtn = win.querySelector("#pg-chat-close");
+  const log = win.querySelector("#pg-chat-log");
+  const textEl = win.querySelector("#pg-chat-text");
+  const counterEl = win.querySelector("#pg-chat-counter");
+  const micBtn = win.querySelector("#pg-chat-mic");
+  const sendBtn = win.querySelector("#pg-chat-send");
+
+  let history = [];
+  let opened = false;
+  let voiceOutputEnabled = true;
+
+  function addBubble(text, who) {
+    const div = document.createElement("div");
+    div.className = "pg-msg " + who;
+    div.textContent = text;
+    log.appendChild(div);
+    log.scrollTop = log.scrollHeight;
+    return div;
+  }
+
+  function toggleChatWindow(state) {
+    opened = typeof state === "boolean" ? state : !opened;
+    win.classList.toggle("open", opened);
+    if (opened && history.length === 0) addBubble(t.greeting, "bot");
+  }
+
+  btn.addEventListener("click", () => toggleChatWindow());
+  closeBtn.addEventListener("click", () => toggleChatWindow(false));
+
+  // Vincular eventos a cualquier botón en el header con clase o id 'pg-chat-nav-btn'
+  document.addEventListener("click", (e) => {
+    const navBtn = e.target.closest("#pg-chat-nav-btn, .pg-chat-nav-btn");
+    if (navBtn) {
+      e.preventDefault();
+      toggleChatWindow(true);
+    }
+  });
+
+  textEl.addEventListener("input", () => {
+    counterEl.textContent = `${textEl.value.length} / ${MAX_CHARS}`;
+  });
+  textEl.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send(); }
+  });
+  sendBtn.addEventListener("click", send);
+
+  async function send() {
+    const content = textEl.value.trim();
+    if (!content) return;
+    if (content.length > MAX_CHARS) { addBubble(t.tooLong, "bot"); return; }
+
+    addBubble(content, "user");
+    textEl.value = "";
+    counterEl.textContent = `0 / ${MAX_CHARS}`;
+    history.push({ role: "user", content });
+
+    const thinking = addBubble("…", "bot");
+
+    try {
+      const resp = await fetch(API_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ messages: history, locale: pageLang }),
+      });
+      const data = await resp.json();
+
+      if (!resp.ok) {
+        thinking.textContent = data.message || t.error;
+        return;
+      }
+
+      thinking.textContent = data.reply;
+      history.push({ role: "assistant", content: data.reply });
+      if (voiceOutputEnabled) speak(data.reply);
+    } catch (err) {
+      thinking.textContent = t.error;
+    }
+  }
+
+  // --------------------------------------------------------- Voz Entrada
+  const MAX_RECORDING_MS = 60000;
+
+  if (navigator.mediaDevices && window.MediaRecorder) {
+    let mediaRecorder = null;
+    let audioChunks = [];
+    let recording = false;
+    let autoStopTimer = null;
+
+    micBtn.addEventListener("click", async () => {
+      if (recording) { mediaRecorder.stop(); return; }
+
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        mediaRecorder = new MediaRecorder(stream);
+        audioChunks = [];
+
+        mediaRecorder.addEventListener("dataavailable", (e) => audioChunks.push(e.data));
+        mediaRecorder.addEventListener("start", () => {
+          recording = true;
+          micBtn.classList.add("listening");
+          autoStopTimer = setTimeout(() => mediaRecorder.stop(), MAX_RECORDING_MS);
+        });
+        mediaRecorder.addEventListener("stop", async () => {
+          recording = false;
+          micBtn.classList.remove("listening");
+          clearTimeout(autoStopTimer);
+          stream.getTracks().forEach((track) => track.stop());
+
+          const audioBlob = new Blob(audioChunks, { type: "audio/webm" });
+          await transcribeAndSend(audioBlob);
+        });
+
+        mediaRecorder.start();
+      } catch (err) {
+        addBubble(t.error, "bot");
+      }
+    });
+  } else {
+    micBtn.style.display = "none";
+  }
+
+  async function transcribeAndSend(audioBlob) {
+    const thinking = addBubble("…", "bot");
+    try {
+      const resp = await fetch(`/api/transcribe?lang=${pageLang.split("-")[0]}`, {
+        method: "POST",
+        headers: { "Content-Type": "audio/webm" },
+        body: audioBlob,
+      });
+      const data = await resp.json();
+      thinking.remove();
+
+      if (!resp.ok || !data.text) {
+        addBubble(t.error, "bot");
+        return;
+      }
+      textEl.value = data.text.slice(0, MAX_CHARS);
+      counterEl.textContent = `${textEl.value.length} / ${MAX_CHARS}`;
+      send();
+    } catch (err) {
+      thinking.remove();
+      addBubble(t.error, "bot");
+    }
+  }
+
+  // ---------------------------------------------------------- Voz Salida
+  function speak(text) {
+    if (!("speechSynthesis" in window)) return;
+    const utter = new SpeechSynthesisUtterance(text);
+    utter.lang = speechLang;
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(utter);
+  }
+})();
