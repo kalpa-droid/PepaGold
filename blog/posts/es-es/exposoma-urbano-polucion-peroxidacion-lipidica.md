@@ -18,8 +18,6 @@ local_phenomenon: Contaminación urbana y calima primaveral
 cover_image: ''
 media:
   - >-
-    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp
-  - >-
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp
   - >-
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp
@@ -93,7 +91,7 @@ Cada día, millones de micro-partículas invisibles suspendidas en el aire se de
 
 La contaminación del aire en la ciudad no es solo humo visible; está compuesta por partículas microscópicas llamadas **PM2.5** (20 veces más pequeñas que el diámetro de un poro):
 
-![Partículas PM2.5 e impacto en la capa córnea](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp)
+
 
 - **Micro-partículas carbonosas:** Procedentes del tránsito y la industria que se adhieren fuertemente a la grasa facial.
 - **Metales pesados:** Plomo, níquel y cadmio que generan especies reactivas de oxígeno (ROS).
