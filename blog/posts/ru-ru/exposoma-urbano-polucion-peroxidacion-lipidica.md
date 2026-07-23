@@ -22,8 +22,6 @@ media:
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp
   - >-
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp
-  - >-
-    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -128,7 +126,7 @@ date_images_applied: '2026-07-23'
 
 Микроволокно **UpPoly** бережно удаляет микрочастицы PM2.5 и окисленный себум за счет капиллярного притяжения теплой водой, не нарушая pH 5.5.
 
-![Биомеханическое очищение микроволокном UpPoly](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp)
+
 
 :::quiz Проверка знаний
 Q: Каково главное следствие окисления сквалена частицами PM2.5?
