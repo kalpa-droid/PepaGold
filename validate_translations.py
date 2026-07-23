@@ -1,20 +1,13 @@
 #!/usr/bin/env python3
 """
-validate_translations.py — Auditoría de pureza de idioma (v2, adaptada a la
-estructura real del repo: blog/posts/{locale}/{slug}.md).
+validate_translations.py — Auditoría de pureza de idioma (v2.1).
 
-Chequea 3 cosas distintas, cada una detecta un tipo de bug diferente:
-  1. PUREZA DE IDIOMA: el texto de cada campo/párrafo está en el idioma
-     que corresponde al `locale` declarado (detección real, no lista de frases).
-  2. CONSISTENCIA ESTRUCTURAL: el archivo vive en la carpeta correcta para
-     su `locale` (blog/posts/de-de/x.md con locale: de-de, no al revés).
-  3. CONSISTENCIA DE CONCEPTO: todos los archivos que comparten `article_id`
-     tienen el mismo valor de `concept` (así lo exige AGENTS.md, y es lo que
-     permite enlazar el hreflang entre idiomas).
-
-Uso:
-    python3 validate_translations.py
-    python3 validate_translations.py --article PG-004   # solo un artículo
+Chequea:
+  1. PUREZA DE IDIOMA: el texto de cada campo/párrafo está en el idioma que corresponde.
+  2. CATEGORÍAS TRADUCIDAS: valida expresamente que 'category_label' esté traducido al idioma del locale.
+  3. CONSISTENCIA ESTRUCTURAL: el archivo vive en la carpeta correcta para su `locale`.
+  4. CONSISTENCIA DE CONCEPTO Y SLUG: todos los archivos que comparten `article_id` tienen el mismo `concept` y `slug`.
+  5. VERIFICACIÓN FÍSICA DE IMÁGENES EN DISCO.
 """
 import os
 import re
@@ -24,8 +17,20 @@ from collections import defaultdict
 from audit_common import BRAND_WHITELIST, BLOG_EXPECTED_LANG, detect_lang
 
 POSTS_DIR = "blog/posts"
-
 EXPECTED_LANG = BLOG_EXPECTED_LANG
+
+EXPECTED_CATEGORY_LABELS = {
+    "es-ar": "🔬 Ciencia de la Piel",
+    "es-mx": "🔬 Ciencia de la Piel",
+    "es-es": "🔬 Ciencia de la Piel",
+    "en-us": "🔬 Skin Science",
+    "fr-fr": "🔬 Science de la Peau",
+    "de-de": "🔬 Hautwissenschaft",
+    "it-it": "🔬 Scienza della Pelle",
+    "pt-br": "🔬 Ciência da Pele",
+    "ru-ru": "🔬 Наука о коже",
+    "zh-hans": "🔬 皮肤科学"
+}
 
 
 def parse_post(path):
@@ -39,7 +44,7 @@ def parse_post(path):
 
 def collect_text_blocks(meta, body_md):
     blocks = []
-    for field in ("title", "description", "category_label", "region_label", "local_phenomenon"):
+    for field in ("title", "description", "region_label", "local_phenomenon"):
         if meta.get(field):
             blocks.append((f"frontmatter.{field}", str(meta[field])))
     for i, item in enumerate(meta.get("summary") or []):
@@ -61,7 +66,6 @@ def collect_text_blocks(meta, body_md):
 
 
 def find_all_posts():
-    """os.walk recursivo — misma lógica que usa build_blog.py hoy."""
     posts = []
     for root, _, files in os.walk(POSTS_DIR):
         for fn in files:
@@ -99,8 +103,7 @@ def main():
         if locale != folder_locale:
             problems.append(
                 f"[ESTRUCTURA] {path}: está en la carpeta '{folder_locale}' "
-                f"pero declara locale: '{locale}' — build_blog.py puede estar "
-                f"aplicando el fallback silencioso a es-ar."
+                f"pero declara locale: '{locale}'"
             )
 
         articles_seen[article_id].add(folder_locale)
@@ -109,7 +112,16 @@ def main():
         if meta.get("slug"):
             slug_by_article[article_id].add(meta["slug"])
 
-        # 2) Pureza de idioma
+        # 2) Verificación explícita de category_label traducida
+        expected_cat_label = EXPECTED_CATEGORY_LABELS.get(locale)
+        current_cat_label = meta.get("category_label")
+        if expected_cat_label and current_cat_label != expected_cat_label:
+            problems.append(
+                f"[CATEGORÍA NO TRADUCIDA] {path}: category_label es '{current_cat_label}', "
+                f"se esperaba la versión traducida '{expected_cat_label}'"
+            )
+
+        # 3) Pureza de idioma de bloques largos
         expected = EXPECTED_LANG.get(locale)
         if expected is None:
             problems.append(f"[ESTRUCTURA] {path}: locale '{locale}' no reconocido")
@@ -137,41 +149,34 @@ def main():
             img_clean = img_rel.strip().lstrip('/')
             img_disk_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), img_clean)
             if not os.path.exists(img_disk_path):
-                problems.append(f"[IMAGEN EN DISCO] {path}: el archivo de imagen '{img_rel}' NO existe físicamente en el servidor.")
+                problems.append(f"[IMAGEN EN DISCO] {path}: la imagen '{img_rel}' NO existe físicamente.")
 
-    # 3) Consistencia de concepto y slugs entre idiomas del mismo article_id
+    # 6) Consistencia de concepto y slugs entre idiomas
     for article_id, concepts in concept_by_article.items():
         if len(concepts) > 1:
-            problems.append(
-                f"[CONCEPTO] {article_id}: el campo 'concept' NO es idéntico en "
-                f"todos los idiomas — valores encontrados: {concepts}"
-            )
+            problems.append(f"[CONCEPTO] {article_id}: 'concept' no es idéntico: {concepts}")
     for article_id, slugs in slug_by_article.items():
         if len(slugs) > 1:
-            problems.append(
-                f"[SLUG] {article_id}: el slug NO es idéntico en todos los idiomas "
-                f"(rompe el hreflang entre versiones) — valores encontrados: {slugs}"
-            )
+            problems.append(f"[SLUG] {article_id}: 'slug' no es idéntico: {slugs}")
 
-    # 4) Consistencia de imágenes entre idiomas (contra es-ar como referencia)
+    # 7) Consistencia de número de imágenes
     for article_id, counts in image_count_by_article.items():
         ref_count = counts.get("es-ar", 0)
         for loc, count in counts.items():
             if count != ref_count and loc != "es-ar":
                 problems.append(
-                    f"[IMÁGENES DESIGUALES] {article_id} [{loc}]: tiene {count} imágenes en el cuerpo "
+                    f"[IMÁGENES DESIGUALES] {article_id} [{loc}]: tiene {count} imágenes "
                     f"mientras que es-ar tiene {ref_count} imágenes."
                 )
 
     print(f"Artículos escaneados: {len(all_paths)}\n")
 
-    # Resumen de cobertura por article_id
     print("Cobertura por artículo:")
     for article_id, locales in sorted(articles_seen.items()):
         missing = sorted(set(EXPECTED_LANG) - locales)
         status = "🟢 completo" if not missing else f"🟡 faltan: {', '.join(missing)}"
         print(f"  {article_id}: {len(locales)}/10 — {status}")
-    print()
+        print()
 
     if problems:
         print(f"🔴 {len(problems)} problema(s) encontrado(s):\n")
