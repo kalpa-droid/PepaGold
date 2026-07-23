@@ -12,12 +12,19 @@ category: barrera-cutanea
 category_label: 🔬 Ciencia de la Piel
 concept: exposoma-urbano-polucion-pm25-peroxidacion-lipidica-barrera-cutanea
 local_phenomenon: Smog urbano y partículas finas PM2.5
-cover_image: ''
+cover_image: >-
+  /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_1.webp
 media:
+  - >-
+    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_1.webp
   - >-
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp
   - >-
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp
+  - >-
+    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp
+  - >-
+    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp
 author: PepaGold
 epigraph:
   text: 城市中看不见的污染时刻侵蚀着肌肤；采用温和生物物理方式清洁，能重换面部活力。
@@ -67,7 +74,7 @@ date_images_applied: '2026-07-23'
 
 城市空气污染主要由微小的 **PM2.5** 颗粒组成，这些颗粒穿透毛孔并破坏角质层脂质屏障。
 
-![PM2.5微粒对角质层的损伤](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp)
+![Imagen de sección](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp)
 
 - **碳质微颗粒:** 来自汽车尾气与工业排放，紧密粘附于皮脂。
 - **重金属元素:** 产生游离自由基，诱发皮肤氧化应激。
@@ -84,7 +91,7 @@ date_images_applied: '2026-07-23'
 
 皮脂腺分泌的角鲨烯在接触大气污染物后剧烈氧化，生成具有刺激性的角鲨烯过氧化物。
 
-![皮肤表面的脂质过氧化反应](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp)
+![Imagen de sección](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp)
 
 1. **角鲨烯过氧化物生成:** 具有高黏度与刺激性的氧化副产物。
 2. **毛孔堵塞:** 氧化皮脂变粘稠，堵塞毛囊开口。
@@ -98,7 +105,7 @@ date_images_applied: '2026-07-23'
 
 使用强力界面活性剂洗脸会溶解神经酰胺，破坏脂质屏障，使污染物更容易渗入深层。
 
-
+![Imagen de sección](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp)
 
 :::checklist 皮肤污染窒息征兆
 - 睡眠充足但气色发灰暗沉。
@@ -110,7 +117,7 @@ date_images_applied: '2026-07-23'
 
 日本 **UpPoly** 极细微纤维结构利用微孔毛细管吸附力，仅需温水即可物理物理吸附PM2.5颗粒与氧化皮脂，完好保留pH5.5酸碱屏障。
 
-
+![Imagen de sección](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp)
 
 :::quiz 污染防护知识测试
 Q: PM2.5颗粒氧化天然角鲨烯的主要危害是什么？
