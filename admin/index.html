@@ -1093,7 +1093,7 @@
       const body = document.getElementById('ed-body').value;
 
       if (!title) return alert('Por favor ingresá un título.');
-      if (!slug) slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+      if (!slug) slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '').slice(0, 60).replace(/-$/, '');
 
       const existing = articlesList.find(a => a.meta.slug === currentEditingSlug);
       const nextIdNum = articlesList.length + 1;
