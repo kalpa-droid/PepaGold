@@ -21,7 +21,13 @@ media:
   - >-
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_1.webp
   - >-
+    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp
+  - >-
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp
+  - >-
+    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp
+  - >-
+    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -90,7 +96,7 @@ Cada día, millones de micro-partículas invisibles suspendidas en el aire se de
 
 La contaminación del aire en la ciudad no es solo humo visible; está compuesta por partículas microscópicas llamadas **PM2.5** (20 veces más pequeñas que el diámetro de un poro):
 
-
+![Imagen de sección](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp)
 
 - **Micro-partículas carbonosas:** Procedentes del tránsito y la industria que se adhieren fuertemente a la grasa facial.
 - **Metales pesados:** Plomo, níquel y cadmio que generan especies reactivas de oxígeno (ROS).
@@ -109,7 +115,7 @@ Tu estrato córneo es la única frontera entre los tóxicos ambientales y tus c�
 
 Uno de los efectos más destructivos de la polución es la degradación del aceite natural de tu piel.
 
-![Oxidación lipídica en la superficie de la piel](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp)
+![Imagen de sección](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp)
 
 El **escualeno** es el lípido protector más importante segregado por las glándulas sebáceas. Sin embargo, al entrar en contacto con el nitrógeno y las partículas contaminantes, se oxida violentamente:
 
@@ -125,7 +131,7 @@ Los brotes inesperados que surgen en la mandíbula y mejillas tras días de alta
 
 Al sentir la cara sucia, el error más común es lavar el rostro con jabones astringentes fuertes o frotar intensamente con discos de algodón sintéticos.
 
-
+![Imagen de sección](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp)
 
 Los tensoactivos químicos agresivos disuelven las ceramidas protectoras. Al romper la pared lipídica, en lugar de limpiar la contaminación, estás abriendo los poros para que los tóxicos penetren aún más profundo.
 
@@ -140,7 +146,7 @@ Los tensoactivos químicos agresivos disuelven las ceramidas protectoras. Al rom
 
 Para retirar las partículas PM2.5 y el sebo oxidado sin destruir el manto ácido pH 5.5, la cosmética médica recomienda la **remoción física por capilaridad**.
 
-
+![Imagen de sección](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp)
 
 La estructura nanométrica de la fibra de poliéster dividida **UpPoly** (utilizada en la línea Laska Mini) funciona como una red microscópica de atracción electrostática:
 
