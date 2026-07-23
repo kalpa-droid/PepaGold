@@ -19,8 +19,6 @@ media:
   - >-
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp
   - >-
-    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp
-  - >-
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp
 author: PepaGold
 epigraph:
@@ -102,7 +100,7 @@ date_images_applied: '2026-07-23'
 
 使用强力界面活性剂洗脸会溶解神经酰胺，破坏脂质屏障，使污染物更容易渗入深层。
 
-![城市环境与受到保护的肌肤](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp)
+
 
 :::checklist 皮肤污染窒息征兆
 - 睡眠充足但气色发灰暗沉。
