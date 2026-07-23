@@ -16,12 +16,17 @@ category: barrera-cutanea
 category_label: 🔬 Ciencia de la Piel
 concept: exposoma-urbano-polucion-pm25-peroxidacion-lipidica-barrera-cutanea
 local_phenomenon: Smog urbano y partículas finas PM2.5
-cover_image: ''
+cover_image: >-
+  /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_1.webp
 media:
+  - >-
+    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_1.webp
   - >-
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp
   - >-
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp
+  - >-
+    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp
   - >-
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp
 author: PepaGold
@@ -85,7 +90,7 @@ Jeden Tag lagern sich Millionen unsichtbarer Mikropartikel auf Ihren Poren ab un
 
 Städtischer Feinstaub besteht aus **PM2.5-Partikeln**, die in die Poren eindringen und die Lipidbarriere schädigen.
 
-![PM2.5 Feinstaub Partikel auf der Haut](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp)
+![Imagen de sección](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp)
 
 - **Kohlenstoffpartikel:** Aus Fahrzeugabgasen und Industrie.
 - **Schwermetalle:** Erzeugen reaktive Sauerstoffspezies (ROS).
@@ -102,7 +107,7 @@ Ihre Hornschicht schützt Ihre Zellen vor Umweltgiften. Eine intakte Barriere is
 
 Natürliches Squalan oxidiert bei Kontakt mit Luftverschmutzung und bildet zähflüssiges Squalenperoxid, das Poren verstopft.
 
-![Lipidoxidation auf der Hautoberfläche](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp)
+![Imagen de sección](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp)
 
 1. **Bildung von Squalenperoxid:** Ein reizendes Oxidationsprodukt.
 2. **Porenverstopfung:** Oxidierter Talg dickt ein.
@@ -116,7 +121,7 @@ Unreinheiten nach Tagen hoher Feinstaubbelastung sind oft das Ergebnis von oxidi
 
 Astringierende Seifen lösen wertvolle Ceramide auf und schwächen die Hautschutzbarriere.
 
-
+![Imagen de sección](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp)
 
 :::checklist Anzeichen von Hauterstickung
 - Fahler, grauer Teint trotz ausreichendem Schlaf.
@@ -128,7 +133,7 @@ Astringierende Seifen lösen wertvolle Ceramide auf und schwächen die Hautschut
 
 Die **UpPoly-Mikrofaser** entfernt PM2.5-Feinstaub und Talg durch Kapillarwirkung sanft mit warmem Wasser, ohne den Säureschutzmantel (pH 5.5) zu stören.
 
-![Biomechanische Reinigung mit UpPoly Mikrofaser](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp)
+![Imagen de sección](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp)
 
 :::quiz Wissens-Test
 Q: Was ist die Hauptfolge der Oxidation von Squalan durch PM2.5-Partikel?
