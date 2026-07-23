@@ -1,7 +1,11 @@
 ---
 article_id: PG-006
-title: ¿Te levantas con la cara opaca y sucia? La Ciencia del Exposoma Urbano y la Peroxidación Lipídica
-description: Análisis dermatológico del impacto de las partículas finas PM2.5, la peroxidación del escualeno y la asfixia cutánea en la ciudad.
+title: >-
+  ¿Te levantas con la cara opaca y sucia? La Ciencia del Exposoma Urbano y la
+  Peroxidación Lipídica
+description: >-
+  Análisis dermatológico del impacto de las partículas finas PM2.5, la
+  peroxidación del escualeno y la asfixia cutánea en la ciudad.
 slug: exposoma-urbano-polucion-peroxidacion-lipidica
 date: '2026-07-23'
 date_created: '2026-07-23'
@@ -11,33 +15,73 @@ category: barrera-cutanea
 category_label: 🔬 Ciencia de la Piel
 concept: exposoma-urbano-polucion-pm25-peroxidacion-lipidica-barrera-cutanea
 local_phenomenon: Smog urbano y contingencia ambiental por PM2.5
-cover_image: /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_1.webp
+cover_image: >-
+  /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_1.webp
 media:
-- /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_1.webp
-- /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp
-- /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp
-- /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp
-- /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp
+  - >-
+    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_1.webp
+  - >-
+    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp
+  - >-
+    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp
+  - >-
+    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp
 author: PepaGold
 epigraph:
-  text: La polución invisible de la ciudad agrede tu rostro cada minuto; limpiarlo con suavidad biológica es devolverle la vida.
+  text: >-
+    La polución invisible de la ciudad agrede tu rostro cada minuto; limpiarlo
+    con suavidad biológica es devolverle la vida.
   author: Dra. PepaGold
 summary:
-- Las partículas ultra-finas PM2.5 penetran profundamente en los poros desencadenando peroxidación lipídica.
-- La oxidación del escualeno natural genera subproductos comedogénicos que asfixian la tez y apagan el brillo.
-- Los tensoactivos químicos agresivos aumentan la permeabilidad corneal facilitando la entrada de metales pesados.
-- La tecnología biomecánica UpPoly remueve las micro-partículas carbonosas exclusivamente con agua tibia y sin alterar el pH 5.5.
+  - >-
+    Las partículas ultra-finas PM2.5 penetran profundamente en los poros
+    desencadenando peroxidación lipídica.
+  - >-
+    La oxidación del escualeno natural genera subproductos comedogénicos que
+    asfixian la tez y apagan el brillo.
+  - >-
+    Los tensoactivos químicos agresivos aumentan la permeabilidad corneal
+    facilitando la entrada de metales pesados.
+  - >-
+    La tecnología biomecánica UpPoly remueve las micro-partículas carbonosas
+    exclusivamente con agua tibia y sin alterar el pH 5.5.
 faq:
-- q: ¿Por qué siento la piel gris y cansada al volver del trabajo en la ciudad?
-  a: Las partículas contaminantes PM2.5 se adhieren al sebo facial y se oxidan rápidamente, formando una película invisible que asfixia los poros y destruye la luminosidad.
-- q: ¿El agua de la canilla limpia la contaminación por sí sola?
-  a: El agua sola no arrastra las partículas lipófilas de humo y escape de autos; se necesita la atracción capilar de la microfibra UpPoly para retirarlas sin dañar el manto ácido.
+  - q: ¿Por qué siento la piel gris y cansada al volver del trabajo en la ciudad?
+    a: >-
+      Las partículas contaminantes PM2.5 se adhieren al sebo facial y se oxidan
+      rápidamente, formando una película invisible que asfixia los poros y
+      destruye la luminosidad.
+  - q: ¿El agua de la canilla limpia la contaminación por sí sola?
+    a: >-
+      El agua sola no arrastra las partículas lipófilas de humo y escape de
+      autos; se necesita la atracción capilar de la microfibra UpPoly para
+      retirarlas sin dañar el manto ácido.
 image_prompts:
-- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9): Scientific-editorial concept photography of urban exposome and skin pollution shield. Macro close-up of luminous, rejuvenated skin texture with subtle iridescent protective atmosphere repelling microscopic charcoal-gray pollution dust particles. Warm rose and dusty amber studio backlight. Shot on Hasselblad 100MP, 120mm macro lens. NO text, NO logos.'
-- '📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): High-end medical 3D rendering of microscopic PM2.5 particulate matter hovering near the stratum corneum cell layer. Soft warm lighting highlighting lipid membrane structure. Medical aesthetic. NO text.'
-- '📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Macro photography of squalene oxidation process on skin surface, showing transformation from oxidized dullness to glowing golden lipid balance. Clean clinical framing. NO text.'
-- '📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Editorial photography of urban environment backdrop with a calm, protected face reflecting crystal clear atmospheric purity. Warm sunset glow. NO text.'
-- '📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): Ultra macro shot of UpPoly micro-fibers capturing microscopic carbon residues using pure water droplets. High contrast science detail. NO text.'
+  - >-
+    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+    Scientific-editorial concept photography of urban exposome and skin
+    pollution shield. Macro close-up of luminous, rejuvenated skin texture with
+    subtle iridescent protective atmosphere repelling microscopic charcoal-gray
+    pollution dust particles. Warm rose and dusty amber studio backlight. Shot
+    on Hasselblad 100MP, 120mm macro lens. NO text, NO logos.
+  - >-
+    📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): High-end
+    medical 3D rendering of microscopic PM2.5 particulate matter hovering near
+    the stratum corneum cell layer. Soft warm lighting highlighting lipid
+    membrane structure. Medical aesthetic. NO text.
+  - >-
+    📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Macro
+    photography of squalene oxidation process on skin surface, showing
+    transformation from oxidized dullness to glowing golden lipid balance. Clean
+    clinical framing. NO text.
+  - >-
+    📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Editorial
+    photography of urban environment backdrop with a calm, protected face
+    reflecting crystal clear atmospheric purity. Warm sunset glow. NO text.
+  - >-
+    📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): Ultra macro
+    shot of UpPoly micro-fibers capturing microscopic carbon residues using pure
+    water droplets. High contrast science detail. NO text.
 show_science_link: true
 date_images_applied: '2026-07-23'
 region_label: 🇲🇽 México (ZMM / CDMX)
@@ -50,7 +94,7 @@ Cada día, millones de micro-partículas invisibles suspendidas en el aire se de
 
 La contaminación del aire en la ciudad no es solo humo visible; está compuesta por partículas microscópicas llamadas **PM2.5** (20 veces más pequeñas que el diámetro de un poro):
 
-![Partículas PM2.5 e impacto en la capa córnea](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp)
+
 
 - **Micro-partículas carbonosas:** Procedentes del tránsito y la industria que se adhieren fuertemente a la grasa facial.
 - **Metales pesados:** Plomo, níquel y cadmio que generan especies reactivas de oxígeno (ROS).
