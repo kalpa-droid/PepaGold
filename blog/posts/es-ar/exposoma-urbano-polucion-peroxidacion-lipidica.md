@@ -22,8 +22,6 @@ media:
   - >-
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp
   - >-
-    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp
-  - >-
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp
 author: PepaGold
 epigraph:
@@ -127,7 +125,7 @@ Los brotes inesperados que surgen en la mandíbula y mejillas tras días de alta
 
 Al sentir la cara sucia, el error más común es lavar el rostro con jabones astringentes fuertes o frotar intensamente con discos de algodón sintéticos.
 
-![Ambiente urbano y rostro protegido frente al smog](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp)
+
 
 Los tensoactivos químicos agresivos disuelven las ceramidas protectoras. Al romper la pared lipídica, en lugar de limpiar la contaminación, estás abriendo los poros para que los tóxicos penetren aún más profundo.
 
