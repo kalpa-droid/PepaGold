@@ -1,6 +1,6 @@
 /*
-  Widget de Chat Inteligente PepaGold — Soporte Multilingüe en 10 Locales
-  Incluye integración con botón en la barra superior de navegación y chat flotante inferior derecho.
+  Widget de Chat Inteligente PepaGold — Traducción 100% Multilingüe en 10 Locales
+  Soporte dinámico por detección de URL y atributo html lang.
 */
 (function () {
   "use strict";
@@ -14,23 +14,100 @@
     "ru-ru": "ru-RU", "zh-hans": "zh-CN"
   };
 
-  const rawLang = (document.documentElement.lang || "es-ar").toLowerCase();
-  const pageLang = LANG_MAP[rawLang] ? rawLang : (rawLang.startsWith("es") ? "es-ar" : (rawLang.startsWith("en") ? "en-us" : "es-ar"));
-  const speechLang = LANG_MAP[pageLang] || "es-AR";
-
   const STRINGS = {
-    "es-ar": { title: "¿Tenés dudas?", placeholder: "Escribí tu pregunta…", send: "Enviar", greeting: "¡Hola! 👋 Puedo ayudarte a comprar, a registrarte en la plataforma de Greenway y a descubrir todos los productos ecológicos de la tienda. ¡Preguntame lo que quieras! 😊", navBtn: "Chat", tooLong: "Achicá un poco el mensaje, por favor.", error: "Algo falló. Intentá de nuevo en un momento." },
-    "es-mx": { title: "¿Tienes dudas?", placeholder: "Escribe tu pregunta…", send: "Enviar", greeting: "¡Hola! 👋 Puedo ayudarte a comprar, a registrarte en la plataforma de Greenway y a descubrir todos los productos ecológicos de la tienda. ¡Pregúntame lo que quieras! 😊", navBtn: "Chat", tooLong: "Acorta un poco tu mensaje, por favor.", error: "Algo falló. Intenta de nuevo en un momento." },
-    "es-es": { title: "¿Tienes dudas?", placeholder: "Escribe tu pregunta…", send: "Enviar", greeting: "¡Hola! 👋 Puedo ayudarte a comprar, a registrarte en la plataforma de Greenway y a descubrir todos los productos ecológicos de la tienda. ¡Pregúntame lo que quieras! 😊", navBtn: "Chat", tooLong: "Acorta un poco tu mensaje, por favor.", error: "Algo falló. Intenta de nuevo en un momento." },
-    "en-us": { title: "Questions?", placeholder: "Type your question…", send: "Send", greeting: "Hi! 👋 I can help you buy, register on the Greenway platform, and discover all the eco-friendly products in our store. Ask me anything! 😊", navBtn: "Chat", tooLong: "Please shorten your message.", error: "Something went wrong. Please try again." },
-    "fr-fr": { title: "Des questions ?", placeholder: "Posez votre question…", send: "Envoyer", greeting: "Bonjour ! 👋 Je peux vous aider à acheter, à vous inscrire sur la plateforme Greenway et à découvrir tous les produits écologiques. Posez-moi vos questions ! 😊", navBtn: "Chat", tooLong: "Veuillez raccourcir votre message.", error: "Une erreur est survenue. Veuillez réessayer." },
-    "de-de": { title: "Fragen?", placeholder: "Stellen Sie Ihre Frage…", send: "Senden", greeting: "Hallo! 👋 Ich kann Ihnen beim Kauf, der Registrierung auf der Greenway-Plattform und beim Entdecken aller Produkte helfen. Fragen Sie mich alles! 😊", navBtn: "Chat", tooLong: "Bitte kürzen Sie Ihre Nachricht.", error: "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut." },
-    "it-it": { title: "Domande?", placeholder: "Scrivi la tua domanda…", send: "Invia", greeting: "Ciao! 👋 Posso aiutarti ad acquistare, registrarti sulla piattaforma Greenway e scoprire tutti i prodotti ecologici del negozio. Chiedimi qualsiasi cosa! 😊", navBtn: "Chat", tooLong: "Per favore accorcia il tuo messaggio.", error: "Si è verificato un errore. Riprova tra poco." },
-    "pt-br": { title: "Dúvidas?", placeholder: "Digite sua pergunta…", send: "Enviar", greeting: "Olá! 👋 Posso ajudar você a comprar, se cadastrar na plataforma da Greenway e conhecer todos os produtos ecológicos da loja. Pergunte o que quiser! 😊", navBtn: "Chat", tooLong: "Por favor encurte sua mensagem.", error: "Ocorreu um erro. Tente novamente em instantes." },
-    "ru-ru": { title: "Есть вопросы?", placeholder: "Напишите ваш вопрос…", send: "Отправить", greeting: "Привет! 👋 Я помогу вам оформить покупку, зарегистрироваться на платформе Greenway и узнать обо всех эко-товарах. Спросите меня о чем угодно! 😊", navBtn: "Чат", tooLong: "Пожалуйста, сократите сообщение.", error: "Произошла ошибка. Попробуйте еще раз." },
-    "zh-hans": { title: "有疑问吗？", placeholder: "请输入您的问题…", send: "发送", greeting: "您好！👋 我可以帮助您购买商品、在 Greenway 平台注册，并了解商城中的所有环保产品。有任何问题随时问我！😊", navBtn: "聊天", tooLong: "请缩短您的消息。", error: "出错了，请稍后再试。" }
+    "es-ar": {
+      title: "¿Tenés dudas?", placeholder: "Escribí tu pregunta…", send: "Enviar",
+      greeting: "¡Hola! 👋 Puedo ayudarte a comprar, a registrarte en la plataforma de Greenway y a descubrir todos los productos ecológicos de la tienda. ¡Preguntame lo que quieras! 😊",
+      navBtn: "Chat", tooLong: "Achicá un poco el mensaje, por favor.", error: "Algo falló. Intentá de nuevo en un momento.",
+      close: "Cerrar", soundOn: "Voz activada", soundOff: "Voz desactivada", micTitle: "Grabar mensaje de voz",
+      micRecording: "Grabando... Hacé clic para enviar", sendTitle: "Enviar mensaje"
+    },
+    "es-mx": {
+      title: "¿Tienes dudas?", placeholder: "Escribe tu pregunta…", send: "Enviar",
+      greeting: "¡Hola! 👋 Puedo ayudarte a comprar, a registrarte en la plataforma de Greenway y a descubrir todos los productos ecológicos de la tienda. ¡Pregúntame lo que quieras! 😊",
+      navBtn: "Chat", tooLong: "Acorta un poco tu mensaje, por favor.", error: "Algo falló. Intenta de nuevo en un momento.",
+      close: "Cerrar", soundOn: "Voz activada", soundOff: "Voz desactivada", micTitle: "Grabar mensaje de voz",
+      micRecording: "Grabando... Haz clic para enviar", sendTitle: "Enviar mensaje"
+    },
+    "es-es": {
+      title: "¿Tienes dudas?", placeholder: "Escribe tu pregunta…", send: "Enviar",
+      greeting: "¡Hola! 👋 Puedo ayudarte a comprar, a registrarte en la plataforma de Greenway y a descubrir todos los productos ecológicos de la tienda. ¡Pregúntame lo que quieras! 😊",
+      navBtn: "Chat", tooLong: "Acorta un poco tu mensaje, por favor.", error: "Algo falló. Intenta de nuevo en un momento.",
+      close: "Cerrar", soundOn: "Voz activada", soundOff: "Voz desactivada", micTitle: "Grabar mensaje de voz",
+      micRecording: "Grabando... Haz clic para enviar", sendTitle: "Enviar mensaje"
+    },
+    "en-us": {
+      title: "Questions?", placeholder: "Type your question…", send: "Send",
+      greeting: "Hi! 👋 I can help you buy, register on the Greenway platform, and discover all the eco-friendly products in our store. Ask me anything! 😊",
+      navBtn: "Chat", tooLong: "Please shorten your message.", error: "Something went wrong. Please try again.",
+      close: "Close", soundOn: "Voice enabled", soundOff: "Voice disabled", micTitle: "Record voice message",
+      micRecording: "Recording... Click to send", sendTitle: "Send message"
+    },
+    "fr-fr": {
+      title: "Des questions ?", placeholder: "Posez votre question…", send: "Envoyer",
+      greeting: "Bonjour ! 👋 Je peux vous aider à acheter, à vous inscrire sur la plateforme Greenway et à découvrir tous les produits écologiques. Posez-moi vos questions ! 😊",
+      navBtn: "Chat", tooLong: "Veuillez raccourcir votre message.", error: "Une erreur est survenue. Veuillez réessayer.",
+      close: "Fermer", soundOn: "Voix activée", soundOff: "Voix désactivée", micTitle: "Enregistrer un message vocal",
+      micRecording: "Enregistrement... Cliquez pour envoyer", sendTitle: "Envoyer le message"
+    },
+    "de-de": {
+      title: "Fragen?", placeholder: "Stellen Sie Ihre Frage…", send: "Senden",
+      greeting: "Hallo! 👋 Ich kann Ihnen beim Kauf, der Registrierung auf der Greenway-Plattform und beim Entdecken aller Produkte helfen. Fragen Sie mich alles! 😊",
+      navBtn: "Chat", tooLong: "Bitte kürzen Sie Ihre Nachricht.", error: "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+      close: "Schließen", soundOn: "Sprache aktiv", soundOff: "Sprache deaktiviert", micTitle: "Sprachnachricht aufnehmen",
+      micRecording: "Aufnahme... Zum Senden klicken", sendTitle: "Nachricht senden"
+    },
+    "it-it": {
+      title: "Domande?", placeholder: "Scrivi la tua domanda…", send: "Invia",
+      greeting: "Ciao! 👋 Posso aiutarti ad acquistare, registrarti sulla piattaforma Greenway e scoprire tutti i prodotti ecologici del negozio. Chiedimi qualsiasi cosa! 😊",
+      navBtn: "Chat", tooLong: "Per favore accorcia il tuo messaggio.", error: "Si è verificato un errore. Riprova tra poco.",
+      close: "Chiudi", soundOn: "Voce attiva", soundOff: "Voce disattivata", micTitle: "Registra messaggio vocale",
+      micRecording: "Registrazione... Clicca per inviare", sendTitle: "Invia messaggio"
+    },
+    "pt-br": {
+      title: "Dúvidas?", placeholder: "Digite sua pergunta…", send: "Enviar",
+      greeting: "Olá! 👋 Posso ajudar você a comprar, se cadastrar na plataforma da Greenway e conhecer todos os produtos ecológicos da loja. Pergunte o que quiser! 😊",
+      navBtn: "Chat", tooLong: "Por favor encurte sua mensagem.", error: "Ocorreu um erro. Tente novamente em instantes.",
+      close: "Fechar", soundOn: "Voz ativada", soundOff: "Voz desativada", micTitle: "Gravar mensagem de voz",
+      micRecording: "Gravando... Clique para enviar", sendTitle: "Enviar mensagem"
+    },
+    "ru-ru": {
+      title: "Есть вопросы?", placeholder: "Напишите ваш вопрос…", send: "Отправить",
+      greeting: "Привет! 👋 Я помогу вам оформить покупку, зарегистрироваться на платформе Greenway и узнать обо всех эко-товарах. Спросите меня о чем угодно! 😊",
+      navBtn: "Чат", tooLong: "Пожалуйста, сократите сообщение.", error: "Произошла ошибка. Попробуйте еще раз.",
+      close: "Закрыть", soundOn: "Голос включен", soundOff: "Голос выключен", micTitle: "Записать голосовое сообщение",
+      micRecording: "Запись... Нажмите для отправки", sendTitle: "Отправить сообщение"
+    },
+    "zh-hans": {
+      title: "有疑问吗？", placeholder: "请输入您的问题…", send: "发送",
+      greeting: "您好！👋 我可以帮助您购买商品、在 Greenway 平台注册，并了解商城中的所有环保产品。有任何问题随时问我！😊",
+      navBtn: "聊天", tooLong: "请缩短您的消息。", error: "出错了，请稍后再试。",
+      close: "关闭", soundOn: "语音已开启", soundOff: "语音已关闭", micTitle: "录制语音消息",
+      micRecording: "录音中... 点击发送", sendTitle: "发送消息"
+    }
   };
 
+  function detectPageLocale() {
+    const path = window.location.pathname.toLowerCase();
+    if (path.startsWith("/mx/") || path.includes("/es-mx/")) return "es-mx";
+    if (path.startsWith("/es/") || path.includes("/es-es/")) return "es-es";
+    if (path.startsWith("/us/") || path.startsWith("/en/") || path.includes("/en-us/")) return "en-us";
+    if (path.startsWith("/fr/") || path.includes("/fr-fr/")) return "fr-fr";
+    if (path.startsWith("/de/") || path.includes("/de-de/")) return "de-de";
+    if (path.startsWith("/it/") || path.includes("/it-it/")) return "it-it";
+    if (path.startsWith("/pt/") || path.includes("/pt-br/")) return "pt-br";
+    if (path.startsWith("/ru/") || path.includes("/ru-ru/")) return "ru-ru";
+    if (path.startsWith("/zh/") || path.includes("/zh-hans/")) return "zh-hans";
+
+    const docLang = (document.documentElement.lang || "").toLowerCase();
+    if (STRINGS[docLang]) return docLang;
+    if (docLang.startsWith("es")) return "es-ar";
+
+    return "es-ar";
+  }
+
+  const pageLang = detectPageLocale();
+  const speechLang = LANG_MAP[pageLang] || "es-AR";
   const t = STRINGS[pageLang] || STRINGS["es-ar"];
 
   // ---------------------------------------------------------------- Estilos PepaGold
@@ -85,16 +162,16 @@
         <span>✨ ${t.title}</span>
       </div>
       <div class="head-right">
-        <button id="pg-chat-sound" title="Voz activada/desactivada" aria-label="Audio">🔊</button>
-        <button id="pg-chat-close" title="Cerrar" aria-label="Cerrar">✕</button>
+        <button id="pg-chat-sound" title="${t.soundOn}" aria-label="${t.soundOn}">🔊</button>
+        <button id="pg-chat-close" title="${t.close}" aria-label="${t.close}">✕</button>
       </div>
     </div>
     <div id="pg-chat-log"></div>
     <div id="pg-chat-counter">0 / ${MAX_CHARS}</div>
     <div id="pg-chat-inputrow">
-      <button id="pg-chat-mic" title="Grabar mensaje de voz" aria-label="Grabar voz">🎙️</button>
+      <button id="pg-chat-mic" title="${t.micTitle}" aria-label="${t.micTitle}">🎙️</button>
       <textarea id="pg-chat-text" rows="1" maxlength="${MAX_CHARS}" placeholder="${t.placeholder}"></textarea>
-      <button id="pg-chat-send" title="${t.send}" aria-label="${t.send}">➤</button>
+      <button id="pg-chat-send" title="${t.sendTitle}" aria-label="${t.send}">➤</button>
     </div>
   `;
   document.body.appendChild(btn);
@@ -115,7 +192,7 @@
   soundBtn.addEventListener("click", () => {
     voiceOutputEnabled = !voiceOutputEnabled;
     soundBtn.textContent = voiceOutputEnabled ? "🔊" : "🔇";
-    soundBtn.title = voiceOutputEnabled ? "Voz activada" : "Voz desactivada";
+    soundBtn.title = voiceOutputEnabled ? t.soundOn : t.soundOff;
     if (!voiceOutputEnabled && "speechSynthesis" in window) {
       window.speechSynthesis.cancel();
     }
@@ -212,13 +289,13 @@
         mediaRecorder.addEventListener("start", () => {
           recording = true;
           micBtn.classList.add("listening");
-          micBtn.title = "Grabando... Hacé clic para enviar";
+          micBtn.title = t.micRecording;
           autoStopTimer = setTimeout(() => mediaRecorder.stop(), MAX_RECORDING_MS);
         });
         mediaRecorder.addEventListener("stop", async () => {
           recording = false;
           micBtn.classList.remove("listening");
-          micBtn.title = "Grabar mensaje de voz";
+          micBtn.title = t.micTitle;
           clearTimeout(autoStopTimer);
           stream.getTracks().forEach((track) => track.stop());
 
@@ -277,7 +354,6 @@
   function speak(text) {
     if (!("speechSynthesis" in window)) return;
 
-    // Limpiar texto para una voz natural (quitar URLs, asteriscos y emojis pesados)
     let cleanText = text
       .replace(/https?:\/\/[^\s]+/g, "en el enlace de la tienda")
       .replace(/[*_#~]/g, "")
@@ -286,7 +362,7 @@
 
     if (!cleanText) return;
 
-    window.speechSynthesis.cancel(); // Detener cualquier audio previo
+    window.speechSynthesis.cancel();
 
     setTimeout(() => {
       const utter = new SpeechSynthesisUtterance(cleanText);
@@ -294,7 +370,6 @@
       utter.rate = 1.0;
       utter.pitch = 1.0;
 
-      // Buscar mejor voz en el navegador según el idioma
       if (availableVoices.length === 0) availableVoices = window.speechSynthesis.getVoices();
       const targetLang = speechLang.toLowerCase();
       const matchVoice = availableVoices.find(v => v.lang.toLowerCase().replace("_", "-") === targetLang) ||

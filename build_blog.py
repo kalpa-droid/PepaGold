@@ -963,7 +963,7 @@ def render_article(meta, body_md, hreflang_tags, lookup):
     '''
 
     html = ARTICLE_TEMPLATE.format(
-        lang_attr=locale.split("-")[0], lang_upper=locale.split("-")[0].upper(),
+        lang_attr=locale, lang_upper=locale.split("-")[0].upper(),
         title=meta.get("title", ""), description=meta.get("description", ""),
         canonical=canonical, cover_image_abs=cover_abs, hreflang_tags=hreflang_tags, article_schema=schema,
         home_url=home_url, blog_index_url=blog_index_url, region_tag_html=region_tag_html,
@@ -1037,7 +1037,7 @@ def render_index(locale, posts):
     lang_dropdown_html = "\n".join(dropdown_lis)
 
     html = INDEX_TEMPLATE.format(
-        lang_attr=locale.split("-")[0], lang_upper=locale.split("-")[0].upper(),
+        lang_attr=locale, lang_upper=locale.split("-")[0].upper(),
         canonical=canonical, home_url=home_url, chips_html="".join(chips), cards_html="".join(cards),
         active_flag=active_flag, lang_dropdown_html=lang_dropdown_html, blog_index_url=blog_index_url,
         index_title=i18n.get("index_title", "Blog | PepaGold"), nav_blog=i18n.get("nav_blog", "Blog"), nav_chat=i18n.get("nav_chat", "Chat"),
