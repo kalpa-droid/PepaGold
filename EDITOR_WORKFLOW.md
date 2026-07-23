@@ -6,7 +6,7 @@ Este documento establece la normativa estricta e innegociable para la edición, 
 
 ## 🎯 Guía de Redacción Estricta (Público Objetivo 18-28 años)
 
-Todo artículo publicado en PepaGold debe seguir strictly estas 8 reglas fijas para convertir información científica/técnica en notas que atrapen a lectoras de 18 a 28 años:
+Todo artículo publicado en PepaGold debe seguir estrictamente estas 8 reglas fijas para convertir información científica/técnica en notas que atrapen a lectoras de 18 a 28 años:
 
 ### 1. Voz y Tono
 - **Segunda persona:** Hablar directamente en "vos" / "tú" / "tu piel". Nunca en tercera persona impersonal.
@@ -111,31 +111,22 @@ Todo título debe combinar la búsqueda real que hacen las chicas en Google/TikT
 python3 insert_images.py PG-XXX
 ```
 
-Este comando:
-1. Verifica que **cada archivo de imagen esperado exista en disco y no esté vacío/corrupto** — antes de tocar un solo artículo.
-2. Si falta algo, **no modifica ningún archivo** e imprime exactamente qué falta. El Agente debe mostrarle ese mensaje al usuario tal cual, sin inventar un tiempo de espera — no hace falta adivinar cuánto tarda, alcanza con volver a correr el comando cuando el archivo ya esté.
-3. Si todo está confirmado, sincroniza los 10 idiomas de forma atómica (todo o nada — nunca puede quedar la mitad bien y la mitad mal).
-
-**Prohibido:** Que el Agente le diga al usuario "ya la inserté" sin haber corrido `insert_images.py` y haber visto la salida `🟢`. Si el comando devuelve `🔴`, el Agente comunica el mensaje de error tal cual y se detiene — no reintenta con otro nombre de archivo ni asume una ruta distinta.
-
 ---
 
-## 🚀 8. Flujo de Trabajo Automatizado (Desde Informe Técnico hasta Git Push)
+## 🚀 Protocolo Oficial en 2 Fases (Flujo de Trabajo Libre de Fricción)
 
-Cuando el usuario indique que subió un nuevo informe técnico (ejemplo: *"He subido el informe PG-006"* en `/reports/PG-006.txt` o en el chat), el Agente IA ejecutará **automáticamente e íntegramente** los siguientes 6 pasos sin requerir intervención manual:
+Para garantizar la **integridad absoluta del sitio**, la edición y publicación de artículos se realiza **estrictamente en 2 Fases interactivas**:
 
-1. **Lectura y Conciencia Histórica:**
-   - Leer el informe `/reports/PG-XXX.txt`.
-   - Comparar contra los informes anteriores (`PG-001` a `PG-005`) para garantizar un título, enfoque, checklist, quiz y prompts de imagen 100% únicos.
-2. **Generación del Artículo en Español (`es-ar`):**
-   - Crear `blog/posts/es-ar/{slug}.md` siguiendo las reglas de tono, jerarquía H2 (sin H1 en cuerpo) y bloques dinámicos (`:::checklist`, `:::quiz`, `:::stat`, `:::tip`, `:::info`).
-3. **Traducción Nativa e Identidad Multilingüe:**
-   - Traducir al 100% el artículo en las 9 carpetas restantes (`en-us`, `fr-fr`, `de-de`, `it-it`, `pt-br`, `ru-ru`, `zh-hans`, `es-mx`, `es-es`).
-   - Sincronizar de forma estricta los metadatos `article_id`, `slug` y `concept`.
-4. **Sincronización Atómica de Imágenes:**
-   - Ejecutar `python3 insert_images.py PG-XXX` para verificar la existencia real de los archivos en disco y enlazar los 10 idiomas.
-5. **Compilación del Sitio y Auditoría Completa:**
-   - Ejecutar `python3 build_blog.py` para generar los artículos estáticos HTML.
-   - Ejecutar `python3 audit_all.py` y verificar que retorne `🟢 0 errores`.
-6. **Publicación y Deploy a GitHub:**
-   - Realizar `git add .`, `git commit` y `git push origin main` únicamente si la auditoría dio luz verde en 100%. Si hay cualquier advertencia o error, corregirlo de inmediato antes de subir.
+### 📍 FASE 1: Redacción Base (`es-ar`) y Generación de Prompts
+1. El usuario entrega un informe técnico o indica un tema (`/reports/PG-XXX.txt`).
+2. El Agente IA redacta **únicamente** la versión original en español argentino (`blog/posts/es-ar/{slug}.md`).
+3. El Agente IA genera los **5 Prompts de Imagen hiperdetallados en 8K** (1 Portada 16:9 + 4 Secciones H2 1:1).
+4. **PAUSA OBLIGATORIA:** El Agente IA muestra los 5 Prompts por chat y le dice al usuario:  
+   > *"Ya están listos los 5 prompts de imagen. Generá las fotos, guardalas como `prompt_1.webp` a `prompt_5.webp` en `assets/imagenes/blog/{slug}/` (o súbalas por el CMS) y avisame escribiendo 'Ya subí las imágenes'."*
+
+### 📍 FASE 2: Verificación de Disco, Traducciones Multilingües y Deploy
+5. El usuario notifica *"Ya subí las imágenes"*.
+6. **Verificación de Disco:** El Agente IA ejecuta `python3 insert_images.py PG-XXX` para confirmar que los 5 archivos `.webp` existan físicamente y pesen > 8 KB.
+7. **Traducción Multilingüe Blindada:** Una vez confirmadas las imágenes en `es-ar`, el Agente IA traduce el artículo a los otros 9 idiomas (`es-mx`, `es-es`, `en-us`, `fr-fr`, `de-de`, `it-it`, `pt-br`, `ru-ru`, `zh-hans`) adaptando el fenómeno local (`local_phenomenon`).
+8. **Compilación y Auditoría:** Se ejecuta `python3 build_blog.py` y `python3 audit_all.py`.
+9. **Deploy Automático:** Únicamente si la auditoría devuelve `🟢 0 errores`, el Agente IA ejecuta `git add .`, `git commit` y `git push origin main`.
