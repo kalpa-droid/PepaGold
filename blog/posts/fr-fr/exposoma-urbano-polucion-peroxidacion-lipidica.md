@@ -16,10 +16,15 @@ category: barrera-cutanea
 category_label: 🔬 Ciencia de la Piel
 concept: exposoma-urbano-polucion-pm25-peroxidacion-lipidica-barrera-cutanea
 local_phenomenon: Smog urbano y partículas finas PM2.5
-cover_image: ''
+cover_image: >-
+  /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_1.webp
 media:
   - >-
+    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_1.webp
+  - >-
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp
+  - >-
+    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp
   - >-
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp
   - >-
@@ -89,7 +94,7 @@ Chaque jour, des millions de microparticules invisibles suspendues dans l'air se
 
 La pollution urbaine est composée de microparticules **PM2.5** qui pénètrent les pores et altèrent la barrière lipidique.
 
-![Particules PM2.5 et impact sur la peau](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp)
+![Imagen de sección](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp)
 
 - **Microparticules carbone:** Issu du trafic urbain et de l'industrie se fixant au sébum.
 - **Métaux lourds:** Générant des espèces réactives de l'oxygène (ROS).
@@ -106,7 +111,7 @@ Votre couche cornée est la frontière entre la pollution et vos cellules. La pr
 
 Le squalène naturel s'oxyde au contact de la pollution atmosphérique, formant du peroxyde de squalène irritant qui obstrue les pores.
 
-
+![Imagen de sección](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp)
 
 1. **Formation de Peroxyde de Squalène:** Un sous-produit visqueux et irritant.
 2. **Obstruction des Pores:** Le sébum oxidé s'épaissit et bouche les follicules.
@@ -120,7 +125,7 @@ Les imperfections soudaines après une journée de pollution résultent du sébu
 
 Utiliser des nettoyants décapants dissout les céramides protectrices et fragilise la barrière cutanée.
 
-![Environnement urbain et peau protégée](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp)
+![Imagen de sección](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp)
 
 :::checklist Signes d'Asphyxie Cutanée
 - Peau terne, grise et fatiguée malgré le sommeil.
@@ -132,7 +137,7 @@ Utiliser des nettoyants décapants dissout les céramides protectrices et fragil
 
 Pour éliminer les microparticules PM2.5 sans altérer le pH 5.5, la microfibre **UpPoly** capte les résidus de pollution par attirance capillaire en utilisant uniquement de l'eau tiède.
 
-![Nettoyage biomécanique avec UpPoly](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp)
+![Imagen de sección](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp)
 
 :::quiz Test de Connaissances
 Q: Quel est l'effet principal des particules PM2.5 sur le squalène ?
