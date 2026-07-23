@@ -1,12 +1,14 @@
 /*
   Widget de Chat Inteligente PepaGold — Traducción 100% Multilingüe en 10 Locales
   Soporte dinámico por detección de URL y atributo html lang.
+  Soporte para enlaces azules formateados como "Greenway Global" y lectura de voz fluida.
 */
 (function () {
   "use strict";
 
   const API_ENDPOINT = "/api/chat";
   const MAX_CHARS = 1500;
+  const REFERRAL_LINK = "https://greenwayglobal.ar/shop/brands/fiber/08093?gw=uZv7Gi0Ep5";
 
   const LANG_MAP = {
     "es-ar": "es-AR", "es-mx": "es-MX", "es-es": "es-ES", "en-us": "en-US",
@@ -132,6 +134,8 @@
     .pg-msg { padding: 10px 14px; border-radius: 14px; max-width: 85%; line-height: 1.45; font-size: 13.5px; word-wrap: break-word; }
     .pg-msg.user { background: linear-gradient(135deg, #c9a24b 0%, #b38b34 100%); color: #ffffff; margin-left: auto; border-bottom-right-radius: 2px; box-shadow: 0 2px 8px rgba(201,162,75,0.25); }
     .pg-msg.bot { background: #ffffff; color: #1f2937; border: 1px solid #e5e7eb; border-bottom-left-radius: 2px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
+    .pg-msg a { color: #2563eb !important; font-weight: 600; text-decoration: underline; transition: opacity 0.15s; }
+    .pg-msg a:hover { opacity: 0.8; }
     #pg-chat-inputrow { display: flex; align-items: center; border-top: 1px solid #f3f4f6; padding: 10px; gap: 8px; background: #ffffff; }
     #pg-chat-text { flex: 1; border: 1px solid #e5e7eb; border-radius: 10px; padding: 9px 12px; font-size: 13.5px; resize: none; outline: none; transition: border-color 0.15s; font-family: inherit; }
     #pg-chat-text:focus { border-color: #c9a24b; box-shadow: 0 0 0 3px rgba(201,162,75,0.15); }
@@ -198,10 +202,29 @@
     }
   });
 
+  function formatMessageHtml(text) {
+    let escaped = text
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+
+    // Reemplazar Markdown [Texto](https://...) -> <a href="..." target="_blank" rel="noopener">Texto</a>
+    escaped = escaped.replace(/\[([^\]]+)\]\((https?:\/\/[^\s\)]+)\)/g, (match, anchor, url) => {
+      return `<a href="${url}" target="_blank" rel="noopener noreferrer">${anchor}</a>`;
+    });
+
+    // Reemplazar URLs sueltas de Greenway Global -> <a href="..." target="_blank">Greenway Global</a>
+    escaped = escaped.replace(/(^|[^"])https?:\/\/greenwayglobal\.ar\/[^\s<]+/g, (match, prefix) => {
+      return `${prefix}<a href="${REFERRAL_LINK}" target="_blank" rel="noopener noreferrer">Greenway Global</a>`;
+    });
+
+    return escaped.replace(/\n/g, "<br>");
+  }
+
   function addBubble(text, who) {
     const div = document.createElement("div");
     div.className = "pg-msg " + who;
-    div.textContent = text;
+    div.innerHTML = formatMessageHtml(text);
     log.appendChild(div);
     log.scrollTop = log.scrollHeight;
     return div;
@@ -256,15 +279,15 @@
       const data = await resp.json();
 
       if (!resp.ok) {
-        thinking.textContent = data.message || t.error;
+        thinking.innerHTML = formatMessageHtml(data.message || t.error);
         return;
       }
 
-      thinking.textContent = data.reply;
+      thinking.innerHTML = formatMessageHtml(data.reply);
       history.push({ role: "assistant", content: data.reply });
       if (voiceOutputEnabled) speak(data.reply);
     } catch (err) {
-      thinking.textContent = t.error;
+      thinking.innerHTML = formatMessageHtml(t.error);
     }
   }
 
@@ -336,7 +359,7 @@
     }
   }
 
-  // ---------------------------------------------------------- Voz Salida Robustecida
+  // ---------------------------------------------------------- Voz Salida Robustecida y Natural
   let availableVoices = [];
   function loadVoices() {
     if ("speechSynthesis" in window) {
@@ -355,8 +378,15 @@
     if (!("speechSynthesis" in window)) return;
 
     let cleanText = text
-      .replace(/https?:\/\/[^\s]+/g, "en el enlace de la tienda")
+      // Convertir Markdown [Greenway Global](https://...) -> "Greenway Global"
+      .replace(/\[([^\]]+)\]\(https?:\/\/[^\s\)]+\)/g, "$1")
+      // Convertir URLs sueltas de Greenway -> "Greenway Global"
+      .replace(/https?:\/\/greenwayglobal\.ar[^\s]*/g, "Greenway Global")
+      // Convertir cualquier otra URL -> "en la tienda"
+      .replace(/https?:\/\/[^\s]+/g, "en la tienda")
+      // Eliminar formato Markdown de negrita/cursiva
       .replace(/[*_#~]/g, "")
+      // Eliminar emojis pesados
       .replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/gu, "")
       .trim();
 
