@@ -23,8 +23,6 @@ media:
   - >-
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp
   - >-
-    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp
-  - >-
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp
 author: PepaGold
 epigraph:
@@ -118,7 +116,7 @@ date_images_applied: '2026-07-23'
 
 Использование жестких гелей смывает защитные церамиды, позволяя токсинам проникать еще глубже.
 
-![Защищенная кожа в условиях городского смога](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp)
+
 
 :::checklist Признаки асфиксии кожи
 - Тусклый серый цвет лица несмотря на сон.
