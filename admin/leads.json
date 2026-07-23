@@ -1,18 +1,1 @@
-[
-  {
-    "id": "lead-101",
-    "createdAt": "2026-07-23T11:40:00Z",
-    "name": "María Florencia Rossi",
-    "birthdate": "1994-05-18",
-    "email": "flor.rossi94@gmail.com",
-    "phone": "+5491154892019",
-    "address": "Av. Santa Fe 2450, 4to B",
-    "neighborhood": "Recoleta",
-    "zipCode": "C1425BGJ",
-    "province": "Buenos Aires",
-    "country": "Argentina",
-    "type": "Cliente Gratuito (Green Priority)",
-    "status": "Pendiente",
-    "notes": "Interesada en Laska Mini Set y paño de cocina Home. Prefiere envío por Andreani."
-  }
-]
+[]
