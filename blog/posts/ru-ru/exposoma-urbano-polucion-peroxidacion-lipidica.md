@@ -16,12 +16,19 @@ category: barrera-cutanea
 category_label: 🔬 Ciencia de la Piel
 concept: exposoma-urbano-polucion-pm25-peroxidacion-lipidica-barrera-cutanea
 local_phenomenon: Smog urbano y partículas finas PM2.5
-cover_image: ''
+cover_image: >-
+  /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_1.webp
 media:
+  - >-
+    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_1.webp
   - >-
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp
   - >-
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp
+  - >-
+    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp
+  - >-
+    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -83,7 +90,7 @@ date_images_applied: '2026-07-23'
 
 Городской смог состоит из микрочастиц **PM2.5**, которые проникают в поры и разрушают липидный барьер.
 
-![Частицы PM2.5 и их воздействие на кожу](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp)
+![Imagen de sección](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp)
 
 - **Углеродные микрочастицы:** От выхлопных газов и промышленности, связывающиеся с кожным себумом.
 - **Тяжелые металлы:** Вызывающие интенсивный оксидативный стресс.
@@ -100,7 +107,7 @@ date_images_applied: '2026-07-23'
 
 Естественный сквален окисляется при контакте с загрязнителями воздуха, образуя вязкий пероксид сквалена, забивающий поры.
 
-![Окисление липидов на поверхности кожи](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp)
+![Imagen de sección](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp)
 
 1. **Образование пероксида сквалена:** Раздражающий и липкий побочный продукт.
 2. **Закупорка пор:** Окисленный себум густеет в фолликулах.
@@ -114,7 +121,7 @@ date_images_applied: '2026-07-23'
 
 Использование жестких гелей смывает защитные церамиды, позволяя токсинам проникать еще глубже.
 
-
+![Imagen de sección](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp)
 
 :::checklist Признаки асфиксии кожи
 - Тусклый серый цвет лица несмотря на сон.
@@ -126,7 +133,7 @@ date_images_applied: '2026-07-23'
 
 Микроволокно **UpPoly** бережно удаляет микрочастицы PM2.5 и окисленный себум за счет капиллярного притяжения теплой водой, не нарушая pH 5.5.
 
-
+![Imagen de sección](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp)
 
 :::quiz Проверка знаний
 Q: Каково главное следствие окисления сквалена частицами PM2.5?
