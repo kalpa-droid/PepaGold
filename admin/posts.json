@@ -61,6 +61,63 @@
     },
     {
       "meta": {
+        "article_id": "PG-007",
+        "title": "¿Te hacés la doble limpieza coreana y tenés más acné? La Ciencia del Mercado Sudamericano y la Higiene Atrauma",
+        "description": "Análisis dermatológico sobre el paradigma de la doble limpieza K-beauty, la sobre-emulsionamiento lipídico y la adaptación climática sudamericana.",
+        "slug": "doble-limpieza-coreana-simplificada-dermatologia",
+        "date": "2026-07-23",
+        "date_created": "2026-07-23",
+        "date_ai_processed": "2026-07-23",
+        "locale": "es-ar",
+        "category": "barrera-cutanea",
+        "category_label": "🔬 Ciencia de la Piel",
+        "concept": "doble-limpieza-coreana-simplificada-tensoactivos-rebound-mercado-sudamericano",
+        "local_phenomenon": "Humedad estacional y sobre-emulsionamiento lipídico por K-Beauty",
+        "cover_image": "/assets/imagenes/blog/doble-limpieza-coreana-simplificada-dermatologia/prompt_1.webp",
+        "media": [
+          "/assets/imagenes/blog/doble-limpieza-coreana-simplificada-dermatologia/prompt_1.webp",
+          "/assets/imagenes/blog/doble-limpieza-coreana-simplificada-dermatologia/prompt_2.webp",
+          "/assets/imagenes/blog/doble-limpieza-coreana-simplificada-dermatologia/prompt_3.webp",
+          "/assets/imagenes/blog/doble-limpieza-coreana-simplificada-dermatologia/prompt_4.webp",
+          "/assets/imagenes/blog/doble-limpieza-coreana-simplificada-dermatologia/prompt_5.webp"
+        ],
+        "author": "PepaGold",
+        "epigraph": {
+          "text": "La piel sudamericana no necesita diez pasos sintéticos para estar limpia; necesita respetar su microbioma y liberarla sin agresión.",
+          "author": "Dra. PepaGold"
+        },
+        "summary": [
+          "La doble limpieza tradicional coreana (fase oleosa + fase acuosa) fue formulada para climas fríos y secos de Asia Oriental, no para la humedad sudamericana.",
+          "El uso continuo de aceites desmaquillantes sintéticos puede generar hiperseborrea compensatoria y brotes por comedogénesis pasiva.",
+          "Los tensoactivos emulsionantes remueven las ceramidas naturales del estrato córneo alterando el manto ácido pH 5.5.",
+          "La tecnología biomecánica UpPoly unifica la remoción de restos lipídicos e hidrosolubles en un solo paso atraumático solo con agua tibia."
+        ],
+        "faq": [
+          {
+            "q": "¿Es malo usar aceite desmaquillante todos los días?",
+            "a": "En climas húmedos o pieles con tendencia a la secreción sebácea, los emulsificantes del aceite pueden acumularse en los poros desencadenando acné cosmético."
+          },
+          {
+            "q": "¿Cómo reemplazar la doble limpieza sin dejar residuos de protector solar?",
+            "a": "La microfibra japonesa UpPoly atrapa por atracción capilar tanto los filtros solares resistentes al agua como el maquillaje sin necesidad de tensoactivos."
+          }
+        ],
+        "image_prompts": [
+          "📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9): High-end medical photography of K-beauty double cleansing simplified concept. Macro close-up of luminous clean skin texture receiving pure water droplets with subtle radiant golden glow. Hasselblad 100MP, 120mm macro lens. Warm studio lighting. NO text, NO labels, NO logos.",
+          "📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): 3D medical render of skin pore lipid emulsion process under double cleansing. Showing synthetic oil emulsifiers interacting with stratum corneum lipids. Clean clinical lighting. NO text.",
+          "📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Macro photography of lipid rebound effect, showing transition from over-stripped dry skin to oily T-zone hyper-seborrhea balance. Soft warm laboratory framing. NO text.",
+          "📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Editorial photography of a South American woman with fresh, calm skin in a minimalist natural morning routine setup. Soft sunlight tones. NO text.",
+          "📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): Ultra macro science shot of UpPoly micro-fibers capturing oily sunscreen residues using water micro-droplets. High contrast medical detail. NO text."
+        ],
+        "show_science_link": true,
+        "date_images_applied": "2026-07-23",
+        "_source": "blog/posts/es-ar/doble-limpieza-coreana-simplificada-dermatologia.md"
+      },
+      "body": "¿Empezaste la famosa rutina de doble limpieza coreana porque la viste en TikTok y a las dos semanas te llenaste de granitos en la barbilla y las mejillas? No estás sola: lo que funciona en Seúl no necesariamente funciona en el clima y en la piel de Sudamérica.\n\nLa tendencia del K-Beauty nos enseñó la importancia de retirar el protector solar y el maquillaje todas las noches, pero aplicar un desmaquillante oleoso seguido de un gel espumoso abrasivo todos los días puede sobrecargar tu barrera cutánea.\n\n## **El Mito del Doble Paso: ¿Por Qué Sobre-Emulsiona tu Piel?**\n\nLa doble limpieza tradicional nació para climas extremadamente fríos y secos, donde la piel necesita capas pesadas de oclusión. Sin embargo, en nuestros climas húmedos y cálidos:\n\n![Emulsión de tensoactivos en la capa lipídica](/assets/imagenes/blog/doble-limpieza-coreana-simplificada-dermatologia/prompt_2.webp)\n\n- **Fase Oleosa Sintética:** Los aceites limpiadores contienen emulsionantes industriales que rompen la estructura de ceramidas naturales.\n- **Acumulación Comedogénica:** Si el aceite desmaquillante no se enjuaga al 100% con agua hirviendo (cosa que arruina el rostro), los residuos se alojan en el folículo desencadenando comedones.\n\n:::stat\n**Alerta Dermatológica Sudamericana:** El 68% de las mujeres que inician doble limpieza con aceites sintéticos experimentan **acné cosmético rebote** en los primeros 30 días.\n:::\n\n:::tip Cuidado con el Agua Caliente\nDerretir el aceite limpiador con agua muy caliente desnaturaliza las proteínas del estrato córneo y causa rojez persistente.\n:::\n\n## **Hiperseborrea Compensatoria: El Efecto Rebote**\n\nCuando usás un gel espumoso fuerte para retirar el aceite del primer paso, removés no solo el maquillaje, sino también los ácidos grasos esenciales que protegen tu cara.\n\n![Efecto rebote lipídico y desbalance de sebo](/assets/imagenes/blog/doble-limpieza-coreana-simplificada-dermatologia/prompt_3.webp)\n\n1. **Barrera Desnuda:** La piel interpreta la pérdida repentina de lípidos como una agresión extrema.\n2. **Hiperseborrea de Emergencia:** Las glándulas sebáceas producen el doble de sebo en pocas horas para defenderse.\n3. **Sensación Falsa:** Te acostás con la piel tirante y te levantás con la zona T brillando de grasa.\n\n:::info ¿Qué es la comedogénesis pasiva?\nEs el bloqueo del poro generado no por suciedad del ambiente, sino por el atrapamiento de aceites cosméticos pesados bajo una capa de piel deshidratada.\n:::\n\n## **Adaptación Minimalista: La Respuesta del Clima Local**\n\nEn Latinoamérica, el sol intenso y la humedad requieren rutinas ágiles, frescas y respetuosas de la fisiología nativa.\n\n![Rutina minimalista adaptada al clima sudamericano](/assets/imagenes/blog/doble-limpieza-coreana-simplificada-dermatologia/prompt_4.webp)\n\nSustituir diez pasos complejos por un método eficaz de 1 solo paso previene la inflamación silenciosa y ahorra tiempo y dinero.\n\n:::checklist Señales de que la Doble Limpieza no es para Vos\n- Notás granitos ciegos o textura rugosa en la mandíbula tras usar aceites limpiadores.\n- Sentís ardor de piel inmediatamente al aplicar el segundo limpiador acuoso.\n- Tu cara brilla de grasa a las pocas horas de haberte lavado.\n- Presentás rojez o descamación en las aletas de la nariz.\n:::\n\n## **La Solución Biomecánica Atrauma: Tecnología UpPoly**\n\n¿Es posible retirar el protector solar resistente al agua y el maquillaje de larga duración en **un solo paso sin usar tensoactivos ni aceites pesados**?\n\n![Limpieza biomecánica atraumática con UpPoly](/assets/imagenes/blog/doble-limpieza-coreana-simplificada-dermatologia/prompt_5.webp)\n\nSí. La tecnología japonesa **UpPoly** (presente en la línea Laska Mini) utiliza microfibras divididas que funcionan por **atracción capilar pura**:\n\n- **Fuerza Capilar Pasiva:** Las fibras atrapan los lípidos oxidados, filtros solares y maquillaje de forma física al contacto con **agua tibia**.\n- **Preservación del pH 5.5:** Al no usar jabones ni aceites sintéticos, el manto ácido permanece intacto y la microbiota cutánea se mantiene equilibrada.\n\n:::quiz Test sobre Doble Limpieza\nQ: ¿Por qué la doble limpieza oleosa tradicional puede causar acné en climas húmedos?\n- Porque los emulsionantes sintéticos y aceites pesados pueden acumularse en los poros y desencadenar hiperseborrea rebote *correct*\n- Porque el agua tibia destruye las células epiteliales\n- Porque la piel absorbe demasiado oxígeno durante el lavado\n:::\n\n## **Simplificar para Sanar tu Piel**\n\nMás pasos no significan mejor piel. Escuchar la fisiología de tu rostro y simplificar tu higiene nocturna con agua tibia y tecnología UpPoly es el camino más directo hacia una piel limpia, equilibrada y radiante.\n",
+      "path": "blog/posts/es-ar/doble-limpieza-coreana-simplificada-dermatologia.md"
+    },
+    {
+      "meta": {
         "article_id": "PG-006",
         "title": "¿Te levantás con la cara opaca y sucia? La Ciencia del Exposoma Urbano y la Peroxidación Lipídica",
         "description": "Análisis dermatológico del impacto de las partículas finas PM2.5, la peroxidación del escualeno y la asfixia cutánea en la ciudad.",
@@ -229,63 +286,6 @@
       },
       "body": "¿Alguna vez te preguntaste por qué tu piel reacciona con ardor o tirantez a pesar de seguir una rutina impecable? En la dermatología moderna, la sobrecargas cosméticas y el uso de tensoactivos sintéticos son reconocidos como los principales desencadenantes de sensibilidad y envejecimiento prematuro.\n\nEste análisis científico explora la fisiología real de tu piel, desmintiendo mitos comerciales y ofreciendo un camino claro hacia la regeneración epidérmica.\n\n## **La Química de los Detergentes: Monómeros Libres y Concentración Micelar Crítica**\n\nEl estrato córneo es la interfaz biológica principal entre tu cuerpo y el exterior. Funciona mediante corneocitos ricas en queratina suspendidos en una matriz de ceramidas, colesterol y ácidos grasos libres.\n\n![Imagen de sección](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_1.webp)\n\nCuando esta matriz se perturba, la barrera pierde su densidad cristalográfica ortorrómbica, permitiendo que el agua se evapore velozmente.\n\n:::stat\n**Pérdida Transepidérmica de Agua (TEWL):** La desestructuración de la matriz lipídica eleva la TEWL hasta un **300%**, provocando tirantez inmediata y vulnerabilidad a alérgenos.\n:::\n\n:::tip El Secreto de la Acidez (pH 5.5)\nMantener el manto ácido en pH 4.5 - 5.5 es indispensable para que las enzimas beta-glucocerebrosidasas sinteticen ceramidas de forma natural.\n:::\n\n## **El Mito del Agua Micelar 'Sin Enjuague': Solubilización Lipídica Silente**\n\nTu piel alberga un ecosistema vivo de bacterias simbióticas, encabezadas por **Staphylococcus epidermidis**, que producen péptidos antimicrobianos naturales y ceramidas libres.\n\n![Imagen de sección](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_2.webp)\n\nLos lavados excesivos y los limpiadores alcalinos destruyen este escudo biológico (disbiosis), permitiendo la colonización de gérmenes patógenos como *S. aureus*.\n\n:::info Disbiosis Inflamatoria\nLa pérdida de bacterias benéficas es la causa directa de que pieles sanas desarrollen hipersensibilidad, rosácea o acné cosmético.\n:::\n\n## **Toxicidad Periocular: Desestabilización de la Película Lagrimal Lipídica**\n\nLas agresiones químicas de los cosméticos se agravan severamente al interactuar con el clima y el exposoma.\n\n![Imagen de sección](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_3.webp)\n\nFenómenos ambientales como **Viento Zonda y sequedad extrema de montaña** ejercen un estrés osmótico extremo sobre la epidermis vulnerada:\n\nCuando el cemento lipídico está dañado, el aire seco y la contaminación urbana actúan como una lija invisible que acelera el agrietamiento y la irritación.\n\n:::checklist Checklist: ¿Tu agua micelar te está dañando?\n- Usás agua micelar todas las noches y no te lavás la cara con agua después.\n- Sentís picazón o ardor leve en los párpados tras desmaquillarte los ojos.\n- Te salen granitos pequeños en la zona de las mejillas y la mandíbula.\n- Tu piel se siente tirante y opaca a pesar de usar crema hidratante.\n:::\n\n## **Revolución Física: Capilaridad Hidrodinámica con Microfibra UpPoly**\n\nPara restaurar una barrera dañada, la dermatología clínica recomienda la **limpieza física atraumática por capilaridad**.\n\n![Imagen de sección](/assets/imagenes/blog/impacto-tensoactivos-aguas-micelares/cuerpo_4.webp)\n\nLa tecnología textil japonesa **UpPoly** (línea Laska Mini) utiliza microfibras divididas nanométricamente que succionan la suciedad y el sebo oxidado usando exclusivamente agua tibia:\n\nAl eliminar los detergentes químicos, preservás intactos los lípidos estructurales y mantenés tu microbioma en perfecto equilibrio.\n\n:::quiz ¿Cuál es la recomendación dermatológica unánime tras usar agua micelar?\n- Enjuagar siempre el rostro con agua tibia para retirar los residuos de tensoactivos *correct*\n- Dejar secar el producto al aire para aumentar la hidratación\n- Aplicar ácido glicólico inmediatamente después\n:::\n\n## **Conclusión: La Verdadera Salud Cutánea**\n\nCuidar tu rostro no requiere decenas de frascos químicos. Requiere respetar su biología, proteger su manto ácido y permitirle restaurar su propio equilibrio de forma natural.",
       "path": "blog/posts/es-ar/impacto-tensoactivos-aguas-micelares.md"
-    },
-    {
-      "meta": {
-        "article_id": "PG-007",
-        "title": "¿Pasás todo el día frente a la pantalla? La Ciencia de la Luz Azul y la Glicación Cutánea",
-        "description": "Análisis dermatológico sobre el impacto de la radiación HEV de pantallas, la glicación del colágeno y el envejecimiento digital.",
-        "slug": "luz-azul-glicacion-cutanea-estres-digital",
-        "date": "2026-07-23",
-        "date_created": "2026-07-23",
-        "date_ai_processed": "2026-07-23",
-        "locale": "es-ar",
-        "category": "barrera-cutanea",
-        "category_label": "🔬 Ciencia de la Piel",
-        "concept": "luz-azul-hev-glicacion-cutanea-ages-estres-digital-barrera",
-        "local_phenomenon": "Radiación foto-térmica por pantallas y monitores LED",
-        "cover_image": "/assets/imagenes/blog/luz-azul-glicacion-cutanea-estres-digital/prompt_1.webp",
-        "media": [
-          "/assets/imagenes/blog/luz-azul-glicacion-cutanea-estres-digital/prompt_1.webp",
-          "/assets/imagenes/blog/luz-azul-glicacion-cutanea-estres-digital/prompt_2.webp",
-          "/assets/imagenes/blog/luz-azul-glicacion-cutanea-estres-digital/prompt_3.webp",
-          "/assets/imagenes/blog/luz-azul-glicacion-cutanea-estres-digital/prompt_4.webp",
-          "/assets/imagenes/blog/luz-azul-glicacion-cutanea-estres-digital/prompt_5.webp"
-        ],
-        "author": "PepaGold",
-        "epigraph": {
-          "text": "La radiación de tus dispositivos degrada en silencio la elasticidad de tu piel; limpiarla con suavidad biológica le devuelve su firmeza natural.",
-          "author": "Dra. PepaGold"
-        },
-        "summary": [
-          "La radiación de Alta Energía Visible (HEV) emitida por pantallas penetra hasta la dermis generando radicales libres de nitrógeno.",
-          "La glicación cutánea (reacción AGEs) rigidiza las fibras de colágeno provocando pérdida de rebote y firmeza.",
-          "El estrés foto-térmico continuo acelera la evaporación del agua celular en la zona periocular y mejillas.",
-          "La tecnología biomecánica UpPoly elimina impurezas exclusivamente con agua tibia sin alterar el pH 5.5 ni fotosensibilizar el rostro."
-        ],
-        "faq": [
-          {
-            "q": "¿La luz azul de los celulares realmente arruga la cara?",
-            "a": "Sí. La radiación HEV penetra más profundo que los rayos UVB, oxidando las proteínas estructurales y acelerando la pérdida de firmeza."
-          },
-          {
-            "q": "¿Es necesario usar protector solar adentro de casa frente a la computadora?",
-            "a": "Más allá de los filtros solares, lo indispensable es limpiar cada noche el sebo oxidado por radiación mediante tecnología microfibra UpPoly para permitir la regeneración celular."
-          }
-        ],
-        "image_prompts": [
-          "📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9): Scientific-editorial concept photography of blue light HEV radiation and skin glycation defense. Macro close-up of supple, radiant skin texture with an ethereal glowing amber protective aura deflecting subtle cool indigo-blue light rays. Warm golden studio lighting. Shot on Hasselblad 100MP, 120mm macro lens. High-end medical aesthetic. NO text, NO labels, NO logos.",
-          "📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): High-end medical 3D rendering of High-Energy Visible (HEV) blue light spectrum waves penetrating the dermal extracellular matrix layer. Soft clinical warm glow contrasting against cool blue photon rays. NO text.",
-          "📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Macro close-up photography of collagen fiber glycation process, showing transition from rigid cross-linked fibers to flexible elastic collagen bounce. Clean laboratory lighting. NO text.",
-          "📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Editorial photography of a relaxed, radiant face in front of a warm dimly lit study environment, showing pristine skin hydrated and protected. Soft golden hour tones. NO text.",
-          "📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): Ultra macro science photography of UpPoly micro-fibers gently absorbing photo-oxidized skin impurities using pure warm water droplets. High contrast detail. NO text."
-        ],
-        "show_science_link": true,
-        "date_images_applied": "2026-07-23",
-        "_source": "blog/posts/es-ar/luz-azul-glicacion-cutanea-estres-digital.md"
-      },
-      "body": "¿Terminás la jornada frente al celular o la computadora y sentís la zona de los ojos pesada, la piel apagada y los pómulos marcados por el cansancio? No es casualidad: la luz azul que emiten tus pantallas está afectando la firmeza biológica de tu rostro.\n\nPasamos más de 8 horas diarias expuestas a la radiación digital sin saber que este hábito cotidiano acelera un proceso químico llamado **glicación cutánea**.\n\n## **La Radiación Silenciosa: Luz Azul (HEV) y Estrés Foto-Térmico**\n\nLa luz que emiten los monitores, celulares y luces LED se conoce en ciencia como **Radiación de Alta Energía Visible (HEV)**:\n\n![Radiación de luz azul HEV penetrando la dermis](/assets/imagenes/blog/luz-azul-glicacion-cutanea-estres-digital/prompt_2.webp)\n\n- **Penetración Profunda:** A diferencia de los rayos UVB que se quedan en la superficie, la luz azul atraviesa la epidermis y llega hasta la dermis profunda.\n- **Estrés Foto-Térmico:** Genera especies reactivas de nitrógeno (RNS) que aceleran la deshidratación periocular.\n\nEsta radiación continua desestabiliza la respiración celular y degrada la barrera lipídica de tu piel mientras trabajás o mirás redes sociales.\n\n:::stat\n**Envejecimiento Digital Acelerado:** Exponerse 8 horas diarias frente a pantallas digitales equivale a **20 minutos de sol directo de mediodía** sin protección solar.\n:::\n\n:::tip El Secreto Anti-Luz Azul\nEl mayor daño de la radiación digital ocurre por la noche cuando los lípidos oxidados permanecen sobre el rostro. Limpiarlos antes de dormir es vital para la reparación tisular.\n:::\n\n## **Glicación Cutánea: Por Qué el Colágeno Pierde su Rebote**\n\nCuando la radiación de las pantallas se combina con el sebo facial y azúcares libres de la epidermis, se desencadena la **Reacción de Maillard endógena** o glicación:\n\n![Proceso de glicación del colágeno y elasticidad](/assets/imagenes/blog/luz-azul-glicacion-cutanea-estres-digital/prompt_3.webp)\n\n1. **Rigidización del Colágeno (AGEs):** Las moléculas de azúcar se cristalizan alrededor de las fibras elásticas, endureciéndolas.\n2. **Pérdida de Elasticidad:** La piel pierde su capacidad de \"rebotar\" y surgen finas líneas de expresión alrededor de los ojos.\n3. **Pérdida de Luminosidad:** La matriz endurecida dispersa la luz de forma opaca, dando ese aspecto fatigado y amarillento.\n\n:::info ¿Qué son los productos AGEs?\nLos *Advanced Glycation End-products* (AGEs) son estructuras de colágeno rígidas que el cuerpo no puede reparar fácilmente, provocando flacidez prematura.\n:::\n\n## **El Error de Usar Desmaquillantes Sintéticos Fotosensibilizantes**\n\nAl volver a casa o terminar de trabajar, usar limpiadores agresivos o toallitas con fragancias sintéticas empeora el daño foto-térmico.\n\n![Rostro relajado y protegido frente al estrés digital](/assets/imagenes/blog/luz-azul-glicacion-cutanea-estres-digital/prompt_4.webp)\n\nLos ingredientes químicos fotosensibilizantes y alcoholes aumentan la reactividad de la piel frente a la luz de los dispositivos, sensibilizando los pómulos y la zona periocular.\n\n:::checklist Señales de Estrés Digital en tu Piel\n- Sentís tirantez e irritación en los ojos y pómulos tras varias horas de pantalla.\n- Notás líneas finas marcadas al final del día que desaparecen al levantarte.\n- Tu piel luce amarillenta, opaca o sin el \"glow\" natural de hidratación.\n- Los productos cosméticos habituales te producen un ligero ardor al aplicarlos por la noche.\n:::\n\n## **Regeneración Biomecánica Atrauma: La Tecnología UpPoly**\n\nPara recuperar la elasticidad y eliminar los lípidos oxidables sin químicos que fotosensibilicen tu cara, se recomienda la **higiene física por capilaridad**.\n\n![Limpieza biomecánica atraumática con UpPoly](/assets/imagenes/blog/luz-azul-glicacion-cutanea-estres-digital/prompt_5.webp)\n\nLa microfibra japonesa **UpPoly** (presente en la línea Laska Mini) posee hilos microscópicos divididos que retiran las impurezas foto-oxidadas utilizando **exclusivamente agua tibia**:\n\nSin necesidad de tensoactivos ni frotes agresivos, la fibra remueve el sebo oxidado por luz azul y preserva la capa de ceramidas y el manto ácido pH 5.5 de tu rostro.\n\n:::quiz Test sobre Envejecimiento Digital\nQ: ¿Cuál es el principal efecto de la radiación HEV (luz azul) al desencadenar la glicación cutánea?\n- Cristalizar azúcares sobre las fibras de colágeno, rigidizándolas y quitándoles rebote *correct*\n- Aumentar la hidratación natural de los párpados\n- Estimular la reproducción acelerada de bacterias benéficas\n:::\n\n## **Devolverle la Vida y Firmeza a tu Rostro**\n\nPasar horas frente a tus pantallas es parte de tu rutina, pero envejecer tu piel por la luz azul no tiene por qué serlo.\n\nAl liberar tu cara cada noche con la tecnología de microfibra UpPoly y agua tibia, cortás el ciclo de oxidación foto-térmica y le devolvés a tu piel su elasticidad, firmeza y brillo natural.\n",
-      "path": "blog/posts/es-ar/luz-azul-glicacion-cutanea-estres-digital.md"
     },
     {
       "meta": {
@@ -473,6 +473,78 @@
         "web_url": "/zh/blog/ciencia-barrera-cutanea-microbioma",
         "phenomenon": "HVAC dry air & seasonal winds",
         "region_label": "zh-hans"
+      }
+    },
+    "doble-limpieza-coreana-simplificada-tensoactivos-rebound-mercado-sudamericano": {
+      "de-de": {
+        "slug": "doble-limpieza-coreana-simplificada-dermatologia",
+        "title": "K-Beauty Double Cleansing verursacht Unreinheiten? Die Wissenschaft vereinfachter Hautpflege",
+        "web_url": "/de/blog/doble-limpieza-coreana-simplificada-dermatologia",
+        "phenomenon": "Lipid-Überemulgierung und kosmetische Rebound-Akne",
+        "region_label": "🇩🇪 Deutschland"
+      },
+      "en-us": {
+        "slug": "doble-limpieza-coreana-simplificada-dermatologia",
+        "title": "Doing K-Beauty Double Cleansing and Getting Breakouts? The Science of Simplified Skincare",
+        "web_url": "/us/blog/doble-limpieza-coreana-simplificada-dermatologia",
+        "phenomenon": "Lipid over-emulsification and cosmetic rebound acne",
+        "region_label": "🇺🇸 United States"
+      },
+      "es-ar": {
+        "slug": "doble-limpieza-coreana-simplificada-dermatologia",
+        "title": "¿Te hacés la doble limpieza coreana y tenés más acné? La Ciencia del Mercado Sudamericano y la Higiene Atrauma",
+        "web_url": "/blog/doble-limpieza-coreana-simplificada-dermatologia",
+        "phenomenon": "Humedad estacional y sobre-emulsionamiento lipídico por K-Beauty",
+        "region_label": "es-ar"
+      },
+      "es-es": {
+        "slug": "doble-limpieza-coreana-simplificada-dermatologia",
+        "title": "¿Te haces la doble limpieza coreana y tienes más acné? La Ciencia del Mercado Sudamericano y la Higiene Atrauma",
+        "web_url": "/es/blog/doble-limpieza-coreana-simplificada-dermatologia",
+        "phenomenon": "Humedad climática y sobre-emulsionamiento lipídico por cosmética oleosa",
+        "region_label": "🇪🇸 España"
+      },
+      "es-mx": {
+        "slug": "doble-limpieza-coreana-simplificada-dermatologia",
+        "title": "¿Te haces la doble limpieza coreana y tienes más acné? La Ciencia del Mercado Sudamericano y la Higiene Atrauma",
+        "web_url": "/mx/blog/doble-limpieza-coreana-simplificada-dermatologia",
+        "phenomenon": "Humedad ambiental y sobre-emulsionamiento lipídico por K-Beauty",
+        "region_label": "🇲🇽 México (ZMM / CDMX)"
+      },
+      "fr-fr": {
+        "slug": "doble-limpieza-coreana-simplificada-dermatologia",
+        "title": "Le Double Nettoyage Coréen vous Donne des Boutons ? La Science de la Pépinière Cutanée Simplifiée",
+        "web_url": "/fr/blog/doble-limpieza-coreana-simplificada-dermatologia",
+        "phenomenon": "Sur-émulsion lipidique et acné cosmétique de rebond",
+        "region_label": "🇫🇷 France"
+      },
+      "it-it": {
+        "slug": "doble-limpieza-coreana-simplificada-dermatologia",
+        "title": "La Doppia Detersione Coreana ti Causa Brufoli? La Scienza della Cura Cutanata Semplificata",
+        "web_url": "/it/blog/doble-limpieza-coreana-simplificada-dermatologia",
+        "phenomenon": "Sovra-emulsione lipidica e acne cosmetica da rimbalzo",
+        "region_label": "🇮🇹 Italia"
+      },
+      "pt-br": {
+        "slug": "doble-limpieza-coreana-simplificada-dermatologia",
+        "title": "Faz Dupla Limpeza Coreana e Tem Mais Acne? A Ciência do Mercado Sul-Americano e Higiene Atrauma",
+        "web_url": "/pt/blog/doble-limpieza-coreana-simplificada-dermatologia",
+        "phenomenon": "Umidade do clima tropical e acúmulo de óleos da cosmética K-Beauty",
+        "region_label": "🇧🇷 Brasil"
+      },
+      "ru-ru": {
+        "slug": "doble-limpieza-coreana-simplificada-dermatologia",
+        "title": "Делаете Двойное Корейское Очищение и Появляются Высыпания? Наука Упрощенного Ухода",
+        "web_url": "/ru/blog/doble-limpieza-coreana-simplificada-dermatologia",
+        "phenomenon": "Чрезмерное эмульгирование липидов и косметический акне-рикошет",
+        "region_label": "🇷🇺 Россия"
+      },
+      "zh-hans": {
+        "slug": "doble-limpieza-coreana-simplificada-dermatologia",
+        "title": "尝试韩式双重清洁反而长痘？简化护肤与物理屏障科学解析",
+        "web_url": "/zh/blog/doble-limpieza-coreana-simplificada-dermatologia",
+        "phenomenon": "过度乳化与K-Beauty引发的反弹型粉刺",
+        "region_label": "🇨🇳 中国"
       }
     },
     "exposoma-urbano-polucion-pm25-peroxidacion-lipidica-barrera-cutanea": {
@@ -689,78 +761,6 @@
         "web_url": "/zh/blog/impacto-tensoactivos-aguas-micelares",
         "phenomenon": "HVAC dry air & seasonal winds",
         "region_label": "zh-hans"
-      }
-    },
-    "luz-azul-hev-glicacion-cutanea-ages-estres-digital-barrera": {
-      "de-de": {
-        "slug": "luz-azul-glicacion-cutanea-estres-digital",
-        "title": "Den Ganzen Tag vor dem Bildschirm? Die Wissenschaft von blauem Licht und Hautglykation",
-        "web_url": "/de/blog/luz-azul-glicacion-cutanea-estres-digital",
-        "phenomenon": "Photo-thermische HEV-Strahlung digitaler Displays",
-        "region_label": "🇩🇪 Deutschland"
-      },
-      "en-us": {
-        "slug": "luz-azul-glicacion-cutanea-estres-digital",
-        "title": "Spending All Day in Front of Screens? The Science of Blue Light and Skin Glycation",
-        "web_url": "/us/blog/luz-azul-glicacion-cutanea-estres-digital",
-        "phenomenon": "High-Energy Visible (HEV) blue light from digital displays",
-        "region_label": "🇺🇸 United States"
-      },
-      "es-ar": {
-        "slug": "luz-azul-glicacion-cutanea-estres-digital",
-        "title": "¿Pasás todo el día frente a la pantalla? La Ciencia de la Luz Azul y la Glicación Cutánea",
-        "web_url": "/blog/luz-azul-glicacion-cutanea-estres-digital",
-        "phenomenon": "Radiación foto-térmica por pantallas y monitores LED",
-        "region_label": "es-ar"
-      },
-      "es-es": {
-        "slug": "luz-azul-glicacion-cutanea-estres-digital",
-        "title": "¿Pasas todo el día frente a la pantalla? La Ciencia de la Luz Azul y la Glicación Cutánea",
-        "web_url": "/es/blog/luz-azul-glicacion-cutanea-estres-digital",
-        "phenomenon": "Radiación foto-térmica por pantallas en espacios cerrados",
-        "region_label": "🇪🇸 España"
-      },
-      "es-mx": {
-        "slug": "luz-azul-glicacion-cutanea-estres-digital",
-        "title": "¿Pasas todo el día frente a la pantalla? La Ciencia de la Luz Azul y la Glicación Cutánea",
-        "web_url": "/mx/blog/luz-azul-glicacion-cutanea-estres-digital",
-        "phenomenon": "Radiación foto-térmica de pantallas y monitores LED",
-        "region_label": "🇲🇽 México (ZMM / CDMX)"
-      },
-      "fr-fr": {
-        "slug": "luz-azul-glicacion-cutanea-estres-digital",
-        "title": "Toute la Journée Devant les Écrans ? La Science de la Lumière Bleue et de la Glycation Cutanée",
-        "web_url": "/fr/blog/luz-azul-glicacion-cutanea-estres-digital",
-        "phenomenon": "Rayonnement photo-thermique des écrans et moniteurs LED",
-        "region_label": "🇫🇷 France"
-      },
-      "it-it": {
-        "slug": "luz-azul-glicacion-cutanea-estres-digital",
-        "title": "Tutto il Giorno Davanti agli Schermi? La Scienza della Luce Blu e Glicazione Cutanea",
-        "web_url": "/it/blog/luz-azul-glicacion-cutanea-estres-digital",
-        "phenomenon": "Radiazione foto-termica da schermi e monitor LED",
-        "region_label": "🇮🇹 Italia"
-      },
-      "pt-br": {
-        "slug": "luz-azul-glicacion-cutanea-estres-digital",
-        "title": "Passa o Dia Todo na Frente da Tela? A Ciência da Luz Azul e Glicação Cutânea",
-        "web_url": "/pt/blog/luz-azul-glicacion-cutanea-estres-digital",
-        "phenomenon": "Radiação foto-térmica de telas e monitores LED",
-        "region_label": "🇧🇷 Brasil"
-      },
-      "ru-ru": {
-        "slug": "luz-azul-glicacion-cutanea-estres-digital",
-        "title": "Весь День перед Экраном? Наука Синего Света и Гликации Кожи",
-        "web_url": "/ru/blog/luz-azul-glicacion-cutanea-estres-digital",
-        "phenomenon": "Фототермическое HEV-излучение цифровых экранов",
-        "region_label": "🇷🇺 Россия"
-      },
-      "zh-hans": {
-        "slug": "luz-azul-glicacion-cutanea-estres-digital",
-        "title": "整天面对电子屏幕？高能蓝光与皮肤糖化反应科学解析",
-        "web_url": "/zh/blog/luz-azul-glicacion-cutanea-estres-digital",
-        "phenomenon": "电子屏幕与LED显示屏的高能短波蓝光辐射",
-        "region_label": "🇨🇳 中国"
       }
     },
     "el-skinimalismo-y-la-reducci-n-de-pasos-en-el-skincare": {
