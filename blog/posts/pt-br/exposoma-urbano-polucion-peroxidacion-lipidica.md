@@ -1,7 +1,12 @@
 ---
 article_id: PG-006
-title: Acordando com a Pele Opaca e Cansada? A Ciência do Exposoma Urbano e Peroxidação Lipídica
-description: A poluição urbana por partículas finas PM2.5 oxida o esqualeno natural e obstrui os poros. A limpeza biomecânica UpPoly remove os resíduos de poluição apenas com água morna sem agredir a barreira lipídica.
+title: >-
+  Acordando com a Pele Opaca e Cansada? A Ciência do Exposoma Urbano e
+  Peroxidação Lipídica
+description: >-
+  A poluição urbana por partículas finas PM2.5 oxida o esqualeno natural e
+  obstrui os poros. A limpeza biomecânica UpPoly remove os resíduos de poluição
+  apenas com água morna sem agredir a barreira lipídica.
 slug: exposoma-urbano-polucion-peroxidacion-lipidica
 date: '2026-07-23'
 date_created: '2026-07-23'
@@ -11,33 +16,69 @@ category: barrera-cutanea
 category_label: 🔬 Ciencia de la Piel
 concept: exposoma-urbano-polucion-pm25-peroxidacion-lipidica-barrera-cutanea
 local_phenomenon: Smog urbano y partículas finas PM2.5
-cover_image: /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_1.webp
+cover_image: >-
+  /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_1.webp
 media:
-- /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_1.webp
-- /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp
-- /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp
-- /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp
-- /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp
+  - >-
+    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_1.webp
+  - >-
+    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp
+  - >-
+    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp
+  - >-
+    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp
 author: PepaGold
 epigraph:
-  text: A poluição urbana invisível agride seu rosto; limpá-lo com suavidade biológica devolve sua vitalidade.
+  text: >-
+    A poluição urbana invisível agride seu rosto; limpá-lo com suavidade
+    biológica devolve sua vitalidade.
   author: Dra. PepaGold
 summary:
-- Partículas ultra-finas PM2.5 penetram nos poros desencadeando peroxidação lipídica.
-- A oxidação do esqualeno gera subprodutos comedogênicos que apagam o brilho da pele.
-- Sabões agressivos aumentam a permeabilidade da pele a metais pesados.
-- A tecnologia biomecânica UpPoly remove resíduos de carbono com água morna sem alterar o pH 5.5.
+  - >-
+    Partículas ultra-finas PM2.5 penetram nos poros desencadeando peroxidação
+    lipídica.
+  - >-
+    A oxidação do esqualeno gera subprodutos comedogênicos que apagam o brilho
+    da pele.
+  - Sabões agressivos aumentam a permeabilidade da pele a metais pesados.
+  - >-
+    A tecnologia biomecânica UpPoly remove resíduos de carbono com água morna
+    sem alterar o pH 5.5.
 faq:
-- q: Por que sinto a pele cinzenta e cansada ao voltar do trabalho na cidade?
-  a: As partículas PM2.5 aderem ao sebo e se oxidam, formando um filme invisível que obstrui os poros.
-- q: A água da torneira limpa a poluição sozinha?
-  a: A água sozinha não remove resíduos lipofílicos de fumaça; a atração capilar do UpPoly é necessária.
+  - q: Por que sinto a pele cinzenta e cansada ao voltar do trabalho na cidade?
+    a: >-
+      As partículas PM2.5 aderem ao sebo e se oxidam, formando um filme
+      invisível que obstrui os poros.
+  - q: A água da torneira limpa a poluição sozinha?
+    a: >-
+      A água sozinha não remove resíduos lipofílicos de fumaça; a atração
+      capilar do UpPoly é necessária.
 image_prompts:
-- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9): Scientific-editorial concept photography of urban exposome and skin pollution shield. Macro close-up of luminous, rejuvenated skin texture with subtle iridescent protective atmosphere repelling microscopic charcoal-gray pollution dust particles. Warm rose and dusty amber studio backlight. Shot on Hasselblad 100MP, 120mm macro lens. NO text, NO logos.'
-- '📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): High-end medical 3D rendering of microscopic PM2.5 particulate matter hovering near the stratum corneum cell layer. Soft warm lighting highlighting lipid membrane structure. Medical aesthetic. NO text.'
-- '📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Macro photography of squalene oxidation process on skin surface, showing transformation from oxidized dullness to glowing golden lipid balance. Clean clinical framing. NO text.'
-- '📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Editorial photography of urban environment backdrop with a calm, protected face reflecting crystal clear atmospheric purity. Warm sunset glow. NO text.'
-- '📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): Ultra macro shot of UpPoly micro-fibers capturing microscopic carbon residues using pure water droplets. High contrast science detail. NO text.'
+  - >-
+    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9):
+    Scientific-editorial concept photography of urban exposome and skin
+    pollution shield. Macro close-up of luminous, rejuvenated skin texture with
+    subtle iridescent protective atmosphere repelling microscopic charcoal-gray
+    pollution dust particles. Warm rose and dusty amber studio backlight. Shot
+    on Hasselblad 100MP, 120mm macro lens. NO text, NO logos.
+  - >-
+    📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): High-end
+    medical 3D rendering of microscopic PM2.5 particulate matter hovering near
+    the stratum corneum cell layer. Soft warm lighting highlighting lipid
+    membrane structure. Medical aesthetic. NO text.
+  - >-
+    📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Macro
+    photography of squalene oxidation process on skin surface, showing
+    transformation from oxidized dullness to glowing golden lipid balance. Clean
+    clinical framing. NO text.
+  - >-
+    📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Editorial
+    photography of urban environment backdrop with a calm, protected face
+    reflecting crystal clear atmospheric purity. Warm sunset glow. NO text.
+  - >-
+    📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): Ultra macro
+    shot of UpPoly micro-fibers capturing microscopic carbon residues using pure
+    water droplets. High contrast science detail. NO text.
 show_science_link: true
 date_images_applied: '2026-07-23'
 ---
@@ -78,7 +119,7 @@ Cravos e espinhas após dias de alta poluição são o resultado direto de sebo 
 
 Lavar o rosto com sabonetes adstringentes fortes dissolve as ceramidas protetoras e fragiliza a barreira cutânea.
 
-![Ambiente urbano e pele protegida](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp)
+
 
 :::checklist Sinais de Asfixia por Poluição
 - Tom de pele cinzento e opaco apesar de dormir bem.
