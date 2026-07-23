@@ -21,8 +21,6 @@ media:
   - >-
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp
   - >-
-    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp
-  - >-
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp
   - >-
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp
@@ -108,7 +106,7 @@ Votre couche cornée est la frontière entre la pollution et vos cellules. La pr
 
 Le squalène naturel s'oxyde au contact de la pollution atmosphérique, formant du peroxyde de squalène irritant qui obstrue les pores.
 
-![Oxydation lipidique à la surface de la peau](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp)
+
 
 1. **Formation de Peroxyde de Squalène:** Un sous-produit visqueux et irritant.
 2. **Obstruction des Pores:** Le sébum oxidé s'épaissit et bouche les follicules.
