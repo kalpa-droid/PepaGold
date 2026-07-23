@@ -14,9 +14,17 @@
   <!-- js-yaml library for parsing and dumping frontmatter -->
   <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js">
     // =========================================================================
-    // LEADS & REGISTRATION MANAGEMENT ENGINE
+    // LEADS & REGISTRATION MANAGEMENT ENGINE (CON EMBUDO COMPLETO)
     // =========================================================================
     let leadsList = [];
+    const FUNNEL_STATES = [
+      { id: 'nuevo', label: '⏳ Nuevo (sin contactar)', badgeBg: '#FFF8E1', badgeColor: '#F57F17' },
+      { id: 'contactado', label: '📞 Contactado (WhatsApp / Email)', badgeBg: '#E3F2FD', badgeColor: '#1565C0' },
+      { id: 'registrado_sms_pendiente', label: '📱 Registrado — falta SMS', badgeBg: '#FFF3E0', badgeColor: '#E65100' },
+      { id: 'sms_enviado', label: '✉️ SMS enviado — esperando compra', badgeBg: '#F3E5F5', badgeColor: '#6A1B9A' },
+      { id: 'compra_completada', label: '🎉 Compra completada', badgeBg: '#E8F5E9', badgeColor: '#2E7D32' },
+      { id: 'sin_respuesta', label: '🌫️ Sin respuesta / no interesado', badgeBg: '#ECEFF1', badgeColor: '#455A64' }
+    ];
 
     async function loadLeadsFromApi() {
       const container = document.getElementById('leads-container');
@@ -77,6 +85,35 @@
       }
     }
 
+    function normalizeLead(l) {
+      return {
+        id: l.id || ('lead-' + Date.now()),
+        createdAt: l.createdAt || l.capturado_el || new Date().toISOString(),
+        name: l.name || l.nombre || 'Sin Nombre',
+        birthdate: l.birthdate || l.fecha_nacimiento || '',
+        email: l.email || '',
+        phone: l.phone || l.telefono || '',
+        address: l.address || l.direccion || '',
+        neighborhood: l.neighborhood || l.barrio || '',
+        zipCode: l.zipCode || l.codigo_postal || '',
+        province: l.province || l.provincia || '',
+        country: l.country || l.pais || 'Argentina',
+        type: l.type || l.tipo || 'Cliente Gratuito (Green Priority)',
+        status: l.status || l.estado || 'nuevo',
+        notes: l.notes || l.notas || ''
+      };
+    }
+
+    function getStatusBadge(st) {
+      if (st === 'nuevo' || st === 'Pendiente') return { label: '⏳ Nuevo', bg: '#FFF8E1', color: '#F57F17' };
+      if (st === 'contactado' || st.includes('Contactado')) return { label: '📞 Contactado', bg: '#E3F2FD', color: '#1565C0' };
+      if (st === 'registrado_sms_pendiente') return { label: '📱 Registrado (falta SMS)', bg: '#FFF3E0', color: '#E65100' };
+      if (st === 'sms_enviado') return { label: '✉️ SMS enviado', bg: '#F3E5F5', color: '#6A1B9A' };
+      if (st === 'compra_completada' || st.includes('Registrado')) return { label: '🎉 Compra completada', bg: '#E8F5E9', color: '#2E7D32' };
+      if (st === 'sin_respuesta') return { label: '🌫️ Sin respuesta', bg: '#ECEFF1', color: '#455A64' };
+      return { label: st, bg: '#FFF8E1', color: '#F57F17' };
+    }
+
     function renderLeadsList() {
       const container = document.getElementById('leads-container');
       if (!container) return;
@@ -84,21 +121,23 @@
       const q = (document.getElementById('lead-search-input')?.value || '').toLowerCase();
       const statusFilter = document.getElementById('lead-filter-status')?.value || 'all';
 
-      let filtered = leadsList.filter(l => {
-        const matchQ = !q || (l.name || '').toLowerCase().includes(q) ||
-                            (l.email || '').toLowerCase().includes(q) ||
-                            (l.phone || '').toLowerCase().includes(q) ||
-                            (l.province || '').toLowerCase().includes(q) ||
-                            (l.neighborhood || '').toLowerCase().includes(q);
-        const matchStatus = statusFilter === 'all' || (l.status || 'Pendiente').startsWith(statusFilter);
+      const normalizedList = leadsList.map(normalizeLead);
+
+      let filtered = normalizedList.filter(l => {
+        const matchQ = !q || l.name.toLowerCase().includes(q) ||
+                            l.email.toLowerCase().includes(q) ||
+                            l.phone.toLowerCase().includes(q) ||
+                            l.province.toLowerCase().includes(q) ||
+                            l.neighborhood.toLowerCase().includes(q);
+        const matchStatus = statusFilter === 'all' || l.status === statusFilter || (statusFilter === 'nuevo' && l.status === 'Pendiente');
         return matchQ && matchStatus;
       });
 
       // Update KPI counters
-      document.getElementById('kpi-total-leads').textContent = leadsList.length;
-      document.getElementById('kpi-pending-leads').textContent = leadsList.filter(l => (l.status || 'Pendiente') === 'Pendiente').length;
-      document.getElementById('kpi-completed-leads').textContent = leadsList.filter(l => (l.status || '') === 'Registrado en Greenway' || (l.status || '').includes('Registrado')).length;
-      document.getElementById('kpi-contacted-leads').textContent = leadsList.filter(l => (l.status || '').includes('Contactado')).length;
+      document.getElementById('kpi-total-leads').textContent = normalizedList.length;
+      document.getElementById('kpi-pending-leads').textContent = normalizedList.filter(l => l.status === 'nuevo' || l.status === 'Pendiente').length;
+      document.getElementById('kpi-completed-leads').textContent = normalizedList.filter(l => l.status === 'compra_completada' || l.status.includes('Registrado')).length;
+      document.getElementById('kpi-contacted-leads').textContent = normalizedList.filter(l => l.status === 'contactado' || l.status.includes('Contactado')).length;
 
       if (filtered.length === 0) {
         container.innerHTML = '<div style="background: #fff; padding: 40px; text-align: center; border-radius: 16px; border: 1px dashed var(--border-color); color: var(--color-dark-muted);">No se encontraron solicitudes de registro con los filtros seleccionados.</div>';
@@ -109,30 +148,26 @@
         const dateStr = l.createdAt ? new Date(l.createdAt).toLocaleString('es-AR') : 'Reciente';
         const cleanPhone = (l.phone || '').replace(/[^0-9+]/g, '');
         const waUrl = cleanPhone ? `https://wa.me/${cleanPhone.replace('+', '')}?text=${encodeURIComponent('¡Hola ' + l.name + '! Te contacto de PepaGold / Greenway Global sobre tu registro...')}` : '#';
+        const badge = getStatusBadge(l.status);
 
-        let badgeBg = '#FFF8E1';
-        let badgeColor = '#F57F17';
-        if ((l.status || '').includes('Registrado')) { badgeBg = '#E8F5E9'; badgeColor = '#2E7D32'; }
-        if ((l.status || '').includes('Contactado')) { badgeBg = '#E3F2FD'; badgeColor = '#1565C0'; }
+        const statusOptions = FUNNEL_STATES.map(s => `<option value="${s.id}" ${l.status === s.id ? 'selected' : ''}>${s.label}</option>`).join('');
 
         return `
           <div style="background: #ffffff; border: 1px solid var(--border-color); border-radius: 16px; padding: 20px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 14px;">
             <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px;">
               <div>
                 <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 4px;">
-                  <span style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--color-dark);">${l.name || 'Sin Nombre'}</span>
-                  <span style="font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; background: rgba(212, 140, 144, 0.15); color: var(--color-primary);">${l.type || 'Cliente Gratuito'}</span>
+                  <span style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--color-dark);">${l.name}</span>
+                  <span style="font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; background: rgba(212, 140, 144, 0.15); color: var(--color-primary);">${l.type}</span>
                 </div>
                 <div style="font-size: 12px; color: var(--color-dark-muted);">📅 Solicitado el: ${dateStr}</div>
               </div>
               <div style="display: flex; align-items: center; gap: 8px;">
-                <span style="font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 20px; background: ${badgeBg}; color: ${badgeColor};">
-                  ${l.status || 'Pendiente'}
+                <span style="font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 20px; background: ${badge.bg}; color: ${badge.color};">
+                  ${badge.label}
                 </span>
                 <select class="input-field" style="margin: 0; padding: 4px 8px; font-size: 12px; width: auto;" onchange="changeLeadStatus('${l.id}', this.value)">
-                  <option value="Pendiente" ${(l.status === 'Pendiente') ? 'selected' : ''}>⏳ Pendiente</option>
-                  <option value="Registrado en Greenway" ${(l.status === 'Registrado en Greenway') ? 'selected' : ''}>✅ Registrado</option>
-                  <option value="Contactado por WhatsApp" ${(l.status === 'Contactado por WhatsApp') ? 'selected' : ''}>📞 Contactado</option>
+                  ${statusOptions}
                 </select>
               </div>
             </div>
@@ -162,18 +197,19 @@
     }
 
     function openLeadModal(leadData = null) {
-      document.getElementById('lead-form-id').value = leadData ? leadData.id : '';
-      document.getElementById('lead-form-name').value = leadData ? leadData.name : '';
-      document.getElementById('lead-form-birthdate').value = leadData ? leadData.birthdate : '';
-      document.getElementById('lead-form-email').value = leadData ? leadData.email : '';
-      document.getElementById('lead-form-phone').value = leadData ? leadData.phone : '';
-      document.getElementById('lead-form-address').value = leadData ? leadData.address : '';
-      document.getElementById('lead-form-neighborhood').value = leadData ? leadData.neighborhood : '';
-      document.getElementById('lead-form-zip').value = leadData ? leadData.zipCode : '';
-      document.getElementById('lead-form-province').value = leadData ? leadData.province : '';
-      document.getElementById('lead-form-country').value = leadData ? leadData.country : 'Argentina';
-      document.getElementById('lead-form-type').value = leadData ? leadData.type : 'Cliente Gratuito (Green Priority)';
-      document.getElementById('lead-form-notes').value = leadData ? leadData.notes : '';
+      const l = leadData ? normalizeLead(leadData) : {};
+      document.getElementById('lead-form-id').value = l.id || '';
+      document.getElementById('lead-form-name').value = l.name || '';
+      document.getElementById('lead-form-birthdate').value = l.birthdate || '';
+      document.getElementById('lead-form-email').value = l.email || '';
+      document.getElementById('lead-form-phone').value = l.phone || '';
+      document.getElementById('lead-form-address').value = l.address || '';
+      document.getElementById('lead-form-neighborhood').value = l.neighborhood || '';
+      document.getElementById('lead-form-zip').value = l.zipCode || '';
+      document.getElementById('lead-form-province').value = l.province || '';
+      document.getElementById('lead-form-country').value = l.country || 'Argentina';
+      document.getElementById('lead-form-type').value = l.type || 'Cliente Gratuito (Green Priority)';
+      document.getElementById('lead-form-notes').value = l.notes || '';
 
       document.getElementById('modal-lead-title').textContent = leadData ? '✏️ Editar Solicitud' : '📋 Nueva Solicitud Manual';
       document.getElementById('modal-lead').classList.add('active');
@@ -207,7 +243,7 @@
         province: document.getElementById('lead-form-province').value.trim(),
         country: document.getElementById('lead-form-country').value.trim() || 'Argentina',
         type: document.getElementById('lead-form-type').value,
-        status: id ? (leadsList.find(l => l.id === id)?.status || 'Pendiente') : 'Pendiente',
+        status: id ? (leadsList.find(l => l.id === id)?.status || 'nuevo') : 'nuevo',
         notes: document.getElementById('lead-form-notes').value.trim()
       };
 
@@ -229,7 +265,7 @@
       if (lead) {
         lead.status = newStatus;
         renderLeadsList();
-        showToast(`✅ Estado actualizado a: ${newStatus}`);
+        showToast(`✅ Estado actualizado`);
         await saveLeadsListState();
       }
     }
@@ -244,21 +280,22 @@
     }
 
     function copyLeadFormatted(id) {
-      const l = leadsList.find(item => item.id === id);
-      if (!l) return;
+      const raw = leadsList.find(item => item.id === id);
+      if (!raw) return;
+      const l = normalizeLead(raw);
 
       const formatted = `=== DATOS PARA REGISTRO EN GREENWAY GLOBAL ===
-• Nombre Completo: ${l.name || ''}
-• Fecha de Nacimiento: ${l.birthdate || ''}
-• Email: ${l.email || ''}
-• Teléfono: ${l.phone || ''}
-• Dirección: ${l.address || ''}
-• Barrio/Colonia: ${l.neighborhood || ''}
-• Código Postal: ${l.zipCode || ''}
-• Provincia/Estado: ${l.province || ''}
-• País: ${l.country || 'Argentina'}
-• Tipo de Cuenta: ${l.type || 'Cliente Gratuito'}
-• Notas/Pedido: ${l.notes || ''}
+• Nombre Completo: ${l.name}
+• Fecha de Nacimiento: ${l.birthdate}
+• Email: ${l.email}
+• Teléfono: ${l.phone}
+• Dirección: ${l.address}
+• Barrio/Colonia: ${l.neighborhood}
+• Código Postal: ${l.zipCode}
+• Provincia/Estado: ${l.province}
+• País: ${l.country}
+• Tipo de Cuenta: ${l.type}
+• Notas/Pedido: ${l.notes}
 ==============================================`;
 
       navigator.clipboard.writeText(formatted).then(() => {
@@ -273,6 +310,24 @@
         alert('No hay solicitudes para exportar.');
         return;
       }
+
+      const normalizedList = leadsList.map(normalizeLead);
+      const headers = ['ID', 'Fecha', 'Nombre', 'Fecha Nacimiento', 'Email', 'Telefono', 'Direccion', 'Barrio', 'CP', 'Provincia', 'Pais', 'Tipo', 'Estado', 'Notas'];
+      const rows = normalizedList.map(l => [
+        l.id, l.createdAt, `"${l.name}"`, l.birthdate, l.email, `"${l.phone}"`,
+        `"${l.address}"`, `"${l.neighborhood}"`, l.zipCode, `"${l.province}"`,
+        `"${l.country}"`, `"${l.type}"`, `"${l.status}"`, `"${(l.notes).replace(/"/g, '""')}"`
+      ]);
+
+      const csvContent = 'data:text/csv;charset=utf-8,﻿' + [headers.join(','), ...rows.map(e => e.join(','))].join('\n');
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement('a');
+      link.setAttribute('href', encodedUri);
+      link.setAttribute('download', `greenway_solicitudes_registro_${new Date().toISOString().slice(0,10)}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
 
       const headers = ['ID', 'Fecha', 'Nombre', 'Fecha Nacimiento', 'Email', 'Telefono', 'Direccion', 'Barrio', 'CP', 'Provincia', 'Pais', 'Tipo', 'Estado', 'Notas'];
       const rows = leadsList.map(l => [

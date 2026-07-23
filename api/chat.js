@@ -11,56 +11,67 @@ const { fetchGroqWithRotation } = require("./groq-keys.js");
 
 const MAX_HISTORY_MESSAGES = 10;
 const LEADS_FILE = path.join(process.cwd(), "admin", "leads.json");
+const LEAD_BLOCK_RE = /<<<LEAD_DATA>>>([\s\S]*?)<<<END_LEAD_DATA>>>/;
 
-function autoSaveLeadFromChat(messages) {
+function extractAndSaveStructuredLead(rawText, userMessages) {
+  let cleanText = rawText;
+  let leadObj = null;
+
+  const match = rawText.match(LEAD_BLOCK_RE);
+  if (match) {
+    cleanText = rawText.replace(LEAD_BLOCK_RE, "").trim();
+    try {
+      leadObj = JSON.parse(match[1].trim());
+    } catch (err) {
+      console.error("JSON de lead mal formado:", err);
+    }
+  }
+
+  // Si se parseó el bloque estructurado o si hay datos explícitos de teléfono/email
+  const fullText = userMessages.join("\n");
+  const phoneMatch = fullText.match(/(?:\+?\d{1,3})?[\s.-]?\(?\d{2,5}\)?[\s.-]?\d{3,5}[\s.-]?\d{3,5}/);
+  const emailMatch = fullText.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/);
+
+  if (!leadObj && !phoneMatch && !emailMatch) {
+    return { cleanText, lead: null };
+  }
+
   try {
-    const userMsgs = messages.filter((m) => m.role === "user").map((m) => m.content);
-    if (userMsgs.length === 0) return;
-
-    const fullText = userMsgs.join("\n");
-    const hasPhone = /(?:\+?\d{1,3})?[\s.-]?\(?\d{2,5}\)?[\s.-]?\d{3,5}[\s.-]?\d{3,5}/.test(fullText);
-    const hasRegKeyword = /(registr|darse de alta|alta|quiero la cuenta|comprar|inscripci|datos)/i.test(fullText);
-
-    if (!hasPhone && !hasRegKeyword) return;
-
-    // Extraer datos aproximados
-    const emailMatch = fullText.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/);
-    const phoneMatch = fullText.match(/(?:\+?\d{1,3})?[\s.-]?\(?\d{2,5}\)?[\s.-]?\d{3,5}[\s.-]?\d{3,5}/);
-    const nameMatch = fullText.match(/(?:me llamo|soy|nombre es)\s+([A-ZÁÉÍÓÚÑa-záéíóúñ\s]+)/i);
-
     let leads = [];
     if (fs.existsSync(LEADS_FILE)) {
       leads = JSON.parse(fs.readFileSync(LEADS_FILE, "utf-8") || "[]");
     }
 
-    const lastMsg = userMsgs[userMsgs.length - 1];
-
+    const lastMsg = userMessages[userMessages.length - 1] || "";
     // Evitar duplicados recientes
     const isDuplicate = leads.some((l) => l.notes && l.notes.includes(lastMsg.slice(0, 30)));
-    if (isDuplicate) return;
+    if (!isDuplicate) {
+      const newLead = {
+        id: "lead-" + Date.now(),
+        createdAt: new Date().toISOString(),
+        nombre: leadObj?.nombre || "Cliente interesado",
+        fecha_nacimiento: leadObj?.fecha_nacimiento || "",
+        email: leadObj?.email || (emailMatch ? emailMatch[0] : ""),
+        telefono: leadObj?.telefono || (phoneMatch ? phoneMatch[0].trim() : ""),
+        direccion: leadObj?.direccion || "",
+        barrio: "",
+        zipCode: "",
+        provincia: "",
+        pais: "Argentina",
+        tipo: "Cliente Gratuito (Green Priority)",
+        estado: "nuevo",
+        notas: "Capturado por el Chat Pepa: " + lastMsg.slice(0, 200),
+        historial: [{ estado: "nuevo", fecha: new Date().toISOString() }]
+      };
 
-    const newLead = {
-      id: "lead-" + Date.now(),
-      createdAt: new Date().toISOString(),
-      name: nameMatch ? nameMatch[1].trim() : "Cliente interesado en Chat",
-      birthdate: "",
-      email: emailMatch ? emailMatch[0] : "",
-      phone: phoneMatch ? phoneMatch[0].trim() : "",
-      address: "",
-      neighborhood: "",
-      zipCode: "",
-      province: "",
-      country: "Argentina",
-      type: "Cliente Gratuito (Green Priority)",
-      status: "Pendiente",
-      notes: "Capturado automáticamente desde el Chat: " + fullText.slice(-300)
-    };
-
-    leads.unshift(newLead);
-    fs.writeFileSync(LEADS_FILE, JSON.stringify(leads, null, 2), "utf-8");
+      leads.unshift(newLead);
+      fs.writeFileSync(LEADS_FILE, JSON.stringify(leads, null, 2), "utf-8");
+    }
   } catch (err) {
-    console.error("Error al guardar lead automáticamente desde chat:", err);
+    console.error("Error al guardar lead:", err);
   }
+
+  return { cleanText, lead: leadObj };
 }
 
 module.exports = async (req, res) => {
@@ -89,15 +100,15 @@ module.exports = async (req, res) => {
     return;
   }
 
-  // Intentar guardar lead si hay datos de registro
-  autoSaveLeadFromChat(messages);
-
   const trimmedHistory = messages.slice(-MAX_HISTORY_MESSAGES);
   const fullMessages = [{ role: "system", content: SYSTEM_PROMPT }, ...trimmedHistory];
 
   try {
-    const answer = await askGroqWithContinuation(fullMessages);
-    res.status(200).json({ reply: answer });
+    const rawAnswer = await askGroqWithContinuation(fullMessages);
+    const userTexts = messages.filter((m) => m.role === "user").map((m) => m.content);
+    const { cleanText } = extractAndSaveStructuredLead(rawAnswer, userTexts);
+
+    res.status(200).json({ reply: cleanText });
   } catch (err) {
     console.error("Error Groq:", err);
     res.status(502).json({ error: "groq_error", message: String(err.message || err) });
