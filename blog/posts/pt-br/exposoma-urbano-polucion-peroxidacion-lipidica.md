@@ -25,8 +25,6 @@ media:
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp
   - >-
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp
-  - >-
-    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -131,7 +129,7 @@ Lavar o rosto com sabonetes adstringentes fortes dissolve as ceramidas protetora
 
 A microfibra **UpPoly** remove as partículas PM2.5 e o sebo oxidado por atração capilar usando apenas água morna, preservando o pH 5.5.
 
-![Limpeza biomecânica atraumática com microfibra UpPoly](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp)
+
 
 :::quiz Teste de Conhecimento
 Q: Qual o principal efeito das partículas PM2.5 ao oxidar o esqualeno?
