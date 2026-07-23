@@ -23,8 +23,6 @@ media:
   - >-
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp
   - >-
-    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp
-  - >-
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp
 author: PepaGold
 epigraph:
@@ -118,7 +116,7 @@ Unreinheiten nach Tagen hoher Feinstaubbelastung sind oft das Ergebnis von oxidi
 
 Astringierende Seifen lösen wertvolle Ceramide auf und schwächen die Hautschutzbarriere.
 
-![Geschützte Haut in der Stadt](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp)
+
 
 :::checklist Anzeichen von Hauterstickung
 - Fahler, grauer Teint trotz ausreichendem Schlaf.
