@@ -27,6 +27,8 @@ media:
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp
   - >-
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp
+  - >-
+    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -90,7 +92,7 @@ Ogni giorno milioni di microparticelle invisibili si depositano sui pori scatena
 
 L'inquinamento urbano è composto da particelle microscopiche **PM2.5** che penetrano nei pori e alterano la barriera lipidica.
 
-![Particelle PM2.5 e impatto sulla pelle](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp)
+![Imagen de sección](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp)
 
 - **Particelle carboniose:** Derivanti dal traffico e dalle industrie.
 - **Metalli pesanti:** Generano radicali liberi e stress ossidativo.
@@ -107,7 +109,7 @@ Lo strato corneo è la barriera biologica contro le tossine urbane. Mantenerlo i
 
 Lo squalene naturale si ossida a contatto con lo smog urbano, formando perossido di squalene che ostruisce i pori.
 
-![Ossidazione lipidica sulla superficie cutanea](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp)
+![Imagen de sección](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp)
 
 1. **Formazione di Perossido di Squalene:** Sottoprodotto viscoso e irritante.
 2. **Ostruzione dei Pori:** Il sebo ossidato si addensa nei follicoli.
@@ -121,7 +123,7 @@ Le imperfezioni improvvise dopo giornate di alto inquinamento derivano dal sebo 
 
 I saponi aggressivi dissolvono le ceramidi protettive, permettendo agli inquinanti di penetrare più a fondo.
 
-![Ambiente urbano e pelle protetta](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp)
+![Imagen de sección](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_4.webp)
 
 :::checklist Segnali di Asfissia Cutanea
 - Incarnato spento e grigio nonostante il riposo.
@@ -133,7 +135,7 @@ I saponi aggressivi dissolvono le ceramidi protettive, permettendo agli inquinan
 
 La microfibra **UpPoly** rimuove le particelle PM2.5 e il sebo ossidato mediante attrazione capillare usando solo acqua tiepida, senza alterare il pH 5.5.
 
-
+![Imagen de sección](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp)
 
 :::quiz Test di Conoscenza
 Q: Qual è il principale effetto delle particelle PM2.5 sullo squalene?
