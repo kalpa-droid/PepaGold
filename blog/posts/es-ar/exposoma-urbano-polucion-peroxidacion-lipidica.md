@@ -21,8 +21,6 @@ media:
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_2.webp
   - >-
     /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_3.webp
-  - >-
-    /assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -140,7 +138,7 @@ Los tensoactivos químicos agresivos disuelven las ceramidas protectoras. Al rom
 
 Para retirar las partículas PM2.5 y el sebo oxidado sin destruir el manto ácido pH 5.5, la cosmética médica recomienda la **remoción física por capilaridad**.
 
-![Limpieza biomecánica atraumática con microfibra UpPoly](/assets/imagenes/blog/exposoma-urbano-polucion-peroxidacion-lipidica/prompt_5.webp)
+
 
 La estructura nanométrica de la fibra de poliéster dividida **UpPoly** (utilizada en la línea Laska Mini) funciona como una red microscópica de atracción electrostática:
 
