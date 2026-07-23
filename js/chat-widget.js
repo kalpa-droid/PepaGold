@@ -1,7 +1,8 @@
 /*
   Widget de Chat Inteligente PepaGold — Asistente Pepa
-  - Identidad de Pepa y aviso sobre su hermana asistente en la plataforma de Greenway.
-  - Avatar de Pepa con animación interactiva de boca/habla al leer respuestas por voz.
+  - Bienvenida de Pepa única (sin duplicar 3 veces al abrir).
+  - El botón Enviar (flecha ➤) envía el texto escrito y si estás grabando audio también detiene y envía el audio inmediatamente.
+  - Avatar de Pepa con animación de habla al leer respuestas por voz.
   - Botón de micrófono con estado VERDE LATIENDO (escuchando) y ROJO QUIETO (cortado/enviando).
   - Botón de micrófono y botón de enviar uno al lado del otro.
   - Íconos planos y simbólicos.
@@ -25,71 +26,71 @@
       title: "Pepa · ¿Tenés dudas?", placeholder: "Escribí tu pregunta…", send: "Enviar",
       greeting: "¡Hola! 👋 Soy Pepa. Puedo ayudarte a comprar, a registrarte en la plataforma de Greenway y a descubrir nuestros productos ecológicos. Si vas a Greenway, ¡allí en el icono del teléfono te atenderá mi hermana asistente! ¿En qué te ayudo hoy? 😊",
       navBtn: "Chat", tooLong: "Achicá un poco el mensaje, por favor.", error: "Algo falló. Intentá de nuevo en un momento.",
-      close: "Cerrar", soundOn: "Voz activada", soundOff: "Voz desactivada", micTitle: "Grabar mensaje de voz (Escuchar)",
-      micRecording: "Escuchando... Toca de nuevo para enviar", micStopping: "Enviando mensaje...", sendTitle: "Enviar mensaje"
+      close: "Cerrar", soundOn: "Voz activada", soundOff: "Voz desactivada", micTitle: "Grabar mensaje de voz",
+      micRecording: "Escuchando... Toca de nuevo o la flecha para enviar", micStopping: "Enviando mensaje...", sendTitle: "Enviar mensaje"
     },
     "es-mx": {
       title: "Pepa · ¿Tienes dudas?", placeholder: "Escribe tu pregunta…", send: "Enviar",
       greeting: "¡Hola! 👋 Soy Pepa. Puedo ayudarte a comprar, a registrarte en la plataforma de Greenway y a descubrir nuestros productos ecológicos. Si vas a Greenway, ¡allí en el icono del teléfono te atenderá mi hermana asistente! ¿En qué te ayudo hoy? 😊",
       navBtn: "Chat", tooLong: "Acorta un poco tu mensaje, por favor.", error: "Algo falló. Intenta de nuevo en un momento.",
       close: "Cerrar", soundOn: "Voz activada", soundOff: "Voz desactivada", micTitle: "Grabar mensaje de voz",
-      micRecording: "Escuchando... Toca de nuevo para enviar", micStopping: "Enviando mensaje...", sendTitle: "Enviar mensaje"
+      micRecording: "Escuchando... Toca de nuevo o la flecha para enviar", micStopping: "Enviando mensaje...", sendTitle: "Enviar mensaje"
     },
     "es-es": {
       title: "Pepa · ¿Tienes dudas?", placeholder: "Escribe tu pregunta…", send: "Enviar",
       greeting: "¡Hola! 👋 Soy Pepa. Puedo ayudarte a comprar, a registrarte en la plataforma de Greenway y a descubrir nuestros productos ecológicos. Si vas a Greenway, ¡allí en el icono del teléfono te atenderá mi hermana asistente! ¿En qué te ayudo hoy? 😊",
       navBtn: "Chat", tooLong: "Acorta un poco tu mensaje, por favor.", error: "Algo falló. Intenta de nuevo en un momento.",
       close: "Cerrar", soundOn: "Voz activada", soundOff: "Voz desactivada", micTitle: "Grabar mensaje de voz",
-      micRecording: "Escuchando... Toca de nuevo para enviar", micStopping: "Enviando mensaje...", sendTitle: "Enviar mensaje"
+      micRecording: "Escuchando... Toca de nuevo o la flecha para enviar", micStopping: "Enviando mensaje...", sendTitle: "Enviar mensaje"
     },
     "en-us": {
       title: "Pepa · Questions?", placeholder: "Type your question…", send: "Send",
       greeting: "Hi! 👋 I'm Pepa. I can help you buy, register on the Greenway platform, and discover our eco-friendly products. If you go to Greenway, my sister assistant will help you there at the phone icon! How can I help you today? 😊",
       navBtn: "Chat", tooLong: "Please shorten your message.", error: "Something went wrong. Please try again.",
       close: "Close", soundOn: "Voice enabled", soundOff: "Voice disabled", micTitle: "Record voice message",
-      micRecording: "Listening... Tap again to send", micStopping: "Sending message...", sendTitle: "Send message"
+      micRecording: "Listening... Tap again or arrow to send", micStopping: "Sending message...", sendTitle: "Send message"
     },
     "fr-fr": {
       title: "Pepa · Des questions ?", placeholder: "Posez votre question…", send: "Envoyer",
       greeting: "Bonjour ! 👋 Je suis Pepa. Je peux vous aider à acheter, à vous inscrire sur Greenway et à découvrir nos produits. Sur Greenway, ma sœur assistante vous accueillera sur l'icône du téléphone ! 😊",
       navBtn: "Chat", tooLong: "Veuillez raccourcir votre message.", error: "Une erreur est survenue. Veuillez réessayer.",
       close: "Fermer", soundOn: "Voix activée", soundOff: "Voix désactivée", micTitle: "Enregistrer un message vocal",
-      micRecording: "Écoute en cours... Appuyez pour envoyer", micStopping: "Envoi en cours...", sendTitle: "Envoyer le message"
+      micRecording: "Écoute en cours... Appuyez sur la flèche pour envoyer", micStopping: "Envoi en cours...", sendTitle: "Envoyer le message"
     },
     "de-de": {
       title: "Pepa · Fragen?", placeholder: "Stellen Sie Ihre Frage…", send: "Senden",
       greeting: "Hallo! 👋 Ich bin Pepa. Ich kann Ihnen beim Kauf, der Registrierung bei Greenway und dem Entdecken aller Produkte helfen. Bei Greenway hilft Ihnen meine Assistenten-Schwester am Telefon-Icon! 😊",
       navBtn: "Chat", tooLong: "Bitte kürzen Sie Ihre Nachricht.", error: "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
       close: "Schließen", soundOn: "Sprache aktiv", soundOff: "Sprache deaktiviert", micTitle: "Sprachnachricht aufnehmen",
-      micRecording: "Hört zu... Tippen zum Senden", micStopping: "Senden...", sendTitle: "Nachricht senden"
+      micRecording: "Hört zu... Pfeil zum Senden tippen", micStopping: "Senden...", sendTitle: "Nachricht senden"
     },
     "it-it": {
       title: "Pepa · Domande?", placeholder: "Scrivi la tua domanda…", send: "Invia",
       greeting: "Ciao! 👋 Sono Pepa. Posso aiutarti ad acquistare, registrarti su Greenway e scoprire tutti i nostri prodotti. Sulla piattaforma Greenway troverai mia sorella assistente all'icona del telefono! 😊",
       navBtn: "Chat", tooLong: "Per favore accorcia il tuo messaggio.", error: "Si è verificato un errore. Riprova tra poco.",
       close: "Chiudi", soundOn: "Voce attiva", soundOff: "Voce disattivata", micTitle: "Registra messaggio vocale",
-      micRecording: "Ascolto... Tocca per inviare", micStopping: "Invio in corso...", sendTitle: "Invia messaggio"
+      micRecording: "Ascolto... Tocca la freccia per inviare", micStopping: "Invio in corso...", sendTitle: "Invia messaggio"
     },
     "pt-br": {
       title: "Pepa · Dúvidas?", placeholder: "Digite sua pergunta…", send: "Enviar",
       greeting: "Olá! 👋 Sou a Pepa. Posso ajudar você a comprar, se cadastrar na Greenway e conhecer nossos produtos. Na plataforma da Greenway, minha irmã assistente vai te atender no ícone do telefone! 😊",
       navBtn: "Chat", tooLong: "Por favor encurte sua mensagem.", error: "Ocorreu um erro. Tente novamente em instantes.",
       close: "Fechar", soundOn: "Voz ativada", soundOff: "Voz desativada", micTitle: "Gravar mensagem de voz",
-      micRecording: "Ouvindo... Toque para enviar", micStopping: "Enviando mensagem...", sendTitle: "Enviar mensagem"
+      micRecording: "Ouvindo... Toque na seta para enviar", micStopping: "Enviando mensagem...", sendTitle: "Enviar mensagem"
     },
     "ru-ru": {
       title: "Пепа · Есть вопросы?", placeholder: "Напишите ваш вопрос…", send: "Отправить",
       greeting: "Привет! 👋 Я Пепа. Помогу оформить покупку, зарегистрироваться на Greenway и узнать обо всех эко-товарах. На платформе Greenway на иконке телефона вас встретит моя сестра-ассистент! 😊",
       navBtn: "Чат", tooLong: "Пожалуйста, сократите сообщение.", error: "Произошла ошибка. Попробуйте еще раз.",
       close: "Закрыть", soundOn: "Голос включен", soundOff: "Голос выключен", micTitle: "Записать голосовое сообщение",
-      micRecording: "Слушаю... Нажмите для отправки", micStopping: "Отправка...", sendTitle: "Отправить сообщение"
+      micRecording: "Слушаю... Нажмите стрелку для отправки", micStopping: "Отправка...", sendTitle: "Отправить сообщение"
     },
     "zh-hans": {
       title: "Pepa · 有疑问吗？", placeholder: "请输入您的问题…", send: "发送",
       greeting: "您好！👋 我是 Pepa。我可以帮您购买商品、在 Greenway 平台注册并了解所有环保产品。去 Greenway 平台时，我的姐妹助手会在电话图标处为您服务！😊",
       navBtn: "聊天", tooLong: "请缩短您的消息。", error: "出错了，请稍后再试。",
       close: "关闭", soundOn: "语音已开启", soundOff: "语音已关闭", micTitle: "录制语音消息",
-      micRecording: "正在聆听... 点击发送", micStopping: "发送中...", sendTitle: "发送消息"
+      micRecording: "正在聆听... 点击箭头发送", micStopping: "发送中...", sendTitle: "发送消息"
     }
   };
 
@@ -216,7 +217,14 @@
 
   let history = [];
   let opened = false;
+  let hasWelcomed = false;
   let voiceOutputEnabled = true;
+
+  // Variables globales de Grabación de Audio
+  let mediaRecorder = null;
+  let audioChunks = [];
+  let recording = false;
+  let autoStopTimer = null;
 
   soundBtn.addEventListener("click", () => {
     voiceOutputEnabled = !voiceOutputEnabled;
@@ -270,7 +278,8 @@
   function toggleChatWindow(state) {
     opened = typeof state === "boolean" ? state : !opened;
     win.classList.toggle("open", opened);
-    if (opened && history.length === 0) {
+    if (opened && !hasWelcomed) {
+      hasWelcomed = true;
       addBubble(t.greeting, "bot");
       if (voiceOutputEnabled) speak(t.greeting);
     }
@@ -291,9 +300,19 @@
     counterEl.textContent = `${textEl.value.length} / ${MAX_CHARS}`;
   });
   textEl.addEventListener("keydown", (e) => {
-    if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send(); }
+    if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); handleSendAction(); }
   });
-  sendBtn.addEventListener("click", send);
+
+  sendBtn.addEventListener("click", handleSendAction);
+
+  function handleSendAction() {
+    // Si se está grabando audio y se presiona la flecha, detiene y envía el audio inmediatamente
+    if (recording && mediaRecorder) {
+      stopRecordingAndSend();
+      return;
+    }
+    send();
+  }
 
   async function send() {
     const content = textEl.value.trim();
@@ -331,20 +350,19 @@
   // --------------------------------------------------------- Voz Entrada (Verde Latiendo / Rojo Cortado)
   const MAX_RECORDING_MS = 60000;
 
-  if (navigator.mediaDevices && window.MediaRecorder) {
-    let mediaRecorder = null;
-    let audioChunks = [];
-    let recording = false;
-    let autoStopTimer = null;
+  function stopRecordingAndSend() {
+    if (!recording || !mediaRecorder) return;
+    micBtn.classList.remove("listening");
+    micBtn.classList.add("stopping");
+    micBtn.textContent = "🛑";
+    micBtn.title = t.micStopping;
+    mediaRecorder.stop();
+  }
 
+  if (navigator.mediaDevices && window.MediaRecorder) {
     micBtn.addEventListener("click", async () => {
       if (recording) {
-        // Tocar de nuevo -> Rojo quieto (cortado/enviando)
-        micBtn.classList.remove("listening");
-        micBtn.classList.add("stopping");
-        micBtn.textContent = "🛑";
-        micBtn.title = t.micStopping;
-        mediaRecorder.stop();
+        stopRecordingAndSend();
         return;
       }
 
@@ -361,7 +379,7 @@
           micBtn.textContent = "📞";
           micBtn.title = t.micRecording;
           autoStopTimer = setTimeout(() => {
-            if (recording) mediaRecorder.stop();
+            if (recording) stopRecordingAndSend();
           }, MAX_RECORDING_MS);
         });
         mediaRecorder.addEventListener("stop", async () => {
