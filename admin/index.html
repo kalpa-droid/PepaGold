@@ -640,10 +640,12 @@
     }
     .post-card-actions {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
+      align-items: center;
       gap: 6px;
       padding-top: 12px;
       border-top: 1px solid rgba(212, 140, 144, 0.15);
+      overflow-x: auto;
     }
 
     /* Editor View */
@@ -1493,11 +1495,11 @@
             </div>
             <div class="post-card-actions">
               <button class="btn btn-secondary btn-sm" onclick="editArticle('${meta.slug}')">✏️ Editar</button>
-              <button class="btn btn-secondary btn-sm" style="background: #E8F5E9; color: #2E7D32; border-color: #A5D6A7;" onclick="copyArticlePlainText('${meta.slug}')">📄 Texto Puro</button>
+              <button class="btn btn-secondary btn-sm" style="background: #E8F5E9; color: #2E7D32; border-color: #A5D6A7; padding: 4px 10px; font-size: 14px;" onclick="copyArticlePlainText('${meta.slug}')" title="Copiar Texto Puro">📋</button>
               <button class="btn btn-secondary btn-sm" onclick="openImagesModal('${meta.slug}')">🖼️ Img</button>
               <button class="btn btn-secondary btn-sm" onclick="openTranslationsModal('${meta.slug}')">🌐 Trad</button>
               <button class="btn btn-secondary btn-sm" onclick="openMetadataModal('${meta.slug}')">⚙️ Meta</button>
-              <button class="btn btn-danger btn-sm" onclick="deleteArticle('${meta.slug}')">🗑️</button>
+              <button class="btn btn-danger btn-sm" onclick="deleteArticle('${meta.slug}')" title="Eliminar Artículo">🗑️</button>
             </div>
           </div>
         `;
