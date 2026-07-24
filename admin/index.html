@@ -2388,9 +2388,8 @@
               <p><b>Fenómeno Local:</b> ${parsed.meta.local_phenomenon || 'N/A'} (${parsed.meta.region_label || 'N/A'})</p>
               <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
               <div>${parsed.body.replace(/\n/g, '<br>')}</div>
-            <script src="/js/chat-widget.js" defer></script>
-</body>
-          </html>
+          <\/body>
+          <\/html>
         `);
       } catch (err) {
         showToast('Error al leer el archivo traducido: ' + err.message);
@@ -2446,8 +2445,7 @@
       const title = document.getElementById('ed-title').value;
       const body = document.getElementById('ed-body').value;
       const win = window.open('', '_blank');
-      win.document.write(`<html><head><title>${title}</title><style>body{font-family:sans-serif;padding:40px;max-width:800px;margin:0 auto;}</style></head><body><h1>${title}</h1><div>${body.replace(/\n/g, '<br>')}</div><script src="/js/chat-widget.js" defer></script>
-</body></html>`);
+      win.document.write(`<html><head><title>${title}</title><style>body{font-family:sans-serif;padding:40px;max-width:800px;margin:0 auto;}</style></head><body><h1>${title}</h1><div>${body.replace(/\n/g, '<br>')}</div><\/body><\/html>`);
     }
 
     // Auto-Init
