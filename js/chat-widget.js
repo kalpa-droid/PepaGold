@@ -1,8 +1,8 @@
 /*
   Widget de Chat Inteligente PepaGold — Asistente Pepa
-  - Respuestas ultra concisas y naturales (1 a 2 oraciones).
-  - Sin repeticiones de presentación ni enlaces desordenados.
-  - Bienvenida única y conversacional.
+  - Detección y traducción 100% dinámica del widget (título, bienvenida, placeholder, botones).
+  - Normalización de claves (en-us, fr-fr, de-de, it-it, pt-br, ru-ru, zh-hans, es-mx, es-es, es-ar).
+  - Respuestas ultra concisas y naturales.
   - Avatar animado de Pepa al hablar por voz.
   - Botón de micrófono VERDE LATIENDO (escuchando) y ROJO QUIETO (cortado/enviando).
   - Botón de envío que procesa texto y detiene/envía audio activo.
@@ -67,13 +67,14 @@
       title: "Pepa · Domande?", placeholder: "Scrivi la tua domanda…", send: "Invia",
       greeting: "Ciao! 👋 Sono Pepa. Posso aiutarti con consigli di skincare, mostrarti i nostri articoli del blog o aiutarti a registrarti su Greenway. Di cosa vorresti parlare? 😊",
       navBtn: "Chat", tooLong: "Per favore accorcia il tuo messaggio.", error: "Si è verificato un errore. Riprova tra poco.",
-      close: "Chiudi", soundOn: "Voce attiva", soundOff: "Voce disattivata", micTitle: "Registra messaggio vocale",
+      close: "Chiudi", soundOn: "Voce attiva", soundOff: "Voice disattivata", micTitle: "Registra messaggio vocale",
       micRecording: "Ascolto... Tocca la freccia per inviare", micStopping: "Invio in corso...", sendTitle: "Invia messaggio"
     },
     "pt-br": {
       title: "Pepa · Dúvidas?", placeholder: "Digite sua pergunta…", send: "Enviar",
       greeting: "Olá! 👋 Sou a Pepa. Posso te ajudar com dúvidas de skincare, mostrar nossos artigos do blog ou te dar uma mão para se cadastrar na Greenway. Sobre o que quer conversar hoje? 😊",
-      navBtn: "Fechar", soundOn: "Voz ativada", soundOff: "Voz desativada", micTitle: "Gravar mensagem de voz",
+      navBtn: "Chat", tooLong: "Por favor encurte sua mensagem.", error: "Ocorreu um erro. Tente novamente.",
+      close: "Fechar", soundOn: "Voz ativada", soundOff: "Voz desativada", micTitle: "Gravar mensagem de voz",
       micRecording: "Ouvindo... Toque na seta para enviar", micStopping: "Enviando mensagem...", sendTitle: "Enviar mensagem"
     },
     "ru-ru": {
@@ -92,21 +93,55 @@
     }
   };
 
+  // Alias para códigos de idioma cortos
+  STRINGS["en"] = STRINGS["en-us"];
+  STRINGS["fr"] = STRINGS["fr-fr"];
+  STRINGS["de"] = STRINGS["de-de"];
+  STRINGS["it"] = STRINGS["it-it"];
+  STRINGS["pt"] = STRINGS["pt-br"];
+  STRINGS["ru"] = STRINGS["ru-ru"];
+  STRINGS["zh"] = STRINGS["zh-hans"];
+  STRINGS["es"] = STRINGS["es-ar"];
+
+  function normalizeLocaleKey(code) {
+    if (!code) return "";
+    const c = code.toLowerCase().trim();
+    if (c === "en" || c === "en-us" || c.startsWith("en")) return "en-us";
+    if (c === "fr" || c === "fr-fr" || c.startsWith("fr")) return "fr-fr";
+    if (c === "de" || c === "de-de" || c.startsWith("de")) return "de-de";
+    if (c === "it" || c === "it-it" || c.startsWith("it")) return "it-it";
+    if (c === "pt" || c === "pt-br" || c.startsWith("pt")) return "pt-br";
+    if (c === "ru" || c === "ru-ru" || c.startsWith("ru")) return "ru-ru";
+    if (c === "zh" || c === "zh-hans" || c.startsWith("zh")) return "zh-hans";
+    if (c === "mx" || c === "es-mx") return "es-mx";
+    if (c === "es" || c === "es-es") return "es-es";
+    if (c === "ar" || c === "es-ar") return "es-ar";
+    return "";
+  }
+
   function detectPageLocale() {
     const path = window.location.pathname.toLowerCase();
-    if (path.startsWith("/mx/") || path.includes("/es-mx/")) return "es-mx";
-    if (path.startsWith("/es/") || path.includes("/es-es/")) return "es-es";
-    if (path.startsWith("/us/") || path.startsWith("/en/") || path.includes("/en-us/")) return "en-us";
-    if (path.startsWith("/fr/") || path.includes("/fr-fr/")) return "fr-fr";
-    if (path.startsWith("/de/") || path.includes("/de-de/")) return "de-de";
-    if (path.startsWith("/it/") || path.includes("/it-it/")) return "it-it";
-    if (path.startsWith("/pt/") || path.includes("/pt-br/")) return "pt-br";
-    if (path.startsWith("/ru/") || path.includes("/ru-ru/")) return "ru-ru";
-    if (path.startsWith("/zh/") || path.includes("/zh-hans/")) return "zh-hans";
+    
+    // 1. Detección por ruta de URL
+    if (path.includes("/mx/") || path.includes("/es-mx/")) return "es-mx";
+    if (path.includes("/es/") || path.includes("/es-es/")) return "es-es";
+    if (path.includes("/us/") || path.includes("/en/") || path.includes("/en-us/")) return "en-us";
+    if (path.includes("/fr/") || path.includes("/fr-fr/")) return "fr-fr";
+    if (path.includes("/de/") || path.includes("/de-de/")) return "de-de";
+    if (path.includes("/it/") || path.includes("/it-it/")) return "it-it";
+    if (path.includes("/pt/") || path.includes("/pt-br/")) return "pt-br";
+    if (path.includes("/ru/") || path.includes("/ru-ru/")) return "ru-ru";
+    if (path.includes("/zh/") || path.includes("/zh-hans/")) return "zh-hans";
 
-    const docLang = (document.documentElement.lang || "").toLowerCase();
-    if (STRINGS[docLang]) return docLang;
-    if (docLang.startsWith("es")) return "es-ar";
+    // 2. Detección por atributo html lang
+    const docLang = normalizeLocaleKey(document.documentElement.lang);
+    if (docLang) return docLang;
+
+    // 3. Detección por preferencia en localStorage
+    try {
+      const stored = normalizeLocaleKey(localStorage.getItem("preferred-lang"));
+      if (stored) return stored;
+    } catch (e) {}
 
     return "es-ar";
   }
