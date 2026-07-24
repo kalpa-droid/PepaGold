@@ -13,6 +13,19 @@ const MAX_HISTORY_MESSAGES = 10;
 const LEADS_FILE = path.join(process.cwd(), "admin", "leads.json");
 const LEAD_BLOCK_RE = /<<<LEAD_DATA>>>([\s\S]*?)<<<END_LEAD_DATA>>>/;
 
+const LOCALE_LANG_INSTRUCTIONS = {
+  "en-us": "\nCRITICAL LANGUAGE MANDATE: The user is browsing the English site. You MUST reply EXCLUSIVELY in ENGLISH.",
+  "fr-fr": "\nCRITICAL LANGUAGE MANDATE: The user is browsing the French site. You MUST reply EXCLUSIVELY in FRENCH.",
+  "de-de": "\nCRITICAL LANGUAGE MANDATE: The user is browsing the German site. You MUST reply EXCLUSIVELY in GERMAN.",
+  "it-it": "\nCRITICAL LANGUAGE MANDATE: The user is browsing the Italian site. You MUST reply EXCLUSIVELY in ITALIAN.",
+  "pt-br": "\nCRITICAL LANGUAGE MANDATE: The user is browsing the Portuguese site. You MUST reply EXCLUSIVELY in PORTUGUESE.",
+  "ru-ru": "\nCRITICAL LANGUAGE MANDATE: The user is browsing the Russian site. You MUST reply EXCLUSIVELY in RUSSIAN.",
+  "zh-hans": "\nCRITICAL LANGUAGE MANDATE: The user is browsing the Chinese site. You MUST reply EXCLUSIVELY in SIMPLIFIED CHINESE.",
+  "es-ar": "\nCRITICAL LANGUAGE MANDATE: Respondé en ESPAÑOL Rioplatense.",
+  "es-mx": "\nCRITICAL LANGUAGE MANDATE: Responde en ESPAÑOL de México.",
+  "es-es": "\nCRITICAL LANGUAGE MANDATE: Responde en ESPAÑOL de España."
+};
+
 function extractAndSaveStructuredLead(rawText, userMessages) {
   let cleanText = rawText;
   let leadObj = null;
@@ -101,7 +114,10 @@ module.exports = async (req, res) => {
   }
 
   const trimmedHistory = messages.slice(-MAX_HISTORY_MESSAGES);
-  const fullMessages = [{ role: "system", content: SYSTEM_PROMPT }, ...trimmedHistory];
+  const langMandate = LOCALE_LANG_INSTRUCTIONS[(locale || "").toLowerCase()] || "\nCRITICAL LANGUAGE MANDATE: Respond in the exact language of the user or page locale.";
+  const dynamicSystemPrompt = SYSTEM_PROMPT + langMandate;
+
+  const fullMessages = [{ role: "system", content: dynamicSystemPrompt }, ...trimmedHistory];
 
   try {
     const rawAnswer = await askGroqWithContinuation(fullMessages);
