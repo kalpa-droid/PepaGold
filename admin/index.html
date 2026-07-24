@@ -924,6 +924,7 @@
           <button class="btn btn-secondary btn-sm" onclick="switchView('dashboard')">← Volver al Dashboard</button>
           <div style="display: flex; gap: 10px;">
             <button class="btn btn-secondary btn-sm" onclick="previewArticleHtml()">👁️ Vista Previa</button>
+            <button class="btn btn-secondary btn-sm" style="background: #E8F5E9; color: #2E7D32; border-color: #A5D6A7;" onclick="copyEditorPlainText()">📄 Copiar Texto Puro</button>
             <button class="btn btn-primary btn-sm" onclick="saveArticleFromEditor()">💾 Guardar en GitHub</button>
           </div>
         </div>
@@ -1492,6 +1493,7 @@
             </div>
             <div class="post-card-actions">
               <button class="btn btn-secondary btn-sm" onclick="editArticle('${meta.slug}')">✏️ Editar</button>
+              <button class="btn btn-secondary btn-sm" style="background: #E8F5E9; color: #2E7D32; border-color: #A5D6A7;" onclick="copyArticlePlainText('${meta.slug}')">📄 Texto Puro</button>
               <button class="btn btn-secondary btn-sm" onclick="openImagesModal('${meta.slug}')">🖼️ Img</button>
               <button class="btn btn-secondary btn-sm" onclick="openTranslationsModal('${meta.slug}')">🌐 Trad</button>
               <button class="btn btn-secondary btn-sm" onclick="openMetadataModal('${meta.slug}')">⚙️ Meta</button>
@@ -2439,6 +2441,91 @@
           <button class="btn btn-secondary btn-sm" onclick="openImagesModal('${a.meta.slug}')">🖼️ Abrir Carpeta</button>
         </div>
       `).join('');
+    }
+
+    
+    // Purificador de Texto Puro (Sin códigos, Markdown ni HTML)
+    function purifyMarkdownToPlainText(title, rawBody) {
+      if (!rawBody) return title || '';
+      let text = rawBody;
+
+      // Eliminar Frontmatter YAML (--- ... ---)
+      text = text.replace(/^---[\s\S]*?---\n?/, '');
+
+      // Procesar contenedores especiales :::tip, :::info, :::stat, :::checklist
+      text = text.replace(/:::tip\s*([\s\S]*?):::/gi, (m, p) => `\n\n[CONSEJO PRÁCTICO]\n${p.trim()}\n\n`);
+      text = text.replace(/:::info\s*([\s\S]*?):::/gi, (m, p) => `\n\n[INFORMACIÓN IMPORTANTE]\n${p.trim()}\n\n`);
+      text = text.replace(/:::stat\s*([\s\S]*?):::/gi, (m, p) => `\n\n[DATO CLAVE]\n${p.trim()}\n\n`);
+      text = text.replace(/:::checklist\s*([\s\S]*?):::/gi, (m, p) => `\n\n[LISTA DE COMPROBACIÓN]\n${p.trim()}\n\n`);
+
+      // Eliminar etiquetas HTML preservando el contenido
+      text = text.replace(/<br\s*\/?>/gi, '\n');
+      text = text.replace(/<\/(p|div|h1|h2|h3|h4|h5|h6|li|tr|blockquote)>/gi, '\n');
+      text = text.replace(/<[^>]+>/g, '');
+
+      // Convertir Títulos Markdown (#, ##, ###) en Encabezados Limpios en Mayúsculas
+      text = text.replace(/^(#{1,6})\s+(.+)$/gm, (match, hashes, heading) => {
+        const cleanHeading = heading.replace(/[*_]/g, '').trim().toUpperCase();
+        if (hashes.length <= 2) {
+          return `\n\n====================================================\n${cleanHeading}\n====================================================`;
+        }
+        return `\n\n--- ${cleanHeading} ---`;
+      });
+
+      // Limpiar imágenes y enlaces
+      text = text.replace(/!\[([^\]]*)\]\([^)]+\)/g, '');
+      text = text.replace(/\[([^\]]+)\]\((https?:\/\/[^\s\)]+)\)/g, '$1 ($2)');
+      text = text.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
+
+      // Limpiar negritas, cursivas, código inline y bloques
+      text = text.replace(/```[\s\S]*?```/g, (m) => m.replace(/```[a-z]*/gi, '').trim());
+      text = text.replace(/`([^`]+)`/g, '$1');
+      text = text.replace(/\*\*([^*]+)\*\*/g, '$1');
+      text = text.replace(/\*([^*]+)\*/g, '$1');
+      text = text.replace(/__([^_]+)__/g, '$1');
+      text = text.replace(/_([^_]+)_/g, '$1');
+
+      // Formatear viñetas de listas y checkboxes
+      text = text.replace(/^\s*[-*+]\s+\[[ xX]\]\s*/gm, '• ');
+      text = text.replace(/^\s*[-*+]\s+/gm, '• ');
+      text = text.replace(/^\s*>\s*/gm, '');
+
+      // Normalizar saltos de línea y espacios
+      text = text.replace(/[ \t]+/g, ' ');
+      text = text.replace(/\n\s*\n\s*\n+/g, '\n\n');
+      text = text.trim();
+
+      const header = `====================================================\n${(title || 'ARTÍCULO').toUpperCase()}\n====================================================\n\n`;
+      return header + text;
+    }
+
+    function copyArticlePlainText(slug) {
+      const art = articlesList.find(a => a.meta.slug === slug);
+      if (!art) {
+        showToast('⚠️ No se encontró el artículo.');
+        return;
+      }
+      const purified = purifyMarkdownToPlainText(art.meta.title, art.body);
+      navigator.clipboard.writeText(purified).then(() => {
+        showToast('📄 ¡Texto puro copiado al portapapeles! Sin códigos ni marcas HTML.');
+      }).catch(err => {
+        alert(purified);
+      });
+    }
+
+    function copyEditorPlainText() {
+      const title = document.getElementById('ed-title').value;
+      const body = document.getElementById('ed-body').value;
+      if (!title && !body) {
+        showToast('⚠️ El editor está vacío.');
+        return;
+      }
+      const purified = purifyMarkdownToPlainText(title, body);
+      navigator.clipboard.writeText(purified).then(() => {
+        showToast('📄 ¡Texto puro del editor copiado al portapapeles!');
+      }).catch(err => {
+        alert(purified);
+      });
     }
 
     function previewArticleHtml() {
