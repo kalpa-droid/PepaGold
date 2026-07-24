@@ -1,12 +1,11 @@
 /*
   Widget de Chat Inteligente PepaGold — Asistente Pepa
-  - Bienvenida de Pepa única (sin duplicar 3 veces al abrir).
-  - El botón Enviar (flecha ➤) envía el texto escrito y si estás grabando audio también detiene y envía el audio inmediatamente.
-  - Avatar de Pepa con animación de habla al leer respuestas por voz.
-  - Botón de micrófono con estado VERDE LATIENDO (escuchando) y ROJO QUIETO (cortado/enviando).
-  - Botón de micrófono y botón de enviar uno al lado del otro.
-  - Íconos planos y simbólicos.
-  - Traducción 100% multilingüe en los 10 locales.
+  - Respuestas ultra concisas y naturales (1 a 2 oraciones).
+  - Sin repeticiones de presentación ni enlaces desordenados.
+  - Bienvenida única y conversacional.
+  - Avatar animado de Pepa al hablar por voz.
+  - Botón de micrófono VERDE LATIENDO (escuchando) y ROJO QUIETO (cortado/enviando).
+  - Botón de envío que procesa texto y detiene/envía audio activo.
 */
 (function () {
   "use strict";
@@ -24,70 +23,69 @@
   const STRINGS = {
     "es-ar": {
       title: "Pepa · ¿Tenés dudas?", placeholder: "Escribí tu pregunta…", send: "Enviar",
-      greeting: "¡Hola! 👋 Soy Pepa. Puedo ayudarte a comprar, a registrarte en la plataforma de Greenway y a descubrir nuestros productos ecológicos. Si vas a Greenway, ¡allí en el icono del teléfono te atenderá mi hermana asistente! ¿En qué te ayudo hoy? 😊",
+      greeting: "¡Hola! 👋 Soy Pepa. Te puedo ayudar con dudas de skincare, mostrarte nuestros artículos del blog o darte una mano para registrarte en Greenway. ¿De qué te gustaría charlar hoy? 😊",
       navBtn: "Chat", tooLong: "Achicá un poco el mensaje, por favor.", error: "Algo falló. Intentá de nuevo en un momento.",
       close: "Cerrar", soundOn: "Voz activada", soundOff: "Voz desactivada", micTitle: "Grabar mensaje de voz",
       micRecording: "Escuchando... Toca de nuevo o la flecha para enviar", micStopping: "Enviando mensaje...", sendTitle: "Enviar mensaje"
     },
     "es-mx": {
       title: "Pepa · ¿Tienes dudas?", placeholder: "Escribe tu pregunta…", send: "Enviar",
-      greeting: "¡Hola! 👋 Soy Pepa. Puedo ayudarte a comprar, a registrarte en la plataforma de Greenway y a descubrir nuestros productos ecológicos. Si vas a Greenway, ¡allí en el icono del teléfono te atenderá mi hermana asistente! ¿En qué te ayudo hoy? 😊",
+      greeting: "¡Hola! 👋 Soy Pepa. Te puedo ayudar con dudas de skincare, mostrarte nuestros artículos del blog o darte una mano para registrarte en Greenway. ¿De qué te gustaría platicar hoy? 😊",
       navBtn: "Chat", tooLong: "Acorta un poco tu mensaje, por favor.", error: "Algo falló. Intenta de nuevo en un momento.",
       close: "Cerrar", soundOn: "Voz activada", soundOff: "Voz desactivada", micTitle: "Grabar mensaje de voz",
       micRecording: "Escuchando... Toca de nuevo o la flecha para enviar", micStopping: "Enviando mensaje...", sendTitle: "Enviar mensaje"
     },
     "es-es": {
       title: "Pepa · ¿Tienes dudas?", placeholder: "Escribe tu pregunta…", send: "Enviar",
-      greeting: "¡Hola! 👋 Soy Pepa. Puedo ayudarte a comprar, a registrarte en la plataforma de Greenway y a descubrir nuestros productos ecológicos. Si vas a Greenway, ¡allí en el icono del teléfono te atenderá mi hermana asistente! ¿En qué te ayudo hoy? 😊",
+      greeting: "¡Hola! 👋 Soy Pepa. Te puedo ayudar con dudas de skincare, mostrarte nuestros artículos del blog o darte una mano para registrarte en Greenway. ¿De qué te gustaría hablar hoy? 😊",
       navBtn: "Chat", tooLong: "Acorta un poco tu mensaje, por favor.", error: "Algo falló. Intenta de nuevo en un momento.",
       close: "Cerrar", soundOn: "Voz activada", soundOff: "Voz desactivada", micTitle: "Grabar mensaje de voz",
       micRecording: "Escuchando... Toca de nuevo o la flecha para enviar", micStopping: "Enviando mensaje...", sendTitle: "Enviar mensaje"
     },
     "en-us": {
       title: "Pepa · Questions?", placeholder: "Type your question…", send: "Send",
-      greeting: "Hi! 👋 I'm Pepa. I can help you buy, register on the Greenway platform, and discover our eco-friendly products. If you go to Greenway, my sister assistant will help you there at the phone icon! How can I help you today? 😊",
+      greeting: "Hi! 👋 I'm Pepa. I can help with skincare tips, show you our blog articles, or help you register on Greenway. What would you like to talk about today? 😊",
       navBtn: "Chat", tooLong: "Please shorten your message.", error: "Something went wrong. Please try again.",
       close: "Close", soundOn: "Voice enabled", soundOff: "Voice disabled", micTitle: "Record voice message",
       micRecording: "Listening... Tap again or arrow to send", micStopping: "Sending message...", sendTitle: "Send message"
     },
     "fr-fr": {
       title: "Pepa · Des questions ?", placeholder: "Posez votre question…", send: "Envoyer",
-      greeting: "Bonjour ! 👋 Je suis Pepa. Je peux vous aider à acheter, à vous inscrire sur Greenway et à découvrir nos produits. Sur Greenway, ma sœur assistante vous accueillera sur l'icône du téléphone ! 😊",
+      greeting: "Bonjour ! 👋 Je suis Pepa. Je peux vous aider avec vos soins de la peau, vous montrer nos articles de blog ou vous aider à vous inscrire sur Greenway. De quoi aimeriez-vous parler ? 😊",
       navBtn: "Chat", tooLong: "Veuillez raccourcir votre message.", error: "Une erreur est survenue. Veuillez réessayer.",
       close: "Fermer", soundOn: "Voix activée", soundOff: "Voix désactivée", micTitle: "Enregistrer un message vocal",
       micRecording: "Écoute en cours... Appuyez sur la flèche pour envoyer", micStopping: "Envoi en cours...", sendTitle: "Envoyer le message"
     },
     "de-de": {
       title: "Pepa · Fragen?", placeholder: "Stellen Sie Ihre Frage…", send: "Senden",
-      greeting: "Hallo! 👋 Ich bin Pepa. Ich kann Ihnen beim Kauf, der Registrierung bei Greenway und dem Entdecken aller Produkte helfen. Bei Greenway hilft Ihnen meine Assistenten-Schwester am Telefon-Icon! 😊",
+      greeting: "Hallo! 👋 Ich bin Pepa. Ich kann Ihnen bei Hautpflegefragen helfen, Ihnen Blog-Artikel zeigen oder Ihnen bei der Registrierung bei Greenway helfen. Worüber möchten Sie sprechen? 😊",
       navBtn: "Chat", tooLong: "Bitte kürzen Sie Ihre Nachricht.", error: "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
       close: "Schließen", soundOn: "Sprache aktiv", soundOff: "Sprache deaktiviert", micTitle: "Sprachnachricht aufnehmen",
       micRecording: "Hört zu... Pfeil zum Senden tippen", micStopping: "Senden...", sendTitle: "Nachricht senden"
     },
     "it-it": {
       title: "Pepa · Domande?", placeholder: "Scrivi la tua domanda…", send: "Invia",
-      greeting: "Ciao! 👋 Sono Pepa. Posso aiutarti ad acquistare, registrarti su Greenway e scoprire tutti i nostri prodotti. Sulla piattaforma Greenway troverai mia sorella assistente all'icona del telefono! 😊",
+      greeting: "Ciao! 👋 Sono Pepa. Posso aiutarti con consigli di skincare, mostrarti i nostri articoli del blog o aiutarti a registrarti su Greenway. Di cosa vorresti parlare? 😊",
       navBtn: "Chat", tooLong: "Per favore accorcia il tuo messaggio.", error: "Si è verificato un errore. Riprova tra poco.",
       close: "Chiudi", soundOn: "Voce attiva", soundOff: "Voce disattivata", micTitle: "Registra messaggio vocale",
       micRecording: "Ascolto... Tocca la freccia per inviare", micStopping: "Invio in corso...", sendTitle: "Invia messaggio"
     },
     "pt-br": {
       title: "Pepa · Dúvidas?", placeholder: "Digite sua pergunta…", send: "Enviar",
-      greeting: "Olá! 👋 Sou a Pepa. Posso ajudar você a comprar, se cadastrar na Greenway e conhecer nossos produtos. Na plataforma da Greenway, minha irmã assistente vai te atender no ícone do telefone! 😊",
-      navBtn: "Chat", tooLong: "Por favor encurte sua mensagem.", error: "Ocorreu um erro. Tente novamente em instantes.",
-      close: "Fechar", soundOn: "Voz ativada", soundOff: "Voz desativada", micTitle: "Gravar mensagem de voz",
+      greeting: "Olá! 👋 Sou a Pepa. Posso te ajudar com dúvidas de skincare, mostrar nossos artigos do blog ou te dar uma mão para se cadastrar na Greenway. Sobre o que quer conversar hoje? 😊",
+      navBtn: "Fechar", soundOn: "Voz ativada", soundOff: "Voz desativada", micTitle: "Gravar mensagem de voz",
       micRecording: "Ouvindo... Toque na seta para enviar", micStopping: "Enviando mensagem...", sendTitle: "Enviar mensagem"
     },
     "ru-ru": {
       title: "Пепа · Есть вопросы?", placeholder: "Напишите ваш вопрос…", send: "Отправить",
-      greeting: "Привет! 👋 Я Пепа. Помогу оформить покупку, зарегистрироваться на Greenway и узнать обо всех эко-товарах. На платформе Greenway на иконке телефона вас встретит моя сестра-ассистент! 😊",
+      greeting: "Привет! 👋 Я Пепа. Помогу с уходом за кожей, подскажу интересные статьи в блоге или помогу зарегистрироваться на Greenway. О чем хотите пообщаться? 😊",
       navBtn: "Чат", tooLong: "Пожалуйста, сократите сообщение.", error: "Произошла ошибка. Попробуйте еще раз.",
       close: "Закрыть", soundOn: "Голос включен", soundOff: "Голос выключен", micTitle: "Записать голосовое сообщение",
       micRecording: "Слушаю... Нажмите стрелку для отправки", micStopping: "Отправка...", sendTitle: "Отправить сообщение"
     },
     "zh-hans": {
       title: "Pepa · 有疑问吗？", placeholder: "请输入您的问题…", send: "发送",
-      greeting: "您好！👋 我是 Pepa。我可以帮您购买商品、在 Greenway 平台注册并了解所有环保产品。去 Greenway 平台时，我的姐妹助手会在电话图标处为您服务！😊",
+      greeting: "您好！👋 我是 Pepa。我可以为您解答护肤疑问、推荐博客文章，或协助您在 Greenway 注册。今天想聊些什么呢？😊",
       navBtn: "聊天", tooLong: "请缩短您的消息。", error: "出错了，请稍后再试。",
       close: "关闭", soundOn: "语音已开启", soundOff: "语音已关闭", micTitle: "录制语音消息",
       micRecording: "正在聆听... 点击箭头发送", micStopping: "发送中...", sendTitle: "发送消息"
@@ -288,14 +286,6 @@
   btn.addEventListener("click", () => toggleChatWindow());
   closeBtn.addEventListener("click", () => toggleChatWindow(false));
 
-  document.addEventListener("click", (e) => {
-    const navBtn = e.target.closest("#pg-chat-nav-btn, .pg-chat-nav-btn");
-    if (navBtn) {
-      e.preventDefault();
-      toggleChatWindow(true);
-    }
-  });
-
   textEl.addEventListener("input", () => {
     counterEl.textContent = `${textEl.value.length} / ${MAX_CHARS}`;
   });
@@ -306,7 +296,6 @@
   sendBtn.addEventListener("click", handleSendAction);
 
   function handleSendAction() {
-    // Si se está grabando audio y se presiona la flecha, detiene y envía el audio inmediatamente
     if (recording && mediaRecorder) {
       stopRecordingAndSend();
       return;
@@ -433,7 +422,7 @@
     }
   }
 
-  // ---------------------------------------------------------- Voz Salida con Avatar Hablando
+  // ---------------------------------------------------------- Voz Salida con Avatar Hablando y Lectura Fluida
   let availableVoices = [];
   function loadVoices() {
     if ("speechSynthesis" in window) {
