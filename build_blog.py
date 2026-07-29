@@ -1055,14 +1055,29 @@ def update_sitemap(new_urls):
         content = f.read()
     today = datetime.date.today().isoformat()
     added = 0
+    updated = 0
     for url in new_urls:
-        if f"<loc>{xml_escape(url)}</loc>" in content: continue
+        loc_tag = f"<loc>{xml_escape(url)}</loc>"
+        if loc_tag in content:
+            # Ya existe en el sitemap: le actualizamos el <lastmod> a hoy en cada
+            # build, así Google recibe la señal de "esto pudo haber cambiado" y
+            # prioriza volver a rastrearla, en vez de quedar con una fecha vieja
+            # congelada desde la primera vez que se creó la página.
+            pattern = re.compile(re.escape(loc_tag) + r"(.*?)<lastmod>.*?</lastmod>", re.DOTALL)
+            new_content, n = pattern.subn(
+                lambda m: loc_tag + m.group(1) + f"<lastmod>{today}</lastmod>", content, count=1
+            )
+            if n:
+                content = new_content
+                updated += 1
+            continue
+
         block = f'\n  <url>\n    <loc>{xml_escape(url)}</loc>\n    <lastmod>{today}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>\n'
         content = content.replace("</urlset>", block + "</urlset>")
         added += 1
     with open(SITEMAP_PATH, "w", encoding="utf-8") as f:
         f.write(content)
-    print(f"sitemap.xml actualizado: {added} URL(s) nueva(s).")
+    print(f"sitemap.xml actualizado: {added} URL(s) nueva(s), {updated} lastmod refrescado(s).")
 
 def cleanup_orphan_images(all_meta):
     referenced = set()
