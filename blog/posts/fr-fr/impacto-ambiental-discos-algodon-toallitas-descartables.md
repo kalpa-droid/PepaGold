@@ -21,8 +21,6 @@ local_phenomenon: >-
 cover_image: ''
 media:
   - >-
-    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
-  - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
 author: PepaGold
 epigraph:
@@ -98,7 +96,7 @@ L'industrie cosmétique traditionnelle nous a habitués à la culture du jetable
 
 Il existe un mythe selon lequel le coton étant une plante, l'utilisation de disques jetables serait 100 % écologique. La réalité est bien différente :
 
-![Consommation massive d'eau et de pesticides dans la culture industrielle du coton](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp)
+
 
 - **Empreinte hydrique extrême :** Pour produire un seul kilo de coton industriel, il faut entre **10 000 et 20 000 litres d'eau**, épuisant les réserves d'eau douce des régions agricoles.
 - **Utilisation massive de pesticides :** La culture du coton occupe à peine 2,4 % des terres cultivables mondiales, mais consomme **24 % des insecticides globaux** et 11 % des pesticides synthétiques.
