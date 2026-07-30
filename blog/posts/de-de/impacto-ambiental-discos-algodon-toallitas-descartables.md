@@ -1,10 +1,12 @@
 ---
 article_id: PG-011
-title: Wie viel Müll verursacht Ihre Pflegeroutine? Die Umweltbelastung von Wattepads
+title: >-
+  Wie viel Müll verursacht Ihre Pflegeroutine? Die Umweltbelastung von Wattepads
   und Feuchttüchern
-description: 'Entdecken Sie die ökologischen Kosten von Einwegprodukten in der Hautpflege:
-  Wasserverbrauch, Pestizide und Mikroplastik. Wie nachhaltige Mikrofaser die Kosmetik
-  revolutioniert.'
+description: >-
+  Entdecken Sie die ökologischen Kosten von Einwegprodukten in der Hautpflege:
+  Wasserverbrauch, Pestizide und Mikroplastik. Wie nachhaltige Mikrofaser die
+  Kosmetik revolutioniert.
 slug: impacto-ambiental-discos-algodon-toallitas-descartables
 date: '2026-07-30'
 date_created: '2026-07-30'
@@ -14,58 +16,77 @@ category: sostenibilidad
 category_label: 🌱 Nachhaltigkeit & Ökologie
 concept: impacto-ambiental-discos-algodon-toallitas-descartables
 local_phenomenon: Verschmutzung durch tägliche Einwegprodukte und massive Mikroplastikbelastung
-cover_image: /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
+cover_image: ''
 media:
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
 author: PepaGold
 epigraph:
-  text: Wahre grüne Schönheit schützt nicht nur Ihre Hautbarriere; sie bewahrt die
+  text: >-
+    Wahre grüne Schönheit schützt nicht nur Ihre Hautbarriere; sie bewahrt die
     Ökosysteme, von denen das Leben abhängt.
   author: Dra. PepaGold
 summary:
-- Milliarden Einweg-Wattepads und Abschminktücher werden jährlich entsorgt und benötigen
-  bis zu 500 Jahre für den Abbau.
-- Der industrielle Baumwollanbau verbraucht bis zu 20.000 Liter Wasser pro Kilo und
-  erfordert den Einsatz starker Pestizide.
-- Abschminktücher enthalten synthetische Plastikfasern, die Abwasserrohre verstopfen
-  und Mikroplastik in den Ozeanen freisetzen.
-- Der Wechsel zu wiederverwendbaren UpPoly-Mikrofasern ermöglicht die Tiefenreinigung
-  nur mit Wasser und spart 100 % des täglichen Gesichtsabfalls.
+  - >-
+    Milliarden Einweg-Wattepads und Abschminktücher werden jährlich entsorgt und
+    benötigen bis zu 500 Jahre für den Abbau.
+  - >-
+    Der industrielle Baumwollanbau verbraucht bis zu 20.000 Liter Wasser pro
+    Kilo und erfordert den Einsatz starker Pestizide.
+  - >-
+    Abschminktücher enthalten synthetische Plastikfasern, die Abwasserrohre
+    verstopfen und Mikroplastik in den Ozeanen freisetzen.
+  - >-
+    Der Wechsel zu wiederverwendbaren UpPoly-Mikrofasern ermöglicht die
+    Tiefenreinigung nur mit Wasser und spart 100 % des täglichen
+    Gesichtsabfalls.
 faq:
-- q: Sind Wattepads nicht biologisch abbaubar, da Baumwolle natürlich ist?
-  a: Obwohl reine Baumwolle abbaubar ist, werden industriell gefertigte Pads mit Chlor
-    gebleicht und mit Kunststoffbindemitteln versetzt, die den biologischen Abbau
-    verhindern.
-- q: Wie viel Geld und Müll spart man durch wiederverwendbare Mikrofaser?
-  a: Eine Person verbraucht jährlich etwa 700 bis 1.500 Einwegpads oder Tücher. Ein
-    wiederverwendbares Set beseitigt diesen Müllberg vollständig und spart viel Geld.
+  - q: Sind Wattepads nicht biologisch abbaubar, da Baumwolle natürlich ist?
+    a: >-
+      Obwohl reine Baumwolle abbaubar ist, werden industriell gefertigte Pads
+      mit Chlor gebleicht und mit Kunststoffbindemitteln versetzt, die den
+      biologischen Abbau verhindern.
+  - q: Wie viel Geld und Müll spart man durch wiederverwendbare Mikrofaser?
+    a: >-
+      Eine Person verbraucht jährlich etwa 700 bis 1.500 Einwegpads oder Tücher.
+      Ein wiederverwendbares Set beseitigt diesen Müllberg vollständig und spart
+      viel Geld.
 image_prompts:
-- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9): High-end editorial photography
-  showing a striking contrast between environmental waste and sustainable beauty.
-  On one side, a pile of discarded single-use cotton pads and plastic wipes, on the
-  other a pristine glowing face touching a soft reusable UpPoly microfiber set surrounded
-  by green leaves and clean water droplets. Shot on Hasselblad 100MP, warm golden
-  light. NO text, NO labels, NO logos.'
-- '📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): Conceptual photography
-  depicting the water footprint of industrial cotton farming. A single dried cotton
-  boll hovering over a dry cracked soil bed with a translucent water gauge indicator
-  showing 20,000 liters. Soft artistic lighting. NO text.'
-- '📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Macro science photography
-  showing synthetic microfibers and plastic polymers woven into conventional makeup
-  wipes under high-power optical magnification. Clean blue and gray studio lighting.
-  NO text.'
-- '📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Lifestyle photography
-  of a woman peacefully rinsing her reusable Laska Mini Set microfiber pad under a
-  gentle stream of tap water in a sunlit eco-minimalist bathroom. Warm organic aesthetic.
-  NO text.'
-- '📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): Ultra macro photography
-  comparing an abrasive cotton pad surface with ultra-fine Japanese UpPoly microfibers
-  capturing sebum particles effortlessly with water micro-droplets. Medical science
-  style. NO text.'
+  - >-
+    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9): High-end editorial
+    photography showing a striking contrast between environmental waste and
+    sustainable beauty. On one side, a pile of discarded single-use cotton pads
+    and plastic wipes, on the other a pristine glowing face touching a soft
+    reusable UpPoly microfiber set surrounded by green leaves and clean water
+    droplets. Shot on Hasselblad 100MP, warm golden light. NO text, NO labels,
+    NO logos.
+  - >-
+    📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): Conceptual
+    photography depicting the water footprint of industrial cotton farming. A
+    single dried cotton boll hovering over a dry cracked soil bed with a
+    translucent water gauge indicator showing 20,000 liters. Soft artistic
+    lighting. NO text.
+  - >-
+    📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Macro science
+    photography showing synthetic microfibers and plastic polymers woven into
+    conventional makeup wipes under high-power optical magnification. Clean blue
+    and gray studio lighting. NO text.
+  - >-
+    📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Lifestyle
+    photography of a woman peacefully rinsing her reusable Laska Mini Set
+    microfiber pad under a gentle stream of tap water in a sunlit eco-minimalist
+    bathroom. Warm organic aesthetic. NO text.
+  - >-
+    📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): Ultra macro
+    photography comparing an abrasive cotton pad surface with ultra-fine
+    Japanese UpPoly microfibers capturing sebum particles effortlessly with
+    water micro-droplets. Medical science style. NO text.
 show_science_link: true
 date_images_applied: '2026-07-30'
 ---
