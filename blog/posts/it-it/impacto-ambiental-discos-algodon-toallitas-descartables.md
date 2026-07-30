@@ -1,10 +1,12 @@
 ---
 article_id: PG-011
-title: Quanti rifiuti genera la tua routine viso? L'impatto ambientale dei dischetti
+title: >-
+  Quanti rifiuti genera la tua routine viso? L'impatto ambientale dei dischetti
   di cotone e delle salviette monouso
-description: 'Scopri il costo ecologico nascosto dei prodotti monouso nello skincare:
-  consumo di acqua, pesticidi e microplastiche. Come la microfibra sostenibile rivoluziona
-  la bellezza pulita.'
+description: >-
+  Scopri il costo ecologico nascosto dei prodotti monouso nello skincare:
+  consumo di acqua, pesticidi e microplastiche. Come la microfibra sostenibile
+  rivoluziona la bellezza pulita.
 slug: impacto-ambiental-discos-algodon-toallitas-descartables
 date: '2026-07-30'
 date_created: '2026-07-30'
@@ -13,61 +15,80 @@ locale: it-it
 category: sostenibilidad
 category_label: 🌱 Sostenibilità ed Ecologia
 concept: impacto-ambiental-discos-algodon-toallitas-descartables
-local_phenomenon: Inquinamento da monouso quotidiano e smaltimento massiccio di microplastiche
+local_phenomenon: >-
+  Inquinamento da monouso quotidiano e smaltimento massiccio di microplastiche
   cosmetiche
-cover_image: /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
+cover_image: ''
 media:
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
 author: PepaGold
 epigraph:
-  text: La vera bellezza pulita non protegge solo la barriera cutanea del viso; preserva
-    gli ecosistemi da cui dipende la vita.
+  text: >-
+    La vera bellezza pulita non protegge solo la barriera cutanea del viso;
+    preserva gli ecosistemi da cui dipende la vita.
   author: Dra. PepaGold
 summary:
-- Ogni anno vengono gettati miliardi di dischetti di cotone e salviette struccanti
-  monouso che impiegano fino a 500 anni per decomponersi.
-- La coltivazione industriale del cotone richiede fino a 20.000 litri d'acqua per
-  chilo oltre a un uso massiccio di pesticidi chimici.
-- Le salviette struccanti contengono fibre sintetiche di plastica che ostruiscono
-  le tubature e rilasciano microplastiche negli oceani.
-- Sostituire i prodotti monouso con microfibre riutilizzabili UpPoly consente una
-  pulizia profonda usando solo acqua, eliminando il 100% dei rifiuti quotidiani.
+  - >-
+    Ogni anno vengono gettati miliardi di dischetti di cotone e salviette
+    struccanti monouso che impiegano fino a 500 anni per decomponersi.
+  - >-
+    La coltivazione industriale del cotone richiede fino a 20.000 litri d'acqua
+    per chilo oltre a un uso massiccio di pesticidi chimici.
+  - >-
+    Le salviette struccanti contengono fibre sintetiche di plastica che
+    ostruiscono le tubature e rilasciano microplastiche negli oceani.
+  - >-
+    Sostituire i prodotti monouso con microfibre riutilizzabili UpPoly consente
+    una pulizia profonda usando solo acqua, eliminando il 100% dei rifiuti
+    quotidiani.
 faq:
-- q: I dischetti di cotone non sono biodegradabili essendo naturali?
-  a: Sebbene il cotone grezzo sia biodegradabile, i dischetti industriali subiscono
-    sbiancamenti al cloro e l'aggiunta di leganti plastici che impediscono il compostaggio
-    domestico.
-- q: Quanto denaro e rifiuti si risparmiano passando alle fibre riutilizzabili?
-  a: Una persona consuma in media da 700 a 1.500 dischetti o salviette all'anno. Un
-    set in microfibra riutilizzabile elimina questo volume di rifiuti e fa risparmiare
-    centinaia di euro.
+  - q: I dischetti di cotone non sono biodegradabili essendo naturali?
+    a: >-
+      Sebbene il cotone grezzo sia biodegradabile, i dischetti industriali
+      subiscono sbiancamenti al cloro e l'aggiunta di leganti plastici che
+      impediscono il compostaggio domestico.
+  - q: Quanto denaro e rifiuti si risparmiano passando alle fibre riutilizzabili?
+    a: >-
+      Una persona consuma in media da 700 a 1.500 dischetti o salviette
+      all'anno. Un set in microfibra riutilizzabile elimina questo volume di
+      rifiuti e fa risparmiare centinaia di euro.
 image_prompts:
-- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9): High-end editorial photography
-  showing a striking contrast between environmental waste and sustainable beauty.
-  On one side, a pile of discarded single-use cotton pads and plastic wipes, on the
-  other a pristine glowing face touching a soft reusable UpPoly microfiber set surrounded
-  by green leaves and clean water droplets. Shot on Hasselblad 100MP, warm golden
-  light. NO text, NO labels, NO logos.'
-- '📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): Conceptual photography
-  depicting the water footprint of industrial cotton farming. A single dried cotton
-  boll hovering over a dry cracked soil bed with a translucent water gauge indicator
-  showing 20,000 liters. Soft artistic lighting. NO text.'
-- '📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Macro science photography
-  showing synthetic microfibers and plastic polymers woven into conventional makeup
-  wipes under high-power optical magnification. Clean blue and gray studio lighting.
-  NO text.'
-- '📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Lifestyle photography
-  of a woman peacefully rinsing her reusable Laska Mini Set microfiber pad under a
-  gentle stream of tap water in a sunlit eco-minimalist bathroom. Warm organic aesthetic.
-  NO text.'
-- '📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): Ultra macro photography
-  comparing an abrasive cotton pad surface with ultra-fine Japanese UpPoly microfibers
-  capturing sebum particles effortlessly with water micro-droplets. Medical science
-  style. NO text.'
+  - >-
+    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9): High-end editorial
+    photography showing a striking contrast between environmental waste and
+    sustainable beauty. On one side, a pile of discarded single-use cotton pads
+    and plastic wipes, on the other a pristine glowing face touching a soft
+    reusable UpPoly microfiber set surrounded by green leaves and clean water
+    droplets. Shot on Hasselblad 100MP, warm golden light. NO text, NO labels,
+    NO logos.
+  - >-
+    📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): Conceptual
+    photography depicting the water footprint of industrial cotton farming. A
+    single dried cotton boll hovering over a dry cracked soil bed with a
+    translucent water gauge indicator showing 20,000 liters. Soft artistic
+    lighting. NO text.
+  - >-
+    📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Macro science
+    photography showing synthetic microfibers and plastic polymers woven into
+    conventional makeup wipes under high-power optical magnification. Clean blue
+    and gray studio lighting. NO text.
+  - >-
+    📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Lifestyle
+    photography of a woman peacefully rinsing her reusable Laska Mini Set
+    microfiber pad under a gentle stream of tap water in a sunlit eco-minimalist
+    bathroom. Warm organic aesthetic. NO text.
+  - >-
+    📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): Ultra macro
+    photography comparing an abrasive cotton pad surface with ultra-fine
+    Japanese UpPoly microfibers capturing sebum particles effortlessly with
+    water micro-droplets. Medical science style. NO text.
 show_science_link: true
 date_images_applied: '2026-07-30'
 ---
