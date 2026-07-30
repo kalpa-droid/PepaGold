@@ -19,8 +19,6 @@ local_phenomenon: Daily disposable waste pollution and massive cosmetic micropla
 cover_image: ''
 media:
   - >-
-    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
-  - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
   - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
@@ -113,7 +111,7 @@ Even pads labeled 100% cotton frequently contain synthetic plastic binding resin
 
 While cotton pads drain freshwater reserves, disposable makeup wipes are an ecological crisis for aquatic life:
 
-![Microplastics and synthetic resins found in disposable makeup wipes](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp)
+
 
 - **Indestructible Synthetic Fibers:** The vast majority of retail wipes are woven from polyester and polypropylene blends. **They are not paper; they are woven plastic.**
 - **500 Years in Ecosystems:** A single disposable wipe takes up to five centuries to break down into tiny microplastic particles ingested by marine life.
