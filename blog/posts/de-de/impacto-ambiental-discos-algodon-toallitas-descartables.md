@@ -20,8 +20,6 @@ cover_image: ''
 media:
   - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
-  - >-
-    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -145,7 +143,7 @@ Hier setzt die Innovation der **japanischen UpPoly-Präzisionsmikrofaser** (aus 
 
 Neben dem Schutz der Umwelt schont der Wechsel von Einweg-Baumwolle zu mehrlagiger Mikrofaser die natürliche Hautstruktur:
 
-![Vergleich zwischen rauer Baumwolloberfläche und sanfter UpPoly-Mikrofaser](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp)
+
 
 - **Einweg-Baumwolle:** Kurze, raue Fasern erzeugen mechanische Reibung auf der Gesichtshaut, was zu Mikroverletzungen, Rötungen und Schuppung führt.
 - **UpPoly-Mikrofaser:** Mit Fäden, die 100-mal feiner als ein menschliches Haar sind, gleiten die Fasern sanft über die Poren, ohne die Hornschicht zu schädigen.
