@@ -11,10 +11,19 @@ category: sostenibilidad
 category_label: 🌱 环保与可持续
 concept: impacto-ambiental-discos-algodon-toallitas-descartables
 local_phenomenon: 一次性用品造成的环境污染与化妆品微塑料的大量排放
-cover_image: ''
+cover_image: >-
+  /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
 media:
   - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
+  - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
 author: PepaGold
 epigraph:
   text: 真正纯净的肌肤护理不仅守护着面部屏障，更呵护着地球万物赖以生存的生态系统。
@@ -70,7 +79,7 @@ date_images_applied: '2026-07-30'
 
 人们普遍存在一个误区，认为棉花是植物，因此一次性化妆棉是100%环保天然的。现实却大不相同：
 
-![工业棉花种植过程中的大量水资源消耗与农药使用](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp)
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp)
 
 - **极高的水足迹：** 生产一公斤工业棉花需要消耗 **10,000至20,000升水**，枯竭了脆弱地区的淡水资源。
 - **农药滥用：** 棉花种植面积仅占全球耕地的2.4%，却消耗了全球 **24%的杀虫剂** 和11%的合成农药。
@@ -88,7 +97,7 @@ date_images_applied: '2026-07-30'
 
 如果说化妆棉消耗了水资源，那么一次性卸妆湿巾则是海洋生态的定时炸弹：
 
-
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp)
 
 - **无法降解的合成纤维：** 市面上绝大多数湿巾由聚酯和聚丙烯混合制成。**它们不是纸，而是编制塑料。**
 - **500年降解期：** 一片湿巾需要长达五个世纪才能分裂成微塑料颗粒，最终被海洋生物误食。
@@ -102,7 +111,7 @@ date_images_applied: '2026-07-30'
 
 真正有意识的护肤主张将浴室打造为零浪费（*Zero Waste*）空间，同时绝不牺牲敏感肌所需的清洁力与柔和度。
 
-
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp)
 
 这正是 **日本UpPoly精密超细纤维**（Laska Mini Set系列）的创新之处：
 
@@ -121,7 +130,7 @@ date_images_applied: '2026-07-30'
 
 除了保护地球，将一次性棉花更换为多层超细纤维还能呵护肌肤的天然屏障：
 
-
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp)
 
 - **一次性棉花：** 其短粗纤维在擦拭面部时产生强烈机械摩擦，导致微小损伤、泛红与脱皮。
 - **UpPoly超细纤维：** 纤维细度仅为头发丝的1/100，能够顺滑穿过毛孔，在不刮伤角质层的情况下带走污垢。
