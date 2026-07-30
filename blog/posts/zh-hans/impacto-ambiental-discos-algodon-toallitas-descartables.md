@@ -11,50 +11,60 @@ category: sostenibilidad
 category_label: 🌱 环保与可持续
 concept: impacto-ambiental-discos-algodon-toallitas-descartables
 local_phenomenon: 一次性用品造成的环境污染与化妆品微塑料的大量排放
-cover_image: /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
+cover_image: ''
 media:
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
 author: PepaGold
 epigraph:
   text: 真正纯净的肌肤护理不仅守护着面部屏障，更呵护着地球万物赖以生存的生态系统。
   author: Dra. PepaGold
 summary:
-- 全球每年抛弃数十亿片一次性化妆棉和卸妆湿巾，其降解时间长达500年。
-- 工业棉花种植每公斤需消耗多达20,000升水，并大量使用化学农药与杀虫剂。
-- 卸妆湿巾含有无法降解的合成塑料纤维，不仅堵塞管道，还向海洋释放微塑料。
-- 使用UpPoly超细纤维替代一次性用品，只需清水即可深层清洁，彻底消除每日护肤垃圾。
+  - 全球每年抛弃数十亿片一次性化妆棉和卸妆湿巾，其降解时间长达500年。
+  - 工业棉花种植每公斤需消耗多达20,000升水，并大量使用化学农药与杀虫剂。
+  - 卸妆湿巾含有无法降解的合成塑料纤维，不仅堵塞管道，还向海洋释放微塑料。
+  - 使用UpPoly超细纤维替代一次性用品，只需清水即可深层清洁，彻底消除每日护肤垃圾。
 faq:
-- q: 天然棉花制成的化妆棉难道不能自然降解吗？
-  a: 尽管天然纯棉可降解，但工业化妆棉在加工过程中经过氯气漂白并添加了合成塑料粘合剂，阻止了其自然降解并污染土壤。
-- q: 改用可重复使用的纤维可以节省多少费用与垃圾？
-  a: 每个人每年平均消耗700至1,500片化妆棉或湿巾。使用可重复使用的超细纤维套装可彻底消除这些垃圾并节省大量开支。
+  - q: 天然棉花制成的化妆棉难道不能自然降解吗？
+    a: 尽管天然纯棉可降解，但工业化妆棉在加工过程中经过氯气漂白并添加了合成塑料粘合剂，阻止了其自然降解并污染土壤。
+  - q: 改用可重复使用的纤维可以节省多少费用与垃圾？
+    a: 每个人每年平均消耗700至1,500片化妆棉或湿巾。使用可重复使用的超细纤维套装可彻底消除这些垃圾并节省大量开支。
 image_prompts:
-- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9): High-end editorial photography
-  showing a striking contrast between environmental waste and sustainable beauty.
-  On one side, a pile of discarded single-use cotton pads and plastic wipes, on the
-  other a pristine glowing face touching a soft reusable UpPoly microfiber set surrounded
-  by green leaves and clean water droplets. Shot on Hasselblad 100MP, warm golden
-  light. NO text, NO labels, NO logos.'
-- '📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): Conceptual photography
-  depicting the water footprint of industrial cotton farming. A single dried cotton
-  boll hovering over a dry cracked soil bed with a translucent water gauge indicator
-  showing 20,000 liters. Soft artistic lighting. NO text.'
-- '📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Macro science photography
-  showing synthetic microfibers and plastic polymers woven into conventional makeup
-  wipes under high-power optical magnification. Clean blue and gray studio lighting.
-  NO text.'
-- '📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Lifestyle photography
-  of a woman peacefully rinsing her reusable Laska Mini Set microfiber pad under a
-  gentle stream of tap water in a sunlit eco-minimalist bathroom. Warm organic aesthetic.
-  NO text.'
-- '📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): Ultra macro photography
-  comparing an abrasive cotton pad surface with ultra-fine Japanese UpPoly microfibers
-  capturing sebum particles effortlessly with water micro-droplets. Medical science
-  style. NO text.'
+  - >-
+    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9): High-end editorial
+    photography showing a striking contrast between environmental waste and
+    sustainable beauty. On one side, a pile of discarded single-use cotton pads
+    and plastic wipes, on the other a pristine glowing face touching a soft
+    reusable UpPoly microfiber set surrounded by green leaves and clean water
+    droplets. Shot on Hasselblad 100MP, warm golden light. NO text, NO labels,
+    NO logos.
+  - >-
+    📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): Conceptual
+    photography depicting the water footprint of industrial cotton farming. A
+    single dried cotton boll hovering over a dry cracked soil bed with a
+    translucent water gauge indicator showing 20,000 liters. Soft artistic
+    lighting. NO text.
+  - >-
+    📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Macro science
+    photography showing synthetic microfibers and plastic polymers woven into
+    conventional makeup wipes under high-power optical magnification. Clean blue
+    and gray studio lighting. NO text.
+  - >-
+    📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Lifestyle
+    photography of a woman peacefully rinsing her reusable Laska Mini Set
+    microfiber pad under a gentle stream of tap water in a sunlit eco-minimalist
+    bathroom. Warm organic aesthetic. NO text.
+  - >-
+    📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): Ultra macro
+    photography comparing an abrasive cotton pad surface with ultra-fine
+    Japanese UpPoly microfibers capturing sebum particles effortlessly with
+    water micro-droplets. Medical science style. NO text.
 show_science_link: true
 date_images_applied: '2026-07-30'
 ---
