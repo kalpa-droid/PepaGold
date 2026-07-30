@@ -21,8 +21,6 @@ local_phenomenon: >-
 cover_image: ''
 media:
   - >-
-    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
-  - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
   - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
@@ -103,7 +101,7 @@ La industria cosmética tradicional nos acostumbró a la cultura del descarte: u
 
 Existe el mito de que como el algodón es una planta, su uso en discos descartables es 100% ecológico y natural. La realidad es muy diferente:
 
-![El consumo masivo de agua y agroquímicos en el cultivo industrial de algodón](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp)
+
 
 - **Consumo Hídrico Extremo:** Para producir un solo kilo de algodón industrial se necesitan entre **10.000 y 20.000 litros de agua**, devastando reservas de agua dulce en regiones agrícolas vulnerables.
 - **Uso Masivo de Agroquímicos:** El cultivo de algodón ocupa apenas el 2,4% de la tierra cultivable del planeta, pero consume el **24% de los insecticidas globales** y el 11% de los pesticidas sintéticos.
