@@ -18,11 +18,8 @@ concept: impacto-ambiental-discos-algodon-toallitas-descartables
 local_phenomenon: >-
   Poluição por descartáveis diários e descarte massivo de microplásticos
   cosméticos
-cover_image: >-
-  /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
+cover_image: ''
 media:
-  - >-
-    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
   - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
   - >-
