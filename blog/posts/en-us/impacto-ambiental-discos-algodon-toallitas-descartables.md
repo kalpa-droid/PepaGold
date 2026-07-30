@@ -1,10 +1,12 @@
 ---
 article_id: PG-011
-title: How Much Waste Does Your Skincare Routine Create? The Environmental Impact
-  of Disposable Cotton Pads and Wipes
-description: 'Discover the hidden ecological cost of disposable skincare: water consumption,
-  industrial pesticides, and ocean microplastics. How eco-friendly microfibers revolutionize
-  clean beauty.'
+title: >-
+  How Much Waste Does Your Skincare Routine Create? The Environmental Impact of
+  Disposable Cotton Pads and Wipes
+description: >-
+  Discover the hidden ecological cost of disposable skincare: water consumption,
+  industrial pesticides, and ocean microplastics. How eco-friendly microfibers
+  revolutionize clean beauty.
 slug: impacto-ambiental-discos-algodon-toallitas-descartables
 date: '2026-07-30'
 date_created: '2026-07-30'
@@ -13,61 +15,77 @@ locale: en-us
 category: sostenibilidad
 category_label: 🌱 Sustainability & Ecology
 concept: impacto-ambiental-discos-algodon-toallitas-descartables
-local_phenomenon: Daily disposable waste pollution and massive cosmetic microplastic
-  disposal
-cover_image: /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
+local_phenomenon: Daily disposable waste pollution and massive cosmetic microplastic disposal
+cover_image: ''
 media:
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
 author: PepaGold
 epigraph:
-  text: True clean beauty doesn't just protect your skin barrier; it safeguards the
+  text: >-
+    True clean beauty doesn't just protect your skin barrier; it safeguards the
     ecosystems that sustain human life.
   author: Dra. PepaGold
 summary:
-- Billions of single-use cotton pads and wet cleansing wipes are discarded globally
-  each year, taking up to 500 years to decompose.
-- Industrial cotton farming requires up to 20,000 liters of water per kilogram along
-  with heavy chemical pesticide application.
-- Cleansing wipes contain synthetic plastic fibers that clog municipal sewer systems
-  and release microplastics into marine habitats.
-- Replacing single-use items with reusable UpPoly microfibers enables deep facial
-  cleansing using only water, eliminating 100% of daily skincare waste.
+  - >-
+    Billions of single-use cotton pads and wet cleansing wipes are discarded
+    globally each year, taking up to 500 years to decompose.
+  - >-
+    Industrial cotton farming requires up to 20,000 liters of water per kilogram
+    along with heavy chemical pesticide application.
+  - >-
+    Cleansing wipes contain synthetic plastic fibers that clog municipal sewer
+    systems and release microplastics into marine habitats.
+  - >-
+    Replacing single-use items with reusable UpPoly microfibers enables deep
+    facial cleansing using only water, eliminating 100% of daily skincare waste.
 faq:
-- q: Are disposable cotton pads biodegradable because cotton comes from plants?
-  a: While raw organic cotton is biodegradable, mass-manufactured facial pads undergo
-    chemical chlorine bleaching and synthetic plastic binder processing that prevent
-    clean backyard composting.
-- q: How much money and waste can be saved switching to reusable fibers?
-  a: An average person consumes 700 to 1,500 disposable pads or wipes annually. Using
-    a single reusable microfiber set eliminates that entire trash footprint while
-    saving hundreds of dollars.
+  - q: Are disposable cotton pads biodegradable because cotton comes from plants?
+    a: >-
+      While raw organic cotton is biodegradable, mass-manufactured facial pads
+      undergo chemical chlorine bleaching and synthetic plastic binder
+      processing that prevent clean backyard composting.
+  - q: How much money and waste can be saved switching to reusable fibers?
+    a: >-
+      An average person consumes 700 to 1,500 disposable pads or wipes annually.
+      Using a single reusable microfiber set eliminates that entire trash
+      footprint while saving hundreds of dollars.
 image_prompts:
-- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9): High-end editorial photography
-  showing a striking contrast between environmental waste and sustainable beauty.
-  On one side, a pile of discarded single-use cotton pads and plastic wipes, on the
-  other a pristine glowing face touching a soft reusable UpPoly microfiber set surrounded
-  by green leaves and clean water droplets. Shot on Hasselblad 100MP, warm golden
-  light. NO text, NO labels, NO logos.'
-- '📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): Conceptual photography
-  depicting the water footprint of industrial cotton farming. A single dried cotton
-  boll hovering over a dry cracked soil bed with a translucent water gauge indicator
-  showing 20,000 liters. Soft artistic lighting. NO text.'
-- '📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Macro science photography
-  showing synthetic microfibers and plastic polymers woven into conventional makeup
-  wipes under high-power optical magnification. Clean blue and gray studio lighting.
-  NO text.'
-- '📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Lifestyle photography
-  of a woman peacefully rinsing her reusable Laska Mini Set microfiber pad under a
-  gentle stream of tap water in a sunlit eco-minimalist bathroom. Warm organic aesthetic.
-  NO text.'
-- '📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): Ultra macro photography
-  comparing an abrasive cotton pad surface with ultra-fine Japanese UpPoly microfibers
-  capturing sebum particles effortlessly with water micro-droplets. Medical science
-  style. NO text.'
+  - >-
+    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9): High-end editorial
+    photography showing a striking contrast between environmental waste and
+    sustainable beauty. On one side, a pile of discarded single-use cotton pads
+    and plastic wipes, on the other a pristine glowing face touching a soft
+    reusable UpPoly microfiber set surrounded by green leaves and clean water
+    droplets. Shot on Hasselblad 100MP, warm golden light. NO text, NO labels,
+    NO logos.
+  - >-
+    📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): Conceptual
+    photography depicting the water footprint of industrial cotton farming. A
+    single dried cotton boll hovering over a dry cracked soil bed with a
+    translucent water gauge indicator showing 20,000 liters. Soft artistic
+    lighting. NO text.
+  - >-
+    📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Macro science
+    photography showing synthetic microfibers and plastic polymers woven into
+    conventional makeup wipes under high-power optical magnification. Clean blue
+    and gray studio lighting. NO text.
+  - >-
+    📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Lifestyle
+    photography of a woman peacefully rinsing her reusable Laska Mini Set
+    microfiber pad under a gentle stream of tap water in a sunlit eco-minimalist
+    bathroom. Warm organic aesthetic. NO text.
+  - >-
+    📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): Ultra macro
+    photography comparing an abrasive cotton pad surface with ultra-fine
+    Japanese UpPoly microfibers capturing sebum particles effortlessly with
+    water micro-droplets. Medical science style. NO text.
 show_science_link: true
 date_images_applied: '2026-07-30'
 ---
