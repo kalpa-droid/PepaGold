@@ -23,8 +23,6 @@ media:
   - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
   - >-
-    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
-  - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
   - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
@@ -120,7 +118,7 @@ Même les disques étiquetés 100 % coton contiennent souvent des résines plast
 
 Si les cotons épuisent les ressources en eau, les lingettes démaquillantes sont une bombe écologique pour les milieux aquatiques :
 
-![Microplastiques et résines synthétiques présents dans les lingettes jetables](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp)
+
 
 - **Fibres synthétiques indestructibles :** La majorité des lingettes sont fabriquées à partir d'un mélange de polyester et de polypropylène. **Ce n'est pas du papier ; c'est du plastique tissé.**
 - **500 ans dans la nature :** Une seule lingette jetable met jusqu'à cinq siècles à se fragmenter en microplastiques ingérés par la faune marine.
