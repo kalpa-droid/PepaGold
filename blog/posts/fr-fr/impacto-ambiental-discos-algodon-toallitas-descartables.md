@@ -1,10 +1,12 @@
 ---
 article_id: PG-011
-title: Combien de déchets génère votre routine faciale ? L'impact environnemental
-  des cotons et lingettes jetables
-description: 'Découvrez le coût écologique masqué des jetables en cosmétique : consommation
-  d''eau, pesticides et microplastiques. Comment la microfibre écologique révolutionne
-  la beauté propre.'
+title: >-
+  Combien de déchets génère votre routine faciale ? L'impact environnemental des
+  cotons et lingettes jetables
+description: >-
+  Découvrez le coût écologique masqué des jetables en cosmétique : consommation
+  d'eau, pesticides et microplastiques. Comment la microfibre écologique
+  révolutionne la beauté propre.
 slug: impacto-ambiental-discos-algodon-toallitas-descartables
 date: '2026-07-30'
 date_created: '2026-07-30'
@@ -13,61 +15,82 @@ locale: fr-fr
 category: sostenibilidad
 category_label: 🌱 Écologie & Durabilité
 concept: impacto-ambiental-discos-algodon-toallitas-descartables
-local_phenomenon: Pollution par les produits jetables quotidiens et rejet massif de
+local_phenomenon: >-
+  Pollution par les produits jetables quotidiens et rejet massif de
   microplastiques cosmétiques
-cover_image: /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
+cover_image: ''
 media:
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
 author: PepaGold
 epigraph:
-  text: La véritable beauté propre ne protège pas seulement la barrière cutanée de
+  text: >-
+    La véritable beauté propre ne protège pas seulement la barrière cutanée de
     votre visage ; elle préserve les écosystèmes indispensables à la vie.
   author: Dra. PepaGold
 summary:
-- Chaque année, des milliards de cotons et lingettes démaquillantes jetables sont
-  jetés, mettant jusqu'à 500 ans à se décomposer.
-- La culture industrielle du coton exige jusqu'à 20 000 litres d'eau par kilo ainsi
-  qu'une utilisation massive de pesticides synthétiques.
-- Les lingettes contiennent des fibres plastiques synthétiques qui bouchent les canalisations
-  et libèrent des microplastiques dans les océans.
-- Remplacer les jetables par des microfibres réutilisables UpPoly permet un nettoyage
-  en profondeur à l'eau seule, réduisant 100 % des déchets faciaux quotidiens.
+  - >-
+    Chaque année, des milliards de cotons et lingettes démaquillantes jetables
+    sont jetés, mettant jusqu'à 500 ans à se décomposer.
+  - >-
+    La culture industrielle du coton exige jusqu'à 20 000 litres d'eau par kilo
+    ainsi qu'une utilisation massive de pesticides synthétiques.
+  - >-
+    Les lingettes contiennent des fibres plastiques synthétiques qui bouchent
+    les canalisations et libèrent des microplastiques dans les océans.
+  - >-
+    Remplacer les jetables par des microfibres réutilisables UpPoly permet un
+    nettoyage en profondeur à l'eau seule, réduisant 100 % des déchets faciaux
+    quotidiens.
 faq:
-- q: Les cotons ne sont-ils pas biodégradables puisqu'ils sont naturels ?
-  a: Bien que le coton brut soit biodégradable, les disques industriels subissent
-    des blanchiments au chlore et l'ajout de liants plastiques empêchant un compostage
-    propre.
-- q: Combien d'argent et de déchets peut-on économiser en passant au réutilisable
-    ?
-  a: Une personne consomme en moyenne 700 à 1 500 cotons ou lingettes par an. Un ensemble
-    en microfibre réutilisable élimine cette poubelle et économise des centaines d'euros.
+  - q: Les cotons ne sont-ils pas biodégradables puisqu'ils sont naturels ?
+    a: >-
+      Bien que le coton brut soit biodégradable, les disques industriels
+      subissent des blanchiments au chlore et l'ajout de liants plastiques
+      empêchant un compostage propre.
+  - q: >-
+      Combien d'argent et de déchets peut-on économiser en passant au
+      réutilisable ?
+    a: >-
+      Une personne consomme en moyenne 700 à 1 500 cotons ou lingettes par an.
+      Un ensemble en microfibre réutilisable élimine cette poubelle et économise
+      des centaines d'euros.
 image_prompts:
-- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9): High-end editorial photography
-  showing a striking contrast between environmental waste and sustainable beauty.
-  On one side, a pile of discarded single-use cotton pads and plastic wipes, on the
-  other a pristine glowing face touching a soft reusable UpPoly microfiber set surrounded
-  by green leaves and clean water droplets. Shot on Hasselblad 100MP, warm golden
-  light. NO text, NO labels, NO logos.'
-- '📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): Conceptual photography
-  depicting the water footprint of industrial cotton farming. A single dried cotton
-  boll hovering over a dry cracked soil bed with a translucent water gauge indicator
-  showing 20,000 liters. Soft artistic lighting. NO text.'
-- '📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Macro science photography
-  showing synthetic microfibers and plastic polymers woven into conventional makeup
-  wipes under high-power optical magnification. Clean blue and gray studio lighting.
-  NO text.'
-- '📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Lifestyle photography
-  of a woman peacefully rinsing her reusable Laska Mini Set microfiber pad under a
-  gentle stream of tap water in a sunlit eco-minimalist bathroom. Warm organic aesthetic.
-  NO text.'
-- '📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): Ultra macro photography
-  comparing an abrasive cotton pad surface with ultra-fine Japanese UpPoly microfibers
-  capturing sebum particles effortlessly with water micro-droplets. Medical science
-  style. NO text.'
+  - >-
+    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9): High-end editorial
+    photography showing a striking contrast between environmental waste and
+    sustainable beauty. On one side, a pile of discarded single-use cotton pads
+    and plastic wipes, on the other a pristine glowing face touching a soft
+    reusable UpPoly microfiber set surrounded by green leaves and clean water
+    droplets. Shot on Hasselblad 100MP, warm golden light. NO text, NO labels,
+    NO logos.
+  - >-
+    📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): Conceptual
+    photography depicting the water footprint of industrial cotton farming. A
+    single dried cotton boll hovering over a dry cracked soil bed with a
+    translucent water gauge indicator showing 20,000 liters. Soft artistic
+    lighting. NO text.
+  - >-
+    📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Macro science
+    photography showing synthetic microfibers and plastic polymers woven into
+    conventional makeup wipes under high-power optical magnification. Clean blue
+    and gray studio lighting. NO text.
+  - >-
+    📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Lifestyle
+    photography of a woman peacefully rinsing her reusable Laska Mini Set
+    microfiber pad under a gentle stream of tap water in a sunlit eco-minimalist
+    bathroom. Warm organic aesthetic. NO text.
+  - >-
+    📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): Ultra macro
+    photography comparing an abrasive cotton pad surface with ultra-fine
+    Japanese UpPoly microfibers capturing sebum particles effortlessly with
+    water micro-droplets. Medical science style. NO text.
 show_science_link: true
 date_images_applied: '2026-07-30'
 ---
