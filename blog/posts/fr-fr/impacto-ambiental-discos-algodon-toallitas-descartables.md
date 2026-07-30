@@ -19,9 +19,7 @@ local_phenomenon: >-
   Pollution par les produits jetables quotidiens et rejet massif de
   microplastiques cosmétiques
 cover_image: ''
-media:
-  - >-
-    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
+media: []
 author: PepaGold
 epigraph:
   text: >-
@@ -147,7 +145,7 @@ C'est ici qu'intervient l'innovation de la **microfibre de précision japonaise 
 
 En plus de préserver la planète, remplacer le jetable par de la microfibre multicouche préserve la texture naturelle de votre peau :
 
-![Comparaison entre la surface rugueuse du coton et la douceur UpPoly](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp)
+
 
 - **Coton jetable :** Ses fibres courtes créent des frottements mécaniques agressifs sur le visage, provoquant micro-lésions, rougeurs et desquamation.
 - **Microfibre UpPoly :** Avec des fils 100 fois plus fins qu'un cheveu humain, les fibres glissent sans effort à travers les pores sans rayer la couche cornée.
