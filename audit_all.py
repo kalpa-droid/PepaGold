@@ -19,7 +19,7 @@ import sys
 PYTHON_BIN = sys.executable
 
 CHECKS = [
-    ("Artículos del blog", [PYTHON_BIN, "validate_translations.py"]),
+    ("Artículos del blog", [PYTHON_BIN, "validate_translations.py"] + sys.argv[1:]),
     ("Estructura del sitio", [PYTHON_BIN, "validate_site_translations.py"]),
 ]
 

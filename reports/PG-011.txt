@@ -1,0 +1,53 @@
+===============================================================================
+INFORME DE REDACCIÓN Y ESTRATEGIA - FASE 1: PG-011
+===============================================================================
+
+ID ARTÍCULO: PG-011
+PILAR EDITORIAL: Pilar 2 — Sostenibilidad y Ecología (TOFU)
+CATEGORÍA: sostenibilidad (🌱 Sostenibilidad y Ecología)
+SLUG: impacto-ambiental-discos-algodon-toallitas-descartables
+FECHA DE CREACIÓN: 2026-07-30
+
+-------------------------------------------------------------------------------
+1. TÍTULO Y CONCEPTO CIENTÍFICO
+-------------------------------------------------------------------------------
+TÍTULO: ¿Cuánta basura genera tu rutina facial? El Impacto Ambiental de los Discos de Algodón y Toallitas Descartables
+DESCRIPCIÓN: Descubrí el impacto ecológico de los descartables en el skincare: consumo de agua, pesticidas del algodón y microplásticos. Cómo la higiene sustentable revoluciona la belleza limpia.
+EPÍGRAFE: "La verdadera belleza limpia no solo cuida la barrera cutánea de tu rostro; cuida los ecosistemas de los que depende la vida." — Dra. PepaGold
+
+-------------------------------------------------------------------------------
+2. ESTRUCTURA Y BLOQUES INTERACTIVOS
+-------------------------------------------------------------------------------
+- INTRODUCCIÓN: Pregunta directa sobre el impacto diario de los descartables.
+- SECCIÓN H2 #1: El Impacto Oculto del Algodón Industrial: Agua, Pesticidas y Contaminación
+  - Callout :::stat: Huella hídrica diaria (1.500 litros/mes por uso de 3 discos diarios).
+  - Callout :::tip: La Falacia de lo Descartable.
+- SECCIÓN H2 #2: Toallitas Desmaquillantes: La Trampa de los Microplásticos y la Obstrucción Ambiental
+  - Callout :::info: ¿Qué son las Islas de Plástico Sanitarias / Fatbergs?
+- SECCIÓN H2 #3: La Alternativa Sustentable: Higiene Biomecánica con Tecnología UpPoly
+  - Callout :::checklist: Chequeo Ecológico en el Baño: Zero Waste Facial.
+- SECCIÓN H2 #4: Microfibra Japonesa vs. Algodón Descartable: La Ciencia de la Fricción
+  - Callout :::quiz: Test sobre Ecología y Skincare.
+- CONCLUSIÓN / CTA: Sumate a la belleza limpia cero residuos con agua tibia y UpPoly.
+
+-------------------------------------------------------------------------------
+3. PROMPTS DE IMAGEN 8K GENERADOS
+-------------------------------------------------------------------------------
+PROMPT #1 (PORTADA 16:9 - 1200x630px):
+High-end editorial photography showing a striking contrast between environmental waste and sustainable beauty. On one side, a pile of discarded single-use cotton pads and plastic wipes, on the other a pristine glowing face touching a soft reusable UpPoly microfiber set surrounded by green leaves and clean water droplets. Shot on Hasselblad 100MP, warm golden light. NO text, NO labels, NO logos.
+
+PROMPT #2 (SECCIÓN H2 #1 1:1 - 1080x1080px):
+Conceptual photography depicting the water footprint of industrial cotton farming. A single dried cotton boll hovering over a dry cracked soil bed with a translucent water gauge indicator showing 20,000 liters. Soft artistic lighting. NO text.
+
+PROMPT #3 (SECCIÓN H2 #2 1:1 - 1080x1080px):
+Macro science photography showing synthetic microfibers and plastic polymers woven into conventional makeup wipes under high-power optical magnification. Clean blue and gray studio lighting. NO text.
+
+PROMPT #4 (SECCIÓN H2 #3 1:1 - 1080x1080px):
+Lifestyle photography of a woman peacefully rinsing her reusable Laska Mini Set microfiber pad under a gentle stream of tap water in a sunlit eco-minimalist bathroom. Warm organic aesthetic. NO text.
+
+PROMPT #5 (SECCIÓN H2 #4 1:1 - 1080x1080px):
+Ultra macro photography comparing an abrasive cotton pad surface with ultra-fine Japanese UpPoly microfibers capturing sebum particles effortlessly with water micro-droplets. Medical science style. NO text.
+
+===============================================================================
+ESTADO: FASE 1 COMPLETADA — ESPERANDO CONFIRMACIÓN DE FASE 2
+===============================================================================
