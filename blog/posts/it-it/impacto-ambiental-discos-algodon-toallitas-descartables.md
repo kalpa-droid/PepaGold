@@ -21,8 +21,6 @@ local_phenomenon: >-
 cover_image: ''
 media:
   - >-
-    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
-  - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
 author: PepaGold
 epigraph:
@@ -128,7 +126,7 @@ Milioni di salviette gettate nel WC si uniscono ai grassi nelle reti fognarie ci
 
 La vera bellezza consapevole trasforma il bagno in uno spazio Zero Rifiuti (*Zero Waste*) senza compromettere l'efficacia o la delicatezza richiesta dalla pelle sensibile.
 
-![Detersione viso sostenibile risciacquando il dischetto in microfibra riutilizzabile](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp)
+
 
 È qui che entra in gioco l'innovazione della **microfibra di precisione giapponese UpPoly** (utilizzata nella linea Laska Mini Set):
 
