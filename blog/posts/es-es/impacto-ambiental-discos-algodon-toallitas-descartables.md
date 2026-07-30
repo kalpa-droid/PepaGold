@@ -24,8 +24,6 @@ media:
   - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
   - >-
-    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
-  - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
   - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
@@ -122,7 +120,7 @@ Incluso los discos etiquetados como 100% algodón suelen contener aglutinantes p
 
 Si los discos de algodón dañan los recursos hídricos, las toallitas desmaquillantes son una bomba de tiempo para la ecología acuática:
 
-![Microplásticos y resinas sintéticas presentes en las toallitas desechables](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp)
+
 
 - **Fibras Sintéticas Indestructibles:** La gran mayoría de las toallitas del mercado están compuestas por una mezcla de poliéster y polipropileno. **No son papel; son plástico tejido.**
 - **500 Años en el Planeta:** Una sola toallita desechable tarda hasta medio siglo en fragmentarse en partículas diminutas que terminan en los estómagos de la fauna marina.
