@@ -23,6 +23,12 @@ media:
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
   - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -93,7 +99,7 @@ date_images_applied: '2026-07-30'
 
 Существует миф о том, что раз хлопок — это растение, то ватные диски полностью экологичны. Реальность суровее:
 
-![Огромный расход воды и пестицидов при выращивании хлопка](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp)
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp)
 
 - **Огромный расход воды:** Для производства всего 1 кг промышленного хлопка требуется от **10 000 до 20 000 литров воды**, что истощает водоемы.
 - **Пестициды:** Хлопок занимает лишь 2,4% сельхозугодий мира, но на него приходится **24% всех используемых инсектицидов** и 11% пестицидов.
@@ -111,7 +117,7 @@ date_images_applied: '2026-07-30'
 
 Если ватные диски истощают водные ресурсы, то салфетки для снятия макияжа — настоящая экологическая катастрофа:
 
-
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp)
 
 - **Синтетические волокна:** Большинство салфеток изготавливают из смеси полиэстера и полипропилена. **Это не бумага, а тканный пластик.**
 - **500 лет разложения:** Одноразовая салфетка распадается до 500 лет на микропластик, попадающий в организмы морских обитателей.
@@ -125,7 +131,7 @@ date_images_applied: '2026-07-30'
 
 Осознанный уход за собой превращает ванную комнату в пространство Zero Waste без потери эффективности и мягкости для чувствительной кожи.
 
-
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp)
 
 Здесь раскрывается преимущество **японского рассеченного микроволокна UpPoly** (используемого в наборе Laska Mini Set):
 
@@ -144,7 +150,7 @@ date_images_applied: '2026-07-30'
 
 Переход на многоразовое микроволокно бережет не только природу, но и структуру эпидермиса:
 
-
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp)
 
 - **Одноразовый хлопок:** Короткие грубые волокна создают механическое трение, вызывая микроповреждения, покраснения и шелушение.
 - **Микроволокно UpPoly:** Нити в 100 раз тоньше человеческого волоса скользят по коже, очищая поры без повреждения рогового слоя.
