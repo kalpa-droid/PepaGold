@@ -1,10 +1,12 @@
 ---
 article_id: PG-011
-title: Quanta lixeira sua rotina facial gera? O Impacto Ambiental dos Discos de Algodão
-  e Lenços Descartáveis
-description: 'Descubra o custo ecológico oculto dos descartáveis no skincare: consumo
-  de água, pesticidas do algodão e microplásticos. Como a microfibra sustentável revoluciona
-  a beleza limpa.'
+title: >-
+  Quanta lixeira sua rotina facial gera? O Impacto Ambiental dos Discos de
+  Algodão e Lenços Descartáveis
+description: >-
+  Descubra o custo ecológico oculto dos descartáveis no skincare: consumo de
+  água, pesticidas do algodão e microplásticos. Como a microfibra sustentável
+  revoluciona a beleza limpa.
 slug: impacto-ambiental-discos-algodon-toallitas-descartables
 date: '2026-07-30'
 date_created: '2026-07-30'
@@ -13,60 +15,83 @@ locale: pt-br
 category: sostenibilidad
 category_label: 🌱 Sustentabilidade e Ecologia
 concept: impacto-ambiental-discos-algodon-toallitas-descartables
-local_phenomenon: Poluição por descartáveis diários e descarte massivo de microplásticos
+local_phenomenon: >-
+  Poluição por descartáveis diários e descarte massivo de microplásticos
   cosméticos
-cover_image: /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
+cover_image: >-
+  /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
 media:
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
 author: PepaGold
 epigraph:
-  text: A verdadeira beleza limpa não protege apenas a barreira cutânea do rosto;
+  text: >-
+    A verdadeira beleza limpa não protege apenas a barreira cutânea do rosto;
     preserva os ecossistemas dos quais depende a vida.
   author: Dra. PepaGold
 summary:
-- Todos os anos são descartados bilhões de discos de algodão e lenços umedecidos demaquilantes
-  que levam até 500 anos para se decompor.
-- O cultivo industrial do algodão exige até 20.000 litros de água por quilo e o uso
-  massivo de agrotóxicos altamente poluentes.
-- Os lenços demaquilantes contêm fibras sintéticas de plástico que entopem tubulações
-  e liberam microplásticos nos oceanos.
-- Substituir os descartáveis por fibras reutilizáveis da tecnologia UpPoly permite
-  uma limpeza profunda usando apenas água, reduzindo 100% do lixo facial diário.
+  - >-
+    Todos os anos são descartados bilhões de discos de algodão e lenços
+    umedecidos demaquilantes que levam até 500 anos para se decompor.
+  - >-
+    O cultivo industrial do algodão exige até 20.000 litros de água por quilo e
+    o uso massivo de agrotóxicos altamente poluentes.
+  - >-
+    Os lenços demaquilantes contêm fibras sintéticas de plástico que entopem
+    tubulações e liberam microplásticos nos oceanos.
+  - >-
+    Substituir os descartáveis por fibras reutilizáveis da tecnologia UpPoly
+    permite uma limpeza profunda usando apenas água, reduzindo 100% do lixo
+    facial diário.
 faq:
-- q: Os discos de algodão não são biodegradáveis por serem naturais?
-  a: Embora o algodão bruto seja biodegradável, os discos industriais passam por branqueamento
-    com cloro e recebem resinas plásticas que impedem sua compostagem limpa.
-- q: Quanto dinheiro e resíduos podem ser economizados mudando para fibras reutilizáveis?
-  a: Uma pessoa consome em média de 700 a 1.500 discos ou lenços descartáveis por
-    ano. Com um conjunto de microfibra reutilizável, elimina-se todo esse lixo e economizam-se
-    centenas de reais.
+  - q: Os discos de algodão não são biodegradáveis por serem naturais?
+    a: >-
+      Embora o algodão bruto seja biodegradável, os discos industriais passam
+      por branqueamento com cloro e recebem resinas plásticas que impedem sua
+      compostagem limpa.
+  - q: >-
+      Quanto dinheiro e resíduos podem ser economizados mudando para fibras
+      reutilizáveis?
+    a: >-
+      Uma pessoa consome em média de 700 a 1.500 discos ou lenços descartáveis
+      por ano. Com um conjunto de microfibra reutilizável, elimina-se todo esse
+      lixo e economizam-se centenas de reais.
 image_prompts:
-- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9): High-end editorial photography
-  showing a striking contrast between environmental waste and sustainable beauty.
-  On one side, a pile of discarded single-use cotton pads and plastic wipes, on the
-  other a pristine glowing face touching a soft reusable UpPoly microfiber set surrounded
-  by green leaves and clean water droplets. Shot on Hasselblad 100MP, warm golden
-  light. NO text, NO labels, NO logos.'
-- '📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): Conceptual photography
-  depicting the water footprint of industrial cotton farming. A single dried cotton
-  boll hovering over a dry cracked soil bed with a translucent water gauge indicator
-  showing 20,000 liters. Soft artistic lighting. NO text.'
-- '📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Macro science photography
-  showing synthetic microfibers and plastic polymers woven into conventional makeup
-  wipes under high-power optical magnification. Clean blue and gray studio lighting.
-  NO text.'
-- '📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Lifestyle photography
-  of a woman peacefully rinsing her reusable Laska Mini Set microfiber pad under a
-  gentle stream of tap water in a sunlit eco-minimalist bathroom. Warm organic aesthetic.
-  NO text.'
-- '📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): Ultra macro photography
-  comparing an abrasive cotton pad surface with ultra-fine Japanese UpPoly microfibers
-  capturing sebum particles effortlessly with water micro-droplets. Medical science
-  style. NO text.'
+  - >-
+    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9): High-end editorial
+    photography showing a striking contrast between environmental waste and
+    sustainable beauty. On one side, a pile of discarded single-use cotton pads
+    and plastic wipes, on the other a pristine glowing face touching a soft
+    reusable UpPoly microfiber set surrounded by green leaves and clean water
+    droplets. Shot on Hasselblad 100MP, warm golden light. NO text, NO labels,
+    NO logos.
+  - >-
+    📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): Conceptual
+    photography depicting the water footprint of industrial cotton farming. A
+    single dried cotton boll hovering over a dry cracked soil bed with a
+    translucent water gauge indicator showing 20,000 liters. Soft artistic
+    lighting. NO text.
+  - >-
+    📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Macro science
+    photography showing synthetic microfibers and plastic polymers woven into
+    conventional makeup wipes under high-power optical magnification. Clean blue
+    and gray studio lighting. NO text.
+  - >-
+    📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Lifestyle
+    photography of a woman peacefully rinsing her reusable Laska Mini Set
+    microfiber pad under a gentle stream of tap water in a sunlit eco-minimalist
+    bathroom. Warm organic aesthetic. NO text.
+  - >-
+    📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): Ultra macro
+    photography comparing an abrasive cotton pad surface with ultra-fine
+    Japanese UpPoly microfibers capturing sebum particles effortlessly with
+    water micro-droplets. Medical science style. NO text.
 show_science_link: true
 date_images_applied: '2026-07-30'
 ---
@@ -110,7 +135,7 @@ Milhões de lenços descartados no vaso sanitário se unindo a gorduras nas tubu
 
 O verdadeiro cuidado consciente transforma o banheiro em um espaço Zero Lixo (*Zero Waste*) sem comprometer a eficácia nem a suavidade que a pele sensível exige.
 
-![Limpeza facial sustentável lavando o disco de microfibra reutilizável](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp)
+
 
 É aqui que entra a inovação da **microfibra de precisão japonesa UpPoly** (presente no Laska Mini Set):
 
