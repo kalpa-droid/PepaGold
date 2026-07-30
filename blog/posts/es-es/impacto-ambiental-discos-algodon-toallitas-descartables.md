@@ -18,10 +18,19 @@ concept: impacto-ambiental-discos-algodon-toallitas-descartables
 local_phenomenon: >-
   Contaminación por desechables diarios y desecho masivo de microplásticos
   cosméticos
-cover_image: ''
+cover_image: >-
+  /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
 media:
   - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
+  - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -97,7 +106,7 @@ La industria cosmética tradicional nos ha acostumbrado a la cultura del desecho
 
 Existe el mito de que como el algodón es una planta, su uso en discos desechables es 100% ecológico y natural. La realidad es muy diferente:
 
-
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp)
 
 - **Consumo Hídrico Extremo:** Para producir un solo kilo de algodón industrial se necesitan entre **10.000 y 20.000 litros de agua**, devastando reservas de agua dulce en regiones agrícolas vulnerables.
 - **Uso Masivo de Plaguicidas:** El cultivo de algodón ocupa apenas el 2,4% de la tierra cultivable del planeta, pero consume el **24% de los insecticidas globales** y el 11% de los plaguicidas sintéticos.
@@ -115,7 +124,7 @@ Incluso los discos etiquetados como 100% algodón suelen contener aglutinantes p
 
 Si los discos de algodón dañan los recursos hídricos, las toallitas desmaquillantes son una bomba de tiempo para la ecología acuática:
 
-
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp)
 
 - **Fibras Sintéticas Indestructibles:** La gran mayoría de las toallitas del mercado están compuestas por una mezcla de poliéster y polipropileno. **No son papel; son plástico tejido.**
 - **500 Años en el Planeta:** Una sola toallita desechable tarda hasta medio siglo en fragmentarse en partículas diminutas que terminan en los estómagos de la fauna marina.
@@ -129,7 +138,7 @@ Millones de toallitas arrojadas por inodoros o vertederos se combinan con grasas
 
 El verdadero cuidado consciente propone transformar el baño en un espacio de residuos cero (*Zero Waste*) sin sacrificar la eficacia ni la suavidad que exige la piel sensible.
 
-![Higienización facial sostenible lavando el paño de microfibra reutilizable](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp)
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp)
 
 Aquí es donde entra la innovación de la **microfibra de precisión japonesa UpPoly** (utilizada en la línea Laska Mini Set):
 
@@ -148,7 +157,7 @@ Aquí es donde entra la innovación de la **microfibra de precisión japonesa Up
 
 Además de cuidar el planeta, cambiar los desechables por microfibra multicapa preserva la textura natural de tu piel:
 
-
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp)
 
 - **Algodón Desechable:** Sus fibras cortas crean fricción mecánica cuando se frotan sobre el rostro, generando microirritaciones, rojez y descamación en pieles sensibles.
 - **Microfibra UpPoly:** Con hilos 100 veces más finos que un cabello humano, las fibras se deslizan suavemente atravesando los poros sin raspar la capa córnea.
