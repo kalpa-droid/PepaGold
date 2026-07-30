@@ -22,8 +22,6 @@ cover_image: ''
 media:
   - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
-  - >-
-    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -149,7 +147,7 @@ O verdadeiro cuidado consciente transforma o banheiro em um espaço Zero Lixo (*
 
 Além de proteger o planeta, trocar o descartável por microfibra multicamada preserva a textura natural da pele:
 
-![Comparação entre a superfície áspera do algodão e a maciez UpPoly](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp)
+
 
 - **Algodão Descartável:** Suas fibras curtas geram forte atrito mecânico ao serem esfregadas no rosto, provocando microlesões, vermelhidão e descamação.
 - **Microfibra UpPoly:** Com fios 100 vezes mais finos que um fio de cabelo humano, as fibras deslizam suavemente pelos poros sem raspar a camada córnea.
