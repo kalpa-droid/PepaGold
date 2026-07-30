@@ -18,8 +18,19 @@ concept: impacto-ambiental-discos-algodon-toallitas-descartables
 local_phenomenon: >-
   Inquinamento da monouso quotidiano e smaltimento massiccio di microplastiche
   cosmetiche
-cover_image: ''
-media: []
+cover_image: >-
+  /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
+media:
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -92,7 +103,7 @@ L'industria cosmetica tradizionale ci ha abituato alla cultura dell'usa e getta:
 
 Esiste il mito secondo cui, essendo il cotone una pianta, l'uso di dischetti monouso sia 100% ecologico. La realtà è molto diversa:
 
-
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp)
 
 - **Consumo idrico estremo:** Per produrre un solo chilo di cotone industriale servono tra **10.000 e 20.000 litri d'acqua**, prosciugando le riserve idriche nelle regioni agricole.
 - **Uso massiccio di pesticidi:** La coltivazione del cotone occupa appena il 2,4% delle terre coltivabili mondiali, ma consuma il **24% degli insetticidi globali** e l'11% dei pesticidi sintetici.
@@ -110,7 +121,7 @@ Anche i dischetti etichettati come 100% cotone contengono spesso resine plastich
 
 Se i dischetti di cotone impoveriscono le risorse idriche, le salviette struccanti monouso sono una bomba ecologica per gli ambienti marini:
 
-
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp)
 
 - **Fibre sintetiche indistruttibili:** La maggior parte delle salviette è composta da una miscela di poliestere e polipropilene. **Non sono carta; sono plastica tessuta.**
 - **500 anni nell'ambiente:** Una singola salvietta monouso impiega fino a cinque secoli per frammentarsi in microplastiche ingerite dalla fauna marina.
@@ -124,7 +135,7 @@ Milioni di salviette gettate nel WC si uniscono ai grassi nelle reti fognarie ci
 
 La vera bellezza consapevole trasforma il bagno in uno spazio Zero Rifiuti (*Zero Waste*) senza compromettere l'efficacia o la delicatezza richiesta dalla pelle sensibile.
 
-
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp)
 
 È qui che entra in gioco l'innovazione della **microfibra di precisione giapponese UpPoly** (utilizzata nella linea Laska Mini Set):
 
@@ -143,7 +154,7 @@ La vera bellezza consapevole trasforma il bagno in uno spazio Zero Rifiuti (*Zer
 
 Oltre a tutelare il pianeta, sostituire il monouso con la microfibra multistrato preserva la struttura naturale della pelle:
 
-
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp)
 
 - **Cotone monouso:** Le sue fibre corte creano un forte sfregamento meccanico sul viso, causando micro-lesioni, arrossamenti e desquamazione.
 - **Microfibra UpPoly:** Con fili 100 volte più sottili di un capello umano, le fibre scivolano delicatamente tra i pori senza graffiare lo strato corneo.
