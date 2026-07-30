@@ -24,8 +24,6 @@ media:
   - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
   - >-
-    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
-  - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
 author: PepaGold
 epigraph:
@@ -129,7 +127,7 @@ date_images_applied: '2026-07-30'
 
 Осознанный уход за собой превращает ванную комнату в пространство Zero Waste без потери эффективности и мягкости для чувствительной кожи.
 
-![Экологичный уход за лицом и промывание многоразовой салфетки UpPoly](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp)
+
 
 Здесь раскрывается преимущество **японского рассеченного микроволокна UpPoly** (используемого в наборе Laska Mini Set):
 
