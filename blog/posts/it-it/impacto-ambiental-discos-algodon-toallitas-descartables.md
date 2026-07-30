@@ -19,9 +19,7 @@ local_phenomenon: >-
   Inquinamento da monouso quotidiano e smaltimento massiccio di microplastiche
   cosmetiche
 cover_image: ''
-media:
-  - >-
-    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
+media: []
 author: PepaGold
 epigraph:
   text: >-
@@ -145,7 +143,7 @@ La vera bellezza consapevole trasforma il bagno in uno spazio Zero Rifiuti (*Zer
 
 Oltre a tutelare il pianeta, sostituire il monouso con la microfibra multistrato preserva la struttura naturale della pelle:
 
-![Confronto tra la superficie ruvida del cotone e la delicatezza UpPoly](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp)
+
 
 - **Cotone monouso:** Le sue fibre corte creano un forte sfregamento meccanico sul viso, causando micro-lesioni, arrossamenti e desquamazione.
 - **Microfibra UpPoly:** Con fili 100 volte più sottili di un capello umano, le fibre scivolano delicatamente tra i pori senza graffiare lo strato corneo.
