@@ -16,8 +16,6 @@ media:
   - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
   - >-
-    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
-  - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
   - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
@@ -94,7 +92,7 @@ date_images_applied: '2026-07-30'
 
 如果说化妆棉消耗了水资源，那么一次性卸妆湿巾则是海洋生态的定时炸弹：
 
-![一次性湿巾中所含的微塑料与合成树脂](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp)
+
 
 - **无法降解的合成纤维：** 市面上绝大多数湿巾由聚酯和聚丙烯混合制成。**它们不是纸，而是编制塑料。**
 - **500年降解期：** 一片湿巾需要长达五个世纪才能分裂成微塑料颗粒，最终被海洋生物误食。
