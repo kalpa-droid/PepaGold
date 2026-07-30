@@ -18,8 +18,19 @@ concept: impacto-ambiental-discos-algodon-toallitas-descartables
 local_phenomenon: >-
   Pollution par les produits jetables quotidiens et rejet massif de
   microplastiques cosmétiques
-cover_image: ''
-media: []
+cover_image: >-
+  /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
+media:
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -94,7 +105,7 @@ L'industrie cosmétique traditionnelle nous a habitués à la culture du jetable
 
 Il existe un mythe selon lequel le coton étant une plante, l'utilisation de disques jetables serait 100 % écologique. La réalité est bien différente :
 
-
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp)
 
 - **Empreinte hydrique extrême :** Pour produire un seul kilo de coton industriel, il faut entre **10 000 et 20 000 litres d'eau**, épuisant les réserves d'eau douce des régions agricoles.
 - **Utilisation massive de pesticides :** La culture du coton occupe à peine 2,4 % des terres cultivables mondiales, mais consomme **24 % des insecticides globaux** et 11 % des pesticides synthétiques.
@@ -112,7 +123,7 @@ Même les disques étiquetés 100 % coton contiennent souvent des résines plast
 
 Si les cotons épuisent les ressources en eau, les lingettes démaquillantes sont une bombe écologique pour les milieux aquatiques :
 
-
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp)
 
 - **Fibres synthétiques indestructibles :** La majorité des lingettes sont fabriquées à partir d'un mélange de polyester et de polypropylène. **Ce n'est pas du papier ; c'est du plastique tissé.**
 - **500 ans dans la nature :** Une seule lingette jetable met jusqu'à cinq siècles à se fragmenter en microplastiques ingérés par la faune marine.
@@ -126,7 +137,7 @@ Des millions de lingettes jetées dans les toilettes se combinent aux graisses d
 
 La vraie beauté responsable transforme la salle de bain en un espace zéro déchet (*Zero Waste*) sans compromettre l'efficacité ni la douceur requise par les peaux sensibles.
 
-
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp)
 
 C'est ici qu'intervient l'innovation de la **microfibre de précision japonaise UpPoly** (utilisée dans la gamme Laska Mini Set) :
 
@@ -145,7 +156,7 @@ C'est ici qu'intervient l'innovation de la **microfibre de précision japonaise 
 
 En plus de préserver la planète, remplacer le jetable par de la microfibre multicouche préserve la texture naturelle de votre peau :
 
-
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp)
 
 - **Coton jetable :** Ses fibres courtes créent des frottements mécaniques agressifs sur le visage, provoquant micro-lésions, rougeurs et desquamation.
 - **Microfibre UpPoly :** Avec des fils 100 fois plus fins qu'un cheveu humain, les fibres glissent sans effort à travers les pores sans rayer la couche cornée.
