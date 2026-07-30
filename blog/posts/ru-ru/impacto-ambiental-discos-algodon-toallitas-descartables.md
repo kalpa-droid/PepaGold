@@ -23,8 +23,6 @@ media:
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
   - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
-  - >-
-    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -146,7 +144,7 @@ date_images_applied: '2026-07-30'
 
 Переход на многоразовое микроволокно бережет не только природу, но и структуру эпидермиса:
 
-![Сравнение грубой поверхности хлопка и мягкого микроволокна UpPoly](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp)
+
 
 - **Одноразовый хлопок:** Короткие грубые волокна создают механическое трение, вызывая микроповреждения, покраснения и шелушение.
 - **Микроволокно UpPoly:** Нити в 100 раз тоньше человеческого волоса скользят по коже, очищая поры без повреждения рогового слоя.
