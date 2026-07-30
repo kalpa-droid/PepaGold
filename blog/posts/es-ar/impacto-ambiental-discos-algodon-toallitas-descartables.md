@@ -22,8 +22,6 @@ cover_image: ''
 media:
   - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
-  - >-
-    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -150,7 +148,7 @@ Aquí es donde entra la innovación de la **microfibra de precisión japonesa Up
 
 Además de cuidar el planeta, cambiar los descartables por microfibra multicapa preserva la textura natural de tu piel:
 
-![Comparativa entre la superficie áspera del algodón y la microfibra UpPoly](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp)
+
 
 - **Algodón Descartable:** Sus fibras cortas crean fricción mecánica cuando se frotan sobre el rostro, generando microtitilaciones, rojez y descamación en pieles sensibles.
 - **Microfibra UpPoly:** Con hilos 100 veces más finos que un cabello humano, las fibras se deslizan suavemente atravesando los poros sin raspar la capa córnea.
