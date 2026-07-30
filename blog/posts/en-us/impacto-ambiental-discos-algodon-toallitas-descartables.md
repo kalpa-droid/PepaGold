@@ -20,8 +20,6 @@ cover_image: ''
 media:
   - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
-  - >-
-    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -144,7 +142,7 @@ This is where advanced **Japanese UpPoly microfiber engineering** (featured in t
 
 Beyond protecting planetary resources, switching from single-use cotton to multi-layered microfibers protects your skin texture:
 
-![Comparison between rough cotton surface and smooth UpPoly microfibers](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp)
+
 
 - **Disposable Cotton:** Short, coarse fibers create harsh mechanical friction when rubbed against sensitive facial skin, causing micro-abrasions, redness, and peeling.
 - **UpPoly Microfiber:** Strands 100 times finer than a human hair glide effortlessly across pores, sweeping away impurities without scraping the delicate stratum corneum.
