@@ -1,10 +1,12 @@
 ---
 article_id: PG-011
-title: Сколько мусора создает ваш уход за лицом? Экологический вред ватных дисков
-  и одноразовых салфеток
-description: 'Узнайте о скрытом экологическом вреде одноразовых средств ухода: расходе
-  воды, пестицидах и микропластике. Как многоразовое микроволокно революционизирует
-  эко-красоту.'
+title: >-
+  Сколько мусора создает ваш уход за лицом? Экологический вред ватных дисков и
+  одноразовых салфеток
+description: >-
+  Узнайте о скрытом экологическом вреде одноразовых средств ухода: расходе воды,
+  пестицидах и микропластике. Как многоразовое микроволокно революционизирует
+  эко-красоту.
 slug: impacto-ambiental-discos-algodon-toallitas-descartables
 date: '2026-07-30'
 date_created: '2026-07-30'
@@ -14,57 +16,76 @@ category: sostenibilidad
 category_label: 🌱 Экология и устойчивость
 concept: impacto-ambiental-discos-algodon-toallitas-descartables
 local_phenomenon: Загрязнение одноразовыми средствами ухода и массовый выброс микропластика
-cover_image: /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
+cover_image: >-
+  /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
 media:
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
 author: PepaGold
 epigraph:
-  text: Настоящая чистая красота защищает не только липидный барьер кожи, но и экосистемы,
-    от которых зависит жизнь на Земле.
+  text: >-
+    Настоящая чистая красота защищает не только липидный барьер кожи, но и
+    экосистемы, от которых зависит жизнь на Земле.
   author: Dra. PepaGold
 summary:
-- Ежегодно выбрасываются миллиарды одноразовых ватных дисков и салфеток, разлагающихся
-  до 500 лет.
-- Промышленное выращивание хлопка требует до 20 000 литров воды на килограмм и применения
-  опасных пестицидов.
-- Влажные салфетки содержат синтетический пластик, который забивает канализацию и
-  загрязняет океан микропластиком.
-- Замена одноразовых средств многоразовым микроволокном UpPoly позволяет очищать кожу
-  только водой, на 100% устраняя мусор.
+  - >-
+    Ежегодно выбрасываются миллиарды одноразовых ватных дисков и салфеток,
+    разлагающихся до 500 лет.
+  - >-
+    Промышленное выращивание хлопка требует до 20 000 литров воды на килограмм и
+    применения опасных пестицидов.
+  - >-
+    Влажные салфетки содержат синтетический пластик, который забивает
+    канализацию и загрязняет океан микропластиком.
+  - >-
+    Замена одноразовых средств многоразовым микроволокном UpPoly позволяет
+    очищать кожу только водой, на 100% устраняя мусор.
 faq:
-- q: Разве ватные диски не биоразлагаемы, ведь хлопок натурален?
-  a: Хотя чистый хлопок разлагается, диски отбеливают хлором и обрабатывают синтетическими
-    смолами, препятствующими компостированию.
-- q: Сколько денег и мусора сбережет переход на многоразовые материалы?
-  a: В среднем человек расходует от 700 до 1 500 дисков или салфеток в год. Один многоразовый
-    набор микроволокна полностью устраняет этот мусор и экономит значительные средства.
+  - q: Разве ватные диски не биоразлагаемы, ведь хлопок натурален?
+    a: >-
+      Хотя чистый хлопок разлагается, диски отбеливают хлором и обрабатывают
+      синтетическими смолами, препятствующими компостированию.
+  - q: Сколько денег и мусора сбережет переход на многоразовые материалы?
+    a: >-
+      В среднем человек расходует от 700 до 1 500 дисков или салфеток в год.
+      Один многоразовый набор микроволокна полностью устраняет этот мусор и
+      экономит значительные средства.
 image_prompts:
-- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9): High-end editorial photography
-  showing a striking contrast between environmental waste and sustainable beauty.
-  On one side, a pile of discarded single-use cotton pads and plastic wipes, on the
-  other a pristine glowing face touching a soft reusable UpPoly microfiber set surrounded
-  by green leaves and clean water droplets. Shot on Hasselblad 100MP, warm golden
-  light. NO text, NO labels, NO logos.'
-- '📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): Conceptual photography
-  depicting the water footprint of industrial cotton farming. A single dried cotton
-  boll hovering over a dry cracked soil bed with a translucent water gauge indicator
-  showing 20,000 liters. Soft artistic lighting. NO text.'
-- '📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Macro science photography
-  showing synthetic microfibers and plastic polymers woven into conventional makeup
-  wipes under high-power optical magnification. Clean blue and gray studio lighting.
-  NO text.'
-- '📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Lifestyle photography
-  of a woman peacefully rinsing her reusable Laska Mini Set microfiber pad under a
-  gentle stream of tap water in a sunlit eco-minimalist bathroom. Warm organic aesthetic.
-  NO text.'
-- '📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): Ultra macro photography
-  comparing an abrasive cotton pad surface with ultra-fine Japanese UpPoly microfibers
-  capturing sebum particles effortlessly with water micro-droplets. Medical science
-  style. NO text.'
+  - >-
+    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9): High-end editorial
+    photography showing a striking contrast between environmental waste and
+    sustainable beauty. On one side, a pile of discarded single-use cotton pads
+    and plastic wipes, on the other a pristine glowing face touching a soft
+    reusable UpPoly microfiber set surrounded by green leaves and clean water
+    droplets. Shot on Hasselblad 100MP, warm golden light. NO text, NO labels,
+    NO logos.
+  - >-
+    📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): Conceptual
+    photography depicting the water footprint of industrial cotton farming. A
+    single dried cotton boll hovering over a dry cracked soil bed with a
+    translucent water gauge indicator showing 20,000 liters. Soft artistic
+    lighting. NO text.
+  - >-
+    📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Macro science
+    photography showing synthetic microfibers and plastic polymers woven into
+    conventional makeup wipes under high-power optical magnification. Clean blue
+    and gray studio lighting. NO text.
+  - >-
+    📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Lifestyle
+    photography of a woman peacefully rinsing her reusable Laska Mini Set
+    microfiber pad under a gentle stream of tap water in a sunlit eco-minimalist
+    bathroom. Warm organic aesthetic. NO text.
+  - >-
+    📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): Ultra macro
+    photography comparing an abrasive cotton pad surface with ultra-fine
+    Japanese UpPoly microfibers capturing sebum particles effortlessly with
+    water micro-droplets. Medical science style. NO text.
 show_science_link: true
 date_images_applied: '2026-07-30'
 ---
@@ -94,7 +115,7 @@ date_images_applied: '2026-07-30'
 
 Если ватные диски истощают водные ресурсы, то салфетки для снятия макияжа — настоящая экологическая катастрофа:
 
-![Микропластик и синтетические смолы в одноразовых салфетках](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp)
+
 
 - **Синтетические волокна:** Большинство салфеток изготавливают из смеси полиэстера и полипропилена. **Это не бумага, а тканный пластик.**
 - **500 лет разложения:** Одноразовая салфетка распадается до 500 лет на микропластик, попадающий в организмы морских обитателей.
