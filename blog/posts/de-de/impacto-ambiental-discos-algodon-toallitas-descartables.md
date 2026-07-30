@@ -21,8 +21,6 @@ media:
   - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
   - >-
-    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
-  - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
   - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
@@ -116,7 +114,7 @@ Selbst als 100 % Baumwolle deklarierte Pads enthalten oft synthetische Kunststof
 
 Während Wattepads die Wasserreserven belasten, sind Einweg-Abschminktücher eine ökologische Zeitbombe für die Meere:
 
-![Mikroplastik und synthetische Harze in Einweg-Abschminktüchern](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp)
+
 
 - **Unverwüstliche Synthetikfasern:** Die meisten Feuchttücher bestehen aus Polyester- und Polypropylen-Mischungen. **Sie sind kein Papier, sondern gewebtes Plastik.**
 - **500 Jahre Haltbarkeit:** Ein einziges Feuchttuch benötigt bis zu 500 Jahre, um in winzige Mikroplastikpartikel zu zerfallen, die von Meerestieren aufgenommen werden.
