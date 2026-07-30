@@ -16,10 +16,19 @@ category: sostenibilidad
 category_label: 🌱 Sustainability & Ecology
 concept: impacto-ambiental-discos-algodon-toallitas-descartables
 local_phenomenon: Daily disposable waste pollution and massive cosmetic microplastic disposal
-cover_image: ''
+cover_image: >-
+  /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
 media:
   - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
+  - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -91,7 +100,7 @@ The traditional beauty industry has normalized disposability: use for ten second
 
 There is a widespread myth that because cotton is a plant, single-use facial pads are 100% eco-friendly. The reality is vastly different:
 
-
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp)
 
 - **Extreme Water Footprint:** Producing just one kilogram of industrial cotton requires **10,000 to 20,000 liters of water**, depleting freshwater reserves in vulnerable agricultural ecosystems.
 - **Heavy Pesticide Use:** Cotton crops occupy barely 2.4% of global arable land, yet consume **24% of global insecticides** and 11% of synthetic agricultural pesticides.
@@ -109,7 +118,7 @@ Even pads labeled 100% cotton frequently contain synthetic plastic binding resin
 
 While cotton pads drain freshwater reserves, disposable makeup wipes are an ecological crisis for aquatic life:
 
-
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp)
 
 - **Indestructible Synthetic Fibers:** The vast majority of retail wipes are woven from polyester and polypropylene blends. **They are not paper; they are woven plastic.**
 - **500 Years in Ecosystems:** A single disposable wipe takes up to five centuries to break down into tiny microplastic particles ingested by marine life.
@@ -123,7 +132,7 @@ Millions of wipes flushed down toilets merge with grease and industrial debris i
 
 True conscious beauty transforms your bathroom into a Zero Waste space without compromising clinical efficacy or gentle care for sensitive skin.
 
-![Sustainable facial cleansing by rinsing a reusable microfiber pad](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp)
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp)
 
 This is where advanced **Japanese UpPoly microfiber engineering** (featured in the Laska Mini Set) changes everything:
 
@@ -142,7 +151,7 @@ This is where advanced **Japanese UpPoly microfiber engineering** (featured in t
 
 Beyond protecting planetary resources, switching from single-use cotton to multi-layered microfibers protects your skin texture:
 
-
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp)
 
 - **Disposable Cotton:** Short, coarse fibers create harsh mechanical friction when rubbed against sensitive facial skin, causing micro-abrasions, redness, and peeling.
 - **UpPoly Microfiber:** Strands 100 times finer than a human hair glide effortlessly across pores, sweeping away impurities without scraping the delicate stratum corneum.
