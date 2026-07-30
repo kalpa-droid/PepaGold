@@ -23,8 +23,6 @@ media:
   - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
   - >-
-    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
-  - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
 author: PepaGold
 epigraph:
@@ -132,7 +130,7 @@ Des millions de lingettes jetées dans les toilettes se combinent aux graisses d
 
 La vraie beauté responsable transforme la salle de bain en un espace zéro déchet (*Zero Waste*) sans compromettre l'efficacité ni la douceur requise par les peaux sensibles.
 
-![Nettoyage facial durable en rinçant la microfibre réutilisable](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp)
+
 
 C'est ici qu'intervient l'innovation de la **microfibre de précision japonaise UpPoly** (utilisée dans la gamme Laska Mini Set) :
 
