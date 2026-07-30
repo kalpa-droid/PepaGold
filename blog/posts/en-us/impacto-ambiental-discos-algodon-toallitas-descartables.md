@@ -19,8 +19,6 @@ local_phenomenon: Daily disposable waste pollution and massive cosmetic micropla
 cover_image: ''
 media:
   - >-
-    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
-  - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
   - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
@@ -97,7 +95,7 @@ The traditional beauty industry has normalized disposability: use for ten second
 
 There is a widespread myth that because cotton is a plant, single-use facial pads are 100% eco-friendly. The reality is vastly different:
 
-![Massive water consumption and chemical pesticides in industrial cotton farming](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp)
+
 
 - **Extreme Water Footprint:** Producing just one kilogram of industrial cotton requires **10,000 to 20,000 liters of water**, depleting freshwater reserves in vulnerable agricultural ecosystems.
 - **Heavy Pesticide Use:** Cotton crops occupy barely 2.4% of global arable land, yet consume **24% of global insecticides** and 11% of synthetic agricultural pesticides.
