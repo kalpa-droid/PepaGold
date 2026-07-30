@@ -18,10 +18,19 @@ concept: impacto-ambiental-discos-algodon-toallitas-descartables
 local_phenomenon: >-
   Poluição por descartáveis diários e descarte massivo de microplásticos
   cosméticos
-cover_image: ''
+cover_image: >-
+  /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
 media:
   - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
+  - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -96,7 +105,7 @@ A indústria cosmética tradicional nos acostumou com a cultura do descarte: usa
 
 Existe o mito de que, por ser uma planta, o uso de algodão descartável é 100% ecológico e natural. A realidade é muito diferente:
 
-![Consumo massivo de água e agrotóxicos no cultivo industrial do algodão](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp)
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp)
 
 - **Consumo Hídrico Extremo:** Para produzir um único quilo de algodão industrial são necessários entre **10.000 e 20.000 litros de água**, esgotando reservas de água doce em regiões agrícolas.
 - **Uso Massivo de Agrotóxicos:** O cultivo do algodão ocupa apenas 2,4% da terra cultivável do planeta, mas consome **24% dos inseticidas globais** e 11% dos pesticidas sintéticos.
@@ -114,7 +123,7 @@ Mesmo os discos rotulados como 100% algodão costumam conter ligantes plásticos
 
 Se os discos de algodão esgotam os recursos hídricos, os lenços demaquilantes são uma bomba-relógio para os ecossistemas marinhos:
 
-
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp)
 
 - **Fibras Sintéticas Indestrutíveis:** A grande maioria dos lenços é composta por uma mistura de poliéster e polipropileno. **Não são papel; são plástico trançado.**
 - **500 Anos na Natureza:** Um único lenço descartável leva até cinco séculos para se fragmentar em microplásticos ingeridos pela fauna marinha.
@@ -128,7 +137,7 @@ Milhões de lenços descartados no vaso sanitário se unindo a gorduras nas tubu
 
 O verdadeiro cuidado consciente transforma o banheiro em um espaço Zero Lixo (*Zero Waste*) sem comprometer a eficácia nem a suavidade que a pele sensível exige.
 
-
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp)
 
 É aqui que entra a inovação da **microfibra de precisão japonesa UpPoly** (presente no Laska Mini Set):
 
@@ -147,7 +156,7 @@ O verdadeiro cuidado consciente transforma o banheiro em um espaço Zero Lixo (*
 
 Além de proteger o planeta, trocar o descartável por microfibra multicamada preserva a textura natural da pele:
 
-
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp)
 
 - **Algodão Descartável:** Suas fibras curtas geram forte atrito mecânico ao serem esfregadas no rosto, provocando microlesões, vermelhidão e descamação.
 - **Microfibra UpPoly:** Com fios 100 vezes mais finos que um fio de cabelo humano, as fibras deslizam suavemente pelos poros sem raspar a camada córnea.
