@@ -15,8 +15,6 @@ cover_image: ''
 media:
   - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
-  - >-
-    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
 author: PepaGold
 epigraph:
   text: 真正纯净的肌肤护理不仅守护着面部屏障，更呵护着地球万物赖以生存的生态系统。
@@ -123,7 +121,7 @@ date_images_applied: '2026-07-30'
 
 除了保护地球，将一次性棉花更换为多层超细纤维还能呵护肌肤的天然屏障：
 
-![粗糙棉花表面与柔滑UpPoly超细纤维的对比](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp)
+
 
 - **一次性棉花：** 其短粗纤维在擦拭面部时产生强烈机械摩擦，导致微小损伤、泛红与脱皮。
 - **UpPoly超细纤维：** 纤维细度仅为头发丝的1/100，能够顺滑穿过毛孔，在不刮伤角质层的情况下带走污垢。
