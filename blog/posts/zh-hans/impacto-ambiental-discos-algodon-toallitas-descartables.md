@@ -16,8 +16,6 @@ media:
   - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
   - >-
-    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
-  - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
 author: PepaGold
 epigraph:
@@ -106,7 +104,7 @@ date_images_applied: '2026-07-30'
 
 真正有意识的护肤主张将浴室打造为零浪费（*Zero Waste*）空间，同时绝不牺牲敏感肌所需的清洁力与柔和度。
 
-![清洗可重复使用的超细纤维卸妆巾](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp)
+
 
 这正是 **日本UpPoly精密超细纤维**（Laska Mini Set系列）的创新之处：
 
