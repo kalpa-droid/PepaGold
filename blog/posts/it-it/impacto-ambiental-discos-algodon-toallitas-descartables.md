@@ -21,8 +21,6 @@ local_phenomenon: >-
 cover_image: ''
 media:
   - >-
-    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
-  - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
   - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
@@ -116,7 +114,7 @@ Anche i dischetti etichettati come 100% cotone contengono spesso resine plastich
 
 Se i dischetti di cotone impoveriscono le risorse idriche, le salviette struccanti monouso sono una bomba ecologica per gli ambienti marini:
 
-![Microplastiche e resine sintetiche presenti nelle salviette monouso](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp)
+
 
 - **Fibre sintetiche indistruttibili:** La maggior parte delle salviette è composta da una miscela di poliestere e polipropilene. **Non sono carta; sono plastica tessuta.**
 - **500 anni nell'ambiente:** Una singola salvietta monouso impiega fino a cinque secoli per frammentarsi in microplastiche ingerite dalla fauna marina.
