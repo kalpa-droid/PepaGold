@@ -23,8 +23,6 @@ media:
   - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
   - >-
-    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
-  - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
 author: PepaGold
 epigraph:
@@ -118,7 +116,7 @@ Mesmo os discos rotulados como 100% algodão costumam conter ligantes plásticos
 
 Se os discos de algodão esgotam os recursos hídricos, os lenços demaquilantes são uma bomba-relógio para os ecossistemas marinhos:
 
-![Microplásticos e resinas sintéticas presentes nos lenços descartáveis](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp)
+
 
 - **Fibras Sintéticas Indestrutíveis:** A grande maioria dos lenços é composta por uma mistura de poliéster e polipropileno. **Não são papel; são plástico trançado.**
 - **500 Anos na Natureza:** Um único lenço descartável leva até cinco séculos para se fragmentar em microplásticos ingeridos pela fauna marinha.
