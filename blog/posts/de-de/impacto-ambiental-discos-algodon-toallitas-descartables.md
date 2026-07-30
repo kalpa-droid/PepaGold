@@ -16,10 +16,19 @@ category: sostenibilidad
 category_label: 🌱 Nachhaltigkeit & Ökologie
 concept: impacto-ambiental-discos-algodon-toallitas-descartables
 local_phenomenon: Verschmutzung durch tägliche Einwegprodukte und massive Mikroplastikbelastung
-cover_image: ''
+cover_image: >-
+  /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
 media:
   - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
+  - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
 author: PepaGold
 epigraph:
   text: >-
@@ -92,7 +101,7 @@ Die traditionelle Kosmetikindustrie hat uns an die Wegwerfkultur gewöhnt: zehn 
 
 Es hält sich der Mythos, dass Einweg-Wattepads vollkommen umweltfreundlich seien, da Baumwolle pflanzlich ist. Die Realität sieht anders aus:
 
-![Massiver Wasserverbrauch und Pestizideinsatz im industriellen Baumwollanbau](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp)
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp)
 
 - **Extremer Wasserverbrauch:** Für die Produktion eines einzigen Kilos industrieller Baumwolle werden **10.000 bis 20.000 Liter Wasser** benötigt, was Süßwasserreserven in Dürreregionen erschöpft.
 - **Hoher Pestizideinsatz:** Baumwolle belegt zwar nur 2,4 % der weltweiten Ackerfläche, verbraucht aber **24 % aller Insektizide** und 11 % aller synthetischen Pestizide.
@@ -110,7 +119,7 @@ Selbst als 100 % Baumwolle deklarierte Pads enthalten oft synthetische Kunststof
 
 Während Wattepads die Wasserreserven belasten, sind Einweg-Abschminktücher eine ökologische Zeitbombe für die Meere:
 
-
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp)
 
 - **Unverwüstliche Synthetikfasern:** Die meisten Feuchttücher bestehen aus Polyester- und Polypropylen-Mischungen. **Sie sind kein Papier, sondern gewebtes Plastik.**
 - **500 Jahre Haltbarkeit:** Ein einziges Feuchttuch benötigt bis zu 500 Jahre, um in winzige Mikroplastikpartikel zu zerfallen, die von Meerestieren aufgenommen werden.
@@ -124,7 +133,7 @@ Millionen über die Toilette entsorgter Tücher verbinden sich in den Abwasserka
 
 Echte nachhaltige Hautpflege verwandelt das Badezimmer in eine Zero-Waste-Zone, ohne Abstriche bei der Wirksamkeit oder Milde für empfindliche Haut zu machen.
 
-
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp)
 
 Hier setzt die Innovation der **japanischen UpPoly-Präzisionsmikrofaser** (aus dem Laska Mini Set) an:
 
@@ -143,7 +152,7 @@ Hier setzt die Innovation der **japanischen UpPoly-Präzisionsmikrofaser** (aus 
 
 Neben dem Schutz der Umwelt schont der Wechsel von Einweg-Baumwolle zu mehrlagiger Mikrofaser die natürliche Hautstruktur:
 
-
+![Imagen de sección](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp)
 
 - **Einweg-Baumwolle:** Kurze, raue Fasern erzeugen mechanische Reibung auf der Gesichtshaut, was zu Mikroverletzungen, Rötungen und Schuppung führt.
 - **UpPoly-Mikrofaser:** Mit Fäden, die 100-mal feiner als ein menschliches Haar sind, gleiten die Fasern sanft über die Poren, ohne die Hornschicht zu schädigen.
