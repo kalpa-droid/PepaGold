@@ -21,8 +21,6 @@ media:
   - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
   - >-
-    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
-  - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
 author: PepaGold
 epigraph:
@@ -128,7 +126,7 @@ Millionen über die Toilette entsorgter Tücher verbinden sich in den Abwasserka
 
 Echte nachhaltige Hautpflege verwandelt das Badezimmer in eine Zero-Waste-Zone, ohne Abstriche bei der Wirksamkeit oder Milde für empfindliche Haut zu machen.
 
-![Nachhaltige Gesichtsreinigung durch Ausspülen des Mikrofaser-Pads](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp)
+
 
 Hier setzt die Innovation der **japanischen UpPoly-Präzisionsmikrofaser** (aus dem Laska Mini Set) an:
 
