@@ -1,10 +1,12 @@
 ---
 article_id: PG-011
-title: ¿Cuánta basura genera tu rutina facial? El Impacto Ambiental de los Discos
-  de Algodón y Toallitas Desechables
-description: 'Descubre el impacto ecológico de los desechables en el skincare: consumo
-  de agua, pesticidas del algodón y microplásticos. Cómo la higiene sostenible revoluciona
-  la belleza limpia.'
+title: >-
+  ¿Cuánta basura genera tu rutina facial? El Impacto Ambiental de los Discos de
+  Algodón y Toallitas Desechables
+description: >-
+  Descubre el impacto ecológico de los desechables en el skincare: consumo de
+  agua, pesticidas del algodón y microplásticos. Cómo la higiene sostenible
+  revoluciona la belleza limpia.
 slug: impacto-ambiental-discos-algodon-toallitas-descartables
 date: '2026-07-30'
 date_created: '2026-07-30'
@@ -13,62 +15,84 @@ locale: es-es
 category: sostenibilidad
 category_label: 🌱 Sostenibilidad y Ecología
 concept: impacto-ambiental-discos-algodon-toallitas-descartables
-local_phenomenon: Contaminación por desechables diarios y desecho masivo de microplásticos
+local_phenomenon: >-
+  Contaminación por desechables diarios y desecho masivo de microplásticos
   cosméticos
-cover_image: /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
+cover_image: >-
+  /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
 media:
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
-- /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_1.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
+  - >-
+    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
 author: PepaGold
 epigraph:
-  text: La verdadera belleza limpia no solo cuida la barrera cutánea de tu rostro;
+  text: >-
+    La verdadera belleza limpia no solo cuida la barrera cutánea de tu rostro;
     cuida los ecosistemas de los que depende la vida.
   author: Dra. PepaGold
 summary:
-- Cada año se desechan miles de millones de discos de algodón y toallitas húmedas
-  desmaquillantes que tardan hasta 500 años en descomponerse.
-- El cultivo intensivo de algodón industrial requiere hasta 20.000 litros de agua
-  por kilo y el uso masivo de plaguicidas altamente contaminantes.
-- Las toallitas desmaquillantes contienen fibras sintéticas de microplástico que atascan
-  tuberías y liberan polímeros no biodegradables en los océanos.
-- Reemplazar los desechables por fibras reutilizables de tecnología UpPoly permite
-  una limpieza profunda usando solo agua, reduciendo el 100% de los residuos faciales
-  diarios.
+  - >-
+    Cada año se desechan miles de millones de discos de algodón y toallitas
+    húmedas desmaquillantes que tardan hasta 500 años en descomponerse.
+  - >-
+    El cultivo intensivo de algodón industrial requiere hasta 20.000 litros de
+    agua por kilo y el uso masivo de plaguicidas altamente contaminantes.
+  - >-
+    Las toallitas desmaquillantes contienen fibras sintéticas de microplástico
+    que atascan tuberías y liberan polímeros no biodegradables en los océanos.
+  - >-
+    Reemplazar los desechables por fibras reutilizables de tecnología UpPoly
+    permite una limpieza profunda usando solo agua, reduciendo el 100% de los
+    residuos faciales diarios.
 faq:
-- q: ¿Los discos de algodón no son biodegradables por ser naturales?
-  a: Aunque el algodón puro es biodegradable, el procesamiento industrial incluye
-    blanqueantes con cloro, plaguicidas sintéticos y aglutinantes plásticos que frenan
-    su descomposición natural y liberan toxinas en el suelo.
-- q: ¿Cuánto dinero y residuos se pueden ahorrar pasando a fibras reutilizables?
-  a: Una persona promedio consume entre 700 y 1.500 discos de algodón o toallitas
-    al año. Con un set de microfibra reutilizable se ahorra ese volumen completo de
-    basura y cientos de euros al año.
+  - q: ¿Los discos de algodón no son biodegradables por ser naturales?
+    a: >-
+      Aunque el algodón puro es biodegradable, el procesamiento industrial
+      incluye blanqueantes con cloro, plaguicidas sintéticos y aglutinantes
+      plásticos que frenan su descomposición natural y liberan toxinas en el
+      suelo.
+  - q: >-
+      ¿Cuánto dinero y residuos se pueden ahorrar pasando a fibras
+      reutilizables?
+    a: >-
+      Una persona promedio consume entre 700 y 1.500 discos de algodón o
+      toallitas al año. Con un set de microfibra reutilizable se ahorra ese
+      volumen completo de basura y cientos de euros al año.
 image_prompts:
-- '📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9): High-end editorial photography
-  showing a striking contrast between environmental waste and sustainable beauty.
-  On one side, a pile of discarded single-use cotton pads and plastic wipes, on the
-  other a pristine glowing face touching a soft reusable UpPoly microfiber set surrounded
-  by green leaves and clean water droplets. Shot on Hasselblad 100MP, warm golden
-  light. NO text, NO labels, NO logos.'
-- '📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): Conceptual photography
-  depicting the water footprint of industrial cotton farming. A single dried cotton
-  boll hovering over a dry cracked soil bed with a translucent water gauge indicator
-  showing 20,000 liters. Soft artistic lighting. NO text.'
-- '📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Macro science photography
-  showing synthetic microfibers and plastic polymers woven into conventional makeup
-  wipes under high-power optical magnification. Clean blue and gray studio lighting.
-  NO text.'
-- '📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Lifestyle photography
-  of a woman peacefully rinsing her reusable Laska Mini Set microfiber pad under a
-  gentle stream of tap water in a sunlit eco-minimalist bathroom. Warm organic aesthetic.
-  NO text.'
-- '📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): Ultra macro photography
-  comparing an abrasive cotton pad surface with ultra-fine Japanese UpPoly microfibers
-  capturing sebum particles effortlessly with water micro-droplets. Medical science
-  style. NO text.'
+  - >-
+    📸 PROMPT #1 - PORTADA (1200x630px - Aspect Ratio 16:9): High-end editorial
+    photography showing a striking contrast between environmental waste and
+    sustainable beauty. On one side, a pile of discarded single-use cotton pads
+    and plastic wipes, on the other a pristine glowing face touching a soft
+    reusable UpPoly microfiber set surrounded by green leaves and clean water
+    droplets. Shot on Hasselblad 100MP, warm golden light. NO text, NO labels,
+    NO logos.
+  - >-
+    📸 PROMPT #2 - SECCIÓN H2 #1 (1080x1080px - Aspect Ratio 1:1): Conceptual
+    photography depicting the water footprint of industrial cotton farming. A
+    single dried cotton boll hovering over a dry cracked soil bed with a
+    translucent water gauge indicator showing 20,000 liters. Soft artistic
+    lighting. NO text.
+  - >-
+    📸 PROMPT #3 - SECCIÓN H2 #2 (1080x1080px - Aspect Ratio 1:1): Macro science
+    photography showing synthetic microfibers and plastic polymers woven into
+    conventional makeup wipes under high-power optical magnification. Clean blue
+    and gray studio lighting. NO text.
+  - >-
+    📸 PROMPT #4 - SECCIÓN H2 #3 (1080x1080px - Aspect Ratio 1:1): Lifestyle
+    photography of a woman peacefully rinsing her reusable Laska Mini Set
+    microfiber pad under a gentle stream of tap water in a sunlit eco-minimalist
+    bathroom. Warm organic aesthetic. NO text.
+  - >-
+    📸 PROMPT #5 - SECCIÓN H2 #4 (1080x1080px - Aspect Ratio 1:1): Ultra macro
+    photography comparing an abrasive cotton pad surface with ultra-fine
+    Japanese UpPoly microfibers capturing sebum particles effortlessly with
+    water micro-droplets. Medical science style. NO text.
 show_science_link: true
 date_images_applied: '2026-07-30'
 ---
@@ -80,7 +104,7 @@ La industria cosmética tradicional nos ha acostumbrado a la cultura del desecho
 
 Existe el mito de que como el algodón es una planta, su uso en discos desechables es 100% ecológico y natural. La realidad es muy diferente:
 
-![El consumo masivo de agua y agroquímicos en el cultivo industrial de algodón](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp)
+
 
 - **Consumo Hídrico Extremo:** Para producir un solo kilo de algodón industrial se necesitan entre **10.000 y 20.000 litros de agua**, devastando reservas de agua dulce en regiones agrícolas vulnerables.
 - **Uso Masivo de Plaguicidas:** El cultivo de algodón ocupa apenas el 2,4% de la tierra cultivable del planeta, pero consume el **24% de los insecticidas globales** y el 11% de los plaguicidas sintéticos.
