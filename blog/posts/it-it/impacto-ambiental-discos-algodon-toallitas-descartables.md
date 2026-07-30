@@ -21,8 +21,6 @@ local_phenomenon: >-
 cover_image: ''
 media:
   - >-
-    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp
-  - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
   - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
@@ -100,7 +98,7 @@ L'industria cosmetica tradizionale ci ha abituato alla cultura dell'usa e getta:
 
 Esiste il mito secondo cui, essendo il cotone una pianta, l'uso di dischetti monouso sia 100% ecologico. La realtà è molto diversa:
 
-![Consumo massiccio di acqua e pesticidi nella coltivazione industriale del cotone](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_2.webp)
+
 
 - **Consumo idrico estremo:** Per produrre un solo chilo di cotone industriale servono tra **10.000 e 20.000 litri d'acqua**, prosciugando le riserve idriche nelle regioni agricole.
 - **Uso massiccio di pesticidi:** La coltivazione del cotone occupa appena il 2,4% delle terre coltivabili mondiali, ma consuma il **24% degli insetticidi globali** e l'11% dei pesticidi sintetici.
