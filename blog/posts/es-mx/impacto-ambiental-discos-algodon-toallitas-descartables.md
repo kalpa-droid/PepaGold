@@ -23,8 +23,6 @@ media:
   - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_3.webp
   - >-
-    /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp
-  - >-
     /assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_5.webp
 author: PepaGold
 epigraph:
@@ -133,7 +131,7 @@ Millones de toallitas arrojadas por inodoros o vertederos se combinan con grasas
 
 El verdadero cuidado consciente propone transformar el baño en un espacio de residuos cero (*Zero Waste*) sin sacrificar la eficacia ni la suavidad que exige la piel sensible.
 
-![Higienización facial sustentable lavando el paño de microfibra reutilizable](/assets/imagenes/blog/impacto-ambiental-discos-algodon-toallitas-descartables/prompt_4.webp)
+
 
 Aquí es donde entra la innovación de la **microfibra de precisión japonesa UpPoly** (utilizada en la línea Laska Mini Set):
 
